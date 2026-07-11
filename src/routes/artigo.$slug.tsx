@@ -8,6 +8,7 @@ import { ShareBar } from "@/components/article/ShareBar";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
 import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
+import type { Article } from "@/types/content";
 
 export const Route = createFileRoute("/artigo/$slug")({
   loader: ({ params }) => {
@@ -87,6 +88,8 @@ function ArticleNotFound() {
 
 function ArticleDetail() {
   const { article, related } = Route.useLoaderData();
+  const typedArticle: Article = article;
+  const typedRelated: Article[] = related;
 
   return (
     <article>
@@ -125,7 +128,7 @@ function ArticleDetail() {
           <ArticleBody content={article.content} />
 
           <div className="mt-10 flex flex-wrap gap-2">
-            {article.tags.map((t) => (
+            {typedArticle.tags.map((t: string) => (
               <span
                 key={t}
                 className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
@@ -153,13 +156,13 @@ function ArticleDetail() {
         </div>
       </Container>
 
-      {related.length > 0 && (
+      {typedRelated.length > 0 && (
         <Container className="py-12">
           <h2 className="mb-6 border-b border-border pb-3 font-serif text-2xl font-semibold">
             Leia também
           </h2>
           <div className="grid gap-x-8 gap-y-10 md:grid-cols-3">
-            {related.map((a) => (
+            {typedRelated.map((a: Article) => (
               <ArticleCard key={a.id} article={a} size="sm" />
             ))}
           </div>
