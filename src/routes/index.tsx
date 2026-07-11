@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Reportagem e análise sobre energia, transição, sustentabilidade, ciência, tecnologia e desenvolvimento.",
+          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
       },
     ],
   }),

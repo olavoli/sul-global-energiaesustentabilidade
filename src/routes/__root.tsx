@@ -84,26 +84,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Jornalismo brasileiro independente sobre energia, sustentabilidade, ciência, tecnologia e desenvolvimento — com rigor técnico e clareza editorial.",
+          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
       },
       { name: "author", content: "Sul Global" },
       { name: "theme-color", content: "#0f2a1f" },
       { property: "og:site_name", content: "Sul Global" },
-      { property: "og:title", content: "Sul Global" },
+      { property: "og:title", content: "Sul Global — Portal editorial de energia e transição" },
       {
         property: "og:description",
         content:
-          "Portal editorial brasileiro sobre energia, transição e desenvolvimento.",
+          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Sul Global" },
+      { name: "twitter:title", content: "Sul Global — Portal editorial de energia e transição" },
       {
         name: "twitter:description",
         content:
-          "Portal editorial brasileiro sobre energia, transição e desenvolvimento.",
+          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
       },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ecdd5255-e352-449d-84e7-063e031eb66e/id-preview-61a50d2d--d78e60f8-5227-4fec-bdb1-b9e83ed374e0.lovable.app-1783794466980.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ecdd5255-e352-449d-84e7-063e031eb66e/id-preview-61a50d2d--d78e60f8-5227-4fec-bdb1-b9e83ed374e0.lovable.app-1783794466980.png" },
     ],
     links: [
       {
