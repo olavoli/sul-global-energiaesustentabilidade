@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteFooter } from "@/components/layout/SiteFooter";
+import { SkipLink } from "@/components/layout/SkipLink";
 
 function NotFoundComponent() {
   return (
@@ -77,14 +80,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Sul Global — Portal editorial de energia e transição" },
+      {
+        name: "description",
+        content:
+          "Jornalismo brasileiro independente sobre energia, sustentabilidade, ciência, tecnologia e desenvolvimento — com rigor técnico e clareza editorial.",
+      },
+      { name: "author", content: "Sul Global" },
+      { name: "theme-color", content: "#0f2a1f" },
+      { property: "og:site_name", content: "Sul Global" },
+      { property: "og:title", content: "Sul Global" },
+      {
+        property: "og:description",
+        content:
+          "Portal editorial brasileiro sobre energia, transição e desenvolvimento.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Sul Global" },
+      {
+        name: "twitter:description",
+        content:
+          "Portal editorial brasileiro sobre energia, transição e desenvolvimento.",
+      },
     ],
     links: [
       {
@@ -92,6 +111,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter+Tight:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -102,7 +131,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
@@ -119,8 +148,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SkipLink />
+      <div className="flex min-h-dvh flex-col bg-background text-foreground">
+        <SiteHeader />
+        <main id="conteudo" className="flex-1">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </main>
+        <SiteFooter />
+      </div>
     </QueryClientProvider>
   );
 }
