@@ -1,24 +1,97 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Container } from "@/components/layout/Container";
+import { HeroStory } from "@/components/home/HeroStory";
+import { SecondaryHighlights } from "@/components/home/SecondaryHighlights";
+import { InPauta } from "@/components/home/InPauta";
+import { SectionTitle } from "@/components/home/SectionTitle";
+import { ArticleCard } from "@/components/article/ArticleCard";
+import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
+import {
+  getFeaturedArticles,
+  getLatestArticles,
+  getPublishedArticles,
+} from "@/data/articles";
+import { categories } from "@/data/categories";
+import type { CategorySlug } from "@/types/content";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Sul Global — Portal editorial de energia e transição" },
+      {
+        name: "description",
+        content:
+          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
+      },
+      {
+        property: "og:title",
+        content: "Sul Global — Portal editorial de energia e transição",
+      },
+      {
+        property: "og:description",
+        content:
+          "Reportagem e análise sobre energia, transição, sustentabilidade, ciência, tecnologia e desenvolvimento.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const featured = getFeaturedArticles();
+  const latest = getLatestArticles(12);
+  const hero = featured[0] ?? latest[0];
+  const secondary = latest.filter((a) => a.slug !== hero?.slug).slice(0, 2);
+  const rest = latest.filter(
+    (a) => a.slug !== hero?.slug && !secondary.includes(a),
+  );
+
+  if (!hero) {
+    return (
+      <Container className="py-20 text-center">
+        <p className="text-muted-foreground">Nenhum artigo publicado ainda.</p>
+      </Container>
+    );
+  }
+
+  const published = getPublishedArticles();
+  const byCategory = (slug: CategorySlug) =>
+    published.filter((a) => a.category === slug).slice(0, 3);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Container className="pt-8 md:pt-12">
+        <HeroStory article={hero} />
+        <SecondaryHighlights articles={secondary} />
+        <InPauta />
+      </Container>
+
+      <Container className="py-12">
+        <SectionTitle label="Mais recentes" />
+        <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+          {rest.slice(0, 6).map((a) => (
+            <ArticleCard key={a.id} article={a} />
+          ))}
+        </div>
+      </Container>
+
+      <NewsletterCTA />
+
+      {categories.slice(0, 3).map((cat) => {
+        const list = byCategory(cat.slug);
+        if (list.length === 0) return null;
+        return (
+          <Container key={cat.slug} className="py-12">
+            <SectionTitle label={cat.name} categorySlug={cat.slug} />
+            <div className="grid gap-x-8 gap-y-10 md:grid-cols-3">
+              {list.map((a) => (
+                <ArticleCard key={a.id} article={a} size="sm" />
+              ))}
+            </div>
+          </Container>
+        );
+      })}
+    </>
   );
 }
