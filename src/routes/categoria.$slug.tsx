@@ -4,6 +4,7 @@ import { Container } from "@/components/layout/Container";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { getArticlesByCategory } from "@/data/articles";
 import { getCategory, categories } from "@/data/categories";
+import type { Article } from "@/types/content";
 
 export const Route = createFileRoute("/categoria/$slug")({
   loader: ({ params }) => {
@@ -81,7 +82,7 @@ function CategoryPage() {
         </p>
       ) : (
         <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-          {articles.map((a, i) => (
+          {(articles as Article[]).map((a: Article, i: number) => (
             <ArticleCard key={a.id} article={a} eager={i < 3} />
           ))}
         </div>
