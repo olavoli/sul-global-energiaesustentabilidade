@@ -25,17 +25,11 @@ export function HeroStory({ article }: { article: Article }) {
       <div className="flex flex-col justify-center gap-4 md:col-span-5">
         <CategoryTag slug={article.category} />
         <h1 className="font-serif text-3xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-4xl md:text-5xl">
-          <Link
-            to="/artigo/$slug"
-            params={{ slug: article.slug }}
-            className="hover:underline"
-          >
+          <Link to="/artigo/$slug" params={{ slug: article.slug }} className="hover:underline">
             {article.title}
           </Link>
         </h1>
-        <p className="text-base text-muted-foreground md:text-lg">
-          {article.subtitle}
-        </p>
+        <p className="text-base text-muted-foreground md:text-lg">{article.subtitle}</p>
         <Byline article={article} />
       </div>
     </article>

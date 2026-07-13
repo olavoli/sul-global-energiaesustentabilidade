@@ -1,97 +1,102 @@
-# ROADMAP.md — Sul Global
+# Roadmap
 
-Quatro fases. Cada fase só começa quando a anterior está estável e o gatilho
-de entrada foi atingido.
+O roadmap organiza a evolução por Eras, sem datas ou compromissos de prazo. Itens concluídos refletem apenas o estado confirmado do repositório.
 
----
+## Era 1 — Fundação
 
-## Fase 1 — Fundação (0 a 3 meses)
+### Objetivo
 
-**Objetivo:** portal público no ar, SEO técnico impecável, três artigos por
-semana, newsletter capturando.
+Consolidar a base técnica, documental e visual do portal público.
 
-**Gatilho de entrada:** documentos-constituição aprovados.
+### Itens concluídos
 
-**Escopo:**
-- Documentos em `docs/` + `PROJECT_RULES.md` na raiz.
-- Design System em `src/styles.css` (tokens Bloomberg Green).
-- Header e Footer.
-- Home editorial (hero + faixas por categoria + CTA newsletter).
-- Página de artigo (renderiza MDX).
-- Página de categoria.
-- Busca simples client-side sobre o índice MDX.
-- Newsletter (Lovable Cloud: tabela `subscribers`, RLS).
-- Slots de anúncio como placeholders (sem script).
-- Sitemap, RSS, robots, JSON-LD.
-- Páginas institucionais: `/sobre`, `/contato`.
+- [x] Aplicação React, TypeScript e TanStack Start configurada.
+- [x] Layout responsivo com cabeçalho, rodapé e temas claro e escuro.
+- [x] Home, artigo, categoria, busca, sobre, newsletter e contato.
+- [x] Conteúdo editorial simulado em dados TypeScript.
+- [x] Fundação documental inicial.
+- [x] Baseline reproduzível de LF, lint, typecheck e CI.
+- [x] Proteção contra publicação silenciosa do conteúdo demonstrativo.
 
-**Fora do escopo:**
-- Anúncios ativos.
-- Comentários, login, mobile app.
-- Multi-idioma.
-- CMS visual.
+### Itens pendentes
 
-**Gatilho de saída:** 30 artigos publicados, 500 assinantes de newsletter,
-Core Web Vitals verdes.
+- [ ] Resolver divergências entre arquitetura documentada e implementação.
+- [ ] Definir a fonte definitiva de conteúdo.
+- [ ] Estabelecer testes automatizados; o CI mínimo já está configurado.
+- [ ] Verificar acessibilidade, desempenho e comportamento SSR em ambiente publicado.
 
----
+## Era 2 — Sistema Editorial
 
-## Fase 2 — Audiência (3 a 9 meses)
+### Objetivo
 
-**Objetivo:** crescer alcance orgânico, começar a monetizar com integridade.
+Permitir produção, validação e publicação de conteúdo por um fluxo editorial definido.
 
-**Escopo:**
-- Google Analytics 4.
-- AdSense em slots já reservados (com respeito à performance).
-- Primeiros patrocínios de categoria (ex.: "Hidrogênio Verde patrocinado
-  por WEG").
-- Página de imprensa e mídia kit.
-- Newsletter segmentada por categoria.
-- Parcerias com universidades e pesquisadores (colunistas convidados).
-- Otimização de performance (LCP < 2.0s, INP < 200ms).
+### Itens concluídos
 
-**Gatilho de saída:** 10k sessões/mês, 3k assinantes, receita mínima
-recorrente estável.
+- [x] Tipos básicos de artigo, autor e categoria.
+- [x] Páginas de leitura e listagem sobre dados simulados.
 
----
+### Itens pendentes
 
-## Fase 3 — Plataforma (9 a 18 meses)
+- [ ] Decidir entre conteúdo no repositório e CMS.
+- [ ] Implementar persistência e validação da fonte escolhida.
+- [ ] Criar fluxo de rascunho, revisão e publicação.
+- [ ] Implementar página e arquivo de autores.
+- [ ] Substituir conteúdo demonstrativo por conteúdo editorial validado.
 
-**Objetivo:** virar plataforma editorial completa, com CMS, membros e
-produtos.
+## Era 3 — SEO
 
-**Escopo:**
-- Migrar conteúdo de MDX para Supabase (artigos, autores, categorias, tags).
-- Painel editorial interno (roles: admin, editor, autor).
-- Área de membros: **Gratuito / Premium / Empresas / Universidades**.
-- Stripe (assinatura Sul Global Premium, ex.: R$19/mês).
-- Google Ad Manager (campanhas, parceiros, patrocinadores).
-- Conteúdo patrocinado estruturado (schema `SponsoredContent`).
-- Eventos e webinars integrados (inscrição via portal).
-- i18n: PT-BR + EN.
+### Objetivo
 
-**Gatilho de saída:** 100k sessões/mês, 500 assinantes pagos, 3
-patrocinadores institucionais.
+Tornar o conteúdo rastreável, compartilhável e tecnicamente consistente para mecanismos de busca.
 
----
+### Itens concluídos
 
-## Fase 4 — Ecossistema (18+ meses)
+- [x] Metadados básicos definidos nas rotas existentes.
+- [x] Renderização via TanStack Start.
 
-**Objetivo:** Sul Global vira referência e infraestrutura de dados do setor.
+### Itens pendentes
 
-**Escopo:**
-- **Marketplace:** cursos, livros, consultorias, eventos presenciais.
-- **API pública de dados de energia** (freemium por consulta).
-- Doações (PIX, Apoia.se, GitHub Sponsors).
-- App mobile (se justificado por métricas).
-- Programa de bolsas para pesquisadores publicarem.
+- [ ] Implementar canonical por rota.
+- [ ] Implementar Open Graph e Twitter Cards completos.
+- [ ] Implementar JSON-LD para organização e artigos.
+- [ ] Gerar sitemap e feed RSS.
+- [ ] Adicionar e validar `robots.txt`.
+- [ ] Auditar SSR, indexação e Core Web Vitals em produção.
 
----
+## Era 4 — Audiência
 
-## Regras do roadmap
+### Objetivo
 
-- **Nunca pular fase.** Se algo da fase 3 é urgente, primeiro cumprir os
-  gatilhos da fase atual.
-- **Nunca ativar monetização** que degrade Core Web Vitals abaixo do verde.
-- **Nunca aceitar patrocínio** que interfira em pauta editorial.
-- Toda mudança de fase requer decisão consciente e revisão dos documentos.
+Medir o uso do portal e criar canais próprios de relacionamento com leitores.
+
+### Itens concluídos
+
+- [x] Interface de busca local.
+- [x] Interface de inscrição em newsletter, sem integração.
+- [x] Controles de compartilhamento em artigos.
+
+### Itens pendentes
+
+- [ ] Definir e integrar serviço de newsletter com consentimento e privacidade.
+- [ ] Definir e integrar analytics.
+- [ ] Implementar métricas editoriais e operacionais.
+- [ ] Definir estratégia de segmentação e retenção de audiência.
+
+## Era 5 — Monetização
+
+### Objetivo
+
+Viabilizar receitas sem comprometer independência editorial, privacidade ou desempenho.
+
+### Itens concluídos
+
+- [ ] Nenhum item de monetização está implementado.
+
+### Itens pendentes
+
+- [ ] Definir política editorial para publicidade e patrocínio.
+- [ ] Definir critérios de ativação baseados em audiência e desempenho.
+- [ ] Projetar slots publicitários antes de integrar scripts externos.
+- [ ] Definir transparência e identificação de conteúdo patrocinado.
+- [ ] Avaliar modelos de assinatura e produtos somente após validação das Eras anteriores.

@@ -1,4 +1,5 @@
 import type { Article } from "@/types/content";
+import { demoContentEnabled } from "@/config/editorial";
 import { authors } from "./authors";
 
 /**
@@ -7,10 +8,9 @@ import { authors } from "./authors";
  * Images use stable Unsplash asset IDs.
  */
 
-const img = (id: string) =>
-  `https://images.unsplash.com/${id}?w=1600&q=75&auto=format&fit=crop`;
+const img = (id: string) => `https://images.unsplash.com/${id}?w=1600&q=75&auto=format&fit=crop`;
 
-export const articles: Article[] = [
+const demoArticles: Array<Omit<Article, "isDemo">> = [
   {
     id: "01",
     slug: "hidrogenio-verde-no-brasil-promessa-e-realidade",
@@ -41,8 +41,7 @@ O gargalo não é geração eólica. É demanda contratada em moeda forte, com p
 
 O Brasil tem vento, sol e porto. Falta demanda ancorada. Enquanto isso não se resolve, o hidrogênio verde continuará sendo mais promessa do que produto.`,
     coverImage: img("photo-1466611653911-95081537e5b7"),
-    coverImageAlt:
-      "Turbinas eólicas em campo aberto ao amanhecer, com nuvens baixas ao fundo",
+    coverImageAlt: "Turbinas eólicas em campo aberto ao amanhecer, com nuvens baixas ao fundo",
     category: "transicao-energetica",
     tags: ["hidrogênio", "eletrólise", "exportação", "pecém"],
     author: authors["ana-souza"]!,
@@ -71,8 +70,7 @@ O preço-teto foi respeitado por larga margem em solar, o que sinaliza espaço p
 
 O que isso diz sobre 2027? Que o próximo leilão vai precisar tratar o problema da inflexibilidade — fonte por fonte — antes de olhar apenas o preço.`,
     coverImage: img("photo-1509391366360-2e959784a276"),
-    coverImageAlt:
-      "Fileiras de painéis solares fotovoltaicos vistas de cima",
+    coverImageAlt: "Fileiras de painéis solares fotovoltaicos vistas de cima",
     category: "energia",
     tags: ["leilão", "aneel", "solar", "eólica"],
     author: authors["ana-souza"]!,
@@ -103,8 +101,7 @@ A densidade energética por quilograma ainda é significativamente menor que a d
 
 A tese não é substituir o lítio. É segmentar o mercado por caso de uso.`,
     coverImage: img("photo-1518709268805-4e9042af9f23"),
-    coverImageAlt:
-      "Laboratório de eletroquímica com bancada de células de bateria em teste",
+    coverImageAlt: "Laboratório de eletroquímica com bancada de células de bateria em teste",
     category: "tecnologia",
     tags: ["baterias", "sódio", "armazenamento", "bess"],
     author: authors["clara-mendes"]!,
@@ -148,8 +145,7 @@ O sistema brasileiro de comércio de emissões, em consulta pública, prevê reg
     title: "Supercondutores à temperatura ambiente, uma década depois",
     subtitle:
       "O que a comunidade de física de matéria condensada aprendeu com os anúncios frustrados de 2023 a 2025.",
-    excerpt:
-      "A ciência avançou mais nos protocolos de replicação do que nos materiais em si.",
+    excerpt: "A ciência avançou mais nos protocolos de replicação do que nos materiais em si.",
     content: `Depois da onda de anúncios controversos entre 2023 e 2025, a comunidade internacional adotou protocolos rigorosos de replicação. Nenhum material demonstrou supercondutividade acima de 250 K com verificação independente completa.
 
 ## O que ficou de bom
@@ -175,8 +171,7 @@ A busca por temperaturas mais altas continua. Mas a régua mudou.`,
     title: "Redes inteligentes e o desafio do consumidor ativo",
     subtitle:
       "Micro geração distribuída ultrapassou 40 GW no país. A rede não foi desenhada para isso.",
-    excerpt:
-      "O consumidor virou usina. O regulador ainda decide se isso é bom.",
+    excerpt: "O consumidor virou usina. O regulador ainda decide se isso é bom.",
     content: `A geração distribuída fotovoltaica no Brasil ultrapassou 40 GW instalados. Em algumas regiões, o fluxo reverso nos alimentadores de baixa tensão já é rotina.
 
 ## O problema técnico
@@ -187,8 +182,7 @@ Redes de distribuição foram projetadas para fluxo unidirecional. Fluxo reverso
 
 O modelo tarifário atual não separa custo de energia de custo de rede. Enquanto isso não é resolvido, subsídio cruzado entre consumidores continua.`,
     coverImage: img("photo-1473341304170-971dccb5ac1e"),
-    coverImageAlt:
-      "Torres de transmissão elétrica ao entardecer com céu alaranjado",
+    coverImageAlt: "Torres de transmissão elétrica ao entardecer com céu alaranjado",
     category: "tecnologia",
     tags: ["smart grid", "geração distribuída", "tarifa"],
     author: authors["clara-mendes"]!,
@@ -203,8 +197,7 @@ O modelo tarifário atual não separa custo de energia de custo de rede. Enquant
     title: "Financiamento verde e o custo do capital no Sul Global",
     subtitle:
       "O prêmio de risco emergente continua sendo o maior obstáculo à transição energética justa.",
-    excerpt:
-      "Sem redução do spread soberano, taxonomias verdes viram exercício retórico.",
+    excerpt: "Sem redução do spread soberano, taxonomias verdes viram exercício retórico.",
     content: `O custo de capital determina o que se constrói. Em países do Sul Global, o spread soberano encarece project finance em setores intensivos em capex — precisamente onde a transição energética precisa acontecer.
 
 ## O que os multilaterais estão testando
@@ -213,8 +206,7 @@ Instrumentos de blended finance com garantia parcial de crédito reduziram, em a
 
 A transição energética justa precisa endereçar o custo do dinheiro antes de discutir tecnologia.`,
     coverImage: img("photo-1554224155-6726b3ff858f"),
-    coverImageAlt:
-      "Gráficos financeiros em tela de terminal, com foco em análise de risco",
+    coverImageAlt: "Gráficos financeiros em tela de terminal, com foco em análise de risco",
     category: "desenvolvimento",
     tags: ["finanças", "blended finance", "capital", "sul global"],
     author: authors["eduarda-lima"]!,
@@ -241,8 +233,7 @@ A transição energética justa precisa endereçar o custo do dinheiro antes de 
 
 O marco legal em tramitação endereça parte disso, mas silencia sobre pontos críticos de meio ambiente marinho.`,
     coverImage: img("photo-1508615039623-a25605d2b022"),
-    coverImageAlt:
-      "Parque eólico offshore em mar aberto sob céu nublado",
+    coverImageAlt: "Parque eólico offshore em mar aberto sob céu nublado",
     category: "energia",
     tags: ["eólica offshore", "regulação", "outorga"],
     author: authors["ana-souza"]!,
@@ -269,8 +260,7 @@ Os cenários climáticos do IPCC compatíveis com 1,5°C exigem, em 2035, capaci
 
 O ponto do artigo não é desqualificar a tecnologia. É calibrar expectativa.`,
     coverImage: img("photo-1611273426858-450d8e3c9fce"),
-    coverImageAlt:
-      "Infraestrutura industrial de captura de carbono com dutos e torres",
+    coverImageAlt: "Infraestrutura industrial de captura de carbono com dutos e torres",
     category: "sustentabilidade",
     tags: ["ccs", "captura de carbono", "ipcc"],
     author: authors["diego-rocha"]!,
@@ -285,8 +275,7 @@ O ponto do artigo não é desqualificar a tecnologia. É calibrar expectativa.`,
     title: "Materiais críticos e a nova geopolítica mineral",
     subtitle:
       "Lítio, cobalto, níquel e terras raras concentram tanto reserva quanto processamento. É um problema estrutural.",
-    excerpt:
-      "Não basta ter a mina. Sem refino doméstico, o valor agregado migra.",
+    excerpt: "Não basta ter a mina. Sem refino doméstico, o valor agregado migra.",
     content: `A cadeia global de materiais críticos tem duas camadas: extração e refino. A concentração no refino, sobretudo na China, é o que define poder de mercado real.
 
 ## O caso do lítio
@@ -297,8 +286,7 @@ Austrália extrai boa parte do lítio primário do mundo, mas o refino em bateri
 
 Reservas expressivas de nióbio, terras raras e lítio no país só têm valor estratégico se acompanhadas de política industrial de refino. Sem isso, a exportação de concentrado repete o modelo commodity.`,
     coverImage: img("photo-1518709594023-6eab9bab7b23"),
-    coverImageAlt:
-      "Mina a céu aberto com veículos pesados em operação",
+    coverImageAlt: "Mina a céu aberto com veículos pesados em operação",
     category: "desenvolvimento",
     tags: ["mineração", "lítio", "terras raras", "política industrial"],
     author: authors["eduarda-lima"]!,
@@ -311,8 +299,7 @@ Reservas expressivas de nióbio, terras raras e lítio no país só têm valor e
     id: "11",
     slug: "fusao-nuclear-o-que-mudou-em-2026",
     title: "Fusão nuclear: o que mudou em 2026",
-    subtitle:
-      "Ganho líquido de energia foi replicado. Comercialização segue distante.",
+    subtitle: "Ganho líquido de energia foi replicado. Comercialização segue distante.",
     excerpt:
       "A física está mais madura. A engenharia de sistema, e o balanço energético total, ainda não.",
     content: `A replicação de experimentos de fusão inercial com ganho líquido de energia foi confirmada em pelo menos três instalações independentes. Isso muda o status científico do problema.
@@ -323,8 +310,7 @@ Ganho líquido em pulso único não é ganho líquido operacional. Um reator com
 
 A comunidade estima primeiro reator piloto conectado à rede não antes de 2040 — cenário otimista.`,
     coverImage: img("photo-1451187580459-43490279c0fa"),
-    coverImageAlt:
-      "Instalação científica com câmara toroidal iluminada em azul",
+    coverImageAlt: "Instalação científica com câmara toroidal iluminada em azul",
     category: "ciencia",
     tags: ["fusão", "física de plasma", "iter"],
     author: authors["bruno-carvalho"]!,
@@ -339,8 +325,7 @@ A comunidade estima primeiro reator piloto conectado à rede não antes de 2040 
     title: "Transição energética justa, além do slogan",
     subtitle:
       "Requalificação de mão de obra fóssil, receita municipal e planejamento territorial são os três eixos que faltam.",
-    excerpt:
-      "O adjetivo justa deveria ser resultado, não retórica de abertura de painel.",
+    excerpt: "O adjetivo justa deveria ser resultado, não retórica de abertura de painel.",
     content: `A expressão transição energética justa virou obrigatória em documentos de política pública. O conteúdo por trás dela varia muito.
 
 ## Três eixos concretos
@@ -351,8 +336,7 @@ A comunidade estima primeiro reator piloto conectado à rede não antes de 2040 
 
 Sem esses três eixos com métrica, prazo e orçamento, transição justa segue como intenção — e populações inteiras seguem como variável de ajuste.`,
     coverImage: img("photo-1497436072909-60f360e1d4b1"),
-    coverImageAlt:
-      "Trabalhador com capacete observando turbinas eólicas em construção",
+    coverImageAlt: "Trabalhador com capacete observando turbinas eólicas em construção",
     category: "transicao-energetica",
     tags: ["transição justa", "emprego", "política pública"],
     author: authors["eduarda-lima"]!,
@@ -363,18 +347,25 @@ Sem esses três eixos com métrica, prazo e orçamento, transição justa segue 
   },
 ];
 
+export const articles: Article[] = demoArticles.map((article) => ({
+  ...article,
+  isDemo: true,
+}));
+
+function getVisibleArticles(): Article[] {
+  return articles.filter((article) => !article.isDemo || demoContentEnabled);
+}
+
 export function getArticleBySlug(slug: string): Article | undefined {
-  return articles.find((a) => a.slug === slug && a.status === "published");
+  return getVisibleArticles().find((a) => a.slug === slug && a.status === "published");
 }
 
 export function getArticlesByCategory(slug: string): Article[] {
-  return articles.filter(
-    (a) => a.category === slug && a.status === "published",
-  );
+  return getVisibleArticles().filter((a) => a.category === slug && a.status === "published");
 }
 
 export function getPublishedArticles(): Article[] {
-  return articles.filter((a) => a.status === "published");
+  return getVisibleArticles().filter((a) => a.status === "published");
 }
 
 export function getFeaturedArticles(): Article[] {

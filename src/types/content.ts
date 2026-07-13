@@ -40,4 +40,5 @@ export interface Article {
   readingTime: number;
   featured: boolean;
   status: ArticleStatus;
+  isDemo: boolean;
 }

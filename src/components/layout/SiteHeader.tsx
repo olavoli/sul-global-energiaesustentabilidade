@@ -38,10 +38,7 @@ export function SiteHeader() {
           <Logo />
         </div>
 
-        <nav
-          aria-label="Navegação principal"
-          className="hidden lg:flex lg:items-center lg:gap-6"
-        >
+        <nav aria-label="Navegação principal" className="hidden lg:flex lg:items-center lg:gap-6">
           {primaryNav.slice(0, 5).map((item) => (
             <Link
               key={item.label}

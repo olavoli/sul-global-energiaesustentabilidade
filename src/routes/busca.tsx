@@ -19,8 +19,7 @@ export const Route = createFileRoute("/busca")({
       { title: "Busca — Sul Global" },
       {
         name: "description",
-        content:
-          "Encontre reportagens e análises do Sul Global por palavra-chave, tema ou autor.",
+        content: "Encontre reportagens e análises do Sul Global por palavra-chave, tema ou autor.",
       },
       { name: "robots", content: "noindex" },
     ],
@@ -47,11 +46,7 @@ function BuscaPage() {
         <h1 className="mt-2 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl">
           O que você procura?
         </h1>
-        <form
-          role="search"
-          onSubmit={onSubmit}
-          className="mt-6 flex flex-col gap-2 sm:flex-row"
-        >
+        <form role="search" onSubmit={onSubmit} className="mt-6 flex flex-col gap-2 sm:flex-row">
           <label htmlFor="q" className="sr-only">
             Termo de busca
           </label>
@@ -89,8 +84,7 @@ function BuscaPage() {
         ) : (
           <div className="py-10">
             <p className="text-muted-foreground">
-              Nenhum artigo encontrado para{" "}
-              <strong className="text-foreground">"{q}"</strong>.
+              Nenhum artigo encontrado para <strong className="text-foreground">"{q}"</strong>.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               Tente outra palavra-chave ou volte para a{" "}

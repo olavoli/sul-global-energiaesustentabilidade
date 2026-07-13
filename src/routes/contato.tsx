@@ -8,14 +8,12 @@ export const Route = createFileRoute("/contato")({
       { title: "Contato — Sul Global" },
       {
         name: "description",
-        content:
-          "Fale com a redação do Sul Global. Pautas, correções e parcerias editoriais.",
+        content: "Fale com a redação do Sul Global. Pautas, correções e parcerias editoriais.",
       },
       { property: "og:title", content: "Contato — Sul Global" },
       {
         property: "og:description",
-        content:
-          "Fale com a redação do Sul Global. Pautas, correções e parcerias.",
+        content: "Fale com a redação do Sul Global. Pautas, correções e parcerias.",
       },
     ],
   }),
@@ -55,8 +53,7 @@ function ContatoPage() {
           Contato editorial
         </h1>
         <p className="mt-4 text-muted-foreground">
-          Sugestões de pauta, correções factuais, propostas de coluna e
-          parcerias editoriais.
+          Sugestões de pauta, correções factuais, propostas de coluna e parcerias editoriais.
         </p>
 
         <form onSubmit={submit} noValidate className="mt-10 space-y-4">
@@ -127,8 +124,8 @@ function ContatoPage() {
           )}
           {status === "sent" && (
             <p role="status" aria-live="polite" className="text-sm text-foreground">
-              Obrigado. Recebemos sua mensagem — esta é uma demonstração;
-              nenhuma integração de e-mail está ativa nesta versão.
+              Obrigado. Recebemos sua mensagem — esta é uma demonstração; nenhuma integração de
+              e-mail está ativa nesta versão.
             </p>
           )}
 

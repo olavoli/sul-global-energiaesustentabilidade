@@ -42,9 +42,7 @@ function CategoryNotFound() {
   return (
     <Container className="py-24 text-center">
       <span className="overline text-muted-foreground">404 — Categoria</span>
-      <h1 className="mt-3 font-serif text-4xl font-bold">
-        Categoria não encontrada
-      </h1>
+      <h1 className="mt-3 font-serif text-4xl font-bold">Categoria não encontrada</h1>
       <div className="mt-6 flex flex-wrap justify-center gap-2">
         {categories.map((c) => (
           <Link
@@ -71,15 +69,11 @@ function CategoryPage() {
         <h1 className="mt-2 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl">
           {category.name}
         </h1>
-        <p className="mt-3 max-w-2xl text-muted-foreground md:text-lg">
-          {category.description}
-        </p>
+        <p className="mt-3 max-w-2xl text-muted-foreground md:text-lg">{category.description}</p>
       </header>
 
       {articles.length === 0 ? (
-        <p className="text-muted-foreground">
-          Nenhum artigo publicado nesta categoria ainda.
-        </p>
+        <p className="text-muted-foreground">Nenhum artigo publicado nesta categoria ainda.</p>
       ) : (
         <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
           {(articles as Article[]).map((a: Article, i: number) => (

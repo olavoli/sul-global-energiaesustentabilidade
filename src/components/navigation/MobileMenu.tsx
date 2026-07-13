@@ -3,13 +3,7 @@ import { useEffect } from "react";
 import { X } from "lucide-react";
 import { primaryNav } from "./nav-items";
 
-export function MobileMenu({
-  open,
-  onClose,
-}: {
-  open: boolean;
-  onClose: () => void;
-}) {
+export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;

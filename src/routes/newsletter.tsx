@@ -14,8 +14,7 @@ export const Route = createFileRoute("/newsletter")({
       { property: "og:title", content: "Newsletter — Sul Global" },
       {
         property: "og:description",
-        content:
-          "Análise semanal sobre energia, transição energética e desenvolvimento.",
+        content: "Análise semanal sobre energia, transição energética e desenvolvimento.",
       },
     ],
   }),
@@ -32,8 +31,8 @@ function NewsletterPage() {
             Uma análise semanal, sem ruído.
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Toda quinta-feira, uma síntese do que importa em energia, transição
-            e desenvolvimento — com contexto, fontes e sem clickbait.
+            Toda quinta-feira, uma síntese do que importa em energia, transição e desenvolvimento —
+            com contexto, fontes e sem clickbait.
           </p>
           <ul className="mt-8 space-y-3 text-foreground">
             <li>• Uma reportagem exclusiva por edição.</li>

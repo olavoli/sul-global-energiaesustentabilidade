@@ -14,22 +14,24 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SkipLink } from "@/components/layout/SkipLink";
+import { DemoContentNotice } from "@/components/layout/DemoContentNotice";
+import { siteConfig } from "@/config/site";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Página não encontrada</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          O endereço informado não existe ou foi movido.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Voltar para a página inicial
           </Link>
         </div>
       </div>
@@ -48,10 +50,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          Não foi possível carregar esta página
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Ocorreu um erro inesperado. Tente novamente ou volte para a página inicial.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -61,13 +63,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            Tentar novamente
           </button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
-            Go home
+            Voltar para a página inicial
           </a>
         </div>
       </div>
@@ -80,32 +82,41 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sul Global — Portal editorial de energia e transição" },
+      { title: `${siteConfig.name} — Portal editorial de energia e transição` },
       {
         name: "description",
-        content:
-          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
+        content: siteConfig.description,
       },
-      { name: "author", content: "Sul Global" },
+      { name: "author", content: siteConfig.name },
       { name: "theme-color", content: "#0f2a1f" },
-      { property: "og:site_name", content: "Sul Global" },
-      { property: "og:title", content: "Sul Global — Portal editorial de energia e transição" },
+      { property: "og:site_name", content: siteConfig.name },
+      {
+        property: "og:title",
+        content: `${siteConfig.name} — Portal editorial de energia e transição`,
+      },
       {
         property: "og:description",
-        content:
-          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
+        content: siteConfig.description,
       },
       { property: "og:type", content: "website" },
-      { property: "og:locale", content: "pt_BR" },
+      { property: "og:locale", content: siteConfig.locale },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Sul Global — Portal editorial de energia e transição" },
+      {
+        name: "twitter:title",
+        content: `${siteConfig.name} — Portal editorial de energia e transição`,
+      },
       {
         name: "twitter:description",
-        content:
-          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
+        content: siteConfig.description,
       },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ecdd5255-e352-449d-84e7-063e031eb66e/id-preview-61a50d2d--d78e60f8-5227-4fec-bdb1-b9e83ed374e0.lovable.app-1783794466980.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ecdd5255-e352-449d-84e7-063e031eb66e/id-preview-61a50d2d--d78e60f8-5227-4fec-bdb1-b9e83ed374e0.lovable.app-1783794466980.png" },
+      {
+        property: "og:image",
+        content: siteConfig.socialImage,
+      },
+      {
+        name: "twitter:image",
+        content: siteConfig.socialImage,
+      },
     ],
     links: [
       {
@@ -133,7 +144,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang={siteConfig.language}>
       <head>
         <HeadContent />
       </head>
@@ -152,6 +163,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <SkipLink />
       <div className="flex min-h-dvh flex-col bg-background text-foreground">
+        <DemoContentNotice />
         <SiteHeader />
         <main id="conteudo" className="flex-1">
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}

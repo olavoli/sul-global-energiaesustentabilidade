@@ -12,7 +12,8 @@ export function SiteFooter() {
             Sul<span className="text-primary">Global</span>
           </h2>
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            Jornalismo editorial brasileiro sobre energia, transição, ciência e desenvolvimento — para leitores que precisam de rigor técnico, não manchete.
+            Jornalismo editorial brasileiro sobre energia, transição, ciência e desenvolvimento —
+            para leitores que precisam de rigor técnico, não manchete.
           </p>
         </div>
 
@@ -36,9 +37,21 @@ export function SiteFooter() {
         <nav aria-label="Institucional">
           <h3 className="overline text-muted-foreground">Institucional</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/sobre" className="text-foreground hover:underline">Sobre</Link></li>
-            <li><Link to="/contato" className="text-foreground hover:underline">Contato</Link></li>
-            <li><Link to="/busca" className="text-foreground hover:underline">Busca</Link></li>
+            <li>
+              <Link to="/sobre" className="text-foreground hover:underline">
+                Sobre
+              </Link>
+            </li>
+            <li>
+              <Link to="/contato" className="text-foreground hover:underline">
+                Contato
+              </Link>
+            </li>
+            <li>
+              <Link to="/busca" className="text-foreground hover:underline">
+                Busca
+              </Link>
+            </li>
           </ul>
         </nav>
 
@@ -47,7 +60,10 @@ export function SiteFooter() {
           <p className="mt-4 text-sm text-muted-foreground">
             Perfis oficiais em redes sociais serão anunciados em breve.
           </p>
-          <ul className="mt-3 flex gap-3 text-sm text-muted-foreground" aria-label="Redes sociais (em breve)">
+          <ul
+            className="mt-3 flex gap-3 text-sm text-muted-foreground"
+            aria-label="Redes sociais (em breve)"
+          >
             <li className="rounded border border-dashed border-border px-2 py-1">LinkedIn</li>
             <li className="rounded border border-dashed border-border px-2 py-1">Bluesky</li>
             <li className="rounded border border-dashed border-border px-2 py-1">RSS</li>

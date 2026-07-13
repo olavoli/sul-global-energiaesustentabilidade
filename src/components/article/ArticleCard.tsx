@@ -13,11 +13,7 @@ export function ArticleCard({
   eager?: boolean;
 }) {
   const titleClass =
-    size === "lg"
-      ? "text-2xl md:text-3xl"
-      : size === "sm"
-        ? "text-lg"
-        : "text-xl md:text-[1.4rem]";
+    size === "lg" ? "text-2xl md:text-3xl" : size === "sm" ? "text-lg" : "text-xl md:text-[1.4rem]";
 
   return (
     <article className="group flex flex-col gap-3">
@@ -40,11 +36,7 @@ export function ArticleCard({
       <div className="flex flex-col gap-2">
         <CategoryTag slug={article.category} />
         <h3 className={`font-serif font-semibold leading-tight text-foreground ${titleClass}`}>
-          <Link
-            to="/artigo/$slug"
-            params={{ slug: article.slug }}
-            className="hover:underline"
-          >
+          <Link to="/artigo/$slug" params={{ slug: article.slug }} className="hover:underline">
             {article.title}
           </Link>
         </h3>
@@ -54,7 +46,8 @@ export function ArticleCard({
           </p>
         )}
         <p className="text-xs text-muted-foreground">
-          {article.author.name} · {formatDate(article.publishedAt)} · {formatReadingTime(article.readingTime)}
+          {article.author.name} · {formatDate(article.publishedAt)} ·{" "}
+          {formatReadingTime(article.readingTime)}
         </p>
       </div>
     </article>

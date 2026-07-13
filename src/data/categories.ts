@@ -4,14 +4,12 @@ export const categories: Category[] = [
   {
     slug: "energia",
     name: "Energia",
-    description:
-      "Mercado, infraestrutura e regulação do setor elétrico brasileiro e global.",
+    description: "Mercado, infraestrutura e regulação do setor elétrico brasileiro e global.",
   },
   {
     slug: "sustentabilidade",
     name: "Sustentabilidade",
-    description:
-      "Clima, biodiversidade e o custo real da economia de baixo carbono.",
+    description: "Clima, biodiversidade e o custo real da economia de baixo carbono.",
   },
   {
     slug: "ciencia",
@@ -22,14 +20,12 @@ export const categories: Category[] = [
   {
     slug: "tecnologia",
     name: "Tecnologia",
-    description:
-      "Hardware, software e engenharia por trás da transição energética.",
+    description: "Hardware, software e engenharia por trás da transição energética.",
   },
   {
     slug: "desenvolvimento",
     name: "Desenvolvimento",
-    description:
-      "Políticas públicas, financiamento e crescimento econômico com energia limpa.",
+    description: "Políticas públicas, financiamento e crescimento econômico com energia limpa.",
   },
   {
     slug: "transicao-energetica",

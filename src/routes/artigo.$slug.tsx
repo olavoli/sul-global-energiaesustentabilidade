@@ -68,9 +68,7 @@ function ArticleNotFound() {
   return (
     <Container className="py-24 text-center">
       <span className="overline text-muted-foreground">404 — Artigo</span>
-      <h1 className="mt-3 font-serif text-4xl font-bold">
-        Artigo não encontrado
-      </h1>
+      <h1 className="mt-3 font-serif text-4xl font-bold">Artigo não encontrado</h1>
       <p className="mt-3 text-muted-foreground">
         Verifique o endereço ou volte para a página inicial.
       </p>
@@ -99,9 +97,7 @@ function ArticleDetail() {
           <h1 className="mt-4 font-serif text-3xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-4xl md:text-5xl">
             {article.title}
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground md:text-xl">
-            {article.subtitle}
-          </p>
+          <p className="mt-4 text-lg text-muted-foreground md:text-xl">{article.subtitle}</p>
           <div className="mt-6 flex justify-center">
             <Byline article={article} />
           </div>
@@ -148,10 +144,7 @@ function ArticleDetail() {
           </div>
 
           <div className="mt-8">
-            <ShareBar
-              title={article.title}
-              path={`/artigo/${article.slug}`}
-            />
+            <ShareBar title={article.title} path={`/artigo/${article.slug}`} />
           </div>
         </div>
       </Container>
