@@ -33,6 +33,9 @@ export function NewsletterCTA() {
         <p className="mt-3 text-muted-foreground">
           Reportagem original, sem ruído, para quem trabalha no setor.
         </p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Formulário demonstrativo: nenhum e-mail será enviado, cadastrado ou armazenado.
+        </p>
         <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-2 sm:flex-row" noValidate>
           <label htmlFor="newsletter-email" className="sr-only">
             Seu e-mail

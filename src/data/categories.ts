@@ -1,6 +1,6 @@
 import type { Category } from "@/types/content";
 
-export const categories: Category[] = [
+export const categories = [
   {
     slug: "energia",
     name: "Energia",
@@ -33,7 +33,7 @@ export const categories: Category[] = [
     description:
       "A geopolítica, o capital e a engenharia da mudança para uma matriz de baixo carbono.",
   },
-];
+] satisfies Category[];
 
 export function getCategory(slug: string): Category | undefined {
   return categories.find((c) => c.slug === slug);

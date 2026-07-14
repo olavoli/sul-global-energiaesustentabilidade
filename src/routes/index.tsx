@@ -7,10 +7,11 @@ import { InPauta } from "@/components/home/InPauta";
 import { SectionTitle } from "@/components/home/SectionTitle";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
-import { getFeaturedArticles, getLatestArticles, getPublishedArticles } from "@/data/articles";
+import { getFeaturedArticles, getLatestArticles, getPublishedArticles } from "@/content/repository";
 import { categories } from "@/data/categories";
 import type { CategorySlug } from "@/types/content";
 import { siteConfig } from "@/config/site";
+import { organizationJsonLd, resolveCanonical, socialMeta, websiteJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,15 +21,17 @@ export const Route = createFileRoute("/")({
         name: "description",
         content: siteConfig.description,
       },
-      {
-        property: "og:title",
-        content: `${siteConfig.name} — Portal editorial de energia e transição`,
-      },
-      {
-        property: "og:description",
-        content: siteConfig.description,
-      },
+      ...socialMeta({
+        title: `${siteConfig.name} — Portal editorial de energia e transição`,
+        description: siteConfig.description,
+        path: "/",
+      }),
     ],
+    links: [{ rel: "canonical", href: resolveCanonical("/") }],
+    scripts: [organizationJsonLd(), websiteJsonLd()].map((value) => ({
+      type: "application/ld+json",
+      children: JSON.stringify(value),
+    })),
   }),
   component: Index,
 });

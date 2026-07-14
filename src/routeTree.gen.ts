@@ -9,22 +9,47 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermosRouteImport } from './routes/termos'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as PoliticaEditorialRouteImport } from './routes/politica-editorial'
 import { Route as NewsletterRouteImport } from './routes/newsletter'
+import { Route as MetodologiaRouteImport } from './routes/metodologia'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as BuscaRouteImport } from './routes/busca'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CategoriaSlugRouteImport } from './routes/categoria.$slug'
+import { Route as AutorSlugRouteImport } from './routes/autor.$slug'
 import { Route as ArtigoSlugRouteImport } from './routes/artigo.$slug'
 
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaEditorialRoute = PoliticaEditorialRouteImport.update({
+  id: '/politica-editorial',
+  path: '/politica-editorial',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NewsletterRoute = NewsletterRouteImport.update({
   id: '/newsletter',
   path: '/newsletter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetodologiaRoute = MetodologiaRouteImport.update({
+  id: '/metodologia',
+  path: '/metodologia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -47,6 +72,11 @@ const CategoriaSlugRoute = CategoriaSlugRouteImport.update({
   path: '/categoria/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutorSlugRoute = AutorSlugRouteImport.update({
+  id: '/autor/$slug',
+  path: '/autor/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArtigoSlugRoute = ArtigoSlugRouteImport.update({
   id: '/artigo/$slug',
   path: '/artigo/$slug',
@@ -57,18 +87,28 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/busca': typeof BuscaRoute
   '/contato': typeof ContatoRoute
+  '/metodologia': typeof MetodologiaRoute
   '/newsletter': typeof NewsletterRoute
+  '/politica-editorial': typeof PoliticaEditorialRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/sobre': typeof SobreRoute
+  '/termos': typeof TermosRoute
   '/artigo/$slug': typeof ArtigoSlugRoute
+  '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/busca': typeof BuscaRoute
   '/contato': typeof ContatoRoute
+  '/metodologia': typeof MetodologiaRoute
   '/newsletter': typeof NewsletterRoute
+  '/politica-editorial': typeof PoliticaEditorialRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/sobre': typeof SobreRoute
+  '/termos': typeof TermosRoute
   '/artigo/$slug': typeof ArtigoSlugRoute
+  '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
 }
 export interface FileRoutesById {
@@ -76,9 +116,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/busca': typeof BuscaRoute
   '/contato': typeof ContatoRoute
+  '/metodologia': typeof MetodologiaRoute
   '/newsletter': typeof NewsletterRoute
+  '/politica-editorial': typeof PoliticaEditorialRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/sobre': typeof SobreRoute
+  '/termos': typeof TermosRoute
   '/artigo/$slug': typeof ArtigoSlugRoute
+  '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
 }
 export interface FileRouteTypes {
@@ -87,27 +132,42 @@ export interface FileRouteTypes {
     | '/'
     | '/busca'
     | '/contato'
+    | '/metodologia'
     | '/newsletter'
+    | '/politica-editorial'
+    | '/privacidade'
     | '/sobre'
+    | '/termos'
     | '/artigo/$slug'
+    | '/autor/$slug'
     | '/categoria/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/busca'
     | '/contato'
+    | '/metodologia'
     | '/newsletter'
+    | '/politica-editorial'
+    | '/privacidade'
     | '/sobre'
+    | '/termos'
     | '/artigo/$slug'
+    | '/autor/$slug'
     | '/categoria/$slug'
   id:
     | '__root__'
     | '/'
     | '/busca'
     | '/contato'
+    | '/metodologia'
     | '/newsletter'
+    | '/politica-editorial'
+    | '/privacidade'
     | '/sobre'
+    | '/termos'
     | '/artigo/$slug'
+    | '/autor/$slug'
     | '/categoria/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -115,14 +175,26 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BuscaRoute: typeof BuscaRoute
   ContatoRoute: typeof ContatoRoute
+  MetodologiaRoute: typeof MetodologiaRoute
   NewsletterRoute: typeof NewsletterRoute
+  PoliticaEditorialRoute: typeof PoliticaEditorialRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   SobreRoute: typeof SobreRoute
+  TermosRoute: typeof TermosRoute
   ArtigoSlugRoute: typeof ArtigoSlugRoute
+  AutorSlugRoute: typeof AutorSlugRoute
   CategoriaSlugRoute: typeof CategoriaSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre': {
       id: '/sobre'
       path: '/sobre'
@@ -130,11 +202,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-editorial': {
+      id: '/politica-editorial'
+      path: '/politica-editorial'
+      fullPath: '/politica-editorial'
+      preLoaderRoute: typeof PoliticaEditorialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/newsletter': {
       id: '/newsletter'
       path: '/newsletter'
       fullPath: '/newsletter'
       preLoaderRoute: typeof NewsletterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metodologia': {
+      id: '/metodologia'
+      path: '/metodologia'
+      fullPath: '/metodologia'
+      preLoaderRoute: typeof MetodologiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -165,6 +258,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoriaSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/autor/$slug': {
+      id: '/autor/$slug'
+      path: '/autor/$slug'
+      fullPath: '/autor/$slug'
+      preLoaderRoute: typeof AutorSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/artigo/$slug': {
       id: '/artigo/$slug'
       path: '/artigo/$slug'
@@ -179,11 +279,26 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BuscaRoute: BuscaRoute,
   ContatoRoute: ContatoRoute,
+  MetodologiaRoute: MetodologiaRoute,
   NewsletterRoute: NewsletterRoute,
+  PoliticaEditorialRoute: PoliticaEditorialRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   SobreRoute: SobreRoute,
+  TermosRoute: TermosRoute,
   ArtigoSlugRoute: ArtigoSlugRoute,
+  AutorSlugRoute: AutorSlugRoute,
   CategoriaSlugRoute: CategoriaSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

@@ -1,22 +1,25 @@
-const LOCAL_SITE_URL = "http://localhost:8080";
+import { environmentConfig, normalizeSiteUrl } from "@/config/environment";
 
-function normalizeSiteUrl(value: string | undefined): string {
-  const configured = value?.trim() || LOCAL_SITE_URL;
+export { LOCAL_SITE_URL, normalizeSiteUrl } from "@/config/environment";
 
-  try {
-    return new URL(configured).toString().replace(/\/$/, "");
-  } catch {
-    throw new Error("VITE_PUBLIC_SITE_URL deve ser uma URL absoluta válida.");
-  }
+export function absoluteSiteUrl(pathOrUrl: string, baseUrl = normalizeSiteUrl(undefined)): string {
+  return new URL(pathOrUrl, `${baseUrl}/`).toString();
 }
+
+const url = environmentConfig.publicSiteUrl;
 
 export const siteConfig = Object.freeze({
   name: "Sul Global",
   description:
     "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
-  url: normalizeSiteUrl(import.meta.env.VITE_PUBLIC_SITE_URL),
+  url,
+  isPublicUrlConfigured: environmentConfig.isPublicUrlConfigured,
+  indexingEnabled: environmentConfig.indexingEnabled,
   locale: "pt_BR",
   language: "pt-BR",
-  socialImage:
-    "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ecdd5255-e352-449d-84e7-063e031eb66e/id-preview-61a50d2d--d78e60f8-5227-4fec-bdb1-b9e83ed374e0.lovable.app-1783794466980.png",
+  // Ativo editorial provisório; requer validação do fundador antes do lançamento.
+  socialImage: absoluteSiteUrl("/images/social/sul-global-editorial-placeholder.svg", url),
+  socialImageAlt: "Sul Global — energia, ciência e desenvolvimento",
+  socialImageWidth: 1200,
+  socialImageHeight: 630,
 });

@@ -2,6 +2,10 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { getPublishedArticles } from "./content/repository";
+import { createDistributionResponse } from "./lib/distribution";
+import { reportError } from "./lib/observability";
+import { applySecurityHeaders } from "./lib/security-headers";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -28,7 +32,9 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   const body = await response.clone().text();
   if (!isH3SwallowedErrorBody(body)) return response;
 
-  console.error(consumeLastCapturedError() ?? new Error(`h3 swallowed SSR error: ${body}`));
+  reportError(consumeLastCapturedError() ?? new Error(`h3 swallowed SSR error: ${body}`), {
+    area: "ssr-normalization",
+  });
   return new Response(renderErrorPage(), {
     status: 500,
     headers: { "content-type": "text/html; charset=utf-8" },
@@ -47,15 +53,23 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const distributionResponse = createDistributionResponse(
+        new URL(request.url).pathname,
+        getPublishedArticles(),
+      );
+      if (distributionResponse) return applySecurityHeaders(distributionResponse, request);
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      return applySecurityHeaders(await normalizeCatastrophicSsrResponse(response), request);
     } catch (error) {
-      console.error(error);
-      return new Response(renderErrorPage(), {
-        status: 500,
-        headers: { "content-type": "text/html; charset=utf-8" },
-      });
+      reportError(error, { area: "server-fetch", path: new URL(request.url).pathname });
+      return applySecurityHeaders(
+        new Response(renderErrorPage(), {
+          status: 500,
+          headers: { "content-type": "text/html; charset=utf-8" },
+        }),
+        request,
+      );
     }
   },
 };

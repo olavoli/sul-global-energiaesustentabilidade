@@ -52,6 +52,26 @@ export function SiteFooter() {
                 Busca
               </Link>
             </li>
+            <li>
+              <Link to="/privacidade" className="text-foreground hover:underline">
+                Privacidade
+              </Link>
+            </li>
+            <li>
+              <Link to="/termos" className="text-foreground hover:underline">
+                Termos
+              </Link>
+            </li>
+            <li>
+              <Link to="/politica-editorial" className="text-foreground hover:underline">
+                Política editorial
+              </Link>
+            </li>
+            <li>
+              <Link to="/metodologia" className="text-foreground hover:underline">
+                Metodologia
+              </Link>
+            </li>
           </ul>
         </nav>
 
@@ -66,7 +86,14 @@ export function SiteFooter() {
           >
             <li className="rounded border border-dashed border-border px-2 py-1">LinkedIn</li>
             <li className="rounded border border-dashed border-border px-2 py-1">Bluesky</li>
-            <li className="rounded border border-dashed border-border px-2 py-1">RSS</li>
+            <li>
+              <a
+                href="/rss.xml"
+                className="rounded border border-border px-2 py-1 text-foreground hover:underline"
+              >
+                RSS
+              </a>
+            </li>
           </ul>
         </div>
       </Container>

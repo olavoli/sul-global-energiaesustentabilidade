@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Container } from "@/components/layout/Container";
+import { resolveCanonical, socialMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -10,12 +11,13 @@ export const Route = createFileRoute("/contato")({
         name: "description",
         content: "Fale com a redação do Sul Global. Pautas, correções e parcerias editoriais.",
       },
-      { property: "og:title", content: "Contato — Sul Global" },
-      {
-        property: "og:description",
-        content: "Fale com a redação do Sul Global. Pautas, correções e parcerias.",
-      },
+      ...socialMeta({
+        title: "Contato — Sul Global",
+        description: "Fale com a redação do Sul Global. Pautas, correções e parcerias.",
+        path: "/contato",
+      }),
     ],
+    links: [{ rel: "canonical", href: resolveCanonical("/contato") }],
   }),
   component: ContatoPage,
 });
@@ -54,6 +56,10 @@ function ContatoPage() {
         </h1>
         <p className="mt-4 text-muted-foreground">
           Sugestões de pauta, correções factuais, propostas de coluna e parcerias editoriais.
+        </p>
+        <p className="mt-3 rounded-md border border-border bg-muted/40 p-3 text-sm text-foreground">
+          Formulário demonstrativo: os dados permanecem apenas nesta página e nenhuma mensagem é
+          enviada ou armazenada.
         </p>
 
         <form onSubmit={submit} noValidate className="mt-10 space-y-4">
@@ -124,8 +130,7 @@ function ContatoPage() {
           )}
           {status === "sent" && (
             <p role="status" aria-live="polite" className="text-sm text-foreground">
-              Obrigado. Recebemos sua mensagem — esta é uma demonstração; nenhuma integração de
-              e-mail está ativa nesta versão.
+              Validação local concluída. Nenhuma mensagem foi enviada ou armazenada nesta versão.
             </p>
           )}
 
@@ -133,7 +138,7 @@ function ContatoPage() {
             type="submit"
             className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 font-medium text-primary-foreground hover:opacity-90"
           >
-            Enviar mensagem
+            Validar mensagem
           </button>
         </form>
       </div>

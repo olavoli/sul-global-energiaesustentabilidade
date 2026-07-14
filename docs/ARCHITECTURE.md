@@ -1,10 +1,38 @@
 # ARCHITECTURE.md — Sul Global
 
+## Fluxo de conteúdo real (Sprint 8)
+
+`content/articles/` continua sendo a única entrada indexada. `content/templates/` contém modelos deliberadamente excluídos. `scripts/new-content.ts` cria arquivos com exclusividade (`wx`) e status `draft`; `scripts/generate-content.ts` valida schema, referências cruzadas e segurança antes de gerar metadata/loaders.
+
+O workflow é metadata no Git: `draft → review → approved → published`, com `scheduled`, `archived` e `correction-needed` fora da distribuição. Não há usuários, CMS, painel ou aprovação automática. Conteúdo real publicado exige `approvedAt`, data não futura, requisitos do tipo, fonte estruturada quando aplicável e mídia licenciada. O repositório é a fronteira que expõe somente registros publicáveis.
+
+Fontes, correções e disclosures integram o índice tipado; o corpo MDX permanece carregado sob demanda. `/metodologia` é SSR e integra sitemap. A arquitetura não gera artigos nem conecta IA; apenas registra disclosure de eventual uso humano de ferramentas.
+
+## Produção e operação (Sprint 7)
+
+`environmentConfig` centraliza development, test, preview, staging e production. Um build genérico é preview; somente `VITE_APP_ENV=production`, URL pública explícita e demos bloqueadas habilitam indexação. Configurações públicas usam `VITE_*` e nunca carregam segredo.
+
+`src/server.ts` envolve SSR e endpoints com headers uniformes. A CSP bloqueia objetos e frames, não usa `unsafe-eval` e autoriza temporariamente Google Fonts e imagens Unsplash. Inline script/style permanece por compatibilidade documentada com hidratação e estilos atuais. `ObservabilityReporter` separa captura de erros do fornecedor; o padrão não envia dados externamente.
+
+O build continua `cloudflare-module`. Bun gera e testa; Node executa Wrangler sobre `.output/server/wrangler.json`. Smoke tests importam o entrypoint compilado sem rede externa e deixam um rebuild final não indexável, com demos bloqueadas.
+
+## Mídia e acessibilidade (Sprint 6)
+
+`editorialImageSchema` é o contrato único para capas e figuras. `EditorialImage` recebe esse objeto, reserva proporção, aplica `sizes`, usa variantes somente quando fornecidas e troca falhas por fallback acessível sem divergência de SSR. As capas demo externas continuam na fonte apenas como transição; a estrutura local futura é `public/images/articles/<slug>/`.
+
+`advertisingConfig.enabled` permanece `false`. `AdSlot` não é montado nas páginas e retorna `null` quando desativado; não há rede, ID ou script. Breadcrumbs visíveis, disclosure patrocinado e menu com contenção/retorno de foco integram a camada de apresentação.
+
+## Publicação e distribuição (Sprint 5)
+
+`siteConfig` normaliza a origem pública e sinaliza se o ambiente pode ser indexado. `src/lib/seo.ts` deriva canonicals, metadados sociais e JSON-LD dessa origem. `src/lib/distribution.ts` gera robots, sitemap e RSS a partir do mesmo repositório que alimenta as rotas; `src/server.ts` intercepta esses caminhos antes do SSR.
+
+O build Nitro produz um worker `cloudflare-module` em `.output/server/`. O preview oficial desta base usa Wrangler e o manifesto `.output/server/wrangler.json`, preservando o comportamento do artefato implantável.
+
 ## Stack (fase 1 — MVP)
 
 - **React 19 + TypeScript** — UI.
 - **TanStack Start + TanStack Router** — file-based routing com SSR nativo.
-- **Vite 7** — build.
+- **Vite 8** — build.
 - **Tailwind CSS v4** — estilo, tokens em `src/styles.css`.
 - **MDX no repositório** — fonte de conteúdo (artigos e autores).
 - **Lovable Cloud (Supabase gerenciado)** — apenas para a tabela de
@@ -73,15 +101,20 @@ Cada `createFileRoute` define seu próprio `head()` com `title`, `description`,
 - Vantagens: zero backend, versionamento nativo, deploy atômico, SEO ótimo.
 - Limite prático: ~500 artigos. Depois, migrar para Supabase.
 
+Implementação atual: `scripts/generate-content.ts` valida `content/articles/`, gera um índice somente com metadata e um mapa de imports dinâmicos. `src/content/repository.ts` é a interface consumida por listagens e busca. O corpo é compilado pelo plugin MDX e carregado apenas na rota correspondente.
+
+O subconjunto editorial não aceita imports, exports, expressões JavaScript ou HTML arbitrário. Componentes JSX exigem whitelist explícita.
+
 ### Navegação
 - Sempre `<Link>` do `@tanstack/react-router`. Nunca `<a href>` para rotas
   internas.
 - Sem hash anchors como navegação principal entre seções.
 
 ### Imagens
-- `<img loading="lazy">` + `srcset` + `sizes`.
-- Capas de artigo: 1200×630 (também servem como `og:image`).
-- Sempre `alt` descritivo.
+- `EditorialImage` com loading, `sizes`, fallback e geometria estável.
+- `srcset` somente quando o contrato fornecer variantes reais.
+- Capas desejadas: 1200×630; dimensões não podem ser inventadas.
+- Sempre `alt` descritivo, salvo decoração explicitamente marcada.
 
 ### Backend mínimo (Lovable Cloud)
 Fase 1 tem exatamente uma tabela: `subscribers`.

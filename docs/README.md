@@ -16,6 +16,15 @@ Os documentos devem ser lidos considerando duas perspectivas:
 5. [ROADMAP.md](./ROADMAP.md) — evolução organizada por Eras e situação dos itens planejados.
 6. [CONTENT_MODEL.md](./CONTENT_MODEL.md) — modelo editorial planejado para artigos, autores e categorias.
 7. [TECHNICAL_AUDIT.md](./TECHNICAL_AUDIT.md) — auditoria verificável de arquitetura, qualidade, performance, acessibilidade, SEO, segurança e prioridades.
+8. [EDITORIAL_CONTENT_WORKFLOW.md](./EDITORIAL_CONTENT_WORKFLOW.md) — criação, validação, revisão e publicação em MDX.
+9. [PUBLISHING_SEO.md](./PUBLISHING_SEO.md) — URL pública, preview Nitro, SEO, sitemap, RSS e checklist de deploy.
+10. [PERFORMANCE_ACCESSIBILITY.md](./PERFORMANCE_ACCESSIBILITY.md) — contrato de mídia, inventário externo, fontes, orçamento e acessibilidade.
+11. [DEPLOYMENT.md](./DEPLOYMENT.md) — ambientes, toolchain, segurança, build, preview, rollback e operação.
+12. [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md) — gates obrigatórios, recomendados e futuros para uma release.
+13. [EDITORIAL_LAUNCH_CHECKLIST.md](./EDITORIAL_LAUNCH_CHECKLIST.md) — validação editorial antes do primeiro lançamento.
+14. [EDITORIAL_STANDARDS.md](./EDITORIAL_STANDARDS.md) — taxonomia, tipos, fontes, workflow, templates e correções.
+15. [AI_EDITORIAL_POLICY.md](./AI_EDITORIAL_POLICY.md) — usos permitidos, proibições e disclosure de IA.
+16. [LAUNCH_CONTENT_PLAN.md](./LAUNCH_CONTENT_PLAN.md) — inventário de pautas a apurar, sem conteúdo produzido.
 
 ## Referências na raiz
 

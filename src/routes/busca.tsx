@@ -1,19 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { zodValidator, fallback } from "@tanstack/zod-adapter";
-import { z } from "zod";
 import { useState, type FormEvent } from "react";
 
 import { Container } from "@/components/layout/Container";
 import { ArticleCard } from "@/components/article/ArticleCard";
-import { getPublishedArticles } from "@/data/articles";
-import { searchArticles } from "@/lib/search";
-
-const searchSchema = z.object({
-  q: fallback(z.string(), "").default(""),
-});
+import { searchArticles } from "@/content/repository";
+import { SEARCH_ROBOTS } from "@/lib/seo";
 
 export const Route = createFileRoute("/busca")({
-  validateSearch: zodValidator(searchSchema),
+  validateSearch: (search: Record<string, unknown>): { q?: string } => ({
+    q: typeof search.q === "string" && search.q ? search.q : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Busca — Sul Global" },
@@ -21,7 +17,7 @@ export const Route = createFileRoute("/busca")({
         name: "description",
         content: "Encontre reportagens e análises do Sul Global por palavra-chave, tema ou autor.",
       },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: SEARCH_ROBOTS },
     ],
   }),
   component: BuscaPage,
@@ -30,9 +26,10 @@ export const Route = createFileRoute("/busca")({
 function BuscaPage() {
   const { q } = Route.useSearch();
   const navigate = Route.useNavigate();
-  const [value, setValue] = useState(q);
+  const query = q ?? "";
+  const [value, setValue] = useState(query);
 
-  const results = q ? searchArticles(getPublishedArticles(), q) : [];
+  const results = query ? searchArticles(query) : [];
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -68,12 +65,12 @@ function BuscaPage() {
         </form>
       </header>
 
-      {q ? (
+      {query ? (
         results.length > 0 ? (
           <>
             <p className="mb-6 text-sm text-muted-foreground">
               {results.length} resultado{results.length === 1 ? "" : "s"} para{" "}
-              <strong className="text-foreground">"{q}"</strong>.
+              <strong className="text-foreground">"{query}"</strong>.
             </p>
             <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {results.map((a) => (
@@ -84,7 +81,7 @@ function BuscaPage() {
         ) : (
           <div className="py-10">
             <p className="text-muted-foreground">
-              Nenhum artigo encontrado para <strong className="text-foreground">"{q}"</strong>.
+              Nenhum artigo encontrado para <strong className="text-foreground">"{query}"</strong>.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               Tente outra palavra-chave ou volte para a{" "}

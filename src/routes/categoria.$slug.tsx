@@ -2,9 +2,11 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 
 import { Container } from "@/components/layout/Container";
 import { ArticleCard } from "@/components/article/ArticleCard";
-import { getArticlesByCategory } from "@/data/articles";
+import { getArticlesByCategory } from "@/content/repository";
 import { getCategory, categories } from "@/data/categories";
 import type { Article } from "@/types/content";
+import { categoryBreadcrumb, resolveCanonical, socialMeta } from "@/lib/seo";
+import { EditorialBreadcrumb } from "@/components/navigation/EditorialBreadcrumb";
 
 export const Route = createFileRoute("/categoria/$slug")({
   loader: ({ params }) => {
@@ -29,8 +31,15 @@ export const Route = createFileRoute("/categoria/$slug")({
       meta: [
         { title: `${category.name} — Sul Global` },
         { name: "description", content: category.description },
-        { property: "og:title", content: `${category.name} — Sul Global` },
-        { property: "og:description", content: category.description },
+        ...socialMeta({
+          title: `${category.name} — Sul Global`,
+          description: category.description,
+          path: `/categoria/${category.slug}`,
+        }),
+      ],
+      links: [{ rel: "canonical", href: resolveCanonical(`/categoria/${category.slug}`) }],
+      scripts: [
+        { type: "application/ld+json", children: JSON.stringify(categoryBreadcrumb(category)) },
       ],
     };
   },
@@ -65,6 +74,19 @@ function CategoryPage() {
   return (
     <Container className="py-12">
       <header className="mb-10 border-b border-border pb-8">
+        <EditorialBreadcrumb
+          items={[
+            {
+              label: "Início",
+              content: (
+                <Link to="/" className="hover:underline">
+                  Início
+                </Link>
+              ),
+            },
+          ]}
+          current={category.name}
+        />
         <span className="overline text-primary">Categoria</span>
         <h1 className="mt-2 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl">
           {category.name}

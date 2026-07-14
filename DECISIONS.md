@@ -1,5 +1,55 @@
 # Registro de decisões
 
+## 014 — Publicação editorial exige estado e evidência explícitos
+
+### Contexto
+
+O modelo anterior distinguia demos e drafts, mas não registrava aprovação, fontes estruturadas, correções ou requisitos próprios de cada formato.
+
+### Decisão
+
+Manter conteúdo no Git e adicionar estados `approved` e `correction-needed`, fontes estruturadas, aprovação explícita, requisitos por tipo e histórico público de correções. Templates ficam fora de `content/articles`; a CLI sempre cria `draft`. Os seis slugs de categoria existentes permanecem estáveis, e subtemas usam tags normalizadas.
+
+### Consequências
+
+Somente `published` com data não futura entra no repositório público. Conteúdo real sem evidência mínima falha na validação; demos continuam válidos apenas em ambiente autorizado. Nenhum CMS, usuário ou publicação automática é introduzido.
+
+## 013 — Produção explícita e preview seguro por padrão
+
+### Contexto
+
+Um build Vite não pode ser confundido com publicação oficial apenas por usar modo de produção. Wrangler exige Node no ambiente atual, e ambientes não oficiais precisam de proteção uniforme.
+
+### Decisão
+
+Centralizar o ambiente em `VITE_APP_ENV`. Builds sem valor explícito são preview; produção exige URL pública não local e rejeita demos. Aplicar headers no wrapper do worker. Usar Bun para instalação/build/testes e Node `>=20` somente para Wrangler. Manter observabilidade local atrás de interface sem fornecedor.
+
+### Consequências
+
+Development, test, preview e staging permanecem não indexáveis; sitemap/RSS não publicam conteúdo nesses ambientes. A implantação real continua manual e bloqueada por domínio, conteúdo, ativos e revisão jurídica ainda pendentes.
+
+## 012 — Mídia explícita e publicidade inativa por padrão
+
+### Contexto
+
+Capas externas sem dimensões, licença ou fallback aumentavam risco jurídico, CLS e indisponibilidade. A monetização futura precisa reservar geometria sem ativar terceiros prematuramente.
+
+### Decisão
+
+Representar imagem editorial como objeto validado; exigir alt salvo decoração explícita; informar dimensões somente quando conhecidas; renderizar por `EditorialImage`; classificar capas demo atuais como `license: unknown`. Manter `AdSlot` separado do conteúdo e controlado por configuração imutável `enabled: false`.
+
+### Consequências
+
+Capas e figuras compartilham carregamento, `sizes`, prioridade e fallback. O pipeline aceita `srcset` apenas com variantes reais. As 12 capas externas devem ser substituídas antes do lançamento. Nenhum espaço, script, ID ou chamada publicitária existe enquanto a configuração estiver desativada.
+
+## 008 — SEO e distribuição derivados da mesma fonte editorial
+
+**Status:** aceita em 2026-07-13.
+
+Canonicals, schemas, sitemap e RSS usam uma única origem definida por `VITE_PUBLIC_SITE_URL` e os artigos já filtrados pelo repositório editorial. Caminhos relativos de canonical são resolvidos contra essa origem. Se a URL pública não estiver configurada, o fallback local permite build e preview, mas `robots.txt` e metadados impedem indexação.
+
+Os endpoints de distribuição são atendidos pelo servidor SSR e gerados em tempo de requisição a partir do conteúdo empacotado. O preview executa o artefato Cloudflare real com Wrangler. Publicidade permanece fora do runtime: eventual `ads.txt` só poderá ser criado depois de fornecedor, conta e identificadores reais aprovados.
+
 Somente decisões comprovadas pela configuração e pelo histórico documental do repositório são registradas aqui.
 
 ## 001 — Uso de Bun
@@ -127,3 +177,31 @@ Identificar artigos demo no modelo, permiti-los automaticamente em desenvolvimen
 ### Consequências
 
 O build padrão de produção exibe estado sem artigos em vez de publicar demos. As strings ainda permanecem no bundle até a definição da arquitetura de conteúdo.
+
+## 010 — MDX versionado com índice gerado
+
+### Contexto
+
+Artigos TypeScript acoplavam armazenamento, busca, rotas e corpo completo no bundle principal.
+
+### Decisão
+
+Manter um arquivo MDX por artigo, validar o frontmatter com Zod e gerar metadata e loaders determinísticos antes de dev, typecheck e build.
+
+### Consequências
+
+Rotas consomem um repositório estável; listagens não carregam corpos e cada artigo gera chunk próprio. O índice deve permanecer sincronizado por `bun run content:validate`.
+
+## 011 — MDX restrito a conteúdo editorial seguro
+
+### Contexto
+
+MDX completo permite imports, exports e expressões JavaScript, capacidade desnecessária para autoria editorial.
+
+### Decisão
+
+Rejeitar código executável e permitir somente `Callout`, `Quote`, `Figure` e `KeyPoints`, além do Markdown comum. Usar `@mdx-js/rollup`, `remark-frontmatter` e `yaml`; usar o runner nativo do Bun nos testes.
+
+### Consequências
+
+Novos componentes exigem alteração explícita do whitelist e revisão técnica. Não foi adicionado CMS nem framework de testes.

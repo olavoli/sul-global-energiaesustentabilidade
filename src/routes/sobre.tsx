@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
+import { resolveCanonical, socialMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -10,13 +11,14 @@ export const Route = createFileRoute("/sobre")({
         content:
           "O Sul Global é um portal editorial brasileiro sobre energia, transição, ciência e desenvolvimento — independente, técnico e sem sensacionalismo.",
       },
-      { property: "og:title", content: "Sobre — Sul Global" },
-      {
-        property: "og:description",
-        content:
+      ...socialMeta({
+        title: "Sobre — Sul Global",
+        description:
           "Portal editorial brasileiro sobre energia e transição. Independente, técnico e sem sensacionalismo.",
-      },
+        path: "/sobre",
+      }),
     ],
+    links: [{ rel: "canonical", href: resolveCanonical("/sobre") }],
   }),
   component: SobrePage,
 });

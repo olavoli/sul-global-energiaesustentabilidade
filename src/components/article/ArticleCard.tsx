@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { Article } from "@/types/content";
 import { CategoryTag } from "./CategoryTag";
 import { formatDate, formatReadingTime } from "@/lib/format";
+import { EditorialImage } from "@/components/media/EditorialImage";
 
 export function ArticleCard({
   article,
@@ -23,15 +24,17 @@ export function ArticleCard({
         className="block overflow-hidden bg-muted"
         aria-label={article.title}
       >
-        <div className="aspect-[16/9] w-full">
-          <img
-            src={article.coverImage}
-            alt={article.coverImageAlt}
-            loading={eager ? "eager" : "lazy"}
-            decoding="async"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-        </div>
+        <EditorialImage
+          image={article.cover}
+          priority={eager}
+          aspectRatio={16 / 9}
+          sizes={
+            size === "lg"
+              ? "(min-width: 768px) 50vw, 100vw"
+              : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          }
+          className="transition-transform duration-500 group-hover:scale-[1.02]"
+        />
       </Link>
       <div className="flex flex-col gap-2">
         <CategoryTag slug={article.category} />

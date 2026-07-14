@@ -1,5 +1,37 @@
 # Technical Audit
 
+## Atualização — Sprint 8
+
+O pipeline agora separa templates, demos e conteúdo real. O schema registra sete estados operacionais, fontes estruturadas, aprovação, agendamento, correções, requisitos de opinião/entrevista/guia e disclosure de IA. Somente `published` com data não futura alcança o repositório público; `approved`, `scheduled`, `archived` e `correction-needed` permanecem ocultos.
+
+Seis templates foram adicionados fora do índice e `content:new` cria exclusivamente drafts sem sobrescrever arquivos. `content:validate` informa contagem de artigos, demos, templates, warnings e erros; erros críticos continuam bloqueando build. A rota SSR `/metodologia`, padrões editoriais, política de IA e plano de pautas foram adicionados sem inventar conteúdo, fontes, equipe ou compromissos de revisão.
+
+A taxonomia preserva os seis slugs existentes. Tags reais recebem normalização e equivalências conhecidas; demos não foram reescritos. Esta Sprint não adicionou dependência, CMS, autenticação, backend, analytics, anúncio, newsletter real ou provedor de IA.
+
+## Atualização — Sprint 7
+
+O ambiente agora é centralizado e falha de forma segura: build sem `VITE_APP_ENV` explícito é preview; produção exige URL pública não local e rejeita demos. Preview/staging recebem meta e header `noindex`, robots bloqueado e sitemap/RSS sem conteúdo. O wrapper SSR aplica CSP, `nosniff`, referrer, permissions, frame denial e COOP; HSTS depende de produção oficial via HTTPS.
+
+Foram adicionadas páginas iniciais de privacidade, termos e política editorial, observabilidade sem fornecedor e smoke tests do worker em dois estados (demo explicitamente habilitada e rebuild final bloqueado). Formulários continuam locais e agora não sugerem entrega real. Deploy, domínio, monitoramento remoto, revisão jurídica, ativos licenciados e conteúdo real permanecem bloqueios de lançamento.
+
+O preview oficial declara Node `>=20` para Wrangler. Bun permanece responsável por instalação, geração, testes e build. Esta Sprint não conectou Cloudflare nem adicionou dependências, segredos, analytics ou publicidade.
+
+Validação local final da Sprint 7: instalação congelada aprovada; typecheck e lint sem ocorrências; 42 testes aprovados; build cliente/SSR/Nitro aprovado; JavaScript inicial de 117,04 kB gzip e CSS de 13,99 kB gzip, ambos dentro dos orçamentos documentados; smoke do artefato aprovado em 14 endpoints; preview Wrangler respondeu em `http://127.0.0.1:8787/`; e desenvolvimento respondeu em `http://127.0.0.1:8081/`. Os processos iniciados para preview e desenvolvimento foram encerrados.
+
+## Atualização — Sprint 6
+
+As quatro renderizações diretas de imagem foram consolidadas em `EditorialImage`. Capas e figuras agora possuem contrato validado, `sizes`, prioridade seletiva, política de referrer, proporção reservada e fallback. As dimensões das 12 capas externas continuam desconhecidas e não foram inventadas; todas foram classificadas como demo, temporárias e de licença desconhecida. O fallback social passou para SVG local 1200×630 provisório.
+
+O menu móvel passou a gerir foco, Tab, Escape e retorno ao gatilho; breadcrumbs, disclosure patrocinado e aviso demo possuem semântica explícita. Treze testes cobrem mídia/acessibilidade sem nova dependência. A abstração publicitária permanece desativada e ausente das páginas.
+
+Riscos remanescentes: substituir/licenciar as capas, validar compartilhamento SVG ou fornecer PNG, medir Lighthouse/CWV em navegador real, auditar contraste/zoom/leitor de tela e decidir autohospedagem das duas fontes externas.
+
+## Atualização — Sprint 5
+
+Confirmado no código e nos testes: URL pública centralizada, canonicals nas rotas indexáveis, busca `noindex, follow`, proteção global de ambientes sem origem pública, schemas Organization/WebSite/Article/BreadcrumbList/Person, página de autor e endpoints válidos de robots/sitemap/RSS. O repositório exclui drafts e demos não autorizadas antes de alimentar sitemap e feed.
+
+Riscos remanescentes: a URL oficial de produção ainda precisa ser informada; o placeholder social precisa de validação final; auditoria em domínio real, Core Web Vitals, analytics, newsletter e publicidade continuam pendentes. Não há `ads.txt`, IDs de rede, scripts de anúncios ou domínio oficial inventado.
+
 ## 1. Sumário executivo
 
 Auditoria executada em 12 de julho de 2026 sobre a branch `docs/foundation-documentation`. O frontend é compilável, responde em desenvolvimento e possui uma base funcional coerente para demonstração. A aplicação ainda não está pronta para publicação editorial real nem para monetização.
@@ -33,7 +65,7 @@ Não foram executados Lighthouse, teste com leitor de tela, auditoria visual de 
 | --- | --- | --- |
 | Sistema | Bun reportou Windows x64; workspace em `C:\Projetos\sul-global-energiaesustentabilidade` | Confirmado |
 | Bun | `bun --version` → `1.3.14` | Saudável |
-| Node | `node` não está disponível no `PATH` | Aceitável, pois os scripts usam Bun |
+| Node | runtime Node empacotado pelo ambiente Codex, usado explicitamente pelo preview Wrangler | Saudável para a validação local; produção deve fornecer Node `>=20` |
 | Lockfile | `bun.lock`, SHA-256 `5465177E9C2179CBBC7E40B34F846B179595D842E6B133EA05D841FB7FF5B2D4` | Saudável |
 | Outros lockfiles | `package-lock.json`, `yarn.lock` e `pnpm-lock.yaml` ausentes | Saudável |
 | Instalação | 498 instalações verificadas em 627 pacotes, sem mudanças | Saudável |
@@ -158,7 +190,7 @@ Nenhuma remoção deve ocorrer sem medição do bundle e confirmação de inten�
 
 ### Achados
 
-- **Alto impacto, esforço médio:** nenhum `<img>` usa `srcset`, `sizes`, `width` ou `height`, contrariando `PROJECT_RULES.md`. Aspect ratio em CSS reduz parte do layout shift, mas não fornece seleção responsiva de arquivo.
+- **Mitigado na Sprint 6:** toda mídia alcançável usa `EditorialImage`, `sizes`, geometria reservada e dimensões quando conhecidas; `srcset` depende de variantes reais ainda inexistentes.
 - **Alto impacto, esforço médio:** capas usam URLs externas do Unsplash com largura fixa de 1600 px, inclusive em cards pequenos.
 - **Alto impacto, esforço médio:** strings completas dos 12 artigos são importadas por rotas cliente; separar índice/metadados do corpo tende a reduzir transferência e hidratação.
 - **Médio impacto, esforço baixo:** fontes Google externas usam `display=swap` e preconnect, mas continuam dependência de terceiro e recurso potencialmente bloqueante.
@@ -185,7 +217,7 @@ SSR e code splitting existem, mas o benefício é parcialmente reduzido pelo aco
 - **Confirmado:** 404 e boundary de erro raiz estão em inglês, divergindo de `lang="pt-BR"` e do produto.
 - **Possível:** `aria-live` no próprio botão de copiar pode produzir anúncio inconsistente; requer leitor de tela.
 - **Não conclusivo:** contraste AA/AAA, zoom, reflow, ordem real de foco e navegação por teclado exigem teste manual.
-- **Não conclusivo:** imagens não têm dimensões intrínsecas, com possível impacto de layout durante carregamento.
+- **Mitigado parcialmente:** capas externas não têm dimensões intrínsecas comprovadas, mas o layout reserva proporção e possui fallback.
 
 ## 10. SEO técnico
 
@@ -197,7 +229,7 @@ SSR e code splitting existem, mas o benefício é parcialmente reduzido pelo aco
 | JSON-LD de artigo | Parcial | `NewsArticle` somente em `/artigo/$slug` |
 | Organization schema | Ausente como entidade própria | Publisher parcial dentro do artigo |
 | Canonical | Ausente | Nenhum `rel="canonical"` |
-| `robots.txt` | Ausente | `public/` contém somente favicon |
+| `robots.txt` | Implementado | Endpoint SSR testado |
 | Sitemap | Ausente | Nenhum arquivo ou rota correspondente |
 | RSS | Ausente | Nenhum feed; rodapé exibe RSS como “em breve” |
 | Breadcrumb | Ausente | Sem UI ou schema de breadcrumb |
@@ -205,7 +237,7 @@ SSR e code splitting existem, mas o benefício é parcialmente reduzido pelo aco
 | Categoria | Parcial | URL e metadados, sem schema/canonical |
 | Busca | Adequado para MVP | `noindex` na rota `/busca` |
 | 404 dinâmico | Parcial | Componentes e `noindex` quando loader não resolve; status HTTP exige teste publicado |
-| Imagem OG | Incorreta para produção | URL global temporária do Lovable/R2 |
+| Imagem OG | Provisória | SVG local 1200×630, sem Lovable/R2 |
 | Domínio definitivo | Ausente | Share SSR usa `https://sulglobal.example` |
 
 O `NewsArticle` não inclui `dateModified`, URL/canonical, `mainEntityOfPage` ou logo do publisher. O domínio final é dependência para canonical, OG, sitemap, JSON-LD e compartilhamento confiável.
@@ -320,7 +352,7 @@ Classificação: ausência aceitável nesta Era; ativar monetização sem esses 
 
 - conteúdo atual está em strings TypeScript, não MDX;
 - newsletter e contato são simulações cliente, não validação servidor;
-- imagens não usam `srcset`/`sizes` nem dimensões explícitas;
+- variantes reais de `srcset` e dimensões das capas externas ainda não existem;
 - vários arquivos excedem limites de 300/200 linhas;
 - exports públicos geralmente não têm JSDoc;
 - `any` existe no arquivo gerado versionado, embora não no código autoral;
@@ -414,3 +446,17 @@ Em 12 de julho de 2026, a baseline recomendada pela auditoria foi parcialmente i
 - build e dev permaneceram funcionais; dev respondeu HTTP 200 em `http://127.0.0.1:8080/`.
 
 Riscos R-01 e R-04 foram mitigados, mas não encerrados: o conteúdo demo continua fisicamente presente no bundle e ainda não existem testes automatizados. Os riscos de SEO, performance, arquitetura definitiva de conteúdo e acessibilidade permanecem para as Sprints seguintes.
+
+## Atualização — Sprint 4
+
+Em 13 de julho de 2026, a fonte provisória de artigos foi substituída por MDX versionado:
+
+- 12 demos migradas sem alterar slugs, autoria, taxonomia, datas ou identificação `isDemo`;
+- frontmatter validado com Zod e invariantes cruzadas verificadas antes do build;
+- imports, exports, expressões JavaScript e componentes não autorizados bloqueados;
+- repositório único usado por home, artigo, categoria e busca;
+- índice de listagem separado dos corpos, emitidos em chunks individuais;
+- 10 testes cobrem validação, duplicidade, draft, demo, busca, filtros e patrocínio;
+- typecheck, lint, testes e build cliente/SSR/Nitro aprovados.
+
+Permanece o uso temporário de imagens externas sem dimensões conhecidas. A Sprint 6 adicionou contrato, fallback e política de transição, sem copiar ativos de terceiros.

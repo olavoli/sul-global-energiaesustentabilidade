@@ -22,8 +22,9 @@ Consolidar a base técnica, documental e visual do portal público.
 
 - [ ] Resolver divergências entre arquitetura documentada e implementação.
 - [ ] Definir a fonte definitiva de conteúdo.
-- [ ] Estabelecer testes automatizados; o CI mínimo já está configurado.
+- [x] Estabelecer testes automatizados; o CI mínimo já está configurado.
 - [ ] Verificar acessibilidade, desempenho e comportamento SSR em ambiente publicado.
+- [x] Criar baseline local de imagens responsivas, foco, testes e orçamento de performance.
 
 ## Era 2 — Sistema Editorial
 
@@ -35,14 +36,25 @@ Permitir produção, validação e publicação de conteúdo por um fluxo editor
 
 - [x] Tipos básicos de artigo, autor e categoria.
 - [x] Páginas de leitura e listagem sobre dados simulados.
+- [x] MDX versionado como fonte editorial da fase atual.
+- [x] Validação Zod, índice resumido e loaders sob demanda.
+- [x] Fluxo de rascunho, revisão e publicação documentado.
+- [x] Matriz de ambientes, proteção de preview e produção explícita.
+- [x] Páginas legais iniciais, headers, observabilidade abstrata e smoke do worker.
+- [x] Documentação de deploy e checklists de release e lançamento editorial.
+- [x] Taxonomia estável, fontes estruturadas e workflow completo por metadata no Git.
+- [x] Templates e CLI que criam somente drafts, com validação pré-publicação.
+- [x] Metodologia pública, política de IA e plano de pautas não produzidas.
 
 ### Itens pendentes
 
 - [ ] Decidir entre conteúdo no repositório e CMS.
 - [ ] Implementar persistência e validação da fonte escolhida.
-- [ ] Criar fluxo de rascunho, revisão e publicação.
-- [ ] Implementar página e arquivo de autores.
+- [x] Criar fluxo de rascunho, revisão, aprovação, agendamento e publicação por metadata.
+- [x] Implementar página e arquivo de autores.
 - [ ] Substituir conteúdo demonstrativo por conteúdo editorial validado.
+- [ ] Apurar, revisar e aprovar a coleção inicial real conforme o plano de lançamento.
+- [ ] Definir domínio, revisar textos jurídicos e executar implantação pública controlada.
 
 ## Era 3 — SEO
 
@@ -54,15 +66,17 @@ Tornar o conteúdo rastreável, compartilhável e tecnicamente consistente para 
 
 - [x] Metadados básicos definidos nas rotas existentes.
 - [x] Renderização via TanStack Start.
+- [x] Canonicals, metadados sociais e JSON-LD por tipo de página.
+- [x] Sitemap, RSS, robots e páginas de autor.
 
 ### Itens pendentes
 
-- [ ] Implementar canonical por rota.
-- [ ] Implementar Open Graph e Twitter Cards completos.
-- [ ] Implementar JSON-LD para organização e artigos.
-- [ ] Gerar sitemap e feed RSS.
-- [ ] Adicionar e validar `robots.txt`.
-- [ ] Auditar SSR, indexação e Core Web Vitals em produção.
+- [x] Implementar canonical por rota.
+- [x] Implementar Open Graph e Twitter Cards completos.
+- [x] Implementar JSON-LD para organização e artigos.
+- [x] Gerar sitemap e feed RSS.
+- [x] Adicionar e validar `robots.txt`.
+- [ ] Auditar SSR, indexação e Core Web Vitals no domínio real de produção.
 
 ## Era 4 — Audiência
 
@@ -91,7 +105,7 @@ Viabilizar receitas sem comprometer independência editorial, privacidade ou des
 
 ### Itens concluídos
 
-- [ ] Nenhum item de monetização está implementado.
+- [x] Abstração de slot responsivo criada e desativada, sem scripts ou IDs.
 
 ### Itens pendentes
 

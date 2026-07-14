@@ -1,6 +1,6 @@
 export function renderErrorPage(): string {
   return `<!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <title>Não foi possível carregar esta página</title>
@@ -21,7 +21,7 @@ export function renderErrorPage(): string {
       <h1>Não foi possível carregar esta página</h1>
       <p>Ocorreu um erro inesperado. Tente novamente ou volte para a página inicial.</p>
       <div class="actions">
-        <button class="primary" onclick="location.reload()">Tentar novamente</button>
+        <a class="primary" href="">Tentar novamente</a>
         <a class="secondary" href="/">Voltar para a página inicial</a>
       </div>
     </div>

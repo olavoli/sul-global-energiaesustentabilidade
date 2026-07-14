@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { Article } from "@/types/content";
 import { CategoryTag } from "@/components/article/CategoryTag";
 import { Byline } from "@/components/article/Byline";
+import { EditorialImage } from "@/components/media/EditorialImage";
 
 export function HeroStory({ article }: { article: Article }) {
   return (
@@ -12,15 +13,12 @@ export function HeroStory({ article }: { article: Article }) {
         className="block overflow-hidden bg-muted md:col-span-7"
         aria-label={article.title}
       >
-        <div className="aspect-[16/10] w-full">
-          <img
-            src={article.coverImage}
-            alt={article.coverImageAlt}
-            loading="eager"
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        <EditorialImage
+          image={article.cover}
+          priority
+          aspectRatio={16 / 10}
+          sizes="(min-width: 768px) 58vw, 100vw"
+        />
       </Link>
       <div className="flex flex-col justify-center gap-4 md:col-span-5">
         <CategoryTag slug={article.category} />

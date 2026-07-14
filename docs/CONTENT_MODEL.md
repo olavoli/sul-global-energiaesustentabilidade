@@ -1,5 +1,15 @@
 # CONTENT_MODEL.md — Sul Global
 
+## Contrato implementado para lançamento
+
+Categorias mantêm os seis slugs existentes para preservar URLs. Política energética e Sul Global são eixos tratados por tags ou pelas categorias existentes, até que volume e migração justifiquem mudança. Tags reais são normalizadas por `src/content/taxonomy.ts`; demos legados não são reescritos nesta Sprint.
+
+Estados: `draft`, `review`, `approved`, `scheduled`, `published`, `archived` e `correction-needed`. Somente `published`, com `publishedAt` não futuro, é público. Conteúdo real publicado exige `approvedAt`; `scheduled` exige data/hora com fuso.
+
+Fontes estruturadas usam `title`, `url`, `organizationOrAuthor`, `publishedAt` opcional, `verifiedAt`, `type`, `note` opcional e `isDemo`. Os tipos são official, academic, regulatory, company, news, data, interview e other. `sourceUrls` permanece apenas por compatibilidade com demos.
+
+Atualizações usam `updatedAt` e `updateNote` ou `corrections`. Cada correção registra `type`, `date`, `reason` e `description`. `opinionDisclosure`, dados de entrevista e `aiDisclosure` são exigidos conforme o tipo e o uso. O contrato executável em `src/content/schema.ts` é a autoridade em caso de divergência com exemplos históricos abaixo.
+
 Como um artigo, um autor e uma categoria são estruturados na fase 1 (MDX no
 repositório). Este é o contrato entre a redação e o código.
 
@@ -25,20 +35,42 @@ Cada categoria pode ter, opcionalmente, um **patrocinador** (fase 2+).
 
 ## 2. Artigo (MDX)
 
+### Contrato de capa implementado
+
+```yaml
+cover:
+  src: "/images/articles/<slug>/cover-1200.jpg"
+  alt: "Descrição objetiva da informação visual"
+  width: 1200
+  height: 630
+  caption: "Legenda opcional"
+  credit: "Crédito verificável"
+  sourceUrl: "<URL_REAL_DA_ORIGEM>"
+  license: "Licença verificada"
+  focalPoint: { x: 50, y: 40 }
+  sources:
+    - { src: "/images/articles/<slug>/cover-640.jpg", width: 640 }
+    - { src: "/images/articles/<slug>/cover-1200.jpg", width: 1200 }
+```
+
+`width` e `height` são pareados e só entram quando conhecidos. Imagem editorial rejeita alt vazio; imagem puramente decorativa exige `decorative: true`. As capas demo atuais registram `license: unknown` e permanecem pendentes de substituição.
+
 ### 2.1 Caminho e nome
 
 ```
-content/artigos/<slug>.mdx
+content/articles/<slug>.mdx
 ```
 
 O `slug` é o mesmo que aparece na URL: `/artigo/<slug>`. Kebab-case, sem
 acento, sem stopwords desnecessárias.
 
 Exemplos:
-- `content/artigos/hidrogenio-verde-no-brasil.mdx`
-- `content/artigos/leilao-a-6-2025-analise.mdx`
+- `content/articles/hidrogenio-verde-no-brasil.mdx`
+- `content/articles/leilao-a-6-2025-analise.mdx`
 
 ### 2.2 Frontmatter obrigatório
+
+O contrato implementado vive em `src/content/schema.ts`. Além dos campos básicos, ele exige `slug`, `contentType`, `status`, `isDemo`, `sponsored`, `sourceUrls` e seus guardrails. `publishedAt` é obrigatório quando `status: published`; `sponsorName` é obrigatório quando `sponsored: true`.
 
 ```yaml
 ---
@@ -88,8 +120,8 @@ ArticleFrontmatter = {
 
 ### 2.4 Corpo do artigo
 
-- Escrito em MDX. Pode importar componentes seguros: `<Callout>`, `<Figure>`,
-  `<Quote>`, `<DataTable>`, `<Aside>`. Nada além do whitelist.
+- Escrito em MDX restrito. Pode usar `<Callout>`, `<Figure>`, `<Quote>` e
+  `<KeyPoints>`. Imports, exports, expressões JavaScript e HTML arbitrário são rejeitados.
 - **Primeiro parágrafo** é o lead — 1 ou 2 frases resumindo o essencial.
 - Subtítulos usam `##` e `###`. Nunca `#` no corpo (o `h1` é o título).
 - **Toda afirmação factual** cita fonte via link ou nota de rodapé.
@@ -100,7 +132,7 @@ ArticleFrontmatter = {
 
 - Título: claro, informativo, sem clickbait. Preferir substantivo sobre verbo.
 - Descrição: promete o que o artigo entrega. É usada em `og:description`.
-- Capa: 1200×630 (também vira `og:image`). JPG para foto, PNG para infográfico.
+- Capa alvo: 1200×630 (também pode virar `og:image`). JPG/WebP para foto, PNG para infográfico; SVG apenas para arte textual controlada e após validar compatibilidade social.
 - Tempo de leitura: calculado por ~200 palavras/min, arredondado para cima.
 - Nunca publicar sem revisão editorial (checklist no PR).
 
@@ -123,7 +155,7 @@ role: "Editora de Transição Energética"
 bio: "Doutora em Engenharia de Energia pela UFRJ. Cobre políticas públicas de transição desde 2018."
 avatar: "/autores/ana-souza.jpg"
 links:
-  website: "https://anasouza.example"
+  website: "<URL_REAL_DO_AUTOR>"
   linkedin: "https://linkedin.com/in/anasouza"
   orcid: "0000-0000-0000-0000"
 ---
@@ -181,7 +213,8 @@ Cada artigo gera automaticamente:
 - [ ] Fontes citadas em toda afirmação factual.
 - [ ] `readingTime` conferido.
 - [ ] `description` entre 60 e 180 caracteres.
-- [ ] Capa 1200×630 otimizada (< 200kb).
+- [ ] Capa 1200×630 otimizada (< 200 kB) e dimensões reais registradas.
+- [ ] Crédito, origem e licença verificados; `unknown` impede publicação real.
 - [ ] Categoria correta e tags relevantes.
 - [ ] Se patrocinado, `disclosure` visível.
 - [ ] Preview do artigo em dev antes do merge.

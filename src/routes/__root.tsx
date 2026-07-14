@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportError } from "../lib/observability";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SkipLink } from "@/components/layout/SkipLink";
@@ -40,10 +40,9 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportError(error, { area: "tanstack-root-boundary" });
   }, [error]);
 
   return (
@@ -90,33 +89,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: siteConfig.name },
       { name: "theme-color", content: "#0f2a1f" },
       { property: "og:site_name", content: siteConfig.name },
-      {
-        property: "og:title",
-        content: `${siteConfig.name} — Portal editorial de energia e transição`,
-      },
-      {
-        property: "og:description",
-        content: siteConfig.description,
-      },
-      { property: "og:type", content: "website" },
       { property: "og:locale", content: siteConfig.locale },
-      { name: "twitter:card", content: "summary_large_image" },
-      {
-        name: "twitter:title",
-        content: `${siteConfig.name} — Portal editorial de energia e transição`,
-      },
-      {
-        name: "twitter:description",
-        content: siteConfig.description,
-      },
-      {
-        property: "og:image",
-        content: siteConfig.socialImage,
-      },
-      {
-        name: "twitter:image",
-        content: siteConfig.socialImage,
-      },
+      ...(!siteConfig.indexingEnabled ? [{ name: "robots", content: "noindex, nofollow" }] : []),
     ],
     links: [
       {
@@ -132,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Inter+Tight:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Inter+Tight:wght@400;500;600;700&display=swap",
       },
     ],
   }),
