@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Link as LinkIcon, Check, Twitter, Linkedin } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 export function ShareBar({ title, path }: { title: string; path: string }) {
   const [copied, setCopied] = useState(false);
 
   const shareUrl =
-    typeof window !== "undefined"
-      ? window.location.origin + path
-      : `https://sulglobal.example${path}`;
+    typeof window !== "undefined" ? window.location.origin + path : `${siteConfig.url}${path}`;
 
   const encoded = encodeURIComponent(shareUrl);
   const text = encodeURIComponent(title);

@@ -1,34 +1,30 @@
-import type { Author } from "@/types/content";
+import authorRecords from "../../content/authors.json";
 
-export const authors: Record<string, Author> = {
-  "ana-souza": {
-    slug: "ana-souza",
-    name: "Ana Souza",
-    role: "Editora de Transição Energética",
-    bio: "Cobre políticas públicas de energia e clima. Formada em Engenharia de Energia.",
-  },
-  "bruno-carvalho": {
-    slug: "bruno-carvalho",
-    name: "Bruno Carvalho",
-    role: "Repórter de Ciência",
-    bio: "Escreve sobre pesquisa aplicada, materiais e fronteiras da física.",
-  },
-  "clara-mendes": {
-    slug: "clara-mendes",
-    name: "Clara Mendes",
-    role: "Repórter de Tecnologia",
-    bio: "Acompanha hardware, redes elétricas inteligentes e computação de larga escala.",
-  },
-  "diego-rocha": {
-    slug: "diego-rocha",
-    name: "Diego Rocha",
-    role: "Analista de Sustentabilidade",
-    bio: "Cobre biodiversidade, mercados de carbono e finanças verdes.",
-  },
-  "eduarda-lima": {
-    slug: "eduarda-lima",
-    name: "Eduarda Lima",
-    role: "Editora de Desenvolvimento",
-    bio: "Escreve sobre economia, políticas públicas e o Sul Global.",
-  },
-};
+import type { Author } from "@/content/schema";
+
+const authorList = authorRecords as unknown as Author[];
+
+export const authors: Record<string, Author> = Object.fromEntries(
+  authorList.map((author) => [author.slug, author]),
+);
+
+export function getAuthor(slug: string): Author | undefined {
+  return authors[slug];
+}
+
+export function getAuthors(): Author[] {
+  return [...authorList];
+}
+
+export function getPublicAuthor(slug: string, allowDemo = false): Author | undefined {
+  const author = authors[slug];
+  if (!author || author.status === "pending" || author.status === "inactive") return undefined;
+  if (author.isDemo && !allowDemo) return undefined;
+  return author;
+}
+
+export function getPublicAuthors(allowDemo = false): Author[] {
+  return authorList.filter(
+    (author) => author.status === "verified" || (allowDemo && author.status === "demo"),
+  );
+}

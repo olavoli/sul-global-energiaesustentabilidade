@@ -1,0 +1,20 @@
+{
+  "id": "nasa-technology",
+  "name": "NASA Technology",
+  "homepage": "https://www.nasa.gov/technology/",
+  "feedUrl": "https://www.nasa.gov/technology/feed/",
+  "sourceType": "official",
+  "language": "en-US",
+  "countries": ["US"],
+  "topics": ["pesquisa e inovação", "tecnologias energéticas", "sustentabilidade"],
+  "trustTier": "primary",
+  "active": true,
+  "termsNotes": "Uso factual e informativo sem sugerir endosso; atribuir NASA.",
+  "copyrightNotes": "Somente metadados e snippet de até 500 caracteres; sem imagens, logos ou texto integral.",
+  "collectionMethod": "rss",
+  "expectedFrequency": "weekly",
+  "evidenceCheckedAt": "2026-07-15T20:31:04.000Z",
+  "evidenceCheckedBy": "codex-public-source-curation",
+  "evidenceId": "nasa-technology",
+  "notes": "Fonte primária sobre atividades NASA; não constitui confirmação independente."
+}

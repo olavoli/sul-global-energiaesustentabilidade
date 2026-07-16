@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
+import { resolveCanonical, socialMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -10,13 +11,14 @@ export const Route = createFileRoute("/sobre")({
         content:
           "O Sul Global é um portal editorial brasileiro sobre energia, transição, ciência e desenvolvimento — independente, técnico e sem sensacionalismo.",
       },
-      { property: "og:title", content: "Sobre — Sul Global" },
-      {
-        property: "og:description",
-        content:
+      ...socialMeta({
+        title: "Sobre — Sul Global",
+        description:
           "Portal editorial brasileiro sobre energia e transição. Independente, técnico e sem sensacionalismo.",
-      },
+        path: "/sobre",
+      }),
     ],
+    links: [{ rel: "canonical", href: resolveCanonical("/sobre") }],
   }),
   component: SobrePage,
 });
@@ -30,34 +32,31 @@ function SobrePage() {
           Sul Global
         </h1>
         <p className="mt-6 text-lg text-muted-foreground">
-          Um portal editorial brasileiro dedicado a cobrir com rigor técnico as
-          áreas de energia, transição energética, sustentabilidade, ciência,
-          tecnologia e desenvolvimento.
+          Um portal editorial brasileiro dedicado a cobrir com rigor técnico as áreas de energia,
+          transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento.
         </p>
 
         <section className="prose-editorial mt-10 text-foreground">
           <h2>Missão</h2>
           <p>
-            Produzir reportagem e análise para pesquisadores, engenheiros,
-            investidores, gestores públicos e estudantes que precisam de
-            contexto — não de manchete.
+            Produzir reportagem e análise para pesquisadores, engenheiros, investidores, gestores
+            públicos e estudantes que precisam de contexto — não de manchete.
           </p>
           <h2>Independência</h2>
           <p>
-            Não somos um blog pessoal nem um agregador. Não temos vínculo com
-            partido, empresa ou universidade específica. Patrocínios existem,
-            são identificados como tal e não interferem em pauta.
+            Não somos um blog pessoal nem um agregador. Não temos vínculo com partido, empresa ou
+            universidade específica. Patrocínios existem, são identificados como tal e não
+            interferem em pauta.
           </p>
           <h2>Referências editoriais</h2>
           <p>
-            Nos inspiramos em Reuters, Bloomberg Green e MIT Technology Review.
-            Tom técnico, linguagem acessível, sem simplificação barata.
+            Nos inspiramos em Reuters, Bloomberg Green e MIT Technology Review. Tom técnico,
+            linguagem acessível, sem simplificação barata.
           </p>
           <h2>Como colaborar</h2>
           <p>
-            Pesquisadores, colunistas e leitores podem entrar em contato pela
-            página de contato. Publicamos textos de terceiros mediante
-            avaliação editorial.
+            Pesquisadores, colunistas e leitores podem entrar em contato pela página de contato.
+            Publicamos textos de terceiros mediante avaliação editorial.
           </p>
         </section>
       </div>

@@ -1,0 +1,17 @@
+{
+  "sourceId": "govbr-energia",
+  "discoveryMethod": "official-page",
+  "officialPage": "https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis",
+  "officialFeedPage": "https://www.gov.br/pt-br/rss",
+  "feedUrl": "https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis/RSS",
+  "feedOwnershipConfirmed": true,
+  "termsUrl": "https://www.gov.br/pt-br/rss",
+  "copyrightUrl": "https://www.gov.br/pt-br/rss",
+  "termsSummary": "A página oficial expõe o feed e indica licença CC BY-ND 3.0.",
+  "copyrightSummary": "Atribuição e ausência de derivação seriam exigidas.",
+  "collectionLimitations": ["Não coletar enquanto o endpoint redirecionar para autenticação"],
+  "reviewedAt": "2026-07-15T19:40:00.000Z",
+  "reviewedBy": "codex-public-source-curation",
+  "decision": "rejected",
+  "decisionReason": "Endpoint oficial atualmente redireciona para página restrita e não entrega RSS/Atom válido."
+}

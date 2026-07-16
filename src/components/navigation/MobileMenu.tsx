@@ -1,41 +1,72 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useRef, type RefObject } from "react";
 import { X } from "lucide-react";
 import { primaryNav } from "./nav-items";
 
 export function MobileMenu({
   open,
   onClose,
+  returnFocusRef,
 }: {
   open: boolean;
   onClose: () => void;
+  returnFocusRef?: RefObject<HTMLButtonElement | null>;
 }) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
+    const returnFocusTarget = returnFocusRef?.current;
     document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        e.preventDefault();
+        onClose();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const focusable = dialogRef.current?.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+      if (!focusable?.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
+      returnFocusTarget?.focus();
     };
-  }, [open, onClose]);
+  }, [open, onClose, returnFocusRef]);
 
   if (!open) return null;
 
   return (
     <div
+      ref={dialogRef}
+      id="mobile-navigation-dialog"
       role="dialog"
       aria-modal="true"
-      aria-label="Menu de navegação"
+      aria-labelledby="mobile-navigation-title"
       className="fixed inset-0 z-50 flex flex-col bg-background"
     >
       <div className="flex items-center justify-between border-b border-border px-4 py-4">
-        <span className="font-serif text-xl font-bold">Menu</span>
+        <span id="mobile-navigation-title" className="font-serif text-xl font-bold">
+          Menu
+        </span>
         <button
+          ref={closeButtonRef}
           type="button"
           onClick={onClose}
           aria-label="Fechar menu"

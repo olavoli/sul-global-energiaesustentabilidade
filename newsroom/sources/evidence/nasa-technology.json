@@ -1,0 +1,23 @@
+{
+  "sourceId": "nasa-technology",
+  "discoveryMethod": "official-page",
+  "officialPage": "https://www.nasa.gov/technology/",
+  "officialFeedPage": "https://www.nasa.gov/rss-feeds/",
+  "feedUrl": "https://www.nasa.gov/technology/feed/",
+  "feedOwnershipConfirmed": true,
+  "termsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "copyrightUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "termsSummary": "Uso factual e informativo é permitido sem sugerir endosso; NASA deve ser reconhecida como fonte.",
+  "copyrightSummary": "Conteúdo NASA é em geral não sujeito a copyright nos EUA, mas material de terceiros pode ser protegido; o piloto não baixa imagens nem republica textos.",
+  "collectionLimitations": [
+    "Máximo de 20 itens por execução",
+    "Sem imagens",
+    "Sem logos",
+    "Sem material integral",
+    "Atribuição NASA e link original obrigatórios"
+  ],
+  "reviewedAt": "2026-07-15T20:31:04.000Z",
+  "reviewedBy": "codex-public-source-curation",
+  "decision": "confirmed",
+  "decisionReason": "Feed RSS listado na página oficial, HTTPS no mesmo domínio, Content-Type RSS e XML válidos."
+}

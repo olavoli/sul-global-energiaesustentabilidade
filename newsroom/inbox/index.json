@@ -1,0 +1,1065 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "inbox-81a83ebf6559417a",
+      "clusterId": "cluster-d11853bf41c0cc56",
+      "decisionId": "decision-10512ba07c6a50e9",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-07-09T04:01:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-07-09T04:01:00.000Z",
+      "updatedAt": "2026-07-09T04:01:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-07-09T04:01:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-b483e1f6dafc0ded",
+      "clusterId": "cluster-4d4885ba22d3b709",
+      "decisionId": "decision-96c18a2135fa9252",
+      "recommendation": "request-translation-review",
+      "risk": "high",
+      "readiness": "blocked",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação",
+        "sustentabilidade"
+      ],
+      "publishedAt": "2026-06-26T15:00:00.000Z",
+      "translation": "review-required",
+      "blockers": [
+        "unreviewed-translation"
+      ],
+      "nextAction": "Resolver todos os bloqueadores antes de pauta.",
+      "priority": 80,
+      "status": "action-required",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-26T15:00:00.000Z",
+      "updatedAt": "2026-06-26T15:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-26T15:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-3a5cf2a1c56c59c4",
+      "clusterId": "cluster-e0ab060d1f693330",
+      "decisionId": "decision-f537a39477906331",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2025/how-ai-can-help-achieve-clean-energy-future-1124"
+      ],
+      "topics": [
+        "armazenamento",
+        "clima",
+        "eficiência energética",
+        "eletricidade",
+        "pesquisa e inovação",
+        "sustentabilidade"
+      ],
+      "publishedAt": "2025-11-24T22:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2025-11-24T22:00:00.000Z",
+      "updatedAt": "2025-11-24T22:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2025-11-24T22:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-ba881f8518e55795",
+      "clusterId": "cluster-60fa36f4a2643deb",
+      "decisionId": "decision-126366c4835418d7",
+      "recommendation": "request-translation-review",
+      "risk": "high",
+      "readiness": "blocked",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528"
+      ],
+      "topics": [
+        "armazenamento",
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-05-28T18:00:00.000Z",
+      "translation": "review-required",
+      "blockers": [
+        "unreviewed-translation"
+      ],
+      "nextAction": "Resolver todos os bloqueadores antes de pauta.",
+      "priority": 80,
+      "status": "action-required",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-05-28T18:00:00.000Z",
+      "updatedAt": "2026-05-28T18:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-05-28T18:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-72ad66e14c503596",
+      "clusterId": "cluster-19f8ae75caaa4615",
+      "decisionId": "decision-77622cb2fb8f75f3",
+      "recommendation": "request-more-sources",
+      "risk": "high",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2025/post-cop30-more-aggressive-policies-needed-to-cap-global-warming-1217"
+      ],
+      "topics": [
+        "clima",
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2025-12-17T20:10:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 80,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2025-12-17T20:10:00.000Z",
+      "updatedAt": "2025-12-17T20:10:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2025-12-17T20:10:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-e8d89de071449c00",
+      "clusterId": "cluster-74178d7e10ef4e65",
+      "decisionId": "decision-be3214e0faaf4f78",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512"
+      ],
+      "topics": [
+        "eletricidade",
+        "energia solar",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-05-12T21:25:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-05-12T21:25:00.000Z",
+      "updatedAt": "2026-05-12T21:25:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-05-12T21:25:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-e747190a7aafe12d",
+      "clusterId": "cluster-34bfc8e7d0cd8af0",
+      "decisionId": "decision-658c7da6c7566686",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2025/best-way-to-expand-us-electricity-grid-1204"
+      ],
+      "topics": [
+        "clima",
+        "eletricidade",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2025-12-04T10:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2025-12-04T10:00:00.000Z",
+      "updatedAt": "2025-12-04T10:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2025-12-04T10:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-eafcee3af8356fef",
+      "clusterId": "cluster-233daec17b90e737",
+      "decisionId": "decision-d82f4e4839844ebf",
+      "recommendation": "request-translation-review",
+      "risk": "high",
+      "readiness": "blocked",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318"
+      ],
+      "topics": [
+        "armazenamento",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-03-18T04:00:00.000Z",
+      "translation": "review-required",
+      "blockers": [
+        "unreviewed-translation"
+      ],
+      "nextAction": "Resolver todos os bloqueadores antes de pauta.",
+      "priority": 80,
+      "status": "action-required",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-03-18T04:00:00.000Z",
+      "updatedAt": "2026-03-18T04:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-03-18T04:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-7c9a58c9fb10a64d",
+      "clusterId": "cluster-37f4868d0151041c",
+      "decisionId": "decision-2ee586c208e5e4f4",
+      "recommendation": "request-more-sources",
+      "risk": "high",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-05-12T04:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 80,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-05-12T04:00:00.000Z",
+      "updatedAt": "2026-05-12T04:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-05-12T04:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-a949468a5f09416c",
+      "clusterId": "cluster-38f55d0aa32c3fd2",
+      "decisionId": "decision-074eb0cb5693ba6f",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2025/when-companies-go-green-air-quality-impacts-can-vary-dramatically-1208"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2025-12-08T05:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2025-12-08T05:00:00.000Z",
+      "updatedAt": "2025-12-08T05:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2025-12-08T05:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-d793f398f09ffcdb",
+      "clusterId": "cluster-348b1b7d4cc5f7e6",
+      "decisionId": "decision-6e572d7968205394",
+      "recommendation": "request-more-sources",
+      "risk": "high",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2025/making-clean-energy-investments-more-successful-1212"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2025-12-12T16:20:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 80,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2025-12-12T16:20:00.000Z",
+      "updatedAt": "2025-12-12T16:20:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2025-12-12T16:20:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-03f023f4c8427eee",
+      "clusterId": "cluster-dc27d730abb11a1e",
+      "decisionId": "decision-0296056a25a75315",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/why-solid-state-batteries-keep-short-circuiting-0325"
+      ],
+      "topics": [
+        "armazenamento",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-03-25T16:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-03-25T16:00:00.000Z",
+      "updatedAt": "2026-03-25T16:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-03-25T16:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-d71d1a3ab3cbafe0",
+      "clusterId": "cluster-fc1ffb50b2804592",
+      "decisionId": "decision-910b8f063eae74b3",
+      "recommendation": "request-more-sources",
+      "risk": "high",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403"
+      ],
+      "topics": [
+        "eficiência energética",
+        "hidrogênio",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-04-03T04:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 80,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-04-03T04:00:00.000Z",
+      "updatedAt": "2026-04-03T04:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-04-03T04:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-17b0421fc3920012",
+      "clusterId": "cluster-fe10b8496a189f0b",
+      "decisionId": "decision-55c5b250e1bb99be",
+      "recommendation": "request-more-sources",
+      "risk": "high",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515"
+      ],
+      "topics": [
+        "combustíveis",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-05-15T19:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 80,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-05-15T19:00:00.000Z",
+      "updatedAt": "2026-05-15T19:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-05-15T19:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-4b75233a5c61d48b",
+      "clusterId": "cluster-9672b5619d5ce665",
+      "decisionId": "decision-3d045c7a8472ae8b",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://www.nasa.gov/technology/space-comms/nasas-capstone-completes-extended-mission-testing-lunar-technologies/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-07-06T15:00:54.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-07-06T15:00:54.000Z",
+      "updatedAt": "2026-07-06T15:00:54.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-07-06T15:00:54.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-475cb954df15be98",
+      "clusterId": "cluster-b4984e776fd2efcf",
+      "decisionId": "decision-67833d5f57c74436",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://www.nasa.gov/directorates/stmd/nextstep-3-a-lunar-enabling-technology/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-06-29T14:56:54.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-29T14:56:54.000Z",
+      "updatedAt": "2026-06-29T14:56:54.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-29T14:56:54.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-83f3294651ef165d",
+      "clusterId": "cluster-ce1f73add2eb0560",
+      "decisionId": "decision-0e723833720d648d",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-03-13T18:55:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-03-13T18:55:00.000Z",
+      "updatedAt": "2026-03-13T18:55:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-03-13T18:55:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-60e18d6b074193e7",
+      "clusterId": "cluster-f72ad4bc0b6a33bb",
+      "decisionId": "decision-610bc153ef949eed",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2025/neet-scholars-install-solar-powered-charging-station-1209"
+      ],
+      "topics": [
+        "clima",
+        "energia solar",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2025-12-09T21:50:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2025-12-09T21:50:00.000Z",
+      "updatedAt": "2025-12-09T21:50:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2025-12-09T21:50:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-bcf789664e5b4430",
+      "clusterId": "cluster-2c680f104b06d140",
+      "decisionId": "decision-bece9bf1b4943490",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/emily-reichert-positioning-massachusetts-hub-climate-tech-economic-development-0106"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-01-06T21:55:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-01-06T21:55:00.000Z",
+      "updatedAt": "2026-01-06T21:55:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-01-06T21:55:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-822b13b38b75dbba",
+      "clusterId": "cluster-593b17b195c9f812",
+      "decisionId": "decision-0cc54d0427f32079",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324"
+      ],
+      "topics": [
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-03-24T20:55:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-03-24T20:55:00.000Z",
+      "updatedAt": "2026-03-24T20:55:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-03-24T20:55:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-249b9affd6c2d448",
+      "clusterId": "cluster-92cb36be5242af71",
+      "decisionId": "decision-c2efb62c9c5ad6ba",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403"
+      ],
+      "topics": [
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-04-03T20:55:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-04-03T20:55:00.000Z",
+      "updatedAt": "2026-04-03T20:55:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-04-03T20:55:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-567168b1ee03fafa",
+      "clusterId": "cluster-07d75871c8e3ab5f",
+      "decisionId": "decision-cb41da6332a38400",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421"
+      ],
+      "topics": [
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-04-21T22:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-04-21T22:00:00.000Z",
+      "updatedAt": "2026-04-21T22:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-04-21T22:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-eff0c4ca2706d2ce",
+      "clusterId": "cluster-faa2bf195fff05c0",
+      "decisionId": "decision-3dfc49a0c5658ab3",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/"
+      ],
+      "topics": [
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-07-07T17:48:49.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-07-07T17:48:49.000Z",
+      "updatedAt": "2026-07-07T17:48:49.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-07-07T17:48:49.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-c24946c1e3ce96da",
+      "clusterId": "cluster-306a1130f3356875",
+      "decisionId": "decision-c6e01dcc5415e6af",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://www.nasa.gov/technology/tech-transfer-spinoffs/nasa-equips-astronauts-industry-with-robotic-intelligence/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-06-10T17:00:02.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-10T17:00:02.000Z",
+      "updatedAt": "2026-06-10T17:00:02.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-10T17:00:02.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-6c1867ed843fd1f8",
+      "clusterId": "cluster-4c8a99ec500e8324",
+      "decisionId": "decision-af582c3afeec697e",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "MIT News — Renewable Energy"
+      ],
+      "urls": [
+        "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-05-26T20:10:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-05-26T20:10:00.000Z",
+      "updatedAt": "2026-05-26T20:10:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-05-26T20:10:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-996b4eb67af893bf",
+      "clusterId": "cluster-07d52204a07eafaf",
+      "decisionId": "decision-72caef341f298f80",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://science.nasa.gov/missions/swift/swift-boost-mission/partners-nasa-ready-for-june-launch-of-swift-boost-mission/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-06-26T17:16:22.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-26T17:16:22.000Z",
+      "updatedAt": "2026-06-26T17:16:22.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-26T17:16:22.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-1801eb38452f4e75",
+      "clusterId": "cluster-4ca5de015ef4350d",
+      "decisionId": "decision-83e2c37e617413db",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://www.nasa.gov/news-release/nasa-identifies-more-than-40-space-technologies-for-collaboration/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-06-26T15:37:58.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-26T15:37:58.000Z",
+      "updatedAt": "2026-06-26T15:37:58.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-26T15:37:58.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-4b7c54fedecd9221",
+      "clusterId": "cluster-c93fa54d31e53cb1",
+      "decisionId": "decision-5bd6f042ff8a711c",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://science.nasa.gov/earth/earth-observatory/signs-of-thaw-in-the-bering-sea/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-06-22T04:01:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-22T04:01:00.000Z",
+      "updatedAt": "2026-06-22T04:01:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-22T04:01:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-64b65fdbd40c4c48",
+      "clusterId": "cluster-2c0228a8a3d63076",
+      "decisionId": "decision-a71a8e2f3c0f241d",
+      "recommendation": "request-more-sources",
+      "risk": "medium",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://science.nasa.gov/missions/tech-demonstration/nasa-robotic-tech-demo-will-advance-prototype-gamma-ray-detectors/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-06-11T18:59:37.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 50,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-11T18:59:37.000Z",
+      "updatedAt": "2026-06-11T18:59:37.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-11T18:59:37.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    },
+    {
+      "id": "inbox-5d3f8e24194eccd9",
+      "clusterId": "cluster-e2453a951cd572ec",
+      "decisionId": "decision-ed2aa52995c872fa",
+      "recommendation": "request-more-sources",
+      "risk": "high",
+      "readiness": "partial",
+      "sources": [
+        "NASA Technology"
+      ],
+      "urls": [
+        "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/nasa-concludes-antenna-mishap-investigation-releases-report/"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "publishedAt": "2026-06-05T17:00:00.000Z",
+      "translation": "not-required",
+      "blockers": [],
+      "nextAction": "Revisão humana continua obrigatória.",
+      "priority": 80,
+      "status": "unread",
+      "humanStatus": "human-review-required",
+      "createdAt": "2026-06-05T17:00:00.000Z",
+      "updatedAt": "2026-06-05T17:00:00.000Z",
+      "history": [
+        {
+          "action": "inbox-created",
+          "at": "2026-06-05T17:00:00.000Z",
+          "actor": "daily-pipeline",
+          "notes": "Nenhuma publicaÃ§Ã£o."
+        }
+      ]
+    }
+  ]
+}

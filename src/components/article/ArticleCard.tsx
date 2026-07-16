@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { Article } from "@/types/content";
 import { CategoryTag } from "./CategoryTag";
 import { formatDate, formatReadingTime } from "@/lib/format";
+import { EditorialImage } from "@/components/media/EditorialImage";
 
 export function ArticleCard({
   article,
@@ -13,11 +14,7 @@ export function ArticleCard({
   eager?: boolean;
 }) {
   const titleClass =
-    size === "lg"
-      ? "text-2xl md:text-3xl"
-      : size === "sm"
-        ? "text-lg"
-        : "text-xl md:text-[1.4rem]";
+    size === "lg" ? "text-2xl md:text-3xl" : size === "sm" ? "text-lg" : "text-xl md:text-[1.4rem]";
 
   return (
     <article className="group flex flex-col gap-3">
@@ -27,24 +24,22 @@ export function ArticleCard({
         className="block overflow-hidden bg-muted"
         aria-label={article.title}
       >
-        <div className="aspect-[16/9] w-full">
-          <img
-            src={article.coverImage}
-            alt={article.coverImageAlt}
-            loading={eager ? "eager" : "lazy"}
-            decoding="async"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-        </div>
+        <EditorialImage
+          image={article.cover}
+          priority={eager}
+          aspectRatio={16 / 9}
+          sizes={
+            size === "lg"
+              ? "(min-width: 768px) 50vw, 100vw"
+              : "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          }
+          className="transition-transform duration-500 group-hover:scale-[1.02]"
+        />
       </Link>
       <div className="flex flex-col gap-2">
         <CategoryTag slug={article.category} />
         <h3 className={`font-serif font-semibold leading-tight text-foreground ${titleClass}`}>
-          <Link
-            to="/artigo/$slug"
-            params={{ slug: article.slug }}
-            className="hover:underline"
-          >
+          <Link to="/artigo/$slug" params={{ slug: article.slug }} className="hover:underline">
             {article.title}
           </Link>
         </h3>
@@ -54,7 +49,8 @@ export function ArticleCard({
           </p>
         )}
         <p className="text-xs text-muted-foreground">
-          {article.author.name} · {formatDate(article.publishedAt)} · {formatReadingTime(article.readingTime)}
+          {article.author.displayName} · {formatDate(article.publishedAt)} ·{" "}
+          {formatReadingTime(article.readingTime)}
         </p>
       </div>
     </article>

@@ -1,0 +1,85 @@
+name: Newsroom Daily Supervisionada
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Executar sem persistir estado operacional"
+        required: true
+        default: true
+        type: boolean
+      process_existing:
+        description: "Processar somente dados existentes, sem rede"
+        required: true
+        default: true
+        type: boolean
+  schedule:
+    - cron: "17 9 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: newsroom-daily-supervised
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    if: github.event_name == 'workflow_dispatch' || vars.NEWSROOM_SCHEDULE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEWSROOM_ENABLED: ${{ vars.NEWSROOM_ENABLED || 'false' }}
+      NEWSROOM_COLLECTION_ENABLED: "false"
+      NEWSROOM_TRANSLATION_ENABLED: "false"
+      NEWSROOM_ORCHESTRATION_ENABLED: ${{ vars.NEWSROOM_ORCHESTRATION_ENABLED || 'false' }}
+      NEWSROOM_NOTIFICATIONS_ENABLED: "false"
+      NEWSROOM_SCHEDULE_ENABLED: ${{ vars.NEWSROOM_SCHEDULE_ENABLED || 'false' }}
+      NEWSROOM_STORAGE_DRIVER: ${{ vars.NEWSROOM_STORAGE_DRIVER || 'local' }}
+      NEWSROOM_ENVIRONMENT: "ci"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+
+      - name: Cache Bun packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: newsroom-bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+
+      - name: Install frozen dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Validate automation
+        run: bun run typecheck
+
+      - name: Run supervised pipeline
+        shell: bash
+        run: |
+          mkdir -p newsroom/reports
+          MODE="--validate-only"
+          if [[ "${{ github.event.inputs.process_existing || 'true' }}" == "true" ]]; then
+            MODE="--process-existing"
+          fi
+          if [[ "${{ github.event.inputs.dry_run || 'true' }}" == "false" ]]; then
+            if [[ "${NEWSROOM_STORAGE_DRIVER}" != "d1" ]]; then
+              echo "Execução mutável exige binding durável autorizado."
+              exit 1
+            fi
+            bun run newsroom:daily -- "$MODE" --apply --actor github-actions | tee newsroom/reports/workflow-report.md
+          else
+            bun run newsroom:daily -- "$MODE" | tee newsroom/reports/workflow-report.md
+          fi
+
+      - name: Upload private operational report
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsroom-daily-report-${{ github.run_id }}
+          path: newsroom/reports/
+          if-no-files-found: error
+          retention-days: 14

@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/layout/Container";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
+import { resolveCanonical, socialMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/newsletter")({
   head: () => ({
@@ -11,13 +12,13 @@ export const Route = createFileRoute("/newsletter")({
         content:
           "Análise semanal do Sul Global sobre energia, transição energética e desenvolvimento. Sem ruído.",
       },
-      { property: "og:title", content: "Newsletter — Sul Global" },
-      {
-        property: "og:description",
-        content:
-          "Análise semanal sobre energia, transição energética e desenvolvimento.",
-      },
+      ...socialMeta({
+        title: "Newsletter — Sul Global",
+        description: "Análise semanal sobre energia, transição energética e desenvolvimento.",
+        path: "/newsletter",
+      }),
     ],
+    links: [{ rel: "canonical", href: resolveCanonical("/newsletter") }],
   }),
   component: NewsletterPage,
 });
@@ -32,8 +33,8 @@ function NewsletterPage() {
             Uma análise semanal, sem ruído.
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Toda quinta-feira, uma síntese do que importa em energia, transição
-            e desenvolvimento — com contexto, fontes e sem clickbait.
+            A proposta é oferecer uma síntese do que importa em energia, transição e desenvolvimento
+            — com contexto, fontes e sem clickbait. O envio ainda não está ativo.
           </p>
           <ul className="mt-8 space-y-3 text-foreground">
             <li>• Uma reportagem exclusiva por edição.</li>

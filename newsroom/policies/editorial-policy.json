@@ -1,0 +1,86 @@
+{
+  "version": "sul-global-editorial-policy-1",
+  "effectiveAt": "2026-07-15T00:00:00.000Z",
+  "rationale": "Executa os guardrails já documentados para energia, sustentabilidade, ciência, tecnologia, transição energética, políticas públicas, desenvolvimento e Sul Global, sem preferência partidária ou comercial.",
+  "weights": {
+    "topicRelevance": 20,
+    "publicInterest": 15,
+    "educationalPotential": 15,
+    "evidenceStrength": 20,
+    "sourceDiversity": 15,
+    "geographicRelevance": 10,
+    "novelty": 5
+  },
+  "thresholds": {
+    "minimumTopicScore": 20,
+    "priorityScore": 65,
+    "criticalRiskBlocks": true
+  },
+  "blockers": [
+    "missing-source",
+    "missing-original-url",
+    "unattributed-claim",
+    "unreviewed-contradiction",
+    "unreviewed-translation",
+    "critical-risk",
+    "blocked-source",
+    "snippet-policy-violation",
+    "invalid-date",
+    "promotional-only",
+    "insufficient-topic-evidence",
+    "sensitive-personal-data"
+  ],
+  "warnings": ["single-source", "no-independent-confirmation", "image-license-unknown"],
+  "sensitiveTerms": {
+    "political": [
+      "election",
+      "partisan",
+      "sanction",
+      "war",
+      "geopolitical",
+      "eleição",
+      "partidário",
+      "sanção",
+      "guerra"
+    ],
+    "legal": [
+      "allege",
+      "accusation",
+      "lawsuit",
+      "investigation",
+      "alega",
+      "acusação",
+      "litígio",
+      "investigação"
+    ],
+    "healthSafety": [
+      "accident",
+      "death",
+      "fatal",
+      "health",
+      "safety",
+      "acidente",
+      "morte",
+      "saúde",
+      "segurança"
+    ],
+    "financial": [
+      "investment",
+      "price",
+      "cost",
+      "market",
+      "financial",
+      "investimento",
+      "preço",
+      "custo",
+      "mercado"
+    ],
+    "privacy": ["personal data", "private address", "dados pessoais", "endereço privado"]
+  },
+  "contentTypeRules": {
+    "news": { "humanReview": true, "imageRequired": false },
+    "explainer": { "humanReview": true, "imageRequired": false },
+    "analysis": { "humanReview": true, "imageRequired": false },
+    "guide": { "humanReview": true, "imageRequired": false }
+  }
+}

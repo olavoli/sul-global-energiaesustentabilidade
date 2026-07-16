@@ -1,0 +1,17 @@
+{
+  "sourceId": "fapesp-agencia",
+  "discoveryMethod": "official-page",
+  "officialPage": "https://agencia.fapesp.br/",
+  "officialFeedPage": "https://agencia.fapesp.br/agencia-fapesp-em-rss/3438",
+  "feedUrl": "http://agencia.fapesp.br/rss/",
+  "feedOwnershipConfirmed": true,
+  "termsUrl": "https://agencia.fapesp.br/politica-de-republicacao-da-agencia-fapesp/30159",
+  "copyrightUrl": "https://agencia.fapesp.br/politica-de-republicacao-da-agencia-fapesp/30159",
+  "termsSummary": "A política exige crédito à Agência FAPESP e ao autor e veda sugestão de endosso.",
+  "copyrightSummary": "Notícias licenciadas usam CC BY-NC-ND; imagens exigem tratamento separado e não serão coletadas.",
+  "collectionLimitations": ["Não coletar: URL publicada usa HTTP e redireciona à homepage HTML"],
+  "reviewedAt": "2026-07-15T20:31:30.000Z",
+  "reviewedBy": "codex-public-source-curation",
+  "decision": "rejected",
+  "decisionReason": "O endereço RSS publicado não entrega feed válido atualmente."
+}

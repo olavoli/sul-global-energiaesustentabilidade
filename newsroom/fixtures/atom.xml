@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Fixture Atom sintética</title>
+  <id>urn:fixture:sul-global:atom</id>
+  <updated>2026-07-15T12:00:00Z</updated>
+  <entry>
+    <title>Teste local sobre pesquisa solar no Sul Global</title>
+    <link rel="alternate" href="https://fixture.example.test/item-solar" />
+    <id>fixture-atom-solar-001</id>
+    <published>2026-07-15T11:00:00Z</published>
+    <updated>2026-07-15T12:00:00Z</updated>
+    <summary>Snippet sintético e limitado para testar Atom offline.</summary>
+    <author><name>Robô de fixture</name></author>
+    <category term="energia solar" />
+    <category term="Sul Global" />
+  </entry>
+</feed>

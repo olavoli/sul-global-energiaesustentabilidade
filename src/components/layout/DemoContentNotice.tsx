@@ -1,0 +1,17 @@
+import { demoContentEnabled } from "@/config/editorial";
+
+/** Identifies environments where fictional editorial demonstration content is visible. */
+export function DemoContentNotice({ visible = demoContentEnabled }: { visible?: boolean }) {
+  if (!visible) return null;
+
+  return (
+    <aside
+      role="status"
+      aria-live="polite"
+      className="border-b border-border bg-muted px-4 py-2 text-center text-sm text-foreground"
+    >
+      Ambiente de demonstração: o conteúdo editorial exibido é fictício e não deve ser citado como
+      notícia.
+    </aside>
+  );
+}

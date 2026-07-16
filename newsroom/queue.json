@@ -1,0 +1,4024 @@
+{
+  "version": 2,
+  "items": [
+    {
+      "id": "e3b0bc0049257c6b0002a346",
+      "state": "scored",
+      "item": {
+        "id": "e3b0bc0049257c6b0002a346",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626",
+        "canonicalUrl": "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626",
+        "title": "How data centers can better manage energy use",
+        "description": "A new study suggests flexibility in the timing of electricity consumption could lower consumer costs.",
+        "publishedAt": "2026-06-26T15:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Peter Dizikes | MIT News"
+        ],
+        "categories": [
+          "Research",
+          "Policy",
+          "Sustainability",
+          "Government",
+          "Energy",
+          "Climate change",
+          "Wind",
+          "Renewable energy",
+          "Sustainable computing",
+          "MIT Energy Initiative",
+          "Center for Energy and Environmental Policy Research",
+          "MIT Sloan School of Management"
+        ],
+        "rawCategories": [
+          "Research",
+          "Policy",
+          "Sustainability",
+          "Government",
+          "Energy",
+          "Climate change",
+          "Wind",
+          "Renewable energy",
+          "Sustainable computing",
+          "MIT Energy Initiative",
+          "Center for Energy and Environmental Policy Research",
+          "MIT Sloan School of Management"
+        ],
+        "contentSnippet": "A new study suggests flexibility in the timing of electricity consumption could lower consumer costs.",
+        "guid": "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626",
+        "hash": "ab8ceedd31bdcfd48c0d3c876cfbec6328c0c8dd65ce49d4674c916babc6bf05",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 2,
+          "reasons": [
+            "categorias: sustainable (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 70,
+        "dimensions": {
+          "recency": 10,
+          "sourceTrust": 20,
+          "topicRelevance": 10,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (current): 10.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 10.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "ce5f4a60ed37b3da5f98b648",
+      "state": "scored",
+      "item": {
+        "id": "ce5f4a60ed37b3da5f98b648",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528",
+        "canonicalUrl": "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528",
+        "title": "MIT researchers develop a low-cost technique to get lithium out of rocks",
+        "description": "The low-temperature process could unlock cleaner lithium from America’s abundant hard rock while minimizing waste.",
+        "publishedAt": "2026-05-28T18:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Zach Winn | MIT News"
+        ],
+        "categories": [
+          "Research",
+          "Batteries",
+          "Chemistry",
+          "Climate change",
+          "Energy",
+          "Energy storage",
+          "Materials science and engineering",
+          "Cleaner industry",
+          "Mining",
+          "Renewable energy",
+          "Innovation and Entrepreneurship (I&E)",
+          "Sustainability",
+          "DMSE",
+          "School of Engineering",
+          "National Science Foundation (NSF)",
+          "MIT.nano",
+          "MIT intellectual property"
+        ],
+        "rawCategories": [
+          "Research",
+          "Batteries",
+          "Chemistry",
+          "Climate change",
+          "Energy",
+          "Energy storage",
+          "Materials science and engineering",
+          "Cleaner industry",
+          "Mining",
+          "Renewable energy",
+          "Innovation and Entrepreneurship (I&E)",
+          "Sustainability",
+          "DMSE",
+          "School of Engineering",
+          "National Science Foundation (NSF)",
+          "MIT.nano",
+          "MIT intellectual property"
+        ],
+        "contentSnippet": "The low-temperature process could unlock cleaner lithium from America’s abundant hard rock while minimizing waste.",
+        "guid": "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528",
+        "hash": "b4ae8f272eaaecc27f75e8b079bec35efb4d90fb2383bfc1953d645cd911c7cc",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 7,
+          "reasons": [
+            "título: research (+3)",
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 3,
+          "reasons": [
+            "categorias: storage (+2)",
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 69,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 14,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 14.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "b6cf06573d179cf49ef0742f",
+      "state": "scored",
+      "item": {
+        "id": "b6cf06573d179cf49ef0742f",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526",
+        "canonicalUrl": "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526",
+        "title": "A day in the life of MIT Sloan Fellow Alecia Asiamigbe",
+        "description": "The MBA student and entrepreneur is learning to lead a more resilient future with her renewable energy company.",
+        "publishedAt": "2026-05-26T20:10:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Alyssa Loebig | MIT Sloan School of Management"
+        ],
+        "categories": [
+          "Profile",
+          "Students",
+          "Student life",
+          "Graduate, postdoctoral",
+          "Classes and programs",
+          "Business and management",
+          "Martin Trust Center for MIT Entrepreneurship",
+          "Innovation and Entrepreneurship (I&E)",
+          "Energy",
+          "Renewable energy",
+          "Infrastructure",
+          "Sustainability",
+          "Climate change",
+          "MIT Sloan School of Management"
+        ],
+        "rawCategories": [
+          "Profile",
+          "Students",
+          "Student life",
+          "Graduate, postdoctoral",
+          "Classes and programs",
+          "Business and management",
+          "Martin Trust Center for MIT Entrepreneurship",
+          "Innovation and Entrepreneurship (I&E)",
+          "Energy",
+          "Renewable energy",
+          "Infrastructure",
+          "Sustainability",
+          "Climate change",
+          "MIT Sloan School of Management"
+        ],
+        "contentSnippet": "The MBA student and entrepreneur is learning to lead a more resilient future with her renewable energy company.",
+        "guid": "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526",
+        "hash": "5f61473ec55e4e7de37eded0e1ec861cfcb976f3d67356c9cc2c30c5d6634755",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 34,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 4,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": -15,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 4.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [
+          "promotionalPenalty: -15."
+        ],
+        "recommendation": "monitor"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "b793bfc009856d6c831a64a2",
+      "state": "scored",
+      "item": {
+        "id": "b793bfc009856d6c831a64a2",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515",
+        "canonicalUrl": "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515",
+        "title": "How the war in the Middle East is impacting global energy systems",
+        "description": "Expect energy disruptions and economic damage, especially in developing countries, and prepare to build a more resilient, sustainable energy system, says International Energy Agency executive director.",
+        "publishedAt": "2026-05-15T19:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "MIT Energy Initiative"
+        ],
+        "categories": [
+          "Special events and guest speakers",
+          "Energy",
+          "War",
+          "Middle East",
+          "Supply chains",
+          "Renewable energy",
+          "Nuclear power and reactors",
+          "Government",
+          "Fossil fuels",
+          "Developing countries",
+          "Industry",
+          "International relations",
+          "Politics",
+          "Global",
+          "MIT Energy Initiative"
+        ],
+        "rawCategories": [
+          "Special events and guest speakers",
+          "Energy",
+          "War",
+          "Middle East",
+          "Supply chains",
+          "Renewable energy",
+          "Nuclear power and reactors",
+          "Government",
+          "Fossil fuels",
+          "Developing countries",
+          "Industry",
+          "International relations",
+          "Politics",
+          "Global",
+          "MIT Energy Initiative"
+        ],
+        "contentSnippet": "Expect energy disruptions and economic damage, especially in developing countries, and prepare to build a more resilient, sustainable energy system, says International Energy Agency executive director.",
+        "guid": "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515",
+        "hash": "506dec06b6819482fd14d9dd0d65cfc4805cac0b7b23410b75ecb0de45cd5ab8",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "combustíveis",
+          "score": 2,
+          "reasons": [
+            "categorias: fuel (+2)"
+          ]
+        },
+        {
+          "topic": "nuclear",
+          "score": 2,
+          "reasons": [
+            "categorias: nuclear (+2)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "snippet: sustainable (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 60,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 5,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 5.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "9a93af886c2a8c4b73ac2dce",
+      "state": "scored",
+      "item": {
+        "id": "9a93af886c2a8c4b73ac2dce",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512",
+        "canonicalUrl": "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512",
+        "title": "3 Questions: Shedding light on why power grids go dark",
+        "description": "Pablo Duenas-Martinez, a MITEI research scientist, describes the “death spiral” of events that caused the 12-hour Iberian peninsula power outage in 2025, and five lessons learned.",
+        "publishedAt": "2026-05-12T21:25:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Nancy W. Stauffer | MIT Energy Initiative"
+        ],
+        "categories": [
+          "Interview",
+          "Energy",
+          "Electric grid",
+          "Renewable energy",
+          "Solar",
+          "Nuclear power and reactors",
+          "Wind",
+          "Europe",
+          "MIT Energy Initiative"
+        ],
+        "rawCategories": [
+          "Interview",
+          "Energy",
+          "Electric grid",
+          "Renewable energy",
+          "Solar",
+          "Nuclear power and reactors",
+          "Wind",
+          "Europe",
+          "MIT Energy Initiative"
+        ],
+        "contentSnippet": "Pablo Duenas-Martinez, a MITEI research scientist, describes the “death spiral” of events that caused the 12-hour Iberian peninsula power outage in 2025, and five lessons learned.",
+        "guid": "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512",
+        "hash": "22b2a878e9146ba80943ca0adaba2dade697573e376c063ca46a0deeda9d4f2a",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "eletricidade",
+          "score": 5,
+          "reasons": [
+            "título: grid (+3)",
+            "categorias: grid (+2)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 3,
+          "reasons": [
+            "categorias: solar (+2)",
+            "fonte: solar (+1)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 3,
+          "reasons": [
+            "snippet: research (+1)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "nuclear",
+          "score": 2,
+          "reasons": [
+            "categorias: nuclear (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 68,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 13,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 13.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "acbb83123af713c8e84469ed",
+      "state": "scored",
+      "item": {
+        "id": "acbb83123af713c8e84469ed",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512",
+        "canonicalUrl": "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512",
+        "title": "For most US drivers, EVs offer emissions benefits and cost savings",
+        "description": "When it comes to emissions, individual driving patterns matter as much as how “green” the regional electricity mix is, MIT researchers report.",
+        "publishedAt": "2026-05-12T04:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Adam Zewe | MIT News"
+        ],
+        "categories": [
+          "Research",
+          "Energy",
+          "Electric vehicles",
+          "Batteries",
+          "Renewable energy",
+          "Sustainability",
+          "Emissions",
+          "Transportation",
+          "Automobiles",
+          "Technology and society",
+          "Climate change",
+          "Economics",
+          "Policy",
+          "Data",
+          "IDSS",
+          "Electrical engineering and computer science (EECS)",
+          "School of Engineering",
+          "MIT Schwarzman College of Computing"
+        ],
+        "rawCategories": [
+          "Research",
+          "Energy",
+          "Electric vehicles",
+          "Batteries",
+          "Renewable energy",
+          "Sustainability",
+          "Emissions",
+          "Transportation",
+          "Automobiles",
+          "Technology and society",
+          "Climate change",
+          "Economics",
+          "Policy",
+          "Data",
+          "IDSS",
+          "Electrical engineering and computer science (EECS)",
+          "School of Engineering",
+          "MIT Schwarzman College of Computing"
+        ],
+        "contentSnippet": "When it comes to emissions, individual driving patterns matter as much as how “green” the regional electricity mix is, MIT researchers report.",
+        "guid": "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512",
+        "hash": "f480d2642c9c3ca85a147241302975235bdb7641632322ea09965210977912b9",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 5,
+          "reasons": [
+            "categorias: research (+2)",
+            "snippet: research (+1)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 64,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 9,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 9.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "f74f4663073a462b53a41d5f",
+      "state": "scored",
+      "item": {
+        "id": "f74f4663073a462b53a41d5f",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421",
+        "canonicalUrl": "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421",
+        "title": "PSFC showcases technologies applicable to both fusion and geothermal energy during representative’s visit",
+        "description": "Rep. Jake Auchincloss visits the MIT Plasma Science and Fusion Center to learn about scaling geothermal energy.",
+        "publishedAt": "2026-04-21T22:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "MIT Energy Initiative"
+        ],
+        "categories": [
+          "Special events and guest speakers",
+          "Government",
+          "Fusion",
+          "Energy",
+          "Sustainability",
+          "Alternative energy",
+          "Renewable energy",
+          "Nuclear power and reactors",
+          "Magnets",
+          "Electricity",
+          "Geology",
+          "Technology and policy",
+          "Plasma Science and Fusion Center",
+          "MIT Energy Initiative"
+        ],
+        "rawCategories": [
+          "Special events and guest speakers",
+          "Government",
+          "Fusion",
+          "Energy",
+          "Sustainability",
+          "Alternative energy",
+          "Renewable energy",
+          "Nuclear power and reactors",
+          "Magnets",
+          "Electricity",
+          "Geology",
+          "Technology and policy",
+          "Plasma Science and Fusion Center",
+          "MIT Energy Initiative"
+        ],
+        "contentSnippet": "Rep. Jake Auchincloss visits the MIT Plasma Science and Fusion Center to learn about scaling geothermal energy.",
+        "guid": "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421",
+        "hash": "d16b1f8b3b502e8fae07c5de939f9b7aa383fcc13b0b6aeeae03cf82e735c5ca",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "nuclear",
+          "score": 2,
+          "reasons": [
+            "categorias: nuclear (+2)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 47,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 2,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 2.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "7bf609a6d86b6953540c5349",
+      "state": "scored",
+      "item": {
+        "id": "7bf609a6d86b6953540c5349",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403",
+        "canonicalUrl": "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403",
+        "title": "Working to advance the nuclear renaissance",
+        "description": "Dean Price, assistant professor in the Department of Nuclear Science and Engineering, sees a bright future for nuclear power, and believes AI can help us realize that vision.",
+        "publishedAt": "2026-04-03T20:55:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Steve Nadis | Department of Nuclear Science and Engineering"
+        ],
+        "categories": [
+          "Profile",
+          "Faculty",
+          "Energy",
+          "Nuclear science and engineering",
+          "Artificial intelligence",
+          "Computer modeling",
+          "Renewable energy",
+          "Nuclear power and reactors",
+          "Machine learning",
+          "Sustainability",
+          "School of Engineering"
+        ],
+        "rawCategories": [
+          "Profile",
+          "Faculty",
+          "Energy",
+          "Nuclear science and engineering",
+          "Artificial intelligence",
+          "Computer modeling",
+          "Renewable energy",
+          "Nuclear power and reactors",
+          "Machine learning",
+          "Sustainability",
+          "School of Engineering"
+        ],
+        "contentSnippet": "Dean Price, assistant professor in the Department of Nuclear Science and Engineering, sees a bright future for nuclear power, and believes AI can help us realize that vision.",
+        "guid": "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403",
+        "hash": "a88f728efea2b95f2ae0763dffe70637bd2cd86366f8a43ab0b32f3c92967f21",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "nuclear",
+          "score": 6,
+          "reasons": [
+            "título: nuclear (+3)",
+            "categorias: nuclear (+2)",
+            "snippet: nuclear (+1)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 51,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 6,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 6.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "0ff5ad503501480f6672ae53",
+      "state": "scored",
+      "item": {
+        "id": "0ff5ad503501480f6672ae53",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403",
+        "canonicalUrl": "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403",
+        "title": "Toward cheaper, cleaner hydrogen production",
+        "description": "Co-founded by Dan Sobek ’88, SM ’92, PhD ’97, 1s1 Energy has developed electrochemical cell materials for hydrogen electrolyzers that it says reduces energy use by 30 percent.",
+        "publishedAt": "2026-04-03T04:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Zach Winn | MIT News"
+        ],
+        "categories": [
+          "Energy",
+          "Startups",
+          "Cleaner industry",
+          "Renewable energy",
+          "Sustainability",
+          "Chemical engineering",
+          "Materials science and engineering",
+          "Energy efficiency",
+          "Emissions",
+          "Batteries",
+          "Innovation and Entrepreneurship (I&E)",
+          "Alumni/ae",
+          "Aeronautical and astronautical engineering",
+          "Mechanical engineering",
+          "Electrical engineering and computer science (EECS)",
+          "School of Engineering"
+        ],
+        "rawCategories": [
+          "Energy",
+          "Startups",
+          "Cleaner industry",
+          "Renewable energy",
+          "Sustainability",
+          "Chemical engineering",
+          "Materials science and engineering",
+          "Energy efficiency",
+          "Emissions",
+          "Batteries",
+          "Innovation and Entrepreneurship (I&E)",
+          "Alumni/ae",
+          "Aeronautical and astronautical engineering",
+          "Mechanical engineering",
+          "Electrical engineering and computer science (EECS)",
+          "School of Engineering"
+        ],
+        "contentSnippet": "Co-founded by Dan Sobek ’88, SM ’92, PhD ’97, 1s1 Energy has developed electrochemical cell materials for hydrogen electrolyzers that it says reduces energy use by 30 percent.",
+        "guid": "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403",
+        "hash": "c3dd32c277971594095dcbedf261e6ad0590e470687d2d5d78b71ba0515f4e03",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "hidrogênio",
+          "score": 4,
+          "reasons": [
+            "título: hydrogen (+3)",
+            "snippet: hydrogen (+1)"
+          ]
+        },
+        {
+          "topic": "eficiência energética",
+          "score": 2,
+          "reasons": [
+            "categorias: energy efficiency (+2)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 61,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 6,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 6.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "77d88e8468c30d58f68c94d4",
+      "state": "scored",
+      "item": {
+        "id": "77d88e8468c30d58f68c94d4",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/why-solid-state-batteries-keep-short-circuiting-0325",
+        "canonicalUrl": "https://news.mit.edu/2026/why-solid-state-batteries-keep-short-circuiting-0325",
+        "title": "Why solid-state batteries keep short-circuiting",
+        "description": "New insights into metallic cracks that harm battery performance could advance the longstanding quest to develop energy-dense solid-state batteries.",
+        "publishedAt": "2026-03-25T16:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Zach Winn | MIT News"
+        ],
+        "categories": [
+          "Research",
+          "Batteries",
+          "Energy storage",
+          "Renewable energy",
+          "Sustainability",
+          "Materials science and engineering",
+          "Electrochemistry",
+          "Chemical engineering",
+          "MIT.nano",
+          "DMSE",
+          "National Science Foundation (NSF)",
+          "School of Engineering"
+        ],
+        "rawCategories": [
+          "Research",
+          "Batteries",
+          "Energy storage",
+          "Renewable energy",
+          "Sustainability",
+          "Materials science and engineering",
+          "Electrochemistry",
+          "Chemical engineering",
+          "MIT.nano",
+          "DMSE",
+          "National Science Foundation (NSF)",
+          "School of Engineering"
+        ],
+        "contentSnippet": "New insights into metallic cracks that harm battery performance could advance the longstanding quest to develop energy-dense solid-state batteries.",
+        "guid": "https://news.mit.edu/2026/why-solid-state-batteries-keep-short-circuiting-0325",
+        "hash": "a4526d27c79ec2aaaf9b3104a6772c75e7683a797213d722a101c2e2a9986b26",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 3,
+          "reasons": [
+            "categorias: storage (+2)",
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 62,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 7,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 7.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "59b9231c346e0f9546e1e226",
+      "state": "scored",
+      "item": {
+        "id": "59b9231c346e0f9546e1e226",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324",
+        "canonicalUrl": "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324",
+        "title": "Active Surfaces aims to install peel-and-stick solar panels everywhere",
+        "description": "This award-winning startup with roots at the MIT Energy Initiative is developing lightweight, flexible, high-efficiency solar energy films designed to be used on roofs, walls, and any curved surface.",
+        "publishedAt": "2026-03-24T20:55:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Nancy W. Stauffer | MIT Energy Initiative"
+        ],
+        "categories": [
+          "Startups",
+          "Solar",
+          "Electricity",
+          "Invention",
+          "Renewable energy",
+          "Alumni/ae",
+          "Energy",
+          "Manufacturing",
+          "Civil and environmental engineering",
+          "Innovation and Entrepreneurship (I&E)",
+          "Nanoscience and nanotechnology",
+          "MIT.nano",
+          "Tata Center",
+          "MIT Energy Initiative",
+          "Electrical engineering and computer science (EECS)",
+          "School of Engineering",
+          "MIT Sloan School of Management"
+        ],
+        "rawCategories": [
+          "Startups",
+          "Solar",
+          "Electricity",
+          "Invention",
+          "Renewable energy",
+          "Alumni/ae",
+          "Energy",
+          "Manufacturing",
+          "Civil and environmental engineering",
+          "Innovation and Entrepreneurship (I&E)",
+          "Nanoscience and nanotechnology",
+          "MIT.nano",
+          "Tata Center",
+          "MIT Energy Initiative",
+          "Electrical engineering and computer science (EECS)",
+          "School of Engineering",
+          "MIT Sloan School of Management"
+        ],
+        "contentSnippet": "This award-winning startup with roots at the MIT Energy Initiative is developing lightweight, flexible, high-efficiency solar energy films designed to be used on roofs, walls, and any curved surface.",
+        "guid": "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324",
+        "hash": "9c23a82c7370e56387e4d16da7b97667f2cd3d57c64b85c9a21df2fb4644f389",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "energia solar",
+          "score": 7,
+          "reasons": [
+            "título: solar (+3)",
+            "categorias: solar (+2)",
+            "snippet: solar (+1)",
+            "fonte: solar (+1)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 52,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 7,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 7.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "1400bde1b0b4f0348f5dfe5e",
+      "state": "scored",
+      "item": {
+        "id": "1400bde1b0b4f0348f5dfe5e",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318",
+        "canonicalUrl": "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318",
+        "title": "Turning extreme heat into large-scale energy storage",
+        "description": "Fourth Power, founded by Professor Asegun Henry, is developing thermal batteries for efficiently storing excess electricity from utility grids and power producers.",
+        "publishedAt": "2026-03-18T04:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Zach Winn | MIT News"
+        ],
+        "categories": [
+          "Startups",
+          "Energy storage",
+          "Renewable energy",
+          "Mechanical engineering",
+          "Photovoltaics",
+          "Materials science and engineering",
+          "Energy",
+          "Sustainability",
+          "Research",
+          "Faculty",
+          "Alumni/ae",
+          "Innovation and Entrepreneurship (I&E)",
+          "MIT Energy Initiative",
+          "School of Engineering",
+          "Bates Research And Engineering Center"
+        ],
+        "rawCategories": [
+          "Startups",
+          "Energy storage",
+          "Renewable energy",
+          "Mechanical engineering",
+          "Photovoltaics",
+          "Materials science and engineering",
+          "Energy",
+          "Sustainability",
+          "Research",
+          "Faculty",
+          "Alumni/ae",
+          "Innovation and Entrepreneurship (I&E)",
+          "MIT Energy Initiative",
+          "School of Engineering",
+          "Bates Research And Engineering Center"
+        ],
+        "contentSnippet": "Fourth Power, founded by Professor Asegun Henry, is developing thermal batteries for efficiently storing excess electricity from utility grids and power producers.",
+        "guid": "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318",
+        "hash": "931010af189e3538a75cc779e4b72a16d0626cf1723443e5fd1ec4f7764a3c63",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "armazenamento",
+          "score": 6,
+          "reasons": [
+            "título: storage (+3)",
+            "categorias: storage (+2)",
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "eletricidade",
+          "score": 1,
+          "reasons": [
+            "snippet: grid (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 66,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 11,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 11.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "c875d32c1a65867698dc1205",
+      "state": "scored",
+      "item": {
+        "id": "c875d32c1a65867698dc1205",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313",
+        "canonicalUrl": "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313",
+        "title": "Next-generation geothermal energy: Promise, progress, and challenges",
+        "description": "Geothermal innovators at MIT and elsewhere are seeking deeper and hotter rocks to generate electricity at scale.",
+        "publishedAt": "2026-03-13T18:55:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "MIT Energy Initiative"
+        ],
+        "categories": [
+          "Research",
+          "Energy",
+          "Geology",
+          "Electricity",
+          "Renewable energy",
+          "Sustainability",
+          "Invention",
+          "Startups",
+          "Innovation and Entrepreneurship (I&E)",
+          "MIT Energy Initiative",
+          "D-Lab",
+          "Plasma Science and Fusion Center"
+        ],
+        "rawCategories": [
+          "Research",
+          "Energy",
+          "Geology",
+          "Electricity",
+          "Renewable energy",
+          "Sustainability",
+          "Invention",
+          "Startups",
+          "Innovation and Entrepreneurship (I&E)",
+          "MIT Energy Initiative",
+          "D-Lab",
+          "Plasma Science and Fusion Center"
+        ],
+        "contentSnippet": "Geothermal innovators at MIT and elsewhere are seeking deeper and hotter rocks to generate electricity at scale.",
+        "guid": "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313",
+        "hash": "9dbecb1b1213612d29abe6da7c4c79364b18f89aa1c5d454ff29a880cbfa1015",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 59,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 4,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 4.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "dfb4318ff2c9a2a5f1d299cd",
+      "state": "scored",
+      "item": {
+        "id": "dfb4318ff2c9a2a5f1d299cd",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2026/emily-reichert-positioning-massachusetts-hub-climate-tech-economic-development-0106",
+        "canonicalUrl": "https://news.mit.edu/2026/emily-reichert-positioning-massachusetts-hub-climate-tech-economic-development-0106",
+        "title": "Positioning Massachusetts as a hub for climate tech and economic development",
+        "description": "Massachusetts Clean Energy Center CEO MBA ’12 Emily Reichert highlights the state government’s unique approach to fostering and keeping clean energy innovation.",
+        "publishedAt": "2026-01-06T21:55:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Charlotte Whittle | MIT Energy Initiative"
+        ],
+        "categories": [
+          "Special events and guest speakers",
+          "Alumni/ae",
+          "Energy",
+          "MIT Energy Initiative",
+          "The Engine",
+          "Renewable energy",
+          "Wind",
+          "Cleaner industry",
+          "Infrastructure",
+          "Labor and jobs",
+          "Innovation and Entrepreneurship (I&E)",
+          "Startups",
+          "Climate change",
+          "MIT Sloan School of Management",
+          "Policy"
+        ],
+        "rawCategories": [
+          "Special events and guest speakers",
+          "Alumni/ae",
+          "Energy",
+          "MIT Energy Initiative",
+          "The Engine",
+          "Renewable energy",
+          "Wind",
+          "Cleaner industry",
+          "Infrastructure",
+          "Labor and jobs",
+          "Innovation and Entrepreneurship (I&E)",
+          "Startups",
+          "Climate change",
+          "MIT Sloan School of Management",
+          "Policy"
+        ],
+        "contentSnippet": "Massachusetts Clean Energy Center CEO MBA ’12 Emily Reichert highlights the state government’s unique approach to fostering and keeping clean energy innovation.",
+        "guid": "https://news.mit.edu/2026/emily-reichert-positioning-massachusetts-hub-climate-tech-economic-development-0106",
+        "hash": "d8ba8b413391a37f6253df5e9f2dcc095aa1b47ac404f520f76809c9ecb01553",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "clima",
+          "score": 10,
+          "reasons": [
+            "título: clima, climate (+6)",
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 55,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 10,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 10.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "e0c5b13587686b5e6b8fff0d",
+      "state": "scored",
+      "item": {
+        "id": "e0c5b13587686b5e6b8fff0d",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2025/post-cop30-more-aggressive-policies-needed-to-cap-global-warming-1217",
+        "canonicalUrl": "https://news.mit.edu/2025/post-cop30-more-aggressive-policies-needed-to-cap-global-warming-1217",
+        "title": "Post-COP30, more aggressive policies needed to cap global warming at 1.5 C",
+        "description": "Global Change Outlook report for 2025 shows how accelerated action can reduce climate risks and improve sustainability outcomes, while highlighting potential geopolitical hurdles.",
+        "publishedAt": "2025-12-17T20:10:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Mark Dwortzan | Center for Sustainability Science and Strategy"
+        ],
+        "categories": [
+          "Research",
+          "Sustainability",
+          "Energy",
+          "Global",
+          "Climate change",
+          "Wind",
+          "Solar",
+          "Renewable energy",
+          "Electricity",
+          "Greenhouse gases",
+          "Emissions",
+          "Technology and policy",
+          "Politics",
+          "International relations",
+          "Agriculture",
+          "Food",
+          "Water",
+          "Health",
+          "Natural disasters",
+          "EAPS",
+          "MIT Energy Initiative",
+          "IDSS",
+          "School of Science",
+          "School of Engineering"
+        ],
+        "rawCategories": [
+          "Research",
+          "Sustainability",
+          "Energy",
+          "Global",
+          "Climate change",
+          "Wind",
+          "Solar",
+          "Renewable energy",
+          "Electricity",
+          "Greenhouse gases",
+          "Emissions",
+          "Technology and policy",
+          "Politics",
+          "International relations",
+          "Agriculture",
+          "Food",
+          "Water",
+          "Health",
+          "Natural disasters",
+          "EAPS",
+          "MIT Energy Initiative",
+          "IDSS",
+          "School of Science",
+          "School of Engineering"
+        ],
+        "contentSnippet": "Global Change Outlook report for 2025 shows how accelerated action can reduce climate risks and improve sustainability outcomes, while highlighting potential geopolitical hurdles.",
+        "guid": "https://news.mit.edu/2025/post-cop30-more-aggressive-policies-needed-to-cap-global-warming-1217",
+        "hash": "d9f7f01bf514a87bf75d33d677cf745a06650f04c74653239515561e3ef979a0",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "clima",
+          "score": 6,
+          "reasons": [
+            "categorias: clima, climate (+4)",
+            "snippet: clima, climate (+2)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 3,
+          "reasons": [
+            "categorias: solar (+2)",
+            "fonte: solar (+1)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 68,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 13,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 13.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "b8d5825aeb2f18bd0e9f291c",
+      "state": "scored",
+      "item": {
+        "id": "b8d5825aeb2f18bd0e9f291c",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2025/making-clean-energy-investments-more-successful-1212",
+        "canonicalUrl": "https://news.mit.edu/2025/making-clean-energy-investments-more-successful-1212",
+        "title": "Making clean energy investments more successful",
+        "description": "Tools for forecasting and modeling technological improvements and the impacts of policy decisions can result in more effective and impactful decision-making.",
+        "publishedAt": "2025-12-12T16:20:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "David Chandler | Sociotechnical Systems Research Center"
+        ],
+        "categories": [
+          "Research",
+          "Energy",
+          "Sustainability",
+          "Climate change",
+          "Renewable energy",
+          "Data",
+          "Technology and policy",
+          "Computer modeling",
+          "IDSS",
+          "Sociotechnical Systems Research Center",
+          "School of Engineering",
+          "MIT Schwarzman College of Computing"
+        ],
+        "rawCategories": [
+          "Research",
+          "Energy",
+          "Sustainability",
+          "Climate change",
+          "Renewable energy",
+          "Data",
+          "Technology and policy",
+          "Computer modeling",
+          "IDSS",
+          "Sociotechnical Systems Research Center",
+          "School of Engineering",
+          "MIT Schwarzman College of Computing"
+        ],
+        "contentSnippet": "Tools for forecasting and modeling technological improvements and the impacts of policy decisions can result in more effective and impactful decision-making.",
+        "guid": "https://news.mit.edu/2025/making-clean-energy-investments-more-successful-1212",
+        "hash": "78a7b404c94374a790cea4fe9be0b70975734633608c54fb8a4a919a2a8cf1f7",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 63,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 8,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 8.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "9d5ad4a005650996a2aceda0",
+      "state": "scored",
+      "item": {
+        "id": "9d5ad4a005650996a2aceda0",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2025/neet-scholars-install-solar-powered-charging-station-1209",
+        "canonicalUrl": "https://news.mit.edu/2025/neet-scholars-install-solar-powered-charging-station-1209",
+        "title": "MIT NEET students install solar-powered charging station on campus, resurrecting an MIT tradition",
+        "description": "The project was designed and built with novel “bio-composite” materials developed by the student team.",
+        "publishedAt": "2025-12-09T21:50:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Kate S. Petersen | New Engineering Education Transformation (NEET) program"
+        ],
+        "categories": [
+          "Classes and programs",
+          "Undergraduate",
+          "Chemical engineering",
+          "Mechanical engineering",
+          "Nuclear science and engineering",
+          "Energy",
+          "Renewable energy",
+          "Solar",
+          "Sustainability",
+          "Environment",
+          "Manufacturing",
+          "Emissions",
+          "Climate change",
+          "Collaboration",
+          "Community",
+          "Design",
+          "Systems design",
+          "DMSE",
+          "School of Engineering"
+        ],
+        "rawCategories": [
+          "Classes and programs",
+          "Undergraduate",
+          "Chemical engineering",
+          "Mechanical engineering",
+          "Nuclear science and engineering",
+          "Energy",
+          "Renewable energy",
+          "Solar",
+          "Sustainability",
+          "Environment",
+          "Manufacturing",
+          "Emissions",
+          "Climate change",
+          "Collaboration",
+          "Community",
+          "Design",
+          "Systems design",
+          "DMSE",
+          "School of Engineering"
+        ],
+        "contentSnippet": "The project was designed and built with novel “bio-composite” materials developed by the student team.",
+        "guid": "https://news.mit.edu/2025/neet-scholars-install-solar-powered-charging-station-1209",
+        "hash": "2b7210843a7c2c04f324d05c73e3909f815926949411140093518d04bc849ab1",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "energia solar",
+          "score": 6,
+          "reasons": [
+            "título: solar (+3)",
+            "categorias: solar (+2)",
+            "fonte: solar (+1)"
+          ]
+        },
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "nuclear",
+          "score": 2,
+          "reasons": [
+            "categorias: nuclear (+2)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 57,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 12,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 12.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "7d578ee2fb290025efed53c1",
+      "state": "scored",
+      "item": {
+        "id": "7d578ee2fb290025efed53c1",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2025/when-companies-go-green-air-quality-impacts-can-vary-dramatically-1208",
+        "canonicalUrl": "https://news.mit.edu/2025/when-companies-go-green-air-quality-impacts-can-vary-dramatically-1208",
+        "title": "When companies “go green,” air quality impacts can vary dramatically",
+        "description": "Cutting air travel and purchasing renewable energy can lead to different effects on overall air quality, even while achieving the same CO2 reduction, new research shows.",
+        "publishedAt": "2025-12-08T05:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Adam Zewe | MIT News"
+        ],
+        "categories": [
+          "Research",
+          "Climate change",
+          "Emissions",
+          "Pollution",
+          "Public health",
+          "Sustainability",
+          "Data",
+          "Computer modeling",
+          "Renewable energy",
+          "Earth and atmospheric sciences",
+          "Center for Sustainability Science and Strategy",
+          "EAPS",
+          "IDSS",
+          "School of Science",
+          "MIT Schwarzman College of Computing"
+        ],
+        "rawCategories": [
+          "Research",
+          "Climate change",
+          "Emissions",
+          "Pollution",
+          "Public health",
+          "Sustainability",
+          "Data",
+          "Computer modeling",
+          "Renewable energy",
+          "Earth and atmospheric sciences",
+          "Center for Sustainability Science and Strategy",
+          "EAPS",
+          "IDSS",
+          "School of Science",
+          "MIT Schwarzman College of Computing"
+        ],
+        "contentSnippet": "Cutting air travel and purchasing renewable energy can lead to different effects on overall air quality, even while achieving the same CO2 reduction, new research shows.",
+        "guid": "https://news.mit.edu/2025/when-companies-go-green-air-quality-impacts-can-vary-dramatically-1208",
+        "hash": "f2d5ca92fa05dbf47b6833049f4d209a0b1d49f22daa146f2bb59405cfb84eb1",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 5,
+          "reasons": [
+            "categorias: research (+2)",
+            "snippet: research (+1)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 64,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 9,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 9.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "864f6746af781d19f914b267",
+      "state": "scored",
+      "item": {
+        "id": "864f6746af781d19f914b267",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2025/best-way-to-expand-us-electricity-grid-1204",
+        "canonicalUrl": "https://news.mit.edu/2025/best-way-to-expand-us-electricity-grid-1204",
+        "title": "What’s the best way to expand the US electricity grid?",
+        "description": "A study by MIT researchers illuminates choices about reliability, cost, and emissions.",
+        "publishedAt": "2025-12-04T10:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Peter Dizikes | MIT News"
+        ],
+        "categories": [
+          "Research",
+          "Policy",
+          "Government",
+          "Energy",
+          "Climate change",
+          "Sustainability",
+          "Wind",
+          "Renewable energy",
+          "Political science",
+          "Center for Energy and Environmental Policy Research",
+          "Laboratory for Information and Decision Systems (LIDS)",
+          "MIT Sloan School of Management"
+        ],
+        "rawCategories": [
+          "Research",
+          "Policy",
+          "Government",
+          "Energy",
+          "Climate change",
+          "Sustainability",
+          "Wind",
+          "Renewable energy",
+          "Political science",
+          "Center for Energy and Environmental Policy Research",
+          "Laboratory for Information and Decision Systems (LIDS)",
+          "MIT Sloan School of Management"
+        ],
+        "contentSnippet": "A study by MIT researchers illuminates choices about reliability, cost, and emissions.",
+        "guid": "https://news.mit.edu/2025/best-way-to-expand-us-electricity-grid-1204",
+        "hash": "9cc06872077d853d6b54eb6fe18751c73c25e608e596a27f8a3c575d9ce68761",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 5,
+          "reasons": [
+            "categorias: research (+2)",
+            "snippet: research (+1)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "eletricidade",
+          "score": 3,
+          "reasons": [
+            "título: grid (+3)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 1,
+          "reasons": [
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 67,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 12,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 12.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "8bc4b5e7c14407e70013e46e",
+      "state": "scored",
+      "item": {
+        "id": "8bc4b5e7c14407e70013e46e",
+        "sourceId": "mit-news-renewable-energy",
+        "sourceName": "MIT News — Renewable Energy",
+        "originalUrl": "https://news.mit.edu/2025/how-ai-can-help-achieve-clean-energy-future-1124",
+        "canonicalUrl": "https://news.mit.edu/2025/how-ai-can-help-achieve-clean-energy-future-1124",
+        "title": "How artificial intelligence can help achieve a clean energy future",
+        "description": "AI supports the clean energy transition as it manages power grid operations, helps plan infrastructure investments, guides development of novel materials, and more.",
+        "publishedAt": "2025-11-24T22:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:39.654Z",
+        "language": "en",
+        "authors": [
+          "Nancy W. Stauffer | MIT Energy Initiative"
+        ],
+        "categories": [
+          "Research",
+          "Sustainable computing",
+          "Energy",
+          "Chemical engineering",
+          "Mechanical engineering",
+          "MIT Energy Initiative",
+          "Renewable energy",
+          "Energy storage",
+          "Energy efficiency",
+          "Electric grid",
+          "Sustainability",
+          "Infrastructure",
+          "Cleaner industry",
+          "Electric vehicles",
+          "Artificial intelligence",
+          "Machine learning",
+          "Weather modeling",
+          "Climate",
+          "School of Engineering"
+        ],
+        "rawCategories": [
+          "Research",
+          "Sustainable computing",
+          "Energy",
+          "Chemical engineering",
+          "Mechanical engineering",
+          "MIT Energy Initiative",
+          "Renewable energy",
+          "Energy storage",
+          "Energy efficiency",
+          "Electric grid",
+          "Sustainability",
+          "Infrastructure",
+          "Cleaner industry",
+          "Electric vehicles",
+          "Artificial intelligence",
+          "Machine learning",
+          "Weather modeling",
+          "Climate",
+          "School of Engineering"
+        ],
+        "contentSnippet": "AI supports the clean energy transition as it manages power grid operations, helps plan infrastructure investments, guides development of novel materials, and more.",
+        "guid": "https://news.mit.edu/2025/how-ai-can-help-achieve-clean-energy-future-1124",
+        "hash": "89cbecabd5302efbdab02baaeaddee8d95728f2a93a3c1244c47d92408255fa2",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "clima",
+          "score": 4,
+          "reasons": [
+            "categorias: clima, climate (+4)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "armazenamento",
+          "score": 3,
+          "reasons": [
+            "categorias: storage (+2)",
+            "fonte: armazenamento (+1)"
+          ]
+        },
+        {
+          "topic": "eletricidade",
+          "score": 3,
+          "reasons": [
+            "categorias: grid (+2)",
+            "snippet: grid (+1)"
+          ]
+        },
+        {
+          "topic": "eficiência energética",
+          "score": 2,
+          "reasons": [
+            "categorias: energy efficiency (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 2,
+          "reasons": [
+            "categorias: sustainable (+2)"
+          ]
+        },
+        {
+          "topic": "energia eólica",
+          "score": 1,
+          "reasons": [
+            "fonte: eolic (+1)"
+          ]
+        },
+        {
+          "topic": "energia solar",
+          "score": 1,
+          "reasons": [
+            "fonte: solar (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 70,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 15,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 15.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:39.654Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "f0958217a272c7780bcaf515",
+      "state": "scored",
+      "item": {
+        "id": "f0958217a272c7780bcaf515",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi/",
+        "canonicalUrl": "https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi",
+        "title": "Super Typhoon Bavi",
+        "description": "The third category 5 tropical cyclone of 2026 crossed the U.S. Northern Mariana Islands and Guam before continuing toward Asia.",
+        "publishedAt": "2026-07-09T04:01:00.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [],
+        "categories": [
+          "Earth Observatory",
+          "Hurricanes & Typhoons",
+          "Visible Infrared Imaging Radiometer Suite (VIIRS)"
+        ],
+        "rawCategories": [
+          "Earth Observatory",
+          "Hurricanes & Typhoons",
+          "Visible Infrared Imaging Radiometer Suite (VIIRS)"
+        ],
+        "contentSnippet": "The third category 5 tropical cyclone of 2026 crossed the U.S. Northern Mariana Islands and Guam before continuing toward Asia.",
+        "guid": "https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi/",
+        "hash": "acbe590ed29a16fd2e5be4a1178f43d302337d0b70acdc3161bba1a351e30b0a",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "Sul Global",
+          "score": 1,
+          "reasons": [
+            "snippet: asia (+1)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 71,
+        "dimensions": {
+          "recency": 10,
+          "sourceTrust": 20,
+          "topicRelevance": 1,
+          "geographicRelevance": 10,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (current): 10.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 1.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "priority"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "d0746900b1fa56738a573b4e",
+      "state": "scored",
+      "item": {
+        "id": "d0746900b1fa56738a573b4e",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/",
+        "canonicalUrl": "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health",
+        "title": "NASA’s New Horizons Spacecraft Wakes from Hibernation in Good Health",
+        "description": "Following its longest hibernation period ever of nearly a year, NASA’s New Horizons spacecraft has emerged in good health and is ready to begin transmitting science data gathered in the distant Kuiper Belt far beyond Pluto. On June 23, flight controllers at the Johns Hopkins Applied Physics Laboratory (APL) in Laurel, Maryland, confirmed New Horizons, […]",
+        "publishedAt": "2026-07-07T17:48:49.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [],
+        "categories": [
+          "Deep Space Network",
+          "Dwarf Planets",
+          "Missions",
+          "NASA Directorates",
+          "New Horizons",
+          "Planetary Science",
+          "Planetary Science Division",
+          "Pluto",
+          "Science Mission Directorate",
+          "The Kuiper Belt",
+          "The Solar System",
+          "Uncategorized"
+        ],
+        "rawCategories": [
+          "Deep Space Network",
+          "Dwarf Planets",
+          "Missions",
+          "NASA Directorates",
+          "New Horizons",
+          "Planetary Science",
+          "Planetary Science Division",
+          "Pluto",
+          "Science Mission Directorate",
+          "The Kuiper Belt",
+          "The Solar System",
+          "Uncategorized"
+        ],
+        "contentSnippet": "Following its longest hibernation period ever of nearly a year, NASA’s New Horizons spacecraft has emerged in good health and is ready to begin transmitting science data gathered in the distant Kuiper Belt far beyond Pluto. On June 23, flight controllers at the Johns Hopkins Applied Physics Laboratory (APL) in Laurel, Maryland, confirmed New Horizons, […]",
+        "guid": "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/",
+        "hash": "d563a571bf73ec79382b2671d5f0ab29c456735c3a0330d42d2e9fad5f3bc264",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "energia solar",
+          "score": 2,
+          "reasons": [
+            "categorias: solar (+2)"
+          ]
+        },
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 47,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 2,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 2.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "9bb30e9cecd12ce5bebe2485",
+      "state": "scored",
+      "item": {
+        "id": "9bb30e9cecd12ce5bebe2485",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://www.nasa.gov/technology/space-comms/nasas-capstone-completes-extended-mission-testing-lunar-technologies/",
+        "canonicalUrl": "https://www.nasa.gov/technology/space-comms/nasas-capstone-completes-extended-mission-testing-lunar-technologies",
+        "title": "NASA’s CAPSTONE Completes Extended Mission Testing Lunar Technologies",
+        "description": "As NASA prepares for a sustained human presence on the Moon, missions will increasingly require spacecraft that can navigate and communicate without a direct connection to Earth. NASA’s Cislunar Autonomous Positioning System Technology Operations and Navigation Experiment, or CAPSTONE, validated and advanced these capabilities. Designed to test and validate technologies in lunar orbit, CAPSTONE launched […]",
+        "publishedAt": "2026-07-06T15:00:54.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [
+          "Korine Powers"
+        ],
+        "categories": [
+          "Communicating and Navigating with Missions",
+          "Ames Research Center",
+          "Earth's Moon",
+          "Goddard Space Flight Center",
+          "Small Business Innovation Research / Small Business",
+          "Small Spacecraft Technology Program",
+          "Space Communications Technology"
+        ],
+        "rawCategories": [
+          "Communicating and Navigating with Missions",
+          "Ames Research Center",
+          "Earth's Moon",
+          "Goddard Space Flight Center",
+          "Small Business Innovation Research / Small Business",
+          "Small Spacecraft Technology Program",
+          "Space Communications Technology"
+        ],
+        "contentSnippet": "As NASA prepares for a sustained human presence on the Moon, missions will increasingly require spacecraft that can navigate and communicate without a direct connection to Earth. NASA’s Cislunar Autonomous Positioning System Technology Operations and Navigation Experiment, or CAPSTONE, validated and advanced these capabilities. Designed to test and validate technologies in lunar orbit, CAPSTONE launched […]",
+        "guid": "https://www.nasa.gov/?p=1014451",
+        "hash": "ea1788432ffc3978f348f8c0e1b563cde0725f5fee241b6703b165b11964b8d2",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 59,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 4,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 4.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "38caf79cab07831f156929f1",
+      "state": "scored",
+      "item": {
+        "id": "38caf79cab07831f156929f1",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://www.nasa.gov/directorates/stmd/nextstep-3-a-lunar-enabling-technology/",
+        "canonicalUrl": "https://www.nasa.gov/directorates/stmd/nextstep-3-a-lunar-enabling-technology",
+        "title": "NextSTEP-3 A: Lunar Enabling Technology",
+        "description": "Solicitation Number: 80GRC026R0008 May 19, 2026 – Synopsis issued June 29, 2026 – Draft BAA and Appendix A Issued | Web Article NASA issued a draft Broad Agency Announcement under NextSTEP‑3, Appendix A, on June 29, 2026, to advance concepts that accelerate the technological readiness of critical systems for lunar surface and cislunar architecture. This solicitation seeks to close key technology gaps and […]",
+        "publishedAt": "2026-06-29T14:56:54.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [
+          "Loura Hall"
+        ],
+        "categories": [
+          "Space Technology Mission Directorate",
+          "Glenn Research Center",
+          "Lunar Surface Innovation Initiative",
+          "Lunar Surface Technology Research",
+          "Technology"
+        ],
+        "rawCategories": [
+          "Space Technology Mission Directorate",
+          "Glenn Research Center",
+          "Lunar Surface Innovation Initiative",
+          "Lunar Surface Technology Research",
+          "Technology"
+        ],
+        "contentSnippet": "Solicitation Number: 80GRC026R0008 May 19, 2026 – Synopsis issued June 29, 2026 – Draft BAA and Appendix A Issued | Web Article NASA issued a draft Broad Agency Announcement under NextSTEP‑3, Appendix A, on June 29, 2026, to advance concepts that accelerate the technological readiness of critical systems for lunar surface and cislunar architecture. This solicitation seeks to close key technology gaps and […]",
+        "guid": "https://www.nasa.gov/?p=1012034",
+        "hash": "d97bd58479519f2b04600b2abb3694106e37293eaabba50e0ee129b48af5c033",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 59,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 4,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 4.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [],
+        "recommendation": "review"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "97bdc81446922037795e2372",
+      "state": "scored",
+      "item": {
+        "id": "97bdc81446922037795e2372",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://science.nasa.gov/missions/swift/swift-boost-mission/partners-nasa-ready-for-june-launch-of-swift-boost-mission/",
+        "canonicalUrl": "https://science.nasa.gov/missions/swift/swift-boost-mission/partners-nasa-ready-for-june-launch-of-swift-boost-mission",
+        "title": "Partners, NASA Ready for June Launch of Swift Boost Mission",
+        "description": "A mission to raise the orbit of NASA’s Swift observatory is poised for launch June 30.",
+        "publishedAt": "2026-06-26T17:16:22.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [],
+        "categories": [
+          "Astrophysics",
+          "Goddard Space Flight Center",
+          "Neil Gehrels Swift Observatory",
+          "Robotics",
+          "Swift Boost Mission",
+          "The Universe",
+          "Wallops Flight Facility"
+        ],
+        "rawCategories": [
+          "Astrophysics",
+          "Goddard Space Flight Center",
+          "Neil Gehrels Swift Observatory",
+          "Robotics",
+          "Swift Boost Mission",
+          "The Universe",
+          "Wallops Flight Facility"
+        ],
+        "contentSnippet": "A mission to raise the orbit of NASA’s Swift observatory is poised for launch June 30.",
+        "guid": "https://science.nasa.gov/missions/swift/swift-boost-mission/partners-nasa-ready-for-june-launch-of-swift-boost-mission/",
+        "hash": "1e844bac83193f58cc6649aa896ca72bfa4709aec28c859fb028de615857cab9",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 5,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 0,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": -40
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 0.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [
+          "irrelevantPenalty: -40."
+        ],
+        "recommendation": "archive"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "77f0c6e2f3ca905801b0f2f8",
+      "state": "scored",
+      "item": {
+        "id": "77f0c6e2f3ca905801b0f2f8",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://www.nasa.gov/news-release/nasa-identifies-more-than-40-space-technologies-for-collaboration/",
+        "canonicalUrl": "https://www.nasa.gov/news-release/nasa-identifies-more-than-40-space-technologies-for-collaboration",
+        "title": "NASA Identifies More Than 40 Space Technologies for Collaboration",
+        "description": "NASA selected 41 proposals from 37 companies to advance technologies in support of the agency’s goals to establish a long-term presence on the Moon and enable human exploration of Mars. These American companies, picked from NASA’s 2025 Announcement of Collaboration Opportunity (ACO), will mature technologies creating solutions for space transportation, planetary surface operations, and lunar […]",
+        "publishedAt": "2026-06-26T15:37:58.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [
+          "Jessica Taveau"
+        ],
+        "categories": [
+          "Technology",
+          "Space Technology Mission Directorate"
+        ],
+        "rawCategories": [
+          "Technology",
+          "Space Technology Mission Directorate"
+        ],
+        "contentSnippet": "NASA selected 41 proposals from 37 companies to advance technologies in support of the agency’s goals to establish a long-term presence on the Moon and enable human exploration of Mars. These American companies, picked from NASA’s 2025 Announcement of Collaboration Opportunity (ACO), will mature technologies creating solutions for space transportation, planetary surface operations, and lunar […]",
+        "guid": "https://www.nasa.gov/?post_type=press-release&p=1012219",
+        "hash": "78ced682f46e7d1c27dc4fc42390005779058800c7d97b9b82dd05df0a5ddf06",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 5,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 0,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": -40
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 0.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [
+          "irrelevantPenalty: -40."
+        ],
+        "recommendation": "archive"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "35527ebcc754aaab0ecfebc9",
+      "state": "scored",
+      "item": {
+        "id": "35527ebcc754aaab0ecfebc9",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://science.nasa.gov/earth/earth-observatory/signs-of-thaw-in-the-bering-sea/",
+        "canonicalUrl": "https://science.nasa.gov/earth/earth-observatory/signs-of-thaw-in-the-bering-sea",
+        "title": "Signs of Thaw in the Bering Sea",
+        "description": "Drifting sea ice fragments near Alaska’s Saint Lawrence and Nunivak islands and colorful water around the Yukon Delta heralded the approach of the summer solstice.",
+        "publishedAt": "2026-06-22T04:01:00.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [],
+        "categories": [
+          "Earth Observatory",
+          "Moderate Resolution Imaging Spectroradiometer (MODIS)",
+          "Sea Ice",
+          "Snow",
+          "Surface Water"
+        ],
+        "rawCategories": [
+          "Earth Observatory",
+          "Moderate Resolution Imaging Spectroradiometer (MODIS)",
+          "Sea Ice",
+          "Snow",
+          "Surface Water"
+        ],
+        "contentSnippet": "Drifting sea ice fragments near Alaska’s Saint Lawrence and Nunivak islands and colorful water around the Yukon Delta heralded the approach of the summer solstice.",
+        "guid": "https://science.nasa.gov/earth/earth-observatory/signs-of-thaw-in-the-bering-sea/",
+        "hash": "5d51c6f1a9d66af4e16fa33cc6685f5e6cabf9adda997aa82eed08a8c5537537",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 5,
+        "dimensions": {
+          "recency": 5,
+          "sourceTrust": 20,
+          "topicRelevance": 0,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": -40
+        },
+        "reasons": [
+          "Recência (background): 5.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 0.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [
+          "irrelevantPenalty: -40."
+        ],
+        "recommendation": "archive"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "9d6c86223a3584bdee47a8a0",
+      "state": "scored",
+      "item": {
+        "id": "9d6c86223a3584bdee47a8a0",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://science.nasa.gov/missions/tech-demonstration/nasa-robotic-tech-demo-will-advance-prototype-gamma-ray-detectors/",
+        "canonicalUrl": "https://science.nasa.gov/missions/tech-demonstration/nasa-robotic-tech-demo-will-advance-prototype-gamma-ray-detectors",
+        "title": "NASA Robotic Tech Demo Will Advance Prototype Gamma-Ray Detectors",
+        "description": "A new type of gamma-ray sensor developed by NASA will take part in a robotic arm demonstration on the agency’s upcoming Fly Foundational Robots mission.",
+        "publishedAt": "2026-06-11T18:59:37.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [],
+        "categories": [
+          "Astrophysics",
+          "Gamma Rays",
+          "Goddard Space Flight Center",
+          "Robotics",
+          "Technology Demonstration",
+          "The Universe"
+        ],
+        "rawCategories": [
+          "Astrophysics",
+          "Gamma Rays",
+          "Goddard Space Flight Center",
+          "Robotics",
+          "Technology Demonstration",
+          "The Universe"
+        ],
+        "contentSnippet": "A new type of gamma-ray sensor developed by NASA will take part in a robotic arm demonstration on the agency’s upcoming Fly Foundational Robots mission.",
+        "guid": "https://science.nasa.gov/missions/tech-demonstration/nasa-robotic-tech-demo-will-advance-prototype-gamma-ray-detectors/",
+        "hash": "d5563fff03b69e782efaa7b715a6fe09a05cd6793240f0e41e41993f65312922",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 0,
+        "dimensions": {
+          "recency": 0,
+          "sourceTrust": 20,
+          "topicRelevance": 0,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": -40
+        },
+        "reasons": [
+          "Recência (stale): 0.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 0.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [
+          "irrelevantPenalty: -40."
+        ],
+        "recommendation": "archive"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "bb8c93b6d9764a5c5aa6a1d4",
+      "state": "scored",
+      "item": {
+        "id": "bb8c93b6d9764a5c5aa6a1d4",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://www.nasa.gov/technology/tech-transfer-spinoffs/nasa-equips-astronauts-industry-with-robotic-intelligence/",
+        "canonicalUrl": "https://www.nasa.gov/technology/tech-transfer-spinoffs/nasa-equips-astronauts-industry-with-robotic-intelligence",
+        "title": "NASA Equips Astronauts, Industry with Robotic Intelligence",
+        "description": "As NASA plans long-term missions on the Moon, the agency could use robots to perform routine tasks, allowing crew members to dedicate more time to science and exploration. However, robotic motion control requires complex technology and advances in features like robotic decision-making and object recognition. These are the challenges a Boulder, Colorado-based robotics company is […]",
+        "publishedAt": "2026-06-10T17:00:02.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [
+          "Andrew Wagner"
+        ],
+        "categories": [
+          "Technology Transfer & Spinoffs",
+          "Research and Technology Mission Directorate",
+          "Spinoffs",
+          "Technology Transfer"
+        ],
+        "rawCategories": [
+          "Technology Transfer & Spinoffs",
+          "Research and Technology Mission Directorate",
+          "Spinoffs",
+          "Technology Transfer"
+        ],
+        "contentSnippet": "As NASA plans long-term missions on the Moon, the agency could use robots to perform routine tasks, allowing crew members to dedicate more time to science and exploration. However, robotic motion control requires complex technology and advances in features like robotic decision-making and object recognition. These are the challenges a Boulder, Colorado-based robotics company is […]",
+        "guid": "https://www.nasa.gov/?p=1003847",
+        "hash": "45667720b2e311e056682f612b378cdddef15e138b0d2a44827cdec47d2e90d8",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 4,
+          "reasons": [
+            "categorias: research (+2)",
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 39,
+        "dimensions": {
+          "recency": 0,
+          "sourceTrust": 20,
+          "topicRelevance": 4,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 10,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": -15,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": 0
+        },
+        "reasons": [
+          "Recência (stale): 0.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 4.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 10.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [
+          "promotionalPenalty: -15."
+        ],
+        "recommendation": "monitor"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    },
+    {
+      "id": "acbfc6f6e711725dde3ab2bd",
+      "state": "scored",
+      "item": {
+        "id": "acbfc6f6e711725dde3ab2bd",
+        "sourceId": "nasa-technology",
+        "sourceName": "NASA Technology",
+        "originalUrl": "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/nasa-concludes-antenna-mishap-investigation-releases-report/",
+        "canonicalUrl": "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/nasa-concludes-antenna-mishap-investigation-releases-report",
+        "title": "NASA Concludes Antenna Mishap Investigation, Releases Report",
+        "description": "NASA has completed the investigation into the damage sustained last year at its 70-meter radio-frequency antenna, known as the Deep Space Station 14 (DSS-14), at the Goldstone Deep Space Communications Complex near Barstow, California. The agency has classified the event as a Type A mishap based on the total cost of damages. The antenna will […]",
+        "publishedAt": "2026-06-05T17:00:00.000Z",
+        "collectedAt": "2026-07-15T20:43:40.130Z",
+        "language": "en-US",
+        "authors": [
+          "jjrussel"
+        ],
+        "categories": [
+          "Space Communications & Navigation Program",
+          "Communicating and Navigating with Missions",
+          "Deep Space Network"
+        ],
+        "rawCategories": [
+          "Space Communications & Navigation Program",
+          "Communicating and Navigating with Missions",
+          "Deep Space Network"
+        ],
+        "contentSnippet": "NASA has completed the investigation into the damage sustained last year at its 70-meter radio-frequency antenna, known as the Deep Space Station 14 (DSS-14), at the Goldstone Deep Space Communications Complex near Barstow, California. The agency has classified the event as a Type A mishap based on the total cost of damages. The antenna will […]",
+        "guid": "https://www.nasa.gov/?p=1002526",
+        "hash": "2174b1815e3ba119c1a8469ceb2053d3b543dd7f7eb6dd7c3096764722fc8305",
+        "collectionMethod": "rss"
+      },
+      "topics": [
+        {
+          "topic": "pesquisa e inovação",
+          "score": 2,
+          "reasons": [
+            "fonte: pesquisa, inovacao (+2)"
+          ]
+        },
+        {
+          "topic": "sustentabilidade",
+          "score": 1,
+          "reasons": [
+            "fonte: sustentab (+1)"
+          ]
+        }
+      ],
+      "score": {
+        "total": 0,
+        "dimensions": {
+          "recency": 0,
+          "sourceTrust": 20,
+          "topicRelevance": 0,
+          "geographicRelevance": 0,
+          "novelty": 10,
+          "primarySourceBonus": 10,
+          "crossSourceConfirmation": 0,
+          "educationalPotential": 0,
+          "strategicRelevance": 0,
+          "duplicationPenalty": 0,
+          "promotionalPenalty": 0,
+          "uncertaintyPenalty": 0,
+          "irrelevantPenalty": -40
+        },
+        "reasons": [
+          "Recência (stale): 0.",
+          "Confiança da fonte (primary): 20.",
+          "Relevância temática rastreada: 0.",
+          "Potencial educacional: 0.",
+          "Relevância estratégica: 0.",
+          "Confirmação por fontes relacionadas: 0."
+        ],
+        "penalties": [
+          "irrelevantPenalty: -40."
+        ],
+        "recommendation": "archive"
+      },
+      "relatedItems": [],
+      "relatedSources": [],
+      "rejectionReasons": [],
+      "history": [
+        {
+          "to": "collected",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "collected",
+          "to": "normalized",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        },
+        {
+          "from": "normalized",
+          "to": "scored",
+          "at": "2026-07-15T20:43:40.130Z",
+          "actor": "codex-public-source-curation"
+        }
+      ]
+    }
+  ]
+}

@@ -7,33 +7,31 @@ import { InPauta } from "@/components/home/InPauta";
 import { SectionTitle } from "@/components/home/SectionTitle";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
-import {
-  getFeaturedArticles,
-  getLatestArticles,
-  getPublishedArticles,
-} from "@/data/articles";
+import { getFeaturedArticles, getLatestArticles, getPublishedArticles } from "@/content/repository";
 import { categories } from "@/data/categories";
 import type { CategorySlug } from "@/types/content";
+import { siteConfig } from "@/config/site";
+import { organizationJsonLd, resolveCanonical, socialMeta, websiteJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sul Global — Portal editorial de energia e transição" },
+      { title: `${siteConfig.name} — Portal editorial de energia e transição` },
       {
         name: "description",
-        content:
-          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
+        content: siteConfig.description,
       },
-      {
-        property: "og:title",
-        content: "Sul Global — Portal editorial de energia e transição",
-      },
-      {
-        property: "og:description",
-        content:
-          "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
-      },
+      ...socialMeta({
+        title: `${siteConfig.name} — Portal editorial de energia e transição`,
+        description: siteConfig.description,
+        path: "/",
+      }),
     ],
+    links: [{ rel: "canonical", href: resolveCanonical("/") }],
+    scripts: [organizationJsonLd(), websiteJsonLd()].map((value) => ({
+      type: "application/ld+json",
+      children: JSON.stringify(value),
+    })),
   }),
   component: Index,
 });
@@ -43,9 +41,7 @@ function Index() {
   const latest = getLatestArticles(12);
   const hero = featured[0] ?? latest[0];
   const secondary = latest.filter((a) => a.slug !== hero?.slug).slice(0, 2);
-  const rest = latest.filter(
-    (a) => a.slug !== hero?.slug && !secondary.includes(a),
-  );
+  const rest = latest.filter((a) => a.slug !== hero?.slug && !secondary.includes(a));
 
   if (!hero) {
     return (

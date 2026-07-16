@@ -1,0 +1,17 @@
+{
+  "sourceId": "doe-energy-news",
+  "discoveryMethod": "official-metadata",
+  "officialPage": "https://www.energy.gov/listings/energy-news",
+  "officialFeedPage": "https://www.energy.gov/listings/energy-news?page=1&view=rss",
+  "feedUrl": "https://www.energy.gov/listings/energy-news?page=1&view=rss",
+  "feedOwnershipConfirmed": true,
+  "termsUrl": "https://www.energy.gov/web-policies",
+  "copyrightUrl": "https://www.energy.gov/web-policies",
+  "termsSummary": "Página oficial de notícias energéticas; políticas ainda exigem análise específica antes de uso operacional.",
+  "copyrightSummary": "Nenhum conteúdo foi copiado durante a verificação.",
+  "collectionLimitations": ["Não coletar: resposta atual é HTML"],
+  "reviewedAt": "2026-07-15T20:31:05.000Z",
+  "reviewedBy": "codex-public-source-curation",
+  "decision": "rejected",
+  "decisionReason": "URL testada respondeu text/html, não RSS/Atom."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "mit-news-renewable-energy",
+  "name": "MIT News — Renewable Energy",
+  "homepage": "https://news.mit.edu/topic/renewable-energy",
+  "feedUrl": "https://news.mit.edu/topic/mitrenewable-energy-rss.xml",
+  "sourceType": "university",
+  "language": "en",
+  "countries": ["US"],
+  "topics": ["energia solar", "energia eólica", "armazenamento", "pesquisa e inovação"],
+  "trustTier": "primary",
+  "active": true,
+  "termsNotes": "RSS oferecido para sindicação; preservar atribuição e link original.",
+  "copyrightNotes": "Somente metadados e snippet de até 500 caracteres; sem matéria ou imagem.",
+  "collectionMethod": "rss",
+  "expectedFrequency": "weekly",
+  "evidenceCheckedAt": "2026-07-15T20:31:03.000Z",
+  "evidenceCheckedBy": "codex-public-source-curation",
+  "evidenceId": "mit-news-renewable-energy",
+  "notes": "Fonte primária para anúncios do MIT; não constitui confirmação independente."
+}

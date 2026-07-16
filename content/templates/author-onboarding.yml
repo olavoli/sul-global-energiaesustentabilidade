@@ -1,0 +1,23 @@
+# Template privado de onboarding. Não é um perfil público nem uma verificação.
+# Preencha somente com informações fornecidas e autorizadas pela própria pessoa.
+slug: __SLUG__
+
+# Campos públicos se o autor for verificado:
+displayName: null
+shortBio: null
+fullBio: null
+expertise: []
+researchLines: []
+mission: null
+role: null
+organization: null
+credentials: []
+credentialsConfirmed: null
+socialLinks: {}
+conflictsOfInterest: null
+
+# Confirmações internas; não são copiadas para o perfil público:
+publicationAuthorized: null
+truthConfirmed: null
+
+# Não inclua endereço, documento, telefone, nascimento ou outros dados sensíveis.

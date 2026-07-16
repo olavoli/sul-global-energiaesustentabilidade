@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "date": "2026-07-16",
+  "runId": "run-85510ce4d71b0b89",
+  "generatedAt": "2026-07-16T01:28:55.567Z",
+  "sourcesChecked": 2,
+  "sourcesHealthy": 2,
+  "sourcesDegraded": 0,
+  "itemsCollected": 0,
+  "newItems": 0,
+  "duplicates": 0,
+  "quarantined": 0,
+  "clusters": 30,
+  "priorities": 0,
+  "reviews": 30,
+  "monitoring": 0,
+  "translationsPending": 3,
+  "highRisks": 9,
+  "blockers": {
+    "unreviewed-translation": 3
+  },
+  "coverage": {
+    "Norte Global": 2
+  },
+  "gaps": [
+    "Cobertura concentrada exclusivamente no Norte Global.",
+    "Ausência de fontes da América Latina.",
+    "Ausência de fontes da África.",
+    "Ausência de fontes da Ásia."
+  ],
+  "failures": [],
+  "recommendedActions": [
+    "Buscar confirmaÃ§Ã£o institucional independente.",
+    "Revisar traduÃ§Ãµes pendentes comparando com o original.",
+    "Priorizar revisÃ£o humana dos riscos altos."
+  ],
+  "internalIds": [
+    "run-85510ce4d71b0b89",
+    "decision-96c18a2135fa9252",
+    "decision-126366c4835418d7",
+    "decision-77622cb2fb8f75f3",
+    "decision-d82f4e4839844ebf",
+    "decision-2ee586c208e5e4f4",
+    "decision-6e572d7968205394",
+    "decision-910b8f063eae74b3",
+    "decision-55c5b250e1bb99be",
+    "decision-ed2aa52995c872fa"
+  ],
+  "summary": "30 clusters; 30 decisÃµes; nenhuma publicaÃ§Ã£o ou aprovaÃ§Ã£o automÃ¡tica."
+}

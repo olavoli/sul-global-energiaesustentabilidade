@@ -20,6 +20,10 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Newsroom operational state generated at runtime
+newsroom/storage/
+newsroom/audit/storage-events.jsonl
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

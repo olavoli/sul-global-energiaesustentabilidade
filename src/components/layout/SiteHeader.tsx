@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Menu, Search } from "lucide-react";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
@@ -9,11 +9,14 @@ import { primaryNav } from "@/components/navigation/nav-items";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuTriggerRef = useRef<HTMLButtonElement>(null);
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
   const today = new Intl.DateTimeFormat("pt-BR", {
     weekday: "long",
     day: "2-digit",
     month: "long",
     year: "numeric",
+    timeZone: "America/Sao_Paulo",
   }).format(new Date());
 
   return (
@@ -21,16 +24,21 @@ export function SiteHeader() {
       <div className="border-b border-border/60 bg-primary text-primary-foreground">
         <Container className="flex h-8 items-center justify-between">
           <span className="overline">Sul Global — Jornalismo de energia e transição</span>
-          <span className="hidden overline sm:inline">{today}</span>
+          <span className="hidden overline sm:inline" suppressHydrationWarning>
+            {today}
+          </span>
         </Container>
       </div>
 
       <Container className="flex h-16 items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <button
+            ref={menuTriggerRef}
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border md:hidden"
             aria-label="Abrir menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation-dialog"
             onClick={() => setMenuOpen(true)}
           >
             <Menu className="h-5 w-5" aria-hidden />
@@ -38,10 +46,7 @@ export function SiteHeader() {
           <Logo />
         </div>
 
-        <nav
-          aria-label="Navegação principal"
-          className="hidden lg:flex lg:items-center lg:gap-6"
-        >
+        <nav aria-label="Navegação principal" className="hidden lg:flex lg:items-center lg:gap-6">
           {primaryNav.slice(0, 5).map((item) => (
             <Link
               key={item.label}
@@ -67,7 +72,7 @@ export function SiteHeader() {
         </div>
       </Container>
 
-      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <MobileMenu open={menuOpen} onClose={closeMenu} returnFocusRef={menuTriggerRef} />
     </header>
   );
 }
