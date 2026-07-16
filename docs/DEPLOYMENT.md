@@ -1,16 +1,20 @@
 # Implantação e operação
 
+## Central Editorial
+
+`NEWSROOM_ADMIN_SECRET` é server-only e obrigatório para habilitar acesso. Nunca use prefixo `VITE_`. Sem backend privado persistente, a Central mutável não deve ser ativada em Cloudflare multi-instância.
+
 Este documento prepara uma implantação controlada; ele não autoriza deploy nem define domínio.
 
 ## Matriz de ambientes
 
-| Ambiente | `VITE_APP_ENV` | URL | Demos | Indexação |
-| --- | --- | --- | --- | --- |
-| Desenvolvimento | `development` | local | habilitadas com aviso | bloqueada |
-| Teste | `test` | local | permitidas em testes | bloqueada |
-| Preview | `preview` ou build sem valor explícito | local ou URL de preview | somente com opt-in e aviso | bloqueada |
-| Staging | `staging` | URL explícita de staging | bloqueadas por padrão | bloqueada |
-| Produção | `production` | URL pública absoluta obrigatória | proibidas | habilitada |
+| Ambiente        | `VITE_APP_ENV`                         | URL                              | Demos                      | Indexação  |
+| --------------- | -------------------------------------- | -------------------------------- | -------------------------- | ---------- |
+| Desenvolvimento | `development`                          | local                            | habilitadas com aviso      | bloqueada  |
+| Teste           | `test`                                 | local                            | permitidas em testes       | bloqueada  |
+| Preview         | `preview` ou build sem valor explícito | local ou URL de preview          | somente com opt-in e aviso | bloqueada  |
+| Staging         | `staging`                              | URL explícita de staging         | bloqueadas por padrão      | bloqueada  |
+| Produção        | `production`                           | URL pública absoluta obrigatória | proibidas                  | habilitada |
 
 `src/config/environment.ts` é a autoridade. Um build genérico é preview, nunca produção implícita. Produção falha se a URL pública estiver ausente/local ou se demos forem habilitadas.
 
@@ -70,3 +74,14 @@ A observabilidade atual não envia dados: em desenvolvimento registra diagnósti
 - imagens demo externas, ativo social e revisão jurídica continuam pendentes;
 - não há E2E de navegador, monitoramento remoto ou métricas de campo;
 - conteúdo demo ainda integra fisicamente o bundle, embora seja bloqueado.
+
+## Persistência da newsroom em deploy futuro
+
+Preview e produção exigem `NEWSROOM_STORAGE_DRIVER=d1`, binding privado
+`NEWSROOM_DB` e migrations validadas. `local` é recusado em produção; binding
+ausente deixa a Central indisponível para mutações sem afetar o portal público.
+Nunca prefixar o binding ou o segredo com `VITE_`.
+
+Antes do deploy: export verificado, backup, migration dry-run, aplicação
+autorizada, import dry-run, teste de recuperação e smoke. Esta Sprint não criou
+recurso remoto nem executou deploy.

@@ -8,6 +8,8 @@ Seis templates foram adicionados fora do índice e `content:new` cria exclusivam
 
 A taxonomia preserva os seis slugs existentes. Tags reais recebem normalização e equivalências conhecidas; demos não foram reescritos. Esta Sprint não adicionou dependência, CMS, autenticação, backend, analytics, anúncio, newsletter real ou provedor de IA.
 
+Validação final da retomada: instalação congelada sem mudanças; typecheck e lint sem ocorrências; 59 testes aprovados; `content:validate` com 0 erros e 24 warnings acionáveis dos 12 demos; build cliente/SSR/Nitro aprovado, com JavaScript inicial de 116,50 kB gzip e CSS de 14,00 kB gzip; dev em `http://127.0.0.1:8081/`; preview em `http://127.0.0.1:8787/`; e smoke aprovado em 15 endpoints. Os processos iniciados foram encerrados.
+
 ## Atualização — Sprint 7
 
 O ambiente agora é centralizado e falha de forma segura: build sem `VITE_APP_ENV` explícito é preview; produção exige URL pública não local e rejeita demos. Preview/staging recebem meta e header `noindex`, robots bloqueado e sitemap/RSS sem conteúdo. O wrapper SSR aplica CSP, `nosniff`, referrer, permissions, frame denial e COOP; HSTS depende de produção oficial via HTTPS.

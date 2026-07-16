@@ -11,6 +11,7 @@ const baseArticle: ArticleFrontmatter = {
   excerpt: "Resumo pesquisável sobre energia solar e transição.",
   contentType: "explainer",
   status: "published",
+  draftStage: "review-ready",
   author: "ana-souza",
   category: "energia",
   tags: ["energia solar", "transição"],

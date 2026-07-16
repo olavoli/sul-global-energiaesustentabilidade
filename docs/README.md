@@ -1,5 +1,27 @@
 # Documentação do Sul Global
 
+- [Central Editorial](EDITORIAL_CONSOLE.md)
+- [Segurança da Central](EDITORIAL_CONSOLE_SECURITY.md)
+- [Operação da Central](EDITORIAL_CONSOLE_OPERATIONS.md)
+
+Automação supervisionada: [NEWSROOM_AUTOMATION](NEWSROOM_AUTOMATION.md), [DAILY_REPORT](NEWSROOM_DAILY_REPORT.md), [INBOX](NEWSROOM_INBOX.md), [RECOVERY](NEWSROOM_RECOVERY.md) e [RUNBOOK](NEWSROOM_RUNBOOK.md).
+
+## Orquestrador — Sprint 15
+
+- [`NEWSROOM_ORCHESTRATOR.md`](NEWSROOM_ORCHESTRATOR.md)
+- [`NEWSROOM_EDITORIAL_POLICY.md`](NEWSROOM_EDITORIAL_POLICY.md)
+- [`NEWSROOM_RISK_MODEL.md`](NEWSROOM_RISK_MODEL.md)
+- [`NEWSROOM_PITCH_WORKFLOW.md`](NEWSROOM_PITCH_WORKFLOW.md)
+
+## Redação algorítmica — Sprint 14
+
+- [`NEWSROOM_CLUSTERING.md`](NEWSROOM_CLUSTERING.md) — regras e revisão de clusters;
+- [`NEWSROOM_EVIDENCE_PACKAGES.md`](NEWSROOM_EVIDENCE_PACKAGES.md) — claims e pacotes;
+- [`NEWSROOM_TRANSLATION.md`](NEWSROOM_TRANSLATION.md) — providers e fila;
+- [`NEWSROOM_TRANSLATION_QA.md`](NEWSROOM_TRANSLATION_QA.md) — guardrails e revisão.
+
+Piloto de fontes reais: [NEWSROOM_REAL_SOURCES](NEWSROOM_REAL_SOURCES.md), [NEWSROOM_HEALTH](NEWSROOM_HEALTH.md) e [NEWSROOM_COVERAGE](NEWSROOM_COVERAGE.md).
+
 Esta pasta reúne os documentos técnicos e estratégicos que orientam a evolução do projeto. A aplicação já possui um frontend funcional em React e TanStack Start, com rotas públicas e conteúdo editorial simulado em arquivos TypeScript.
 
 Os documentos devem ser lidos considerando duas perspectivas:
@@ -25,6 +47,11 @@ Os documentos devem ser lidos considerando duas perspectivas:
 14. [EDITORIAL_STANDARDS.md](./EDITORIAL_STANDARDS.md) — taxonomia, tipos, fontes, workflow, templates e correções.
 15. [AI_EDITORIAL_POLICY.md](./AI_EDITORIAL_POLICY.md) — usos permitidos, proibições e disclosure de IA.
 16. [LAUNCH_CONTENT_PLAN.md](./LAUNCH_CONTENT_PLAN.md) — inventário de pautas a apurar, sem conteúdo produzido.
+17. [EDITORIAL_OPERATIONS.md](./EDITORIAL_OPERATIONS.md) — rotina CLI, transições, autoria, demos e rollback.
+18. [ARTICLE_REVIEW_CHECKLIST.md](./ARTICLE_REVIEW_CHECKLIST.md) — bloqueadores, warnings e recomendações por artigo.
+19. [AUTHOR_ONBOARDING.md](./AUTHOR_ONBOARDING.md) — cadastro mínimo, campos públicos e verificação explícita.
+20. [RESEARCH_WORKFLOW.md](./RESEARCH_WORKFLOW.md) — briefing, fontes, fact-check e gate para redação.
+21. [FIRST_ARTICLE_PLAN.md](./FIRST_ARTICLE_PLAN.md) — estado e sequência segura do piloto real.
 
 ## Referências na raiz
 
@@ -36,3 +63,17 @@ Os documentos devem ser lidos considerando duas perspectivas:
 - [`CHANGELOG.md`](../CHANGELOG.md) — registro de mudanças relevantes.
 
 Antes de implementar itens descritos como planejados, confirme o estado atual nos documentos da raiz e obtenha a aprovação arquitetural correspondente.
+
+## Redação algorítmica
+
+- [ALGORITHMIC_NEWSROOM.md](./ALGORITHMIC_NEWSROOM.md) — arquitetura e limites do MVP local.
+- [NEWSROOM_SOURCE_POLICY.md](./NEWSROOM_SOURCE_POLICY.md) — seleção, confiança, direitos e atribuição.
+- [NEWSROOM_OPERATIONS.md](./NEWSROOM_OPERATIONS.md) — CLI, fila, auditoria e incidentes.
+- [NEWSROOM_SCORING.md](./NEWSROOM_SCORING.md) — dicionário, pesos, dimensões e recomendações.
+- [NEWSROOM_SOURCE_CURATION.md](./NEWSROOM_SOURCE_CURATION.md) — evidências, decisões e coleta piloto.
+- [NEWSROOM_SOURCE_HEALTH.md](./NEWSROOM_SOURCE_HEALTH.md) — saúde operacional dos feeds ativos.
+- [NEWSROOM_SOURCE_COVERAGE.md](./NEWSROOM_SOURCE_COVERAGE.md) — lacunas geográficas e temáticas.
+- [NEWSROOM_STORAGE.md](./NEWSROOM_STORAGE.md) — arquitetura e drivers de persistência.
+- [NEWSROOM_STORAGE_MIGRATION.md](./NEWSROOM_STORAGE_MIGRATION.md) — migrations e importação.
+- [NEWSROOM_BACKUP_RECOVERY.md](./NEWSROOM_BACKUP_RECOVERY.md) — backup e restauração.
+- [NEWSROOM_STORAGE_SECURITY.md](./NEWSROOM_STORAGE_SECURITY.md) — ameaças e controles.

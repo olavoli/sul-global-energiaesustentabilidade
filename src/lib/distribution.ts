@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site";
-import { getAuthors } from "@/data/authors";
+import { getPublicAuthors } from "@/data/authors";
 import { categories } from "@/data/categories";
 import { resolveCanonical } from "@/lib/seo";
 import type { Article } from "@/types/content";
@@ -43,7 +43,7 @@ export function generateSitemap(articles: readonly Article[], publishable = true
   const paths = [
     ...(publishable ? staticPaths : []),
     ...(publishable ? categories.map((category) => `/categoria/${category.slug}`) : []),
-    ...(publishable ? getAuthors().map((author) => `/autor/${author.slug}`) : []),
+    ...(publishable ? getPublicAuthors(false).map((author) => `/autor/${author.slug}`) : []),
     ...(publishable
       ? articles.map((article) => article.canonicalUrl ?? `/artigo/${article.slug}`)
       : []),

@@ -6,7 +6,9 @@ Não existe quantidade universal de artigos para lançar. O conjunto deve ser su
 
 - [ ] Existe conteúdo real suficiente para a proposta editorial aprovada.
 - [ ] Nenhum artigo demo, rascunho ou agendado está visível.
-- [ ] Autores, funções, biografias e eventuais vínculos foram validados.
+- [ ] Autores, funções, biografias e eventuais vínculos foram autorizados e verificados.
+- [ ] Nenhum autor demo, pending ou inactive está associado a conteúdo real publicado.
+- [ ] Confirmações internas de onboarding não aparecem no bundle ou perfil público.
 - [ ] Títulos, resumos, categorias, tags, datas e tempo de leitura foram conferidos.
 - [ ] Tipo editorial (notícia, análise, opinião, guia, entrevista) está correto.
 - [ ] Todo conteúdo percorreu `draft → review → approved → published`; nenhum autor aprovou automaticamente seu próprio texto.
@@ -30,6 +32,9 @@ Não existe quantidade universal de artigos para lançar. O conjunto deve ser su
 - [ ] `correction-needed`, `approved`, `scheduled`, templates e demos estão ausentes da distribuição pública.
 - [ ] `bun run content:validate` informa zero erro; todos os warnings foram revisados e registrados.
 - [ ] A contagem de demos foi conferida e há decisão explícita de remoção ou arquivamento antes do lançamento.
+- [ ] O piloto estrutural permanece invisível até resolver autoria, fontes, mídia e aprovação.
+- [ ] Briefings de pesquisa permanecem fora do bundle, sitemap e RSS.
+- [ ] `content:publish-check` foi executado para cada artigo em ambiente oficial configurado.
 - [ ] RSS inclui apenas conteúdo real aprovado.
 - [ ] Canonical, Open Graph e compartilhamento social representam a publicação correta.
 - [ ] Home, categorias, autores, busca, sitemap e feed foram revisados editorialmente.

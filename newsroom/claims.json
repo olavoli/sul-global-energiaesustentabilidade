@@ -1,0 +1,635 @@
+{
+  "version": 1,
+  "claims": [
+    {
+      "id": "claim-ce7bbed4d2f6364c",
+      "clusterId": "cluster-d11853bf41c0cc56",
+      "text": "Super Typhoon Bavi",
+      "type": "unknown",
+      "sourceItemIds": [
+        "f0958217a272c7780bcaf515"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-ad897ef64d117b1d",
+      "clusterId": "cluster-4d4885ba22d3b709",
+      "text": "How data centers can better manage energy use",
+      "type": "unknown",
+      "sourceItemIds": [
+        "e3b0bc0049257c6b0002a346"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-99c689b8bbd723aa",
+      "clusterId": "cluster-e0ab060d1f693330",
+      "text": "How artificial intelligence can help achieve a clean energy future",
+      "type": "unknown",
+      "sourceItemIds": [
+        "8bc4b5e7c14407e70013e46e"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-100900d5cab93d17",
+      "clusterId": "cluster-60fa36f4a2643deb",
+      "text": "MIT researchers develop a low-cost technique to get lithium out of rocks",
+      "type": "unknown",
+      "sourceItemIds": [
+        "ce5f4a60ed37b3da5f98b648"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-3778be99e3b37e2c",
+      "clusterId": "cluster-19f8ae75caaa4615",
+      "text": "Post-COP30, more aggressive policies needed to cap global warming at 1.5 C",
+      "type": "unknown",
+      "sourceItemIds": [
+        "e0c5b13587686b5e6b8fff0d"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-d58b996d570168a7",
+      "clusterId": "cluster-74178d7e10ef4e65",
+      "text": "3 Questions: Shedding light on why power grids go dark",
+      "type": "unknown",
+      "sourceItemIds": [
+        "9a93af886c2a8c4b73ac2dce"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-d0191868dd9871e4",
+      "clusterId": "cluster-34bfc8e7d0cd8af0",
+      "text": "What’s the best way to expand the US electricity grid?",
+      "type": "unknown",
+      "sourceItemIds": [
+        "864f6746af781d19f914b267"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-25c5a813d2d5593e",
+      "clusterId": "cluster-233daec17b90e737",
+      "text": "Turning extreme heat into large-scale energy storage",
+      "type": "unknown",
+      "sourceItemIds": [
+        "1400bde1b0b4f0348f5dfe5e"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-97645908f00f80b9",
+      "clusterId": "cluster-37f4868d0151041c",
+      "text": "For most US drivers, EVs offer emissions benefits and cost savings",
+      "type": "unknown",
+      "sourceItemIds": [
+        "acbb83123af713c8e84469ed"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-a5f117ccb3608bb4",
+      "clusterId": "cluster-38f55d0aa32c3fd2",
+      "text": "When companies “go green,” air quality impacts can vary dramatically",
+      "type": "unknown",
+      "sourceItemIds": [
+        "7d578ee2fb290025efed53c1"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-731f411e83e743cc",
+      "clusterId": "cluster-348b1b7d4cc5f7e6",
+      "text": "Making clean energy investments more successful",
+      "type": "unknown",
+      "sourceItemIds": [
+        "b8d5825aeb2f18bd0e9f291c"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-c191ae68075787db",
+      "clusterId": "cluster-dc27d730abb11a1e",
+      "text": "Why solid-state batteries keep short-circuiting",
+      "type": "unknown",
+      "sourceItemIds": [
+        "77d88e8468c30d58f68c94d4"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-8259eef74b300a90",
+      "clusterId": "cluster-fc1ffb50b2804592",
+      "text": "Toward cheaper, cleaner hydrogen production",
+      "type": "unknown",
+      "sourceItemIds": [
+        "0ff5ad503501480f6672ae53"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-33e644b221779be7",
+      "clusterId": "cluster-fe10b8496a189f0b",
+      "text": "How the war in the Middle East is impacting global energy systems",
+      "type": "unknown",
+      "sourceItemIds": [
+        "b793bfc009856d6c831a64a2"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-3766afa6ee5a6a75",
+      "clusterId": "cluster-9672b5619d5ce665",
+      "text": "NASA’s CAPSTONE Completes Extended Mission Testing Lunar Technologies",
+      "type": "unknown",
+      "sourceItemIds": [
+        "9bb30e9cecd12ce5bebe2485"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-cb72a9dfdc077ca7",
+      "clusterId": "cluster-b4984e776fd2efcf",
+      "text": "NextSTEP-3 A: Lunar Enabling Technology",
+      "type": "unknown",
+      "sourceItemIds": [
+        "38caf79cab07831f156929f1"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-bed53cde99af1052",
+      "clusterId": "cluster-ce1f73add2eb0560",
+      "text": "Next-generation geothermal energy: Promise, progress, and challenges",
+      "type": "unknown",
+      "sourceItemIds": [
+        "c875d32c1a65867698dc1205"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-88dfd811b7ef1f69",
+      "clusterId": "cluster-f72ad4bc0b6a33bb",
+      "text": "MIT NEET students install solar-powered charging station on campus, resurrecting an MIT tradition",
+      "type": "unknown",
+      "sourceItemIds": [
+        "9d5ad4a005650996a2aceda0"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-b3dd4da984d8a1f1",
+      "clusterId": "cluster-2c680f104b06d140",
+      "text": "Positioning Massachusetts as a hub for climate tech and economic development",
+      "type": "unknown",
+      "sourceItemIds": [
+        "dfb4318ff2c9a2a5f1d299cd"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-9725f6767983edca",
+      "clusterId": "cluster-593b17b195c9f812",
+      "text": "Active Surfaces aims to install peel-and-stick solar panels everywhere",
+      "type": "unknown",
+      "sourceItemIds": [
+        "59b9231c346e0f9546e1e226"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-85ffd2e357ff11d0",
+      "clusterId": "cluster-92cb36be5242af71",
+      "text": "Working to advance the nuclear renaissance",
+      "type": "unknown",
+      "sourceItemIds": [
+        "7bf609a6d86b6953540c5349"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-7101ed23394b6350",
+      "clusterId": "cluster-07d75871c8e3ab5f",
+      "text": "PSFC showcases technologies applicable to both fusion and geothermal energy during representative’s visit",
+      "type": "unknown",
+      "sourceItemIds": [
+        "f74f4663073a462b53a41d5f"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-9b0ab3ab4059bc30",
+      "clusterId": "cluster-faa2bf195fff05c0",
+      "text": "NASA’s New Horizons Spacecraft Wakes from Hibernation in Good Health",
+      "type": "unknown",
+      "sourceItemIds": [
+        "d0746900b1fa56738a573b4e"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-a352dec7240424f9",
+      "clusterId": "cluster-306a1130f3356875",
+      "text": "NASA Equips Astronauts, Industry with Robotic Intelligence",
+      "type": "unknown",
+      "sourceItemIds": [
+        "bb8c93b6d9764a5c5aa6a1d4"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-1ce70f96a93b75e1",
+      "clusterId": "cluster-4c8a99ec500e8324",
+      "text": "A day in the life of MIT Sloan Fellow Alecia Asiamigbe",
+      "type": "unknown",
+      "sourceItemIds": [
+        "b6cf06573d179cf49ef0742f"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-1c3545402379144a",
+      "clusterId": "cluster-07d52204a07eafaf",
+      "text": "Partners, NASA Ready for June Launch of Swift Boost Mission",
+      "type": "announcement",
+      "sourceItemIds": [
+        "97bdc81446922037795e2372"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-b8c942f389b6532b",
+      "clusterId": "cluster-4ca5de015ef4350d",
+      "text": "NASA Identifies More Than 40 Space Technologies for Collaboration",
+      "type": "unknown",
+      "sourceItemIds": [
+        "77f0c6e2f3ca905801b0f2f8"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-5bad72aa11db1114",
+      "clusterId": "cluster-c93fa54d31e53cb1",
+      "text": "Signs of Thaw in the Bering Sea",
+      "type": "unknown",
+      "sourceItemIds": [
+        "35527ebcc754aaab0ecfebc9"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-bb37ad2400eb9ad1",
+      "clusterId": "cluster-2c0228a8a3d63076",
+      "text": "NASA Robotic Tech Demo Will Advance Prototype Gamma-Ray Detectors",
+      "type": "unknown",
+      "sourceItemIds": [
+        "9d6c86223a3584bdee47a8a0"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    },
+    {
+      "id": "claim-ef1756588b7441fc",
+      "clusterId": "cluster-e2453a951cd572ec",
+      "text": "NASA Concludes Antenna Mishap Investigation, Releases Report",
+      "type": "announcement",
+      "sourceItemIds": [
+        "acbfc6f6e711725dde3ab2bd"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "independentSourceCount": 1,
+      "status": "needs-review",
+      "confidence": "low",
+      "evidence": [
+        "Extraído somente de título atribuído à fonte original."
+      ],
+      "uncertainties": [
+        "Não confirmado; equivalência textual não substitui verificação independente."
+      ]
+    }
+  ]
+}

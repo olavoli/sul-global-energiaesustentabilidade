@@ -1,5 +1,67 @@
 # Registro de decisões
 
+## ADR — Central Editorial server-side e sessão administrativa mínima
+
+Decidiu-se proteger `/admin` no wrapper do servidor antes do SSR e fornecer dados por `/api/admin` somente após sessão HMAC. O segredo permanece server-only; cookie HttpOnly, CSRF, rate limit, expiração e schemas Zod protegem ações. Componentes cliente não importam `newsroom/`; a API reutiliza serviços de domínio. Apply completo e coleta externa mutável ficam fora da interface. Como Cloudflare não fornece filesystem persistente, a operação mutável permanece local até backend privado aprovado.
+
+## ADR — automação diária fail-safe e supervisionada
+
+Decidiu-se manter a agenda desacoplada e o pipeline privado, determinístico e dry-run por padrão. Apply exige kill switch global explícito; coleta, tradução, orquestração, notificação e agenda usam switches independentes. Lock, budgets, retries limitados e circuito por fonte impedem concorrência e insistência insegura. Checkpoints preservam trabalho consistente; relatório e inbox orientam revisão humana sem publicar. O filesystem do GitHub Actions é efêmero e não será persistido por commit automático.
+
+## ADR — orquestração supervisionada
+
+Decidiu-se separar avaliação automática, decisão humana, pauta, artigo e publicação. A política JSON somente executa regras editoriais já documentadas. Fonte única reduz confiança; tradução pendente e risco crítico bloqueiam uso factual; score não remove bloqueador. Pauta exige ação humana persistida e nunca gera MDX. Métricas não alteram decisões.
+
+## ADR — clustering conservador e tradução humana
+
+O sistema agrupa automaticamente apenas por identidade forte ou pela combinação de alta similaridade de título, entidade, tema específico e janela temporal. Relação fraca não provoca merge. Instituição, e não feed, define independência. Claims e fonte primária são hipóteses atribuídas. Tradução externa permanece um contrato desabilitado; fixture e passthrough provam o fluxo sem rede. Aprovação linguística nunca equivale a aprovação editorial.
+
+## 018 — Fontes reais exigem evidência e seleção explícita
+
+Configuração, saúde técnica e confiança editorial são separadas. Fonte real exige HTTPS, evidência e revisor; coleta ampla exige confirmação e mutações são dry-run por padrão. Cache condicional e hash evitam repetição; falhas graves vão para quarentena. Sem URLs fornecidas, o catálogo fica vazio. Não há busca web, scraping, agenda ou publicação.
+
+## 017 — Redação algorítmica local, determinística e supervisionada
+
+### Contexto
+
+A triagem precisa evoluir sem publicar, copiar matérias ou depender de IA e serviços externos.
+
+### Decisão
+
+Manter catálogo e estado operacional em `newsroom/`, com código em `scripts/newsroom/`, fora do bundle público. Usar RSS/Atom e fixtures locais; aplicar normalização, deduplicação lexical, regras temáticas e score explicável. Catálogo externo começa vazio. Ações mutáveis são dry-run e exigem `--apply`; aprovação gera somente briefing.
+
+### Consequências
+
+Nenhuma dependência foi adicionada. O MVP funciona offline e é auditável, mas classificação, similaridade e score não substituem apuração humana. Ativar feeds, tradução, IA ou publicação exige decisão posterior.
+
+## 016 — Onboarding privado e verificação explícita precedem a redação factual
+
+### Contexto
+
+O primeiro conteúdo real precisa de autoria autorizada e pesquisa verificável sem expor confirmações internas no portal ou promover dados automaticamente.
+
+### Decisão
+
+Manter perfis públicos em `content/authors.json` e onboarding em diretório não importado. Usar estados `pending`, `verified`, `inactive` e `demo`; `verified` exige data e ação `--apply`. Manter briefing de pesquisa separado do MDX, distinguindo fontes candidatas, confirmadas e rejeitadas. Exigir `ready-for-writing` antes da redação e `review-ready` antes da revisão.
+
+### Consequências
+
+Autor pending pode assinar somente draft. Credenciais continuam opcionais, mas as informadas precisam de confirmação. Onboarding e briefing não entram no bundle, sitemap ou RSS. Nenhuma verificação, redação ou publicação ocorre no build.
+
+## 015 — Operação editorial por CLI com autoria verificada
+
+### Contexto
+
+O fluxo precisava ser operável sem editar código interno nem introduzir CMS, preservando demos e impedindo publicação acidental.
+
+### Decisão
+
+Usar CLI local para inventário, revisão, transição e publish-check. Mudança de status é dry-run até `--apply`; publicação exige ambiente oficial, autor verificado, aprovação, fontes e mídia licenciada. Autores herdados são demos; um marcador pending mantém o piloto bloqueado.
+
+### Consequências
+
+O fundador pode operar MDX pelo Git com relatórios acionáveis. Nenhuma identidade demo pode sustentar conteúdo real e nenhuma transição altera `isDemo`.
+
 ## 014 — Publicação editorial exige estado e evidência explícitos
 
 ### Contexto
@@ -205,3 +267,27 @@ Rejeitar código executável e permitir somente `Callout`, `Quote`, `Figure` e `
 ### Consequências
 
 Novos componentes exigem alteração explícita do whitelist e revisão técnica. Não foi adicionado CMS nem framework de testes.
+
+## ADR — Dossiê obrigatório e piloto conservador
+
+Ativar somente MIT News Renewable Energy e NASA Technology. Fonte externa ativa exige dossiê `confirmed`, feed oficial HTTPS, termos e copyright revisados e URL idêntica à evidência. IRENA ficou em revisão por vedação de automação; gov.br, DOE, FAPESP, ADB e EPE foram rejeitadas pelos motivos registrados. A cobertura inicial estreita é aceita em troca de auditabilidade. Fonte primária não conta sozinha como confirmação independente.
+
+## 012 — D1 como persistência operacional serverless
+
+### Contexto
+
+Fila, decisões, sessões, locks e auditoria exigem estado entre invocações,
+concorrência controlada e transações. O filesystem do worker é efêmero.
+
+### Decisão
+
+Usar contratos neutros, adapter local para desenvolvimento e Cloudflare D1 via
+binding server-side para produção. Relatórios e exports ficam inicialmente como
+objetos privados versionados no mesmo contrato. R2 permanece opção futura para
+volumes maiores.
+
+### Consequências
+
+Produção falha fechada sem D1 e nunca usa local silenciosamente. MDX não migra.
+Há algum acoplamento operacional à plataforma Cloudflare, reduzido pelos
+contratos e testes comuns. Nenhum recurso remoto foi criado nesta Sprint.

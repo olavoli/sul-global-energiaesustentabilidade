@@ -1,19 +1,23 @@
 # Padrões editoriais
 
+## Decisão e pauta
+
+Recomendação algorítmica não é aprovação. `approve-for-pitch` humano cria no máximo pauta privada com claims não verificados e URLs. Pauta não é artigo; antes de review, continuam obrigatórios pesquisa, autoria, fontes, fact-check, conflitos, mídia licenciada e aprovação editorial.
+
 Este documento define o mínimo operacional para conteúdo real. Ele não transforma pautas, templates ou demonstrações em material publicado.
 
 ## Taxonomia de lançamento
 
 Os seis slugs atuais permanecem estáveis para preservar URLs:
 
-| Slug | Categoria | Uso |
-| --- | --- | --- |
-| `energia` | Energia | mercados, infraestrutura, operação e regulação setorial |
-| `sustentabilidade` | Sustentabilidade | clima, biodiversidade, carbono e impactos ambientais |
-| `ciencia` | Ciência | pesquisa, evidência, métodos e fronteiras científicas |
-| `tecnologia` | Tecnologia | engenharia, equipamentos, software e inovação aplicada |
-| `desenvolvimento` | Desenvolvimento | economia, financiamento, políticas públicas e Sul Global |
-| `transicao-energetica` | Transição Energética | mudanças sistêmicas, geopolítica e impactos sociais |
+| Slug                   | Categoria            | Uso                                                      |
+| ---------------------- | -------------------- | -------------------------------------------------------- |
+| `energia`              | Energia              | mercados, infraestrutura, operação e regulação setorial  |
+| `sustentabilidade`     | Sustentabilidade     | clima, biodiversidade, carbono e impactos ambientais     |
+| `ciencia`              | Ciência              | pesquisa, evidência, métodos e fronteiras científicas    |
+| `tecnologia`           | Tecnologia           | engenharia, equipamentos, software e inovação aplicada   |
+| `desenvolvimento`      | Desenvolvimento      | economia, financiamento, políticas públicas e Sul Global |
+| `transicao-energetica` | Transição Energética | mudanças sistêmicas, geopolítica e impactos sociais      |
 
 Política energética e Sul Global são eixos transversais, não novas categorias nesta fase. Use tags para ANEEL, ONS, MME, regiões, fontes e tecnologias. Uma nova categoria exige volume recorrente, responsabilidade editorial, diferença inequívoca e plano de migração de URL. Não criar hierarquia profunda.
 
@@ -58,7 +62,7 @@ Conteúdo real publicado exige aprovação, mídia com licença conhecida e os r
 Templates ficam em `content/templates/` e nunca entram no índice. Crie um draft com:
 
 ```bash
-bun run content:new -- --type news --title "Título provisório" --slug titulo-provisorio --author ana-souza --category energia --date 2026-07-13 --tag "energia solar"
+bun run content:new -- --type news --title "Título provisório" --slug titulo-provisorio --author <autor-verificado> --category energia --date YYYY-MM-DD --tag "energia solar"
 ```
 
 O comando rejeita sobrescrita, slug inválido, autor/categoria inexistentes e qualquer status inicial diferente de `draft`. Depois, substitua todos os textos provisórios por material apurado; o comando não inventa fontes nem publica.
@@ -66,3 +70,7 @@ O comando rejeita sobrescrita, slug inválido, autor/categoria inexistentes e qu
 ## Demos
 
 Os 12 artigos atuais permanecem `isDemo: true`, com capas de licença desconhecida. Desenvolvimento pode mostrá-los com aviso. Produção, sitemap e RSS os bloqueiam. Antes do lançamento, confirme a contagem no resumo de `content:validate` e remova ou arquive deliberadamente os demos em uma Sprint própria.
+
+Conteúdo real pode coexistir com demos, mas a home de produção usa somente material real publicável e aceita estado vazio honesto. Autores possuem `demo`, `pending`, `verified` ou `inactive`; somente `verified` permite conteúdo real sair de draft. `pending` pode assinar scaffold/draft, credenciais são opcionais e mudanças de status nunca alteram `isDemo`.
+
+O gate para review exige pesquisa `ready-for-writing`, artigo `review-ready`, fontes confirmadas, fact-checks concluídos, conflitos avaliados e imagem licenciada. Onboarding e briefing permanecem privados e fora da distribuição.

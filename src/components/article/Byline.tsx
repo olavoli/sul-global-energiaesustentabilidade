@@ -17,7 +17,7 @@ export function Byline({ article, className }: { article: Article; className?: s
           params={{ slug: article.author.slug }}
           className="font-medium text-foreground hover:underline"
         >
-          {article.author.name}
+          {article.author.displayName}
         </Link>
       </span>
       <span aria-hidden>·</span>

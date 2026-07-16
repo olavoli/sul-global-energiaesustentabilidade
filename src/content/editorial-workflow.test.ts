@@ -82,7 +82,11 @@ describe("guardrails editoriais de publicação", () => {
 
   test("templates não entram no índice público", () => {
     expect(articleRecords.some((article) => article.slug.includes("__"))).toBeFalse();
-    expect(articleRecords).toHaveLength(12);
+    expect(
+      articleRecords.some(
+        (article) => article.slug === "rascunho-como-funciona-matriz-eletrica-brasileira",
+      ),
+    ).toBeTrue();
   });
 
   test("draft não entra na listagem pública", () => {
@@ -171,13 +175,27 @@ describe("guardrails editoriais de publicação", () => {
       type: "news" as const,
       title: "Pauta real ainda não apurada",
       slug: "pauta-real-nao-apurada",
-      author: "ana-souza",
+      author: "autor-verificado",
       category: "energia" as const,
       date: "2026-07-13",
       tag: "energia solar",
     };
-    await createDraft(input, root);
-    expect(createDraft(input, root)).rejects.toThrow("já existe");
+    const verifiedAuthors = {
+      "autor-verificado": {
+        slug: "autor-verificado",
+        displayName: "Autor validado de teste",
+        role: "Fixture de teste",
+        shortBio: "Registro controlado exclusivamente para o teste automatizado.",
+        isDemo: false,
+        status: "verified" as const,
+        verifiedAt: "2026-07-13",
+        credentials: [],
+        expertise: [],
+        socialLinks: {},
+      },
+    };
+    await createDraft(input, root, verifiedAuthors);
+    expect(createDraft(input, root, verifiedAuthors)).rejects.toThrow("já existe");
   });
 
   test("validação produz erro acionável com caminho e campo", () => {
@@ -187,6 +205,6 @@ describe("guardrails editoriais de publicação", () => {
         `---\n${stringify(invalid)}---\n\nTexto.`,
         "content/articles/invalido.mdx",
       ),
-    ).toThrow(/content\/articles\/invalido\.mdx[\s\S]*slug/);
+    ).toThrow(/content\/articles\/invalido\.mdx[\s\S]*slug[\s\S]*Ação:/);
   });
 });

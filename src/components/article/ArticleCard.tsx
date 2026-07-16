@@ -49,7 +49,7 @@ export function ArticleCard({
           </p>
         )}
         <p className="text-xs text-muted-foreground">
-          {article.author.name} · {formatDate(article.publishedAt)} ·{" "}
+          {article.author.displayName} · {formatDate(article.publishedAt)} ·{" "}
           {formatReadingTime(article.readingTime)}
         </p>
       </div>

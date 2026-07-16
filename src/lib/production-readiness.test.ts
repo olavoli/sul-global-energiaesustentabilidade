@@ -13,6 +13,7 @@ const realRecord: ArticleFrontmatter = {
   excerpt: "Valida que conteúdo não demonstrativo pode integrar o repositório.",
   contentType: "analysis",
   status: "published",
+  draftStage: "review-ready",
   author: "ana-souza",
   category: "energia",
   tags: ["validação"],

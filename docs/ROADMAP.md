@@ -1,5 +1,39 @@
 # Roadmap
 
+## Sprint 17 — Central Editorial privada
+
+Implementada localmente com sessão administrativa única, cockpit operacional e ações supervisionadas. Próximos passos dependem de backend privado persistente, autenticação definitiva e revisão de implantação; publicação continua fora da Central.
+
+## Sprint 16 — concluída localmente
+
+Pipeline diário supervisionado, agenda protegida, controles operacionais, relatório, inbox, recovery e workflow foram implementados. Backend persistente, Cloudflare Cron, notificação remota, IA e publicação continuam fora do escopo.
+
+## Entregue na Sprint 15
+
+Orquestração supervisionada, decisões privadas, risco, readiness, revisão e contrato de pauta estão implementados. Permanecem futuros: ampliar fontes independentes, revisar traduções, operar pautas reais, redação factual, agenda e qualquer publicação automatizada.
+
+## Entregue na Sprint 14
+
+Clusters, claims, pacotes de evidência e tradução demonstrativa offline estão implementados. Continuam futuros e não autorizados: provider externo, tradução em massa, geração de texto, verificação factual automatizada, agenda diária e publicação automática.
+
+## Sprint 12
+
+Fontes, saúde, coleta controlada, quarentena, métricas e cobertura concluídos. Primeiro cadastro real depende de URL/evidência. Agenda, tradução, IA e publicação não foram implementadas.
+
+## Sprint 12
+
+Fontes, saúde, coleta controlada, quarentena, métricas e cobertura concluídos. O primeiro cadastro real depende de URL/evidência fornecida. Agenda, tradução, IA e publicação não foram implementadas.
+
+## Épico 4 — Sprint 11 concluída
+
+- [x] Cadastro e validação do primeiro autor real autorizado.
+- [x] RSS/Atom e fixture local, sem scraping e sem fonte externa ativa.
+- [x] Normalização, deduplicação, classificação e scoring explicável.
+- [x] Fila e auditoria locais com aprovação limitada a briefing.
+- [ ] Confirmar e autorizar feeds reais antes de qualquer ativação.
+- [ ] Planejar verificação cruzada avançada em Sprint separada.
+- [ ] Tradução, IA, agenda e publicação automática continuam fora do escopo.
+
 O roadmap organiza a evolução por Eras, sem datas ou compromissos de prazo. Itens concluídos refletem apenas o estado confirmado do repositório.
 
 ## Era 1 — Fundação
@@ -45,6 +79,10 @@ Permitir produção, validação e publicação de conteúdo por um fluxo editor
 - [x] Taxonomia estável, fontes estruturadas e workflow completo por metadata no Git.
 - [x] Templates e CLI que criam somente drafts, com validação pré-publicação.
 - [x] Metodologia pública, política de IA e plano de pautas não produzidas.
+- [x] Operação CLI para inventário, revisão, transição e publish-check.
+- [x] Autoria tipada e piloto estrutural draft sem conteúdo factual.
+- [x] Onboarding privado, verificação explícita e perfil pending protegido.
+- [x] Briefing de pesquisa, classificação de fontes e gate para redação factual.
 
 ### Itens pendentes
 
@@ -54,6 +92,8 @@ Permitir produção, validação e publicação de conteúdo por um fluxo editor
 - [x] Implementar página e arquivo de autores.
 - [ ] Substituir conteúdo demonstrativo por conteúdo editorial validado.
 - [ ] Apurar, revisar e aprovar a coleção inicial real conforme o plano de lançamento.
+- [ ] Receber dados autorizados, verificar o primeiro autor e substituir o marcador técnico.
+- [ ] Apurar e preencher o piloto com fontes confirmadas, fact-checks e mídia licenciada.
 - [ ] Definir domínio, revisar textos jurídicos e executar implantação pública controlada.
 
 ## Era 3 — SEO
@@ -114,3 +154,19 @@ Viabilizar receitas sem comprometer independência editorial, privacidade ou des
 - [ ] Projetar slots publicitários antes de integrar scripts externos.
 - [ ] Definir transparência e identificação de conteúdo patrocinado.
 - [ ] Avaliar modelos de assinatura e produtos somente após validação das Eras anteriores.
+
+## Após o piloto de fontes
+
+- [x] Ativar catálogo pequeno com evidência e health check.
+- [x] Executar coleta manual e revisão amostral sem publicação.
+- [ ] Curar fontes aptas no Brasil, América Latina, África e Ásia.
+- [ ] Melhorar dicionários multilíngues após amostras humanas.
+- [ ] Só considerar agenda recorrente após estabilidade e revisão jurídica.
+
+## Persistência serverless
+
+- [x] Contratos, adapter local, adapter D1 e emulador.
+- [x] Migrations, import/export, locks, sessão, rate limit e auditoria.
+- [ ] Provisionar D1 e aplicar migrations somente com autorização.
+- [ ] Testar recuperação em preview privado antes de qualquer produção.
+- [ ] Avaliar R2 se relatórios excederem o limite operacional definido.

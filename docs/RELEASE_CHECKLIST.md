@@ -1,5 +1,10 @@
 # Checklist de release
 
+- [ ] Central bloqueada sem `NEWSROOM_ADMIN_SECRET`.
+- [ ] `/admin` usa noindex, no-store, sessão, CSRF e logout.
+- [ ] Nenhum arquivo `newsroom/`, segredo ou token aparece em `.output/public`.
+- [ ] Persistência privada aprovada antes de ambiente multi-instância.
+
 Este checklist não significa que o portal foi lançado.
 
 ## Obrigatório para o primeiro lançamento
@@ -41,3 +46,13 @@ Este checklist não significa que o portal foi lançado.
 - [ ] Provedor de observabilidade com política de retenção.
 - [ ] Newsletter/contato persistentes com antispam, consentimento e segurança.
 - [ ] Analytics, publicidade e CMP somente após decisão jurídica/editorial.
+
+## Persistência da newsroom
+
+- [ ] D1 criado e binding `NEWSROOM_DB` autorizado fora do repositório.
+- [ ] Migrations revisadas, aplicadas e validadas.
+- [ ] Export e backup com checksums preservados.
+- [ ] Import dry-run sem conflitos; decisões e auditoria conferidas.
+- [ ] Restore testado em ambiente isolado.
+- [ ] Produção recusa `local` e falha segura sem binding.
+- [ ] Sessão, logout, rate limit, locks e conflitos validados.

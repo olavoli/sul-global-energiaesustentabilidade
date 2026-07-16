@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "id": "run-85510ce4d71b0b89",
+      "runType": "manual",
+      "mode": "process-existing",
+      "environment": "local",
+      "startedAt": "2026-07-16T01:28:55.567Z",
+      "status": "running",
+      "actor": "sprint-16-local",
+      "dryRun": false,
+      "configurationVersion": "newsroom-daily-automation-1",
+      "policyVersion": "sul-global-editorial-policy-1",
+      "sourceIds": [],
+      "stages": [
+        {
+          "name": "environment-check",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "environment": "local"
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "configuration-check",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "mode": "process-existing"
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "lock-acquisition",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "orphanOverride": false
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "source-health",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Somente falhas transitÃ³rias; no mÃ¡ximo dois retries.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "collection",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Somente falhas transitÃ³rias; no mÃ¡ximo dois retries.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "normalization",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "deduplication",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "classification",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "scoring",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "clustering",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "evidence-packages",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "translation-queue",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "orchestration",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Interromper preservando checkpoint anterior."
+        },
+        {
+          "name": "daily-report",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Continuar com aviso quando seguro."
+        },
+        {
+          "name": "notification",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Continuar com aviso quando seguro."
+        },
+        {
+          "name": "cleanup",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Continuar com aviso quando seguro."
+        },
+        {
+          "name": "lock-release",
+          "status": "pending",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Continuar com aviso quando seguro."
+        }
+      ],
+      "itemsFetched": 0,
+      "itemsAccepted": 0,
+      "itemsRejected": 0,
+      "duplicates": 0,
+      "quarantined": 0,
+      "clustersCreated": 0,
+      "clustersUpdated": 0,
+      "translationsQueued": 0,
+      "decisionsCreated": 0,
+      "decisionsUpdated": 0,
+      "humanReviewsPending": 0,
+      "errors": [],
+      "warnings": [],
+      "durationMs": 0,
+      "checkpoints": [
+        {
+          "stage": "lock-acquisition",
+          "at": "2026-07-16T01:28:55.567Z"
+        }
+      ]
+    }
+  ]
+}

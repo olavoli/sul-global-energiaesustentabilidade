@@ -1,5 +1,25 @@
 # ARCHITECTURE.md — Sul Global
 
+## Central Editorial privada
+
+`src/server.ts` intercepta `/admin` e `/api/admin` antes do SSR. A autenticação server-only libera uma API privada que lê `newsroom/` por serviços existentes; componentes React recebem apenas respostas autorizadas e nunca importam arquivos operacionais. O portal público continua independente. A persistência por filesystem é adequada ao MVP local, não a workers multi-instância.
+
+## Automação da newsroom
+
+`scripts/newsroom/daily-pipeline.ts` coordena serviços especializados de coleta, processamento, relatório e estado. Runs/checkpoints, circuitos, inbox e relatórios ficam em `newsroom/`; o aplicativo em `src/` não os importa. Scheduler é adapter externo e não concede permissão editorial.
+
+## Orquestração privada
+
+`clusters/evidence/translations + policy → decisions → human action → pitches` é uma cadeia privada. Cada seta preserva IDs, versões, fingerprint e histórico. O avaliador é puro; persistência é explícita, atômica e bloqueada contra concorrência. Não existe dependência de `src/` para `newsroom/`.
+
+## Camada privada de inteligência editorial
+
+`queue.json → clusters.json → claims.json/evidence-packages.json → translations.json` é um fluxo unidirecional fora de `src/` e `public/`. Schemas versionados, escrita temporária com rename, backup e lock protegem as mutações. O clusterer e o provider fixture são funções locais determinísticas; nenhum módulo do site importa estado operacional.
+
+## Camada operacional da redação
+
+`newsroom/` mantém catálogo, runtime, fila, quarentena e auditoria fora do bundle. A CLI controla seleção/dry-run; transporte lê somente RSS/Atom; fila usa versão, lock, backup e escrita atômica. Nenhuma matéria é buscada.
+
 ## Fluxo de conteúdo real (Sprint 8)
 
 `content/articles/` continua sendo a única entrada indexada. `content/templates/` contém modelos deliberadamente excluídos. `scripts/new-content.ts` cria arquivos com exclusividade (`wx`) e status `draft`; `scripts/generate-content.ts` valida schema, referências cruzadas e segurança antes de gerar metadata/loaders.
@@ -84,17 +104,20 @@ sul-global/
 ## Decisões técnicas
 
 ### SSR obrigatório em rotas públicas
+
 Toda rota que serve conteúdo deve renderizar server-side. Nenhum artigo pode
 depender de `useEffect + fetch` para aparecer. Loaders usam
 `context.queryClient.ensureQueryData(queryOptions)`; componentes leem com
 `useSuspenseQuery(queryOptions)`.
 
 ### Metadata por rota
+
 Cada `createFileRoute` define seu próprio `head()` com `title`, `description`,
 `og:title`, `og:description`. `og:image` **só em leaf routes** (nunca no
 `__root.tsx` ou em layouts).
 
 ### Conteúdo em MDX (fase 1)
+
 - Um arquivo por artigo em `content/artigos/<slug>.mdx`.
 - Frontmatter validado por Zod (schema em `docs/CONTENT_MODEL.md`).
 - Índice construído em build time, lido via server function no loader.
@@ -106,17 +129,20 @@ Implementação atual: `scripts/generate-content.ts` valida `content/articles/`,
 O subconjunto editorial não aceita imports, exports, expressões JavaScript ou HTML arbitrário. Componentes JSX exigem whitelist explícita.
 
 ### Navegação
+
 - Sempre `<Link>` do `@tanstack/react-router`. Nunca `<a href>` para rotas
   internas.
 - Sem hash anchors como navegação principal entre seções.
 
 ### Imagens
+
 - `EditorialImage` com loading, `sizes`, fallback e geometria estável.
 - `srcset` somente quando o contrato fornecer variantes reais.
 - Capas desejadas: 1200×630; dimensões não podem ser inventadas.
 - Sempre `alt` descritivo, salvo decoração explicitamente marcada.
 
 ### Backend mínimo (Lovable Cloud)
+
 Fase 1 tem exatamente uma tabela: `subscribers`.
 
 - `id uuid`, `email text unique`, `created_at timestamptz`.
@@ -125,26 +151,28 @@ Fase 1 tem exatamente uma tabela: `subscribers`.
 - Sem PII sensível, sem senhas, sem sessão.
 
 ### SEO técnico
+
 - `public/robots.txt` liberado.
 - `sitemap.xml` gerado dinamicamente em rota TanStack.
 - Feed RSS gerado no build.
 - JSON-LD (`Article`, `Organization`) via `head().scripts`.
 
 ### Monetização (reservada, inativa no MVP)
+
 - Componente `AdSlot` reserva o espaço físico, mas não injeta script.
 - Ativação (AdSense → Ad Manager) depende de tráfego mínimo e decisão
   editorial.
 
 ## Integrações
 
-| Integração          | Fase | Uso                                    |
-|---------------------|------|----------------------------------------|
-| Lovable Cloud       | 1    | Newsletter (`subscribers`)             |
-| Google Analytics 4  | 2    | Métricas de audiência                  |
-| AdSense             | 2    | Anúncios simples                       |
-| Ad Manager          | 3    | Campanhas e patrocínios                |
-| Supabase (full)     | 3    | CMS, membros, premium                  |
-| Stripe              | 3    | Assinatura premium                     |
+| Integração         | Fase | Uso                        |
+| ------------------ | ---- | -------------------------- |
+| Lovable Cloud      | 1    | Newsletter (`subscribers`) |
+| Google Analytics 4 | 2    | Métricas de audiência      |
+| AdSense            | 2    | Anúncios simples           |
+| Ad Manager         | 3    | Campanhas e patrocínios    |
+| Supabase (full)    | 3    | CMS, membros, premium      |
+| Stripe             | 3    | Assinatura premium         |
 
 ## O que não usar
 
@@ -154,3 +182,23 @@ Fase 1 tem exatamente uma tabela: `subscribers`.
 - CSS-in-JS runtime (usar Tailwind).
 - Lodash inteiro, moment.js, jQuery.
 - Qualquer lib > 30kb sem justificativa.
+
+## Redação algorítmica operacional
+
+O subsistema de triagem reside em `scripts/newsroom/` e seus dados em `newsroom/`. Essa direção de dependência impede que catálogo, fila, rejeições, auditoria e briefings entrem no bundle público. O aplicativo continua consumindo apenas o repositório editorial gerado.
+
+O pipeline usa adaptadores `SourceCollector`, normaliza para um schema comum e encaminha inválidos para rejeição. Deduplicação, classificação e scoring são funções puras e testáveis. Escritas da CLI são explícitas, locais e auditáveis; aprovação não atravessa o gate de conteúdo publicado.
+
+Não foi adicionada dependência: o parser limitado atende RSS/Atom de metadados, e segurança usa APIs nativas. Scraping, tradução, IA, banco externo e publicação permanecem em fronteiras não implementadas.
+
+## Gate de evidência
+
+`source:add` carrega o dossiê indicado por `evidenceId` e valida decisão `confirmed`, titularidade, URL exata, domínio oficial, termos, copyright e rejeição de sitemap/tentativa. Catálogo, runtime, fila e auditoria ficam em `newsroom/`, fora do bundle público. Mudança de URL exige nova evidência.
+
+## Persistência durável
+
+O domínio operacional depende de `StorageAdapter`, não de paths. O adapter local
+preserva os JSON existentes; D1 atende produção por binding server-only com
+documentos versionados, tabelas especializadas e transações. A Central, CLI e
+automação compartilham a mesma fronteira. O portal público e o MDX permanecem
+independentes, portanto indisponibilidade da newsroom não derruba conteúdo.

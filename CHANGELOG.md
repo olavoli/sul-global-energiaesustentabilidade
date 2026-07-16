@@ -1,5 +1,96 @@
 # Changelog
 
+## Não publicado — Sprint 18
+
+### Adicionado
+
+- Contratos de persistência, adaptadores local, memória, D1 e emulador D1.
+- Migration versionada, import/export com manifesto e checksums, backup e restore.
+- Locks com fencing, sessões e rate limit server-side, auditoria append-only e objetos privados.
+- Quarenta e cinco testes de contrato cobrindo 34 requisitos da persistência.
+
+### Segurança
+
+- Produção recusa filesystem local e binding ausente; queries D1 são parametrizadas.
+- Nenhum recurso remoto, credencial, deploy, publicação ou agenda foi ativado.
+
+## Não publicado — Sprint 17
+
+### Adicionado
+
+- Central Editorial privada com login, sessão, CSRF, rate limit, dashboard e navegação responsiva.
+- Camada server-side para inbox, decisões, clusters, evidências, traduções, fontes, quarentena, runs, relatórios e pautas.
+- Quarenta testes locais cobrindo os 37 cenários de segurança e operação.
+
+### Segurança
+
+- Rotas privadas bloqueadas antes do SSR, respostas sem cache e `noindex`.
+- Apply completo, publicação, artigo, credencial cliente e provider externo permanecem ausentes.
+
+## 2026-07-15 — Sprint 16
+
+- Pipeline diário supervisionado, modos seguros, lock, budgets, retry e circuit breaker.
+- Runs, checkpoints, recovery, relatório, inbox, notificações locais, métricas e retenção.
+- Workflow GitHub Actions protegido e 36 testes offline.
+- Nenhuma publicação, pauta automática, artigo, IA, tradução externa ou deploy.
+
+## 2026-07-15 — Sprint 15
+
+- Orquestrador editorial determinístico, política versionada e readiness multidimensional.
+- Matriz de riscos, bloqueadores, temas sensíveis e recomendações explicáveis.
+- Fila de decisões, ações humanas e pauta estruturada sem artigo/publicação.
+- CLI, métricas e 34 testes offline adicionados.
+
+## 2026-07-15 — Sprint 14
+
+- Clustering editorial determinístico, relações e contagem institucional independente.
+- Claims atribuídos e pacotes de evidência privados.
+- Fila de tradução, três providers locais/placeholder, glossário e QA com revisão humana.
+- CLI para cluster, evidência, claims e tradução; auditoria ampliada.
+- 34 testes offline; nenhuma coleta adicional, IA externa ou publicação.
+
+## Sprint 12 — fontes reais e coleta controlada
+
+- Cadastro seguro, health, ETag/Last-Modified, mudança e coleta seletiva.
+- Quarentena, fila versionada com lock/backup, métricas e cobertura.
+- Catálogo real vazio, fixtures offline e publicação desabilitada.
+
+## Não publicado — Sprint 11
+
+### Adicionado
+
+- Autor real Olavo Oliveira, verificado por autorização do fundador e sem imagem.
+- Catálogo de fontes, schemas, coletores RSS/Atom/fixture, normalização, deduplicação, classificação, scoring e fila local.
+- CLI `newsroom:*`, auditoria, guardrails de copyright e testes offline determinísticos.
+- Documentação de arquitetura, fontes, operações e scoring da redação algorítmica.
+
+### Alterado
+
+- O piloto vazio passa a usar Olavo, preservando `draft`, invisibilidade, fontes vazias e bloqueios editoriais.
+
+### Segurança
+
+- Coleta externa valida protocolo, DNS/IP privado, redirects, timeout, Content-Type e tamanho da resposta.
+
+## Não publicado — Sprint 10
+
+- Adicionado onboarding privado de autoria com validação de autorização, veracidade e credenciais opcionais.
+- Adicionados comandos `author:new`, `author:validate`, `author:list` e `author:status` com dry-run.
+- Adicionado briefing privado e comandos `research:status` e `research:validate`.
+- Adicionados `draftStage`, gate de pesquisa para review e proteção de perfil pending.
+- Expandido o piloto como scaffold sem conteúdo factual e adicionados 18 testes.
+
+Nenhum dado pessoal, autor, credencial, fato, fonte, imagem ou artigo foi inventado ou publicado.
+
+## Não publicado — Sprint 9
+
+- Adicionados comandos `content:list`, `content:review`, `content:status` e `content:publish-check`.
+- Formalizadas transições, autoria demo/provisória/validada e dry-run antes de qualquer escrita.
+- Adicionado piloto vazio em draft, checklist por artigo e manual de operação.
+- Adicionados 18 testes de transição, distribuição, autoria e coexistência com demos.
+
+Nenhum artigo factual, fonte, autor real, credencial ou publicação foi criado.
+
 ## Não publicado — Sprint 8
 
 ### Adicionado
@@ -99,3 +190,11 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 ### Adicionado
 
 - Primeira versão conhecida do portal Sul Global.
+
+## 2026-07-15 — Sprint 13
+
+- Adicionados dossiê obrigatório, duas fontes reais e documentação de curadoria.
+- Adicionados 26 testes de regressão e um teste de falso positivo geográfico.
+- Coleta real limitada a 20 itens por fonte.
+- Fonte empresarial recebe penalidade promocional explícita.
+- `Asia` exige limite de palavra na classificação.

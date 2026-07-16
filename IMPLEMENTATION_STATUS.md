@@ -1,5 +1,76 @@
 # Status de implementação
 
+## Sprint 17 — implementada localmente
+
+- Central Editorial privada em `/admin/newsroom`, separada do portal e bloqueada antes do SSR.
+- Sessão HMAC, cookie HttpOnly, CSRF, expiração, logout, rate limit e erros sanitizados.
+- Dashboard, inbox, decisões, clusters/evidências, traduções, fontes, quarentena, runs, relatórios e pautas.
+- Ações humanas reutilizam serviços de domínio; apply completo, publicação e criação de artigo não existem.
+- Persistência operacional em filesystem continua local; produção sem segredo bloqueia a Central.
+
+## Sprint 16 — implementada localmente
+
+- Pipeline diário de 17 estágios, sete modos, checkpoints, recovery e relatório privado.
+- Kill switches fail-safe, lock global expirável, orçamentos, retries e circuit breaker por fonte.
+- Inbox supervisionada, providers locais/desativado, métricas e retenção dry-run.
+- GitHub Actions protegido; nenhuma agenda apply, publicação ou persistência por commit.
+
+## Sprint 15 — implementada localmente
+
+- Política editorial executável, matriz de 13 riscos, bloqueadores e prontidão multidimensional.
+- Decisão determinística/idempotente com fingerprint, razões, ações e histórico.
+- Fila privada de decisões; revisão humana obrigatória; pauta condicionada a aprovação explícita.
+- Métricas somente observacionais e proteção de temas sensíveis.
+- Amostra: 30 decisões, nenhuma ação humana e nenhuma pauta automática.
+
+## Sprint 14 — implementada localmente
+
+- `StoryCluster`, relações, fonte primária candidata, claims e `EvidencePackage` possuem schemas versionados.
+- Clustering determinístico em camadas evita agrupar por tema genérico e distingue instituições.
+- Tradução usa fixture, passthrough ou placeholder externo desabilitado; QA e aprovação humana são obrigatórios.
+- Dados ficam em `newsroom/`, fora do bundle. Não há geração, tradução integral, aprovação editorial ou publicação automática.
+- 34 testes específicos são offline e determinísticos.
+
+## Sprint 12 — fontes reais controladas
+
+- [x] Cadastro dry-run/apply com evidência, unicidade e HTTPS.
+- [x] Health, cache condicional, frescor, quarentena, métricas e cobertura.
+- [x] Coleta real somente manual e explicitamente selecionada.
+- [ ] Primeira fonte real depende de URL e evidência fornecidas.
+- [ ] Agenda diária continua fora do escopo.
+
+## Atualização da Sprint 11
+
+- [x] Olavo Oliveira cadastrado como autor real `verified`, sem imagem e somente com dados autorizados.
+- [x] Artigo piloto atribuído a Olavo, ainda `draft`, invisível, sem fontes e sem conteúdo factual.
+- [x] Catálogo externo vazio e validado; fixtures RSS/Atom locais funcionam offline.
+- [x] Normalização, rejeição auditável, deduplicação, classificação e scoring determinísticos.
+- [x] Fila local, CLI dry-run, briefing não publicável e trilha de auditoria implementados.
+- [x] Proteções de SSRF, timeout, redirects, tamanho, copyright e atribuição implementadas.
+- [ ] Nenhuma fonte externa está autorizada ou ativa.
+- [ ] Tradução, IA, agenda e publicação automática permanecem fora do escopo.
+
+## Atualização da Sprint 10
+
+- [x] Modelo público de autor suporta `pending`, `verified`, `inactive` e `demo`; verificação exige data e ação explícita.
+- [x] Onboarding versionado separa campos públicos das confirmações internas e não solicita dado sensível.
+- [x] CLI cria, valida, lista e promove autores com dry-run; nenhuma pessoa foi criada automaticamente.
+- [x] Briefing privado e comandos de pesquisa distinguem fontes candidatas, confirmadas e rejeitadas.
+- [x] Gate exige pesquisa pronta, autor verificado, fact-checks, conflitos e imagem licenciada antes de review.
+- [x] Piloto permanece em `draftStage: scaffold`, invisível e sem conteúdo factual.
+- [x] Dezoito testes adicionais cobrem autoria, privacidade, pesquisa e bundle.
+- [x] Validação final: instalação congelada, typecheck, lint, 95 testes, content:validate, build, dev, preview e smoke de 17 endpoints aprovados.
+- [ ] Primeiro autor e material factual aguardam informações e autorização do fundador.
+
+## Atualização da Sprint 9
+
+- [x] CLI editorial lista, revisa, valida transições e executa publish-check somente leitura.
+- [x] Autores demo e pending possuem estados explícitos; nenhum autor real foi inventado.
+- [x] Piloto estrutural real existe como draft invisível, sem fatos, fontes ou imagem externa.
+- [x] Produção funciona com zero, um ou vários artigos reais e nunca preenche espaços com demos.
+- [x] Dezoito testes operacionais adicionais cobrem transições, distribuição, autoria e piloto.
+- [ ] Primeiro artigo real continua bloqueado por autoria, fontes, mídia e aprovação humana.
+
 ## Atualização da Sprint 8
 
 - [x] Taxonomia de lançamento preserva os seis slugs existentes e normaliza tags de conteúdo real.
@@ -8,6 +79,7 @@
 - [x] Seis templates excluídos do índice e CLI `content:new` criam somente drafts sem sobrescrita.
 - [x] Página SSR `/metodologia`, política de IA e plano de conteúdo foram adicionados.
 - [x] Validação relata 12 demos, templates excluídos, warnings e erros acionáveis.
+- [x] Validação final: instalação congelada, typecheck, lint, 59 testes, build, dev, preview e smoke de 15 endpoints aprovados.
 - [ ] Nenhum conteúdo real foi produzido ou publicado; autores, fontes, imagens e pautas reais dependem de trabalho humano.
 
 ## Atualização da Sprint 7
@@ -136,3 +208,22 @@
 - [ ] Definir persistência e tratamento seguro dos formulários.
 - [ ] Adicionar estratégia de testes e CI em sprint própria.
 - [ ] Auditar componentes e dependências possivelmente não utilizados antes de qualquer remoção.
+
+## Sprint 13 — descoberta e ativação piloto
+
+- [x] Oito dossiês públicos documentados, com duas decisões `confirmed`.
+- [x] MIT News Renewable Energy e NASA Technology ativas e `healthy`.
+- [x] Primeira coleta manual: 30 itens, máximo de 20 por fonte, zero publicação.
+- [x] Amostra de três itens revisada sem aprovação; falso positivo lexical corrigido.
+- [ ] Ampliar cobertura regional e linguística em curadoria futura.
+
+## Sprint 18 — persistência durável
+
+- [x] Domínio desacoplado do filesystem por contratos de storage.
+- [x] Adapter local compatível com dados existentes e escrita atômica.
+- [x] Adapter D1 com CAS, paginação, transações, timeout e falha segura.
+- [x] Migrations, snapshots, import/export, backup e restore locais.
+- [x] Locks, sessões, rate limit e auditoria persistentes.
+- [x] Central e CLI integradas à abstração; portal público permanece isolado.
+- [x] 45 testes de contrato aprovados localmente e no emulador D1.
+- [ ] Provisionar e validar D1 somente após autorização humana.

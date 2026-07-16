@@ -1,0 +1,33 @@
+{
+  "version": "newsroom-daily-automation-1",
+  "lockTtlMs": 900000,
+  "budgets": {
+    "sourcesPerRun": 2,
+    "itemsPerSource": 20,
+    "totalItems": 40,
+    "downloadBytes": 2000000,
+    "sourceDurationMs": 15000,
+    "totalDurationMs": 600000,
+    "redirects": 3,
+    "retries": 2,
+    "consecutiveErrors": 3,
+    "quarantine": 10,
+    "clusters": 100,
+    "translationsQueued": 3,
+    "decisionsGenerated": 100
+  },
+  "circuit": {
+    "failureThreshold": 3,
+    "openDurationMs": 3600000,
+    "halfOpenAttempts": 1
+  },
+  "retention": {
+    "runsDays": 90,
+    "reportsDays": 90,
+    "backupsDays": 30,
+    "auditDays": 180,
+    "resolvedInboxDays": 90,
+    "discardedQuarantineDays": 30,
+    "temporaryHours": 24
+  }
+}

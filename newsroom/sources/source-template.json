@@ -1,0 +1,20 @@
+{
+  "id": "substitua-por-id-estavel",
+  "name": "Substitua pelo nome oficial",
+  "homepage": "https://substitua-pela-url-oficial.invalid/",
+  "feedUrl": "https://substitua-pela-url-rss-ou-atom-confirmada.invalid/feed",
+  "sourceType": "official",
+  "language": "pt-BR",
+  "countries": ["BR"],
+  "topics": ["energia"],
+  "trustTier": "contextual",
+  "active": false,
+  "termsNotes": "Preencher após revisar os termos públicos.",
+  "copyrightNotes": "Coletar apenas metadados e snippet limitado.",
+  "collectionMethod": "rss",
+  "expectedFrequency": "irregular",
+  "evidenceCheckedAt": "2026-07-15T00:00:00.000Z",
+  "evidenceCheckedBy": "substitua-pelo-revisor",
+  "evidenceId": "substitua-pelo-id-do-dossie",
+  "notes": "MODELO NÃO CONFIRMADO: substitua todos os valores antes do cadastro."
+}

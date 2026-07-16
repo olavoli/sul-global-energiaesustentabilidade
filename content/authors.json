@@ -1,0 +1,119 @@
+[
+  {
+    "slug": "ana-souza",
+    "displayName": "Ana Souza",
+    "shortBio": "Cobre políticas públicas de energia e clima. Formada em Engenharia de Energia.",
+    "role": "Editora de Transição Energética",
+    "credentials": [],
+    "expertise": [],
+    "researchLines": [],
+    "socialLinks": {},
+    "disclosure": "Identidade demonstrativa; não usar em conteúdo real.",
+    "status": "demo",
+    "isDemo": true
+  },
+  {
+    "slug": "bruno-carvalho",
+    "displayName": "Bruno Carvalho",
+    "shortBio": "Escreve sobre pesquisa aplicada, materiais e fronteiras da física.",
+    "role": "Repórter de Ciência",
+    "credentials": [],
+    "expertise": [],
+    "researchLines": [],
+    "socialLinks": {},
+    "disclosure": "Identidade demonstrativa; não usar em conteúdo real.",
+    "status": "demo",
+    "isDemo": true
+  },
+  {
+    "slug": "clara-mendes",
+    "displayName": "Clara Mendes",
+    "shortBio": "Acompanha hardware, redes elétricas inteligentes e computação de larga escala.",
+    "role": "Repórter de Tecnologia",
+    "credentials": [],
+    "expertise": [],
+    "researchLines": [],
+    "socialLinks": {},
+    "disclosure": "Identidade demonstrativa; não usar em conteúdo real.",
+    "status": "demo",
+    "isDemo": true
+  },
+  {
+    "slug": "diego-rocha",
+    "displayName": "Diego Rocha",
+    "shortBio": "Cobre biodiversidade, mercados de carbono e finanças verdes.",
+    "role": "Analista de Sustentabilidade",
+    "credentials": [],
+    "expertise": [],
+    "researchLines": [],
+    "socialLinks": {},
+    "disclosure": "Identidade demonstrativa; não usar em conteúdo real.",
+    "status": "demo",
+    "isDemo": true
+  },
+  {
+    "slug": "eduarda-lima",
+    "displayName": "Eduarda Lima",
+    "shortBio": "Escreve sobre economia, políticas públicas e o Sul Global.",
+    "role": "Editora de Desenvolvimento",
+    "credentials": [],
+    "expertise": [],
+    "researchLines": [],
+    "socialLinks": {},
+    "disclosure": "Identidade demonstrativa; não usar em conteúdo real.",
+    "status": "demo",
+    "isDemo": true
+  },
+  {
+    "slug": "autoria-pendente",
+    "displayName": "Autoria pendente de validação",
+    "shortBio": "A autoria real ainda não foi informada nem validada.",
+    "role": "Marcador técnico — não publicável",
+    "credentials": [],
+    "expertise": [],
+    "researchLines": [],
+    "socialLinks": {},
+    "disclosure": "Bloqueio editorial: substituir por autor verificado antes da revisão.",
+    "status": "pending",
+    "isDemo": false
+  },
+  {
+    "slug": "olavo-oliveira",
+    "displayName": "Olavo Oliveira",
+    "shortBio": "Mestre em Energia e Sustentabilidade, pesquisador e divulgador científico dedicado aos temas de eficiência energética, sistemas energéticos, sustentabilidade, transição energética e inovação tecnológica.",
+    "fullBio": "Olavo Oliveira é mestre em Energia e Sustentabilidade pela Universidade Federal de Santa Catarina (UFSC), especialista em Empreendedorismo para Engenharias pela Universidade Estadual Paulista (UNESP) e tecnólogo em Mecânica pela Faculdade de Tecnologia de São Paulo (FATEC-SP).\n\nSua atuação concentra-se na pesquisa e divulgação científica em energia, sustentabilidade e inovação tecnológica, com foco na eficiência energética, nos sistemas energéticos, nos materiais funcionais e nas tecnologias voltadas à transição energética.\n\nNo Sul Global, atua na produção de conteúdos técnicos, análises e materiais educativos destinados a aproximar conhecimento científico, desenvolvimento tecnológico e sociedade.",
+    "credentials": [
+      "Mestre em Energia e Sustentabilidade pela Universidade Federal de Santa Catarina (UFSC)",
+      "Especialista em Empreendedorismo para Engenharias pela Universidade Estadual Paulista (UNESP)",
+      "Tecnólogo em Mecânica pela Faculdade de Tecnologia de São Paulo (FATEC-SP)"
+    ],
+    "expertise": [
+      "eficiência energética",
+      "sistemas energéticos",
+      "sustentabilidade",
+      "transição energética",
+      "tecnologias energéticas",
+      "materiais funcionais",
+      "políticas públicas para energia"
+    ],
+    "researchLines": [
+      "recursos energéticos",
+      "ambiente",
+      "materiais funcionais",
+      "eficiência energética",
+      "tecnologias para a transição energética"
+    ],
+    "mission": "Contribuir para a disseminação do conhecimento em energia, sustentabilidade e inovação tecnológica, promovendo decisões mais conscientes e fortalecendo o desenvolvimento sustentável por meio da educação científica e tecnológica.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/olavo-oliveira-3b3542393/",
+      "github": "https://github.com/olavoli/sul-global-energiaesustentabilidade",
+      "lattes": "https://lattes.cnpq.br/2440432709238817",
+      "orcid": "https://orcid.org/0000-0003-4648-8243"
+    },
+    "disclosure": "Declaro não possuir conflitos de interesse que comprometam minha independência editorial na produção dos conteúdos publicados no Sul Global.",
+    "status": "verified",
+    "isDemo": false,
+    "verifiedAt": "2026-07-15",
+    "verifiedBy": "founder-authorization"
+  }
+]

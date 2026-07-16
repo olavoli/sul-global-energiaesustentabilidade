@@ -16,8 +16,16 @@ const workerUrl = pathToFileURL(resolve(".output/server/index.mjs")).href;
 const worker = ((await import(workerUrl)) as WorkerModule).default;
 const context: ExecutionContext = { waitUntil: () => undefined };
 
-async function request(path: string): Promise<{ response: Response; body: string }> {
-  const response = await worker.fetch(new Request(`http://127.0.0.1:4173${path}`), {}, context);
+async function request(
+  path: string,
+  init?: RequestInit,
+  environment: Record<string, string> = {},
+): Promise<{ response: Response; body: string }> {
+  const response = await worker.fetch(
+    new Request(`http://127.0.0.1:4173${path}`, init),
+    environment,
+    context,
+  );
   return { response, body: await response.text() };
 }
 
@@ -26,11 +34,15 @@ function assert(condition: unknown, message: string): asserts condition {
 }
 
 const demoArticle = "/artigo/hidrogenio-verde-no-brasil-promessa-e-realidade";
+const pilotArticle = "/artigo/rascunho-como-funciona-matriz-eletrica-brasileira";
 const cases = [
   ["/", 200],
   [demoArticle, expectDemo ? 200 : 404],
+  [pilotArticle, 404],
   ["/artigo/artigo-inexistente", 404],
-  ["/autor/ana-souza", 200],
+  ["/autor/ana-souza", expectDemo ? 200 : 404],
+  ["/autor/olavo-oliveira", 200],
+  ["/autor/autoria-pendente", 404],
   ["/autor/autor-inexistente", 404],
   ["/categoria/energia", 200],
   ["/busca?q=energia", 200],
@@ -66,6 +78,10 @@ assert(home.response.headers.get("x-robots-tag") === "noindex, nofollow", "previ
 const search = resultFor("/busca?q=energia");
 assert(search.body.includes("noindex, follow"), "busca deve declarar noindex");
 
+const olavo = resultFor("/autor/olavo-oliveira");
+assert(olavo.body.includes("Olavo Oliveira"), "perfil público de Olavo deve responder");
+assert(olavo.body.includes('"@type":"Person"'), "perfil de Olavo deve incluir JSON-LD Person");
+
 const robots = resultFor("/robots.txt");
 assert(robots.body.includes("Disallow: /"), "robots de preview deve bloquear rastreamento");
 
@@ -93,4 +109,61 @@ assert(
   "CSP não deve usar unsafe-eval",
 );
 
-console.log(`Smoke tests concluídos: ${cases.length} endpoints; expectDemo=${expectDemo}.`);
+const adminEnvironment = {
+  NEWSROOM_ADMIN_SECRET: "smoke-admin-secret",
+  NEWSROOM_ENVIRONMENT: "development",
+  NEWSROOM_STORAGE_DRIVER: "local",
+};
+process.env.NEWSROOM_ADMIN_SECRET = adminEnvironment.NEWSROOM_ADMIN_SECRET;
+const protectedAdmin = await request("/admin/newsroom", { redirect: "manual" }, adminEnvironment);
+assert(protectedAdmin.response.status === 302, "admin sem sessão deve redirecionar");
+assert(
+  protectedAdmin.response.headers.get("location")?.endsWith("/admin/login"),
+  `admin sem sessão deve apontar para login; location=${protectedAdmin.response.headers.get("location")}`,
+);
+
+const adminLoginPage = await request("/admin/login", undefined, adminEnvironment);
+assert(adminLoginPage.response.status === 200, "login administrativo deve responder");
+assert(adminLoginPage.body.includes("noindex"), "login administrativo deve ser noindex");
+
+const adminLogin = await request(
+  "/api/admin/login",
+  {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ secret: adminEnvironment.NEWSROOM_ADMIN_SECRET, actor: "smoke-test" }),
+  },
+  adminEnvironment,
+);
+assert(adminLogin.response.status === 200, "login administrativo válido deve autenticar");
+const adminCookie = adminLogin.response.headers.get("set-cookie")?.split(";")[0];
+assert(adminCookie, "login administrativo deve emitir cookie");
+const adminSession = JSON.parse(adminLogin.body) as { csrf?: string };
+assert(adminSession.csrf, "login administrativo deve emitir token CSRF");
+
+const adminDashboard = await request(
+  "/api/admin/dashboard",
+  { headers: { cookie: adminCookie } },
+  adminEnvironment,
+);
+assert(adminDashboard.response.status === 200, "dashboard autenticado deve responder");
+assert(!adminDashboard.body.includes("C:\\Projetos"), "dashboard não deve expor caminho local");
+
+const adminLogout = await request(
+  "/api/admin/logout",
+  {
+    method: "POST",
+    headers: { cookie: adminCookie, "x-csrf-token": adminSession.csrf },
+  },
+  adminEnvironment,
+);
+assert(adminLogout.response.status === 200, "logout administrativo deve responder");
+assert(
+  adminLogout.response.headers.get("set-cookie")?.includes("Max-Age=0"),
+  "logout administrativo deve expirar o cookie",
+);
+delete process.env.NEWSROOM_ADMIN_SECRET;
+
+console.log(
+  `Smoke tests concluídos: ${cases.length} endpoints públicos e fluxo administrativo; expectDemo=${expectDemo}.`,
+);

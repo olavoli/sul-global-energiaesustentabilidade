@@ -5,7 +5,11 @@ import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
 import { format, resolveConfig } from "prettier";
 
-import { articleFrontmatterSchema, type ArticleFrontmatter } from "../src/content/schema";
+import {
+  articleFrontmatterSchema,
+  authorSchema,
+  type ArticleFrontmatter,
+} from "../src/content/schema";
 import { authors } from "../src/data/authors";
 import { categories } from "../src/data/categories";
 
@@ -37,7 +41,10 @@ export function parseEditorialFile(source: string, path = "conteúdo.mdx"): Pars
   if (!result.success) {
     throw new Error(
       `${path}: frontmatter inválido:\n${result.error.issues
-        .map((issue) => `- ${issue.path.join(".")}: ${issue.message}`)
+        .map((issue) => {
+          const field = issue.path.join(".") || "frontmatter";
+          return `- ${field}: ${issue.message} Ação: corrija o campo ${field} no arquivo indicado.`;
+        })
         .join("\n")}`,
     );
   }
@@ -71,8 +78,19 @@ export function validateArticleCollection(records: ArticleFrontmatter[]): void {
   for (const article of records) {
     if (slugs.has(article.slug)) throw new Error(`Slug duplicado: ${article.slug}.`);
     slugs.add(article.slug);
+  }
+  for (const article of records) {
     if (!authors[article.author])
       throw new Error(`${article.slug}: autor inexistente: ${article.author}.`);
+    if (
+      !article.isDemo &&
+      article.status === "published" &&
+      authors[article.author].status !== "verified"
+    ) {
+      throw new Error(
+        `${article.slug}: conteúdo real publicado exige autor verified. Ação: verifique a autoria antes de publicar.`,
+      );
+    }
     if (!categorySet.has(article.category)) {
       throw new Error(`${article.slug}: categoria inexistente: ${article.category}.`);
     }
@@ -80,6 +98,7 @@ export function validateArticleCollection(records: ArticleFrontmatter[]): void {
 }
 
 async function loadArticles(): Promise<ParsedEditorialFile[]> {
+  Object.values(authors).forEach((author) => authorSchema.parse(author));
   const names = (await readdir(ARTICLE_DIRECTORY)).filter((name) => name.endsWith(".mdx")).sort();
   const files = await Promise.all(
     names.map(async (name) => {
@@ -137,13 +156,32 @@ async function main(): Promise<void> {
   const warnings = files.flatMap((file) => {
     const result: string[] = [];
     if (file.frontmatter.isDemo)
-      result.push(`${file.path}: conteúdo demonstrativo, nunca oficial.`);
+      result.push(
+        `${file.path}: conteúdo demonstrativo, nunca oficial. Ação: preserve isDemo e não publique como conteúdo real.`,
+      );
     if (file.frontmatter.cover.license === "unknown") {
-      result.push(`${file.path}: licença de capa desconhecida; bloqueio para conteúdo real.`);
+      result.push(
+        `${file.path}: licença de capa desconhecida; bloqueio para conteúdo real. Ação: substitua a imagem ou registre uma licença verificável.`,
+      );
+    }
+    if (!file.frontmatter.isDemo && authors[file.frontmatter.author]?.status !== "verified") {
+      result.push(
+        `${file.path}: autoria ainda não verificada. Ação: confirme identidade, nome público e autorização antes da revisão.`,
+      );
+    }
+    if (!file.frontmatter.isDemo && file.frontmatter.sources.length === 0) {
+      result.push(
+        `${file.path}: nenhuma fonte estruturada registrada. Ação: apure e registre fontes reais antes da revisão.`,
+      );
+    }
+    if (!file.frontmatter.isDemo && file.frontmatter.cover.license === "pending") {
+      result.push(
+        `${file.path}: imagem e licença pendentes. Ação: selecione mídia local licenciada antes da revisão.`,
+      );
     }
     if (file.frontmatter.sourceUrls.length > 0 && file.frontmatter.sources.length === 0) {
       result.push(
-        `${file.path}: migre sourceUrls para fontes estruturadas antes da publicação real.`,
+        `${file.path}: migre sourceUrls para fontes estruturadas antes da publicação real. Ação: preencha sources com origem e data de verificação.`,
       );
     }
     return result;

@@ -1,0 +1,1715 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-15T22:03:58.954Z",
+  "clusters": [
+    {
+      "id": "cluster-d11853bf41c0cc56",
+      "canonicalTitle": "Super Typhoon Bavi",
+      "status": "open",
+      "primaryItemId": "f0958217a272c7780bcaf515",
+      "itemIds": [
+        "f0958217a272c7780bcaf515"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Bavi",
+        "Super",
+        "Typhoon"
+      ],
+      "firstPublishedAt": "2026-07-09T04:01:00.000Z",
+      "lastUpdatedAt": "2026-07-09T04:01:00.000Z",
+      "clusterScore": 71,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "f0958217a272c7780bcaf515",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-4d4885ba22d3b709",
+      "canonicalTitle": "How data centers can better manage energy use",
+      "status": "open",
+      "primaryItemId": "e3b0bc0049257c6b0002a346",
+      "itemIds": [
+        "e3b0bc0049257c6b0002a346"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação",
+        "sustentabilidade"
+      ],
+      "entities": [],
+      "firstPublishedAt": "2026-06-26T15:00:00.000Z",
+      "lastUpdatedAt": "2026-06-26T15:00:00.000Z",
+      "clusterScore": 70,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "e3b0bc0049257c6b0002a346",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-e0ab060d1f693330",
+      "canonicalTitle": "How artificial intelligence can help achieve a clean energy future",
+      "status": "open",
+      "primaryItemId": "8bc4b5e7c14407e70013e46e",
+      "itemIds": [
+        "8bc4b5e7c14407e70013e46e"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "armazenamento",
+        "clima",
+        "eficiência energética",
+        "eletricidade",
+        "pesquisa e inovação",
+        "sustentabilidade"
+      ],
+      "entities": [],
+      "firstPublishedAt": "2025-11-24T22:00:00.000Z",
+      "lastUpdatedAt": "2025-11-24T22:00:00.000Z",
+      "clusterScore": 70,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "8bc4b5e7c14407e70013e46e",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-60fa36f4a2643deb",
+      "canonicalTitle": "MIT researchers develop a low-cost technique to get lithium out of rocks",
+      "status": "open",
+      "primaryItemId": "ce5f4a60ed37b3da5f98b648",
+      "itemIds": [
+        "ce5f4a60ed37b3da5f98b648"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "armazenamento",
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "MIT"
+      ],
+      "firstPublishedAt": "2026-05-28T18:00:00.000Z",
+      "lastUpdatedAt": "2026-05-28T18:00:00.000Z",
+      "clusterScore": 69,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "ce5f4a60ed37b3da5f98b648",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-19f8ae75caaa4615",
+      "canonicalTitle": "Post-COP30, more aggressive policies needed to cap global warming at 1.5 C",
+      "status": "open",
+      "primaryItemId": "e0c5b13587686b5e6b8fff0d",
+      "itemIds": [
+        "e0c5b13587686b5e6b8fff0d"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Post-COP30"
+      ],
+      "firstPublishedAt": "2025-12-17T20:10:00.000Z",
+      "lastUpdatedAt": "2025-12-17T20:10:00.000Z",
+      "clusterScore": 68,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "e0c5b13587686b5e6b8fff0d",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-74178d7e10ef4e65",
+      "canonicalTitle": "3 Questions: Shedding light on why power grids go dark",
+      "status": "open",
+      "primaryItemId": "9a93af886c2a8c4b73ac2dce",
+      "itemIds": [
+        "9a93af886c2a8c4b73ac2dce"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "eletricidade",
+        "energia solar",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Questions",
+        "Shedding"
+      ],
+      "firstPublishedAt": "2026-05-12T21:25:00.000Z",
+      "lastUpdatedAt": "2026-05-12T21:25:00.000Z",
+      "clusterScore": 68,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "9a93af886c2a8c4b73ac2dce",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-34bfc8e7d0cd8af0",
+      "canonicalTitle": "What’s the best way to expand the US electricity grid?",
+      "status": "open",
+      "primaryItemId": "864f6746af781d19f914b267",
+      "itemIds": [
+        "864f6746af781d19f914b267"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "eletricidade",
+        "pesquisa e inovação"
+      ],
+      "entities": [],
+      "firstPublishedAt": "2025-12-04T10:00:00.000Z",
+      "lastUpdatedAt": "2025-12-04T10:00:00.000Z",
+      "clusterScore": 67,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "864f6746af781d19f914b267",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-233daec17b90e737",
+      "canonicalTitle": "Turning extreme heat into large-scale energy storage",
+      "status": "open",
+      "primaryItemId": "1400bde1b0b4f0348f5dfe5e",
+      "itemIds": [
+        "1400bde1b0b4f0348f5dfe5e"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "armazenamento",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Turning"
+      ],
+      "firstPublishedAt": "2026-03-18T04:00:00.000Z",
+      "lastUpdatedAt": "2026-03-18T04:00:00.000Z",
+      "clusterScore": 66,
+      "recommendation": "priority",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "1400bde1b0b4f0348f5dfe5e",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-37f4868d0151041c",
+      "canonicalTitle": "For most US drivers, EVs offer emissions benefits and cost savings",
+      "status": "open",
+      "primaryItemId": "acbb83123af713c8e84469ed",
+      "itemIds": [
+        "acbb83123af713c8e84469ed"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "EVs"
+      ],
+      "firstPublishedAt": "2026-05-12T04:00:00.000Z",
+      "lastUpdatedAt": "2026-05-12T04:00:00.000Z",
+      "clusterScore": 64,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "acbb83123af713c8e84469ed",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-38f55d0aa32c3fd2",
+      "canonicalTitle": "When companies “go green,” air quality impacts can vary dramatically",
+      "status": "open",
+      "primaryItemId": "7d578ee2fb290025efed53c1",
+      "itemIds": [
+        "7d578ee2fb290025efed53c1"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "When"
+      ],
+      "firstPublishedAt": "2025-12-08T05:00:00.000Z",
+      "lastUpdatedAt": "2025-12-08T05:00:00.000Z",
+      "clusterScore": 64,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "7d578ee2fb290025efed53c1",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-348b1b7d4cc5f7e6",
+      "canonicalTitle": "Making clean energy investments more successful",
+      "status": "open",
+      "primaryItemId": "b8d5825aeb2f18bd0e9f291c",
+      "itemIds": [
+        "b8d5825aeb2f18bd0e9f291c"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Making"
+      ],
+      "firstPublishedAt": "2025-12-12T16:20:00.000Z",
+      "lastUpdatedAt": "2025-12-12T16:20:00.000Z",
+      "clusterScore": 63,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "b8d5825aeb2f18bd0e9f291c",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-dc27d730abb11a1e",
+      "canonicalTitle": "Why solid-state batteries keep short-circuiting",
+      "status": "open",
+      "primaryItemId": "77d88e8468c30d58f68c94d4",
+      "itemIds": [
+        "77d88e8468c30d58f68c94d4"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "armazenamento",
+        "pesquisa e inovação"
+      ],
+      "entities": [],
+      "firstPublishedAt": "2026-03-25T16:00:00.000Z",
+      "lastUpdatedAt": "2026-03-25T16:00:00.000Z",
+      "clusterScore": 62,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "77d88e8468c30d58f68c94d4",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-fc1ffb50b2804592",
+      "canonicalTitle": "Toward cheaper, cleaner hydrogen production",
+      "status": "open",
+      "primaryItemId": "0ff5ad503501480f6672ae53",
+      "itemIds": [
+        "0ff5ad503501480f6672ae53"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "eficiência energética",
+        "hidrogênio",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Toward"
+      ],
+      "firstPublishedAt": "2026-04-03T04:00:00.000Z",
+      "lastUpdatedAt": "2026-04-03T04:00:00.000Z",
+      "clusterScore": 61,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "0ff5ad503501480f6672ae53",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-fe10b8496a189f0b",
+      "canonicalTitle": "How the war in the Middle East is impacting global energy systems",
+      "status": "open",
+      "primaryItemId": "b793bfc009856d6c831a64a2",
+      "itemIds": [
+        "b793bfc009856d6c831a64a2"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "combustíveis",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "East",
+        "Middle"
+      ],
+      "firstPublishedAt": "2026-05-15T19:00:00.000Z",
+      "lastUpdatedAt": "2026-05-15T19:00:00.000Z",
+      "clusterScore": 60,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "b793bfc009856d6c831a64a2",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-9672b5619d5ce665",
+      "canonicalTitle": "NASA’s CAPSTONE Completes Extended Mission Testing Lunar Technologies",
+      "status": "open",
+      "primaryItemId": "9bb30e9cecd12ce5bebe2485",
+      "itemIds": [
+        "9bb30e9cecd12ce5bebe2485"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "CAPSTONE",
+        "Completes",
+        "Extended",
+        "Lunar",
+        "Mission",
+        "NASA",
+        "Technologies",
+        "Testing"
+      ],
+      "firstPublishedAt": "2026-07-06T15:00:54.000Z",
+      "lastUpdatedAt": "2026-07-06T15:00:54.000Z",
+      "clusterScore": 59,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "9bb30e9cecd12ce5bebe2485",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-b4984e776fd2efcf",
+      "canonicalTitle": "NextSTEP-3 A: Lunar Enabling Technology",
+      "status": "open",
+      "primaryItemId": "38caf79cab07831f156929f1",
+      "itemIds": [
+        "38caf79cab07831f156929f1"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Enabling",
+        "Lunar",
+        "NextSTEP-3",
+        "Technology"
+      ],
+      "firstPublishedAt": "2026-06-29T14:56:54.000Z",
+      "lastUpdatedAt": "2026-06-29T14:56:54.000Z",
+      "clusterScore": 59,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "38caf79cab07831f156929f1",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-ce1f73add2eb0560",
+      "canonicalTitle": "Next-generation geothermal energy: Promise, progress, and challenges",
+      "status": "open",
+      "primaryItemId": "c875d32c1a65867698dc1205",
+      "itemIds": [
+        "c875d32c1a65867698dc1205"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Next-generation",
+        "Promise"
+      ],
+      "firstPublishedAt": "2026-03-13T18:55:00.000Z",
+      "lastUpdatedAt": "2026-03-13T18:55:00.000Z",
+      "clusterScore": 59,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "c875d32c1a65867698dc1205",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-f72ad4bc0b6a33bb",
+      "canonicalTitle": "MIT NEET students install solar-powered charging station on campus, resurrecting an MIT tradition",
+      "status": "open",
+      "primaryItemId": "9d5ad4a005650996a2aceda0",
+      "itemIds": [
+        "9d5ad4a005650996a2aceda0"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "energia solar",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "MIT",
+        "NEET"
+      ],
+      "firstPublishedAt": "2025-12-09T21:50:00.000Z",
+      "lastUpdatedAt": "2025-12-09T21:50:00.000Z",
+      "clusterScore": 57,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "9d5ad4a005650996a2aceda0",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-2c680f104b06d140",
+      "canonicalTitle": "Positioning Massachusetts as a hub for climate tech and economic development",
+      "status": "open",
+      "primaryItemId": "dfb4318ff2c9a2a5f1d299cd",
+      "itemIds": [
+        "dfb4318ff2c9a2a5f1d299cd"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Massachusetts",
+        "Positioning"
+      ],
+      "firstPublishedAt": "2026-01-06T21:55:00.000Z",
+      "lastUpdatedAt": "2026-01-06T21:55:00.000Z",
+      "clusterScore": 55,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "dfb4318ff2c9a2a5f1d299cd",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-593b17b195c9f812",
+      "canonicalTitle": "Active Surfaces aims to install peel-and-stick solar panels everywhere",
+      "status": "open",
+      "primaryItemId": "59b9231c346e0f9546e1e226",
+      "itemIds": [
+        "59b9231c346e0f9546e1e226"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Active",
+        "Surfaces"
+      ],
+      "firstPublishedAt": "2026-03-24T20:55:00.000Z",
+      "lastUpdatedAt": "2026-03-24T20:55:00.000Z",
+      "clusterScore": 52,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "59b9231c346e0f9546e1e226",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-92cb36be5242af71",
+      "canonicalTitle": "Working to advance the nuclear renaissance",
+      "status": "open",
+      "primaryItemId": "7bf609a6d86b6953540c5349",
+      "itemIds": [
+        "7bf609a6d86b6953540c5349"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Working"
+      ],
+      "firstPublishedAt": "2026-04-03T20:55:00.000Z",
+      "lastUpdatedAt": "2026-04-03T20:55:00.000Z",
+      "clusterScore": 51,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "7bf609a6d86b6953540c5349",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-07d75871c8e3ab5f",
+      "canonicalTitle": "PSFC showcases technologies applicable to both fusion and geothermal energy during representative’s visit",
+      "status": "open",
+      "primaryItemId": "f74f4663073a462b53a41d5f",
+      "itemIds": [
+        "f74f4663073a462b53a41d5f"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "PSFC"
+      ],
+      "firstPublishedAt": "2026-04-21T22:00:00.000Z",
+      "lastUpdatedAt": "2026-04-21T22:00:00.000Z",
+      "clusterScore": 47,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "f74f4663073a462b53a41d5f",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-faa2bf195fff05c0",
+      "canonicalTitle": "NASA’s New Horizons Spacecraft Wakes from Hibernation in Good Health",
+      "status": "open",
+      "primaryItemId": "d0746900b1fa56738a573b4e",
+      "itemIds": [
+        "d0746900b1fa56738a573b4e"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Good",
+        "Health",
+        "Hibernation",
+        "Horizons",
+        "NASA",
+        "Spacecraft",
+        "Wakes"
+      ],
+      "firstPublishedAt": "2026-07-07T17:48:49.000Z",
+      "lastUpdatedAt": "2026-07-07T17:48:49.000Z",
+      "clusterScore": 47,
+      "recommendation": "review",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "d0746900b1fa56738a573b4e",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-306a1130f3356875",
+      "canonicalTitle": "NASA Equips Astronauts, Industry with Robotic Intelligence",
+      "status": "open",
+      "primaryItemId": "bb8c93b6d9764a5c5aa6a1d4",
+      "itemIds": [
+        "bb8c93b6d9764a5c5aa6a1d4"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Astronauts",
+        "Equips",
+        "Industry",
+        "Intelligence",
+        "NASA",
+        "Robotic"
+      ],
+      "firstPublishedAt": "2026-06-10T17:00:02.000Z",
+      "lastUpdatedAt": "2026-06-10T17:00:02.000Z",
+      "clusterScore": 39,
+      "recommendation": "monitor",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "bb8c93b6d9764a5c5aa6a1d4",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-4c8a99ec500e8324",
+      "canonicalTitle": "A day in the life of MIT Sloan Fellow Alecia Asiamigbe",
+      "status": "open",
+      "primaryItemId": "b6cf06573d179cf49ef0742f",
+      "itemIds": [
+        "b6cf06573d179cf49ef0742f"
+      ],
+      "sourceIds": [
+        "mit-news-renewable-energy"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Alecia",
+        "Asiamigbe",
+        "Fellow",
+        "MIT",
+        "Sloan"
+      ],
+      "firstPublishedAt": "2026-05-26T20:10:00.000Z",
+      "lastUpdatedAt": "2026-05-26T20:10:00.000Z",
+      "clusterScore": 34,
+      "recommendation": "monitor",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "b6cf06573d179cf49ef0742f",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-07d52204a07eafaf",
+      "canonicalTitle": "Partners, NASA Ready for June Launch of Swift Boost Mission",
+      "status": "open",
+      "primaryItemId": "97bdc81446922037795e2372",
+      "itemIds": [
+        "97bdc81446922037795e2372"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Boost",
+        "June",
+        "Launch",
+        "Mission",
+        "NASA",
+        "Partners",
+        "Ready",
+        "Swift"
+      ],
+      "firstPublishedAt": "2026-06-26T17:16:22.000Z",
+      "lastUpdatedAt": "2026-06-26T17:16:22.000Z",
+      "clusterScore": 5,
+      "recommendation": "archive",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "97bdc81446922037795e2372",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-4ca5de015ef4350d",
+      "canonicalTitle": "NASA Identifies More Than 40 Space Technologies for Collaboration",
+      "status": "open",
+      "primaryItemId": "77f0c6e2f3ca905801b0f2f8",
+      "itemIds": [
+        "77f0c6e2f3ca905801b0f2f8"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Collaboration",
+        "Identifies",
+        "More",
+        "NASA",
+        "Space",
+        "Technologies",
+        "Than"
+      ],
+      "firstPublishedAt": "2026-06-26T15:37:58.000Z",
+      "lastUpdatedAt": "2026-06-26T15:37:58.000Z",
+      "clusterScore": 5,
+      "recommendation": "archive",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "77f0c6e2f3ca905801b0f2f8",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-c93fa54d31e53cb1",
+      "canonicalTitle": "Signs of Thaw in the Bering Sea",
+      "status": "open",
+      "primaryItemId": "35527ebcc754aaab0ecfebc9",
+      "itemIds": [
+        "35527ebcc754aaab0ecfebc9"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Bering",
+        "Sea",
+        "Signs",
+        "Thaw"
+      ],
+      "firstPublishedAt": "2026-06-22T04:01:00.000Z",
+      "lastUpdatedAt": "2026-06-22T04:01:00.000Z",
+      "clusterScore": 5,
+      "recommendation": "archive",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "35527ebcc754aaab0ecfebc9",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-2c0228a8a3d63076",
+      "canonicalTitle": "NASA Robotic Tech Demo Will Advance Prototype Gamma-Ray Detectors",
+      "status": "open",
+      "primaryItemId": "9d6c86223a3584bdee47a8a0",
+      "itemIds": [
+        "9d6c86223a3584bdee47a8a0"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Advance",
+        "Demo",
+        "Detectors",
+        "Gamma-Ray",
+        "NASA",
+        "Prototype",
+        "Robotic",
+        "Tech",
+        "Will"
+      ],
+      "firstPublishedAt": "2026-06-11T18:59:37.000Z",
+      "lastUpdatedAt": "2026-06-11T18:59:37.000Z",
+      "clusterScore": 0,
+      "recommendation": "archive",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "9d6c86223a3584bdee47a8a0",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    },
+    {
+      "id": "cluster-e2453a951cd572ec",
+      "canonicalTitle": "NASA Concludes Antenna Mishap Investigation, Releases Report",
+      "status": "open",
+      "primaryItemId": "acbfc6f6e711725dde3ab2bd",
+      "itemIds": [
+        "acbfc6f6e711725dde3ab2bd"
+      ],
+      "sourceIds": [
+        "nasa-technology"
+      ],
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "languages": [
+        "en-US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "entities": [
+        "Antenna",
+        "Concludes",
+        "Investigation",
+        "Mishap",
+        "NASA",
+        "Releases",
+        "Report"
+      ],
+      "firstPublishedAt": "2026-06-05T17:00:00.000Z",
+      "lastUpdatedAt": "2026-06-05T17:00:00.000Z",
+      "clusterScore": 0,
+      "recommendation": "archive",
+      "relations": [],
+      "primarySourceCandidate": {
+        "itemId": "acbfc6f6e711725dde3ab2bd",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "uncertaintyNotes": [
+        "Sem confirmação por instituição independente."
+      ],
+      "history": [
+        {
+          "action": "cluster-created",
+          "at": "2026-07-15T22:03:58.954Z",
+          "actor": "deterministic-clusterer",
+          "reason": "Regras locais conservadoras v1."
+        }
+      ]
+    }
+  ]
+}

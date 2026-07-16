@@ -80,7 +80,7 @@ export function createContentRepository(
             article.excerpt,
             byCategoryName.get(article.category as CategorySlug) ?? article.category,
             article.tags.join(" "),
-            article.author.name,
+            article.author.displayName,
           ].join(" "),
         );
         return haystack.includes(term);

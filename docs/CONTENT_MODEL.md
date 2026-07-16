@@ -10,6 +10,10 @@ Fontes estruturadas usam `title`, `url`, `organizationOrAuthor`, `publishedAt` o
 
 Atualizações usam `updatedAt` e `updateNote` ou `corrections`. Cada correção registra `type`, `date`, `reason` e `description`. `opinionDisclosure`, dados de entrevista e `aiDisclosure` são exigidos conforme o tipo e o uso. O contrato executável em `src/content/schema.ts` é a autoridade em caso de divergência com exemplos históricos abaixo.
 
+Autores públicos usam `displayName`, `shortBio`, campos profissionais opcionais, expertise, links, `isDemo`, `status` (`pending`, `verified`, `inactive` ou `demo`), credenciais opcionais, disclosure e metadados de verificação. Os cinco perfis herdados são demos; `autoria-pendente` é marcador técnico. Somente autor `verified`, com `verifiedAt`, permite conteúdo real sair de draft. Confirmações internas vivem fora do perfil público.
+
+Drafts distinguem `scaffold`, `writing` e `review-ready`. O briefing separado precisa estar `ready-for-writing` antes da redação factual; candidateSources e rejectedSources não contam como fontes confirmadas.
+
 Como um artigo, um autor e uma categoria são estruturados na fase 1 (MDX no
 repositório). Este é o contrato entre a redação e o código.
 
@@ -20,14 +24,14 @@ repositório). Este é o contrato entre a redação e o código.
 A fase 1 tem **exatamente 6 categorias**. Novas categorias requerem decisão
 editorial e mudança em `content/categorias.json`.
 
-| Slug                  | Nome exibido           |
-|-----------------------|------------------------|
-| `energia`             | Energia                |
-| `sustentabilidade`    | Sustentabilidade       |
-| `ciencia`             | Ciência                |
-| `tecnologia`          | Tecnologia             |
-| `desenvolvimento`     | Desenvolvimento        |
-| `transicao-energetica`| Transição Energética   |
+| Slug                   | Nome exibido         |
+| ---------------------- | -------------------- |
+| `energia`              | Energia              |
+| `sustentabilidade`     | Sustentabilidade     |
+| `ciencia`              | Ciência              |
+| `tecnologia`           | Tecnologia           |
+| `desenvolvimento`      | Desenvolvimento      |
+| `transicao-energetica` | Transição Energética |
 
 Cada categoria pode ter, opcionalmente, um **patrocinador** (fase 2+).
 
@@ -65,6 +69,7 @@ O `slug` é o mesmo que aparece na URL: `/artigo/<slug>`. Kebab-case, sem
 acento, sem stopwords desnecessárias.
 
 Exemplos:
+
 - `content/articles/hidrogenio-verde-no-brasil.mdx`
 - `content/articles/leilao-a-6-2025-analise.mdx`
 
@@ -140,28 +145,29 @@ ArticleFrontmatter = {
 
 ## 3. Autor
 
-### 3.1 Caminho
+### 3.1 Caminhos
 
 ```
-content/autores/<slug>.mdx
+content/authors.json
+content/author-onboarding/<slug>.yml
 ```
 
-### 3.2 Frontmatter
+O primeiro contém somente o perfil público. O segundo contém confirmações internas e nunca é importado pela aplicação.
+
+### 3.2 Perfil público
 
 ```yaml
----
-name: "Ana Souza"
-role: "Editora de Transição Energética"
-bio: "Doutora em Engenharia de Energia pela UFRJ. Cobre políticas públicas de transição desde 2018."
-avatar: "/autores/ana-souza.jpg"
-links:
-  website: "<URL_REAL_DO_AUTOR>"
-  linkedin: "https://linkedin.com/in/anasouza"
-  orcid: "0000-0000-0000-0000"
----
+slug: "<slug-fornecido>"
+displayName: "<nome-público-autorizado>"
+shortBio: "<bio-curta-fornecida>"
+expertise: ["<área-fornecida>"]
+credentials: []
+socialLinks: {}
+status: pending
+isDemo: false
 ```
 
-O corpo MDX é a versão longa da biografia (opcional).
+`fullBio`, `role`, `organization`, `credentials`, `profileImage`, `socialLinks` e `disclosure` são opcionais. `verified` exige `verifiedAt`; nenhuma credencial é obrigatória.
 
 ---
 

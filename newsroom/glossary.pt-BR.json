@@ -1,0 +1,11 @@
+{
+  "version": "pt-BR-energy-v1",
+  "targetLanguage": "pt-BR",
+  "terms": {
+    "energy storage": "armazenamento de energia",
+    "renewable energy": "energia renovável",
+    "power grid": "rede elétrica",
+    "critical minerals": "minerais críticos"
+  },
+  "notes": "Glossário técnico mínimo, versionado e sujeito a revisão humana. Não autoriza tradução automática externa."
+}

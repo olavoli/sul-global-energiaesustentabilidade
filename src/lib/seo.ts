@@ -105,7 +105,7 @@ export function articleJsonLd(article: Article) {
     inLanguage: siteConfig.language,
     author: {
       "@type": "Person",
-      name: article.author.name,
+      name: article.author.displayName,
       url: resolveCanonical(`/autor/${article.author.slug}`),
     },
     publisher: { "@id": `${siteConfig.url}/#organization` },
@@ -114,13 +114,15 @@ export function articleJsonLd(article: Article) {
 }
 
 export function personJsonLd(author: Author) {
+  const sameAs = Object.values(author.socialLinks);
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: author.name,
-    description: author.bio,
+    name: author.displayName,
+    description: author.shortBio,
     jobTitle: author.role,
     url: resolveCanonical(`/autor/${author.slug}`),
+    ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 }
 

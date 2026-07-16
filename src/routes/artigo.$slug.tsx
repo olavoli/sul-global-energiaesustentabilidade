@@ -39,7 +39,7 @@ export const Route = createFileRoute("/artigo/$slug")({
       meta: [
         { title: `${title} — Sul Global` },
         { name: "description", content: description },
-        { name: "author", content: article.author.name },
+        { name: "author", content: article.author.displayName },
         { property: "article:published_time", content: article.publishedAt },
         ...(article.updatedAt
           ? [{ property: "article:modified_time", content: article.updatedAt }]
@@ -192,10 +192,10 @@ function ArticleDetail() {
               params={{ slug: article.author.slug }}
               className="mt-2 block font-serif text-lg font-semibold text-foreground hover:underline"
             >
-              {article.author.name}
+              {article.author.displayName}
             </Link>
             <p className="text-sm text-muted-foreground">{article.author.role}</p>
-            <p className="mt-3 text-sm text-foreground">{article.author.bio}</p>
+            <p className="mt-3 text-sm text-foreground">{article.author.shortBio}</p>
           </div>
 
           <div className="mt-8">

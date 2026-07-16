@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Fixture local sintética</title>
+    <link>https://fixture.example.test/</link>
+    <description>Dados inventados somente para testes de software, não para publicação.</description>
+    <item>
+      <title>Teste local de eficiência energética e armazenamento</title>
+      <link>https://fixture.example.test/item-energia?utm_source=teste</link>
+      <guid>fixture-rss-energia-001</guid>
+      <description>Snippet sintético para validar classificação e fila, sem afirmação factual.</description>
+      <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
+      <author>Robô de fixture</author>
+      <category>eficiência energética</category>
+      <category>armazenamento</category>
+    </item>
+  </channel>
+</rss>

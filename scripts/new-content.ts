@@ -4,6 +4,7 @@ import { dirname, resolve } from "node:path";
 import { articleContentTypes, categorySlugs } from "../src/content/schema";
 import { preferredEditorialTag } from "../src/content/taxonomy";
 import { authors } from "../src/data/authors";
+import type { Author } from "../src/content/schema";
 
 function argumentsMap(values: string[]): Map<string, string> {
   const result = new Map<string, string>();
@@ -39,9 +40,17 @@ export interface NewContentInput {
 }
 
 /** Create a draft from a versioned template without overwriting existing content. */
-export async function createDraft(input: NewContentInput, root = process.cwd()): Promise<string> {
+export async function createDraft(
+  input: NewContentInput,
+  root = process.cwd(),
+  authorDirectory: Readonly<Record<string, Author>> = authors,
+): Promise<string> {
   if (!validSlug(input.slug)) throw new Error("Slug inválido; use kebab-case sem acentos.");
-  if (!authors[input.author]) throw new Error(`Autor inexistente: ${input.author}.`);
+  const author = authorDirectory[input.author];
+  if (!author) throw new Error(`Autor inexistente: ${input.author}.`);
+  if (author.isDemo || !["pending", "verified"].includes(author.status)) {
+    throw new Error(`Autor indisponível para draft real: ${input.author}.`);
+  }
   if (!categorySlugs.includes(input.category))
     throw new Error(`Categoria inválida: ${input.category}.`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(input.date)) throw new Error("Data inválida; use YYYY-MM-DD.");
@@ -93,4 +102,11 @@ async function main(): Promise<void> {
   console.log("Status: draft. Nenhum conteúdo foi publicado.");
 }
 
-if (import.meta.main) await main();
+if (import.meta.main) {
+  try {
+    await main();
+  } catch (error) {
+    console.error(`[erro] ${error instanceof Error ? error.message : String(error)}`);
+    process.exitCode = 1;
+  }
+}

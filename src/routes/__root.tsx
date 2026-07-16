@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useRouterState,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -132,19 +133,25 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const admin = pathname.startsWith("/admin");
 
   return (
     <QueryClientProvider client={queryClient}>
       <SkipLink />
-      <div className="flex min-h-dvh flex-col bg-background text-foreground">
-        <DemoContentNotice />
-        <SiteHeader />
-        <main id="conteudo" className="flex-1">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
-        <SiteFooter />
-      </div>
+      {admin ? (
+        <Outlet />
+      ) : (
+        <div className="flex min-h-dvh flex-col bg-background text-foreground">
+          <DemoContentNotice />
+          <SiteHeader />
+          <main id="conteudo" className="flex-1">
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </main>
+          <SiteFooter />
+        </div>
+      )}
     </QueryClientProvider>
   );
 }

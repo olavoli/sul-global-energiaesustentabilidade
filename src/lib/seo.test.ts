@@ -13,6 +13,7 @@ const baseRecord: ArticleFrontmatter = {
   excerpt: "Resumo editorial usado nos testes automatizados.",
   contentType: "news",
   status: "published",
+  draftStage: "review-ready",
   author: "ana-souza",
   category: "energia",
   tags: ["teste"],
@@ -87,7 +88,7 @@ describe("SEO e distribuição", () => {
   });
 
   test("encontra autor válido", () => {
-    expect(getAuthor("ana-souza")?.name).toBe("Ana Souza");
+    expect(getAuthor("ana-souza")?.displayName).toBe("Ana Souza");
   });
 
   test("retorna ausência para autor inválido", () => {

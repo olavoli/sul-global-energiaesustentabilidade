@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import { preferredEditorialTag } from "./taxonomy";
+export { authorSchema, authorStatuses, type Author } from "./author-schema";
 
 const slugSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Use slug em kebab-case.");
 const isoDateSchema = z.iso.date();
@@ -117,14 +118,6 @@ export const categorySchema = z.object({
   description: z.string().min(1),
 });
 
-export const authorSchema = z.object({
-  slug: slugSchema,
-  name: z.string().min(1),
-  role: z.string().min(1),
-  bio: z.string().min(1),
-  avatar: z.string().optional(),
-});
-
 export const articleFrontmatterSchema = z
   .object({
     slug: slugSchema,
@@ -133,6 +126,7 @@ export const articleFrontmatterSchema = z
     excerpt: z.string().min(1).max(240),
     contentType: z.enum(articleContentTypes),
     status: z.enum(articleStatuses),
+    draftStage: z.enum(["scaffold", "writing", "review-ready"]).default("scaffold"),
     author: slugSchema,
     category: z.enum(categorySlugs),
     tags: z.array(z.string().min(1)).min(1).max(8),
@@ -290,7 +284,6 @@ export const articleFrontmatterSchema = z
 
 export type CategorySlug = (typeof categorySlugs)[number];
 export type Category = z.infer<typeof categorySchema>;
-export type Author = z.infer<typeof authorSchema>;
 export type ArticleFrontmatter = z.infer<typeof articleFrontmatterSchema>;
 export type ArticleStatus = ArticleFrontmatter["status"];
 export type ArticleContentType = ArticleFrontmatter["contentType"];

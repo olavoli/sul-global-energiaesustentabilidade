@@ -1,0 +1,2473 @@
+{
+  "version": 1,
+  "packages": [
+    {
+      "id": "evidence-079bca7e76faf840",
+      "clusterId": "cluster-d11853bf41c0cc56",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "f0958217a272c7780bcaf515",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "f0958217a272c7780bcaf515",
+          "publishedAt": "2026-07-09T04:01:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-ce7bbed4d2f6364c",
+          "clusterId": "cluster-d11853bf41c0cc56",
+          "text": "Super Typhoon Bavi",
+          "type": "unknown",
+          "sourceItemIds": [
+            "f0958217a272c7780bcaf515"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 71,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi/"
+      ]
+    },
+    {
+      "id": "evidence-b548482481560bdb",
+      "clusterId": "cluster-4d4885ba22d3b709",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "e3b0bc0049257c6b0002a346",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "e3b0bc0049257c6b0002a346",
+          "publishedAt": "2026-06-26T15:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-ad897ef64d117b1d",
+          "clusterId": "cluster-4d4885ba22d3b709",
+          "text": "How data centers can better manage energy use",
+          "type": "unknown",
+          "sourceItemIds": [
+            "e3b0bc0049257c6b0002a346"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação",
+        "sustentabilidade"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 70,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/how-data-centers-can-better-manage-energy-use-0626"
+      ]
+    },
+    {
+      "id": "evidence-4c0e55ea15bfc82d",
+      "clusterId": "cluster-e0ab060d1f693330",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "8bc4b5e7c14407e70013e46e",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2025/how-ai-can-help-achieve-clean-energy-future-1124",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "8bc4b5e7c14407e70013e46e",
+          "publishedAt": "2025-11-24T22:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-99c689b8bbd723aa",
+          "clusterId": "cluster-e0ab060d1f693330",
+          "text": "How artificial intelligence can help achieve a clean energy future",
+          "type": "unknown",
+          "sourceItemIds": [
+            "8bc4b5e7c14407e70013e46e"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "armazenamento",
+        "clima",
+        "eficiência energética",
+        "eletricidade",
+        "pesquisa e inovação",
+        "sustentabilidade"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 70,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2025/how-ai-can-help-achieve-clean-energy-future-1124"
+      ]
+    },
+    {
+      "id": "evidence-5b3735f44cd2c7e6",
+      "clusterId": "cluster-60fa36f4a2643deb",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "ce5f4a60ed37b3da5f98b648",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "ce5f4a60ed37b3da5f98b648",
+          "publishedAt": "2026-05-28T18:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-100900d5cab93d17",
+          "clusterId": "cluster-60fa36f4a2643deb",
+          "text": "MIT researchers develop a low-cost technique to get lithium out of rocks",
+          "type": "unknown",
+          "sourceItemIds": [
+            "ce5f4a60ed37b3da5f98b648"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "armazenamento",
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 69,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/mit-researchers-develop-low-cost-technique-lithium-from-rocks-0528"
+      ]
+    },
+    {
+      "id": "evidence-ff1200267d180588",
+      "clusterId": "cluster-19f8ae75caaa4615",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "e0c5b13587686b5e6b8fff0d",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2025/post-cop30-more-aggressive-policies-needed-to-cap-global-warming-1217",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "e0c5b13587686b5e6b8fff0d",
+          "publishedAt": "2025-12-17T20:10:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-3778be99e3b37e2c",
+          "clusterId": "cluster-19f8ae75caaa4615",
+          "text": "Post-COP30, more aggressive policies needed to cap global warming at 1.5 C",
+          "type": "unknown",
+          "sourceItemIds": [
+            "e0c5b13587686b5e6b8fff0d"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 68,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2025/post-cop30-more-aggressive-policies-needed-to-cap-global-warming-1217"
+      ]
+    },
+    {
+      "id": "evidence-c03daf20fb2ac4a7",
+      "clusterId": "cluster-74178d7e10ef4e65",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "9a93af886c2a8c4b73ac2dce",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "9a93af886c2a8c4b73ac2dce",
+          "publishedAt": "2026-05-12T21:25:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-d58b996d570168a7",
+          "clusterId": "cluster-74178d7e10ef4e65",
+          "text": "3 Questions: Shedding light on why power grids go dark",
+          "type": "unknown",
+          "sourceItemIds": [
+            "9a93af886c2a8c4b73ac2dce"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "eletricidade",
+        "energia solar",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 68,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/3-questions-why-power-grids-go-dark-0512"
+      ]
+    },
+    {
+      "id": "evidence-539b1523731db2ae",
+      "clusterId": "cluster-34bfc8e7d0cd8af0",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "864f6746af781d19f914b267",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2025/best-way-to-expand-us-electricity-grid-1204",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "864f6746af781d19f914b267",
+          "publishedAt": "2025-12-04T10:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-d0191868dd9871e4",
+          "clusterId": "cluster-34bfc8e7d0cd8af0",
+          "text": "What’s the best way to expand the US electricity grid?",
+          "type": "unknown",
+          "sourceItemIds": [
+            "864f6746af781d19f914b267"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "eletricidade",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 67,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2025/best-way-to-expand-us-electricity-grid-1204"
+      ]
+    },
+    {
+      "id": "evidence-63850f75f94f8f30",
+      "clusterId": "cluster-233daec17b90e737",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "1400bde1b0b4f0348f5dfe5e",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "1400bde1b0b4f0348f5dfe5e",
+          "publishedAt": "2026-03-18T04:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-25c5a813d2d5593e",
+          "clusterId": "cluster-233daec17b90e737",
+          "text": "Turning extreme heat into large-scale energy storage",
+          "type": "unknown",
+          "sourceItemIds": [
+            "1400bde1b0b4f0348f5dfe5e"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "armazenamento",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 66,
+      "recommendation": "priority",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/turning-extreme-heat-large-scale-energy-storage-0318"
+      ]
+    },
+    {
+      "id": "evidence-c0d545aeaf1e532c",
+      "clusterId": "cluster-37f4868d0151041c",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "acbb83123af713c8e84469ed",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "acbb83123af713c8e84469ed",
+          "publishedAt": "2026-05-12T04:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-97645908f00f80b9",
+          "clusterId": "cluster-37f4868d0151041c",
+          "text": "For most US drivers, EVs offer emissions benefits and cost savings",
+          "type": "unknown",
+          "sourceItemIds": [
+            "acbb83123af713c8e84469ed"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 64,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512"
+      ]
+    },
+    {
+      "id": "evidence-29d3eebbcb21da82",
+      "clusterId": "cluster-38f55d0aa32c3fd2",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "7d578ee2fb290025efed53c1",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2025/when-companies-go-green-air-quality-impacts-can-vary-dramatically-1208",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "7d578ee2fb290025efed53c1",
+          "publishedAt": "2025-12-08T05:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-a5f117ccb3608bb4",
+          "clusterId": "cluster-38f55d0aa32c3fd2",
+          "text": "When companies “go green,” air quality impacts can vary dramatically",
+          "type": "unknown",
+          "sourceItemIds": [
+            "7d578ee2fb290025efed53c1"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 64,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2025/when-companies-go-green-air-quality-impacts-can-vary-dramatically-1208"
+      ]
+    },
+    {
+      "id": "evidence-8b2157cfa166fcf2",
+      "clusterId": "cluster-348b1b7d4cc5f7e6",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "b8d5825aeb2f18bd0e9f291c",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2025/making-clean-energy-investments-more-successful-1212",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "b8d5825aeb2f18bd0e9f291c",
+          "publishedAt": "2025-12-12T16:20:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-731f411e83e743cc",
+          "clusterId": "cluster-348b1b7d4cc5f7e6",
+          "text": "Making clean energy investments more successful",
+          "type": "unknown",
+          "sourceItemIds": [
+            "b8d5825aeb2f18bd0e9f291c"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 63,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2025/making-clean-energy-investments-more-successful-1212"
+      ]
+    },
+    {
+      "id": "evidence-56ae4a4d3b097c5b",
+      "clusterId": "cluster-dc27d730abb11a1e",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "77d88e8468c30d58f68c94d4",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/why-solid-state-batteries-keep-short-circuiting-0325",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "77d88e8468c30d58f68c94d4",
+          "publishedAt": "2026-03-25T16:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-c191ae68075787db",
+          "clusterId": "cluster-dc27d730abb11a1e",
+          "text": "Why solid-state batteries keep short-circuiting",
+          "type": "unknown",
+          "sourceItemIds": [
+            "77d88e8468c30d58f68c94d4"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "armazenamento",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 62,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/why-solid-state-batteries-keep-short-circuiting-0325"
+      ]
+    },
+    {
+      "id": "evidence-7b90c24102945407",
+      "clusterId": "cluster-fc1ffb50b2804592",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "0ff5ad503501480f6672ae53",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "0ff5ad503501480f6672ae53",
+          "publishedAt": "2026-04-03T04:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-8259eef74b300a90",
+          "clusterId": "cluster-fc1ffb50b2804592",
+          "text": "Toward cheaper, cleaner hydrogen production",
+          "type": "unknown",
+          "sourceItemIds": [
+            "0ff5ad503501480f6672ae53"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "eficiência energética",
+        "hidrogênio",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 61,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/toward-cheaper-cleaner-hydrogen-production-0403"
+      ]
+    },
+    {
+      "id": "evidence-6d82d068505b97f6",
+      "clusterId": "cluster-fe10b8496a189f0b",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "b793bfc009856d6c831a64a2",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "b793bfc009856d6c831a64a2",
+          "publishedAt": "2026-05-15T19:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-33e644b221779be7",
+          "clusterId": "cluster-fe10b8496a189f0b",
+          "text": "How the war in the Middle East is impacting global energy systems",
+          "type": "unknown",
+          "sourceItemIds": [
+            "b793bfc009856d6c831a64a2"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "combustíveis",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 60,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/middle-east-war-impacting-global-energy-systems-0515"
+      ]
+    },
+    {
+      "id": "evidence-57caaab6275f7bf1",
+      "clusterId": "cluster-9672b5619d5ce665",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "9bb30e9cecd12ce5bebe2485",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://www.nasa.gov/technology/space-comms/nasas-capstone-completes-extended-mission-testing-lunar-technologies/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "9bb30e9cecd12ce5bebe2485",
+          "publishedAt": "2026-07-06T15:00:54.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-3766afa6ee5a6a75",
+          "clusterId": "cluster-9672b5619d5ce665",
+          "text": "NASA’s CAPSTONE Completes Extended Mission Testing Lunar Technologies",
+          "type": "unknown",
+          "sourceItemIds": [
+            "9bb30e9cecd12ce5bebe2485"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 59,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://www.nasa.gov/technology/space-comms/nasas-capstone-completes-extended-mission-testing-lunar-technologies/"
+      ]
+    },
+    {
+      "id": "evidence-fb0bb0efe42ec7c9",
+      "clusterId": "cluster-b4984e776fd2efcf",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "38caf79cab07831f156929f1",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://www.nasa.gov/directorates/stmd/nextstep-3-a-lunar-enabling-technology/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "38caf79cab07831f156929f1",
+          "publishedAt": "2026-06-29T14:56:54.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-cb72a9dfdc077ca7",
+          "clusterId": "cluster-b4984e776fd2efcf",
+          "text": "NextSTEP-3 A: Lunar Enabling Technology",
+          "type": "unknown",
+          "sourceItemIds": [
+            "38caf79cab07831f156929f1"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 59,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://www.nasa.gov/directorates/stmd/nextstep-3-a-lunar-enabling-technology/"
+      ]
+    },
+    {
+      "id": "evidence-36a43a81cfe244a8",
+      "clusterId": "cluster-ce1f73add2eb0560",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "c875d32c1a65867698dc1205",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "c875d32c1a65867698dc1205",
+          "publishedAt": "2026-03-13T18:55:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-bed53cde99af1052",
+          "clusterId": "cluster-ce1f73add2eb0560",
+          "text": "Next-generation geothermal energy: Promise, progress, and challenges",
+          "type": "unknown",
+          "sourceItemIds": [
+            "c875d32c1a65867698dc1205"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 59,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/next-gen-geothermal-energy-promise-progress-challenges-0313"
+      ]
+    },
+    {
+      "id": "evidence-78b5adb828e699d2",
+      "clusterId": "cluster-f72ad4bc0b6a33bb",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "9d5ad4a005650996a2aceda0",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2025/neet-scholars-install-solar-powered-charging-station-1209",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "9d5ad4a005650996a2aceda0",
+          "publishedAt": "2025-12-09T21:50:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-88dfd811b7ef1f69",
+          "clusterId": "cluster-f72ad4bc0b6a33bb",
+          "text": "MIT NEET students install solar-powered charging station on campus, resurrecting an MIT tradition",
+          "type": "unknown",
+          "sourceItemIds": [
+            "9d5ad4a005650996a2aceda0"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "energia solar",
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 57,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2025/neet-scholars-install-solar-powered-charging-station-1209"
+      ]
+    },
+    {
+      "id": "evidence-bf73333774d62185",
+      "clusterId": "cluster-2c680f104b06d140",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "dfb4318ff2c9a2a5f1d299cd",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/emily-reichert-positioning-massachusetts-hub-climate-tech-economic-development-0106",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "dfb4318ff2c9a2a5f1d299cd",
+          "publishedAt": "2026-01-06T21:55:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-b3dd4da984d8a1f1",
+          "clusterId": "cluster-2c680f104b06d140",
+          "text": "Positioning Massachusetts as a hub for climate tech and economic development",
+          "type": "unknown",
+          "sourceItemIds": [
+            "dfb4318ff2c9a2a5f1d299cd"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 55,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/emily-reichert-positioning-massachusetts-hub-climate-tech-economic-development-0106"
+      ]
+    },
+    {
+      "id": "evidence-521b79429f99aa7e",
+      "clusterId": "cluster-593b17b195c9f812",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "59b9231c346e0f9546e1e226",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "59b9231c346e0f9546e1e226",
+          "publishedAt": "2026-03-24T20:55:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-9725f6767983edca",
+          "clusterId": "cluster-593b17b195c9f812",
+          "text": "Active Surfaces aims to install peel-and-stick solar panels everywhere",
+          "type": "unknown",
+          "sourceItemIds": [
+            "59b9231c346e0f9546e1e226"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 52,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/active-surfaces-aims-to-install-peel-and-stick-solar-panels-everywhere-0324"
+      ]
+    },
+    {
+      "id": "evidence-0f9e7a4b385476f5",
+      "clusterId": "cluster-92cb36be5242af71",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "7bf609a6d86b6953540c5349",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "7bf609a6d86b6953540c5349",
+          "publishedAt": "2026-04-03T20:55:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-85ffd2e357ff11d0",
+          "clusterId": "cluster-92cb36be5242af71",
+          "text": "Working to advance the nuclear renaissance",
+          "type": "unknown",
+          "sourceItemIds": [
+            "7bf609a6d86b6953540c5349"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 51,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/working-to-advance-nuclear-renaissance-dean-price-0403"
+      ]
+    },
+    {
+      "id": "evidence-6bcda54300dfdbb5",
+      "clusterId": "cluster-07d75871c8e3ab5f",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "f74f4663073a462b53a41d5f",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "f74f4663073a462b53a41d5f",
+          "publishedAt": "2026-04-21T22:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-7101ed23394b6350",
+          "clusterId": "cluster-07d75871c8e3ab5f",
+          "text": "PSFC showcases technologies applicable to both fusion and geothermal energy during representative’s visit",
+          "type": "unknown",
+          "sourceItemIds": [
+            "f74f4663073a462b53a41d5f"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "nuclear",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 47,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/psfc-showcases-technologies-applicable-to-fusion-and-geothermal-0421"
+      ]
+    },
+    {
+      "id": "evidence-00e710397eafbb87",
+      "clusterId": "cluster-faa2bf195fff05c0",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "d0746900b1fa56738a573b4e",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "d0746900b1fa56738a573b4e",
+          "publishedAt": "2026-07-07T17:48:49.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-9b0ab3ab4059bc30",
+          "clusterId": "cluster-faa2bf195fff05c0",
+          "text": "NASA’s New Horizons Spacecraft Wakes from Hibernation in Good Health",
+          "type": "unknown",
+          "sourceItemIds": [
+            "d0746900b1fa56738a573b4e"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "energia solar",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 47,
+      "recommendation": "review",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/"
+      ]
+    },
+    {
+      "id": "evidence-184c03517e394ee0",
+      "clusterId": "cluster-306a1130f3356875",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "bb8c93b6d9764a5c5aa6a1d4",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://www.nasa.gov/technology/tech-transfer-spinoffs/nasa-equips-astronauts-industry-with-robotic-intelligence/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "bb8c93b6d9764a5c5aa6a1d4",
+          "publishedAt": "2026-06-10T17:00:02.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-a352dec7240424f9",
+          "clusterId": "cluster-306a1130f3356875",
+          "text": "NASA Equips Astronauts, Industry with Robotic Intelligence",
+          "type": "unknown",
+          "sourceItemIds": [
+            "bb8c93b6d9764a5c5aa6a1d4"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [
+        "Sinal promocional no item bb8c93b6d9764a5c5aa6a1d4."
+      ],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 39,
+      "recommendation": "monitor",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://www.nasa.gov/technology/tech-transfer-spinoffs/nasa-equips-astronauts-industry-with-robotic-intelligence/"
+      ]
+    },
+    {
+      "id": "evidence-1fb1da5b45bbfb09",
+      "clusterId": "cluster-4c8a99ec500e8324",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "b6cf06573d179cf49ef0742f",
+        "sourceId": "mit-news-renewable-energy",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: university.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "mit-news-renewable-energy",
+          "name": "MIT News — Renewable Energy",
+          "url": "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526",
+          "institution": "news.mit.edu"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "b6cf06573d179cf49ef0742f",
+          "publishedAt": "2026-05-26T20:10:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-1ce70f96a93b75e1",
+          "clusterId": "cluster-4c8a99ec500e8324",
+          "text": "A day in the life of MIT Sloan Fellow Alecia Asiamigbe",
+          "type": "unknown",
+          "sourceItemIds": [
+            "b6cf06573d179cf49ef0742f"
+          ],
+          "sourceIds": [
+            "mit-news-renewable-energy"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [
+        "Sinal promocional no item b6cf06573d179cf49ef0742f."
+      ],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "clima",
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 34,
+      "recommendation": "monitor",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://news.mit.edu/2026/day-life-mit-sloan-fellow-alecia-asiamigbe-0526"
+      ]
+    },
+    {
+      "id": "evidence-1a43e038ccc63431",
+      "clusterId": "cluster-07d52204a07eafaf",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "97bdc81446922037795e2372",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://science.nasa.gov/missions/swift/swift-boost-mission/partners-nasa-ready-for-june-launch-of-swift-boost-mission/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "97bdc81446922037795e2372",
+          "publishedAt": "2026-06-26T17:16:22.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-1c3545402379144a",
+          "clusterId": "cluster-07d52204a07eafaf",
+          "text": "Partners, NASA Ready for June Launch of Swift Boost Mission",
+          "type": "announcement",
+          "sourceItemIds": [
+            "97bdc81446922037795e2372"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 5,
+      "recommendation": "archive",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://science.nasa.gov/missions/swift/swift-boost-mission/partners-nasa-ready-for-june-launch-of-swift-boost-mission/"
+      ]
+    },
+    {
+      "id": "evidence-450f022fb11a467e",
+      "clusterId": "cluster-4ca5de015ef4350d",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "77f0c6e2f3ca905801b0f2f8",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://www.nasa.gov/news-release/nasa-identifies-more-than-40-space-technologies-for-collaboration/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "77f0c6e2f3ca905801b0f2f8",
+          "publishedAt": "2026-06-26T15:37:58.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-b8c942f389b6532b",
+          "clusterId": "cluster-4ca5de015ef4350d",
+          "text": "NASA Identifies More Than 40 Space Technologies for Collaboration",
+          "type": "unknown",
+          "sourceItemIds": [
+            "77f0c6e2f3ca905801b0f2f8"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 5,
+      "recommendation": "archive",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://www.nasa.gov/news-release/nasa-identifies-more-than-40-space-technologies-for-collaboration/"
+      ]
+    },
+    {
+      "id": "evidence-f27de82121e6a2d3",
+      "clusterId": "cluster-c93fa54d31e53cb1",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "35527ebcc754aaab0ecfebc9",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://science.nasa.gov/earth/earth-observatory/signs-of-thaw-in-the-bering-sea/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "35527ebcc754aaab0ecfebc9",
+          "publishedAt": "2026-06-22T04:01:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-5bad72aa11db1114",
+          "clusterId": "cluster-c93fa54d31e53cb1",
+          "text": "Signs of Thaw in the Bering Sea",
+          "type": "unknown",
+          "sourceItemIds": [
+            "35527ebcc754aaab0ecfebc9"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 5,
+      "recommendation": "archive",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://science.nasa.gov/earth/earth-observatory/signs-of-thaw-in-the-bering-sea/"
+      ]
+    },
+    {
+      "id": "evidence-44be1f7424d1a067",
+      "clusterId": "cluster-2c0228a8a3d63076",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "9d6c86223a3584bdee47a8a0",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://science.nasa.gov/missions/tech-demonstration/nasa-robotic-tech-demo-will-advance-prototype-gamma-ray-detectors/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "9d6c86223a3584bdee47a8a0",
+          "publishedAt": "2026-06-11T18:59:37.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-bb37ad2400eb9ad1",
+          "clusterId": "cluster-2c0228a8a3d63076",
+          "text": "NASA Robotic Tech Demo Will Advance Prototype Gamma-Ray Detectors",
+          "type": "unknown",
+          "sourceItemIds": [
+            "9d6c86223a3584bdee47a8a0"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 0,
+      "recommendation": "archive",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://science.nasa.gov/missions/tech-demonstration/nasa-robotic-tech-demo-will-advance-prototype-gamma-ray-detectors/"
+      ]
+    },
+    {
+      "id": "evidence-f8b953810f711cfc",
+      "clusterId": "cluster-e2453a951cd572ec",
+      "generatedAt": "2026-07-15T22:03:58.954Z",
+      "primarySourceCandidate": {
+        "itemId": "acbfc6f6e711725dde3ab2bd",
+        "sourceId": "nasa-technology",
+        "confidence": "medium",
+        "evidence": [
+          "Tipo de fonte: official.",
+          "Trust tier declarado: primary."
+        ],
+        "limitations": [
+          "Candidato inferido por metadados; o documento primário ainda exige verificação humana."
+        ]
+      },
+      "sources": [
+        {
+          "id": "nasa-technology",
+          "name": "NASA Technology",
+          "url": "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/nasa-concludes-antenna-mishap-investigation-releases-report/",
+          "institution": "www.nasa.gov"
+        }
+      ],
+      "chronology": [
+        {
+          "itemId": "acbfc6f6e711725dde3ab2bd",
+          "publishedAt": "2026-06-05T17:00:00.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "id": "claim-ef1756588b7441fc",
+          "clusterId": "cluster-e2453a951cd572ec",
+          "text": "NASA Concludes Antenna Mishap Investigation, Releases Report",
+          "type": "announcement",
+          "sourceItemIds": [
+            "acbfc6f6e711725dde3ab2bd"
+          ],
+          "sourceIds": [
+            "nasa-technology"
+          ],
+          "independentSourceCount": 1,
+          "status": "needs-review",
+          "confidence": "low",
+          "evidence": [
+            "Extraído somente de título atribuído à fonte original."
+          ],
+          "uncertainties": [
+            "Não confirmado; equivalência textual não substitui verificação independente."
+          ]
+        }
+      ],
+      "confirmations": [],
+      "contradictions": [],
+      "uncertainties": [
+        "Sem confirmação por instituição independente.",
+        "O pacote não valida fatos nem substitui consulta às fontes."
+      ],
+      "promotionalSignals": [],
+      "editorialRisks": [
+        "Títulos são alegações atribuídas, não fatos confirmados.",
+        "Não há tradução aprovada automaticamente."
+      ],
+      "topics": [
+        "pesquisa e inovação"
+      ],
+      "countries": [
+        "US"
+      ],
+      "clusterScore": 0,
+      "recommendation": "archive",
+      "pendingQuestions": [
+        "Qual documento primário sustenta cada alegação?",
+        "Há confirmação institucional independente?",
+        "Há contexto ou conflito de interesse relevante?"
+      ],
+      "originalUrls": [
+        "https://www.nasa.gov/directorates/somd/space-communications-navigation-program/nasa-concludes-antenna-mishap-investigation-releases-report/"
+      ]
+    }
+  ]
+}

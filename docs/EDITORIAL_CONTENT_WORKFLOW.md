@@ -1,11 +1,19 @@
 # Fluxo editorial com MDX
 
+## Operação diária
+
+Use `content:list` para inventário, `content:review -- <slug>` para relatório, `content:status -- <slug> <status>` para dry-run e `content:publish-check -- <slug>` para o gate somente leitura. Somente acrescente `--apply` à transição após revisar o resumo. O manual completo está em `EDITORIAL_OPERATIONS.md`.
+
+Nenhum autor atual está verificado para conteúdo real. O marcador `autoria-pendente` mantém o piloto em draft; substitua-o somente após o fluxo de `AUTHOR_ONBOARDING.md`.
+
+Antes da redação factual, complete `content/research/<slug>.yml`. O fluxo é `scaffold → pesquisa ready-for-writing → writing → review-ready → review`. `candidateSources` e fontes rejeitadas nunca contam como confirmação.
+
 ## Criar com segurança
 
 Não copie demos. Use um template versionado por meio da CLI:
 
 ```bash
-bun run content:new -- --type analysis --title "Título provisório" --slug titulo-provisorio --author ana-souza --category energia --date 2026-07-13 --tag "energia solar"
+bun run content:new -- --type analysis --title "Título provisório" --slug titulo-provisorio --author <autor-verificado> --category energia --date YYYY-MM-DD --tag "energia solar"
 ```
 
 Tipos aceitos: news, explainer, analysis, guide, interview e opinion. O arquivo é criado em `content/articles/`, sempre `draft`, sem fontes fabricadas e sem sobrescrever slug existente. Templates em `content/templates/` não entram no índice.
@@ -14,7 +22,7 @@ Tipos aceitos: news, explainer, analysis, guide, interview e opinion. O arquivo 
 
 1. Copie um artigo de `content/articles/` e renomeie o arquivo com o novo slug.
 2. Preencha o frontmatter conforme `src/content/schema.ts`; arquivo e `slug` devem coincidir.
-3. Use um autor de `src/data/authors.ts` e uma categoria de `src/data/categories.ts`.
+3. Use um autor público verificado de `content/authors.json` e uma categoria de `src/data/categories.ts`.
 4. Escreva em Markdown. Os únicos componentes JSX autorizados são `Callout`, `Quote`, `Figure` e `KeyPoints`.
 5. Execute `bun run content:validate`.
 

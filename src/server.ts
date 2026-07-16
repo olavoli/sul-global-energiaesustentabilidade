@@ -6,6 +6,7 @@ import { getPublishedArticles } from "./content/repository";
 import { createDistributionResponse } from "./lib/distribution";
 import { reportError } from "./lib/observability";
 import { applySecurityHeaders } from "./lib/security-headers";
+import { handleAdminRequest } from "./lib/admin/handler";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -53,6 +54,8 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const adminResponse = await handleAdminRequest(request, env);
+      if (adminResponse) return applySecurityHeaders(adminResponse, request);
       const distributionResponse = createDistributionResponse(
         new URL(request.url).pathname,
         getPublishedArticles(),

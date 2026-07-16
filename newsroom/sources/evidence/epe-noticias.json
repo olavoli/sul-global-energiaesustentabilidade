@@ -1,0 +1,16 @@
+{
+  "sourceId": "epe-noticias",
+  "discoveryMethod": "official-page",
+  "officialPage": "https://www.epe.gov.br/sites-pt/sala-de-imprensa/noticias",
+  "officialFeedPage": "https://www.epe.gov.br/sites-pt/sala-de-imprensa/noticias",
+  "feedOwnershipConfirmed": false,
+  "termsUrl": "https://www.epe.gov.br/pt/acesso-a-informacao/termos-de-uso",
+  "copyrightUrl": "https://www.epe.gov.br/sites-pt/sala-de-imprensa/noticias",
+  "termsSummary": "Página institucional oficial revisada.",
+  "copyrightSummary": "Rodapé indica CC BY 4.0, sem feed explícito confirmado.",
+  "collectionLimitations": ["Não inventar caminho RSS"],
+  "reviewedAt": "2026-07-15T19:50:00.000Z",
+  "reviewedBy": "codex-public-source-curation",
+  "decision": "rejected",
+  "decisionReason": "Nenhum RSS/Atom explícito foi localizado em página oficial."
+}

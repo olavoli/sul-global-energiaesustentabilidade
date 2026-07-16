@@ -1,5 +1,76 @@
 # Inventário técnico
 
+## Central Editorial privada
+
+- `src/lib/admin/`: autenticação, rate limit, contratos Zod, dados, ações e handler HTTP;
+- `src/components/admin/`: shell, dashboard, tabelas, estados, detalhes e confirmações;
+- `src/routes/admin.*`: login, visão geral, seções e detalhes;
+- `NEWSROOM_ADMIN_SECRET`: segredo server-only, sem valor versionado;
+- nenhuma dependência nova; Web Crypto, fetch, React e Zod existentes foram reutilizados;
+- dados operacionais são carregados apenas pelo handler do servidor e nunca por import cliente.
+
+## Sprint 16
+
+- `scripts/newsroom/{daily-*,automation-*,run-store,retry-circuit,review-inbox,notifications,retention}.ts`: automação privada e modular.
+- `newsroom/policies/daily-automation.json`: budgets, circuito, lock e retenção versionados.
+- `newsroom/{runs,reports,inbox,notifications}/`: estado operacional fora do bundle.
+- `.github/workflows/newsroom-daily.yml`: dispatch/cron protegido, sem deploy ou escrita Git.
+- Dependências novas: nenhuma.
+
+## Sprint 15
+
+- `newsroom/policies/editorial-policy.json`: política executável v1.
+- `scripts/newsroom/orchestrator*.ts`, `editorial-readiness.ts` e `decision-*.ts`: avaliação, risco, prontidão, fila e ações.
+- `scripts/newsroom/pitch.ts`: pauta estrutural condicionada, sem MDX.
+- `newsroom/decisions/index.json`: 30 decisões privadas; `newsroom/pitches/` permanece vazio.
+- Nenhuma dependência nova ou importação pelo aplicativo público.
+
+## Sprint 14
+
+- `scripts/newsroom/{story-schema,clustering,cluster-mutations,evidence-packages,story-store}.ts`: clusters, claims, evidências e persistência.
+- `scripts/newsroom/{translation-schema,translation-providers,translation-quality,translation}.ts`: fila e QA local.
+- `newsroom/{clusters,claims,evidence-packages,translations}.json`: documentos operacionais privados, versionados e atômicos quando presentes.
+- `newsroom/glossary.pt-BR.json`: glossário técnico v1.
+- Nenhuma dependência nova e nenhuma importação por `src/` ou `public/`.
+
+## Redação: piloto de fontes reais
+
+- Transporte HTTP limitado, condicional e protegido contra SSRF/redirects.
+- Catálogo, runtime, fila, quarentena e auditoria ficam fora do bundle público.
+- Coleta manual RSS/Atom nunca busca URLs de matérias.
+- Métricas, cobertura e frescor são explicáveis.
+- Catálogo real vazio; dependências novas: nenhuma.
+
+## Redação algorítmica — Sprint 11
+
+- **CONFIRMADO:** `scripts/newsroom/` contém schemas, coletores RSS/Atom/fixture, segurança, normalização, deduplicação, classificação, scoring, pipeline e fila.
+- **CONFIRMADO:** `newsroom/` armazena catálogo, fixtures e estado operacional fora de `src/` e `public/`.
+- **CONFIRMADO:** catálogo externo inicial vazio; nenhuma URL de feed real foi criada.
+- **CONFIRMADO:** Zod, APIs nativas de URL/fetch/crypto/DNS e YAML existente foram suficientes; nenhuma dependência foi adicionada.
+- **CONFIRMADO:** snippets são limitados a 500 caracteres e não há download de imagens, scraping ou texto integral.
+- **LIMITAÇÃO:** similaridade lexical e regras temáticas exigem revisão humana; não comprovam equivalência ou veracidade.
+
+## Autoria e pesquisa — Sprint 10
+
+- `content/authors.json`: somente campos públicos dos perfis; nenhum dado sensível.
+- `content/templates/author-onboarding.yml` e `scripts/author-operations.ts`: onboarding, validação, listagem e promoção explícita.
+- `content/research/*.yml` e `scripts/research-operations.ts`: briefing privado e gate de prontidão para redação.
+- `src/content/schema.ts`: estados de autor, verificação temporal e estágio do draft.
+- `src/content/author-research-operations.test.ts`: 18 cenários de autoria, privacidade, pesquisa e bundle.
+- `docs/AUTHOR_ONBOARDING.md`, `RESEARCH_WORKFLOW.md` e `FIRST_ARTICLE_PLAN.md`: operação humana.
+
+Onboarding e pesquisa não são importados pela aplicação. Nenhum autor, credencial, fonte, fato ou mídia real foi criado.
+
+## Operação editorial — Sprint 9
+
+- `scripts/editorial-operations.ts`: list, review, status dry-run/apply e publish-check.
+- `content/articles/rascunho-como-funciona-matriz-eletrica-brasileira.mdx`: piloto estrutural draft.
+- `content/authors.json` e `src/data/authors.ts`: cinco identidades demo e um marcador pending; zero autores reais verificados.
+- `src/content/editorial-operations.test.ts`: 18 cenários operacionais.
+- `docs/EDITORIAL_OPERATIONS.md` e `ARTICLE_REVIEW_CHECKLIST.md`: rotina do fundador e gate por artigo.
+
+Nenhum backend, CMS, dependência, credencial, fato, fonte ou publicação foi adicionado.
+
 ## Preparação de conteúdo real — Sprint 8
 
 - `src/content/schema.ts`: estados completos, fontes estruturadas, aprovação, agendamento, correções, opinião, entrevista e disclosure de IA.
@@ -127,7 +198,7 @@ Nenhuma dependência foi removida. A confirmação exige análise do build, gera
 ## Conteúdo e comportamento
 
 - **CONFIRMADO:** 12 artigos demonstrativos com status `published` estão em `content/articles/*.mdx`.
-- **CONFIRMADO:** 5 autores estão definidos em `src/data/authors.ts`.
+- **CONFIRMADO:** 5 autores demo e 1 marcador pending estão definidos em `content/authors.json`; `src/data/authors.ts` expõe somente o modelo público validado.
 - **CONFIRMADO:** 6 categorias estão definidas em `src/data/categories.ts`.
 - **CONFIRMADO:** newsletter e contato não enviam nem persistem dados.
 - **CONFIRMADO:** a busca é executada localmente sobre os artigos publicados.
@@ -159,3 +230,25 @@ Nenhuma dependência foi removida. A confirmação exige análise do build, gera
 - **CONFIRMADO:** os 12 artigos são marcados com `isDemo: true` por construção.
 - **CONFIRMADO:** desenvolvimento permite demos com aviso visual; produção os oculta por padrão e exige opt-in explícito para uma implantação demonstrativa.
 - **LIMITAÇÃO:** as strings demo ainda são incluídas no bundle; a separação física depende da futura arquitetura de conteúdo.
+
+## Curadoria de fontes públicas
+
+- `scripts/newsroom/evidence.ts`: schema e gate de evidência para ativação.
+- `newsroom/sources/evidence/`: oito dossiês de pesquisa pública.
+- `newsroom/sources/curated/`: entradas usadas pelo comando transacional.
+- `newsroom/sources/catalog.json`: duas fontes reais ativas.
+- `newsroom/queue.json`: estado local fora do bundle público.
+- Nenhuma dependência foi adicionada.
+
+## Persistência operacional
+
+- `scripts/newsroom/storage/contracts.ts`: contratos e tipos neutros.
+- `local-adapter.ts`: arquivos legados, escrita atômica, backup e validação.
+- `d1-adapter.ts`: backend serverless estruturado por binding privado.
+- `d1-emulator.ts` e `memory-adapter.ts`: testes offline.
+- `migrations.ts` e `0001_newsroom_core.sql`: schema versionado.
+- `snapshot.ts`: manifesto, checksums, documentos, auditoria e objetos.
+- `scripts/storage-cli.ts`: health, migrations, import/export, backup/restore.
+- `NEWSROOM_STORAGE_DRIVER`: `local`, `memory` ou `d1`; produção aceita apenas
+  backend durável configurado.
+- Nenhuma dependência, conta, banco, token ou binding real foi adicionado.

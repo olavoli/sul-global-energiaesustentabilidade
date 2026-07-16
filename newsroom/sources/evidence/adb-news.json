@@ -1,0 +1,17 @@
+{
+  "sourceId": "adb-news",
+  "discoveryMethod": "official-page",
+  "officialPage": "https://www.adb.org/news",
+  "officialFeedPage": "https://www.adb.org/rss",
+  "feedUrl": "http://feeds.feedburner.com/adb_news",
+  "feedOwnershipConfirmed": true,
+  "termsUrl": "https://www.adb.org/terms-use",
+  "copyrightUrl": "https://www.adb.org/terms-use",
+  "termsSummary": "A página oficial oferece feeds sob os termos do ADB.",
+  "copyrightSummary": "Atribuição seria obrigatória; nenhum conteúdo foi copiado.",
+  "collectionLimitations": ["Não coletar feed HTTP hospedado em domínio terceiro"],
+  "reviewedAt": "2026-07-15T19:45:00.000Z",
+  "reviewedBy": "codex-public-source-curation",
+  "decision": "rejected",
+  "decisionReason": "Feed exposto usa HTTP e domínio FeedBurner, incompatíveis com a política de domínio oficial."
+}

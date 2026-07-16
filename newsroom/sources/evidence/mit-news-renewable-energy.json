@@ -1,0 +1,22 @@
+{
+  "sourceId": "mit-news-renewable-energy",
+  "discoveryMethod": "official-page",
+  "officialPage": "https://news.mit.edu/topic/renewable-energy",
+  "officialFeedPage": "https://news.mit.edu/rss",
+  "feedUrl": "https://news.mit.edu/topic/mitrenewable-energy-rss.xml",
+  "feedOwnershipConfirmed": true,
+  "termsUrl": "https://news.mit.edu/terms-of-use",
+  "copyrightUrl": "https://news.mit.edu/terms-of-use",
+  "termsSummary": "MIT News oferece feeds RSS para sindicação e exige atribuição e link à origem em republicações.",
+  "copyrightSummary": "O piloto retém apenas metadados, snippet curto e URL original; não republica matéria nem imagem.",
+  "collectionLimitations": [
+    "Máximo de 20 itens por execução",
+    "Sem imagens",
+    "Sem texto integral",
+    "Atribuição MIT News e link original obrigatórios"
+  ],
+  "reviewedAt": "2026-07-15T20:31:03.000Z",
+  "reviewedBy": "codex-public-source-curation",
+  "decision": "confirmed",
+  "decisionReason": "Feed RSS explicitamente vinculado na página oficial, HTTPS no mesmo domínio, XML válido e uso compatível com snippets atribuídos."
+}

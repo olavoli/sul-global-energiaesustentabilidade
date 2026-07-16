@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "translation-ad897ef64d117b1d",
+      "clusterId": "cluster-4d4885ba22d3b709",
+      "sourceLanguage": "en",
+      "targetLanguage": "pt-BR",
+      "sourceText": "How data centers can better manage energy use",
+      "translatedText": "Como data centers podem gerenciar melhor o uso de energia",
+      "provider": "fixture",
+      "providerVersion": "fixture-v1",
+      "status": "review-required",
+      "glossaryVersion": "pt-BR-energy-v1",
+      "qualityChecks": [
+        {
+          "name": "números",
+          "passed": true,
+          "detail": "números preservados."
+        },
+        {
+          "name": "unidades",
+          "passed": true,
+          "detail": "unidades preservados."
+        },
+        {
+          "name": "datas",
+          "passed": true,
+          "detail": "datas preservados."
+        },
+        {
+          "name": "URLs",
+          "passed": true,
+          "detail": "URLs preservados."
+        },
+        {
+          "name": "siglas",
+          "passed": true,
+          "detail": "siglas preservados."
+        },
+        {
+          "name": "nomes próprios",
+          "passed": true,
+          "detail": "nomes próprios preservados."
+        },
+        {
+          "name": "HTML",
+          "passed": true,
+          "detail": "Nenhum HTML novo permitido."
+        },
+        {
+          "name": "conteúdo",
+          "passed": true,
+          "detail": "Texto não vazio e dentro do limite."
+        },
+        {
+          "name": "idioma-alvo",
+          "passed": true,
+          "detail": "Indício lexical mínimo de pt-BR; revisão humana continua obrigatória."
+        }
+      ],
+      "createdAt": "2026-07-15T22:04:11.464Z",
+      "updatedAt": "2026-07-15T22:04:16.706Z",
+      "attempts": 1,
+      "history": [
+        {
+          "action": "queued",
+          "at": "2026-07-15T22:04:11.464Z",
+          "actor": "sprint-14-local",
+          "notes": "Fila local; nenhuma chamada externa."
+        },
+        {
+          "action": "translated",
+          "at": "2026-07-15T22:04:16.706Z",
+          "actor": "sprint-14-local",
+          "notes": "Provider local fixture-v1; revisão obrigatória."
+        }
+      ]
+    },
+    {
+      "id": "translation-100900d5cab93d17",
+      "clusterId": "cluster-60fa36f4a2643deb",
+      "sourceLanguage": "en",
+      "targetLanguage": "pt-BR",
+      "sourceText": "MIT researchers develop a low-cost technique to get lithium out of rocks",
+      "translatedText": "Pesquisadores do MIT desenvolvem técnica de baixo custo para extrair lítio de rochas",
+      "provider": "fixture",
+      "providerVersion": "fixture-v1",
+      "status": "review-required",
+      "glossaryVersion": "pt-BR-energy-v1",
+      "qualityChecks": [
+        {
+          "name": "números",
+          "passed": true,
+          "detail": "números preservados."
+        },
+        {
+          "name": "unidades",
+          "passed": true,
+          "detail": "unidades preservados."
+        },
+        {
+          "name": "datas",
+          "passed": true,
+          "detail": "datas preservados."
+        },
+        {
+          "name": "URLs",
+          "passed": true,
+          "detail": "URLs preservados."
+        },
+        {
+          "name": "siglas",
+          "passed": true,
+          "detail": "siglas preservados."
+        },
+        {
+          "name": "nomes próprios",
+          "passed": true,
+          "detail": "nomes próprios preservados."
+        },
+        {
+          "name": "HTML",
+          "passed": true,
+          "detail": "Nenhum HTML novo permitido."
+        },
+        {
+          "name": "conteúdo",
+          "passed": true,
+          "detail": "Texto não vazio e dentro do limite."
+        },
+        {
+          "name": "idioma-alvo",
+          "passed": true,
+          "detail": "Indício lexical mínimo de pt-BR; revisão humana continua obrigatória."
+        }
+      ],
+      "createdAt": "2026-07-15T22:04:11.464Z",
+      "updatedAt": "2026-07-15T22:04:16.706Z",
+      "attempts": 1,
+      "history": [
+        {
+          "action": "queued",
+          "at": "2026-07-15T22:04:11.464Z",
+          "actor": "sprint-14-local",
+          "notes": "Fila local; nenhuma chamada externa."
+        },
+        {
+          "action": "translated",
+          "at": "2026-07-15T22:04:16.706Z",
+          "actor": "sprint-14-local",
+          "notes": "Provider local fixture-v1; revisão obrigatória."
+        }
+      ]
+    },
+    {
+      "id": "translation-25c5a813d2d5593e",
+      "clusterId": "cluster-233daec17b90e737",
+      "sourceLanguage": "en",
+      "targetLanguage": "pt-BR",
+      "sourceText": "Turning extreme heat into large-scale energy storage",
+      "translatedText": "Transformando calor extremo em armazenamento de energia em grande escala",
+      "provider": "fixture",
+      "providerVersion": "fixture-v1",
+      "status": "review-required",
+      "glossaryVersion": "pt-BR-energy-v1",
+      "qualityChecks": [
+        {
+          "name": "números",
+          "passed": true,
+          "detail": "números preservados."
+        },
+        {
+          "name": "unidades",
+          "passed": true,
+          "detail": "unidades preservados."
+        },
+        {
+          "name": "datas",
+          "passed": true,
+          "detail": "datas preservados."
+        },
+        {
+          "name": "URLs",
+          "passed": true,
+          "detail": "URLs preservados."
+        },
+        {
+          "name": "siglas",
+          "passed": true,
+          "detail": "siglas preservados."
+        },
+        {
+          "name": "nomes próprios",
+          "passed": true,
+          "detail": "nomes próprios preservados."
+        },
+        {
+          "name": "HTML",
+          "passed": true,
+          "detail": "Nenhum HTML novo permitido."
+        },
+        {
+          "name": "conteúdo",
+          "passed": true,
+          "detail": "Texto não vazio e dentro do limite."
+        },
+        {
+          "name": "idioma-alvo",
+          "passed": true,
+          "detail": "Indício lexical mínimo de pt-BR; revisão humana continua obrigatória."
+        }
+      ],
+      "createdAt": "2026-07-15T22:04:11.464Z",
+      "updatedAt": "2026-07-15T22:04:16.706Z",
+      "attempts": 1,
+      "history": [
+        {
+          "action": "queued",
+          "at": "2026-07-15T22:04:11.464Z",
+          "actor": "sprint-14-local",
+          "notes": "Fila local; nenhuma chamada externa."
+        },
+        {
+          "action": "translated",
+          "at": "2026-07-15T22:04:16.706Z",
+          "actor": "sprint-14-local",
+          "notes": "Provider local fixture-v1; revisão obrigatória."
+        }
+      ]
+    }
+  ]
+}

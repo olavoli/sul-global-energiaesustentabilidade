@@ -1,5 +1,29 @@
 # Sul Global
 
+## Sprint 17 — Central Editorial privada
+
+O namespace `/admin/newsroom` oferece dashboard, inbox, decisões, clusters, evidências, traduções, fontes, quarentena, runs, relatórios e pautas sob sessão server-side. Configure `NEWSROOM_ADMIN_SECRET` somente no servidor. Cookie HttpOnly, CSRF, rate limit, noindex e cache privado protegem o acesso. A interface não publica, não cria artigo e bloqueia apply completo.
+
+## Sprint 16 — automação diária supervisionada
+
+O pipeline privado encadeia validação, processamento, decisões, relatório e inbox com dry-run padrão, kill switches, lock, orçamentos, circuit breaker e recuperação. Use `bun run newsroom:daily -- --process-existing`, `newsroom:report`, `newsroom:inbox:list`, `newsroom:run:list` e `newsroom:stats`. Apply exige habilitação explícita; nenhuma execução publica ou aprova conteúdo.
+
+## Sprint 15 — orquestrador editorial supervisionado
+
+A newsroom avalia clusters por política versionada, riscos, bloqueadores e prontidão, persistindo somente recomendações privadas. Use `bun run newsroom:orchestrate`, `newsroom:decision:list`, `newsroom:decision:review`, `newsroom:decision:stats` e `newsroom:pitch:list`. Ação humana exige ator, nota e `--apply`; nenhuma avaliação cria pauta, artigo ou publicação.
+
+## Sprint 14 — clusters, evidências e tradução assistida
+
+A redação local agora agrupa itens já coletados, extrai claims atribuídos, monta pacotes privados de evidência e mantém fila de tradução com fixture offline. Use `bun run newsroom:cluster`, `newsroom:cluster:list`, `newsroom:evidence`, `newsroom:claims` e `newsroom:translation:list`. Toda mutação é dry-run até `--apply`; nenhuma operação publica ou chama IA/API externa.
+
+## Piloto de fontes reais
+
+A redação local suporta cadastro com dossiê, health check, coleta manual RSS/Atom, cache condicional, quarentena, métricas e cobertura. O catálogo piloto contém MIT News Renewable Energy e NASA Technology, ambas verificadas e saudáveis. A coleta é limitada a 20 itens por fonte; não há publicação nem agenda automática. Consulte `docs/NEWSROOM_SOURCE_CURATION.md`.
+
+## Redação algorítmica local
+
+O MVP de triagem editorial opera fora do bundle público, com catálogo validado, RSS/Atom, fixtures offline, normalização, deduplicação, classificação, scoring, fila e auditoria. O catálogo externo começa vazio; nenhum feed foi inventado. Consulte `docs/ALGORITHMIC_NEWSROOM.md` e execute `bun run newsroom:sources`, `newsroom:collect`, `newsroom:list`, `newsroom:score` e `newsroom:stats`. Ações mutáveis exigem `--apply` e nunca publicam artigos.
+
 Portal editorial sobre energia, sustentabilidade, ciência, tecnologia, transição energética e desenvolvimento.
 
 ## Objetivo
@@ -63,12 +87,36 @@ bun run smoke:artifact
 Crie um rascunho tipado, sempre sem publicação automática:
 
 ```bash
-bun run content:new -- --type explainer --title "Título provisório" --slug titulo-provisorio --author ana-souza --category energia --date 2026-07-13 --tag "energia solar"
+bun run content:new -- --type explainer --title "Título provisório" --slug titulo-provisorio --author <autor-verificado> --category energia --date YYYY-MM-DD --tag "energia solar"
 ```
+
+Antes, cadastre e valide a autoria real; os autores atuais são demos. Operação diária:
+
+```bash
+bun run content:list
+bun run content:review -- <slug>
+bun run content:status -- <slug> review
+bun run content:publish-check -- <slug>
+```
+
+`content:status` é dry-run por padrão e exige `--apply` para gravar. Consulte `docs/EDITORIAL_OPERATIONS.md` e `docs/ARTICLE_REVIEW_CHECKLIST.md`.
+
+Onboarding e pesquisa do primeiro conteúdo real:
+
+```bash
+bun run author:new -- <slug>
+bun run author:validate -- <slug>
+bun run author:status -- <slug> verified --verified-at YYYY-MM-DD --verified-by <id>
+bun run author:list
+bun run research:status -- rascunho-como-funciona-matriz-eletrica-brasileira
+bun run research:validate -- rascunho-como-funciona-matriz-eletrica-brasileira
+```
+
+Onboarding e briefing são internos e não entram no bundle. A promoção de autor e as transições editoriais são dry-run sem `--apply`. Consulte `docs/AUTHOR_ONBOARDING.md`, `docs/RESEARCH_WORKFLOW.md` e `docs/FIRST_ARTICLE_PLAN.md`.
 
 O CI executa instalação com lockfile congelado, typecheck, lint e build em pushes e pull requests direcionados à `main`.
 
-Os artigos atuais são conteúdo fictício de demonstração. Em produção, eles ficam ocultos por padrão. Uma implantação deliberadamente demonstrativa pode definir `VITE_ALLOW_DEMO_CONTENT=true`; nesse caso, o aviso visual de demonstração permanece obrigatório.
+Os 12 artigos de exemplo são conteúdo fictício de demonstração. O piloto adicional é um draft estrutural vazio. Nenhum deles é conteúdo de lançamento; em produção permanecem ocultos.
 
 ## Estrutura do projeto
 
@@ -113,3 +161,21 @@ Capas e figuras usam um contrato editorial único e o componente responsivo `Edi
 ## Licença
 
 Licença a definir.
+
+## Persistência operacional da newsroom
+
+A newsroom usa contratos independentes do backend. Desenvolvimento preserva o
+filesystem local; produção serverless foi preparada para Cloudflare D1 via
+binding privado `NEWSROOM_DB`, sem recurso remoto criado. MDX e conteúdo
+editorial continuam versionados no Git.
+
+```bash
+bun run storage:health
+bun run storage:migrate:status
+bun run storage:export
+bun run storage:verify
+```
+
+Import, backup, restore e migrations são dry-run por padrão e exigem `--apply`
+para mutação. Consulte `docs/NEWSROOM_STORAGE.md` e
+`docs/NEWSROOM_BACKUP_RECOVERY.md`.

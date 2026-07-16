@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "id": "run-85510ce4d71b0b89",
+      "runType": "manual",
+      "mode": "process-existing",
+      "environment": "local",
+      "startedAt": "2026-07-16T01:28:55.567Z",
+      "finishedAt": "2026-07-16T01:28:55.567Z",
+      "status": "completed",
+      "actor": "sprint-16-local",
+      "dryRun": false,
+      "configurationVersion": "newsroom-daily-automation-1",
+      "policyVersion": "sul-global-editorial-policy-1",
+      "sourceIds": [
+        "mit-news-renewable-energy",
+        "nasa-technology"
+      ],
+      "stages": [
+        {
+          "name": "environment-check",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "environment": "local"
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "configuration-check",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "mode": "process-existing"
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "lock-acquisition",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "orphanOverride": false
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "source-health",
+          "status": "skipped",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [
+            "Modo process-existing nÃ£o acessa rede."
+          ],
+          "errors": [],
+          "retryStrategy": "Sem retry.",
+          "interruptionPolicy": "Prosseguir quando seguro."
+        },
+        {
+          "name": "collection",
+          "status": "skipped",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [
+            "Modo process-existing nÃ£o acessa rede."
+          ],
+          "errors": [],
+          "retryStrategy": "Sem retry.",
+          "interruptionPolicy": "Prosseguir quando seguro."
+        },
+        {
+          "name": "normalization",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "items": 30
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "deduplication",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "items": 30
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "classification",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "items": 30
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "scoring",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "items": 30
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "clustering",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "clusters": 30
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "evidence-packages",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "packages": 30
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "translation-queue",
+          "status": "skipped",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [
+            "NEWSROOM_TRANSLATION_ENABLED=false."
+          ],
+          "errors": [],
+          "retryStrategy": "Sem retry.",
+          "interruptionPolicy": "Prosseguir quando seguro."
+        },
+        {
+          "name": "orchestration",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "decisions": 30,
+            "inbox": 30
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "daily-report",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "report": "run-85510ce4d71b0b89"
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "notification",
+          "status": "skipped",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {},
+          "warnings": [
+            "NotificaÃ§Ãµes desativadas."
+          ],
+          "errors": [],
+          "retryStrategy": "Sem retry.",
+          "interruptionPolicy": "Prosseguir quando seguro."
+        },
+        {
+          "name": "cleanup",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "removed": 0
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        },
+        {
+          "name": "lock-release",
+          "status": "completed",
+          "startedAt": "2026-07-16T01:28:55.567Z",
+          "finishedAt": "2026-07-16T01:28:55.567Z",
+          "durationMs": 0,
+          "input": {},
+          "output": {
+            "released": true
+          },
+          "warnings": [],
+          "errors": [],
+          "retryStrategy": "Sem retry automÃ¡tico.",
+          "interruptionPolicy": "Checkpoint consistente antes do prÃ³ximo estÃ¡gio."
+        }
+      ],
+      "itemsFetched": 0,
+      "itemsAccepted": 0,
+      "itemsRejected": 0,
+      "duplicates": 0,
+      "quarantined": 0,
+      "clustersCreated": 30,
+      "clustersUpdated": 0,
+      "translationsQueued": 0,
+      "decisionsCreated": 0,
+      "decisionsUpdated": 30,
+      "humanReviewsPending": 30,
+      "errors": [],
+      "warnings": [],
+      "durationMs": 0,
+      "checkpoints": [
+        {
+          "stage": "lock-acquisition",
+          "at": "2026-07-16T01:28:55.567Z"
+        },
+        {
+          "stage": "clustering",
+          "at": "2026-07-16T01:28:55.567Z"
+        },
+        {
+          "stage": "evidence-packages",
+          "at": "2026-07-16T01:28:55.567Z"
+        },
+        {
+          "stage": "orchestration",
+          "at": "2026-07-16T01:28:55.567Z"
+        },
+        {
+          "stage": "daily-report",
+          "at": "2026-07-16T01:28:55.567Z"
+        }
+      ]
+    }
+  ]
+}
