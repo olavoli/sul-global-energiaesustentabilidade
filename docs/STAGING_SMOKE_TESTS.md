@@ -1,5 +1,16 @@
 # Smoke tests de staging
 
+## Execução local
+
+Depois de `bun run build`, execute:
+
+```bash
+bun run staging:smoke:local
+```
+
+Esse comando carrega o worker compilado diretamente, sem abrir porta, acessar a
+internet ou exigir credenciais.
+
 ## Execução
 
 Configure `STAGING_BASE_URL` fora do Git e confirme o alvo com

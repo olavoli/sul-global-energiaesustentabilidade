@@ -23,7 +23,9 @@ bloqueados.
 ## Comandos locais seguros
 
 ```bash
+bun run staging:check
 bun run staging:validate
+bun run staging:smoke:local
 bun run staging:provision
 bun run staging:migrate
 bun run staging:migrate -- --apply
@@ -32,6 +34,10 @@ bun run staging:seed -- --apply
 bun run staging:recovery:test
 bun run staging:rollback:plan
 ```
+
+`staging:check` reutiliza a validação determinística de configuração.
+`staging:smoke:local` executa o smoke do worker já compilado, sem abrir porta e
+sem acessar a rede.
 
 `--apply` nos comandos acima afeta somente um emulador novo em memória. O plano
 de provisionamento apenas imprime instruções; não chama a Cloudflare.

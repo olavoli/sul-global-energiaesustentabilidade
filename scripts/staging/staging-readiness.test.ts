@@ -190,6 +190,14 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     ).toThrow();
   });
 
+  test("comandos oficiais de check e smoke local permanecem seguros", async () => {
+    const packageJson = JSON.parse(await readFile("package.json", "utf8")) as {
+      scripts: Record<string, string>;
+    };
+    expect(packageJson.scripts["staging:check"]).toBe("bun run staging:validate");
+    expect(packageJson.scripts["staging:smoke:local"]).toBe("bun run smoke");
+  });
+
   test("seed pode ser aplicado somente no emulador", async () => {
     const adapter = new D1EmulatorStorageAdapter();
     expect(await seedEmulator(adapter, await loadStagingSeed())).toBe(7);
