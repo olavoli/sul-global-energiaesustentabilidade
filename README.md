@@ -1,5 +1,13 @@
 # Sul Global
 
+## Sprint 19 — preparação de staging
+
+Staging foi formalizado sem criar recursos remotos: template Cloudflare com D1
+privado, seed sanitizado, migrations e recovery no emulador, smoke remoto
+parametrizado, health administrativo, workflow manual protegido e runbooks de
+rollback/promoção. Use `bun run staging:validate` e consulte
+`docs/STAGING.md`. Nenhum deploy ou ambiente remoto foi executado.
+
 ## Sprint 17 — Central Editorial privada
 
 O namespace `/admin/newsroom` oferece dashboard, inbox, decisões, clusters, evidências, traduções, fontes, quarentena, runs, relatórios e pautas sob sessão server-side. Configure `NEWSROOM_ADMIN_SECRET` somente no servidor. Cookie HttpOnly, CSRF, rate limit, noindex e cache privado protegem o acesso. A interface não publica, não cria artigo e bloqueia apply completo.

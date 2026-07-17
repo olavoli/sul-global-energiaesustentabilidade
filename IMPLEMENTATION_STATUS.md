@@ -1,5 +1,15 @@
 # Status de implementação
 
+## Sprint 19 — preparada localmente
+
+- [x] Configuração formal de staging, D1 e kill switches com placeholders.
+- [x] Seed sanitizado, migration idempotente e backup/restore no emulador.
+- [x] Sessão, rate limit, lock e Central validados sobre adapter D1 emulado.
+- [x] Smoke remoto configurável e health privado sem exposição de infraestrutura.
+- [x] Workflow manual protegido, rollback e checklists.
+- [ ] Worker, D1, binding, secret e smoke remotos aguardam autorização/configuração.
+- [ ] Produção permanece inativa e intocada.
+
 ## Sprint 17 — implementada localmente
 
 - Central Editorial privada em `/admin/newsroom`, separada do portal e bloqueada antes do SSR.

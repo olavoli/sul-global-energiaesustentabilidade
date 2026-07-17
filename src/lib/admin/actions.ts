@@ -34,6 +34,7 @@ import {
 } from "../../../scripts/newsroom/translation";
 import type { AdminAction } from "./contracts";
 import { storageAdapter } from "../../../scripts/newsroom/storage/runtime";
+import { reportEvent } from "../observability";
 
 function required(value: string | undefined, label: string): string {
   if (!value?.trim()) throw new Error(`${label} é obrigatório.`);
@@ -204,6 +205,11 @@ export async function executeAdminAction(input: AdminAction): Promise<unknown> {
       expiresAt: new Date(Date.parse(startedAt) + 30_000).toISOString(),
     });
     locked = true;
+    reportEvent("admin.lock.acquired", {
+      action: input.action,
+      requestId: input.requestId,
+      storageDriver: adapter.driver,
+    });
     const result = await performAdminAction(input);
     await adapter.appendAudit({
       id: crypto.randomUUID(),
@@ -237,6 +243,13 @@ export async function executeAdminAction(input: AdminAction): Promise<unknown> {
     });
     throw error;
   } finally {
-    if (locked) await adapter.releaseLock(lockKey, owner);
+    if (locked) {
+      await adapter.releaseLock(lockKey, owner);
+      reportEvent("admin.lock.released", {
+        action: input.action,
+        requestId: input.requestId,
+        storageDriver: adapter.driver,
+      });
+    }
   }
 }

@@ -23,6 +23,7 @@ export interface EnvironmentConfig {
   publicSiteUrl: string;
   isPublicUrlConfigured: boolean;
   isOfficialProduction: boolean;
+  isStaging: boolean;
   indexingEnabled: boolean;
   demoContentEnabled: boolean;
 }
@@ -63,6 +64,12 @@ export function resolveEnvironment(input: EnvironmentInput): EnvironmentConfig {
   if (name === "production" && demoOptIn) {
     throw new Error("Produção oficial não permite VITE_ALLOW_DEMO_CONTENT=true.");
   }
+  if (name === "staging" && !isPublicUrlConfigured) {
+    throw new Error("VITE_APP_ENV=staging exige VITE_PUBLIC_SITE_URL HTTPS e explícita.");
+  }
+  if (name === "staging" && new URL(publicSiteUrl).protocol !== "https:") {
+    throw new Error("Staging exige VITE_PUBLIC_SITE_URL com HTTPS.");
+  }
 
   const isOfficialProduction = name === "production" && isPublicUrlConfigured && !demoOptIn;
   return Object.freeze({
@@ -70,6 +77,7 @@ export function resolveEnvironment(input: EnvironmentInput): EnvironmentConfig {
     publicSiteUrl,
     isPublicUrlConfigured,
     isOfficialProduction,
+    isStaging: name === "staging",
     indexingEnabled: isOfficialProduction,
     demoContentEnabled: name === "development" || name === "test" || demoOptIn,
   });

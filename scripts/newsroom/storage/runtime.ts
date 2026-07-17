@@ -11,6 +11,8 @@ export interface StorageEnvironment {
   NEWSROOM_DB?: D1Database;
 }
 
+const storageEnvironments = ["development", "test", "preview", "staging", "production"] as const;
+
 let configured: StorageAdapter | undefined;
 
 export function setStorageAdapter(adapter: StorageAdapter | undefined): void {
@@ -32,11 +34,13 @@ export function storageAdapter(): StorageAdapter {
 
 export function createStorageAdapter(environment: StorageEnvironment): StorageAdapter {
   const stage = environment.NEWSROOM_ENVIRONMENT ?? process.env.VITE_APP_ENV ?? "development";
+  if (!storageEnvironments.includes(stage as (typeof storageEnvironments)[number]))
+    throw new StorageConfigurationError(`Ambiente de storage desconhecido: ${stage}.`);
   const requested = environment.NEWSROOM_STORAGE_DRIVER?.trim();
   const driver = requested || (["development", "test"].includes(stage) ? "local" : undefined);
   if (driver === "local") {
-    if (stage === "production")
-      throw new StorageConfigurationError("Produção não permite filesystem local.");
+    if (stage === "production" || stage === "staging")
+      throw new StorageConfigurationError(`${stage} não permite filesystem local.`);
     return new LocalFileStorageAdapter();
   }
   if (driver === "memory") {

@@ -27,3 +27,10 @@ Diagnóstico inicial: `storage:health`, `storage:migrate:status` e
 `storage:verify`. Em conflito, interrompa a mutação e recarregue o agregado. Em
 indisponibilidade, preserve o portal público e feche a Central para escrita. Em
 lock órfão, confirme expiração e fencing antes de override auditável.
+
+## Staging
+
+Comece com `staging:validate`, `staging:migrate`, `staging:seed` e
+`staging:recovery:test`. Sem autorização remota, pare no emulador. Em incidente,
+use `staging:rollback:plan`: o kill switch precede rollback de worker, restore
+ou remoção de binding.

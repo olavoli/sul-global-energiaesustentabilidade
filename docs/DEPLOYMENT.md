@@ -6,6 +6,14 @@
 
 Este documento prepara uma implantação controlada; ele não autoriza deploy nem define domínio.
 
+## Staging preparado
+
+`cloudflare/wrangler.staging.template.jsonc` complementa o manifesto Nitro
+gerado sem versionar IDs. `bun run staging:validate` valida a configuração;
+`staging:provision` mostra comandos sem executá-los. O workflow
+`staging-readiness.yml` não reage a push e só pode implantar staging com input
+literal, environment protegido e secrets próprios. Consulte `STAGING.md`.
+
 ## Matriz de ambientes
 
 | Ambiente        | `VITE_APP_ENV`                         | URL                              | Demos                      | Indexação  |

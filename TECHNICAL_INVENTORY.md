@@ -1,5 +1,17 @@
 # Inventário técnico
 
+## Staging e ensaio de produção
+
+- `cloudflare/wrangler.staging.template.jsonc`: manifesto exclusivo de staging,
+  com placeholder D1 e kill switches fechados.
+- `scripts/staging*.ts` e `scripts/staging/`: validação, plano instrucional,
+  migrations/seed/recovery emulados e smoke remoto sanitizado.
+- `newsroom/staging/seed.v1.json`: fixtures privadas, fontes inativas e zero
+  segredo/sessão/artigo.
+- `.github/workflows/staging-readiness.yml`: dispatch manual, environment
+  protegido e deploy de staging condicionado a autorização literal.
+- Dependências novas: nenhuma. Recursos remotos criados: nenhum.
+
 ## Central Editorial privada
 
 - `src/lib/admin/`: autenticação, rate limit, contratos Zod, dados, ações e handler HTTP;

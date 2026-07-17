@@ -1,5 +1,19 @@
 # Changelog
 
+## Não publicado — Sprint 19
+
+### Adicionado
+
+- Template Cloudflare de staging, seed sanitizado, CLI de preparação e smoke.
+- Health privado e eventos operacionais estruturados da Central.
+- Testes emulados de sessão, rate limit, locks, migrations e recovery.
+- Workflow manual, runbooks e checklists de staging/promoção.
+
+### Segurança
+
+- Staging exige D1 e URL HTTPS distintos; produção, agenda e publicação não
+  foram ativadas. Nenhum ID, segredo, recurso remoto ou deploy foi criado.
+
 ## Não publicado — Sprint 18
 
 ### Adicionado

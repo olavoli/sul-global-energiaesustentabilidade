@@ -1,0 +1,30 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "sul-global-staging",
+  "main": "../.output/server/index.mjs",
+  "compatibility_date": "2026-07-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "no_bundle": true,
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "../.output/public",
+  },
+  "d1_databases": [
+    {
+      "binding": "NEWSROOM_DB",
+      "database_name": "sul-global-newsroom-staging",
+      "database_id": "__STAGING_D1_DATABASE_ID__",
+      "migrations_dir": "../scripts/newsroom/storage",
+    },
+  ],
+  "vars": {
+    "NEWSROOM_ENVIRONMENT": "staging",
+    "NEWSROOM_STORAGE_DRIVER": "d1",
+    "NEWSROOM_ENABLED": "true",
+    "NEWSROOM_COLLECTION_ENABLED": "false",
+    "NEWSROOM_TRANSLATION_ENABLED": "false",
+    "NEWSROOM_ORCHESTRATION_ENABLED": "false",
+    "NEWSROOM_NOTIFICATIONS_ENABLED": "false",
+    "NEWSROOM_SCHEDULE_ENABLED": "false",
+  },
+}

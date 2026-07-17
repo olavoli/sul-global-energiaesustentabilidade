@@ -7,6 +7,13 @@
 
 Este checklist não significa que o portal foi lançado.
 
+## Gate anterior: staging
+
+- [ ] `STAGING_CHECKLIST.md` concluído com evidência remota real.
+- [ ] Banco, URL e segredo de staging comprovadamente distintos da produção.
+- [ ] Smoke remoto, recovery isolado e rollback aprovados por revisão humana.
+- [ ] Nenhuma fixture, sessão ou dado operacional promovido.
+
 ## Obrigatório para o primeiro lançamento
 
 - [ ] Árvore Git revisada e limpa; branch de release confirmada.

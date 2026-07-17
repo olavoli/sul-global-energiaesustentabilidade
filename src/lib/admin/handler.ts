@@ -1,6 +1,7 @@
 import { environmentConfig } from "@/config/environment";
-import { reportError, reportWarning } from "@/lib/observability";
-import { configureStorage } from "../../../scripts/newsroom/storage/runtime";
+import { reportError, reportEvent, reportWarning } from "@/lib/observability";
+import { configureStorage, storageAdapter } from "../../../scripts/newsroom/storage/runtime";
+import { storageMigrations } from "../../../scripts/newsroom/storage/migrations";
 import {
   StorageConfigurationError,
   StorageConflictError,
@@ -45,6 +46,8 @@ function environmentRecord(input: unknown): ServerEnvironment {
     for (const key of [
       "NEWSROOM_ADMIN_SECRET",
       "NEWSROOM_ADMIN_LOCAL",
+      "NEWSROOM_ENVIRONMENT",
+      "NEWSROOM_STORAGE_DRIVER",
       "NEWSROOM_ENABLED",
       "NEWSROOM_COLLECTION_ENABLED",
       "NEWSROOM_TRANSLATION_ENABLED",
@@ -113,10 +116,12 @@ async function login(request: Request, environment: ServerEnvironment): Promise<
   if (!(await secureEqual(input.secret, secret))) {
     await recordFailedLogin(key);
     reportWarning("Tentativa administrativa recusada.", { area: "admin-login" });
+    reportEvent("admin.login", { status: 401, success: false });
     return json({ error: "Não foi possível autenticar." }, 401);
   }
   await clearLoginFailures(key);
   const created = await createSessionToken(secret, input.actor);
+  reportEvent("admin.login", { status: 200, success: true });
   return json(
     { authenticated: true, actor: created.session.actor, csrf: created.session.csrf },
     200,
@@ -132,11 +137,22 @@ async function api(
 ): Promise<Response> {
   if (pathname === "/api/admin/session")
     return json({ actor: session.actor, csrf: session.csrf, expiresAt: session.expiresAt });
+  if (pathname === "/api/admin/storage/health" && request.method === "GET") {
+    const health = await storageAdapter().healthCheck();
+    return json({
+      ok: health.ok,
+      environment: environment.NEWSROOM_ENVIRONMENT ?? environmentConfig.name,
+      storageDriver: health.driver,
+      migrationVersion: storageMigrations.at(-1)?.version ?? 0,
+      detail: health.ok ? "Armazenamento privado disponível." : "Armazenamento indisponível.",
+    });
+  }
   if (pathname === "/api/admin/logout" && request.method === "POST") {
     const csrf = request.headers.get("x-csrf-token");
     if (!csrf || !(await secureEqual(csrf, session.csrf)))
       return json({ error: "Requisição não autorizada." }, 403);
     await revokeSession(session);
+    reportEvent("admin.session.revoked", { status: 200, success: true });
     return json({ authenticated: false }, 200, {
       "set-cookie": expiredSessionCookie(environmentConfig.isOfficialProduction),
     });
@@ -177,6 +193,8 @@ export async function handleAdminRequest(
   const pathname = new URL(request.url).pathname;
   if (!pathname.startsWith("/admin") && !pathname.startsWith("/api/admin")) return undefined;
   const environment = environmentRecord(runtimeEnvironment);
+  const startedAt = Date.now();
+  const requestId = request.headers.get("cf-ray") ?? crypto.randomUUID();
   try {
     configureStorage(runtimeEnvironment);
     if (pathname === "/api/admin/login" && request.method === "POST")
@@ -195,12 +213,33 @@ export async function handleAdminRequest(
         ? json({ error: "Autenticação necessária." }, 401)
         : redirect("/admin/login");
     }
-    if (pathname.startsWith("/api/admin"))
-      return await api(request, pathname, environment, session);
+    if (pathname.startsWith("/api/admin")) {
+      const response = await api(request, pathname, environment, session);
+      reportEvent("admin.request", {
+        requestId,
+        path: pathname,
+        storageDriver: storageAdapter().driver,
+        migrationVersion: storageMigrations.at(-1)?.version ?? 0,
+        durationMs: Date.now() - startedAt,
+        status: response.status,
+      });
+      return response;
+    }
     if (pathname === "/admin") return redirect("/admin/newsroom");
     return undefined;
   } catch (error) {
     reportError(error, { area: "admin-request", path: pathname });
+    reportEvent("admin.request.error", {
+      requestId,
+      path: pathname,
+      durationMs: Date.now() - startedAt,
+      status:
+        error instanceof StorageConflictError
+          ? 409
+          : error instanceof StorageConfigurationError
+            ? 503
+            : 400,
+    });
     if (error instanceof StorageConflictError)
       return json({ error: "O registro mudou; recarregue antes de tentar novamente." }, 409);
     if (error instanceof StorageConfigurationError)

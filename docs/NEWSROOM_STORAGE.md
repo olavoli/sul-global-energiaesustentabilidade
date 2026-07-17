@@ -75,3 +75,9 @@ recebe binding D1 e, portanto, não executa migration remota.
 - retenção e limpeza remotas dependem de autorização operacional futura;
 - ativar produção exige migration aplicada, binding privado e teste de
   recuperação aprovado.
+
+## Homologação
+
+Staging também recusa filesystem local e exige `NEWSROOM_DB`. O contrato é
+validado com `D1EmulatorStorageAdapter`, inclusive entre instâncias. Isso não
+equivale a validação remota. O template não contém database ID real.

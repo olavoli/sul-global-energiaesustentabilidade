@@ -18,3 +18,10 @@ Antes de habilitar mutações em ambiente serverless, valide `storage:health`,
 migrations, export e restore em ambiente isolado. Um 409 requer recarregar o
 registro; nunca repetir cegamente uma decisão humana. Um 503 de storage mantém
 a Central fechada para mutações até a recuperação do binding.
+
+## Staging
+
+Após login, `/api/admin/storage/health` confirma apenas ambiente, driver,
+migration e disponibilidade. Valide sessão entre requests, logout, rate limit e
+locks antes de qualquer mutação. Apply completo, coleta externa e publicação
+continuam bloqueados. Não use o secret de produção.

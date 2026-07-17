@@ -47,3 +47,10 @@ indisponível para mutações, preserve evidências e volte ao último snapshot
 verificado. Nunca resolva conflito de decisão humana por last-write-wins.
 
 Nenhum backup remoto ou teste de produção foi executado nesta Sprint.
+
+## Ensaio de staging
+
+`bun run staging:recovery:test` cria dados sanitizados no emulador, calcula
+SHA-256, restaura em outra instância isolada e compara IDs/valores. O ensaio não
+sobrescreve staging remoto. Consulte `STAGING_ROLLBACK.md` antes de uma futura
+operação autorizada.

@@ -1,5 +1,15 @@
 # Registro de decisões
 
+## ADR — staging isolado, emulado antes de remoto
+
+Decidiu-se versionar somente um template Cloudflare com placeholder e manter o
+manifesto materializado em `.wrangler/`. Staging exige URL HTTPS, D1, secret e
+environment próprios; todos os kill switches começam fechados. Migrations,
+seed, sessão, rate limit, locks e recovery são provados primeiro pelo emulador.
+Deploy e operações D1 remotas só existem em workflow manual protegido, com
+autorização literal e secrets do environment. Produção não compartilha
+configuração e não é fallback.
+
 ## ADR — Central Editorial server-side e sessão administrativa mínima
 
 Decidiu-se proteger `/admin` no wrapper do servidor antes do SSR e fornecer dados por `/api/admin` somente após sessão HMAC. O segredo permanece server-only; cookie HttpOnly, CSRF, rate limit, expiração e schemas Zod protegem ações. Componentes cliente não importam `newsroom/`; a API reutiliza serviços de domínio. Apply completo e coleta externa mutável ficam fora da interface. Como Cloudflare não fornece filesystem persistente, a operação mutável permanece local até backend privado aprovado.

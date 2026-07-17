@@ -44,3 +44,9 @@ A autenticação continua single-secret e não oferece identidade individual
 forte. Não há rotação automática de segredo nem observabilidade remota.
 Provisionamento, políticas Cloudflare, retenção e teste de penetração dependem
 de autorização futura.
+
+## Isolamento de staging
+
+Staging exige URL, D1 e segredo distintos e nunca aceita `local`. O ID do banco
+é materializado apenas em `.wrangler/`. Health é autenticado, retorna somente
+driver/versão/estado sanitizados e não revela ID, token, cookie ou segredo.

@@ -1,5 +1,11 @@
 # Roadmap
 
+## Sprint 19 — preparada localmente
+
+Configuração, emulação D1, seed, smoke, workflow e operação de staging estão
+versionados. Provisionamento, migrations remotas, deploy e smoke remoto
+aguardam autorização e credenciais. Produção não foi promovida.
+
 ## Sprint 17 — Central Editorial privada
 
 Implementada localmente com sessão administrativa única, cockpit operacional e ações supervisionadas. Próximos passos dependem de backend privado persistente, autenticação definitiva e revisão de implantação; publicação continua fora da Central.
