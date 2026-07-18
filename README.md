@@ -1,5 +1,15 @@
 # Sul Global
 
+## Sprint 20 — staging remoto validado
+
+O ambiente isolado de homologação está disponível em
+`https://sul-global-staging.sul-global.workers.dev`, com Worker Cloudflare, D1
+exclusivo, migration aplicada, seed sanitizado, Central Editorial protegida,
+sessão durável, rate limit, locks com fencing, backup/restore e rollback
+validados. Todos os kill switches mutáveis permanecem fechados. Produção,
+domínio oficial, publicação, agenda, coleta, IA, tradução externa, anúncios e
+analytics continuam inativos. Consulte `docs/STAGING_REMOTE_VALIDATION.md`.
+
 ## Sprint 17 — Central Editorial privada
 
 O namespace `/admin/newsroom` oferece dashboard, inbox, decisões, clusters, evidências, traduções, fontes, quarentena, runs, relatórios e pautas sob sessão server-side. Configure `NEWSROOM_ADMIN_SECRET` somente no servidor. Cookie HttpOnly, CSRF, rate limit, noindex e cache privado protegem o acesso. A interface não publica, não cria artigo e bloqueia apply completo.
@@ -72,7 +82,7 @@ Para visualizar o build localmente com o runtime suportado pelo Wrangler:
 bun run preview
 ```
 
-O preview usa Node apenas para executar Wrangler sobre `.output/server/wrangler.json`; Bun continua responsável por instalação, testes e build. Execute `bun run build` antes. Builds genéricos são tratados como preview e bloqueiam indexação. Produção exige `VITE_APP_ENV=production`, URL pública explícita e demos desativadas.
+O preview usa Node apenas para executar Wrangler sobre `.output/server/wrangler.json`; Bun continua responsável por instalação, testes e build. O launcher recusa a substituição silenciosa do Node pelo Bun e aceita `NODE_BINARY` quando o executável não estiver no `PATH`. Execute `bun run build` antes. Builds genéricos são tratados como preview e bloqueiam indexação. Produção exige `VITE_APP_ENV=production`, URL pública explícita e demos desativadas.
 
 ## Qualidade
 

@@ -53,3 +53,15 @@ e objetos por chave/hash, tornando a repetição idempotente.
 
 Falha em qualquer etapa mantém o driver anterior como autoridade. Não apagar
 arquivos locais antes da validação humana do ambiente durável.
+
+## Fluxo de staging
+
+`bun run staging:migrate` descreve o plano e `--apply` registra a migration
+somente no emulador efêmero. A aplicação remota deve usar o banco nominal de
+staging, após status, backup e autorização no environment protegido. Produção
+não é alvo do script ou workflow.
+
+Em 2026-07-18, a migration `0001_newsroom_core.sql` foi aplicada uma vez no D1
+autorizado `sul-global-newsroom-staging`; nova consulta retornou zero migrations
+pendentes. Nenhuma migration foi aplicada em produção. O schema restaurado em
+D1 temporário foi comparado integralmente e o recurso temporário foi excluído.

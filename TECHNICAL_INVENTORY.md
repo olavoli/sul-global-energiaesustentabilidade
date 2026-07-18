@@ -1,5 +1,23 @@
 # Inventário técnico
 
+## Staging remoto
+
+- `cloudflare/wrangler.staging.template.jsonc`: manifesto exclusivo de staging,
+  com placeholder D1 e kill switches fechados.
+- `scripts/staging*.ts` e `scripts/staging/`: validação, plano instrucional,
+  migrations/seed/recovery emulados, geração SQL sanitizada e smoke remoto.
+- `scripts/preview-worker.ts`: launcher que exige Node >=20 para o Wrangler,
+  impedindo que Bun seja interpretado como Node no preview.
+- `newsroom/staging/seed.v1.json`: fixtures privadas, fontes inativas e zero
+  segredo/sessão/artigo.
+- `.github/workflows/staging-readiness.yml`: dispatch manual, environment
+  protegido e deploy de staging condicionado a autorização literal.
+- `src/server.ts`: recupera o contexto Cloudflare anexado pelo Nitro ao request
+  antes de configurar D1; `automation-config.ts` empacota a política padrão.
+- Recursos ativos: Worker `sul-global-staging`, D1
+  `sul-global-newsroom-staging` e um secret server-only. O D1 temporário de
+  restore foi excluído após a comparação. Dependências novas: nenhuma.
+
 ## Central Editorial privada
 
 - `src/lib/admin/`: autenticação, rate limit, contratos Zod, dados, ações e handler HTTP;

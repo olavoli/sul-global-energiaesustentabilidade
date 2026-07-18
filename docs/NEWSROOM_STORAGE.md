@@ -3,9 +3,9 @@
 ## Decisão
 
 A camada operacional usa contratos TypeScript independentes de fornecedor. O
-driver local preserva os arquivos existentes; o driver de produção usa
-Cloudflare D1 por binding server-side `NEWSROOM_DB`. Nenhum banco, conta,
-binding remoto ou credencial foi criado nesta Sprint.
+driver local preserva os arquivos existentes; staging e produção serverless
+usam Cloudflare D1 por binding server-side `NEWSROOM_DB`. O D1 de staging foi
+criado após autorização; produção continua sem banco ou binding.
 
 D1 foi escolhido porque o estado da newsroom exige compare-and-set,
 transações, índices, paginação e coordenação consistente. KV isolado não oferece
@@ -26,7 +26,7 @@ em R2 no futuro sem alterar domínio, CLI ou Central.
 - `MemoryStorageAdapter` e `D1EmulatorStorageAdapter`: testes isolados e
   determinísticos.
 - `scripts/newsroom/storage/runtime.ts`: seleção explícita do driver e bloqueio
-  de filesystem local em produção.
+  de filesystem local em staging e produção.
 
 MDX, autores, pesquisa e configuração versionada continuam no Git. Somente o
 estado operacional mutável passa pela abstração.
@@ -49,6 +49,7 @@ externas não pertencem ao storage.
 | development | `local`                        | padrão local explícito ou implícito     |
 | test        | `local`, `memory`, emulador D1 | isolado, sem rede                       |
 | preview     | explícito                      | sem fallback silencioso                 |
+| staging     | `d1`                           | binding exclusivo; `local` é recusado   |
 | production  | `d1`                           | binding obrigatório; `local` é recusado |
 
 O portal público continua baseado no repositório editorial gerado e não depende
@@ -69,9 +70,16 @@ recebe binding D1 e, portanto, não executa migration remota.
 
 ## Limitações
 
-- nenhum recurso remoto foi provisionado ou validado contra uma conta real;
+- somente staging foi provisionado e validado contra a conta autorizada;
 - relatórios maiores ainda compartilham o backend estruturado;
 - filtros da Central continuam limitados aos agregados atuais;
 - retenção e limpeza remotas dependem de autorização operacional futura;
 - ativar produção exige migration aplicada, binding privado e teste de
   recuperação aprovado.
+
+## Homologação
+
+Staging também recusa filesystem local e exige `NEWSROOM_DB`. O contrato é
+validado com `D1EmulatorStorageAdapter` e no D1 remoto exclusivo, inclusive com
+sessão entre versões, rate limit, lock, fencing, auditoria, backup e restore.
+O template versionado não contém database ID real.

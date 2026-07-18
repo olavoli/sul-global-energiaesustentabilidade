@@ -1,5 +1,19 @@
 # Roadmap
 
+## Sprint 20 — staging remoto validado
+
+Worker, D1, migration, seed, Central protegida, smoke, sessão durável, rate
+limit, locks, backup/restore e rollback foram validados em staging isolado.
+Produção, domínio definitivo, indexação, publicação, agenda, IA e integrações
+externas permanecem fora de operação.
+
+## Sprint 19 — preparada localmente
+
+Configuração, emulação D1, seed, smoke, workflow e operação de staging estão
+versionados. Naquela Sprint, provisionamento, migrations remotas, deploy e
+smoke remoto permaneceram pendentes; foram executados sob autorização na
+Sprint 20. Produção não foi promovida.
+
 ## Sprint 17 — Central Editorial privada
 
 Implementada localmente com sessão administrativa única, cockpit operacional e ações supervisionadas. Próximos passos dependem de backend privado persistente, autenticação definitiva e revisão de implantação; publicação continua fora da Central.
@@ -167,6 +181,6 @@ Viabilizar receitas sem comprometer independência editorial, privacidade ou des
 
 - [x] Contratos, adapter local, adapter D1 e emulador.
 - [x] Migrations, import/export, locks, sessão, rate limit e auditoria.
-- [ ] Provisionar D1 e aplicar migrations somente com autorização.
-- [ ] Testar recuperação em preview privado antes de qualquer produção.
+- [x] Provisionar D1 de staging e aplicar migrations com autorização.
+- [x] Testar recuperação em D1 temporário isolado antes de qualquer produção.
 - [ ] Avaliar R2 se relatórios excederem o limite operacional definido.

@@ -12,7 +12,24 @@ type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
 };
 
+type CloudflareAugmentedRequest = Request & {
+  runtime?: {
+    cloudflare?: {
+      env?: unknown;
+      context?: unknown;
+    };
+  };
+};
+
 let serverEntryPromise: Promise<ServerEntry> | undefined;
+
+function cloudflareRuntime(request: Request, env: unknown, ctx: unknown) {
+  const cloudflare = (request as CloudflareAugmentedRequest).runtime?.cloudflare;
+  return {
+    env: env ?? cloudflare?.env,
+    ctx: ctx ?? cloudflare?.context,
+  };
+}
 
 async function getServerEntry(): Promise<ServerEntry> {
   if (!serverEntryPromise) {
@@ -54,7 +71,10 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
-      const adminResponse = await handleAdminRequest(request, env);
+      // Nitro's Cloudflare module augments requests before delegating to the SSR
+      // service, whose fetch call receives only the Request object.
+      const runtime = cloudflareRuntime(request, env, ctx);
+      const adminResponse = await handleAdminRequest(request, runtime.env);
       if (adminResponse) return applySecurityHeaders(adminResponse, request);
       const distributionResponse = createDistributionResponse(
         new URL(request.url).pathname,
@@ -62,7 +82,7 @@ export default {
       );
       if (distributionResponse) return applySecurityHeaders(distributionResponse, request);
       const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
+      const response = await handler.fetch(request, runtime.env, runtime.ctx);
       return applySecurityHeaders(await normalizeCatastrophicSsrResponse(response), request);
     } catch (error) {
       reportError(error, { area: "server-fetch", path: new URL(request.url).pathname });

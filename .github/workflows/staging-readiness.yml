@@ -1,0 +1,82 @@
+name: Staging Readiness
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_staging:
+        description: "Implantar exclusivamente em staging"
+        required: true
+        default: false
+        type: boolean
+      authorization:
+        description: "Para deploy, informe DEPLOY-STAGING"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sul-global-staging
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      VITE_APP_ENV: preview
+      VITE_PUBLIC_SITE_URL: http://localhost:8080
+      VITE_ALLOW_DEMO_CONTENT: "false"
+      NEWSROOM_ENVIRONMENT: test
+      NEWSROOM_STORAGE_DRIVER: local
+      NEWSROOM_SCHEDULE_ENABLED: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - run: bun install --frozen-lockfile
+      - run: bun run staging:validate
+      - run: bun run staging:migrate
+      - run: bun run staging:seed
+      - run: bun run staging:recovery:test
+      - run: bun run typecheck
+      - run: bun run lint
+      - run: bun run test
+      - run: bun run build
+      - run: bun run smoke
+
+  deploy-staging:
+    needs: validate
+    if: inputs.deploy_staging && inputs.authorization == 'DEPLOY-STAGING'
+    environment: staging
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      STAGING_ADMIN_SECRET: ${{ secrets.STAGING_ADMIN_SECRET }}
+      STAGING_BASE_URL: ${{ vars.STAGING_BASE_URL }}
+      STAGING_TARGET_CONFIRMATION: STAGING-ONLY
+      VITE_APP_ENV: staging
+      VITE_PUBLIC_SITE_URL: ${{ vars.STAGING_BASE_URL }}
+      VITE_ALLOW_DEMO_CONTENT: "false"
+      NEWSROOM_SCHEDULE_ENABLED: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - run: bun install --frozen-lockfile
+      - run: bun run build
+      - name: Materialize staging config outside Git
+        run: bun run staging:config -- --database-id "$STAGING_D1_DATABASE_ID"
+        env:
+          STAGING_D1_DATABASE_ID: ${{ secrets.STAGING_D1_DATABASE_ID }}
+      - name: Migration status
+        run: npx wrangler d1 migrations list sul-global-newsroom-staging --remote --config .wrangler/staging.generated.json
+      - name: Deploy staging only
+        run: npx wrangler deploy --config .wrangler/staging.generated.json
+      - name: Remote staging smoke
+        run: bun run staging:smoke
