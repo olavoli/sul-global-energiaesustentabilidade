@@ -6,11 +6,12 @@
 
 Este documento prepara uma implantação controlada; ele não autoriza deploy nem define domínio.
 
-## Staging preparado
+## Staging remoto
 
 `cloudflare/wrangler.staging.template.jsonc` complementa o manifesto Nitro
-gerado sem versionar IDs. `bun run staging:validate` valida a configuração;
-`staging:provision` mostra comandos sem executá-los. O workflow
+gerado sem versionar IDs. A configuração materializada autorizada permanece em
+`.wrangler/`, ignorada pelo Git. `bun run staging:validate` valida a
+configuração; `staging:provision` mostra comandos sem executá-los. O workflow
 `staging-readiness.yml` não reage a push e só pode implantar staging com input
 literal, environment protegido e secrets próprios. Consulte `STAGING.md`.
 
@@ -50,7 +51,7 @@ bun run smoke
 bun run preview
 ```
 
-O build gera assets em `.output/public`, entrypoint em `.output/server/index.mjs` e configuração em `.output/server/wrangler.json`. `bun run preview` chama Node diretamente, sem instalação global. `bun run smoke:artifact` automatiza dois builds: valida rotas com demo explicitamente habilitada e recompila/valida o estado seguro com demos bloqueadas.
+O build gera assets em `.output/public`, entrypoint em `.output/server/index.mjs` e configuração em `.output/server/wrangler.json`. `bun run preview` usa um launcher local que valida Node >=20 antes de iniciar o Wrangler, sem instalação global. Se Node não estiver no `PATH`, defina `NODE_BINARY` com o caminho do executável; o launcher falha de forma explícita em vez de permitir que Bun se apresente como Node. Essa substituição causou o erro local `Unexpected server response: 101` observado na Sprint 19. `bun run smoke:artifact` automatiza dois builds: valida rotas com demo explicitamente habilitada e recompila/valida o estado seguro com demos bloqueadas.
 
 ## Segurança e indexação
 
@@ -64,10 +65,11 @@ Development, preview e staging recebem `noindex, nofollow` no HTML e em `X-Robot
 2. Configurar `VITE_APP_ENV=production`, URL oficial real e demos desativadas na plataforma.
 3. Executar instalação congelada, gates, build e smoke em revisão.
 4. Conferir entrypoint, assets e configuração gerada sem inserir token no código.
-5. Fazer o primeiro deploy manual pela conta Cloudflare autorizada.
+5. Fazer deploy manual pela conta Cloudflare autorizada.
 6. Validar headers, status, canonical, robots, sitemap, RSS e páginas legais no domínio real.
 
-Nenhuma conta ou token foi conectado nesta Sprint.
+O staging foi conectado por OAuth autorizado. Nenhum token foi versionado e
+produção não foi configurada.
 
 ## Cache, rollback e operação
 
@@ -77,19 +79,20 @@ A observabilidade atual não envia dados: em desenvolvimento registra diagnósti
 
 ## Limitações
 
-- domínio e conta Cloudflare ainda não definidos/conectados;
+- domínio oficial e produção ainda não definidos/conectados;
 - Node precisa estar instalado para o preview Wrangler;
 - imagens demo externas, ativo social e revisão jurídica continuam pendentes;
 - não há E2E de navegador, monitoramento remoto ou métricas de campo;
 - conteúdo demo ainda integra fisicamente o bundle, embora seja bloqueado.
 
-## Persistência da newsroom em deploy futuro
+## Persistência da newsroom
 
 Preview e produção exigem `NEWSROOM_STORAGE_DRIVER=d1`, binding privado
 `NEWSROOM_DB` e migrations validadas. `local` é recusado em produção; binding
 ausente deixa a Central indisponível para mutações sem afetar o portal público.
 Nunca prefixar o binding ou o segredo com `VITE_`.
 
-Antes do deploy: export verificado, backup, migration dry-run, aplicação
-autorizada, import dry-run, teste de recuperação e smoke. Esta Sprint não criou
-recurso remoto nem executou deploy.
+Em staging, migration, seed, export, restore isolado, smoke autenticado e
+rollback foram validados em 2026-07-18. O Worker responde somente em
+`https://sul-global-staging.sul-global.workers.dev`. Esse resultado não
+autoriza domínio oficial nem produção.

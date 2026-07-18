@@ -229,6 +229,24 @@ export async function handleAdminRequest(
     return undefined;
   } catch (error) {
     reportError(error, { area: "admin-request", path: pathname });
+    if (error instanceof StorageConfigurationError) {
+      const runtimeRecord =
+        runtimeEnvironment && typeof runtimeEnvironment === "object"
+          ? (runtimeEnvironment as Record<string, unknown>)
+          : {};
+      reportEvent("admin.storage.configuration_error", {
+        bindingPresent: Boolean(runtimeRecord.NEWSROOM_DB),
+        bindingType: typeof runtimeRecord.NEWSROOM_DB,
+        configuredDriver:
+          typeof runtimeRecord.NEWSROOM_STORAGE_DRIVER === "string"
+            ? runtimeRecord.NEWSROOM_STORAGE_DRIVER
+            : "missing",
+        configuredEnvironment:
+          typeof runtimeRecord.NEWSROOM_ENVIRONMENT === "string"
+            ? runtimeRecord.NEWSROOM_ENVIRONMENT
+            : "missing",
+      });
+    }
     reportEvent("admin.request.error", {
       requestId,
       path: pathname,

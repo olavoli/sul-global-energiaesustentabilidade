@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 import { z } from "zod";
+import bundledAutomationPolicy from "../../newsroom/policies/daily-automation.json";
 
 const budgetSchema = z.object({
   sourcesPerRun: z.number().int().positive(),
@@ -50,6 +51,8 @@ export interface AutomationSwitches {
   schedule: boolean;
 }
 
+const DEFAULT_AUTOMATION_POLICY_PATH = resolve("newsroom/policies/daily-automation.json");
+
 function enabled(value: string | undefined): boolean {
   return value?.trim().toLowerCase() === "true";
 }
@@ -68,8 +71,11 @@ export function resolveAutomationSwitches(
 }
 
 export async function loadAutomationPolicy(
-  path = resolve("newsroom/policies/daily-automation.json"),
+  path = DEFAULT_AUTOMATION_POLICY_PATH,
 ): Promise<AutomationPolicy> {
-  const input: unknown = JSON.parse(await readFile(path, "utf8"));
+  const input: unknown =
+    resolve(path) === DEFAULT_AUTOMATION_POLICY_PATH
+      ? bundledAutomationPolicy
+      : JSON.parse(await readFile(path, "utf8"));
   return automationPolicySchema.parse(input);
 }

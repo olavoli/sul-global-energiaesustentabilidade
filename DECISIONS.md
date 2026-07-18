@@ -1,5 +1,24 @@
 # Registro de decisões
 
+## ADR — staging remoto isolado e supervisionado
+
+Após validação local e autorização humana em checkpoints separados, decidiu-se
+provisionar somente o Worker `sul-global-staging`, o D1
+`sul-global-newsroom-staging` e um secret administrativo server-only. O
+manifesto materializado com ID real permanece em `.wrangler/`, fora do Git.
+Não há rota ou domínio de produção, e todos os kill switches mutáveis continuam
+fechados.
+
+O runtime Nitro delega o serviço SSR passando bindings pelo contexto anexado ao
+`Request`; o wrapper resolve esse contexto sem estado global. A política padrão
+de automação é importada estaticamente para funcionar no Worker, mantendo
+leitura de arquivo apenas para caminhos locais alternativos.
+
+Backup e restore são considerados válidos somente quando o export é restaurado
+em D1 isolado, comparado integralmente e o recurso temporário é removido.
+Rollback do Worker não implica rollback de dados; contenção por kill switch e
+preservação do D1 têm precedência.
+
 ## ADR — staging isolado, emulado antes de remoto
 
 Decidiu-se versionar somente um template Cloudflare com placeholder e manter o

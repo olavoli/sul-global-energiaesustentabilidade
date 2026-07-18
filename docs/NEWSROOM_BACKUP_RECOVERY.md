@@ -46,7 +46,9 @@ falha; D1 usa batch transacional. Se a recuperação falhar, mantenha a Central
 indisponível para mutações, preserve evidências e volte ao último snapshot
 verificado. Nunca resolva conflito de decisão humana por last-write-wins.
 
-Nenhum backup remoto ou teste de produção foi executado nesta Sprint.
+Um backup remoto do D1 de staging foi exportado em 2026-07-18 para
+`.wrangler/`, com checksum SHA-256 e zero indicadores de segredo, cookie ou
+token. Produção não foi acessada.
 
 ## Ensaio de staging
 
@@ -54,3 +56,9 @@ Nenhum backup remoto ou teste de produção foi executado nesta Sprint.
 SHA-256, restaura em outra instância isolada e compara IDs/valores. O ensaio não
 sobrescreve staging remoto. Consulte `STAGING_ROLLBACK.md` antes de uma futura
 operação autorizada.
+
+O ensaio remoto autorizado criou temporariamente
+`sul-global-newsroom-staging-restore-test`, importou o export e comparou
+integralmente migrations, documentos, auditoria, sessões, rate limits e locks.
+Todas as tabelas foram idênticas, o health respondeu e o banco temporário foi
+excluído. O D1 principal não foi modificado pelo restore.

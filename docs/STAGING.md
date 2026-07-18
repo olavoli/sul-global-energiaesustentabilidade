@@ -2,9 +2,11 @@
 
 ## Estado
 
-O repositório está preparado para staging, mas nenhum worker, banco D1, binding,
-segredo, domínio ou deploy remoto foi criado ou validado. A validação executável
-usa o emulador D1 e fixtures sanitizadas. Produção permanece intocada.
+O staging remoto autorizado está ativo em
+`https://sul-global-staging.sul-global.workers.dev`. O Worker
+`sul-global-staging`, o D1 `sul-global-newsroom-staging`, o binding privado e o
+secret server-only foram validados. Produção, domínio oficial, publicação,
+agenda, coleta, IA e integrações externas permanecem inativos.
 
 ## Arquitetura
 
@@ -42,24 +44,23 @@ sem acessar a rede.
 `--apply` nos comandos acima afeta somente um emulador novo em memória. O plano
 de provisionamento apenas imprime instruções; não chama a Cloudflare.
 
-## Provisionamento futuro autorizado
+## Provisionamento executado
 
-1. Executar `staging:provision` e revisar cada comando.
-2. Criar exclusivamente `sul-global-newsroom-staging`.
-3. Registrar o ID retornado fora do Git.
-4. Gerar `.wrangler/staging.generated.json` com `staging:config`.
-5. Cadastrar `NEWSROOM_ADMIN_SECRET` como secret do ambiente protegido.
-6. revisar status e aplicar migrations somente em staging;
-7. executar seed sanitizado somente após confirmação;
-8. implantar manualmente o worker de staging;
-9. executar `staging:smoke` com variáveis protegidas.
+1. Conta e nomes revisados em modo leitura.
+2. D1 exclusivo criado e ID mantido fora do Git.
+3. Migration aplicada e repetição sem pendências.
+4. Seed sanitizado aplicado e repetição idempotente.
+5. Worker implantado somente em `workers.dev`.
+6. Secret rotacionado por canal protegido.
+7. Smoke público/autenticado, sessão, rate limit e locks validados.
+8. Backup restaurado em D1 temporário isolado e já excluído.
+9. Rollback real executado e versão atual restaurada.
 
 Nenhuma etapa concede autorização para produção.
 
 ## Lacunas conhecidas
 
-- conta, ID do D1, URL e secret não foram fornecidos;
-- migrations e D1 foram validados somente pelo contrato/emulador;
-- o runtime remoto, a Central e o smoke remoto não foram testados;
-- rollback de worker depende do histórico de versões da conta Cloudflare;
-- autenticação permanece single-secret, sem identidade multiusuário.
+- autenticação permanece single-secret, sem identidade multiusuário;
+- não há alerta externo, métricas de campo ou teste de penetração;
+- revisão humana do diff e dos recursos Cloudflare ainda é necessária;
+- domínio oficial, conteúdo real, revisão jurídica e produção permanecem pendentes.

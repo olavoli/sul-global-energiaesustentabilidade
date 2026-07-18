@@ -4,6 +4,8 @@
 - [Checklist de staging](STAGING_CHECKLIST.md)
 - [Smoke de staging](STAGING_SMOKE_TESTS.md)
 - [Rollback de staging](STAGING_ROLLBACK.md)
+- [Relatório de provisionamento](STAGING_PROVISIONING_REPORT.md)
+- [Validação remota de staging](STAGING_REMOTE_VALIDATION.md)
 - [Checklist de promoção](PRODUCTION_PROMOTION_CHECKLIST.md)
 - [Central Editorial](EDITORIAL_CONSOLE.md)
 - [Segurança da Central](EDITORIAL_CONSOLE_SECURITY.md)

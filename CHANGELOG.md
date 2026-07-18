@@ -1,5 +1,29 @@
 # Changelog
 
+## Não publicado — Sprint 20
+
+### Adicionado
+
+- Worker e D1 exclusivos de staging em Cloudflare, sem domínio personalizado.
+- Migration remota, seed sanitizado idempotente e smoke público/autenticado.
+- Backup remoto com checksum e restore integral em banco temporário isolado.
+- Validação remota de sessão, rate limit, locks, fencing, auditoria e rollback.
+
+### Corrigido
+
+- O entrypoint recupera do request o contexto Cloudflare anexado pelo Nitro,
+  permitindo que a Central receba bindings server-only no runtime.
+- A política diária padrão é empacotada no Worker; caminhos alternativos
+  continuam disponíveis apenas para operação local.
+- Preview exige Node real >=20 e falha explicitamente quando indisponível.
+
+### Segurança
+
+- Secret rotacionado sem persistência no repositório; IDs reais permanecem em
+  `.wrangler/`, ignorado pelo Git.
+- Produção, domínio oficial, agenda, coleta, publicação, IA, tradução externa,
+  anúncios e analytics não foram ativados.
+
 ## Não publicado — Sprint 19
 
 ### Adicionado

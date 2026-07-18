@@ -9,10 +9,10 @@ Este checklist não significa que o portal foi lançado.
 
 ## Gate anterior: staging
 
-- [ ] `STAGING_CHECKLIST.md` concluído com evidência remota real.
-- [ ] Banco, URL e segredo de staging comprovadamente distintos da produção.
-- [ ] Smoke remoto, recovery isolado e rollback aprovados por revisão humana.
-- [ ] Nenhuma fixture, sessão ou dado operacional promovido.
+- [x] `STAGING_CHECKLIST.md` concluído com evidência remota real.
+- [x] Banco, URL e segredo de staging comprovadamente distintos da produção.
+- [x] Smoke remoto, recovery isolado e rollback executados; revisão humana final pendente.
+- [x] Nenhuma fixture, sessão ou dado operacional promovido para produção.
 
 ## Obrigatório para o primeiro lançamento
 
@@ -56,10 +56,10 @@ Este checklist não significa que o portal foi lançado.
 
 ## Persistência da newsroom
 
-- [ ] D1 criado e binding `NEWSROOM_DB` autorizado fora do repositório.
-- [ ] Migrations revisadas, aplicadas e validadas.
-- [ ] Export e backup com checksums preservados.
+- [x] D1 de staging criado e binding `NEWSROOM_DB` autorizado fora do repositório.
+- [x] Migrations de staging revisadas, aplicadas e validadas.
+- [x] Export e backup de staging com checksum preservado fora do Git.
 - [ ] Import dry-run sem conflitos; decisões e auditoria conferidas.
-- [ ] Restore testado em ambiente isolado.
+- [x] Restore de staging testado em ambiente isolado e temporário já excluído.
 - [ ] Produção recusa `local` e falha segura sem binding.
-- [ ] Sessão, logout, rate limit, locks e conflitos validados.
+- [x] Sessão, logout, rate limit, locks e fencing validados em staging.

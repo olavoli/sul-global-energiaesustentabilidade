@@ -1,14 +1,16 @@
 # Status de implementação
 
-## Sprint 19 — preparada localmente
+## Sprint 20 — staging remoto validado
 
-- [x] Configuração formal de staging, D1 e kill switches com placeholders.
-- [x] Seed sanitizado, migration idempotente e backup/restore no emulador.
-- [x] Sessão, rate limit, lock e Central validados sobre adapter D1 emulado.
-- [x] Smoke remoto configurável e health privado sem exposição de infraestrutura.
-- [x] Workflow manual protegido, rollback e checklists.
-- [ ] Worker, D1, binding, secret e smoke remotos aguardam autorização/configuração.
-- [ ] Produção permanece inativa e intocada.
+- [x] Worker `sul-global-staging` publicado somente em `workers.dev`.
+- [x] D1 exclusivo de staging criado, migrado e carregado com seed sanitizado.
+- [x] Binding server-only, secret administrativo e health privado validados.
+- [x] Smoke remoto público e autenticado aprovado; draft segue invisível.
+- [x] Sessão durável sobreviveu a nova versão; logout revogou e bloqueou replay.
+- [x] Rate limit persistente, lock, expiração, fencing e auditoria exercitados no D1.
+- [x] Backup remoto com SHA-256 restaurado e comparado em D1 temporário já excluído.
+- [x] Rollback real do Worker validado e versão atual restaurada.
+- [x] Produção, domínio oficial, agenda, coleta, publicação, IA e integrações permanecem inativos.
 
 ## Sprint 17 — implementada localmente
 

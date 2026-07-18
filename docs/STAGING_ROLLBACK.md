@@ -21,3 +21,10 @@ preservar evidências.
 Use `bun run staging:rollback:plan` para imprimir a sequência. A rotação do
 secret e o rollback do worker são operações manuais da conta autorizada. Nunca
 aplique este runbook à produção sem um plano e autorização próprios.
+
+## Ensaio remoto
+
+Em 2026-07-18, o Worker de staging foi revertido para a versão imediatamente
+anterior do mesmo artefato. Home respondeu 200 e a Central anônima permaneceu
+bloqueada com 401. A versão atual foi restaurada e confirmada. O D1 não foi
+alterado nem substituído durante o rollback.

@@ -8,6 +8,12 @@ fica somente em configuração gerada ignorada. Staging e produção não
 compartilham URL, banco ou segredo; ausência de D1 fecha a Central sem afetar o
 portal. Seed, migration e recovery são validados primeiro no emulador.
 
+O staging remoto autorizado usa o Worker `sul-global-staging` e o D1 exclusivo
+`sul-global-newsroom-staging`. Nitro anexa `env` e `context` ao `Request` antes
+de delegar ao serviço SSR; `src/server.ts` resolve esse contexto para configurar
+a Central sem estado global. A política diária padrão é empacotada
+estaticamente, pois filesystem não existe no runtime Worker.
+
 ## Central Editorial privada
 
 `src/server.ts` intercepta `/admin` e `/api/admin` antes do SSR. A autenticação server-only libera uma API privada que lê `newsroom/` por serviços existentes; componentes React recebem apenas respostas autorizadas e nunca importam arquivos operacionais. O portal público continua independente. A persistência por filesystem é adequada ao MVP local, não a workers multi-instância.

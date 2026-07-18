@@ -30,3 +30,10 @@ verifica login, dashboard, health privado, persistência do cookie e logout.
 Sem URL autorizada, o comando falha antes de acessar a rede. Sem secret, somente
 o percurso público/anônimo é executado. Não salvar cookies ou respostas privadas
 como artifact.
+
+## Resultado remoto
+
+Em 2026-07-18, o runner aprovou 14 verificações na URL de staging: home, autor
+Olavo, draft invisível, robots, sitemap, RSS, páginas legais, bloqueio anônimo,
+login, dashboard, health e logout. A sessão também foi validada separadamente
+antes e depois de uma nova versão do Worker; replay após logout retornou 401.
