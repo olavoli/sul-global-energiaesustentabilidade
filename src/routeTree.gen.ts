@@ -23,8 +23,8 @@ import { Route as AutorSlugRouteImport } from './routes/autor.$slug'
 import { Route as ArtigoSlugRouteImport } from './routes/artigo.$slug'
 import { Route as AdminNewsroomRouteImport } from './routes/admin.newsroom'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
-import { Route as AdminNewsroomSectionRouteImport } from './routes/admin.newsroom.$section'
-import { Route as AdminNewsroomSectionIdRouteImport } from './routes/admin.newsroom.$section.$id'
+import { Route as AdminNewsroomSectionRouteImport } from './routes/admin.newsroom_.$section'
+import { Route as AdminNewsroomSectionIdRouteImport } from './routes/admin.newsroom_.$section.$id'
 
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
@@ -97,9 +97,9 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminNewsroomSectionRoute = AdminNewsroomSectionRouteImport.update({
-  id: '/$section',
-  path: '/$section',
-  getParentRoute: () => AdminNewsroomRoute,
+  id: '/admin/newsroom_/$section',
+  path: '/admin/newsroom/$section',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const AdminNewsroomSectionIdRoute = AdminNewsroomSectionIdRouteImport.update({
   id: '/$id',
@@ -118,7 +118,7 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
   '/admin/login': typeof AdminLoginRoute
-  '/admin/newsroom': typeof AdminNewsroomRouteWithChildren
+  '/admin/newsroom': typeof AdminNewsroomRoute
   '/artigo/$slug': typeof ArtigoSlugRoute
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
@@ -136,7 +136,7 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
   '/admin/login': typeof AdminLoginRoute
-  '/admin/newsroom': typeof AdminNewsroomRouteWithChildren
+  '/admin/newsroom': typeof AdminNewsroomRoute
   '/artigo/$slug': typeof ArtigoSlugRoute
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
@@ -155,12 +155,12 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
   '/admin/login': typeof AdminLoginRoute
-  '/admin/newsroom': typeof AdminNewsroomRouteWithChildren
+  '/admin/newsroom': typeof AdminNewsroomRoute
   '/artigo/$slug': typeof ArtigoSlugRoute
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
-  '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
-  '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
+  '/admin/newsroom_/$section': typeof AdminNewsroomSectionRouteWithChildren
+  '/admin/newsroom_/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -215,8 +215,8 @@ export interface FileRouteTypes {
     | '/artigo/$slug'
     | '/autor/$slug'
     | '/categoria/$slug'
-    | '/admin/newsroom/$section'
-    | '/admin/newsroom/$section/$id'
+    | '/admin/newsroom_/$section'
+    | '/admin/newsroom_/$section/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -230,10 +230,11 @@ export interface RootRouteChildren {
   SobreRoute: typeof SobreRoute
   TermosRoute: typeof TermosRoute
   AdminLoginRoute: typeof AdminLoginRoute
-  AdminNewsroomRoute: typeof AdminNewsroomRouteWithChildren
+  AdminNewsroomRoute: typeof AdminNewsroomRoute
   ArtigoSlugRoute: typeof ArtigoSlugRoute
   AutorSlugRoute: typeof AutorSlugRoute
   CategoriaSlugRoute: typeof CategoriaSlugRoute
+  AdminNewsroomSectionRoute: typeof AdminNewsroomSectionRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -336,15 +337,15 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/admin/newsroom/$section': {
-      id: '/admin/newsroom/$section'
-      path: '/$section'
+    '/admin/newsroom_/$section': {
+      id: '/admin/newsroom_/$section'
+      path: '/admin/newsroom/$section'
       fullPath: '/admin/newsroom/$section'
       preLoaderRoute: typeof AdminNewsroomSectionRouteImport
-      parentRoute: typeof AdminNewsroomRoute
+      parentRoute: typeof rootRouteImport
     }
-    '/admin/newsroom/$section/$id': {
-      id: '/admin/newsroom/$section/$id'
+    '/admin/newsroom_/$section/$id': {
+      id: '/admin/newsroom_/$section/$id'
       path: '/$id'
       fullPath: '/admin/newsroom/$section/$id'
       preLoaderRoute: typeof AdminNewsroomSectionIdRouteImport
@@ -364,18 +365,6 @@ const AdminNewsroomSectionRouteChildren: AdminNewsroomSectionRouteChildren = {
 const AdminNewsroomSectionRouteWithChildren =
   AdminNewsroomSectionRoute._addFileChildren(AdminNewsroomSectionRouteChildren)
 
-interface AdminNewsroomRouteChildren {
-  AdminNewsroomSectionRoute: typeof AdminNewsroomSectionRouteWithChildren
-}
-
-const AdminNewsroomRouteChildren: AdminNewsroomRouteChildren = {
-  AdminNewsroomSectionRoute: AdminNewsroomSectionRouteWithChildren,
-}
-
-const AdminNewsroomRouteWithChildren = AdminNewsroomRoute._addFileChildren(
-  AdminNewsroomRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BuscaRoute: BuscaRoute,
@@ -387,10 +376,11 @@ const rootRouteChildren: RootRouteChildren = {
   SobreRoute: SobreRoute,
   TermosRoute: TermosRoute,
   AdminLoginRoute: AdminLoginRoute,
-  AdminNewsroomRoute: AdminNewsroomRouteWithChildren,
+  AdminNewsroomRoute: AdminNewsroomRoute,
   ArtigoSlugRoute: ArtigoSlugRoute,
   AutorSlugRoute: AutorSlugRoute,
   CategoriaSlugRoute: CategoriaSlugRoute,
+  AdminNewsroomSectionRoute: AdminNewsroomSectionRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
