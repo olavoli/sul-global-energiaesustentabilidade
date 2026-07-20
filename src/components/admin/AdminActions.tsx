@@ -38,6 +38,12 @@ const actions: Record<string, Array<[string, string, boolean]>> = {
     ["run:cancel", "Cancelar execução", true],
     ["run:cleanup", "Simular limpeza", true],
   ],
+  "scientific-radar": [
+    ["radar:ignore", "Ignorar", true],
+    ["radar:monitor", "Monitorar", true],
+    ["radar:create-dossier", "Criar Dossiê", true],
+    ["radar:request-translation", "Solicitar Tradução", true],
+  ],
   dashboard: [
     ["pipeline:validate-only", "Validar", false],
     ["pipeline:process-existing", "Processar existentes", false],

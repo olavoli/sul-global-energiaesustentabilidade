@@ -3,6 +3,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { AdminSectionList } from "@/components/admin/AdminSectionList";
 import { AdminError, AdminLoading } from "@/components/admin/AdminStates";
 import { AdminShell } from "@/components/admin/AdminShell";
+import { AdminScientificRadar } from "@/components/admin/AdminScientificRadar";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
@@ -17,6 +18,10 @@ const labels: Record<AdminSection, [string, string]> = {
   runs: ["Execuções", "Histórico, estágios, checkpoints, warnings e recuperação."],
   reports: ["Relatórios", "Resumos operacionais privados produzidos pelo pipeline."],
   pitches: ["Pautas", "Pautas estruturadas criadas somente após aprovação humana."],
+  "scientific-radar": [
+    "Radar Científico",
+    "Descoberta privada de publicações científicas para decisão humana, sem geração de conteúdo.",
+  ],
   config: ["Configuração", "Políticas, orçamentos e switches em modo somente leitura."],
 };
 
@@ -42,7 +47,11 @@ function SectionRoute() {
     <AdminShell title={title} description={description}>
       {state.loading && <AdminLoading />}
       {state.error && <AdminError message={state.error} />}
+      {state.data && current === "scientific-radar" && Array.isArray(state.data) && (
+        <AdminScientificRadar entries={state.data} />
+      )}
       {state.data &&
+        current !== "scientific-radar" &&
         (Array.isArray(state.data) ? (
           <AdminSectionList section={section} entries={state.data} />
         ) : (

@@ -7,6 +7,7 @@
 - [Relatório de provisionamento](STAGING_PROVISIONING_REPORT.md)
 - [Validação remota de staging](STAGING_REMOTE_VALIDATION.md)
 - [Acesso administrativo de staging](STAGING_ADMIN_ACCESS.md)
+- [Radar Científico](SCIENTIFIC_RADAR.md)
 - [Checklist de promoção](PRODUCTION_PROMOTION_CHECKLIST.md)
 - [Central Editorial](EDITORIAL_CONSOLE.md)
 - [Segurança da Central](EDITORIAL_CONSOLE_SECURITY.md)
