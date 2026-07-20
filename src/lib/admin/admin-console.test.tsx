@@ -171,6 +171,18 @@ describe("Sprint 17 — Central Editorial", () => {
     expect(source).toContain("setOpen(false)");
   });
 
+  test("34.1 seções administrativas são irmãs do dashboard no routeTree", async () => {
+    const routeTree = await readFile("src/routeTree.gen.ts", "utf8");
+    const sectionRoute = routeTree.slice(
+      routeTree.indexOf("const AdminNewsroomSectionRoute ="),
+      routeTree.indexOf("const AdminNewsroomSectionIdRoute ="),
+    );
+
+    expect(sectionRoute).toContain("path: '/admin/newsroom/$section'");
+    expect(sectionRoute).toContain("getParentRoute: () => rootRouteImport");
+    expect(sectionRoute).not.toContain("getParentRoute: () => AdminNewsroomRoute");
+  });
+
   test("35. nenhuma publicação é possível", async () => {
     const source = await readFile("src/lib/admin/actions.ts", "utf8");
     expect(source).not.toContain("content:status");

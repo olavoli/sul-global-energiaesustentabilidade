@@ -7,7 +7,7 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
-export const Route = createFileRoute("/admin/newsroom/$section/$id")({
+export const Route = createFileRoute("/admin/newsroom_/$section/$id")({
   beforeLoad: ({ params }) => {
     if (!adminSections.includes(params.section as AdminSection)) throw notFound();
   },

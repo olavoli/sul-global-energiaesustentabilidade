@@ -20,7 +20,7 @@ const labels: Record<AdminSection, [string, string]> = {
   config: ["Configuração", "Políticas, orçamentos e switches em modo somente leitura."],
 };
 
-export const Route = createFileRoute("/admin/newsroom/$section")({
+export const Route = createFileRoute("/admin/newsroom_/$section")({
   beforeLoad: ({ params }) => {
     if (!adminSections.includes(params.section as AdminSection)) throw notFound();
   },
