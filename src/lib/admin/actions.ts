@@ -42,6 +42,7 @@ import {
 } from "../../../scripts/scientific-radar/actions";
 import { reviewGraphRelation } from "../../../scripts/scientific-graph/review";
 import { reviewDuplicateCandidate } from "../../../scripts/entity-resolution/review";
+import { reviewTrend } from "../../../scripts/scientific-trends/review";
 
 function required(value: string | undefined, label: string): string {
   if (!value?.trim()) throw new Error(`${label} é obrigatório.`);
@@ -65,6 +66,23 @@ function auditSummary(value: unknown): unknown {
 
 async function performAdminAction(input: AdminAction): Promise<unknown> {
   const now = new Date().toISOString();
+  if (input.action.startsWith("trend:")) {
+    const action = input.action.slice(6) as
+      | "reviewed"
+      | "more-data-requested"
+      | "archived"
+      | "watched";
+    if (!["reviewed", "more-data-requested", "archived", "watched"].includes(action))
+      throw new Error("Ação de tendência não permitida.");
+    if (input.values.confirmed !== "true") throw new Error("Confirmação humana obrigatória.");
+    return reviewTrend({
+      id: required(input.id, "Sinal"),
+      action,
+      actor: input.actor,
+      note: required(input.note, "Nota"),
+      now: new Date(now),
+    });
+  }
   if (input.action.startsWith("entity-resolution:")) {
     const status = input.action.slice(18) as "accepted" | "ignored";
     if (!["accepted", "ignored"].includes(status))

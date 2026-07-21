@@ -1,5 +1,9 @@
 # Operação da Central Editorial
 
+## Tendências Científicas
+
+Leia status, cobertura, confiança, razões e warnings antes de revisar. Ações exigem nota e confirmação; solicitar dados, arquivar ou acompanhar não transforma o sinal em fato e não cria conteúdo.
+
 ## Mapa Científico
 
 Revise relações na tabela privada e registre nota antes de aceitar, rejeitar ou pedir contexto. Esses estados não interpretam evidência e nunca criam artigo. O primeiro grafo aparece somente porque sua persistência local foi autorizada após o checkpoint.

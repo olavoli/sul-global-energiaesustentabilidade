@@ -1,5 +1,11 @@
 # Changelog
 
+## Sprint 26 — sinais temporais científicos
+
+- Motor determinístico e conservador sobre a Memória Temporal.
+- Cobertura separada do score editorial, confiança temporal e warnings explicáveis.
+- CLI dry-run, storage privado condicionado e revisão humana na Central.
+
 ## Sprint 25 — memória temporal científica
 
 - Projeções anuais privadas para autores, instituições, periódicos, publishers, países e categorias.

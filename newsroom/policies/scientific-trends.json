@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "minimumDistinctYears": 3,
+  "minimumObservations": 5,
+  "minimumConsecutiveYears": 2,
+  "minimumCoverageScore": 55,
+  "volatilityLimit": 0.75,
+  "concentrationWarningThreshold": 0.8,
+  "anomalyChangeThreshold": 3,
+  "stableRelativeChange": 0.1,
+  "increaseRelativeChange": 0.25,
+  "decreaseRelativeChange": -0.25,
+  "emergingMinimumPositiveIntervals": 2,
+  "decliningMinimumNegativeIntervals": 2,
+  "maximumSeriesYears": 20,
+  "highConfidenceMinimumYears": 8,
+  "highConfidenceMinimumObservations": 40,
+  "allowedStatuses": [
+    "insufficient-data",
+    "stable",
+    "increasing",
+    "decreasing",
+    "volatile",
+    "emerging-candidate",
+    "declining-candidate",
+    "anomaly",
+    "review-required"
+  ],
+  "warningSeverities": ["info", "warning", "blocker"],
+  "partialPeriod": { "include": false, "warningRequired": true }
+}

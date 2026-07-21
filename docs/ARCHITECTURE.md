@@ -1,5 +1,9 @@
 # ARCHITECTURE.md — Sul Global
 
+## Scientific Trend Engine
+
+Camada server-side privada: Memória Temporal → elegibilidade → métricas → cobertura → confiança → warnings → sinal → revisão humana. O storage operacional permanece sob `newsroom/storage/`, fora do bundle público.
+
 ## Extensão privada — Grafo Científico
 
 O Radar fornece trabalho e dossiê scaffold. O builder consulta metadados oficiais e mantém a saída em memória no dry-run. Após autorização, uma transação grava `scientific-graph/graphs` e somente IDs estruturais no dossiê. Nada entra no repositório público de conteúdo.

@@ -24,6 +24,7 @@ import { storageAdapter } from "../../../scripts/newsroom/storage/runtime";
 import { loadScientificRadar } from "../../../scripts/scientific-radar/store";
 import { loadScientificGraphs } from "../../../scripts/scientific-graph/store";
 import { loadMemoryState } from "../../../scripts/scientific-memory/store";
+import { loadTrendState } from "../../../scripts/scientific-trends/store";
 import {
   loadCanonicalEntities,
   loadDuplicateCandidates,
@@ -137,6 +138,7 @@ export async function sectionData(
     const memory = await loadMemoryState();
     return sanitize(Object.values(memory.entities).flat());
   }
+  if (section === "scientific-trends") return sanitize((await loadTrendState()).signals);
   if (section === "scientific-graph") return sanitize((await loadScientificGraphs()).value.items);
   if (section === "entity-resolution") {
     const [entities, candidates] = await Promise.all([
@@ -160,6 +162,8 @@ export async function sectionData(
 }
 
 export async function detailData(section: AdminSection, id: string): Promise<unknown | undefined> {
+  if (section === "scientific-trends")
+    return (await loadTrendState()).signals.find((entry) => entry.id === id);
   if (section === "scientific-radar")
     return (await loadScientificRadar()).value.items.find((entry) => entry.id === id);
   if (section === "scientific-graph") {

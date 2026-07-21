@@ -1,5 +1,9 @@
 # Sul Global
 
+## Sprint 26 — sinais científicos temporais
+
+O motor privado converte a memória temporal em métricas, cobertura, confiança e warnings determinísticos. É dry-run por padrão, não usa IA, não prevê e não publica. Consulte `docs/SCIENTIFIC_TRENDS.md`.
+
 ## Sprint 23 — Grafo Científico supervisionado
 
 O subsistema privado modela trabalhos, autores, instituições, temas e relações bibliográficas somente de OpenAlex e Crossref. A coleta é limitada e dry-run por padrão; não interpreta citações, não baixa PDFs, não usa IA e não cria conteúdo. Consulte `docs/SCIENTIFIC_KNOWLEDGE_GRAPH.md`.

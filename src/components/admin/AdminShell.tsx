@@ -17,6 +17,7 @@ const navigation = [
   ["Pautas", "pitches"],
   ["Radar Científico", "scientific-radar"],
   ["Memória Temporal", "scientific-memory"],
+  ["Tendências Científicas", "scientific-trends"],
   ["Mapa Científico", "scientific-graph"],
   ["Identidades", "entity-resolution"],
   ["Configuração", "config"],

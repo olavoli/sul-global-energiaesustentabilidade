@@ -1,5 +1,9 @@
 # Roadmap
 
+## Sprint 26
+
+Sinais temporais observacionais e conservadores sobre a memória existente, sem previsão, coleta, agenda ou publicação.
+
 ## Sprint 23 — Grafo Científico V1
 
 Fundação local para um piloto supervisionado. O checkpoint de dry-run antecede qualquer persistência. Interpretação de evidência, agenda e novas fontes não pertencem a esta Sprint.

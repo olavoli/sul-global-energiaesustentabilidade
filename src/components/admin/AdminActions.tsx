@@ -49,6 +49,12 @@ const actions: Record<string, Array<[string, string, boolean]>> = {
     ["graph:rejected", "Rejeitar relação", true],
     ["graph:needs-context", "Pedir contexto", true],
   ],
+  "scientific-trends": [
+    ["trend:reviewed", "Marcar como revisado", true],
+    ["trend:more-data-requested", "Solicitar mais dados", true],
+    ["trend:archived", "Arquivar", true],
+    ["trend:watched", "Acompanhar", true],
+  ],
   "entity-resolution": [
     ["entity-resolution:accepted", "Aceitar correspondência", true],
     ["entity-resolution:ignored", "Ignorar", true],
