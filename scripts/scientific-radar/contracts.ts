@@ -188,6 +188,20 @@ export const scientificDossierSchema = z.object({
   topicIds: z.array(z.string()).optional(),
   graphWarnings: z.array(z.string()).optional(),
   graphUpdatedAt: z.iso.datetime().optional(),
+  historicalContext: z
+    .object({
+      firstSeen: z.number().int().min(1900).max(2200),
+      lastSeen: z.number().int().min(1900).max(2200),
+      previousArticles: z.number().int().nonnegative(),
+      timeline: z.array(
+        z.object({
+          year: z.number().int().min(1900).max(2200),
+          count: z.number().int().nonnegative(),
+        }),
+      ),
+      relatedEntities: z.array(z.string()),
+    })
+    .optional(),
 });
 
 export const scientificDossiersDocumentSchema = z.object({

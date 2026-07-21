@@ -1,5 +1,12 @@
 # Inventário técnico
 
+## Sprint 25
+
+- `scripts/scientific-memory/`: contratos, snapshots, projeção, engine, storage, checksum, dossiês, auditoria e testes.
+- `scripts/scientific-memory-cli.ts`: update, rebuild e stats locais.
+- `src/components/admin/AdminScientificMemory.tsx`: filtros e tabela temporal privada.
+- Storage ignorado: `newsroom/storage/scientific-memory/`.
+
 ## Sprint 23
 
 - `scripts/scientific-graph/`: contratos, fontes, builder, store, revisão e testes.

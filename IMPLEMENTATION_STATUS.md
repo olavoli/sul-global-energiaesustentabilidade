@@ -1,5 +1,12 @@
 # Status de implementação
 
+## Sprint 25 — Memória Temporal Científica
+
+- [x] Storage local segmentado, timeline anual e indicadores determinísticos.
+- [x] Atualização incremental, rebuild, checksum, idempotência e auditoria.
+- [x] `historicalContext` estrutural e Memória Temporal na Central.
+- [x] Sem IA, embeddings, geração textual, publicação, staging ou produção.
+
 ## Sprint 23 — Grafo Científico V1
 
 - [x] Schema versionado, IDs estáveis, proveniência, confiança e deduplicação.

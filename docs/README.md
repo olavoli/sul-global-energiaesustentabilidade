@@ -4,6 +4,7 @@
 
 - [Grafo Científico](SCIENTIFIC_KNOWLEDGE_GRAPH.md)
 - [Resolução determinística de entidades](ENTITY_RESOLUTION.md)
+- [Memória Temporal Científica](SCIENTIFIC_MEMORY.md)
 - [Schema](SCIENTIFIC_GRAPH_SCHEMA.md)
 - [Revisão](SCIENTIFIC_GRAPH_REVIEW.md)
 - [Proveniência](SCIENTIFIC_GRAPH_PROVENANCE.md)
