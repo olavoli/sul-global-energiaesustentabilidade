@@ -1,5 +1,11 @@
 # Registro de decisões
 
+## ADR — sinais temporais são observações conservadoras
+
+**Decisão:** derivar sinais somente da Memória Temporal por política JSON versionada, com cobertura própria, confiança temporal e `insufficient-data` fail-safe.
+
+**Consequências:** candidatos são preliminares e exigem warning e revisão; não há previsão, causalidade, narrativa, coleta ou publicação. A amostra real de 2025 não é tendência.
+
 ## ADR — Grafo científico como metadado privado supervisionado
 
 **Decisão:** representar vínculos bibliográficos observados em documento versionado independente, com IDs estáveis e proveniência. Persistência futura será local e transacional com a referência estrutural do dossiê.

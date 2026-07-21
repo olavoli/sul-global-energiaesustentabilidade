@@ -1,5 +1,12 @@
 # Inventário técnico
 
+## Sprint 26
+
+- `scripts/scientific-trends/`: contratos, política, métricas, cobertura, sinais, pipeline, revisão e testes.
+- `newsroom/policies/scientific-trends.json`: thresholds conservadores versionados.
+- `src/components/admin/AdminScientificTrends.tsx`: leitura e filtros privados.
+- Storage ignorado: `newsroom/storage/scientific-trends/`.
+
 ## Sprint 25
 
 - `scripts/scientific-memory/`: contratos, snapshots, projeção, engine, storage, checksum, dossiês, auditoria e testes.

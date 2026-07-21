@@ -1,5 +1,9 @@
 # Política editorial para uso de IA
 
+## Sprint 26
+
+O motor de tendências não usa IA, embeddings, tradução ou geração. Métricas históricas não produzem previsão, causalidade ou narrativa e nunca criam ou publicam conteúdo.
+
 ## Sprint 23
 
 O Grafo Científico não usa IA. Relações são metadados observados e não inferem apoio, contradição, confirmação, qualidade, conflito ou consenso. Nenhum texto editorial é gerado.

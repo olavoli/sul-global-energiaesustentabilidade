@@ -202,6 +202,14 @@ export const scientificDossierSchema = z.object({
       relatedEntities: z.array(z.string()),
     })
     .optional(),
+  trendSignalIds: z.array(z.string().regex(/^trend-[a-f0-9]{16}$/)).optional(),
+  trendWarnings: z.array(z.string()).optional(),
+  trendUpdatedAt: z.iso.datetime().optional(),
+  observedSeries: z
+    .array(z.object({ year: z.number().int(), value: z.number().int().nonnegative() }))
+    .optional(),
+  trendEligibility: z.enum(["eligible", "insufficient-data"]).optional(),
+  trendPolicyVersion: z.number().int().positive().optional(),
 });
 
 export const scientificDossiersDocumentSchema = z.object({

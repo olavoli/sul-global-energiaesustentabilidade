@@ -1,5 +1,12 @@
 # Status de implementação
 
+## Sprint 26 — Scientific Trend Engine
+
+- [x] Política versionada, métricas observacionais, cobertura, confiança e warnings.
+- [x] Pipeline dry-run/apply, rebuild, incremental, checksum e revisão humana.
+- [x] Fixtures multianuais e Central privada; dados reais permanecem `insufficient-data` no checkpoint.
+- [x] Sem IA, previsão, coleta externa, artigo, publicação, staging ou produção.
+
 ## Sprint 25 — Memória Temporal Científica
 
 - [x] Storage local segmentado, timeline anual e indicadores determinísticos.
