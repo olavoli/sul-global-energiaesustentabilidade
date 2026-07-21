@@ -23,6 +23,7 @@ import type { AdminSection } from "./contracts";
 import { storageAdapter } from "../../../scripts/newsroom/storage/runtime";
 import { loadScientificRadar } from "../../../scripts/scientific-radar/store";
 import { loadScientificGraphs } from "../../../scripts/scientific-graph/store";
+import { loadMemoryState } from "../../../scripts/scientific-memory/store";
 import {
   loadCanonicalEntities,
   loadDuplicateCandidates,
@@ -132,6 +133,10 @@ export async function sectionData(
   if (section === "reports") return sanitize(await reports());
   if (section === "pitches") return sanitize(await loadPitches());
   if (section === "scientific-radar") return sanitize((await loadScientificRadar()).value.items);
+  if (section === "scientific-memory") {
+    const memory = await loadMemoryState();
+    return sanitize(Object.values(memory.entities).flat());
+  }
   if (section === "scientific-graph") return sanitize((await loadScientificGraphs()).value.items);
   if (section === "entity-resolution") {
     const [entities, candidates] = await Promise.all([

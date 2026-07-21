@@ -5,6 +5,7 @@ import { AdminError, AdminLoading } from "@/components/admin/AdminStates";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { AdminScientificRadar } from "@/components/admin/AdminScientificRadar";
 import { AdminScientificGraph } from "@/components/admin/AdminScientificGraph";
+import { AdminScientificMemory } from "@/components/admin/AdminScientificMemory";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
@@ -22,6 +23,10 @@ const labels: Record<AdminSection, [string, string]> = {
   "scientific-radar": [
     "Radar Científico",
     "Descoberta privada de publicações científicas para decisão humana, sem geração de conteúdo.",
+  ],
+  "scientific-memory": [
+    "Memória Temporal",
+    "Evolução histórica estrutural e determinística das entidades científicas.",
   ],
   "scientific-graph": [
     "Mapa Científico",
@@ -64,11 +69,14 @@ function SectionRoute() {
       {state.data && current === "scientific-radar" && Array.isArray(state.data) && (
         <AdminScientificRadar entries={state.data} />
       )}
+      {state.data && current === "scientific-memory" && Array.isArray(state.data) && (
+        <AdminScientificMemory entries={state.data} />
+      )}
       {state.data && current === "scientific-graph" && Array.isArray(state.data) && (
         <AdminScientificGraph entries={state.data} />
       )}
       {state.data &&
-        !["scientific-radar", "scientific-graph"].includes(current) &&
+        !["scientific-radar", "scientific-memory", "scientific-graph"].includes(current) &&
         (Array.isArray(state.data) ? (
           <AdminSectionList section={section} entries={state.data} />
         ) : (

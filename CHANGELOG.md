@@ -1,5 +1,11 @@
 # Changelog
 
+## Sprint 25 — memória temporal científica
+
+- Projeções anuais privadas para autores, instituições, periódicos, publishers, países e categorias.
+- Atualização incremental por entidades afetadas e rebuild completo com checksum equivalente.
+- Contexto histórico estrutural em dossiês, auditoria dedicada e filtros na Central.
+
 ## Sprint 24 — resolução determinística de entidades
 
 - Identidades canônicas explicáveis para autores, instituições, periódicos, editoras, categorias, países e financiadores.

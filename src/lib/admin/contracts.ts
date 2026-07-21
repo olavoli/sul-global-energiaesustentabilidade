@@ -12,6 +12,7 @@ export const adminSections = [
   "reports",
   "pitches",
   "scientific-radar",
+  "scientific-memory",
   "scientific-graph",
   "entity-resolution",
   "config",
