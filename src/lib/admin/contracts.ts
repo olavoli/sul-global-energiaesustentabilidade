@@ -14,6 +14,7 @@ export const adminSections = [
   "scientific-radar",
   "scientific-memory",
   "scientific-trends",
+  "scientific-concepts",
   "scientific-graph",
   "entity-resolution",
   "config",
@@ -40,7 +41,7 @@ export const adminActionSchema = z.object({
 export type AdminAction = z.infer<typeof adminActionSchema>;
 
 export function validOperationalId(value: string): boolean {
-  return /^(?:inbox|decision|cluster|translation|run|pitch|evidence|claim|radar|graph|sgr|duplicate|trend)-[a-f0-9]{16}$/.test(
+  return /^(?:(?:inbox|decision|cluster|translation|run|pitch|evidence|claim|radar|graph|sgr|duplicate|trend)-[a-f0-9]{16}|concept-relation-[a-f0-9]{16})$/.test(
     value,
   );
 }
