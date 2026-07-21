@@ -21,6 +21,7 @@ import {
 import { loadTranslations } from "../../../scripts/newsroom/translation";
 import type { AdminSection } from "./contracts";
 import { storageAdapter } from "../../../scripts/newsroom/storage/runtime";
+import { loadScientificRadar } from "../../../scripts/scientific-radar/store";
 
 function sanitize<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T;
@@ -125,6 +126,7 @@ export async function sectionData(
   if (section === "runs") return sanitize(await loadRuns());
   if (section === "reports") return sanitize(await reports());
   if (section === "pitches") return sanitize(await loadPitches());
+  if (section === "scientific-radar") return sanitize((await loadScientificRadar()).value.items);
   return sanitize({
     automation: await loadAutomationPolicy(),
     switches: resolveAutomationSwitches(environment),
@@ -134,6 +136,8 @@ export async function sectionData(
 }
 
 export async function detailData(section: AdminSection, id: string): Promise<unknown | undefined> {
+  if (section === "scientific-radar")
+    return (await loadScientificRadar()).value.items.find((entry) => entry.id === id);
   if (section === "inbox") return (await loadInbox()).find((entry) => entry.id === id);
   if (section === "decisions") {
     const decision = (await loadDecisions()).find((entry) => entry.id === id);

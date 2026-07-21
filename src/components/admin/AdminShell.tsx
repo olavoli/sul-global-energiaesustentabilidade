@@ -15,6 +15,7 @@ const navigation = [
   ["Execuções", "runs"],
   ["Relatórios", "reports"],
   ["Pautas", "pitches"],
+  ["Radar Científico", "scientific-radar"],
   ["Configuração", "config"],
 ] as const;
 

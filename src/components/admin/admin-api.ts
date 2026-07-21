@@ -23,10 +23,11 @@ export async function adminAction(
   action: string,
   id?: string,
   note = "",
+  values: Record<string, string | string[]> = {},
 ): Promise<unknown> {
   return adminRequest("/api/admin/actions", {
     method: "POST",
     headers: { "x-csrf-token": session.csrf },
-    body: JSON.stringify({ action, id, actor: session.actor, note, values: {} }),
+    body: JSON.stringify({ action, id, actor: session.actor, note, values }),
   });
 }

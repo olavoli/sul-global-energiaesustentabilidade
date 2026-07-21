@@ -35,6 +35,11 @@ import {
 import type { AdminAction } from "./contracts";
 import { storageAdapter } from "../../../scripts/newsroom/storage/runtime";
 import { reportEvent } from "../observability";
+import {
+  applyRadarHumanAction,
+  radarHumanActions,
+  type RadarHumanAction,
+} from "../../../scripts/scientific-radar/actions";
 
 function required(value: string | undefined, label: string): string {
   if (!value?.trim()) throw new Error(`${label} é obrigatório.`);
@@ -58,6 +63,18 @@ function auditSummary(value: unknown): unknown {
 
 async function performAdminAction(input: AdminAction): Promise<unknown> {
   const now = new Date().toISOString();
+  if (input.action.startsWith("radar:")) {
+    if (!radarHumanActions.includes(input.action as RadarHumanAction))
+      throw new Error("Ação do Radar Científico não permitida.");
+    return applyRadarHumanAction({
+      action: input.action as RadarHumanAction,
+      id: required(input.id, "Publicação"),
+      actor: input.actor,
+      note: required(input.note, "Nota"),
+      confirmed: input.values.confirmed === "true",
+      now: new Date(now),
+    });
+  }
   if (input.action.startsWith("inbox:")) {
     const entries = await loadInbox();
     const index = entries.findIndex(({ id }) => id === input.id);
@@ -192,7 +209,7 @@ async function performAdminAction(input: AdminAction): Promise<unknown> {
 export async function executeAdminAction(input: AdminAction): Promise<unknown> {
   const startedAt = new Date().toISOString();
   const adapter = storageAdapter();
-  const lockKey = `admin:${input.action.split(":")[0]}:${input.id ?? "global"}`;
+  const lockKey = `admin/${input.action.split(":")[0]}/${input.id ?? "global"}`;
   const owner = `${input.actor}:${input.requestId ?? crypto.randomUUID()}`;
   let locked = false;
   try {

@@ -149,6 +149,36 @@ const adminDashboard = await request(
 assert(adminDashboard.response.status === 200, "dashboard autenticado deve responder");
 assert(!adminDashboard.body.includes("C:\\Projetos"), "dashboard não deve expor caminho local");
 
+const scientificRadarPage = await request(
+  "/admin/newsroom/scientific-radar",
+  { headers: { cookie: adminCookie } },
+  adminEnvironment,
+);
+assert(scientificRadarPage.response.status === 200, "Radar Científico privado deve responder");
+assert(
+  scientificRadarPage.body.includes("Radar Científico"),
+  "Radar Científico deve estar no menu",
+);
+assert(scientificRadarPage.body.includes("noindex"), "Radar Científico deve permanecer noindex");
+
+const scientificRadarApi = await request(
+  "/api/admin/scientific-radar",
+  { headers: { cookie: adminCookie } },
+  adminEnvironment,
+);
+assert(
+  scientificRadarApi.response.status === 200,
+  "API privada do Radar Científico deve responder",
+);
+assert(
+  scientificRadarApi.response.headers.get("cache-control")?.includes("private"),
+  "Radar Científico não deve permitir cache público",
+);
+assert(
+  scientificRadarApi.response.headers.get("x-robots-tag")?.includes("noindex"),
+  "API do Radar Científico deve permanecer noindex",
+);
+
 const adminLogout = await request(
   "/api/admin/logout",
   {

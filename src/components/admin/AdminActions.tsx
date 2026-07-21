@@ -38,6 +38,12 @@ const actions: Record<string, Array<[string, string, boolean]>> = {
     ["run:cancel", "Cancelar execução", true],
     ["run:cleanup", "Simular limpeza", true],
   ],
+  "scientific-radar": [
+    ["radar:ignore", "Ignorar", true],
+    ["radar:monitor", "Monitorar", true],
+    ["radar:create-dossier", "Criar Dossiê", true],
+    ["radar:request-translation", "Solicitar Tradução", true],
+  ],
   dashboard: [
     ["pipeline:validate-only", "Validar", false],
     ["pipeline:process-existing", "Processar existentes", false],
@@ -70,7 +76,7 @@ export function AdminActions({
     if (!window.confirm("Confirma esta ação humana? Ela não publica conteúdo.")) return;
     setBusy(true);
     try {
-      await adminAction(session, action, id, note);
+      await adminAction(session, action, id, note, { confirmed: "true" });
       setMessage("Ação registrada com sucesso.");
       onSuccess();
     } catch (error) {

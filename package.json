@@ -21,6 +21,8 @@
     "author:status": "bun run scripts/author-operations.ts status",
     "research:validate": "bun run scripts/research-operations.ts validate",
     "research:status": "bun run scripts/research-operations.ts status",
+    "research:radar": "bun run scripts/scientific-radar-cli.ts",
+    "research:radar:migrate": "bun run scripts/scientific-radar-migration-cli.ts",
     "newsroom:sources": "bun run scripts/newsroom-cli.ts sources",
     "newsroom:source:list": "bun run scripts/newsroom-cli.ts source:list",
     "newsroom:source:show": "bun run scripts/newsroom-cli.ts source:show",
