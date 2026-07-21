@@ -11,8 +11,8 @@ import {
 export const RADAR_KEY = "scientific-radar/items";
 export const DOSSIERS_KEY = "scientific-radar/dossiers";
 
-const emptyRadar: ScientificRadarDocument = { schemaVersion: 1, lastRunAt: null, items: [] };
-const emptyDossiers = { schemaVersion: 1 as const, items: [] as ScientificDossier[] };
+const emptyRadar: ScientificRadarDocument = { schemaVersion: 2, lastRunAt: null, items: [] };
+const emptyDossiers = { schemaVersion: 2 as const, items: [] as ScientificDossier[] };
 
 export async function loadScientificRadar(adapter: StorageAdapter = storageAdapter()) {
   return adapter.getDocument(RADAR_KEY, scientificRadarDocumentSchema, emptyRadar);
@@ -41,7 +41,7 @@ export async function saveScientificDossiers(
   await adapter.putDocument(
     {
       key: DOSSIERS_KEY,
-      value: { schemaVersion: 1, items },
+      value: { schemaVersion: 2, items },
       expectedVersion,
     },
     scientificDossiersDocumentSchema,

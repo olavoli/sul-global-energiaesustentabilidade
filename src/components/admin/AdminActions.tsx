@@ -76,7 +76,7 @@ export function AdminActions({
     if (!window.confirm("Confirma esta ação humana? Ela não publica conteúdo.")) return;
     setBusy(true);
     try {
-      await adminAction(session, action, id, note);
+      await adminAction(session, action, id, note, { confirmed: "true" });
       setMessage("Ação registrada com sucesso.");
       onSuccess();
     } catch (error) {

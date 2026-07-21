@@ -8,6 +8,7 @@ import {
 } from "./contracts";
 import { scientificDossierId } from "./normalize";
 import { DOSSIERS_KEY, RADAR_KEY, loadScientificDossiers, loadScientificRadar } from "./store";
+import { hasUnresolvedBlocker } from "./warnings";
 
 export const radarHumanActions = [
   "radar:ignore",
@@ -35,6 +36,7 @@ export async function applyRadarHumanAction(
     id: string;
     actor: string;
     note: string;
+    confirmed?: boolean;
     now?: Date;
   },
   adapter: StorageAdapter = storageAdapter(),
@@ -46,6 +48,11 @@ export async function applyRadarHumanAction(
   if (index < 0) throw new Error("Publicação científica não encontrada.");
   const at = (input.now ?? new Date()).toISOString();
   const transition = actionState(input.action);
+  if (input.action === "radar:create-dossier") {
+    if (!input.confirmed) throw new Error("Confirmação humana é obrigatória para criar dossiê.");
+    if (hasUnresolvedBlocker(radar.value.items[index].warnings))
+      throw new Error("Dossiê bloqueado por warning não resolvido.");
+  }
   const updated: ScientificWork = {
     ...radar.value.items[index],
     status: transition.status,
@@ -71,25 +78,63 @@ export async function applyRadarHumanAction(
 
   const dossiers = await loadScientificDossiers(adapter);
   const dossierId = await scientificDossierId(updated.id);
-  const existing = dossiers.value.items.some(({ id }) => id === dossierId);
-  const nextDossiers = existing
-    ? dossiers.value.items
-    : [
-        ...dossiers.value.items,
+  const existing = dossiers.value.items.find(({ id }) => id === dossierId);
+  if (existing) return radar.value.items[index];
+  const nextDossiers = [
+    ...dossiers.value.items,
+    {
+      id: dossierId,
+      scientificWorkId: updated.id,
+      title: updated.title,
+      doi: updated.doi,
+      authors: updated.authors,
+      institutions: updated.institutions,
+      journal: updated.journal,
+      publicationDate: updated.publicationDate,
+      license: updated.license,
+      openAccess: updated.openAccess,
+      categories: updated.categories,
+      warnings: updated.warnings,
+      officialLinks: updated.officialLinks,
+      status: "scaffold" as const,
+      createdAt: at,
+      createdBy: input.actor.trim(),
+      centralQuestion: "" as const,
+      editorialAngle: "" as const,
+      whyItMatters: "" as const,
+      knownClaims: [],
+      unsupportedClaims: [],
+      limitations: [],
+      counterEvidenceNeeded: [],
+      relatedWorksNeeded: [],
+      funding: [],
+      conflictsOfInterest: [],
+      openQuestions: [],
+      regionalRelevance: "" as const,
+      sulGlobalRelevance: "" as const,
+      sourceAccess: {
+        openAccess: updated.openAccess,
+        license: updated.license,
+        links: [updated.officialLinks.openAlex, updated.officialLinks.doi],
+      },
+      copyrightNotes: "" as const,
+      factChecks: [],
+      translationNeeds: [],
+      imageNeeds: [],
+      humanNotes: [],
+      history: [
         {
-          id: dossierId,
-          scientificWorkId: updated.id,
-          title: updated.title,
-          status: "empty-supervised" as const,
-          createdAt: at,
-          createdBy: input.actor.trim(),
+          action: "dossier-created" as const,
+          actor: input.actor.trim(),
           note: input.note.trim(),
-          sources: [updated.officialLinks.openAlex, updated.officialLinks.doi],
-          generatedContent: false as const,
+          at,
         },
-      ];
+      ],
+      generatedContent: false as const,
+    },
+  ];
   scientificRadarDocumentSchema.parse({ ...radar.value, items });
-  scientificDossiersDocumentSchema.parse({ schemaVersion: 1, items: nextDossiers });
+  scientificDossiersDocumentSchema.parse({ schemaVersion: 2, items: nextDossiers });
   await adapter.transaction([
     {
       key: RADAR_KEY,
@@ -98,7 +143,7 @@ export async function applyRadarHumanAction(
     },
     {
       key: DOSSIERS_KEY,
-      value: { schemaVersion: 1, items: nextDossiers },
+      value: { schemaVersion: 2, items: nextDossiers },
       expectedVersion: dossiers.version,
     },
   ]);

@@ -71,6 +71,7 @@ async function performAdminAction(input: AdminAction): Promise<unknown> {
       id: required(input.id, "Publicação"),
       actor: input.actor,
       note: required(input.note, "Nota"),
+      confirmed: input.values.confirmed === "true",
       now: new Date(now),
     });
   }
@@ -208,7 +209,7 @@ async function performAdminAction(input: AdminAction): Promise<unknown> {
 export async function executeAdminAction(input: AdminAction): Promise<unknown> {
   const startedAt = new Date().toISOString();
   const adapter = storageAdapter();
-  const lockKey = `admin:${input.action.split(":")[0]}:${input.id ?? "global"}`;
+  const lockKey = `admin/${input.action.split(":")[0]}/${input.id ?? "global"}`;
   const owner = `${input.actor}:${input.requestId ?? crypto.randomUUID()}`;
   let locked = false;
   try {

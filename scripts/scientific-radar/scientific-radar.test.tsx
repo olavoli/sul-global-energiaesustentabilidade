@@ -3,10 +3,13 @@ import { readFile } from "node:fs/promises";
 
 import { MemoryStorageAdapter } from "../newsroom/storage/memory-adapter";
 import { applyRadarHumanAction } from "./actions";
+import { scientificRadarDocumentSchema } from "./contracts";
+import { migrateScientificRadarDocument } from "./migration";
 import { discoverScientificWorks } from "./pipeline";
 import { scoreScientificWork } from "./scoring";
 import { loadScientificDossiers, loadScientificRadar } from "./store";
 import { classifyScientificWork } from "./taxonomy";
+import { detectScientificWarnings, hasUnresolvedBlocker } from "./warnings";
 
 const now = new Date("2026-07-20T12:00:00.000Z");
 
@@ -221,6 +224,7 @@ describe("Sprint 22 — Scientific Radar Foundation", () => {
         id,
         actor: "editor",
         note: "Organizar fontes, sem redação.",
+        confirmed: true,
         now,
       },
       adapter,
@@ -228,7 +232,7 @@ describe("Sprint 22 — Scientific Radar Foundation", () => {
     expect(dossier.status).toBe("dossier-created");
     const storedDossier = (await loadScientificDossiers(adapter)).value.items[0];
     expect(storedDossier.generatedContent).toBe(false);
-    expect(storedDossier.status).toBe("empty-supervised");
+    expect(storedDossier.status).toBe("scaffold");
     const translation = await applyRadarHumanAction(
       {
         action: "radar:request-translation",
@@ -256,6 +260,197 @@ describe("Sprint 22 — Scientific Radar Foundation", () => {
     expect(source).toContain("entry.officialLinks.openAlex");
     expect(source).toContain("entry.officialLinks.doi");
     expect(source).toContain("entry.officialLinks.crossref");
+    expect(source).toContain("warning.message");
+    expect(source).toContain("warning.source");
+    expect(source).toContain("warning.resolved");
+    expect(source).toContain('value="blocker"');
+    expect(source).toContain('value="manual-review-required"');
     expect(source).not.toContain(".pdf");
+  });
+
+  const warningFixture = {
+    publicationDate: "2026-07-01",
+    journal: "Journal",
+    publisher: "Publisher",
+    authors: ["Author"],
+    institutions: ["Institution"],
+    countries: ["BR"],
+    license: "cc-by",
+    openAccess: true,
+    openAccessUrl: "https://example.org/open",
+    type: "journal-article",
+    peerReviewStatus: "confirmed" as const,
+    corrected: false,
+    retracted: false,
+    crossrefValidated: true as const,
+    citedByCount: 1,
+  };
+
+  test("licença TDM vira warning e peer review provável permanece não confirmado", () => {
+    const warnings = detectScientificWarnings(
+      {
+        ...warningFixture,
+        license: "https://www.elsevier.com/tdm/userlicense/1.0/",
+        openAccess: false,
+        openAccessUrl: null,
+        peerReviewStatus: "probable",
+      },
+      now.toISOString(),
+    );
+    expect(warnings.map(({ code }) => code)).toContain("tdm-only");
+    expect(warnings.map(({ code }) => code)).toContain("license-not-open");
+    expect(warnings.map(({ code }) => code)).toContain("peer-review-unconfirmed");
+  });
+
+  test("CC BY não vira license-not-open", () => {
+    const warnings = detectScientificWarnings(warningFixture, now.toISOString());
+    expect(warnings.map(({ code }) => code)).not.toContain("license-not-open");
+  });
+
+  test("retratação vira blocker", () => {
+    const warnings = detectScientificWarnings(
+      { ...warningFixture, retracted: true },
+      now.toISOString(),
+    );
+    expect(warnings.find(({ code }) => code === "retracted")?.severity).toBe("blocker");
+    expect(hasUnresolvedBlocker(warnings)).toBe(true);
+  });
+
+  test("migration preserva 9 registros e é idempotente", async () => {
+    const adapter = new MemoryStorageAdapter();
+    await discoverScientificWorks(
+      { apiKey: "test-key", fromDate: "2026-07-01", now, fetcher: sourceFetcher([]) },
+      adapter,
+    );
+    const current = (await loadScientificRadar(adapter)).value.items[0];
+    const legacyItems = Array.from({ length: 9 }, (_, index) => {
+      const copy = structuredClone(current) as unknown as Record<string, unknown>;
+      for (const key of [
+        "countries",
+        "openAccessUrl",
+        "peerReviewStatus",
+        "corrected",
+        "retracted",
+        "warningVersion",
+        "warnings",
+      ])
+        delete copy[key];
+      copy.id = `radar-${index.toString(16).padStart(16, "0")}`;
+      copy.doi = `10.1234/test.${index}`;
+      return copy;
+    });
+    const first = migrateScientificRadarDocument(
+      { schemaVersion: 1, lastRunAt: now.toISOString(), items: legacyItems },
+      now.toISOString(),
+    );
+    expect(first.changed).toBe(true);
+    expect(first.value.items).toHaveLength(9);
+    expect(new Set(first.value.items.map(({ id }) => id)).size).toBe(9);
+    expect(new Set(first.value.items.map(({ doi }) => doi)).size).toBe(9);
+    expect(first.value.items[0].score).toEqual(current.score);
+    expect(first.value.items[0].categories).toEqual(current.categories);
+    expect(first.value.items[0].history).toEqual(current.history);
+    const second = migrateScientificRadarDocument(first.value, now.toISOString());
+    expect(second.changed).toBe(false);
+    expect(second.value).toEqual(first.value);
+  });
+
+  test("dossiê exige trabalho existente, confirmação e ausência de blocker", async () => {
+    const adapter = new MemoryStorageAdapter();
+    await expect(
+      applyRadarHumanAction(
+        {
+          action: "radar:create-dossier",
+          id: "radar-0000000000000000",
+          actor: "editor",
+          note: "Teste",
+          confirmed: true,
+        },
+        adapter,
+      ),
+    ).rejects.toThrow("não encontrada");
+    await discoverScientificWorks(
+      { apiKey: "test-key", fromDate: "2026-07-01", now, fetcher: sourceFetcher([]) },
+      adapter,
+    );
+    const radar = await loadScientificRadar(adapter);
+    const id = radar.value.items[0].id;
+    await expect(
+      applyRadarHumanAction(
+        { action: "radar:create-dossier", id, actor: "editor", note: "Teste" },
+        adapter,
+      ),
+    ).rejects.toThrow("Confirmação");
+    radar.value.items[0].warnings.push({
+      code: "retracted",
+      severity: "blocker",
+      message: "Retratado.",
+      source: "test",
+      detectedAt: now.toISOString(),
+      resolved: false,
+    });
+    await adapter.putDocument(
+      { key: "scientific-radar/items", value: radar.value, expectedVersion: radar.version },
+      scientificRadarDocumentSchema,
+    );
+    await expect(
+      applyRadarHumanAction(
+        {
+          action: "radar:create-dossier",
+          id,
+          actor: "editor",
+          note: "Teste",
+          confirmed: true,
+        },
+        adapter,
+      ),
+    ).rejects.toThrow("warning não resolvido");
+  });
+
+  test("dossiê scaffold é idempotente e mantém campos interpretativos vazios", async () => {
+    const adapter = new MemoryStorageAdapter();
+    await discoverScientificWorks(
+      { apiKey: "test-key", fromDate: "2026-07-01", now, fetcher: sourceFetcher([]) },
+      adapter,
+    );
+    const id = (await loadScientificRadar(adapter)).value.items[0].id;
+    const input = {
+      action: "radar:create-dossier" as const,
+      id,
+      actor: "editor",
+      note: "Criação supervisionada.",
+      confirmed: true,
+      now,
+    };
+    await applyRadarHumanAction(input, adapter);
+    await applyRadarHumanAction(input, adapter);
+    const dossiers = (await loadScientificDossiers(adapter)).value.items;
+    expect(dossiers).toHaveLength(1);
+    expect(dossiers[0]).toMatchObject({
+      status: "scaffold",
+      centralQuestion: "",
+      editorialAngle: "",
+      whyItMatters: "",
+      knownClaims: [],
+      unsupportedClaims: [],
+      limitations: [],
+      regionalRelevance: "",
+      sulGlobalRelevance: "",
+      generatedContent: false,
+    });
+    const documents = await adapter.listDocuments("", 100);
+    expect(documents.items.some(({ key }) => /article|mdx|publication/i.test(key))).toBe(false);
+  });
+
+  test("auditoria e dados do Radar permanecem privados", async () => {
+    const [actionsSource, gitignore, smokeSource] = await Promise.all([
+      readFile("src/lib/admin/actions.ts", "utf8"),
+      readFile(".gitignore", "utf8"),
+      readFile("scripts/smoke-worker.ts", "utf8"),
+    ]);
+    expect(actionsSource).toContain("adapter.appendAudit");
+    expect(actionsSource).toContain('origin: "editorial-console"');
+    expect(gitignore).toContain("newsroom/storage/");
+    expect(smokeSource).not.toContain("scientific-radar/items.json");
   });
 });

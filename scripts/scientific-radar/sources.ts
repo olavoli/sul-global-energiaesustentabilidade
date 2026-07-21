@@ -20,7 +20,12 @@ const openAlexWorkSchema = z.looseObject({
       z.looseObject({
         author: z.looseObject({ display_name: z.string().trim().min(1) }),
         institutions: z
-          .array(z.looseObject({ display_name: z.string().trim().min(1) }))
+          .array(
+            z.looseObject({
+              display_name: z.string().trim().min(1),
+              country_code: nullableText,
+            }),
+          )
           .default([]),
       }),
     )
@@ -55,6 +60,8 @@ const openAlexWorkSchema = z.looseObject({
     .looseObject({
       license: nullableText,
       is_oa: z.boolean().nullable().optional(),
+      landing_page_url: z.url().nullable().optional(),
+      pdf_url: z.url().nullable().optional(),
     })
     .nullable()
     .optional(),

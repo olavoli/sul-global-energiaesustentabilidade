@@ -3,6 +3,7 @@ import { normalizeDoi, reconstructAbstract } from "./sources";
 import { classifyScientificWork, relatedExistingCategories } from "./taxonomy";
 import { scoreScientificWork } from "./scoring";
 import { scientificWorkSchema, type ScientificWork } from "./contracts";
+import { detectScientificWarnings } from "./warnings";
 
 function unique(values: Array<string | null | undefined>): string[] {
   return [
@@ -66,14 +67,14 @@ export async function normalizeScientificWork(
     publicationDate: openAlex.publication_date,
     citedByCount: Math.max(openAlex.cited_by_count, crossref["is-referenced-by-count"] ?? 0),
     journal,
-    crossrefValidated: true,
+    crossrefValidated: true as const,
     openAccess,
     categoryMatches: classified.reduce((total, entry) => total + entry.matches, 0),
     categories,
     existingCategorySlugs,
     now,
   });
-  return scientificWorkSchema.parse({
+  const base = {
     id: await stableId("radar", doi),
     openAlexId: openAlex.id,
     doi,
@@ -88,6 +89,11 @@ export async function normalizeScientificWork(
       ),
       ...crossref.author.flatMap(({ affiliation }) => affiliation.map(({ name }) => name)),
     ]),
+    countries: unique(
+      openAlex.authorships.flatMap(({ institutions }) =>
+        institutions.map(({ country_code }) => country_code),
+      ),
+    ),
     abstract,
     keywords,
     journal,
@@ -96,7 +102,15 @@ export async function normalizeScientificWork(
     publicationDate: openAlex.publication_date,
     license,
     openAccess,
+    openAccessUrl:
+      openAlex.best_oa_location?.landing_page_url ?? openAlex.best_oa_location?.pdf_url ?? null,
     type: crossref.type ?? openAlex.type,
+    peerReviewStatus:
+      (crossref.type ?? openAlex.type) === "journal-article"
+        ? ("probable" as const)
+        : ("unknown" as const),
+    corrected: false,
+    retracted: false,
     area:
       openAlex.primary_topic?.field?.display_name ?? openAlex.primary_topic?.display_name ?? null,
     categories,
@@ -109,12 +123,17 @@ export async function normalizeScientificWork(
       doi: `https://doi.org/${doi}`,
       crossref: `https://api.crossref.org/works/${encodeURIComponent(doi)}`,
     },
-    crossrefValidated: true,
+    crossrefValidated: true as const,
+    warningVersion: 1 as const,
     score,
     status: "new",
     discoveredAt,
     updatedAt: discoveredAt,
     history: [{ action: "discovered", actor: "scientific-radar", note: "", at: discoveredAt }],
+  };
+  return scientificWorkSchema.parse({
+    ...base,
+    warnings: detectScientificWarnings(base, discoveredAt),
   });
 }
 

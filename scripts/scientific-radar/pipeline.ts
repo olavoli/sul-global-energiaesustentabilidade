@@ -44,7 +44,7 @@ export async function discoverScientificWorks(
   const current = await loadScientificRadar(adapter);
   const merged = mergeDiscoveredWorks(current.value.items, unique);
   await saveScientificRadar(
-    { schemaVersion: 1, lastRunAt: now.toISOString(), items: merged.items },
+    { schemaVersion: 2, lastRunAt: now.toISOString(), items: merged.items },
     current.version,
     adapter,
   );

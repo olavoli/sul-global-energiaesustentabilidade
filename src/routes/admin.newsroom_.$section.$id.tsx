@@ -4,6 +4,7 @@ import { AdminActions } from "@/components/admin/AdminActions";
 import { AdminJson } from "@/components/admin/AdminJson";
 import { AdminError, AdminLoading } from "@/components/admin/AdminStates";
 import { AdminShell } from "@/components/admin/AdminShell";
+import { AdminScientificRadarDetail } from "@/components/admin/AdminScientificRadar";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
@@ -31,7 +32,12 @@ function DetailRoute() {
       <div className="space-y-6">
         {state.loading && <AdminLoading />}
         {state.error && <AdminError message={state.error} />}
-        {state.data !== undefined && <AdminJson value={state.data} />}
+        {state.data !== undefined &&
+          (section === "scientific-radar" ? (
+            <AdminScientificRadarDetail entry={state.data} />
+          ) : (
+            <AdminJson value={state.data} />
+          ))}
         {state.session && (
           <AdminActions
             section={section}

@@ -54,6 +54,37 @@ export const radarScoreSchema = z.object({
   categoryRelationship: z.number().int().min(0).max(10),
 });
 
+export const scientificWarningCodes = [
+  "license-not-open",
+  "tdm-only",
+  "peer-review-unconfirmed",
+  "metadata-incomplete",
+  "future-date-suspected",
+  "crossref-divergence",
+  "preprint",
+  "corrected",
+  "retracted",
+  "open-access-url-missing",
+  "institution-missing",
+  "country-missing",
+  "citation-count-volatile",
+  "manual-review-required",
+] as const;
+
+export const scientificWarningSeveritySchema = z.enum(["info", "warning", "blocker"]);
+export const scientificWarningSchema = z.object({
+  code: z.enum(scientificWarningCodes),
+  severity: scientificWarningSeveritySchema,
+  message: text,
+  source: text,
+  detectedAt: z.iso.datetime(),
+  resolved: z.boolean(),
+  resolutionNote: text.optional(),
+});
+
+export type ScientificWarning = z.infer<typeof scientificWarningSchema>;
+export type ScientificWarningSeverity = z.infer<typeof scientificWarningSeveritySchema>;
+
 export const scientificWorkSchema = z.object({
   id: z.string().regex(/^radar-[a-f0-9]{16}$/),
   openAlexId: z.url(),
@@ -62,13 +93,18 @@ export const scientificWorkSchema = z.object({
   authors: z.array(text),
   institutions: z.array(text),
   abstract: text.nullable(),
+  countries: z.array(text),
   keywords: z.array(text),
   journal: text.nullable(),
   publisher: text.nullable(),
   publicationDate: z.iso.date(),
   license: text.nullable(),
   openAccess: z.boolean(),
+  openAccessUrl: z.url().nullable(),
   type: text,
+  peerReviewStatus: z.enum(["confirmed", "probable", "unknown"]),
+  corrected: z.boolean(),
+  retracted: z.boolean(),
   area: text.nullable(),
   categories: z.array(scientificCategorySchema).min(1),
   existingCategorySlugs: z.array(text),
@@ -81,6 +117,8 @@ export const scientificWorkSchema = z.object({
     crossref: z.url(),
   }),
   crossrefValidated: z.literal(true),
+  warningVersion: z.literal(1),
+  warnings: z.array(scientificWarningSchema),
   score: radarScoreSchema,
   status: radarStatusSchema,
   discoveredAt: z.iso.datetime(),
@@ -91,7 +129,7 @@ export const scientificWorkSchema = z.object({
 export type ScientificWork = z.infer<typeof scientificWorkSchema>;
 
 export const scientificRadarDocumentSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
   lastRunAt: z.iso.datetime().nullable(),
   items: z.array(scientificWorkSchema),
 });
@@ -102,16 +140,48 @@ export const scientificDossierSchema = z.object({
   id: z.string().regex(/^dossier-[a-f0-9]{16}$/),
   scientificWorkId: z.string().regex(/^radar-[a-f0-9]{16}$/),
   title: text,
-  status: z.literal("empty-supervised"),
+  doi: z.string().regex(/^10\.\d{4,9}\/\S+$/i),
+  authors: z.array(text),
+  institutions: z.array(text),
+  journal: text.nullable(),
+  publicationDate: z.iso.date(),
+  license: text.nullable(),
+  openAccess: z.boolean(),
+  categories: z.array(scientificCategorySchema),
+  warnings: z.array(scientificWarningSchema),
+  officialLinks: z.object({ openAlex: z.url(), doi: z.url(), crossref: z.url() }),
+  status: z.literal("scaffold"),
   createdAt: z.iso.datetime(),
   createdBy: text,
-  note: z.string().trim().max(1_000),
-  sources: z.array(z.url()),
+  centralQuestion: z.literal(""),
+  editorialAngle: z.literal(""),
+  whyItMatters: z.literal(""),
+  knownClaims: z.array(z.never()),
+  unsupportedClaims: z.array(z.never()),
+  limitations: z.array(z.never()),
+  counterEvidenceNeeded: z.array(z.never()),
+  relatedWorksNeeded: z.array(z.never()),
+  funding: z.array(z.never()),
+  conflictsOfInterest: z.array(z.never()),
+  openQuestions: z.array(z.never()),
+  regionalRelevance: z.literal(""),
+  sulGlobalRelevance: z.literal(""),
+  sourceAccess: z.object({
+    openAccess: z.boolean(),
+    license: text.nullable(),
+    links: z.array(z.url()),
+  }),
+  copyrightNotes: z.literal(""),
+  factChecks: z.array(z.never()),
+  translationNeeds: z.array(z.never()),
+  imageNeeds: z.array(z.never()),
+  humanNotes: z.array(z.never()),
+  history: z.array(radarHistorySchema),
   generatedContent: z.literal(false),
 });
 
 export const scientificDossiersDocumentSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
   items: z.array(scientificDossierSchema),
 });
 
