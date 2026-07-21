@@ -178,6 +178,16 @@ export const scientificDossierSchema = z.object({
   humanNotes: z.array(z.never()),
   history: z.array(radarHistorySchema),
   generatedContent: z.literal(false),
+  graphId: z
+    .string()
+    .regex(/^graph-[a-f0-9]{16}$/)
+    .optional(),
+  relatedWorkIds: z.array(z.string()).optional(),
+  authorIds: z.array(z.string()).optional(),
+  institutionIds: z.array(z.string()).optional(),
+  topicIds: z.array(z.string()).optional(),
+  graphWarnings: z.array(z.string()).optional(),
+  graphUpdatedAt: z.iso.datetime().optional(),
 });
 
 export const scientificDossiersDocumentSchema = z.object({

@@ -74,7 +74,7 @@ export function AdminSectionList({ section, entries }: { section: string; entrie
                   <TableCell className="text-right">
                     {section === "sources" ||
                     id.startsWith(`${section.slice(0, -1)}-`) ||
-                    /^(?:inbox|decision|cluster|translation|run|pitch)-/.test(id) ? (
+                    /^(?:inbox|decision|cluster|translation|run|pitch|duplicate)-/.test(id) ? (
                       <Link
                         to="/admin/newsroom/$section/$id"
                         params={{ section, id }}

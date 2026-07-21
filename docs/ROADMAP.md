@@ -1,5 +1,9 @@
 # Roadmap
 
+## Sprint 23 — Grafo Científico V1
+
+Fundação local para um piloto supervisionado. O checkpoint de dry-run antecede qualquer persistência. Interpretação de evidência, agenda e novas fontes não pertencem a esta Sprint.
+
 ## Sprint 20 — staging remoto validado
 
 Worker, D1, migration, seed, Central protegida, smoke, sessão durável, rate

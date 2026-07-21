@@ -22,6 +22,11 @@ import { loadTranslations } from "../../../scripts/newsroom/translation";
 import type { AdminSection } from "./contracts";
 import { storageAdapter } from "../../../scripts/newsroom/storage/runtime";
 import { loadScientificRadar } from "../../../scripts/scientific-radar/store";
+import { loadScientificGraphs } from "../../../scripts/scientific-graph/store";
+import {
+  loadCanonicalEntities,
+  loadDuplicateCandidates,
+} from "../../../scripts/entity-resolution/store";
 
 function sanitize<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T;
@@ -127,6 +132,20 @@ export async function sectionData(
   if (section === "reports") return sanitize(await reports());
   if (section === "pitches") return sanitize(await loadPitches());
   if (section === "scientific-radar") return sanitize((await loadScientificRadar()).value.items);
+  if (section === "scientific-graph") return sanitize((await loadScientificGraphs()).value.items);
+  if (section === "entity-resolution") {
+    const [entities, candidates] = await Promise.all([
+      loadCanonicalEntities(),
+      loadDuplicateCandidates(),
+    ]);
+    return sanitize(
+      candidates.value.items.map((candidate) => ({
+        ...candidate,
+        left: entities.value.items.find(({ id }) => id === candidate.leftEntityId),
+        right: entities.value.items.find(({ id }) => id === candidate.rightEntityId),
+      })),
+    );
+  }
   return sanitize({
     automation: await loadAutomationPolicy(),
     switches: resolveAutomationSwitches(environment),
@@ -138,6 +157,27 @@ export async function sectionData(
 export async function detailData(section: AdminSection, id: string): Promise<unknown | undefined> {
   if (section === "scientific-radar")
     return (await loadScientificRadar()).value.items.find((entry) => entry.id === id);
+  if (section === "scientific-graph") {
+    const graphs = (await loadScientificGraphs()).value.items;
+    return (
+      graphs.find(({ id: graphId }) => graphId === id) ??
+      graphs.flatMap(({ relations }) => relations).find(({ id: relationId }) => relationId === id)
+    );
+  }
+  if (section === "entity-resolution") {
+    const [entities, candidates] = await Promise.all([
+      loadCanonicalEntities(),
+      loadDuplicateCandidates(),
+    ]);
+    const candidate = candidates.value.items.find((entry) => entry.id === id);
+    if (!candidate) return undefined;
+    return sanitize({
+      candidate,
+      left: entities.value.items.find(({ id: entityId }) => entityId === candidate.leftEntityId),
+      right: entities.value.items.find(({ id: entityId }) => entityId === candidate.rightEntityId),
+      automaticMerge: false,
+    });
+  }
   if (section === "inbox") return (await loadInbox()).find((entry) => entry.id === id);
   if (section === "decisions") {
     const decision = (await loadDecisions()).find((entry) => entry.id === id);

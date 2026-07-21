@@ -12,6 +12,8 @@ export const adminSections = [
   "reports",
   "pitches",
   "scientific-radar",
+  "scientific-graph",
+  "entity-resolution",
   "config",
 ] as const;
 
@@ -36,7 +38,7 @@ export const adminActionSchema = z.object({
 export type AdminAction = z.infer<typeof adminActionSchema>;
 
 export function validOperationalId(value: string): boolean {
-  return /^(?:inbox|decision|cluster|translation|run|pitch|evidence|claim|radar)-[a-f0-9]{16}$/.test(
+  return /^(?:inbox|decision|cluster|translation|run|pitch|evidence|claim|radar|graph|sgr|duplicate)-[a-f0-9]{16}$/.test(
     value,
   );
 }

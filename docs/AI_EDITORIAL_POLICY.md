@@ -1,5 +1,9 @@
 # Política editorial para uso de IA
 
+## Sprint 23
+
+O Grafo Científico não usa IA. Relações são metadados observados e não inferem apoio, contradição, confirmação, qualidade, conflito ou consenso. Nenhum texto editorial é gerado.
+
 ## Sprint 15
 
 O orquestrador não usa IA, tradução remota ou geração. Regras locais organizam revisão e não emitem opinião, posição institucional, verdade factual ou aprovação. Decisão e pauta continuam sob responsabilidade humana identificada.

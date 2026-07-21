@@ -1,9 +1,10 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound, Outlet, useRouterState } from "@tanstack/react-router";
 
 import { AdminSectionList } from "@/components/admin/AdminSectionList";
 import { AdminError, AdminLoading } from "@/components/admin/AdminStates";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { AdminScientificRadar } from "@/components/admin/AdminScientificRadar";
+import { AdminScientificGraph } from "@/components/admin/AdminScientificGraph";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
@@ -22,6 +23,14 @@ const labels: Record<AdminSection, [string, string]> = {
     "Radar Científico",
     "Descoberta privada de publicações científicas para decisão humana, sem geração de conteúdo.",
   ],
+  "scientific-graph": [
+    "Mapa Científico",
+    "Relações bibliográficas observadas, proveniência e revisão humana, sem interpretação editorial.",
+  ],
+  "entity-resolution": [
+    "Identidades Canônicas",
+    "Possíveis duplicatas por regras determinísticas, sempre submetidas à revisão humana.",
+  ],
   config: ["Configuração", "Políticas, orçamentos e switches em modo somente leitura."],
 };
 
@@ -39,10 +48,15 @@ export const Route = createFileRoute("/admin/newsroom_/$section")({
 });
 
 function SectionRoute() {
+  const detailActive = useRouterState({
+    select: (state) =>
+      state.matches.some(({ routeId }) => routeId === "/admin/newsroom_/$section/$id"),
+  });
   const { section } = Route.useParams();
   const current = section as AdminSection;
   const [title, description] = labels[current];
   const state = useAdminData<unknown[]>(`/api/admin/${section}`);
+  if (detailActive) return <Outlet />;
   return (
     <AdminShell title={title} description={description}>
       {state.loading && <AdminLoading />}
@@ -50,8 +64,11 @@ function SectionRoute() {
       {state.data && current === "scientific-radar" && Array.isArray(state.data) && (
         <AdminScientificRadar entries={state.data} />
       )}
+      {state.data && current === "scientific-graph" && Array.isArray(state.data) && (
+        <AdminScientificGraph entries={state.data} />
+      )}
       {state.data &&
-        current !== "scientific-radar" &&
+        !["scientific-radar", "scientific-graph"].includes(current) &&
         (Array.isArray(state.data) ? (
           <AdminSectionList section={section} entries={state.data} />
         ) : (

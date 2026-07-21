@@ -1,5 +1,12 @@
 # Inventário técnico
 
+## Sprint 23
+
+- `scripts/scientific-graph/`: contratos, fontes, builder, store, revisão e testes.
+- `scripts/scientific-graph-cli.ts`: plan/build/show/list/review/stats.
+- `src/components/admin/AdminScientificGraph.tsx`: tabela privada.
+- Storage reservado: `scientific-graph/graphs`, fora do bundle público.
+
 ## Staging remoto
 
 - `cloudflare/wrangler.staging.template.jsonc`: manifesto exclusivo de staging,

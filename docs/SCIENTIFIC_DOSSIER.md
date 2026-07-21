@@ -1,0 +1,7 @@
+# Dossiê Científico
+
+O dossiê é um scaffold privado. Antes do grafo, exige trabalho existente, DOI confirmado, ausência de blocker e campos interpretativos vazios.
+
+Após autorização, pode receber apenas `graphId`, `relatedWorkIds`, `authorIds`, `institutionIds`, `topicIds`, `graphWarnings` e `graphUpdatedAt`, na mesma transação local do grafo.
+
+Pergunta central, ângulo, relevância, claims, limitações, contrapontos e notas não são preenchidos pelo grafo.

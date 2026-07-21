@@ -1,5 +1,23 @@
 # Changelog
 
+## Sprint 24 — resolução determinística de entidades
+
+- Identidades canônicas explicáveis para autores, instituições, periódicos, editoras, categorias, países e financiadores.
+- Precedência fixa de identificadores, nome normalizado e aliases, sem IA ou fuzzy matching.
+- Possíveis duplicatas sempre pendentes de revisão humana; nenhum merge automático.
+- Central com ações de aceitar ou ignorar e auditoria sanitizada.
+
+## Não publicado — Sprint 23
+
+### Adicionado
+
+- Grafo científico V1, CLI dry-run, persistência local condicionada e Mapa Científico privado.
+- Testes offline e documentação do schema, revisão, proveniência, limites e dossiê.
+
+### Segurança
+
+- Sem IA, PDF, texto integral, artigo, publicação, agenda, deploy, staging ou produção.
+
 ## Não publicado — Sprint 20
 
 ### Adicionado

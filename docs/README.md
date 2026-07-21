@@ -1,5 +1,15 @@
 # Documentação do Sul Global
 
+## Inteligência bibliográfica
+
+- [Grafo Científico](SCIENTIFIC_KNOWLEDGE_GRAPH.md)
+- [Resolução determinística de entidades](ENTITY_RESOLUTION.md)
+- [Schema](SCIENTIFIC_GRAPH_SCHEMA.md)
+- [Revisão](SCIENTIFIC_GRAPH_REVIEW.md)
+- [Proveniência](SCIENTIFIC_GRAPH_PROVENANCE.md)
+- [Limites](SCIENTIFIC_GRAPH_LIMITS.md)
+- [Dossiê Científico](SCIENTIFIC_DOSSIER.md)
+
 - [Staging](STAGING.md)
 - [Checklist de staging](STAGING_CHECKLIST.md)
 - [Smoke de staging](STAGING_SMOKE_TESTS.md)
