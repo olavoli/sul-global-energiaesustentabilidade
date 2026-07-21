@@ -1,5 +1,9 @@
 # Operação da Central Editorial
 
+## Mapa Científico
+
+Revise relações na tabela privada e registre nota antes de aceitar, rejeitar ou pedir contexto. Esses estados não interpretam evidência e nunca criam artigo. O primeiro grafo aparece somente porque sua persistência local foi autorizada após o checkpoint.
+
 Defina `NEWSROOM_ADMIN_SECRET` fora do repositório, execute `bun run dev` e acesse `/admin/login`.
 
 1. Revise visão geral, kill switches e último run.

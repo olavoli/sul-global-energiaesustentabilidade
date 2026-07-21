@@ -1,5 +1,9 @@
 # ARCHITECTURE.md — Sul Global
 
+## Extensão privada — Grafo Científico
+
+O Radar fornece trabalho e dossiê scaffold. O builder consulta metadados oficiais e mantém a saída em memória no dry-run. Após autorização, uma transação grava `scientific-graph/graphs` e somente IDs estruturais no dossiê. Nada entra no repositório público de conteúdo.
+
 ## Staging Cloudflare
 
 O template de staging aponta o worker para `.output/server/index.mjs`, assets

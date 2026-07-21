@@ -1,5 +1,9 @@
 # Sul Global
 
+## Sprint 23 — Grafo Científico supervisionado
+
+O subsistema privado modela trabalhos, autores, instituições, temas e relações bibliográficas somente de OpenAlex e Crossref. A coleta é limitada e dry-run por padrão; não interpreta citações, não baixa PDFs, não usa IA e não cria conteúdo. Consulte `docs/SCIENTIFIC_KNOWLEDGE_GRAPH.md`.
+
 ## Sprint 20 — staging remoto validado
 
 O ambiente isolado de homologação está disponível em

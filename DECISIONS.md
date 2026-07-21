@@ -1,5 +1,11 @@
 # Registro de decisões
 
+## ADR — Grafo científico como metadado privado supervisionado
+
+**Decisão:** representar vínculos bibliográficos observados em documento versionado independente, com IDs estáveis e proveniência. Persistência futura será local e transacional com a referência estrutural do dossiê.
+
+**Consequências:** citações não expressam apoio, validação ou consenso; a Central exige revisão humana; OpenAlex e Crossref são as únicas fontes da V1.
+
 ## ADR — staging remoto isolado e supervisionado
 
 Após validação local e autorização humana em checkpoints separados, decidiu-se

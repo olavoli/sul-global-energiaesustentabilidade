@@ -1,5 +1,12 @@
 # Status de implementação
 
+## Sprint 23 — Grafo Científico V1
+
+- [x] Schema versionado, IDs estáveis, proveniência, confiança e deduplicação.
+- [x] Cliente oficial limitado, CLI dry-run e persistência local transacional condicionada.
+- [x] Mapa Científico tabular e revisão humana privada na Central.
+- [x] Primeiro grafo persistido localmente após autorização explícita, com 62 nós e 64 relações.
+
 ## Sprint 20 — staging remoto validado
 
 - [x] Worker `sul-global-staging` publicado somente em `workers.dev`.

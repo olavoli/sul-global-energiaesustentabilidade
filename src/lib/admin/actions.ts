@@ -40,6 +40,8 @@ import {
   radarHumanActions,
   type RadarHumanAction,
 } from "../../../scripts/scientific-radar/actions";
+import { reviewGraphRelation } from "../../../scripts/scientific-graph/review";
+import { reviewDuplicateCandidate } from "../../../scripts/entity-resolution/review";
 
 function required(value: string | undefined, label: string): string {
   if (!value?.trim()) throw new Error(`${label} é obrigatório.`);
@@ -63,6 +65,30 @@ function auditSummary(value: unknown): unknown {
 
 async function performAdminAction(input: AdminAction): Promise<unknown> {
   const now = new Date().toISOString();
+  if (input.action.startsWith("entity-resolution:")) {
+    const status = input.action.slice(18) as "accepted" | "ignored";
+    if (!["accepted", "ignored"].includes(status))
+      throw new Error("Ação de identidade não permitida.");
+    return reviewDuplicateCandidate({
+      id: required(input.id, "Possível duplicata"),
+      status,
+      actor: input.actor,
+      note: required(input.note, "Nota"),
+      now: new Date(now),
+    });
+  }
+  if (input.action.startsWith("graph:")) {
+    const status = input.action.slice(6) as "accepted" | "rejected" | "needs-context";
+    if (!["accepted", "rejected", "needs-context"].includes(status))
+      throw new Error("Ação de grafo não permitida.");
+    return reviewGraphRelation({
+      relationId: required(input.id, "Relação"),
+      status,
+      actor: input.actor,
+      note: required(input.note, "Nota"),
+      now: new Date(now),
+    });
+  }
   if (input.action.startsWith("radar:")) {
     if (!radarHumanActions.includes(input.action as RadarHumanAction))
       throw new Error("Ação do Radar Científico não permitida.");

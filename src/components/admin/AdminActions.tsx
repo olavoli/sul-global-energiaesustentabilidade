@@ -44,6 +44,15 @@ const actions: Record<string, Array<[string, string, boolean]>> = {
     ["radar:create-dossier", "Criar Dossiê", true],
     ["radar:request-translation", "Solicitar Tradução", true],
   ],
+  "scientific-graph": [
+    ["graph:accepted", "Aceitar relação", true],
+    ["graph:rejected", "Rejeitar relação", true],
+    ["graph:needs-context", "Pedir contexto", true],
+  ],
+  "entity-resolution": [
+    ["entity-resolution:accepted", "Aceitar correspondência", true],
+    ["entity-resolution:ignored", "Ignorar", true],
+  ],
   dashboard: [
     ["pipeline:validate-only", "Validar", false],
     ["pipeline:process-existing", "Processar existentes", false],
