@@ -3,7 +3,9 @@ import { readFile } from "node:fs/promises";
 import { MemoryStorageAdapter } from "../newsroom/storage/memory-adapter";
 import {
   scientificDossiersDocumentSchema,
+  scientificDossierSchema,
   scientificRadarDocumentSchema,
+  scientificWorkSchema,
 } from "../scientific-radar/contracts";
 import { DOSSIERS_KEY, RADAR_KEY } from "../scientific-radar/store";
 import { buildScientificGraph } from "./builder";
@@ -11,20 +13,96 @@ import { graphRelationSchema } from "./contracts";
 import { reviewGraphRelation } from "./review";
 import { GRAPH_KEY, loadScientificGraphs, persistScientificGraph } from "./store";
 
-async function pilot() {
-  const radar = JSON.parse(
-    await readFile("newsroom/storage/scientific-radar/items.json", "utf8"),
-  ) as { value: unknown };
-  const dossiers = JSON.parse(
-    await readFile("newsroom/storage/scientific-radar/dossiers.json", "utf8"),
-  ) as { value: unknown };
-  const work = scientificRadarDocumentSchema
-    .parse(radar.value)
-    .items.find(({ doi }) => doi === "10.1002/advs.202510481");
-  const dossier = scientificDossiersDocumentSchema
-    .parse(dossiers.value)
-    .items.find(({ scientificWorkId }) => scientificWorkId === work?.id);
-  if (!work || !dossier) throw new Error("Piloto ausente.");
+function pilot() {
+  const timestamp = "2026-07-21T16:46:32.228Z";
+  const links = {
+    openAlex: "https://openalex.org/W4413051216",
+    doi: "https://doi.org/10.1002/advs.202510481",
+    crossref: "https://api.crossref.org/works/10.1002%2Fadvs.202510481",
+  };
+  const work = scientificWorkSchema.parse({
+    id: "radar-70ab9f6136b8d720",
+    openAlexId: links.openAlex,
+    doi: "10.1002/advs.202510481",
+    title: "Why Will Polymers Win the Race for Solid-State Batteries?",
+    authors: ["Zhiyong Li", "Sisi Peng", "Lu Wei", "Xin Guo"],
+    institutions: ["Huazhong University of Science and Technology"],
+    abstract: null,
+    countries: [],
+    keywords: ["Polymer", "Energy storage"],
+    journal: "Advanced Science",
+    publisher: "Wiley",
+    publicationDate: "2025-08-07",
+    license: "cc-by",
+    openAccess: true,
+    openAccessUrl: null,
+    type: "journal-article",
+    peerReviewStatus: "probable",
+    corrected: false,
+    retracted: false,
+    area: "Engineering",
+    categories: ["batteries", "storage"],
+    existingCategorySlugs: ["energia"],
+    citedByCount: 21,
+    referencedWorks: [],
+    relatedWorks: [],
+    officialLinks: links,
+    crossrefValidated: true,
+    warningVersion: 1,
+    warnings: [],
+    score: {
+      total: 68,
+      recency: 8,
+      citations: 13,
+      journal: 15,
+      openAccess: 10,
+      thematic: 15,
+      categoryRelationship: 7,
+    },
+    status: "dossier-created",
+    discoveredAt: timestamp,
+    updatedAt: timestamp,
+    history: [{ action: "discovered", actor: "scientific-radar", note: "", at: timestamp }],
+  });
+  const dossier = scientificDossierSchema.parse({
+    id: "dossier-96729fb0885ee0b8",
+    scientificWorkId: work.id,
+    title: work.title,
+    doi: work.doi,
+    authors: work.authors,
+    institutions: work.institutions,
+    journal: work.journal,
+    publicationDate: work.publicationDate,
+    license: work.license,
+    openAccess: true,
+    categories: work.categories,
+    warnings: [],
+    officialLinks: links,
+    status: "scaffold",
+    createdAt: timestamp,
+    createdBy: "fixture-ci",
+    centralQuestion: "",
+    editorialAngle: "",
+    whyItMatters: "",
+    knownClaims: [],
+    unsupportedClaims: [],
+    limitations: [],
+    counterEvidenceNeeded: [],
+    relatedWorksNeeded: [],
+    funding: [],
+    conflictsOfInterest: [],
+    openQuestions: [],
+    regionalRelevance: "",
+    sulGlobalRelevance: "",
+    sourceAccess: { openAccess: true, license: "cc-by", links: [links.openAlex, links.doi] },
+    copyrightNotes: "",
+    factChecks: [],
+    translationNeeds: [],
+    imageNeeds: [],
+    humanNotes: [],
+    history: [{ action: "dossier-created", actor: "fixture-ci", note: "", at: timestamp }],
+    generatedContent: false,
+  });
   return { work, dossier };
 }
 
