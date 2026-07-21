@@ -55,6 +55,11 @@ const actions: Record<string, Array<[string, string, boolean]>> = {
     ["trend:archived", "Arquivar", true],
     ["trend:watched", "Acompanhar", true],
   ],
+  "scientific-concepts": [
+    ["concept:accepted", "Aceitar relação", true],
+    ["concept:rejected", "Rejeitar relação", true],
+    ["concept:ignored", "Ignorar relação", true],
+  ],
   "entity-resolution": [
     ["entity-resolution:accepted", "Aceitar correspondência", true],
     ["entity-resolution:ignored", "Ignorar", true],

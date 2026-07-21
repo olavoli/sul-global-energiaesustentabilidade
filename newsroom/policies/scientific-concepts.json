@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "taxonomyVersion": "1.0.0",
+  "concepts": [
+    {
+      "id": "concept-green-hydrogen",
+      "label": "Green hydrogen",
+      "aliases": ["green hydrogen", "hydrogen, green", "hidrogenio verde"],
+      "category": "energy-carriers",
+      "themeId": "theme-energy-transition",
+      "relations": ["concept-renewable-energy"]
+    },
+    {
+      "id": "concept-renewable-energy",
+      "label": "Renewable energy",
+      "aliases": ["renewable energy", "renewable energies", "energia renovavel"],
+      "category": "energy-systems",
+      "themeId": "theme-energy-transition",
+      "relations": []
+    },
+    {
+      "id": "concept-solar-energy",
+      "label": "Solar energy",
+      "aliases": ["solar energy", "solar power", "energia solar"],
+      "category": "energy-sources",
+      "themeId": "theme-energy-transition",
+      "relations": ["concept-renewable-energy"]
+    },
+    {
+      "id": "concept-wind-energy",
+      "label": "Wind energy",
+      "aliases": ["wind energy", "wind power", "energia eolica"],
+      "category": "energy-sources",
+      "themeId": "theme-energy-transition",
+      "relations": ["concept-renewable-energy"]
+    },
+    {
+      "id": "concept-energy-storage",
+      "label": "Energy storage",
+      "aliases": ["energy storage", "armazenamento de energia"],
+      "category": "energy-systems",
+      "themeId": "theme-energy-transition",
+      "relations": ["concept-renewable-energy"]
+    }
+  ]
+}

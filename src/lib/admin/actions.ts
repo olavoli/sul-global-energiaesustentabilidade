@@ -43,6 +43,7 @@ import {
 import { reviewGraphRelation } from "../../../scripts/scientific-graph/review";
 import { reviewDuplicateCandidate } from "../../../scripts/entity-resolution/review";
 import { reviewTrend } from "../../../scripts/scientific-trends/review";
+import { reviewConceptRelation } from "../../../scripts/scientific-concepts/review";
 
 function required(value: string | undefined, label: string): string {
   if (!value?.trim()) throw new Error(`${label} é obrigatório.`);
@@ -66,6 +67,19 @@ function auditSummary(value: unknown): unknown {
 
 async function performAdminAction(input: AdminAction): Promise<unknown> {
   const now = new Date().toISOString();
+  if (input.action.startsWith("concept:")) {
+    const status = input.action.slice(8) as "accepted" | "rejected" | "ignored";
+    if (!["accepted", "rejected", "ignored"].includes(status))
+      throw new Error("Ação de conceito não permitida.");
+    if (input.values.confirmed !== "true") throw new Error("Confirmação humana obrigatória.");
+    return reviewConceptRelation({
+      id: required(input.id, "Relação"),
+      status,
+      actor: input.actor,
+      note: required(input.note, "Nota"),
+      now: new Date(now),
+    });
+  }
   if (input.action.startsWith("trend:")) {
     const action = input.action.slice(6) as
       | "reviewed"

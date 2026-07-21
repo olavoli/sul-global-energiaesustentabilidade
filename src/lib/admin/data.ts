@@ -25,6 +25,7 @@ import { loadScientificRadar } from "../../../scripts/scientific-radar/store";
 import { loadScientificGraphs } from "../../../scripts/scientific-graph/store";
 import { loadMemoryState } from "../../../scripts/scientific-memory/store";
 import { loadTrendState } from "../../../scripts/scientific-trends/store";
+import { loadConceptState } from "../../../scripts/scientific-concepts/store";
 import {
   loadCanonicalEntities,
   loadDuplicateCandidates,
@@ -139,6 +140,17 @@ export async function sectionData(
     return sanitize(Object.values(memory.entities).flat());
   }
   if (section === "scientific-trends") return sanitize((await loadTrendState()).signals);
+  if (section === "scientific-concepts") {
+    const state = await loadConceptState();
+    return sanitize(
+      state.concepts.map((concept) => ({
+        ...concept,
+        relations: state.relations.filter(
+          ({ from, to }) => from === concept.id || to === concept.id,
+        ),
+      })),
+    );
+  }
   if (section === "scientific-graph") return sanitize((await loadScientificGraphs()).value.items);
   if (section === "entity-resolution") {
     const [entities, candidates] = await Promise.all([
@@ -164,6 +176,18 @@ export async function sectionData(
 export async function detailData(section: AdminSection, id: string): Promise<unknown | undefined> {
   if (section === "scientific-trends")
     return (await loadTrendState()).signals.find((entry) => entry.id === id);
+  if (section === "scientific-concepts") {
+    const state = await loadConceptState();
+    const relation = state.relations.find((entry) => entry.id === id);
+    if (!relation) return undefined;
+    return sanitize({
+      relation,
+      fromConcept: state.concepts.find(({ id: conceptId }) => conceptId === relation.from),
+      toConcept: state.concepts.find(({ id: conceptId }) => conceptId === relation.to),
+      automaticMerge: false,
+      generatedContent: false,
+    });
+  }
   if (section === "scientific-radar")
     return (await loadScientificRadar()).value.items.find((entry) => entry.id === id);
   if (section === "scientific-graph") {

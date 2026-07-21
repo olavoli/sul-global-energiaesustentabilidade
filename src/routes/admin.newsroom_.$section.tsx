@@ -7,6 +7,7 @@ import { AdminScientificRadar } from "@/components/admin/AdminScientificRadar";
 import { AdminScientificGraph } from "@/components/admin/AdminScientificGraph";
 import { AdminScientificMemory } from "@/components/admin/AdminScientificMemory";
 import { AdminScientificTrends } from "@/components/admin/AdminScientificTrends";
+import { AdminScientificConcepts } from "@/components/admin/AdminScientificConcepts";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
@@ -32,6 +33,10 @@ const labels: Record<AdminSection, [string, string]> = {
   "scientific-trends": [
     "Tendências Científicas",
     "Sinais temporais conservadores, auditáveis e submetidos à revisão humana.",
+  ],
+  "scientific-concepts": [
+    "Conceitos Científicos",
+    "Taxonomia controlada, aliases explícitos, evidências rastreáveis e revisão humana.",
   ],
   "scientific-graph": [
     "Mapa Científico",
@@ -80,6 +85,9 @@ function SectionRoute() {
       {state.data && current === "scientific-trends" && Array.isArray(state.data) && (
         <AdminScientificTrends entries={state.data} />
       )}
+      {state.data && current === "scientific-concepts" && Array.isArray(state.data) && (
+        <AdminScientificConcepts entries={state.data} />
+      )}
       {state.data && current === "scientific-graph" && Array.isArray(state.data) && (
         <AdminScientificGraph entries={state.data} />
       )}
@@ -88,6 +96,7 @@ function SectionRoute() {
           "scientific-radar",
           "scientific-memory",
           "scientific-trends",
+          "scientific-concepts",
           "scientific-graph",
         ].includes(current) &&
         (Array.isArray(state.data) ? (
