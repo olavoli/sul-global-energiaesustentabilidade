@@ -1,5 +1,12 @@
 # Inventário técnico
 
+## Sprint 28
+
+- `scripts/scientific-evidence/`: contratos, scaffold, readiness, checksum, storage, revisão e testes.
+- `scripts/scientific-evidence-cli.ts`: comandos locais dry-run.
+- `src/components/admin/AdminScientificEvidence.tsx`: dossiês privados.
+- Storage ignorado: `newsroom/storage/scientific-evidence/`.
+
 ## Sprint 26
 
 - `scripts/scientific-trends/`: contratos, política, métricas, cobertura, sinais, pipeline, revisão e testes.

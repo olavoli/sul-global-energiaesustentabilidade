@@ -44,6 +44,7 @@ import { reviewGraphRelation } from "../../../scripts/scientific-graph/review";
 import { reviewDuplicateCandidate } from "../../../scripts/entity-resolution/review";
 import { reviewTrend } from "../../../scripts/scientific-trends/review";
 import { reviewConceptRelation } from "../../../scripts/scientific-concepts/review";
+import { reviewEvidence } from "../../../scripts/scientific-evidence/review";
 
 function required(value: string | undefined, label: string): string {
   if (!value?.trim()) throw new Error(`${label} é obrigatório.`);
@@ -67,6 +68,19 @@ function auditSummary(value: unknown): unknown {
 
 async function performAdminAction(input: AdminAction): Promise<unknown> {
   const now = new Date().toISOString();
+  if (input.action.startsWith("evidence:")) {
+    const status = input.action.slice(9) as "verified" | "rejected" | "needs-context";
+    if (!["verified", "rejected", "needs-context"].includes(status))
+      throw new Error("Ação de evidência não permitida.");
+    if (input.values.confirmed !== "true") throw new Error("Confirmação humana obrigatória.");
+    return reviewEvidence({
+      id: required(input.id, "Recurso"),
+      status,
+      actor: input.actor,
+      note: required(input.note, "Justificativa"),
+      now: new Date(now),
+    });
+  }
   if (input.action.startsWith("concept:")) {
     const status = input.action.slice(8) as "accepted" | "rejected" | "ignored";
     if (!["accepted", "rejected", "ignored"].includes(status))

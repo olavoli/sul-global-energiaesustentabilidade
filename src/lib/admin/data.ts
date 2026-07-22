@@ -26,6 +26,7 @@ import { loadScientificGraphs } from "../../../scripts/scientific-graph/store";
 import { loadMemoryState } from "../../../scripts/scientific-memory/store";
 import { loadTrendState } from "../../../scripts/scientific-trends/store";
 import { loadConceptState } from "../../../scripts/scientific-concepts/store";
+import { loadEvidenceState } from "../../../scripts/scientific-evidence/store";
 import {
   loadCanonicalEntities,
   loadDuplicateCandidates,
@@ -151,6 +152,7 @@ export async function sectionData(
       })),
     );
   }
+  if (section === "scientific-evidence") return sanitize((await loadEvidenceState()).dossiers);
   if (section === "scientific-graph") return sanitize((await loadScientificGraphs()).value.items);
   if (section === "entity-resolution") {
     const [entities, candidates] = await Promise.all([
@@ -187,6 +189,24 @@ export async function detailData(section: AdminSection, id: string): Promise<unk
       automaticMerge: false,
       generatedContent: false,
     });
+  }
+  if (section === "scientific-evidence") {
+    const state = await loadEvidenceState();
+    const dossier = state.dossiers.find((entry) => entry.dossierId === id);
+    if (dossier)
+      return sanitize({
+        dossier,
+        sources: state.sources.filter(({ sourceId }) => dossier.sourceIds.includes(sourceId)),
+        claims: state.claims.filter(({ claimId }) => dossier.claimIds.includes(claimId)),
+        evidence: state.evidence.filter(({ evidenceId }) =>
+          dossier.evidenceItemIds.includes(evidenceId),
+        ),
+      });
+    return sanitize(
+      state.sources.find(({ sourceId }) => sourceId === id) ??
+        state.claims.find(({ claimId }) => claimId === id) ??
+        state.evidence.find(({ evidenceId }) => evidenceId === id),
+    );
   }
   if (section === "scientific-radar")
     return (await loadScientificRadar()).value.items.find((entry) => entry.id === id);

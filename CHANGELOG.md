@@ -1,5 +1,10 @@
 # Changelog
 
+## Sprint 28 — dossiê científico de evidências
+
+- EvidenceDossier V1 rastreável, storage privado e revisão humana.
+- Coleta externa, conteúdo integral, IA e publicação permanecem bloqueados.
+
 ## Sprint 26 — sinais temporais científicos
 
 - Motor determinístico e conservador sobre a Memória Temporal.

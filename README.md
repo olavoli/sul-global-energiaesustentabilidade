@@ -1,5 +1,9 @@
 # Sul Global
 
+## Sprint 28 — dossiê científico de evidências
+
+O pacote privado organiza fontes, claims e evidências atribuídas sem IA, texto integral ou publicação. A coleta externa permanece bloqueada até autorização humana.
+
 ## Sprint 26 — sinais científicos temporais
 
 O motor privado converte a memória temporal em métricas, cobertura, confiança e warnings determinísticos. É dry-run por padrão, não usa IA, não prevê e não publica. Consulte `docs/SCIENTIFIC_TRENDS.md`.

@@ -1,5 +1,7 @@
 # Roadmap
 
+- Sprint 28: infraestrutura local do EvidenceDossier; coleta controlada depende de autorização humana.
+
 ## Sprint 26
 
 Sinais temporais observacionais e conservadores sobre a memória existente, sem previsão, coleta, agenda ou publicação.

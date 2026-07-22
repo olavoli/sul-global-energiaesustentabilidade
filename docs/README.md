@@ -1,5 +1,13 @@
 # Documentação do Sul Global
 
+## Evidências científicas
+
+- [Scientific Evidence Dossier](SCIENTIFIC_EVIDENCE_DOSSIER.md)
+- [Claims científicos](SCIENTIFIC_CLAIMS.md)
+- [Revisão de evidências](SCIENTIFIC_EVIDENCE_REVIEW.md)
+- [Copyright científico](SCIENTIFIC_EVIDENCE_COPYRIGHT.md)
+- [Limites de evidências](SCIENTIFIC_EVIDENCE_LIMITS.md)
+
 ## Inteligência bibliográfica
 
 - [Grafo Científico](SCIENTIFIC_KNOWLEDGE_GRAPH.md)

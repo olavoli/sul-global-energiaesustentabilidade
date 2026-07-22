@@ -19,6 +19,7 @@ const navigation = [
   ["Memória Temporal", "scientific-memory"],
   ["Tendências Científicas", "scientific-trends"],
   ["Conceitos Científicos", "scientific-concepts"],
+  ["Dossiês de Evidências", "scientific-evidence"],
   ["Mapa Científico", "scientific-graph"],
   ["Identidades", "entity-resolution"],
   ["Configuração", "config"],
