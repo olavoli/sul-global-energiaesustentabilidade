@@ -31,6 +31,7 @@ import {
   loadCanonicalEntities,
   loadDuplicateCandidates,
 } from "../../../scripts/entity-resolution/store";
+import { buildResearchWorkspace } from "../../../scripts/research-workspace/read-model";
 
 function sanitize<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T;
@@ -138,9 +139,22 @@ export async function sectionData(
   if (section === "scientific-radar") return sanitize((await loadScientificRadar()).value.items);
   if (section === "scientific-memory") {
     const memory = await loadMemoryState();
-    return sanitize(Object.values(memory.entities).flat());
+    return sanitize(
+      Object.values(memory.entities)
+        .flat()
+        .map((entity) => ({ ...entity, workspaceWorkId: entity.sources[0] })),
+    );
   }
-  if (section === "scientific-trends") return sanitize((await loadTrendState()).signals);
+  if (section === "scientific-trends") {
+    const [trends, memory] = await Promise.all([loadTrendState(), loadMemoryState()]);
+    const entities = Object.values(memory.entities).flat();
+    return sanitize(
+      trends.signals.map((signal) => ({
+        ...signal,
+        workspaceWorkId: entities.find(({ id }) => signal.sourceMemoryIds.includes(id))?.sources[0],
+      })),
+    );
+  }
   if (section === "scientific-concepts") {
     const state = await loadConceptState();
     return sanitize(
@@ -149,21 +163,46 @@ export async function sectionData(
         relations: state.relations.filter(
           ({ from, to }) => from === concept.id || to === concept.id,
         ),
+        workspaceWorkId: state.relations
+          .filter(({ from, to }) => from === concept.id || to === concept.id)
+          .flatMap(({ from, to }) => [from, to])
+          .find((id) => /^radar-[a-f0-9]{16}$/.test(id)),
       })),
     );
   }
-  if (section === "scientific-evidence") return sanitize((await loadEvidenceState()).dossiers);
-  if (section === "scientific-graph") return sanitize((await loadScientificGraphs()).value.items);
+  if (section === "scientific-evidence")
+    return sanitize(
+      (await loadEvidenceState()).dossiers.map((dossier) => ({
+        ...dossier,
+        workspaceWorkId: dossier.scientificWorkId,
+      })),
+    );
+  if (section === "scientific-graph")
+    return sanitize(
+      (await loadScientificGraphs()).value.items.map((graph) => ({
+        ...graph,
+        workspaceWorkId: graph.scientificWorkId,
+      })),
+    );
   if (section === "entity-resolution") {
-    const [entities, candidates] = await Promise.all([
+    const [entities, candidates, graphs] = await Promise.all([
       loadCanonicalEntities(),
       loadDuplicateCandidates(),
+      loadScientificGraphs(),
     ]);
     return sanitize(
       candidates.value.items.map((candidate) => ({
         ...candidate,
         left: entities.value.items.find(({ id }) => id === candidate.leftEntityId),
         right: entities.value.items.find(({ id }) => id === candidate.rightEntityId),
+        workspaceWorkId: graphs.value.items.find((graph) =>
+          [candidate.leftEntityId, candidate.rightEntityId]
+            .flatMap(
+              (entityId) =>
+                entities.value.items.find(({ id }) => id === entityId)?.sourceNodeIds ?? [],
+            )
+            .some((nodeId) => graph.nodes.some(({ id }) => id === nodeId)),
+        )?.scientificWorkId,
       })),
     );
   }
@@ -176,6 +215,7 @@ export async function sectionData(
 }
 
 export async function detailData(section: AdminSection, id: string): Promise<unknown | undefined> {
+  if (section === "research-workspace") return sanitize(await buildResearchWorkspace(id));
   if (section === "scientific-trends")
     return (await loadTrendState()).signals.find((entry) => entry.id === id);
   if (section === "scientific-concepts") {

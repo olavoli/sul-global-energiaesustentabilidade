@@ -201,3 +201,6 @@ bun run storage:verify
 Import, backup, restore e migrations são dry-run por padrão e exigem `--apply`
 para mutação. Consulte `docs/NEWSROOM_STORAGE.md` e
 `docs/NEWSROOM_BACKUP_RECOVERY.md`.
+# Workspace Editorial de Pesquisa
+
+A Central privada agrega os módulos científicos em `/admin/research-workspace/:scientificWorkId`, com notas e checklist exclusivamente manuais. Consulte `docs/EDITORIAL_RESEARCH_WORKSPACE.md`. Não há IA, geração editorial, publicação ou acesso remoto nesse fluxo.

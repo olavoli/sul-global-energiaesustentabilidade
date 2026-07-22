@@ -271,3 +271,8 @@ O formato segue [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e o 
 - Coleta real limitada a 20 itens por fonte.
 - Fonte empresarial recebe penalidade promocional explícita.
 - `Asia` exige limite de palavra na classificação.
+# Unreleased — Sprint 29
+
+- Adicionado Workspace Editorial de Pesquisa determinístico e privado.
+- Adicionadas notas manuais versionadas e checklist manual auditável.
+- Mantidos IA, geração editorial, publicação e ambientes remotos desabilitados.

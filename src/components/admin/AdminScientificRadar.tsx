@@ -208,6 +208,13 @@ export function AdminScientificRadar({ entries }: { entries: unknown[] }) {
                   >
                     Revisar
                   </Link>
+                  <Link
+                    to="/admin/research-workspace/$scientificWorkId"
+                    params={{ scientificWorkId: entry.id }}
+                    className="text-primary underline underline-offset-4"
+                  >
+                    Workspace
+                  </Link>
                 </TableCell>
               </TableRow>
             ))}
@@ -259,6 +266,13 @@ export function AdminScientificRadarDetail({ entry }: { entry: unknown }) {
         <h3 className="mb-2 font-semibold">Warnings estruturados</h3>
         <WarningSummary entry={work} />
       </div>
+      <Link
+        to="/admin/research-workspace/$scientificWorkId"
+        params={{ scientificWorkId: work.id }}
+        className="inline-block text-primary underline underline-offset-4"
+      >
+        Abrir Workspace de Pesquisa
+      </Link>
     </section>
   );
 }

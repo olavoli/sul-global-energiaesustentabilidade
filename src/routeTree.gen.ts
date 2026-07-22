@@ -23,6 +23,7 @@ import { Route as AutorSlugRouteImport } from './routes/autor.$slug'
 import { Route as ArtigoSlugRouteImport } from './routes/artigo.$slug'
 import { Route as AdminNewsroomRouteImport } from './routes/admin.newsroom'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminResearchWorkspaceScientificWorkIdRouteImport } from './routes/admin.research-workspace.$scientificWorkId'
 import { Route as AdminNewsroomSectionRouteImport } from './routes/admin.newsroom_.$section'
 import { Route as AdminNewsroomSectionIdRouteImport } from './routes/admin.newsroom_.$section.$id'
 
@@ -96,6 +97,12 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
   path: '/admin/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminResearchWorkspaceScientificWorkIdRoute =
+  AdminResearchWorkspaceScientificWorkIdRouteImport.update({
+    id: '/admin/research-workspace/$scientificWorkId',
+    path: '/admin/research-workspace/$scientificWorkId',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AdminNewsroomSectionRoute = AdminNewsroomSectionRouteImport.update({
   id: '/admin/newsroom_/$section',
   path: '/admin/newsroom/$section',
@@ -123,6 +130,7 @@ export interface FileRoutesByFullPath {
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
+  '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRoutesByTo {
@@ -141,6 +149,7 @@ export interface FileRoutesByTo {
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
+  '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRoutesById {
@@ -160,6 +169,7 @@ export interface FileRoutesById {
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/admin/newsroom_/$section': typeof AdminNewsroomSectionRouteWithChildren
+  '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/admin/newsroom_/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRouteTypes {
@@ -180,6 +190,7 @@ export interface FileRouteTypes {
     | '/autor/$slug'
     | '/categoria/$slug'
     | '/admin/newsroom/$section'
+    | '/admin/research-workspace/$scientificWorkId'
     | '/admin/newsroom/$section/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -198,6 +209,7 @@ export interface FileRouteTypes {
     | '/autor/$slug'
     | '/categoria/$slug'
     | '/admin/newsroom/$section'
+    | '/admin/research-workspace/$scientificWorkId'
     | '/admin/newsroom/$section/$id'
   id:
     | '__root__'
@@ -216,6 +228,7 @@ export interface FileRouteTypes {
     | '/autor/$slug'
     | '/categoria/$slug'
     | '/admin/newsroom_/$section'
+    | '/admin/research-workspace/$scientificWorkId'
     | '/admin/newsroom_/$section/$id'
   fileRoutesById: FileRoutesById
 }
@@ -235,6 +248,7 @@ export interface RootRouteChildren {
   AutorSlugRoute: typeof AutorSlugRoute
   CategoriaSlugRoute: typeof CategoriaSlugRoute
   AdminNewsroomSectionRoute: typeof AdminNewsroomSectionRouteWithChildren
+  AdminResearchWorkspaceScientificWorkIdRoute: typeof AdminResearchWorkspaceScientificWorkIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -337,6 +351,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/research-workspace/$scientificWorkId': {
+      id: '/admin/research-workspace/$scientificWorkId'
+      path: '/admin/research-workspace/$scientificWorkId'
+      fullPath: '/admin/research-workspace/$scientificWorkId'
+      preLoaderRoute: typeof AdminResearchWorkspaceScientificWorkIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/newsroom_/$section': {
       id: '/admin/newsroom_/$section'
       path: '/admin/newsroom/$section'
@@ -381,6 +402,8 @@ const rootRouteChildren: RootRouteChildren = {
   AutorSlugRoute: AutorSlugRoute,
   CategoriaSlugRoute: CategoriaSlugRoute,
   AdminNewsroomSectionRoute: AdminNewsroomSectionRouteWithChildren,
+  AdminResearchWorkspaceScientificWorkIdRoute:
+    AdminResearchWorkspaceScientificWorkIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

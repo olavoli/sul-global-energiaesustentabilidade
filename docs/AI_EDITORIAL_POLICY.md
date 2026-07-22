@@ -59,3 +59,6 @@ Não inserir em serviços de IA segredos, dados pessoais, material embargado, fo
 O nome do subsistema não implica geração por IA. A Sprint 11 usa somente parsing, regras lexicais e cálculo determinístico local. Classificação e score organizam revisão, não validam fatos nem produzem texto. Tradução, paráfrase automática e modelos externos não foram conectados.
 
 Na Sprint 13, os 30 itens foram classificados e pontuados por regras locais; três foram apenas inspecionados. Nenhum modelo remoto, tradução, geração, aprovação ou publicação participou do fluxo.
+# Workspace de Pesquisa
+
+O Workspace não usa IA, LLM, embeddings, fuzzy matching, tradução ou geração textual. Busca, agregação, notas e checklist são operações locais, determinísticas ou estritamente humanas.
