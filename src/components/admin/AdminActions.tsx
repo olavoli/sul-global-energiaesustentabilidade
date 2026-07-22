@@ -60,6 +60,11 @@ const actions: Record<string, Array<[string, string, boolean]>> = {
     ["concept:rejected", "Rejeitar relação", true],
     ["concept:ignored", "Ignorar relação", true],
   ],
+  "scientific-evidence": [
+    ["evidence:verified", "Verificar", true],
+    ["evidence:rejected", "Rejeitar", true],
+    ["evidence:needs-context", "Pedir contexto", true],
+  ],
   "entity-resolution": [
     ["entity-resolution:accepted", "Aceitar correspondência", true],
     ["entity-resolution:ignored", "Ignorar", true],

@@ -1,5 +1,9 @@
 # ARCHITECTURE.md — Sul Global
 
+## Evidências científicas privadas
+
+`scripts/scientific-evidence/` usa o adapter de storage, documentos segmentados e API administrativa server-side. Dados operacionais não são importados pelo portal público.
+
 ## Scientific Trend Engine
 
 Camada server-side privada: Memória Temporal → elegibilidade → métricas → cobertura → confiança → warnings → sinal → revisão humana. O storage operacional permanece sob `newsroom/storage/`, fora do bundle público.

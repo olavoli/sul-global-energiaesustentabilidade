@@ -1,5 +1,9 @@
 # Operação da Central Editorial
 
+## Dossiês de Evidências
+
+Revise origem, licença, atribuição, localização e warnings. Verificação exige nota e confirmação. Nenhuma ação cria artigo, resumo, manchete ou publicação.
+
 ## Tendências Científicas
 
 Leia status, cobertura, confiança, razões e warnings antes de revisar. Ações exigem nota e confirmação; solicitar dados, arquivar ou acompanhar não transforma o sinal em fato e não cria conteúdo.

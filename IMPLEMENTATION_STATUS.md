@@ -1,5 +1,11 @@
 # Status de implementação
 
+## Sprint 28 — Scientific Evidence Dossier V1
+
+- [x] Schemas, scaffold local, readiness, checksum, storage e revisão supervisionada.
+- [x] CLI e Central privadas, com coleta externa bloqueada no checkpoint.
+- [x] Sem IA, PDF, texto integral, artigo, publicação, staging ou produção.
+
 ## Sprint 26 — Scientific Trend Engine
 
 - [x] Política versionada, métricas observacionais, cobertura, confiança e warnings.

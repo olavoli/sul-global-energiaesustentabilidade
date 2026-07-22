@@ -1,5 +1,9 @@
 # Política editorial para uso de IA
 
+## Sprint 28
+
+O dossiê não usa IA, LLM, tradução, resumo ou inferência. Claims só podem derivar de fonte autorizada e permanecem atribuídos e sujeitos à revisão humana.
+
 ## Sprint 26
 
 O motor de tendências não usa IA, embeddings, tradução ou geração. Métricas históricas não produzem previsão, causalidade ou narrativa e nunca criam ou publicam conteúdo.

@@ -1,5 +1,11 @@
 # Registro de decisões
 
+## ADR — evidência científica atribuída e supervisionada
+
+**Decisão:** separar metadados, fontes, claims e evidence items em pacote privado versionado. Relações do grafo permanecem `uninterpreted`; coleta depende de autorização humana explícita.
+
+**Consequências:** nenhuma afirmação sem fonte, nenhum texto integral, PDF, figura ou tabela armazenado e nenhuma readiness de publicação.
+
 ## ADR — sinais temporais são observações conservadoras
 
 **Decisão:** derivar sinais somente da Memória Temporal por política JSON versionada, com cobertura própria, confiança temporal e `insufficient-data` fail-safe.
