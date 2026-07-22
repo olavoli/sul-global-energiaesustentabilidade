@@ -45,6 +45,9 @@ import { reviewDuplicateCandidate } from "../../../scripts/entity-resolution/rev
 import { reviewTrend } from "../../../scripts/scientific-trends/review";
 import { reviewConceptRelation } from "../../../scripts/scientific-concepts/review";
 import { reviewEvidence } from "../../../scripts/scientific-evidence/review";
+import { changeResearchNote } from "../../../scripts/research-workspace/notes";
+import { updateResearchChecklist } from "../../../scripts/research-workspace/checklist";
+import { checklistKeys } from "../../../scripts/research-workspace/contracts";
 
 function required(value: string | undefined, label: string): string {
   if (!value?.trim()) throw new Error(`${label} é obrigatório.`);
@@ -68,6 +71,33 @@ function auditSummary(value: unknown): unknown {
 
 async function performAdminAction(input: AdminAction): Promise<unknown> {
   const now = new Date().toISOString();
+  if (input.action.startsWith("research-note:")) {
+    const action = input.action.slice(14) as "create" | "update" | "resolve" | "archive";
+    if (!["create", "update", "resolve", "archive"].includes(action))
+      throw new Error("Ação de nota não permitida.");
+    return changeResearchNote({
+      action,
+      noteId: action === "create" ? undefined : required(input.id, "Nota"),
+      workId: required(input.values.workId as string | undefined, "Trabalho"),
+      dossierId: input.values.dossierId as string | undefined,
+      title: input.values.title as string | undefined,
+      bodyMarkdown: input.values.bodyMarkdown as string | undefined,
+      actor: input.actor,
+      now,
+    });
+  }
+  if (input.action === "research-checklist:toggle") {
+    const key = required(input.values.key as string | undefined, "Item");
+    if (!checklistKeys.includes(key as (typeof checklistKeys)[number]))
+      throw new Error("Item de checklist inválido.");
+    return updateResearchChecklist({
+      workId: required(input.id, "Trabalho"),
+      key: key as (typeof checklistKeys)[number],
+      checked: input.values.checked === "true",
+      actor: input.actor,
+      now,
+    });
+  }
   if (input.action.startsWith("evidence:")) {
     const status = input.action.slice(9) as "verified" | "rejected" | "needs-context";
     if (!["verified", "rejected", "needs-context"].includes(status))
@@ -300,14 +330,19 @@ export async function executeAdminAction(input: AdminAction): Promise<unknown> {
       storageDriver: adapter.driver,
     });
     const result = await performAdminAction(input);
+    const researchAction = input.action.startsWith("research-note:")
+      ? `research.note.${input.action.slice(14)}d`
+      : input.action === "research-checklist:toggle"
+        ? "research.checklist.updated"
+        : input.action;
     await adapter.appendAudit({
       id: crypto.randomUUID(),
       timestamp: startedAt,
       actor: input.actor,
-      action: input.action,
+      action: researchAction,
       entity: input.action.split(":")[0],
       entityId: input.id ?? "global",
-      reason: input.note || undefined,
+      reason: input.action.startsWith("research-") ? undefined : input.note || undefined,
       origin: "editorial-console",
       requestId: input.requestId,
       success: true,

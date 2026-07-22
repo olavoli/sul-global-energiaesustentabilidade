@@ -183,6 +183,19 @@ async function api(
   if (!validAdminResourceId(section.data, id))
     return json({ error: "Identificador inválido." }, 400);
   const detail = await detailData(section.data, id);
+  if (detail && section.data === "research-workspace") {
+    await storageAdapter().appendAudit({
+      id: crypto.randomUUID(),
+      timestamp: new Date().toISOString(),
+      actor: session.actor,
+      action: "research.workspace.opened",
+      entity: "research-workspace",
+      entityId: id,
+      origin: "editorial-console",
+      success: true,
+      version: 1,
+    });
+  }
   return detail ? json({ data: detail }) : json({ error: "Registro não encontrado." }, 404);
 }
 

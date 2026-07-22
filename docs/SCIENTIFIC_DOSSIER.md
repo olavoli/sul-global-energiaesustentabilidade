@@ -9,3 +9,6 @@ Após autorização, pode receber apenas `graphId`, `relatedWorkIds`, `authorIds
 Pergunta central, ângulo, relevância, claims, limitações, contrapontos e notas não são preenchidos pelo grafo.
 
 Sinais temporais podem anexar somente IDs, warnings, data, série observada, elegibilidade e versão da política. Campos interpretativos permanecem vazios.
+# Integração com o Workspace
+
+O Workspace mostra o dossiê estrutural existente sem preencher campos interpretativos. Notas editoriais ficam em storage separado e não alteram o schema científico do dossiê.

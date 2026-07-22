@@ -228,3 +228,6 @@ preserva os JSON existentes; D1 atende produção por binding server-only com
 documentos versionados, tabelas especializadas e transações. A Central, CLI e
 automação compartilham a mesma fronteira. O portal público e o MDX permanecem
 independentes, portanto indisponibilidade da newsroom não derruba conteúdo.
+# Read model de pesquisa
+
+O servidor administrativo compõe um read model por `scientificWorkId` a partir dos stores científicos existentes. Cada loader é isolado, de modo que um módulo ausente resulte em estado parcial. Somente notas e checklist possuem escrita, sempre pelo endpoint administrativo com CSRF.

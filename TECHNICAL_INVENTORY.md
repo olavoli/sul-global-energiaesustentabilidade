@@ -298,3 +298,8 @@ Nenhuma dependência foi removida. A confirmação exige análise do build, gera
 - `NEWSROOM_STORAGE_DRIVER`: `local`, `memory` ou `d1`; produção aceita apenas
   backend durável configurado.
 - Nenhuma dependência, conta, banco, token ou binding real foi adicionado.
+# Workspace de pesquisa
+
+- `scripts/research-workspace/`: contratos, agregação, busca, sanitização, notas e checklist.
+- `src/components/admin/AdminResearchWorkspace.tsx`: UI privada em abas.
+- storage privado: `research-workspace/notes` e `research-workspace/checklists`.

@@ -18,6 +18,7 @@ export const adminSections = [
   "scientific-evidence",
   "scientific-graph",
   "entity-resolution",
+  "research-workspace",
   "config",
 ] as const;
 
@@ -49,5 +50,6 @@ export function validOperationalId(value: string): boolean {
 
 export function validAdminResourceId(section: AdminSection, value: string): boolean {
   if (section === "sources") return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);
+  if (section === "research-workspace") return /^radar-[a-f0-9]{16}$/.test(value);
   return validOperationalId(value);
 }

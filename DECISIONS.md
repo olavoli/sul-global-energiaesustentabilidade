@@ -338,3 +338,6 @@ volumes maiores.
 Produção falha fechada sem D1 e nunca usa local silenciosamente. MDX não migra.
 Há algum acoplamento operacional à plataforma Cloudflare, reduzido pelos
 contratos e testes comuns. Nenhum recurso remoto foi criado nesta Sprint.
+# Sprint 29 — Agregação sem promoção editorial
+
+O Workspace apenas lê estados científicos existentes e representa módulos ausentes como parciais. Notas e checklist são entradas humanas separadas; nenhuma combinação de estados concede prontidão de publicação.

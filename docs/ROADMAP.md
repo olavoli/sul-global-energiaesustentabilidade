@@ -194,3 +194,6 @@ Viabilizar receitas sem comprometer independência editorial, privacidade ou des
 - [x] Provisionar D1 de staging e aplicar migrations com autorização.
 - [x] Testar recuperação em D1 temporário isolado antes de qualquer produção.
 - [ ] Avaliar R2 se relatórios excederem o limite operacional definido.
+# Sprint 29
+
+Workspace Editorial de Pesquisa implementado localmente e aguardando revisão humana. A etapa não inclui publicação nem inicia a Sprint seguinte.

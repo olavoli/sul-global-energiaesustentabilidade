@@ -9,6 +9,7 @@ import { AdminScientificMemory } from "@/components/admin/AdminScientificMemory"
 import { AdminScientificTrends } from "@/components/admin/AdminScientificTrends";
 import { AdminScientificConcepts } from "@/components/admin/AdminScientificConcepts";
 import { AdminScientificEvidence } from "@/components/admin/AdminScientificEvidence";
+import { ResearchWorkspaceLinks } from "@/components/admin/ResearchWorkspaceLinks";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
@@ -51,6 +52,10 @@ const labels: Record<AdminSection, [string, string]> = {
     "Identidades Canônicas",
     "Possíveis duplicatas por regras determinísticas, sempre submetidas à revisão humana.",
   ],
+  "research-workspace": [
+    "Workspace de Pesquisa",
+    "Visão agregada privada para revisão humana, sem geração editorial ou publicação.",
+  ],
   config: ["Configuração", "Políticas, orçamentos e switches em modo somente leitura."],
 };
 
@@ -81,6 +86,9 @@ function SectionRoute() {
     <AdminShell title={title} description={description}>
       {state.loading && <AdminLoading />}
       {state.error && <AdminError message={state.error} />}
+      {state.data && Array.isArray(state.data) && current !== "scientific-radar" && (
+        <ResearchWorkspaceLinks entries={state.data} />
+      )}
       {state.data && current === "scientific-radar" && Array.isArray(state.data) && (
         <AdminScientificRadar entries={state.data} />
       )}

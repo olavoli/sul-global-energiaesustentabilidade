@@ -266,3 +266,6 @@
 - [x] Central e CLI integradas à abstração; portal público permanece isolado.
 - [x] 45 testes de contrato aprovados localmente e no emulador D1.
 - [ ] Provisionar e validar D1 somente após autorização humana.
+# Sprint 29 — Workspace Editorial de Pesquisa
+
+Implementação local em revisão humana: agregação tolerante a estados parciais, busca local, notas versionadas, checklist manual, auditoria sanitizada e rota administrativa privada. Sem commit, push, deploy ou alteração remota nesta etapa.

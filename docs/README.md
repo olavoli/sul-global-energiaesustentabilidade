@@ -110,3 +110,9 @@ Antes de implementar itens descritos como planejados, confirme o estado atual no
 - [NEWSROOM_STORAGE_MIGRATION.md](./NEWSROOM_STORAGE_MIGRATION.md) — migrations e importação.
 - [NEWSROOM_BACKUP_RECOVERY.md](./NEWSROOM_BACKUP_RECOVERY.md) — backup e restauração.
 - [NEWSROOM_STORAGE_SECURITY.md](./NEWSROOM_STORAGE_SECURITY.md) — ameaças e controles.
+# Pesquisa editorial privada
+
+- [Workspace](EDITORIAL_RESEARCH_WORKSPACE.md)
+- [Notas](EDITORIAL_RESEARCH_NOTES.md)
+- [Checklist](EDITORIAL_RESEARCH_CHECKLIST.md)
+- [Segurança](EDITORIAL_RESEARCH_SECURITY.md)

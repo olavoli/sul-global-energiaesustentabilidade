@@ -42,3 +42,6 @@ No staging remoto, login, dashboard, health, logout, persistência de sessão
 entre versões, revogação, replay, rate limit e lock foram validados. A ação
 `run:cleanup` permanece somente planejamento e foi auditada; nenhuma exclusão,
 publicação ou coleta foi executada.
+# Workspace de Pesquisa
+
+Acesse a partir do Radar Científico. Revise as abas, crie notas manuais e altere o checklist somente com evidência humana. Ausência de conceitos ou tendências `insufficient-data` é estado esperado e não deve ser preenchida. Nenhuma ação do Workspace cria conteúdo ou publica.
