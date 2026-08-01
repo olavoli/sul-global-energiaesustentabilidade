@@ -90,16 +90,23 @@ export function createContentRepository(
   };
 }
 
-export const contentRepository = createContentRepository(
-  articleRecords,
-  demoContentEnabled || environmentConfig.isStaging,
-);
+function requestContentRepository(): ContentRepository {
+  return createContentRepository(
+    articleRecords,
+    demoContentEnabled || environmentConfig.isStaging,
+    new Date().toISOString().slice(0, 10),
+  );
+}
 
-export const getPublishedArticles = contentRepository.getPublishedArticles;
-export const getArticleBySlug = contentRepository.getArticleBySlug;
-export const getArticlesByCategory = contentRepository.getArticlesByCategory;
-export const getArticlesByAuthor = contentRepository.getArticlesByAuthor;
-export const getFeaturedArticles = contentRepository.getFeaturedArticles;
-export const getLatestArticles = contentRepository.getLatestArticles;
-export const getRelatedArticles = contentRepository.getRelatedArticles;
-export const searchArticles = contentRepository.searchArticles;
+export const getPublishedArticles = () => requestContentRepository().getPublishedArticles();
+export const getArticleBySlug = (slug: string) => requestContentRepository().getArticleBySlug(slug);
+export const getArticlesByCategory = (slug: string) =>
+  requestContentRepository().getArticlesByCategory(slug);
+export const getArticlesByAuthor = (slug: string) =>
+  requestContentRepository().getArticlesByAuthor(slug);
+export const getFeaturedArticles = () => requestContentRepository().getFeaturedArticles();
+export const getLatestArticles = (limit?: number) =>
+  requestContentRepository().getLatestArticles(limit);
+export const getRelatedArticles = (article: Article, limit?: number) =>
+  requestContentRepository().getRelatedArticles(article, limit);
+export const searchArticles = (query: string) => requestContentRepository().searchArticles(query);

@@ -5,6 +5,7 @@ import { createContentRepository } from "@/content/repository";
 import type { ArticleFrontmatter } from "@/content/schema";
 import { generateRss, generateSitemap } from "@/lib/distribution";
 import { applySecurityHeaders, contentSecurityPolicy } from "@/lib/security-headers";
+import { readFile } from "node:fs/promises";
 
 const realRecord: ArticleFrontmatter = {
   slug: "conteudo-real-validado",
@@ -72,6 +73,12 @@ describe("preparação para produção", () => {
     });
     expect(config.demoContentEnabled).toBeTrue();
     expect(config.indexingEnabled).toBeFalse();
+  });
+
+  test("repositório público não materializa filtro temporal no escopo global", async () => {
+    const source = await readFile("src/content/repository.ts", "utf8");
+    expect(source).toContain("function requestContentRepository()");
+    expect(source).not.toMatch(/export const contentRepository = createContentRepository/);
   });
 
   test("conteúdo real validado é publicável pelo repositório", () => {
