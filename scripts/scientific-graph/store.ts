@@ -6,6 +6,7 @@ import {
   type ScientificDossier,
 } from "../scientific-radar/contracts";
 import { DOSSIERS_KEY, loadScientificDossiers } from "../scientific-radar/store";
+import { assertScientificGraphIntegrity } from "./validation";
 
 export const GRAPH_KEY = "scientific-graph/graphs";
 const empty = { schemaVersion: 1 as const, items: [] as ScientificGraph[] };
@@ -19,6 +20,7 @@ export async function persistScientificGraph(
   adapter: StorageAdapter = storageAdapter(),
   actor = "scientific-graph-cli",
 ): Promise<"persisted" | "unchanged"> {
+  assertScientificGraphIntegrity(graph);
   const current = await loadScientificGraphs(adapter);
   const existing = current.value.items.find(({ id }) => id === graph.id);
   if (
@@ -77,7 +79,7 @@ export async function persistScientificGraph(
   await adapter.appendAudit({
     id: crypto.randomUUID(),
     timestamp: graph.updatedAt,
-    actor,
+    actor: sanitizedAuditActor(actor),
     action: "scientific-graph:persist",
     entity: "scientific-graph",
     entityId: graph.id,
@@ -93,4 +95,11 @@ export async function persistScientificGraph(
     },
   });
   return "persisted";
+}
+
+export function sanitizedAuditActor(actor: string): string {
+  const value = actor.trim();
+  if (!value || /[\\/:=]|api[_-]?key|secret|token|cookie|session/i.test(value))
+    return "local-operator";
+  return value.replace(/[^\p{L}\p{N}@._-]+/gu, "-").slice(0, 80) || "local-operator";
 }

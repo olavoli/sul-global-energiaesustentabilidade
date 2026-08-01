@@ -12,6 +12,7 @@ import { buildScientificGraph } from "./builder";
 import { graphRelationSchema } from "./contracts";
 import { reviewGraphRelation } from "./review";
 import { GRAPH_KEY, loadScientificGraphs, persistScientificGraph } from "./store";
+import { assertScientificGraphIntegrity, validateScientificGraphIntegrity } from "./validation";
 
 function pilot() {
   const timestamp = "2026-07-21T16:46:32.228Z";
@@ -230,6 +231,70 @@ describe("Sprint 23 — Scientific Knowledge Graph V1", () => {
     expect(graph.budget.maxRelations).toBe(150);
   });
 
+  test("validador confirma IDs únicos, referências, proveniência e revisão representada", async () => {
+    const { work, dossier } = await pilot();
+    const { graph } = await buildScientificGraph(work, dossier, {
+      fetcher: sourceFixture().fetcher,
+      now: new Date("2026-07-21T12:00:00Z"),
+    });
+    expect(validateScientificGraphIntegrity(graph)).toEqual({
+      nodes: graph.nodes.length,
+      relations: graph.relations.length,
+      uniqueNodeIds: true,
+      uniqueRelationIds: true,
+      validReferences: true,
+      completeProvenance: true,
+      validConfidence: true,
+      humanReviewRepresented: true,
+    });
+  });
+
+  test("persistência rejeita IDs duplicados e relações para nós inexistentes", async () => {
+    const { work, dossier } = await pilot();
+    const { graph } = await buildScientificGraph(work, dossier, {
+      fetcher: sourceFixture().fetcher,
+    });
+    const duplicate = structuredClone(graph);
+    duplicate.nodes.push(structuredClone(duplicate.nodes[0]));
+    expect(() => assertScientificGraphIntegrity(duplicate)).toThrow("uniqueNodeIds");
+    const orphan = structuredClone(graph);
+    orphan.relations[0].to = "sgn-0000000000000000";
+    expect(() => assertScientificGraphIntegrity(orphan)).toThrow("validReferences");
+  });
+
+  test("proveniência, confiança derivada e histórico humano são obrigatórios", async () => {
+    const { work, dossier } = await pilot();
+    const { graph } = await buildScientificGraph(work, dossier, {
+      fetcher: sourceFixture().fetcher,
+    });
+    const noEvidence = structuredClone(graph);
+    noEvidence.relations[0].sourceEvidence = [];
+    expect(() => assertScientificGraphIntegrity(noEvidence)).toThrow();
+    const wrongConfidence = structuredClone(graph);
+    wrongConfidence.relations[0].confidence =
+      wrongConfidence.relations[0].confidence === "confirmed" ? "probable" : "confirmed";
+    expect(() => assertScientificGraphIntegrity(wrongConfidence)).toThrow("validConfidence");
+    const reviewWithoutHistory = structuredClone(graph);
+    reviewWithoutHistory.relations[0].humanStatus = "accepted";
+    expect(() => assertScientificGraphIntegrity(reviewWithoutHistory)).toThrow(
+      "humanReviewRepresented",
+    );
+  });
+
+  test("entradas idênticas e timestamp fixo produzem saída idêntica", async () => {
+    const { work, dossier } = await pilot();
+    const options = { now: new Date("2026-07-21T12:00:00Z") };
+    const first = await buildScientificGraph(work, dossier, {
+      ...options,
+      fetcher: sourceFixture().fetcher,
+    });
+    const second = await buildScientificGraph(work, dossier, {
+      ...options,
+      fetcher: sourceFixture().fetcher,
+    });
+    expect(second).toEqual(first);
+  });
+
   test("timeout e 429 usam no máximo um retry", async () => {
     const { work, dossier } = await pilot();
     let calls = 0;
@@ -262,13 +327,21 @@ describe("Sprint 23 — Scientific Knowledge Graph V1", () => {
       fetcher: sourceFixture().fetcher,
     });
     expect((await loadScientificGraphs(adapter)).value.items).toHaveLength(0);
-    await persistScientificGraph(graph, adapter);
+    await persistScientificGraph(
+      graph,
+      adapter,
+      "C:\\Users\\Private\\OPENALEX_API_KEY=secret-value",
+    );
     expect((await loadScientificGraphs(adapter)).value.items).toHaveLength(1);
     expect((await adapter.listAudit(10)).items[0]).toMatchObject({
       action: "scientific-graph:persist",
       entityId: graph.id,
+      actor: "local-operator",
       success: true,
     });
+    expect(JSON.stringify((await adapter.listAudit(10)).items[0])).not.toMatch(
+      /secret-value|C:\\Users|OPENALEX_API_KEY|abstract|excerpt/i,
+    );
     const stored = (
       await adapter.getDocument(DOSSIERS_KEY, scientificDossiersDocumentSchema, {
         schemaVersion: 2,
