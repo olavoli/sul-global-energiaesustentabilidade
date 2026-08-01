@@ -79,7 +79,9 @@ export function resolveEnvironment(input: EnvironmentInput): EnvironmentConfig {
     isOfficialProduction,
     isStaging: name === "staging",
     indexingEnabled: isOfficialProduction,
-    demoContentEnabled: name === "development" || name === "test" || demoOptIn,
+    // Staging is an explicit, non-indexable demonstration environment.
+    demoContentEnabled:
+      name === "development" || name === "test" || name === "staging" || demoOptIn,
   });
 }
 

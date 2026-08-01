@@ -42,6 +42,9 @@ export async function runStagingSmoke(options: SmokeOptions): Promise<SmokeCheck
   const checks: SmokeCheck[] = [];
   const publicCases = [
     ["home", "/", 200],
+    ["artigo demo rotulado", "/artigo/hidrogenio-verde-no-brasil-promessa-e-realidade", 200],
+    ["categoria", "/categoria/energia", 200],
+    ["busca", "/busca?q=energia", 200],
     ["autor Olavo", "/autor/olavo-oliveira", 200],
     ["draft invisível", "/artigo/rascunho-como-funciona-matriz-eletrica-brasileira", 404],
     ["robots", "/robots.txt", 200],

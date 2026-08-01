@@ -65,6 +65,15 @@ describe("preparação para produção", () => {
     ).toThrow();
   });
 
+  test("staging expõe somente fixtures rotuladas para validação externa", () => {
+    const config = resolveEnvironment({
+      appEnvironment: "staging",
+      publicSiteUrl: "https://staging.example.test",
+    });
+    expect(config.demoContentEnabled).toBeTrue();
+    expect(config.indexingEnabled).toBeFalse();
+  });
+
   test("conteúdo real validado é publicável pelo repositório", () => {
     expect(createContentRepository([realRecord], false).getPublishedArticles()).toHaveLength(1);
   });

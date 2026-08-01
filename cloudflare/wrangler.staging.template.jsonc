@@ -24,6 +24,9 @@
     },
   ],
   "vars": {
+    "VITE_APP_ENV": "staging",
+    "VITE_PUBLIC_SITE_URL": "https://sul-global-staging.sul-global.workers.dev",
+    "VITE_ALLOW_DEMO_CONTENT": "true",
     "NEWSROOM_ENVIRONMENT": "staging",
     "NEWSROOM_STORAGE_DRIVER": "d1",
     "NEWSROOM_ENABLED": "true",

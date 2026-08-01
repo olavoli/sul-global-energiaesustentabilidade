@@ -22,6 +22,11 @@ os segredos devem ser distintos dos de produção. Indexação, agenda, coleta,
 tradução, orquestração, notificações, anúncios, analytics e publicação ficam
 bloqueados.
 
+A Release Candidate para testes externos usa `VITE_ALLOW_DEMO_CONTENT=true`
+somente no build de staging. Os artigos são fixtures editoriais versionadas e a
+interface exibe um aviso explícito de que o conteúdo é fictício e não deve ser
+citado como notícia. O ambiente de produção recusa esse opt-in em código.
+
 ## Comandos locais seguros
 
 ```bash

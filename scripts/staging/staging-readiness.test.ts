@@ -129,6 +129,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     const source = await readFile("scripts/staging-smoke.ts", "utf8");
     expect(source).not.toContain("console.log(options.adminSecret");
     expect(source).not.toContain("console.log(process.env.STAGING_ADMIN_SECRET");
+    expect(source).toContain("artigo demo rotulado");
   });
 
   test("18-19. admin bloqueia anônimo e funciona autenticado", async () => {
@@ -153,6 +154,8 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
       executeAdminAction({ action: "pipeline:apply", actor: "editor", note: "", values: {} }),
     ).rejects.toThrow("Apply completo");
     const manifest = await readFile("cloudflare/wrangler.staging.template.jsonc", "utf8");
+    expect(manifest).toContain('"VITE_APP_ENV": "staging"');
+    expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles()).toHaveLength(0);
     expect(

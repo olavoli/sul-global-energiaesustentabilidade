@@ -1,4 +1,5 @@
 import { demoContentEnabled } from "@/config/editorial";
+import { environmentConfig } from "@/config/environment";
 import { authors } from "@/data/authors";
 import { categories } from "@/data/categories";
 import { normalize } from "@/lib/format";
@@ -89,7 +90,10 @@ export function createContentRepository(
   };
 }
 
-export const contentRepository = createContentRepository(articleRecords, demoContentEnabled);
+export const contentRepository = createContentRepository(
+  articleRecords,
+  demoContentEnabled || environmentConfig.isStaging,
+);
 
 export const getPublishedArticles = contentRepository.getPublishedArticles;
 export const getArticleBySlug = contentRepository.getArticleBySlug;

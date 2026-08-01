@@ -61,7 +61,9 @@ jobs:
       STAGING_TARGET_CONFIRMATION: STAGING-ONLY
       VITE_APP_ENV: staging
       VITE_PUBLIC_SITE_URL: ${{ vars.STAGING_BASE_URL }}
-      VITE_ALLOW_DEMO_CONTENT: "false"
+      # A RC de staging precisa de fixtures editoriais para testes externos.
+      # O portal exibe um aviso explícito; produção recusa este opt-in em código.
+      VITE_ALLOW_DEMO_CONTENT: "true"
       NEWSROOM_SCHEDULE_ENABLED: "false"
     steps:
       - uses: actions/checkout@v4
