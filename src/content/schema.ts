@@ -62,6 +62,7 @@ export const categorySlugs = [
   "tecnologia",
   "desenvolvimento",
   "transicao-energetica",
+  "funcional",
 ] as const;
 
 export const articleContentTypes = [

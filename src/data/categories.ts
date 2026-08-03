@@ -1,4 +1,5 @@
 import type { Category } from "@/types/content";
+import { normalize } from "@/lib/format";
 
 export const categories = [
   {
@@ -33,8 +34,22 @@ export const categories = [
     description:
       "A geopolítica, o capital e a engenharia da mudança para uma matriz de baixo carbono.",
   },
+  {
+    slug: "funcional",
+    name: "Funcional",
+    description:
+      "Saberes populares, técnicas tradicionais e soluções práticas analisadas com contexto, respeito cultural e olhar técnico.",
+  },
 ] satisfies Category[];
 
 export function getCategory(slug: string): Category | undefined {
   return categories.find((c) => c.slug === slug);
+}
+
+export function searchCategories(query: string): Category[] {
+  const term = normalize(query.trim());
+  if (!term) return [];
+  return categories.filter((category) =>
+    normalize(`${category.name} ${category.description}`).includes(term),
+  );
 }

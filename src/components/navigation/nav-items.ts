@@ -18,6 +18,7 @@ export const primaryNav: NavItem[] = [
     to: "/categoria/$slug",
     params: { slug: "sustentabilidade" },
   },
+  { label: "Funcional", to: "/categoria/$slug", params: { slug: "funcional" } },
   { label: "Tecnologia", to: "/categoria/$slug", params: { slug: "tecnologia" } },
   { label: "Ciência", to: "/categoria/$slug", params: { slug: "ciencia" } },
   {

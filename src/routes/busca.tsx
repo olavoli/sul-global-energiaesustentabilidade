@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { Container } from "@/components/layout/Container";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { searchArticles } from "@/content/repository";
+import { searchCategories } from "@/data/categories";
 import { SEARCH_ROBOTS } from "@/lib/seo";
 
 export const Route = createFileRoute("/busca")({
@@ -30,6 +31,7 @@ function BuscaPage() {
   const [value, setValue] = useState(query);
 
   const results = query ? searchArticles(query) : [];
+  const categoryResults = query ? searchCategories(query) : [];
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -66,12 +68,27 @@ function BuscaPage() {
       </header>
 
       {query ? (
-        results.length > 0 ? (
+        results.length > 0 || categoryResults.length > 0 ? (
           <>
             <p className="mb-6 text-sm text-muted-foreground">
-              {results.length} resultado{results.length === 1 ? "" : "s"} para{" "}
+              {results.length + categoryResults.length} resultado
+              {results.length + categoryResults.length === 1 ? "" : "s"} para{" "}
               <strong className="text-foreground">"{query}"</strong>.
             </p>
+            {categoryResults.length > 0 && (
+              <div className="mb-8 flex flex-wrap gap-2" aria-label="Categorias encontradas">
+                {categoryResults.map((category) => (
+                  <Link
+                    key={category.slug}
+                    to="/categoria/$slug"
+                    params={{ slug: category.slug }}
+                    className="rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground hover:border-primary"
+                  >
+                    Categoria: {category.name}
+                  </Link>
+                ))}
+              </div>
+            )}
             <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {results.map((a) => (
                 <ArticleCard key={a.id} article={a} />

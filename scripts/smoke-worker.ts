@@ -45,7 +45,9 @@ const cases = [
   ["/autor/autoria-pendente", 404],
   ["/autor/autor-inexistente", 404],
   ["/categoria/energia", 200],
+  ["/categoria/funcional", 200],
   ["/busca?q=energia", 200],
+  ["/busca?q=funcional", 200],
   ["/robots.txt", 200],
   ["/sitemap.xml", 200],
   ["/rss.xml", 200],
@@ -77,6 +79,12 @@ assert(home.response.headers.get("x-robots-tag") === "noindex, nofollow", "previ
 
 const search = resultFor("/busca?q=energia");
 assert(search.body.includes("noindex, follow"), "busca deve declarar noindex");
+
+const functionalCategory = resultFor("/categoria/funcional");
+assert(functionalCategory.body.includes("Funcional"), "categoria Funcional deve responder por SSR");
+
+const functionalSearch = resultFor("/busca?q=funcional");
+assert(functionalSearch.body.includes("Busca"), "busca por Funcional deve responder");
 
 const olavo = resultFor("/autor/olavo-oliveira");
 assert(olavo.body.includes("Olavo Oliveira"), "perfil público de Olavo deve responder");
