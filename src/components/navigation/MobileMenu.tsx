@@ -77,7 +77,7 @@ export function MobileMenu({
       </div>
       <nav className="flex-1 overflow-y-auto px-4 py-6">
         <ul className="flex flex-col divide-y divide-border">
-          {primaryNav.map((item) => (
+          {primaryNav.slice(0, 6).map((item) => (
             <li key={item.label}>
               <Link
                 to={item.to}

@@ -8,6 +8,7 @@ export interface NavItem {
 
 export const primaryNav: NavItem[] = [
   { label: "Energia", to: "/categoria/$slug", params: { slug: "energia" } },
+  { label: "Ciência", to: "/categoria/$slug", params: { slug: "ciencia" } },
   {
     label: "Transição Energética",
     to: "/categoria/$slug",
@@ -20,7 +21,6 @@ export const primaryNav: NavItem[] = [
   },
   { label: "Funcional", to: "/categoria/$slug", params: { slug: "funcional" } },
   { label: "Tecnologia", to: "/categoria/$slug", params: { slug: "tecnologia" } },
-  { label: "Ciência", to: "/categoria/$slug", params: { slug: "ciencia" } },
   {
     label: "Desenvolvimento",
     to: "/categoria/$slug",

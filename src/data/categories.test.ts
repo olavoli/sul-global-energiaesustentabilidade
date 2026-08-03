@@ -13,8 +13,15 @@ describe("categoria Funcional", () => {
     });
   });
 
-  test("aparece na navegação principal", () => {
-    expect(primaryNav.slice(0, 5).some((item) => item.params?.slug === "funcional")).toBe(true);
+  test("mantém as seis categorias na ordem da navegação principal", () => {
+    expect(primaryNav.slice(0, 6).map((item) => item.label)).toEqual([
+      "Energia",
+      "Ciência",
+      "Transição Energética",
+      "Sustentabilidade",
+      "Funcional",
+      "Tecnologia",
+    ]);
   });
 
   test("é encontrada por nome e descrição", () => {
