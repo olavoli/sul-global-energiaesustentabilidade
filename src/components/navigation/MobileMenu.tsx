@@ -70,7 +70,7 @@ export function MobileMenu({
           type="button"
           onClick={onClose}
           aria-label="Fechar menu"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <X className="h-5 w-5" aria-hidden />
         </button>
@@ -83,7 +83,7 @@ export function MobileMenu({
                 to={item.to}
                 params={item.params}
                 onClick={onClose}
-                className="block py-4 font-serif text-2xl font-semibold text-foreground"
+                className="block py-4 font-serif text-2xl font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 {item.label}
               </Link>

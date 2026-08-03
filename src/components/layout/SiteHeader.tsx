@@ -1,16 +1,17 @@
 import { Link } from "@tanstack/react-router";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useReducer, useRef } from "react";
 import { Menu, Search } from "lucide-react";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import { MobileMenu } from "@/components/navigation/MobileMenu";
+import { mobileMenuReducer } from "@/components/navigation/mobile-menu-state";
 import { primaryNav } from "@/components/navigation/nav-items";
 
 export function SiteHeader() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, dispatchMenu] = useReducer(mobileMenuReducer, false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
-  const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const closeMenu = useCallback(() => dispatchMenu("close"), []);
   const today = new Intl.DateTimeFormat("pt-BR", {
     weekday: "long",
     day: "2-digit",
@@ -35,11 +36,11 @@ export function SiteHeader() {
           <button
             ref={menuTriggerRef}
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
             aria-label="Abrir menu"
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation-dialog"
-            onClick={() => setMenuOpen(true)}
+            onClick={() => dispatchMenu("toggle")}
           >
             <Menu className="h-5 w-5" aria-hidden />
           </button>
