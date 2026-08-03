@@ -81,7 +81,7 @@ export function SiteFooter() {
             Perfis oficiais em redes sociais serão anunciados em breve.
           </p>
           <ul
-            className="mt-3 flex gap-3 text-sm text-muted-foreground"
+            className="mt-3 flex flex-wrap gap-3 text-sm text-muted-foreground"
             aria-label="Redes sociais (em breve)"
           >
             <li className="rounded border border-dashed border-border px-2 py-1">LinkedIn</li>
