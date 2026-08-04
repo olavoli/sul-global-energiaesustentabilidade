@@ -9,7 +9,7 @@ export function absoluteSiteUrl(pathOrUrl: string, baseUrl = normalizeSiteUrl(un
 const url = environmentConfig.publicSiteUrl;
 
 export const siteConfig = Object.freeze({
-  name: "Sul Global",
+  name: "Sul Global Energia e Sustentabilidade",
   description:
     "Reportagem e análise sobre energia, transição energética, sustentabilidade, ciência, tecnologia e desenvolvimento no Brasil e no mundo.",
   url,
@@ -19,7 +19,7 @@ export const siteConfig = Object.freeze({
   language: "pt-BR",
   // Ativo editorial provisório; requer validação do fundador antes do lançamento.
   socialImage: absoluteSiteUrl("/images/social/sul-global-editorial-placeholder.svg", url),
-  socialImageAlt: "Sul Global — energia, ciência e desenvolvimento",
+  socialImageAlt: "Sul Global Energia e Sustentabilidade — energia, ciência e desenvolvimento",
   socialImageWidth: 1200,
   socialImageHeight: 630,
 });

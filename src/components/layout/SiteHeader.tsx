@@ -24,7 +24,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="border-b border-border/60 bg-primary text-primary-foreground">
         <Container className="flex h-8 items-center justify-between">
-          <span className="overline">Sul Global — Jornalismo de energia e transição</span>
+          <span className="overline">Sul Global Energia e Sustentabilidade</span>
           <span className="hidden overline sm:inline" suppressHydrationWarning>
             {today}
           </span>

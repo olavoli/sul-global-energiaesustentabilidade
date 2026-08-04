@@ -9,8 +9,11 @@ export function SiteFooter() {
       <Container className="grid gap-10 py-14 md:grid-cols-4">
         <div>
           <h2 className="font-serif text-xl font-bold text-foreground">
-            Sul<span className="text-primary">Global</span>
+            Sul <span className="text-primary">Global</span>
           </h2>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+            Energia e Sustentabilidade
+          </p>
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
             Jornalismo editorial brasileiro sobre energia, transição, ciência e desenvolvimento —
             para leitores que precisam de rigor técnico, não manchete.
@@ -99,7 +102,7 @@ export function SiteFooter() {
       </Container>
       <div className="border-t border-border">
         <Container className="flex flex-col items-start justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {year} Sul Global. Todos os direitos reservados.</p>
+          <p>© {year} Sul Global Energia e Sustentabilidade. Todos os direitos reservados.</p>
           <p>Publicado em português brasileiro.</p>
         </Container>
       </div>
