@@ -41,5 +41,38 @@ describe("interação do menu móvel", () => {
     expect(menu).toContain('document.body.style.overflow = "hidden"');
     expect(menu).toContain("returnFocusTarget?.focus()");
     expect(menu).toContain("onClick={onClose}");
+    expect(menu).toContain("closeButtonRef.current?.focus()");
+  });
+
+  test("renderiza um drawer modal portaled acima da aplicação", () => {
+    const menu = readFileSync(new URL("./MobileMenu.tsx", import.meta.url), "utf8");
+
+    expect(menu).toContain('import { createPortal } from "react-dom"');
+    expect(menu).toContain("document.body");
+    expect(menu).toContain('role="dialog"');
+    expect(menu).toContain('aria-modal="true"');
+    expect(menu).toContain('aria-labelledby="mobile-navigation-title"');
+    expect(menu).toContain("fixed inset-0 z-[100]");
+    expect(menu).toContain("h-dvh w-4/5 max-w-[360px]");
+    expect(menu).toContain("slide-in-from-left");
+    expect(menu).toContain("motion-reduce:animate-none");
+  });
+
+  test("backdrop fecha e seção institucional permanece completa", () => {
+    const menu = readFileSync(new URL("./MobileMenu.tsx", import.meta.url), "utf8");
+
+    expect(menu).toContain('aria-label="Fechar menu ao clicar fora"');
+    expect(menu).toContain('aria-label="Fechar menu"');
+    for (const label of [
+      "Sobre",
+      "Contato",
+      "Busca",
+      "Privacidade",
+      "Termos",
+      "Política editorial",
+      "Metodologia",
+    ]) {
+      expect(menu).toContain(`["${label}",`);
+    }
   });
 });
