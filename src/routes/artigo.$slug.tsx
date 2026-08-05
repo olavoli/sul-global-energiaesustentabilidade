@@ -12,6 +12,7 @@ import { EditorialImage } from "@/components/media/EditorialImage";
 import { EditorialBreadcrumb } from "@/components/navigation/EditorialBreadcrumb";
 import { SponsoredDisclosure } from "@/components/editorial/SponsoredDisclosure";
 import { EditorialHistory } from "@/components/editorial/EditorialHistory";
+import { DemoContentNotice } from "@/components/layout/DemoContentNotice";
 import { getArticleBySlug, getRelatedArticles } from "@/content/repository";
 import type { Article } from "@/types/content";
 import { articleJsonLd, breadcrumbJsonLd, resolveCanonical, socialMeta } from "@/lib/seo";
@@ -96,6 +97,7 @@ function ArticleDetail() {
 
   return (
     <article>
+      <DemoContentNotice visible={article.isDemo} />
       <Container className="pt-10 pb-4 md:pt-14">
         <div className="mx-auto max-w-3xl text-center">
           <EditorialBreadcrumb

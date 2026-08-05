@@ -15,7 +15,6 @@ import { reportError } from "../lib/observability";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SkipLink } from "@/components/layout/SkipLink";
-import { DemoContentNotice } from "@/components/layout/DemoContentNotice";
 import { siteConfig } from "@/config/site";
 
 function NotFoundComponent() {
@@ -143,7 +142,6 @@ function RootComponent() {
         <Outlet />
       ) : (
         <div className="flex min-h-dvh flex-col bg-background text-foreground">
-          <DemoContentNotice />
           <SiteHeader />
           <main id="conteudo" className="flex-1">
             {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}

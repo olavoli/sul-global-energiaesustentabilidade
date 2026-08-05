@@ -59,11 +59,12 @@ describe("Sprint 17 — Central Editorial", () => {
   });
 
   test("20. decisão não publica", async () => {
+    const before = getPublishedArticles().map(({ slug }) => slug);
     const decision = (await loadDecisions())[0];
     expect(() =>
       applyHumanDecision(decision, "publish" as never, "fundador", "nota", "2026-07-16T12:00:00Z"),
     ).not.toThrow();
-    expect(getPublishedArticles()).toHaveLength(0);
+    expect(getPublishedArticles().map(({ slug }) => slug)).toEqual(before);
   });
 
   test("21. approve-for-pitch não cria artigo", async () => {

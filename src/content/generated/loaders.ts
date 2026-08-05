@@ -20,6 +20,7 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/leilao-a-6-analise-resultado-preliminar.mdx"),
   "materiais-criticos-e-a-nova-geopolitica-mineral": () =>
     import("../../../content/articles/materiais-criticos-e-a-nova-geopolitica-mineral.mdx"),
+  "o-que-e-energia": () => import("../../../content/articles/o-que-e-energia.mdx"),
   "rascunho-como-funciona-matriz-eletrica-brasileira": () =>
     import("../../../content/articles/rascunho-como-funciona-matriz-eletrica-brasileira.mdx"),
   "redes-inteligentes-e-o-desafio-do-consumidor-ativo": () =>

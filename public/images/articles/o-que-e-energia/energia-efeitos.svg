@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Energia percebida por seus efeitos</title>
+  <desc id="desc">Diagrama com energia no centro conectada a movimento, aquecimento, luz e transformações químicas.</desc>
+  <rect width="1200" height="675" fill="#f6f8f4"/>
+  <g fill="none" stroke="#6b7280" stroke-width="5">
+    <path d="M600 250V145"/><path d="M600 425V530"/><path d="M485 337H300"/><path d="M715 337H900"/>
+  </g>
+  <g fill="#ffffff" stroke="#166534" stroke-width="5">
+    <rect x="455" y="250" width="290" height="175" rx="28" fill="#166534"/>
+    <rect x="450" y="55" width="300" height="90" rx="20"/>
+    <rect x="450" y="530" width="300" height="90" rx="20"/>
+    <rect x="90" y="292" width="210" height="90" rx="20"/>
+    <rect x="900" y="292" width="210" height="90" rx="20"/>
+  </g>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="350" fill="#ffffff" font-size="46" font-weight="700">ENERGIA</text>
+    <text x="600" y="110" fill="#14532d" font-size="30" font-weight="700">AQUECIMENTO</text>
+    <text x="600" y="585" fill="#14532d" font-size="30" font-weight="700">LUZ</text>
+    <text x="195" y="348" fill="#14532d" font-size="30" font-weight="700">MOVIMENTO</text>
+    <text x="1005" y="330" fill="#14532d" font-size="25" font-weight="700">TRANSFORMAÇÕES</text>
+    <text x="1005" y="360" fill="#14532d" font-size="25" font-weight="700">QUÍMICAS</text>
+  </g>
+</svg>

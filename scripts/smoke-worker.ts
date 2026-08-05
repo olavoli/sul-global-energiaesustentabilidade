@@ -34,10 +34,12 @@ function assert(condition: unknown, message: string): asserts condition {
 }
 
 const demoArticle = "/artigo/hidrogenio-verde-no-brasil-promessa-e-realidade";
+const foundationalArticle = "/artigo/o-que-e-energia";
 const pilotArticle = "/artigo/rascunho-como-funciona-matriz-eletrica-brasileira";
 const cases = [
   ["/", 200],
   [demoArticle, expectDemo ? 200 : 404],
+  [foundationalArticle, 200],
   [pilotArticle, 404],
   ["/artigo/artigo-inexistente", 404],
   ["/autor/ana-souza", expectDemo ? 200 : 404],
@@ -85,6 +87,17 @@ assert(functionalCategory.body.includes("Funcional"), "categoria Funcional deve 
 
 const functionalSearch = resultFor("/busca?q=funcional");
 assert(functionalSearch.body.includes("Busca"), "busca por Funcional deve responder");
+
+const foundational = resultFor(foundationalArticle);
+assert(foundational.body.includes("O que é energia?"), "artigo fundamental deve conter o título");
+assert(
+  foundational.body.includes("A energia pode desaparecer?"),
+  "artigo fundamental deve renderizar o conteúdo principal por SSR",
+);
+assert(
+  !foundational.body.includes("o conteúdo editorial exibido é fictício"),
+  "artigo real não deve receber aviso fictício",
+);
 
 const olavo = resultFor("/autor/olavo-oliveira");
 assert(olavo.body.includes("Olavo Oliveira"), "perfil público de Olavo deve responder");

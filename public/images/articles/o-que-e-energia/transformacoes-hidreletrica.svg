@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Transformações de energia em uma hidrelétrica</title>
+  <desc id="desc">Fluxo da água represada até os usos finais, passando por água em movimento, turbina, gerador e eletricidade.</desc>
+  <rect width="1200" height="675" fill="#f6f8f4"/>
+  <text x="600" y="92" text-anchor="middle" fill="#14532d" font-family="Arial, sans-serif" font-size="38" font-weight="700">TRANSFORMAÇÕES EM UMA HIDRELÉTRICA</text>
+  <g fill="#ffffff" stroke="#166534" stroke-width="4">
+    <rect x="45" y="250" width="150" height="120" rx="18"/>
+    <rect x="235" y="250" width="150" height="120" rx="18"/>
+    <rect x="425" y="250" width="150" height="120" rx="18"/>
+    <rect x="615" y="250" width="150" height="120" rx="18"/>
+    <rect x="805" y="250" width="150" height="120" rx="18"/>
+    <rect x="995" y="250" width="160" height="120" rx="18"/>
+  </g>
+  <g fill="none" stroke="#d97706" stroke-width="7" stroke-linecap="round">
+    <path d="M195 310h40"/><path d="M385 310h40"/><path d="M575 310h40"/><path d="M765 310h40"/><path d="M955 310h40"/>
+  </g>
+  <g fill="#d97706">
+    <path d="M228 298l20 12-20 12z"/><path d="M418 298l20 12-20 12z"/><path d="M608 298l20 12-20 12z"/><path d="M798 298l20 12-20 12z"/><path d="M988 298l20 12-20 12z"/>
+  </g>
+  <g fill="#14532d" font-family="Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle">
+    <text x="120" y="295"><tspan x="120">ÁGUA</tspan><tspan x="120" dy="30">REPRESADA</tspan><tspan x="120" dy="30" font-size="18" font-weight="400">energia potencial</tspan></text>
+    <text x="310" y="295"><tspan x="310">ÁGUA EM</tspan><tspan x="310" dy="30">MOVIMENTO</tspan><tspan x="310" dy="30" font-size="18" font-weight="400">energia cinética</tspan></text>
+    <text x="500" y="325">TURBINA</text>
+    <text x="690" y="325">GERADOR</text>
+    <text x="880" y="310"><tspan x="880">ENERGIA</tspan><tspan x="880" dy="30">ELÉTRICA</tspan></text>
+    <text x="1075" y="310"><tspan x="1075">USOS</tspan><tspan x="1075" dy="30">FINAIS</tspan></text>
+  </g>
+</svg>
