@@ -1,28 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
-  <title id="title">Transformações de energia em uma hidrelétrica</title>
-  <desc id="desc">Fluxo da água represada até os usos finais, passando por água em movimento, turbina, gerador e eletricidade.</desc>
-  <rect width="1200" height="675" fill="#f6f8f4"/>
-  <text x="600" y="92" text-anchor="middle" fill="#14532d" font-family="Arial, sans-serif" font-size="38" font-weight="700">TRANSFORMAÇÕES EM UMA HIDRELÉTRICA</text>
-  <g fill="#ffffff" stroke="#166534" stroke-width="4">
-    <rect x="45" y="250" width="150" height="120" rx="18"/>
-    <rect x="235" y="250" width="150" height="120" rx="18"/>
-    <rect x="425" y="250" width="150" height="120" rx="18"/>
-    <rect x="615" y="250" width="150" height="120" rx="18"/>
-    <rect x="805" y="250" width="150" height="120" rx="18"/>
-    <rect x="995" y="250" width="160" height="120" rx="18"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="hidro-title hidro-desc">
+  <title id="hidro-title">Da energia potencial da água aos usos finais da eletricidade</title>
+  <desc id="hidro-desc">Paisagem contínua de uma hidrelétrica. A água do reservatório elevado desce pela barragem e pelo conduto, gira a turbina conectada ao gerador e a eletricidade segue por linhas de transmissão até casas com usos de luz, movimento e aquecimento.</desc>
+  <rect width="1200" height="675" rx="28" fill="#f5f3e9"/>
+  <path d="M0 350 95 290l85 14 74-71 101 20 70 78 99 8 83 72 122 12 116 72 175 19v161H0z" fill="#dfe8d3"/>
+  <path d="M0 252c77-10 139-5 214 5l52 7v125H0z" fill="#78b9cd"/>
+  <path d="M0 274c76-10 148-2 257 11" fill="none" stroke="#f5f3e9" stroke-width="7" opacity=".75"/>
+  <path d="M253 221h111l44 284H288z" fill="#bec5b8" stroke="#174b35" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M270 239h78m-67 55h76m-65 55h74" fill="none" stroke="#f5f3e9" stroke-width="5" opacity=".8"/>
+  <path d="M286 269c42 58 45 133 84 194" fill="none" stroke="#347f9b" stroke-width="32" stroke-linecap="round"/>
+  <path d="M289 278c38 54 42 128 77 178" fill="none" stroke="#b9e4ee" stroke-width="9" stroke-linecap="round"/>
+  <path d="m319 328 13 26-27-8m42 51 13 27-28-9" fill="#f5f3e9"/>
+  <path d="M344 458h197l41 105H303z" fill="#fffdf6" stroke="#174b35" stroke-width="5"/>
+  <circle cx="406" cy="506" r="42" fill="#347f9b" stroke="#174b35" stroke-width="5"/>
+  <path d="M406 470v72m-36-36h72m-62-26 52 52m0-52-52 52" stroke="#f5f3e9" stroke-width="7"/>
+  <path d="M448 506h46" stroke="#d68a18" stroke-width="10"/>
+  <rect x="494" y="472" width="62" height="69" rx="12" fill="#e6a522" stroke="#174b35" stroke-width="5"/>
+  <path d="M525 484v45m-20-22h40" stroke="#174b35" stroke-width="5"/>
+  <g fill="none" stroke="#174b35" stroke-width="5">
+    <path d="M586 280v243m-47-188h94m-73 0-28 188m54-188 28 188M561 397h50"/>
+    <path d="M719 327v213m-42-165h84m-63 0-25 165m46-165 25 165M698 429h45"/>
   </g>
-  <g fill="none" stroke="#d97706" stroke-width="7" stroke-linecap="round">
-    <path d="M195 310h40"/><path d="M385 310h40"/><path d="M575 310h40"/><path d="M765 310h40"/><path d="M955 310h40"/>
+  <g fill="none" stroke="#d68a18" stroke-width="5">
+    <path d="M548 493 586 335 719 375 847 434"/>
+    <path d="M539 478 586 322 719 362 855 420"/>
   </g>
-  <g fill="#d97706">
-    <path d="M228 298l20 12-20 12z"/><path d="M418 298l20 12-20 12z"/><path d="M608 298l20 12-20 12z"/><path d="M798 298l20 12-20 12z"/><path d="M988 298l20 12-20 12z"/>
+  <g fill="#fffdf6" stroke="#174b35" stroke-width="5">
+    <path d="m825 474 74-58 74 58v107H825z"/><path d="m951 492 66-51 66 51v89H951z"/>
   </g>
-  <g fill="#14532d" font-family="Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle">
-    <text x="120" y="295"><tspan x="120">ÁGUA</tspan><tspan x="120" dy="30">REPRESADA</tspan><tspan x="120" dy="30" font-size="18" font-weight="400">energia potencial</tspan></text>
-    <text x="310" y="295"><tspan x="310">ÁGUA EM</tspan><tspan x="310" dy="30">MOVIMENTO</tspan><tspan x="310" dy="30" font-size="18" font-weight="400">energia cinética</tspan></text>
-    <text x="500" y="325">TURBINA</text>
-    <text x="690" y="325">GERADOR</text>
-    <text x="880" y="310"><tspan x="880">ENERGIA</tspan><tspan x="880" dy="30">ELÉTRICA</tspan></text>
-    <text x="1075" y="310"><tspan x="1075">USOS</tspan><tspan x="1075" dy="30">FINAIS</tspan></text>
+  <g fill="#e6a522" stroke="#174b35" stroke-width="4">
+    <rect x="854" y="500" width="30" height="34"/><rect x="912" y="500" width="30" height="34"/>
+    <rect x="986" y="508" width="27" height="31"/><rect x="1036" y="508" width="27" height="31"/>
+  </g>
+  <path d="M872 487c0-18 13-31 28-31s28 13 28 31" fill="none" stroke="#d68a18" stroke-width="5"/>
+  <path d="M1006 472v-34m-13 0h26m-13 0-17-20m17 20 17-20" fill="none" stroke="#347f9b" stroke-width="5"/>
+  <path d="M1060 458c-10-16 11-20 0-38m27 38c-10-16 11-20 0-38" fill="none" stroke="#d68a18" stroke-width="5"/>
+  <g fill="#174b35" font-family="Arial, sans-serif" font-size="21" font-weight="700" text-anchor="middle">
+    <text x="140" y="205">ENERGIA POTENCIAL</text>
+    <text x="334" y="180">MOVIMENTO DA ÁGUA</text>
+    <text x="446" y="610">ROTAÇÃO MECÂNICA</text>
+    <text x="680" y="270">ENERGIA ELÉTRICA</text>
+    <text x="951" y="625">USOS FINAIS</text>
   </g>
 </svg>

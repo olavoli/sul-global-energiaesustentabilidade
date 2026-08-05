@@ -292,11 +292,11 @@ export const articleRecords = [
     readingTime: 12,
     cover: {
       src: "/images/articles/o-que-e-energia/energia-efeitos.svg",
-      alt: "Energia no centro conectada a movimento, aquecimento, luz e transformações químicas",
+      alt: "A energia é reconhecida pelos efeitos e pelas transformações que provoca, como movimento, aquecimento, luz e processos químicos e elétricos",
       decorative: false,
       width: 1200,
       height: 675,
-      caption: "Energia percebida por seus efeitos.",
+      caption: "Figura 1. Energia percebida por seus efeitos.",
       credit: "Fonte: Elaboração própria (SGES, 2026).",
       license: "Elaboração própria (SGES, 2026)",
     },
