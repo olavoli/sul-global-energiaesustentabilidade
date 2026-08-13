@@ -56,26 +56,26 @@ describe("Artigo 001 — O que é energia?", () => {
     expect(parsed.body).not.toContain("F001");
   });
 
-  test("usa três SVGs próprios com acessibilidade, legenda e crédito", () => {
+  test("usa três raster editoriais responsivos com acessibilidade, legenda e crédito", () => {
     const figureSources = [
-      "energia-efeitos.svg",
-      "transformacoes-hidreletrica.svg",
-      "conservacao-energia.svg",
+      "art-001-o-que-e-energia-editorial.png",
+      "art-001-hidreletrica-transformacoes-editorial.png",
+      "art-001-conservacao-energia-editorial.png",
     ];
     expect(parsed.frontmatter.cover.src).toContain(figureSources[0]);
     expect(parsed.body).toContain(figureSources[1]);
     expect(parsed.body).toContain(figureSources[2]);
     expect((source.match(/Fonte: Elaboração própria \(SGES, 2026\)\./g) ?? []).length).toBe(3);
 
+    expect(parsed.frontmatter.cover.sources).toHaveLength(3);
+    expect(source).not.toContain("outras perdas");
+
     for (const filename of figureSources) {
-      const svg = readFileSync(
-        new URL(`../../public/images/articles/o-que-e-energia/${filename}`, import.meta.url),
-        "utf8",
-      );
-      expect(svg).toContain('role="img"');
-      expect(svg).toContain("<title");
-      expect(svg).toContain("<desc");
-      expect(svg).not.toContain("<image");
+      expect(() =>
+        readFileSync(
+          new URL(`../../public/images/articles/o-que-e-energia/${filename}`, import.meta.url),
+        ),
+      ).not.toThrow();
     }
   });
 
@@ -92,6 +92,9 @@ describe("Artigo 001 — O que é energia?", () => {
         .filter(
           ({ slug }) =>
             slug !== "o-que-e-energia" &&
+            slug !== "o-que-e-potencia" &&
+            slug !== "por-que-armazenar-energia-e-tao-dificil" &&
+            slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",
         )
         .every(({ isDemo }) => isDemo),

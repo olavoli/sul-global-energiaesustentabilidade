@@ -21,6 +21,11 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
   "materiais-criticos-e-a-nova-geopolitica-mineral": () =>
     import("../../../content/articles/materiais-criticos-e-a-nova-geopolitica-mineral.mdx"),
   "o-que-e-energia": () => import("../../../content/articles/o-que-e-energia.mdx"),
+  "o-que-e-potencia": () => import("../../../content/articles/o-que-e-potencia.mdx"),
+  "por-que-armazenar-energia-e-tao-dificil": () =>
+    import("../../../content/articles/por-que-armazenar-energia-e-tao-dificil.mdx"),
+  "por-que-nenhuma-maquina-e-100-eficiente": () =>
+    import("../../../content/articles/por-que-nenhuma-maquina-e-100-eficiente.mdx"),
   "rascunho-como-funciona-matriz-eletrica-brasileira": () =>
     import("../../../content/articles/rascunho-como-funciona-matriz-eletrica-brasileira.mdx"),
   "redes-inteligentes-e-o-desafio-do-consumidor-ativo": () =>

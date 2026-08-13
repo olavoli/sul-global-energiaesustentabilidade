@@ -27,6 +27,9 @@ export function Figure({
   alt,
   width,
   height,
+  source720,
+  source1200,
+  sourceFull,
   caption,
   credit,
   sourceUrl,
@@ -34,19 +37,44 @@ export function Figure({
 }: {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
+  source720?: string;
+  source1200?: string;
+  sourceFull?: string;
   caption?: string;
   credit?: string;
   sourceUrl?: string;
   license?: string;
 }) {
+  const normalizedWidth = typeof width === "string" ? Number(width) : width;
+  const normalizedHeight = typeof height === "string" ? Number(height) : height;
+  const responsiveSources = [
+    source720 ? { src: source720, width: 720 } : undefined,
+    source1200 ? { src: source1200, width: 1200 } : undefined,
+    sourceFull && normalizedWidth ? { src: sourceFull, width: normalizedWidth } : undefined,
+  ].filter((source): source is { src: string; width: number } => Boolean(source));
+
   return (
     <figure className="my-8">
       <EditorialImage
-        image={{ src, alt, width, height, caption, credit, sourceUrl, license, decorative: false }}
-        aspectRatio={16 / 9}
+        image={{
+          src,
+          alt,
+          width: normalizedWidth,
+          height: normalizedHeight,
+          sources: responsiveSources.length ? responsiveSources : undefined,
+          caption,
+          credit,
+          sourceUrl,
+          license,
+          decorative: false,
+        }}
+        aspectRatio={
+          normalizedWidth && normalizedHeight ? normalizedWidth / normalizedHeight : 16 / 9
+        }
         sizes="(min-width: 768px) 72ch, 100vw"
+        className="object-contain"
       />
       {(caption || credit || license) && (
         <figcaption className="mt-2 text-xs text-muted-foreground">

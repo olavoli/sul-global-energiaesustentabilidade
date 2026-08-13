@@ -157,7 +157,12 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_APP_ENV": "staging"');
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
-    expect(getPublishedArticles().map(({ slug }) => slug)).toEqual(["o-que-e-energia"]);
+    expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "o-que-e-potencia",
+      "por-que-armazenar-energia-e-tao-dificil",
+      "por-que-nenhuma-maquina-e-100-eficiente",
+      "o-que-e-energia",
+    ]);
     expect(
       await getArticleBySlug("rascunho-como-funciona-matriz-eletrica-brasileira"),
     ).toBeUndefined();
