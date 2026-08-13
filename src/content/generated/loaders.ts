@@ -6,6 +6,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/amazonia-mercado-de-carbono-e-o-risco-de-integridade.mdx"),
   "baterias-de-sodio-a-nova-fronteira-do-armazenamento": () =>
     import("../../../content/articles/baterias-de-sodio-a-nova-fronteira-do-armazenamento.mdx"),
+  "baterias-de-sodio-estao-chegando": () =>
+    import("../../../content/articles/baterias-de-sodio-estao-chegando.mdx"),
   "captura-de-carbono-realidade-tecnica-ou-narrativa": () =>
     import("../../../content/articles/captura-de-carbono-realidade-tecnica-ou-narrativa.mdx"),
   "eolica-offshore-brasileira-marco-regulatorio-em-construcao": () =>

@@ -93,6 +93,7 @@ describe("Artigo 001 — O que é energia?", () => {
           ({ slug }) =>
             slug !== "o-que-e-energia" &&
             slug !== "o-que-e-potencia" &&
+            slug !== "baterias-de-sodio-estao-chegando" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",
