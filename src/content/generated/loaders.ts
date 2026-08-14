@@ -18,6 +18,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/fusao-nuclear-esta-mais-perto-mas-perto-de-que.mdx"),
   "fusao-nuclear-o-que-mudou-em-2026": () =>
     import("../../../content/articles/fusao-nuclear-o-que-mudou-em-2026.mdx"),
+  "geotermia-de-nova-geracao": () =>
+    import("../../../content/articles/geotermia-de-nova-geracao.mdx"),
   "hidrogenio-verde-no-brasil-promessa-e-realidade": () =>
     import("../../../content/articles/hidrogenio-verde-no-brasil-promessa-e-realidade.mdx"),
   "leilao-a-6-analise-resultado-preliminar": () =>

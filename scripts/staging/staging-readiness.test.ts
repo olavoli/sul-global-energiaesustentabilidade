@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "geotermia-de-nova-geracao",
       "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
       "baterias-de-sodio-estao-chegando",
       "fusao-nuclear-esta-mais-perto-mas-perto-de-que",
