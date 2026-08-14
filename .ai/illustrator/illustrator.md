@@ -51,3 +51,11 @@ A peça só está pronta quando:
 - a composição não se parece com slide corporativo, SmartArt ou fluxograma;
 - tipografia, contraste e densidade funcionam no destino final;
 - a autocrítica não contém problema relevante ainda corrigível.
+
+## Crédito editorial para ilustrações com IA
+
+Ilustrações próprias produzidas com auxílio de inteligência artificial devem usar o crédito visível:
+
+> Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (ANO DA PUBLICAÇÃO).
+
+O crédito informa como a imagem foi produzida. As fontes científicas que sustentam dados, conceitos e afirmações permanecem separadas na bibliografia do artigo.

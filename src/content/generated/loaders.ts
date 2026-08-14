@@ -36,6 +36,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/redes-inteligentes-e-o-desafio-do-consumidor-ativo.mdx"),
   "supercondutores-a-temperatura-ambiente-uma-decada-depois": () =>
     import("../../../content/articles/supercondutores-a-temperatura-ambiente-uma-decada-depois.mdx"),
+  "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede": () =>
+    import("../../../content/articles/temos-energia-por-que-nao-conseguimos-conecta-la-a-rede.mdx"),
   "transicao-energetica-justa-alem-do-slogan": () =>
     import("../../../content/articles/transicao-energetica-justa-alem-do-slogan.mdx"),
 };

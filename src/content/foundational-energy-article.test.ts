@@ -22,7 +22,7 @@ describe("Artigo 001 — O que é energia?", () => {
       publishedAt: "2026-08-05",
       updatedAt: "2026-08-05",
       isDemo: false,
-      aiAssistance: "none",
+      aiAssistance: "limited",
     });
     expect(parsed.frontmatter.sources.every((item) => !item.isDemo)).toBeTrue();
   });
@@ -95,6 +95,7 @@ describe("Artigo 001 — O que é energia?", () => {
             slug !== "o-que-e-potencia" &&
             slug !== "baterias-de-sodio-estao-chegando" &&
             slug !== "fusao-nuclear-esta-mais-perto-mas-perto-de-que" &&
+            slug !== "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",

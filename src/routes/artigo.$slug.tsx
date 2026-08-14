@@ -5,6 +5,7 @@ import { CategoryTag } from "@/components/article/CategoryTag";
 import { Byline } from "@/components/article/Byline";
 import { ArticleBody } from "@/components/article/ArticleBody";
 import { SourceList } from "@/components/editorial/SourceList";
+import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
 import { ShareBar } from "@/components/article/ShareBar";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
@@ -161,6 +162,11 @@ function ArticleDetail() {
           )}
 
           <EditorialHistory updateNote={article.updateNote} corrections={article.corrections} />
+
+          <AiEditorialCredit
+            assistance={article.aiAssistance}
+            publicationDate={article.publishedAt ?? article.createdAt}
+          />
 
           <SourceList sources={article.sources} urls={article.sourceUrls} />
 
