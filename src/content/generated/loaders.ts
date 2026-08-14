@@ -28,6 +28,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/materiais-criticos-e-a-nova-geopolitica-mineral.mdx"),
   "o-que-e-energia": () => import("../../../content/articles/o-que-e-energia.mdx"),
   "o-que-e-potencia": () => import("../../../content/articles/o-que-e-potencia.mdx"),
+  "perovskita-silicio-por-que-empilhar-duas-celulas-solares": () =>
+    import("../../../content/articles/perovskita-silicio-por-que-empilhar-duas-celulas-solares.mdx"),
   "por-que-armazenar-energia-e-tao-dificil": () =>
     import("../../../content/articles/por-que-armazenar-energia-e-tao-dificil.mdx"),
   "por-que-nenhuma-maquina-e-100-eficiente": () =>
