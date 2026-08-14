@@ -161,6 +161,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
       "geotermia-de-nova-geracao",
       "perovskita-silicio-por-que-empilhar-duas-celulas-solares",
       "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
+      "uma-bateria-precisa-mesmo-ser-pequena",
       "baterias-de-sodio-estao-chegando",
       "fusao-nuclear-esta-mais-perto-mas-perto-de-que",
       "o-que-e-potencia",

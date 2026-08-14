@@ -98,6 +98,7 @@ describe("Artigo 001 — O que é energia?", () => {
             slug !== "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede" &&
             slug !== "geotermia-de-nova-geracao" &&
             slug !== "perovskita-silicio-por-que-empilhar-duas-celulas-solares" &&
+            slug !== "uma-bateria-precisa-mesmo-ser-pequena" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",

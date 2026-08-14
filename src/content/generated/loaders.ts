@@ -44,4 +44,6 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/temos-energia-por-que-nao-conseguimos-conecta-la-a-rede.mdx"),
   "transicao-energetica-justa-alem-do-slogan": () =>
     import("../../../content/articles/transicao-energetica-justa-alem-do-slogan.mdx"),
+  "uma-bateria-precisa-mesmo-ser-pequena": () =>
+    import("../../../content/articles/uma-bateria-precisa-mesmo-ser-pequena.mdx"),
 };
