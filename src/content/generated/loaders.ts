@@ -14,6 +14,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/eolica-offshore-brasileira-marco-regulatorio-em-construcao.mdx"),
   "financiamento-verde-e-o-custo-do-capital-no-sul-global": () =>
     import("../../../content/articles/financiamento-verde-e-o-custo-do-capital-no-sul-global.mdx"),
+  "fusao-nuclear-esta-mais-perto-mas-perto-de-que": () =>
+    import("../../../content/articles/fusao-nuclear-esta-mais-perto-mas-perto-de-que.mdx"),
   "fusao-nuclear-o-que-mudou-em-2026": () =>
     import("../../../content/articles/fusao-nuclear-o-que-mudou-em-2026.mdx"),
   "hidrogenio-verde-no-brasil-promessa-e-realidade": () =>
