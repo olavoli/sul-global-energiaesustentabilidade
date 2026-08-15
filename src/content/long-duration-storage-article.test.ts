@@ -59,9 +59,11 @@ describe("ART-010 — armazenamento de longa duração", () => {
     }
   });
 
-  test("aplica o crédito editorial de IA às três imagens", () => {
-    const credit =
-      "Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (2026).";
-    expect(source.split(credit)).toHaveLength(4);
+  test("atribui nominalmente apenas as duas imagens comprovadas", () => {
+    expect(source.match(/tool: "GPT Image 2, OpenAI"/g)).toHaveLength(1);
+    expect(source.match(/aiGenerationTool="GPT Image 2, OpenAI"/g)).toHaveLength(1);
+    expect(source).toContain(
+      "Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (2026).",
+    );
   });
 });

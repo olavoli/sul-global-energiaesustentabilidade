@@ -463,8 +463,16 @@ export const articleRecords = [
       height: 1024,
       caption:
         "Figura 1. O acesso a rochas quentes em profundidade é uma das fronteiras da geotermia de nova geração. O brilho representa graficamente o aumento de temperatura, não magma ou rocha fundida.",
-      credit:
-        "Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "GPT Image 2, OpenAI",
+          },
+        ],
+        year: 2026,
+      },
       license: "Elaboração própria com auxílio de IA (SGES, 2026)",
       sources: [
         {
@@ -1070,8 +1078,16 @@ export const articleRecords = [
       height: 1024,
       caption:
         "Figura 1. Representação editorial de uma célula tandem perovskita-silício: uma camada fotovoltaica muito fina de perovskita trabalha sobre a célula de silício.",
-      credit:
-        "Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "GPT Image 2, OpenAI",
+          },
+        ],
+        year: 2026,
+      },
       license: "Elaboração própria com auxílio de IA (SGES, 2026)",
       sources: [
         {
@@ -1695,8 +1711,16 @@ export const articleRecords = [
       height: 1024,
       caption:
         "Figura 1. Sistemas estacionários de armazenamento podem ser dimensionados para atender diferentes necessidades da rede elétrica. Representação editorial conceitual, sem atribuição a uma química específica.",
-      credit:
-        "Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "GPT Image 2, OpenAI",
+          },
+        ],
+        year: 2026,
+      },
       license: "Elaboração própria com auxílio de IA (SGES, 2026)",
       sources: [
         {

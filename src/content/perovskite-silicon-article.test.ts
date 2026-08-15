@@ -57,9 +57,8 @@ describe("ART-009 — tandem perovskita-silício", () => {
     }
   });
 
-  test("aplica crédito editorial de IA às três imagens", () => {
-    const credit =
-      "Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (2026).";
-    expect(source.split(credit)).toHaveLength(4);
+  test("aplica proveniência nominal comprovada às três imagens", () => {
+    expect(source.match(/tool: "GPT Image 2, OpenAI"/g)).toHaveLength(1);
+    expect(source.match(/aiGenerationTool="GPT Image 2, OpenAI"/g)).toHaveLength(2);
   });
 });
