@@ -17,6 +17,37 @@ export const responsiveImageSourceSchema = z.object({
   width: z.number().int().positive(),
 });
 
+export const imageAiContributionSchema = z.object({
+  role: z.enum(["generation", "editing"]),
+  tool: z.string().trim().min(2).max(80),
+});
+
+export const imageAiProvenanceSchema = z
+  .object({
+    status: z.enum(["verified", "partially-verified", "unverified"]),
+    contributions: z.array(imageAiContributionSchema).max(4).default([]),
+    year: z.number().int().min(2000).max(2100),
+  })
+  .superRefine((provenance, context) => {
+    if (
+      provenance.status === "verified" &&
+      !provenance.contributions.some((contribution) => contribution.role === "generation")
+    ) {
+      context.addIssue({
+        code: "custom",
+        path: ["contributions"],
+        message: "Proveniência verificada exige a ferramenta responsável pela geração.",
+      });
+    }
+    if (provenance.status === "unverified" && provenance.contributions.length > 0) {
+      context.addIssue({
+        code: "custom",
+        path: ["contributions"],
+        message: "Proveniência não verificada não pode atribuir ferramentas nominalmente.",
+      });
+    }
+  });
+
 export const editorialImageSchema = z
   .object({
     src: mediaSourceSchema,
@@ -26,6 +57,7 @@ export const editorialImageSchema = z
     height: z.number().int().positive().optional(),
     caption: z.string().min(1).optional(),
     credit: z.string().min(1).optional(),
+    aiProvenance: imageAiProvenanceSchema.optional(),
     sourceUrl: z.url().optional(),
     license: z.string().min(1).optional(),
     focalPoint: z
@@ -289,6 +321,8 @@ export type ArticleFrontmatter = z.infer<typeof articleFrontmatterSchema>;
 export type ArticleStatus = ArticleFrontmatter["status"];
 export type ArticleContentType = ArticleFrontmatter["contentType"];
 export type EditorialImage = z.infer<typeof editorialImageSchema>;
+export type ImageAiProvenance = z.infer<typeof imageAiProvenanceSchema>;
+export type ImageAiContribution = z.infer<typeof imageAiContributionSchema>;
 export type ResponsiveImageSource = z.infer<typeof responsiveImageSourceSchema>;
 export type EditorialSource = z.infer<typeof editorialSourceSchema>;
 export type CorrectionEntry = z.infer<typeof correctionEntrySchema>;

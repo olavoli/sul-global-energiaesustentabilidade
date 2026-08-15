@@ -56,6 +56,25 @@ A peça só está pronta quando:
 
 Ilustrações próprias produzidas com auxílio de inteligência artificial devem usar o crédito visível:
 
-> Fonte: elaboração própria com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (ANO DA PUBLICAÇÃO).
+> Fonte: Imagem gerada por IA (_[Nome da Ferramenta]_), sob curadoria, direção editorial e conferência técnica de Olavo Oliveira, SGES ([ano]).
+
+O nome da ferramenta é dado estruturado de proveniência, não texto livre da legenda. Toda imagem
+criada ou modificada com IA deve identificar nominalmente a ferramenta utilizada quando essa
+informação puder ser comprovada. “IA” isoladamente não substitui a identificação da ferramenta.
+A atribuição nunca deve ser inferida por aparência, estilo, nome do arquivo ou fornecedor
+presumido.
+
+Quando disponíveis, manifestos C2PA e outros metadados de proveniência incorporados ao arquivo
+original são a evidência prioritária para identificar gerador, versão ou modelo e fornecedor. A
+auditoria deve examinar o ativo-fonte, não apenas derivados WebP, AVIF ou outros formatos
+otimizados, pois a conversão pode remover esses metadados. A ausência de C2PA no arquivo não
+comprova ausência de IA; nesse caso, devem ser consultados registros técnicos e editoriais
+independentes antes de classificar ou nomear a ferramenta.
+
+Quando uma edição posterior também usar IA e houver evidência, registre separadamente os papéis
+`generation` e `editing`. Conversão de formato, redimensionamento, compressão, recorte ou outra
+edição determinística não altera a ferramenta responsável pela geração. Sem evidência suficiente,
+classifique a proveniência como parcial ou não verificada e encaminhe a pendência à revisão humana;
+o template não deve fabricar um crédito nominal.
 
 O crédito informa como a imagem foi produzida. As fontes científicas que sustentam dados, conceitos e afirmações permanecem separadas na bibliografia do artigo.

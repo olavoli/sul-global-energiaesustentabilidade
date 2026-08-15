@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import { EditorialImage } from "@/components/media/EditorialImage";
+import { imageAiProvenanceSchema } from "@/content/schema";
+import { ImageAiCredit } from "./ImageAiCredit";
 
 /** Highlight an editorial context or caveat inside an article. */
 export function Callout({ title, children }: { title?: string; children: ReactNode }) {
@@ -34,6 +36,10 @@ export function Figure({
   credit,
   sourceUrl,
   license,
+  aiProvenanceStatus,
+  aiGenerationTool,
+  aiEditingTool,
+  aiCreditYear,
 }: {
   src: string;
   alt: string;
@@ -46,6 +52,10 @@ export function Figure({
   credit?: string;
   sourceUrl?: string;
   license?: string;
+  aiProvenanceStatus?: "verified" | "partially-verified" | "unverified";
+  aiGenerationTool?: string;
+  aiEditingTool?: string;
+  aiCreditYear?: number | string;
 }) {
   const normalizedWidth = typeof width === "string" ? Number(width) : width;
   const normalizedHeight = typeof height === "string" ? Number(height) : height;
@@ -54,6 +64,17 @@ export function Figure({
     source1200 ? { src: source1200, width: 1200 } : undefined,
     sourceFull && normalizedWidth ? { src: sourceFull, width: normalizedWidth } : undefined,
   ].filter((source): source is { src: string; width: number } => Boolean(source));
+  const aiContributions = [
+    aiGenerationTool ? { role: "generation" as const, tool: aiGenerationTool } : undefined,
+    aiEditingTool ? { role: "editing" as const, tool: aiEditingTool } : undefined,
+  ].filter((item): item is { role: "generation" | "editing"; tool: string } => Boolean(item));
+  const aiProvenance = aiProvenanceStatus
+    ? imageAiProvenanceSchema.parse({
+        status: aiProvenanceStatus,
+        contributions: aiContributions,
+        year: Number(aiCreditYear),
+      })
+    : undefined;
 
   return (
     <figure className="my-8">
@@ -76,10 +97,12 @@ export function Figure({
         sizes="(min-width: 768px) 72ch, 100vw"
         className="object-contain"
       />
-      {(caption || credit || license) && (
+      {(caption || credit || license || aiProvenance?.status === "verified") && (
         <figcaption className="mt-2 text-xs text-muted-foreground">
           {caption}
-          {caption && (credit || license) ? " — " : ""}
+          {caption && (credit || license || aiProvenance?.status === "verified") ? " — " : ""}
+          <ImageAiCredit provenance={aiProvenance} />
+          {aiProvenance?.status === "verified" && credit ? " · " : ""}
           {sourceUrl && credit ? (
             <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
               {credit}

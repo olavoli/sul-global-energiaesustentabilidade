@@ -6,6 +6,7 @@ import { Byline } from "@/components/article/Byline";
 import { ArticleBody } from "@/components/article/ArticleBody";
 import { SourceList } from "@/components/editorial/SourceList";
 import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
+import { ImageAiCredit } from "@/components/editorial/ImageAiCredit";
 import { ShareBar } from "@/components/article/ShareBar";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
@@ -133,10 +134,19 @@ function ArticleDetail() {
             aspectRatio={16 / 9}
             sizes="(min-width: 1280px) 896px, (min-width: 768px) calc(100vw - 96px), calc(100vw - 32px)"
           />
-          {(article.cover.caption || article.cover.credit) && (
+          {(article.cover.caption ||
+            article.cover.credit ||
+            article.cover.aiProvenance?.status === "verified") && (
             <figcaption className="mt-2 text-xs text-muted-foreground">
               {article.cover.caption}
-              {article.cover.caption && article.cover.credit ? " — " : ""}
+              {article.cover.caption &&
+              (article.cover.credit || article.cover.aiProvenance?.status === "verified")
+                ? " — "
+                : ""}
+              <ImageAiCredit provenance={article.cover.aiProvenance} />
+              {article.cover.aiProvenance?.status === "verified" && article.cover.credit
+                ? " · "
+                : ""}
               {article.cover.credit}
             </figcaption>
           )}

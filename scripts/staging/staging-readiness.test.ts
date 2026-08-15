@@ -159,6 +159,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
       "geotermia-de-nova-geracao",
+      "o-que-acontece-com-um-painel-solar-no-fim-da-vida",
       "perovskita-silicio-por-que-empilhar-duas-celulas-solares",
       "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
       "uma-bateria-precisa-mesmo-ser-pequena",

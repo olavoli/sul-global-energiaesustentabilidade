@@ -26,6 +26,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/leilao-a-6-analise-resultado-preliminar.mdx"),
   "materiais-criticos-e-a-nova-geopolitica-mineral": () =>
     import("../../../content/articles/materiais-criticos-e-a-nova-geopolitica-mineral.mdx"),
+  "o-que-acontece-com-um-painel-solar-no-fim-da-vida": () =>
+    import("../../../content/articles/o-que-acontece-com-um-painel-solar-no-fim-da-vida.mdx"),
   "o-que-e-energia": () => import("../../../content/articles/o-que-e-energia.mdx"),
   "o-que-e-potencia": () => import("../../../content/articles/o-que-e-potencia.mdx"),
   "perovskita-silicio-por-que-empilhar-duas-celulas-solares": () =>
