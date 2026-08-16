@@ -2,6 +2,8 @@
 import type { MdxModuleLoader } from "@/content/types";
 
 export const articleLoaders: Record<string, MdxModuleLoader> = {
+  "a-transicao-energetica-vai-ficar-sem-cobre": () =>
+    import("../../../content/articles/a-transicao-energetica-vai-ficar-sem-cobre.mdx"),
   "amazonia-mercado-de-carbono-e-o-risco-de-integridade": () =>
     import("../../../content/articles/amazonia-mercado-de-carbono-e-o-risco-de-integridade.mdx"),
   "baterias-de-sodio-a-nova-fronteira-do-armazenamento": () =>
