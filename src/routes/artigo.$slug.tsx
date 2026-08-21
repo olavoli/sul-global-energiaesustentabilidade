@@ -173,22 +173,17 @@ function ArticleDetail() {
 
           <EditorialHistory updateNote={article.updateNote} corrections={article.corrections} />
 
+          <SourceList sources={article.sources} urls={article.sourceUrls} />
+
           <AiEditorialCredit
             assistance={article.aiAssistance}
             publicationDate={article.publishedAt ?? article.createdAt}
+            imageTools={article.aiImageTools ?? []}
           />
-
-          <SourceList sources={article.sources} urls={article.sourceUrls} />
 
           {article.opinionDisclosure && (
             <p className="mt-8 rounded-md border border-border p-4 text-sm">
               <strong>Transparência da opinião:</strong> {article.opinionDisclosure}
-            </p>
-          )}
-
-          {article.aiDisclosure && (
-            <p className="mt-4 text-sm text-muted-foreground">
-              <strong>Uso de IA:</strong> {article.aiDisclosure}
             </p>
           )}
 

@@ -186,6 +186,7 @@ export const articleFrontmatterSchema = z
     interviewAuthorizationConfirmed: z.boolean().optional(),
     aiAssistance: z.enum(["none", "limited", "substantial"]).default("none"),
     aiDisclosure: z.string().min(3).max(400).optional(),
+    aiImageTools: z.array(z.string().trim().min(2).max(80)).max(4).optional(),
     seoTitle: z.string().max(120).optional(),
     seoDescription: z.string().max(180).optional(),
     canonicalUrl: z
@@ -311,6 +312,17 @@ export const articleFrontmatterSchema = z
         code: "custom",
         path: ["aiDisclosure"],
         message: "Uso substancial de IA exige disclosure editorial.",
+      });
+    }
+    if (
+      article.aiImageTools &&
+      article.aiImageTools.length > 0 &&
+      article.aiAssistance === "none"
+    ) {
+      context.addIssue({
+        code: "custom",
+        path: ["aiImageTools"],
+        message: "Ferramentas de imagem com IA exigem transparência editorial de IA.",
       });
     }
   });

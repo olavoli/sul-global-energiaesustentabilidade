@@ -52,17 +52,16 @@ A peça só está pronta quando:
 - tipografia, contraste e densidade funcionam no destino final;
 - a autocrítica não contém problema relevante ainda corrigível.
 
-## Crédito editorial para ilustrações com IA
+## Crédito editorial para ilustrações próprias
 
-Ilustrações próprias produzidas com auxílio de inteligência artificial devem usar o crédito visível:
+Ilustrações e imagens de elaboração própria do SGES devem usar somente o crédito visível:
 
-> Fonte: Imagem gerada por IA (_[Nome da Ferramenta]_), sob curadoria, direção editorial e conferência técnica de Olavo Oliveira, SGES ([ano]).
+> Fonte: SGES ([ano]).
 
-O nome da ferramenta é dado estruturado de proveniência, não texto livre da legenda. Toda imagem
-criada ou modificada com IA deve identificar nominalmente a ferramenta utilizada quando essa
-informação puder ser comprovada. “IA” isoladamente não substitui a identificação da ferramenta.
-A atribuição nunca deve ser inferida por aparência, estilo, nome do arquivo ou fornecedor
-presumido.
+O crédito público conciso não elimina nem reduz o registro técnico de proveniência. Nome da
+ferramenta, fornecedor, modelo, papéis de geração e edição e evidências continuam como dados
+estruturados internos. A atribuição nunca deve ser inferida por aparência, estilo, nome do arquivo
+ou fornecedor presumido.
 
 Quando disponíveis, manifestos C2PA e outros metadados de proveniência incorporados ao arquivo
 original são a evidência prioritária para identificar gerador, versão ou modelo e fornecedor. A
@@ -77,4 +76,15 @@ edição determinística não altera a ferramenta responsável pela geração. S
 classifique a proveniência como parcial ou não verificada e encaminhe a pendência à revisão humana;
 o template não deve fabricar um crédito nominal.
 
-O crédito informa como a imagem foi produzida. As fontes científicas que sustentam dados, conceitos e afirmações permanecem separadas na bibliografia do artigo.
+O crédito identifica publicamente o SGES como fonte editorial da imagem. Os registros de como ela
+foi produzida permanecem na proveniência estruturada, e as fontes científicas que sustentam dados,
+conceitos e afirmações permanecem separadas na bibliografia do artigo.
+
+Quando texto e imagens do artigo tiverem uso de IA comprovado e registrado, o artigo deve encerrar
+o conteúdo editorial com um único bloco de transparência, separado das referências bibliográficas:
+
+> Texto e imagens geradas por IA (_[Nome da Ferramenta]_), com edição e conferência técnica de Olavo Oliveira, SGES ([ano]).
+
+A ferramenta só pode aparecer nessa declaração consolidada quando os metadados do artigo e a
+proveniência das imagens sustentarem a atribuição. Artigos sem ferramenta de imagem comprovada não
+devem receber a formulação combinada.

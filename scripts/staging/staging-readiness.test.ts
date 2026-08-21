@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao",
       "a-transicao-energetica-vai-ficar-sem-cobre",
       "geotermia-de-nova-geracao",
       "o-que-acontece-com-um-painel-solar-no-fim-da-vida",

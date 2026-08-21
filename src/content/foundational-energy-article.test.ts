@@ -101,6 +101,7 @@ describe("Artigo 001 — O que é energia?", () => {
             slug !== "uma-bateria-precisa-mesmo-ser-pequena" &&
             slug !== "o-que-acontece-com-um-painel-solar-no-fim-da-vida" &&
             slug !== "a-transicao-energetica-vai-ficar-sem-cobre" &&
+            slug !== "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",

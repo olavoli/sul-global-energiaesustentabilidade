@@ -8,7 +8,7 @@ import { ImageAiCredit } from "./ImageAiCredit";
 import { Figure } from "./MdxComponents";
 
 describe("proveniência de IA em imagens", () => {
-  test("gera o padrão SGES com ferramenta e ano estruturados", () => {
+  test("exibe somente a fonte SGES e o ano estruturado", () => {
     const provenance = imageAiProvenanceSchema.parse({
       status: "verified",
       contributions: [{ role: "generation", tool: "ChatGPT" }],
@@ -16,28 +16,26 @@ describe("proveniência de IA em imagens", () => {
     });
     const html = renderToStaticMarkup(<ImageAiCredit provenance={provenance} />);
 
-    expect(html).toContain("Imagem gerada por IA (");
-    expect(html).toContain("<em>ChatGPT</em>");
-    expect(html).toContain("Olavo Oliveira, SGES (2031)");
-    expect(imageAiCreditText(provenance)).toContain("Imagem gerada por IA (ChatGPT)");
+    expect(html).toBe("Fonte: SGES (2031).");
+    expect(html).not.toContain("ChatGPT");
+    expect(imageAiCreditText(provenance)).toBe("Fonte: SGES (2031).");
   });
 
-  test("gera exatamente o crédito comprovado por C2PA do ART-011", () => {
+  test("preserva a proveniência C2PA sem expor a ferramenta no crédito público", () => {
     const provenance = imageAiProvenanceSchema.parse({
       status: "verified",
       contributions: [{ role: "generation", tool: "GPT Image 2, OpenAI" }],
       year: 2026,
     });
 
-    expect(imageAiCreditText(provenance)).toBe(
-      "Fonte: Imagem gerada por IA (GPT Image 2, OpenAI), sob curadoria, direção editorial e conferência técnica de Olavo Oliveira, SGES (2026).",
-    );
-    expect(renderToStaticMarkup(<ImageAiCredit provenance={provenance} />)).toContain(
-      "<em>GPT Image 2, OpenAI</em>",
+    expect(provenance.contributions).toEqual([{ role: "generation", tool: "GPT Image 2, OpenAI" }]);
+    expect(imageAiCreditText(provenance)).toBe("Fonte: SGES (2026).");
+    expect(renderToStaticMarkup(<ImageAiCredit provenance={provenance} />)).toBe(
+      "Fonte: SGES (2026).",
     );
   });
 
-  test("registra geração e edição por ferramentas comprovadas", () => {
+  test("mantém geração e edição registradas sem detalhá-las visualmente", () => {
     const provenance = imageAiProvenanceSchema.parse({
       status: "verified",
       contributions: [
@@ -48,8 +46,8 @@ describe("proveniência de IA em imagens", () => {
     });
 
     const html = renderToStaticMarkup(<ImageAiCredit provenance={provenance} />);
-    expect(html).toContain("editada com IA (");
-    expect(html).toContain("<em>Adobe Firefly</em>");
+    expect(provenance.contributions).toHaveLength(2);
+    expect(html).toBe("Fonte: SGES (2026).");
   });
 
   test("não atribui ferramenta quando a comprovação está incompleta", () => {
@@ -86,7 +84,8 @@ describe("proveniência de IA em imagens", () => {
       <AiEditorialCredit assistance="limited" publicationDate="2029-05-10" />,
     );
 
-    expect(imageHtml).toContain("Imagem gerada por IA");
+    expect(imageHtml).toContain("Fonte: SGES (2029).");
+    expect(imageHtml).not.toContain("Imagem gerada por IA");
     expect(imageHtml).not.toContain("Texto elaborado com auxílio");
     expect(textHtml).toContain("Texto elaborado com auxílio");
     expect(textHtml).not.toContain("Imagem gerada por IA");
