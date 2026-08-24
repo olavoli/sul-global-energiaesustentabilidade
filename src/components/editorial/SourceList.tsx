@@ -9,6 +9,9 @@ export function SourceList({
   urls: string[];
 }) {
   if (sources.length === 0 && urls.length === 0) return null;
+  const structuredUrls = new Set(sources.map((source) => source.url));
+  const legacyUrls = [...new Set(urls)].filter((url) => !structuredUrls.has(url));
+
   return (
     <section className="mt-10 border-t border-border pt-6" aria-labelledby="article-sources">
       <h2 id="article-sources" className="font-serif text-2xl font-semibold">
@@ -31,7 +34,7 @@ export function SourceList({
             {source.note && <p className="mt-1 text-muted-foreground">{source.note}</p>}
           </li>
         ))}
-        {urls.map((url) => (
+        {legacyUrls.map((url) => (
           <li key={url}>
             <a
               href={url}

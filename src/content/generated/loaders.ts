@@ -2,6 +2,8 @@
 import type { MdxModuleLoader } from "@/content/types";
 
 export const articleLoaders: Record<string, MdxModuleLoader> = {
+  "a-rede-eletrica-esta-preparada-para-a-transicao-energetica": () =>
+    import("../../../content/articles/a-rede-eletrica-esta-preparada-para-a-transicao-energetica.mdx"),
   "a-transicao-energetica-vai-ficar-sem-cobre": () =>
     import("../../../content/articles/a-transicao-energetica-vai-ficar-sem-cobre.mdx"),
   "amazonia-mercado-de-carbono-e-o-risco-de-integridade": () =>
