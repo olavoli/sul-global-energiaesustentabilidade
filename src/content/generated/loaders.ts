@@ -40,6 +40,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/por-que-armazenar-energia-e-tao-dificil.mdx"),
   "por-que-nenhuma-maquina-e-100-eficiente": () =>
     import("../../../content/articles/por-que-nenhuma-maquina-e-100-eficiente.mdx"),
+  "por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade": () =>
+    import("../../../content/articles/por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade.mdx"),
   "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao": () =>
     import("../../../content/articles/por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao.mdx"),
   "rascunho-como-funciona-matriz-eletrica-brasileira": () =>
