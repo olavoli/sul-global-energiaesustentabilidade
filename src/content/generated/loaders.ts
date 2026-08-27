@@ -6,6 +6,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/a-rede-eletrica-esta-preparada-para-a-transicao-energetica.mdx"),
   "a-transicao-energetica-vai-ficar-sem-cobre": () =>
     import("../../../content/articles/a-transicao-energetica-vai-ficar-sem-cobre.mdx"),
+  "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos": () =>
+    import("../../../content/articles/a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos.mdx"),
   "amazonia-mercado-de-carbono-e-o-risco-de-integridade": () =>
     import("../../../content/articles/amazonia-mercado-de-carbono-e-o-risco-de-integridade.mdx"),
   "baterias-de-sodio-a-nova-fronteira-do-armazenamento": () =>

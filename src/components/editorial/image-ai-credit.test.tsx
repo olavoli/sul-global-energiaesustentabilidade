@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { renderToStaticMarkup } from "react-dom/server";
 
 import { imageAiProvenanceSchema } from "@/content/schema";
-import { imageAiCreditText } from "@/content/image-ai-credit";
+import { articleAiImageTools, imageAiCreditText } from "@/content/image-ai-credit";
 import { AiEditorialCredit } from "./AiEditorialCredit";
 import { ImageAiCredit } from "./ImageAiCredit";
 import { Figure } from "./MdxComponents";
@@ -33,6 +33,24 @@ describe("proveniência de IA em imagens", () => {
     expect(renderToStaticMarkup(<ImageAiCredit provenance={provenance} />)).toBe(
       "Fonte: SGES (2026).",
     );
+  });
+
+  test("recupera a ferramenta verificada da capa quando o campo agregado não chega ao cliente", () => {
+    expect(
+      articleAiImageTools({
+        aiImageTools: undefined,
+        cover: {
+          src: "/cover.png",
+          alt: "Capa editorial",
+          decorative: false,
+          aiProvenance: {
+            status: "verified",
+            contributions: [{ role: "generation", tool: "GPT Image 2, OpenAI" }],
+            year: 2026,
+          },
+        },
+      }),
+    ).toEqual(["GPT Image 2, OpenAI"]);
   });
 
   test("mantém geração e edição registradas sem detalhá-las visualmente", () => {

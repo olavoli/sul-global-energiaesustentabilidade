@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc" data-infographic-id="INF-001">
+  <title id="title">INF-001 — Fotocatálise para separação da água</title>
+  <desc id="desc">Corte editorial de um reator fotocatalítico. Fótons excitam elétrons do semicondutor, criando pares elétron-lacuna. As cargas migram até superfícies catalíticas distintas: elétrons reduzem prótons e formam hidrogênio; lacunas oxidam água e formam oxigênio. Uma membrana mantém os gases separados.</desc>
+  <defs>
+    <pattern id="paper" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="4" cy="5" r="1" fill="#173e32" opacity=".035"/><circle cx="25" cy="22" r=".7" fill="#173e32" opacity=".03"/></pattern>
+    <pattern id="water" width="64" height="20" patternUnits="userSpaceOnUse"><path d="M0 10c11-7 21-7 32 0s21 7 32 0" fill="none" stroke="#408aa0" stroke-width="2" opacity=".22"/></pattern>
+    <pattern id="crystal" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M0 14 14 0l14 14-14 14Z" fill="none" stroke="#315e50" opacity=".25"/><circle cx="14" cy="14" r="2.5" fill="#daa020"/></pattern>
+    <linearGradient id="waterFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cde9ef"/><stop offset="1" stop-color="#8bc6d4"/></linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4c34b" stop-opacity=".55"/><stop offset="1" stop-color="#f4c34b" stop-opacity="0"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#173e32" flood-opacity=".14"/></filter>
+    <marker id="blueArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m1 1 7 4-7 4" fill="none" stroke="#2479a8" stroke-width="2" stroke-linecap="round"/></marker>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m1 1 7 4-7 4" fill="none" stroke="#c4533d" stroke-width="2" stroke-linecap="round"/></marker>
+    <marker id="goldArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="m1 1 7 4-7 4" fill="none" stroke="#d58b1b" stroke-width="2" stroke-linecap="round"/></marker>
+    <clipPath id="vesselClip"><path d="M355 370h890l-55 426c-7 59-57 104-117 104H527c-60 0-110-45-117-104Z"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="#f4f2e9"/><rect width="1600" height="1000" fill="url(#paper)"/>
+
+  <g id="header" font-family="Arial, sans-serif">
+    <text x="72" y="72" fill="#176044" font-size="20" font-weight="700" letter-spacing="3">INF-001 · SGES · MECANISMO</text>
+    <text x="72" y="132" fill="#173e32" font-size="48" font-weight="700">Fotocatálise para separação da água</text>
+    <text x="74" y="174" fill="#587067" font-size="23">Da energia do fóton à formação e coleta separada de H₂ e O₂</text>
+    <path d="M72 208h1456" stroke="#b9c4bb" stroke-width="2"/>
+  </g>
+
+  <g id="light-source" font-family="Arial, sans-serif">
+    <circle cx="145" cy="325" r="48" fill="#edb12b"/>
+    <g stroke="#edb12b" stroke-width="8" stroke-linecap="round"><path d="M145 256v-22M145 416v-22M76 325H54M236 325h-22M96 276l-16-16M210 390l-16-16M194 276l16-16M80 390l16-16"/></g>
+    <path d="m179 363 377 88-61 181-342-211Z" fill="url(#light)"/>
+    <path d="M187 373 503 518" fill="none" stroke="#d58b1b" stroke-width="5" marker-end="url(#goldArrow)"/>
+    <path d="M171 400 466 553" fill="none" stroke="#d58b1b" stroke-width="3" marker-end="url(#goldArrow)"/>
+    <text x="74" y="467" fill="#173e32" font-size="18" font-weight="700">1  LUZ SOLAR</text>
+    <text x="74" y="494" fill="#587067" font-size="16">fótons com energia hν</text>
+  </g>
+
+  <g id="reactor">
+    <path d="M355 370h890l-55 426c-7 59-57 104-117 104H527c-60 0-110-45-117-104Z" fill="#e4eef0" stroke="#174f5f" stroke-width="7" stroke-linejoin="round"/>
+    <g clip-path="url(#vesselClip)"><rect x="375" y="468" width="850" height="430" fill="url(#waterFade)"/><rect x="375" y="468" width="850" height="430" fill="url(#water)"/></g>
+    <path d="M355 370h890" stroke="#174f5f" stroke-width="11" stroke-linecap="round"/>
+    <text x="389" y="447" fill="#397386" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1">MEIO AQUOSO · H₂O</text>
+  </g>
+
+  <g id="separator">
+    <path d="M800 473v355" stroke="#f7f3df" stroke-width="25"/><path d="M800 473v355" stroke="#7b9489" stroke-width="3" stroke-dasharray="7 10"/>
+    <text x="800" y="850" fill="#587067" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">membrana de separação</text>
+  </g>
+
+  <g id="photocatalyst" filter="url(#shadow)">
+    <path d="m477 621 189-107 442 94-180 156-440-105Z" fill="#c8d1c7" stroke="#173e32" stroke-width="6" stroke-linejoin="round"/>
+    <path d="m490 613 180-98 421 90-169 144-424-100Z" fill="url(#crystal)"/>
+    <path d="m488 659 440 105v20L488 679Z" fill="#819188"/>
+    <path d="m928 764 180-156v19L928 784Z" fill="#60786c"/>
+  </g>
+  <text x="800" y="808" fill="#173e32" font-family="Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle">SEMICONDUTOR FOTOCATALÍTICO</text>
+
+  <g id="microscopic-inset" font-family="Arial, sans-serif">
+    <circle cx="793" cy="382" r="147" fill="#faf8f1" stroke="#789087" stroke-width="3" filter="url(#shadow)"/>
+    <text x="793" y="272" fill="#173e32" font-size="16" font-weight="700" text-anchor="middle">2  ABSORÇÃO · 3  EXCITAÇÃO</text>
+    <path d="M690 335c46-12 92-12 138 0s80 12 99 1v30c-20 11-53 11-99-1s-92-12-138 0Z" fill="#2f7b59"/>
+    <path d="M690 431c46-12 92-12 138 0s80 12 99 1v30c-20 11-53 11-99-1s-92-12-138 0Z" fill="#486f61"/>
+    <text x="902" y="323" fill="#587067" font-size="13" text-anchor="end">banda de condução</text>
+    <text x="902" y="421" fill="#587067" font-size="13" text-anchor="end">banda de valência</text>
+    <path d="M759 427V369" stroke="#d58b1b" stroke-width="5" marker-end="url(#goldArrow)"/>
+    <circle cx="759" cy="349" r="13" fill="#2479a8" stroke="#174f5f" stroke-width="2"/><text x="759" y="354" fill="white" font-size="15" font-weight="700" text-anchor="middle">−</text>
+    <circle cx="759" cy="445" r="14" fill="#faf8f1" stroke="#c4533d" stroke-width="4" stroke-dasharray="4 3"/>
+    <text x="814" y="398" fill="#173e32" font-size="15" font-weight="700">par e⁻ / h⁺</text>
+    <path d="M706 490 646 533" stroke="#789087" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M880 490 951 540" stroke="#789087" stroke-width="2" stroke-dasharray="5 5"/>
+  </g>
+
+  <g id="charge-migration" font-family="Arial, sans-serif">
+    <path d="M840 589c76 0 132 13 192 48" fill="none" stroke="#2479a8" stroke-width="6" marker-end="url(#blueArrow)"/>
+    <circle cx="892" cy="595" r="17" fill="#2479a8" stroke="#174f5f" stroke-width="3"/><text x="892" y="601" fill="white" font-size="18" font-weight="700" text-anchor="middle">e⁻</text>
+    <path d="M748 574c-75 3-130 19-182 59" fill="none" stroke="#c4533d" stroke-width="6" stroke-dasharray="10 8" marker-end="url(#redArrow)"/>
+    <circle cx="690" cy="587" r="18" fill="#faf8f1" stroke="#c4533d" stroke-width="4" stroke-dasharray="5 4"/><text x="690" y="593" fill="#a44130" font-size="17" font-weight="700" text-anchor="middle">h⁺</text>
+    <text x="1060" y="565" fill="#173e32" font-size="15" font-weight="700" text-anchor="middle">4  MIGRAÇÃO PARA SÍTIOS DISTINTOS</text>
+  </g>
+
+  <g id="oxygen-side" font-family="Arial, sans-serif">
+    <path d="M524 642c-69-1-110-31-134-77" fill="none" stroke="#c4533d" stroke-width="5" stroke-dasharray="9 7" marker-end="url(#redArrow)"/>
+    <circle cx="437" cy="568" r="8" fill="#c4533d"/><circle cx="410" cy="541" r="11" fill="none" stroke="#c4533d" stroke-width="4"/><circle cx="450" cy="518" r="7" fill="none" stroke="#c4533d" stroke-width="3"/>
+    <text x="405" y="650" fill="#173e32" font-size="18" font-weight="700" text-anchor="end">5  OXIDAÇÃO</text>
+    <text x="405" y="678" fill="#587067" font-size="17" text-anchor="end">2H₂O + 4h⁺ → O₂ + 4H⁺</text>
+    <path d="M425 512c-38-52-68-89-105-115" fill="none" stroke="#c4533d" stroke-width="4" marker-end="url(#redArrow)"/>
+    <path d="M246 385v-97h145v97" fill="#f3e7e1" fill-opacity=".55" stroke="#9e4233" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M273 288c0-25 20-45 45-45s45 20 45 45" fill="#f3e7e1" stroke="#9e4233" stroke-width="5"/>
+    <text x="318" y="334" fill="#9e4233" font-size="34" font-weight="700" text-anchor="middle">O₂</text>
+    <text x="318" y="423" fill="#173e32" font-size="15" font-weight="700" text-anchor="middle">7  OXIGÊNIO COLETADO</text>
+  </g>
+
+  <g id="hydrogen-side" font-family="Arial, sans-serif">
+    <path d="M1074 638c66-4 106-33 130-78" fill="none" stroke="#2479a8" stroke-width="5" marker-end="url(#blueArrow)"/>
+    <circle cx="1163" cy="560" r="8" fill="#2479a8"/><circle cx="1190" cy="530" r="11" fill="none" stroke="#2479a8" stroke-width="4"/><circle cx="1150" cy="506" r="7" fill="none" stroke="#2479a8" stroke-width="3"/>
+    <text x="1195" y="650" fill="#173e32" font-size="18" font-weight="700">6  REDUÇÃO</text>
+    <text x="1195" y="678" fill="#587067" font-size="17">4H⁺ + 4e⁻ → 2H₂</text>
+    <path d="M1177 500c38-50 69-85 106-109" fill="none" stroke="#2479a8" stroke-width="4" marker-end="url(#blueArrow)"/>
+    <path d="M1211 385v-97h145v97" fill="#e5f1f4" fill-opacity=".65" stroke="#174f5f" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M1238 288c0-25 20-45 45-45s45 20 45 45" fill="#e5f1f4" stroke="#174f5f" stroke-width="5"/>
+    <text x="1283" y="334" fill="#174f5f" font-size="34" font-weight="700" text-anchor="middle">H₂</text>
+    <text x="1283" y="423" fill="#173e32" font-size="15" font-weight="700" text-anchor="middle">8  HIDROGÊNIO COLETADO</text>
+  </g>
+
+  <g id="separation-note" font-family="Arial, sans-serif">
+    <path d="M1370 520h105v150h-105" fill="none" stroke="#9bad9f" stroke-width="2"/>
+    <text x="1391" y="557" fill="#173e32" font-size="16" font-weight="700">9  SEPARAÇÃO</text>
+    <text x="1391" y="584" fill="#587067" font-size="15">A membrana limita</text><text x="1391" y="606" fill="#587067" font-size="15">a mistura dos gases</text>
+  </g>
+
+  <g id="legend" font-family="Arial, sans-serif">
+    <path d="M72 934h1456" stroke="#b9c4bb" stroke-width="2"/>
+    <circle cx="92" cy="966" r="9" fill="#2479a8"/><text x="111" y="972" fill="#587067" font-size="15">elétron (e⁻)</text>
+    <circle cx="242" cy="966" r="10" fill="#f4f2e9" stroke="#c4533d" stroke-width="3" stroke-dasharray="4 3"/><text x="261" y="972" fill="#587067" font-size="15">lacuna (h⁺)</text>
+    <path d="M390 966h42" stroke="#d58b1b" stroke-width="5"/><text x="447" y="972" fill="#587067" font-size="15">energia luminosa</text>
+    <path d="M625 966h42" stroke="#2479a8" stroke-width="5"/><text x="682" y="972" fill="#587067" font-size="15">elétrons</text>
+    <path d="M795 966h42" stroke="#c4533d" stroke-width="5" stroke-dasharray="8 6"/><text x="852" y="972" fill="#587067" font-size="15">lacunas</text>
+    <text x="1528" y="972" fill="#587067" font-size="15" text-anchor="end">Fonte: Elaboração própria (SGES, 2026).</text>
+  </g>
+</svg>

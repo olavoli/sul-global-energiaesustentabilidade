@@ -15,6 +15,7 @@ import { EditorialBreadcrumb } from "@/components/navigation/EditorialBreadcrumb
 import { SponsoredDisclosure } from "@/components/editorial/SponsoredDisclosure";
 import { EditorialHistory } from "@/components/editorial/EditorialHistory";
 import { DemoContentNotice } from "@/components/layout/DemoContentNotice";
+import { articleAiImageTools } from "@/content/image-ai-credit";
 import { getArticleBySlug, getRelatedArticles } from "@/content/repository";
 import type { Article } from "@/types/content";
 import { articleJsonLd, breadcrumbJsonLd, resolveCanonical, socialMeta } from "@/lib/seo";
@@ -96,6 +97,7 @@ function ArticleDetail() {
   const { article, related } = Route.useLoaderData();
   const typedArticle: Article = article;
   const typedRelated: Article[] = related;
+  const verifiedAiImageTools = articleAiImageTools(article);
 
   return (
     <article>
@@ -178,7 +180,7 @@ function ArticleDetail() {
           <AiEditorialCredit
             assistance={article.aiAssistance}
             publicationDate={article.publishedAt ?? article.createdAt}
-            imageTools={article.aiImageTools ?? []}
+            imageTools={verifiedAiImageTools}
           />
 
           {article.opinionDisclosure && (
