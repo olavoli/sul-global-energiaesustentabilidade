@@ -383,7 +383,7 @@ export const articleRecords = [
   },
   {
     slug: "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos",
-    title: "A transição energética vai trocar petróleo por minerais críticos?",
+    title: "A transição energética pode criar uma nova dependência mineral?",
     subtitle:
       "A dependência muda de natureza: minas importam, mas processamento, manufatura, reciclagem e diversificação decidem quem controla a cadeia de valor.",
     excerpt:
