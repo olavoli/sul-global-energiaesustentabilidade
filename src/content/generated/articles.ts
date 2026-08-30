@@ -3,6 +3,123 @@ import type { ArticleFrontmatter } from "@/content/schema";
 
 export const articleRecords = [
   {
+    slug: "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+    title: "A Conta da Transição Energética: Entre a Geração Barata e o Sistema Complexo",
+    subtitle:
+      "A eletricidade renovável pode ter geração competitiva, mas a tarifa depende da integração de rede, flexibilidade, armazenamento e segurança do sistema.",
+    excerpt:
+      "Entenda por que o custo de geração não equivale ao custo do sistema elétrico e como a transição redistribui investimentos, riscos e benefícios.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: [
+      "energia solar",
+      "energia eólica",
+      "brasil",
+      "armazenamento",
+      "redes elétricas",
+      "custos",
+    ],
+    createdAt: "2026-08-30",
+    publishedAt: "2026-08-30",
+    reviewedAt: "2026-08-30",
+    approvedAt: "2026-08-30",
+    corrections: [],
+    readingTime: 7,
+    cover: {
+      src: "/images/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo/art-018-conta-energia-hero.png",
+      alt: "Conta de energia ilustrativa diante de uma paisagem com rede elétrica, hidrelétrica, painéis solares e turbinas eólicas",
+      decorative: false,
+      width: 5408,
+      height: 3072,
+      caption:
+        "Figura 1. A conta de energia representa o custo final de um sistema que combina geração, redes, flexibilidade e distribuição.",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "Reve (app.reve.com)",
+          },
+        ],
+        year: 2026,
+      },
+      license: "Imagem própria do SGES, uso editorial autorizado (2026)",
+      sources: [
+        {
+          src: "/images/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo/art-018-conta-energia-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo/art-018-conta-energia-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo/art-018-conta-energia-hero-1536.webp",
+          width: 1536,
+        },
+      ],
+    },
+    featured: true,
+    isDemo: false,
+    sponsored: false,
+    sourceUrls: [
+      "https://www.iea.org/reports/world-energy-outlook-2023",
+      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia-pde",
+      "https://about.bnef.com/insights/finance/new-outlooks-for-regional-energy-futures/",
+      "https://www.ipcc.ch/report/sixth-assessment-report-working-group-3/",
+    ],
+    sources: [
+      {
+        title:
+          "Agência Internacional de Energia (IEA). World Energy Outlook 2023. Paris: IEA, 2023. (Fornece dados globais sobre custos de sistema e impactos geopolíticos).",
+        url: "https://www.iea.org/reports/world-energy-outlook-2023",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-08-30",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "Empresa de Pesquisa Energética (EPE). Plano Decenal de Expansão de Energia 2033. Brasília: EPE/MME, 2024. (Contextualiza os desafios específicos da matriz brasileira, integração hidrotérmico-eólico-solar e custos de transmissão).",
+        url: "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia-pde",
+        organizationOrAuthor: "Empresa de Pesquisa Energética",
+        verifiedAt: "2026-08-30",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "BloombergNEF (BNEF). New Energy Outlook 2023. (Análise detalhada sobre a queda dos custos de tecnologia renovável versus os custos de integração de rede e armazenamento).",
+        url: "https://about.bnef.com/insights/finance/new-outlooks-for-regional-energy-futures/",
+        organizationOrAuthor: "BloombergNEF",
+        verifiedAt: "2026-08-30",
+        type: "company",
+        isDemo: false,
+      },
+      {
+        title:
+          "Intergovernmental Panel on Climate Change (IPCC). Sixth Assessment Report (AR6), Working Group III. (Discute os custos econômicos da mitigação versus os custos dos impactos climáticos e inação).",
+        url: "https://www.ipcc.ch/report/sixth-assessment-report-working-group-3/",
+        organizationOrAuthor: "Intergovernmental Panel on Climate Change",
+        verifiedAt: "2026-08-30",
+        type: "official",
+        isDemo: false,
+      },
+    ],
+    lastVerifiedAt: "2026-08-30",
+    aiAssistance: "limited",
+    aiDisclosure:
+      "A IA auxiliou apenas na adaptação estrutural para MDX e nos elementos editoriais permitidos; as três imagens foram geradas no Reve (app.reve.com). O texto e as imagens foram fornecidos e aprovados para publicação pelo SGES.",
+    seoTitle: "A conta da transição energética",
+    seoDescription:
+      "Por que geração renovável barata não garante tarifa menor: redes, armazenamento, flexibilidade e custos evitados.",
+    canonicalUrl:
+      "/artigo/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+  },
+  {
     slug: "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
     title: "A rede elétrica está preparada para a transição energética?",
     subtitle:
