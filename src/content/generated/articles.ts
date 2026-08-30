@@ -381,7 +381,6 @@ export const articleRecords = [
       height: 1080,
       caption:
         "Figura 1. Representação editorial do nexo água-energia em uma paisagem com infraestrutura urbana, hídrica, industrial, solar e eólica.",
-      credit: "Fonte: SGES (2026).",
       aiProvenance: {
         status: "verified",
         contributions: [
