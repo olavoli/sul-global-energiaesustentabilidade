@@ -231,6 +231,173 @@ export const articleRecords = [
     canonicalUrl: "/artigo/a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
   },
   {
+    slug: "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+    title: "A transição energética vai aumentar o consumo de água?",
+    subtitle:
+      "A descarbonização não eleva nem reduz universalmente a demanda hídrica: ela redistribui fluxos, pressões e vulnerabilidades entre tecnologias e territórios.",
+    excerpt:
+      "Entenda por que captação e consumo são métricas distintas e como a transição energética redistribui riscos hídricos entre tecnologias, cadeias produtivas e bacias.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: [
+      "energia solar",
+      "energia eólica",
+      "hidrogênio",
+      "brasil",
+      "mudanças climáticas",
+      "eficiência energética",
+    ],
+    createdAt: "2026-08-29",
+    publishedAt: "2026-08-29",
+    reviewedAt: "2026-08-29",
+    approvedAt: "2026-08-29",
+    corrections: [],
+    readingTime: 13,
+    cover: {
+      src: "/images/articles/a-transicao-energetica-vai-aumentar-o-consumo-de-agua/art-017-agua-energia-hero.png",
+      alt: "Cidade, reservatório, usina, painéis solares e turbinas eólicas representam o nexo entre água, energia e infraestrutura",
+      decorative: false,
+      width: 1920,
+      height: 1080,
+      caption:
+        "Figura 1. Representação editorial do nexo água-energia em uma paisagem com infraestrutura urbana, hídrica, industrial, solar e eólica.",
+      credit: "Fonte: SGES (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "Reve (app.reve.com)",
+          },
+        ],
+        year: 2026,
+      },
+      license: "Imagem própria do SGES, uso editorial autorizado (2026)",
+      sources: [
+        {
+          src: "/images/articles/a-transicao-energetica-vai-aumentar-o-consumo-de-agua/art-017-agua-energia-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/a-transicao-energetica-vai-aumentar-o-consumo-de-agua/art-017-agua-energia-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/a-transicao-energetica-vai-aumentar-o-consumo-de-agua/art-017-agua-energia-hero-1536.webp",
+          width: 1536,
+        },
+      ],
+    },
+    featured: true,
+    isDemo: false,
+    sponsored: false,
+    sourceUrls: [
+      "https://www.iea.org/reports/water-energy-nexus",
+      "https://www.iea.org/reports/global-hydrogen-review-2023",
+      "https://www.gov.br/ana/pt-br/assuntos/segurancahidrica-e-barragens/plano-nacional-de-seguranca-hidrica",
+      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/anuario-estatistico-de-energia-eletrica",
+      "https://www.ons.org.br/paginas/resultados-da-operacao/relatorios-da-operacao",
+      "https://www.mme.gov.br/web/guest/publicacoes/plano-nacional-de-energia-2050",
+      "https://www.nrel.gov/docs/fy23osti/84882.pdf",
+      "https://www.worldbank.org/en/topic/water/brief/high-and-dry-climate-change-water-and-the-economy",
+      "https://www.unwater.org/publications/un-world-water-development-report-2024",
+    ],
+    sources: [
+      {
+        title:
+          "INTERNATIONAL ENERGY AGENCY (IEA). World Energy Outlook Special Report: Water-Energy Nexus. Paris: IEA/OECD, 2016.",
+        url: "https://www.iea.org/reports/water-energy-nexus",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "INTERNATIONAL ENERGY AGENCY (IEA). Global Hydrogen Review 2023. Paris: IEA/OECD, 2023.",
+        url: "https://www.iea.org/reports/global-hydrogen-review-2023",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "AGÊNCIA NACIONAL DE ÁGUAS E SANEAMENTO BÁSICO (ANA). Plano Nacional de Segurança Hídrica: Síntese Executiva. Brasília: ANA, 2022.",
+        url: "https://www.gov.br/ana/pt-br/assuntos/segurancahidrica-e-barragens/plano-nacional-de-seguranca-hidrica",
+        organizationOrAuthor: "Agência Nacional de Águas e Saneamento Básico",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "EMPRESA DE PESQUISA ENERGÉTICA (EPE). Anuário Estatístico de Energia Elétrica 2023. Rio de Janeiro: EPE, 2023.",
+        url: "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/anuario-estatistico-de-energia-eletrica",
+        organizationOrAuthor: "Empresa de Pesquisa Energética",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "OPERADOR NACIONAL DO SISTEMA ELÉTRICO (ONS). Relatório Anual de Acompanhamento dos Reservatórios e Despacho Térmico. Brasília: ONS, 2023.",
+        url: "https://www.ons.org.br/paginas/resultados-da-operacao/relatorios-da-operacao",
+        organizationOrAuthor: "Operador Nacional do Sistema Elétrico",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "MINISTÉRIO DE MINAS E ENERGIA (MME). Plano Nacional de Energia 2050: Caderno de Recursos Hídricos e Energia. Brasília: MME, 2020.",
+        url: "https://www.mme.gov.br/web/guest/publicacoes/plano-nacional-de-energia-2050",
+        organizationOrAuthor: "Ministério de Minas e Energia",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "NATIONAL RENEWABLE ENERGY LABORATORY (NREL). Consumptive Water Use for Electricity Generation and Other Sectors: A Review of Estimates. Golden, CO: NREL, 2023.",
+        url: "https://www.nrel.gov/docs/fy23osti/84882.pdf",
+        organizationOrAuthor: "National Renewable Energy Laboratory",
+        verifiedAt: "2026-08-29",
+        type: "academic",
+        isDemo: false,
+      },
+      {
+        title:
+          "WORLD BANK. High and Dry: Climate Change, Water, and the Economy. Washington, DC: World Bank Group, 2016.",
+        url: "https://www.worldbank.org/en/topic/water/brief/high-and-dry-climate-change-water-and-the-economy",
+        organizationOrAuthor: "World Bank",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "UNITED NATIONS WATER (UN-WATER). The United Nations World Water Development Report 2024: Water for Prosperity and Peace. Paris: UNESCO, 2024.",
+        url: "https://www.unwater.org/publications/un-world-water-development-report-2024",
+        organizationOrAuthor: "UN-Water",
+        verifiedAt: "2026-08-29",
+        type: "official",
+        isDemo: false,
+      },
+    ],
+    lastVerifiedAt: "2026-08-29",
+    aiAssistance: "limited",
+    aiDisclosure:
+      "A IA auxiliou apenas na adaptação estrutural para MDX e nas chamadas editoriais; as imagens foram geradas no Reve (app.reve.com). O texto e as imagens foram aprovados e conferidos por Olavo Oliveira.",
+    seoTitle: "A transição energética aumentará o consumo de água?",
+    seoDescription:
+      "Captação, consumo, hidrelétricas, térmicas, renováveis, hidrogênio e mineração no nexo entre água e transição energética.",
+    canonicalUrl: "/artigo/a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+  },
+  {
     slug: "a-transicao-energetica-vai-ficar-sem-cobre",
     title: "A transição energética vai ficar sem cobre?",
     subtitle:
