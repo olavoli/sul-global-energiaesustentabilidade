@@ -13,7 +13,13 @@ export function ArticleBody({ slug }: { slug: string }) {
 
   return (
     <div className="prose-editorial text-foreground">
-      <Suspense fallback={<p className="text-muted-foreground">Carregando artigo…</p>}>
+      <Suspense
+        fallback={
+          <p className="text-muted-foreground" data-tts-exclude="true">
+            Carregando artigo…
+          </p>
+        }
+      >
         <Content components={editorialMdxComponents} />
       </Suspense>
     </div>

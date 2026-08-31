@@ -244,3 +244,13 @@
     transition-duration: 0.001ms !important;
   }
 }
+/* Discreet, accessible marker for the editorial block currently narrated by TTS. */
+[data-tts-active="true"] {
+  border-radius: 0.25rem;
+  outline: 2px solid color-mix(in oklch, var(--primary) 28%, transparent);
+  outline-offset: 0.35rem;
+  background: color-mix(in oklch, var(--primary) 5.5%, transparent);
+  transition:
+    background-color 150ms ease,
+    outline-color 150ms ease;
+}

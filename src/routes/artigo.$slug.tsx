@@ -1,9 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useRef } from "react";
 
 import { Container } from "@/components/layout/Container";
 import { CategoryTag } from "@/components/article/CategoryTag";
 import { Byline } from "@/components/article/Byline";
 import { ArticleBody } from "@/components/article/ArticleBody";
+import { ArticleTtsPlayer } from "@/components/article/ArticleTtsPlayer";
 import { SourceList } from "@/components/editorial/SourceList";
 import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
 import { ImageAiCredit } from "@/components/editorial/ImageAiCredit";
@@ -98,6 +100,7 @@ function ArticleDetail() {
   const typedArticle: Article = article;
   const typedRelated: Article[] = related;
   const verifiedAiImageTools = articleAiImageTools(article);
+  const editorialBodyRef = useRef<HTMLDivElement>(null);
 
   return (
     <article>
@@ -161,7 +164,11 @@ function ArticleDetail() {
             <SponsoredDisclosure sponsorName={article.sponsorName} />
           )}
 
-          <ArticleBody slug={article.slug} />
+          <ArticleTtsPlayer contentRef={editorialBodyRef} articleKey={article.slug} />
+
+          <div ref={editorialBodyRef} data-tts-article-body="true">
+            <ArticleBody slug={article.slug} />
+          </div>
 
           {article.updatedAt && (
             <p className="mt-8 text-sm text-muted-foreground">
