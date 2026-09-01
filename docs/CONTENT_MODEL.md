@@ -59,6 +59,12 @@ cover:
 
 `width` e `height` são pareados e só entram quando conhecidos. Imagem editorial rejeita alt vazio; imagem puramente decorativa exige `decorative: true`. As capas demo atuais registram `license: unknown` e permanecem pendentes de substituição.
 
+### Proveniência padrão das imagens SGES
+
+Imagens do SGES usam internamente `Reve (app.reve.com)` como ferramenta de geração padrão. Quando uma aplicação diferente for informada explicitamente para uma imagem, somente essa aplicação deve ser registrada naquela imagem. Aparência visual não constitui evidência para substituir a ferramenta declarada.
+
+O crédito público é sempre `Fonte: SGES, (2026).`, exibido uma única vez e separado da proveniência técnica. Ferramenta, licença e detalhes de produção permanecem nos metadados internos e, quando aplicável, no bloco de transparência sobre IA.
+
 ### 2.1 Caminho e nome
 
 ```

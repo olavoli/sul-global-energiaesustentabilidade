@@ -158,6 +158,9 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "o-paradoxo-da-energia-barata",
+      "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+      "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
       "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos",
       "por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade",
       "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",

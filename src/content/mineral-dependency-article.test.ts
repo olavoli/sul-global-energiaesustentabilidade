@@ -36,12 +36,12 @@ describe("ART-016 — dependência mineral e transição energética", () => {
 
   test("preserva as ressalvas factuais centrais", () => {
     for (const statement of [
-      "não existe uma lista universal",
-      "não são “combustíveis”",
-      "reciclagem não é disponibilidade imediata",
-      "não garantem diversificação",
-      "não formam um ranking diretamente comparável",
-      "São projeções condicionais",
+      "o desafio não é apenas geológico, mas estrutural",
+      "petróleo e minerais não representam a mesma tipologia de dependência",
+      "não elimine os riscos imediatos de suprimento",
+      "a posse do recurso não garante automaticamente a vantagem industrial",
+      "a autossuficiência total é uma ilusão econômica",
+      "Nenhuma frente elimina o risco isoladamente",
     ])
       expect(source).toContain(statement);
   });

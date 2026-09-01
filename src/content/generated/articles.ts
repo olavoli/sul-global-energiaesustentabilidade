@@ -1519,6 +1519,152 @@ export const articleRecords = [
     aiAssistance: "none",
   },
   {
+    slug: "o-paradoxo-da-energia-barata",
+    title:
+      "O paradoxo da energia barata: Por que a conta de luz não cai apesar da revolução solar e eólica?",
+    subtitle:
+      "A queda do custo da geração renovável não elimina os custos de rede, segurança, encargos e tributos que compõem a tarifa final.",
+    excerpt:
+      "Entenda por que energia solar e eólica mais baratas não produzem automaticamente uma redução proporcional na conta de luz.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: ["energia solar", "energia eólica", "tarifas", "redes elétricas", "brasil", "brics"],
+    createdAt: "2026-08-31",
+    publishedAt: "2026-08-31",
+    reviewedAt: "2026-08-31",
+    approvedAt: "2026-08-31",
+    corrections: [],
+    readingTime: 8,
+    cover: {
+      src: "/images/articles/o-paradoxo-da-energia-barata/art-019-energia-barata-hero.png",
+      alt: "Composição editorial contrapõe geração solar e eólica a uma conta de luz, rede elétrica e indicadores de alta",
+      decorative: false,
+      width: 5408,
+      height: 3072,
+      caption:
+        "Figura 1. A redução do custo da geração renovável convive com componentes tarifários ligados à rede, aos encargos e aos tributos.",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "Reve (app.reve.com)",
+          },
+        ],
+        year: 2026,
+      },
+      license: "Imagem própria do SGES, uso editorial autorizado (2026)",
+      sources: [
+        {
+          src: "/images/articles/o-paradoxo-da-energia-barata/art-019-energia-barata-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/o-paradoxo-da-energia-barata/art-019-energia-barata-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/o-paradoxo-da-energia-barata/art-019-energia-barata-hero-1536.webp",
+          width: 1536,
+        },
+      ],
+    },
+    featured: true,
+    isDemo: false,
+    sponsored: false,
+    sourceUrls: [
+      "https://www.gov.br/aneel/pt-br/assuntos/tarifas/composicao-da-tarifa",
+      "http://www.ons.org.br/Paginas/resultados-da-operacao/historico-da-operacao/relatorios-de-acompanhamento.aspx",
+      "https://www.iea.org/reports/world-energy-outlook-2023",
+      "https://about.bnef.com/new-energy-outlook/",
+      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/Balanco-Energetico-Nacional-2023",
+      "https://www.ren21.net/gsr/",
+      "https://www.ipea.gov.br/portal/index.php?option=com_content&view=category&id=106&Itemid=106",
+      "https://www.irena.org/publications/2023/Aug/Renewable-Power-Generation-Costs-in-2022",
+    ],
+    sources: [
+      {
+        title:
+          "Agência Nacional de Energia Elétrica (ANEEL). Composição da Tarifa de Energia Elétrica.",
+        url: "https://www.gov.br/aneel/pt-br/assuntos/tarifas/composicao-da-tarifa",
+        organizationOrAuthor: "Agência Nacional de Energia Elétrica",
+        verifiedAt: "2026-08-31",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "Operador Nacional do Sistema Elétrico (ONS). Relatórios de Acompanhamento do Setor Elétrico.",
+        url: "http://www.ons.org.br/Paginas/resultados-da-operacao/historico-da-operacao/relatorios-de-acompanhamento.aspx",
+        organizationOrAuthor: "Operador Nacional do Sistema Elétrico",
+        verifiedAt: "2026-08-31",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title: "International Energy Agency (IEA). World Energy Outlook 2023.",
+        url: "https://www.iea.org/reports/world-energy-outlook-2023",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-08-31",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title: "BloombergNEF. New Energy Outlook (Resumo Executivo e Dados).",
+        url: "https://about.bnef.com/new-energy-outlook/",
+        organizationOrAuthor: "BloombergNEF",
+        verifiedAt: "2026-08-31",
+        type: "company",
+        isDemo: false,
+      },
+      {
+        title: "Empresa de Pesquisa Energética (EPE). Balanço Energético Nacional 2023.",
+        url: "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/Balanco-Energetico-Nacional-2023",
+        organizationOrAuthor: "Empresa de Pesquisa Energética",
+        verifiedAt: "2026-08-31",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title: "REN21. Renewables 2023 Global Status Report.",
+        url: "https://www.ren21.net/gsr/",
+        organizationOrAuthor: "REN21",
+        verifiedAt: "2026-08-31",
+        type: "other",
+        isDemo: false,
+      },
+      {
+        title:
+          "Instituto de Pesquisa Econômica Aplicada (IPEA). Publicações sobre Subsídios e Tarifação no Setor Elétrico.",
+        url: "https://www.ipea.gov.br/portal/index.php?option=com_content&view=category&id=106&Itemid=106",
+        organizationOrAuthor: "Instituto de Pesquisa Econômica Aplicada",
+        verifiedAt: "2026-08-31",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "International Renewable Energy Agency (IRENA). Renewable Power Generation Costs in 2022.",
+        url: "https://www.irena.org/publications/2023/Aug/Renewable-Power-Generation-Costs-in-2022",
+        organizationOrAuthor: "International Renewable Energy Agency",
+        verifiedAt: "2026-08-31",
+        type: "official",
+        isDemo: false,
+      },
+    ],
+    lastVerifiedAt: "2026-08-31",
+    aiAssistance: "limited",
+    aiDisclosure:
+      "A IA auxiliou apenas na adaptação estrutural para MDX e nos elementos editoriais permitidos; as três imagens foram geradas no Reve (app.reve.com). O texto e as imagens foram fornecidos e aprovados para publicação pelo SGES.",
+    seoTitle: "Por que a conta de luz não cai com as renováveis?",
+    seoDescription:
+      "Geração renovável barata não garante tarifa menor: entenda os custos de rede, segurança, encargos e tributos.",
+    canonicalUrl: "/artigo/o-paradoxo-da-energia-barata",
+  },
+  {
     slug: "o-que-acontece-com-um-painel-solar-no-fim-da-vida",
     title: "O que acontece com um painel solar quando ele chega ao fim da vida?",
     subtitle:

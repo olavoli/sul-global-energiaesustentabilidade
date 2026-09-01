@@ -149,10 +149,7 @@ function ArticleDetail() {
                 ? " — "
                 : ""}
               <ImageAiCredit provenance={article.cover.aiProvenance} />
-              {article.cover.aiProvenance?.status === "verified" && article.cover.credit
-                ? " · "
-                : ""}
-              {article.cover.credit}
+              {article.cover.aiProvenance?.status !== "verified" && article.cover.credit}
             </figcaption>
           )}
         </figure>

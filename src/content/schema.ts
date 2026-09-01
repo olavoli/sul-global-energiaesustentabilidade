@@ -22,6 +22,8 @@ export const imageAiContributionSchema = z.object({
   tool: z.string().trim().min(2).max(80),
 });
 
+export const defaultSgesImageGenerationTool = "Reve (app.reve.com)";
+
 export const imageAiProvenanceSchema = z
   .object({
     status: z.enum(["verified", "partially-verified", "unverified"]),
@@ -29,16 +31,6 @@ export const imageAiProvenanceSchema = z
     year: z.number().int().min(2000).max(2100),
   })
   .superRefine((provenance, context) => {
-    if (
-      provenance.status === "verified" &&
-      !provenance.contributions.some((contribution) => contribution.role === "generation")
-    ) {
-      context.addIssue({
-        code: "custom",
-        path: ["contributions"],
-        message: "Proveniência verificada exige a ferramenta responsável pela geração.",
-      });
-    }
     if (provenance.status === "unverified" && provenance.contributions.length > 0) {
       context.addIssue({
         code: "custom",
@@ -46,6 +38,22 @@ export const imageAiProvenanceSchema = z
         message: "Proveniência não verificada não pode atribuir ferramentas nominalmente.",
       });
     }
+  })
+  .transform((provenance) => {
+    if (
+      provenance.status !== "verified" ||
+      provenance.contributions.some((contribution) => contribution.role === "generation")
+    ) {
+      return provenance;
+    }
+
+    return {
+      ...provenance,
+      contributions: [
+        { role: "generation" as const, tool: defaultSgesImageGenerationTool },
+        ...provenance.contributions,
+      ],
+    };
   });
 
 export const editorialImageSchema = z

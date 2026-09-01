@@ -75,6 +75,7 @@ export function Figure({
         year: Number(aiCreditYear),
       })
     : undefined;
+  const hasSgesCredit = aiProvenance?.status === "verified";
 
   return (
     <figure className="my-8">
@@ -97,20 +98,24 @@ export function Figure({
         sizes="(min-width: 768px) 72ch, 100vw"
         className="object-contain"
       />
-      {(caption || credit || license || aiProvenance?.status === "verified") && (
+      {(caption || credit || license || hasSgesCredit) && (
         <figcaption className="mt-2 text-xs text-muted-foreground">
           {caption}
-          {caption && (credit || license || aiProvenance?.status === "verified") ? " — " : ""}
-          <ImageAiCredit provenance={aiProvenance} />
-          {aiProvenance?.status === "verified" && credit ? " · " : ""}
-          {sourceUrl && credit ? (
-            <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-              {credit}
-            </a>
+          {caption && (hasSgesCredit || credit || license) ? " — " : ""}
+          {hasSgesCredit ? (
+            <ImageAiCredit provenance={aiProvenance} />
           ) : (
-            credit
+            <>
+              {sourceUrl && credit ? (
+                <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+                  {credit}
+                </a>
+              ) : (
+                credit
+              )}
+              {credit && license ? ` · ${license}` : !credit ? license : ""}
+            </>
           )}
-          {credit && license ? ` · ${license}` : !credit ? license : ""}
         </figcaption>
       )}
     </figure>

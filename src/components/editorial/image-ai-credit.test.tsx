@@ -16,9 +16,9 @@ describe("proveniência de IA em imagens", () => {
     });
     const html = renderToStaticMarkup(<ImageAiCredit provenance={provenance} />);
 
-    expect(html).toBe("Fonte: SGES (2031).");
+    expect(html).toBe("Fonte: SGES, (2031).");
     expect(html).not.toContain("ChatGPT");
-    expect(imageAiCreditText(provenance)).toBe("Fonte: SGES (2031).");
+    expect(imageAiCreditText(provenance)).toBe("Fonte: SGES, (2031).");
   });
 
   test("preserva a proveniência C2PA sem expor a ferramenta no crédito público", () => {
@@ -29,9 +29,9 @@ describe("proveniência de IA em imagens", () => {
     });
 
     expect(provenance.contributions).toEqual([{ role: "generation", tool: "GPT Image 2, OpenAI" }]);
-    expect(imageAiCreditText(provenance)).toBe("Fonte: SGES (2026).");
+    expect(imageAiCreditText(provenance)).toBe("Fonte: SGES, (2026).");
     expect(renderToStaticMarkup(<ImageAiCredit provenance={provenance} />)).toBe(
-      "Fonte: SGES (2026).",
+      "Fonte: SGES, (2026).",
     );
   });
 
@@ -65,7 +65,7 @@ describe("proveniência de IA em imagens", () => {
 
     const html = renderToStaticMarkup(<ImageAiCredit provenance={provenance} />);
     expect(provenance.contributions).toHaveLength(2);
-    expect(html).toBe("Fonte: SGES (2026).");
+    expect(html).toBe("Fonte: SGES, (2026).");
   });
 
   test("não atribui ferramenta quando a comprovação está incompleta", () => {
@@ -102,10 +102,61 @@ describe("proveniência de IA em imagens", () => {
       <AiEditorialCredit assistance="limited" publicationDate="2029-05-10" />,
     );
 
-    expect(imageHtml).toContain("Fonte: SGES (2029).");
+    expect(imageHtml).toContain("Fonte: SGES, (2029).");
     expect(imageHtml).not.toContain("Imagem gerada por IA");
     expect(imageHtml).not.toContain("Texto elaborado com auxílio");
     expect(textHtml).toContain("Texto elaborado com auxílio");
     expect(textHtml).not.toContain("Imagem gerada por IA");
+  });
+
+  test("não concatena crédito explícito nem licença ao crédito público SGES", () => {
+    const html = renderToStaticMarkup(
+      <Figure
+        src="/imagem.png"
+        alt="Imagem de teste"
+        caption="Figura 2. Legenda editorial."
+        credit="Fonte: SGES (2026)."
+        license="Imagem própria do SGES, uso editorial autorizado (2026)"
+        aiProvenanceStatus="verified"
+        aiGenerationTool="Reve (app.reve.com)"
+        aiCreditYear="2026"
+      />,
+    );
+
+    expect(html.match(/Fonte: SGES, \(2026\)\./g)).toHaveLength(1);
+    expect(html).not.toContain("Fonte: SGES (2026).");
+    expect(html).not.toContain("Imagem própria do SGES");
+    expect(html).not.toContain("uso editorial autorizado");
+    expect(html).not.toContain("Reve");
+  });
+
+  test("adota Reve como proveniência interna padrão quando nenhuma ferramenta é informada", () => {
+    const provenance = imageAiProvenanceSchema.parse({
+      status: "verified",
+      year: 2026,
+    });
+
+    expect(provenance.contributions).toEqual([
+      { role: "generation", tool: "Reve (app.reve.com)" },
+    ]);
+    expect(renderToStaticMarkup(<ImageAiCredit provenance={provenance} />)).toBe(
+      "Fonte: SGES, (2026).",
+    );
+  });
+
+  test("preserva somente a ferramenta de geração explicitamente informada", () => {
+    const provenance = imageAiProvenanceSchema.parse({
+      status: "verified",
+      contributions: [{ role: "generation", tool: "Aplicação específica" }],
+      year: 2026,
+    });
+
+    expect(provenance.contributions).toEqual([
+      { role: "generation", tool: "Aplicação específica" },
+    ]);
+    expect(provenance.contributions).not.toContainEqual({
+      role: "generation",
+      tool: "Reve (app.reve.com)",
+    });
   });
 });
