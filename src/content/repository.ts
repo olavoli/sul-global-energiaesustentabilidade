@@ -17,6 +17,37 @@ export interface ContentRepository {
   searchArticles(query: string): Article[];
 }
 
+type RelatedArticleMetadata = Pick<Article, "slug" | "category" | "tags" | "contentType">;
+
+/** Rank related articles from validated metadata only, with stable non-recency tie-breaking. */
+export function selectRelatedArticles<T extends RelatedArticleMetadata>(
+  article: RelatedArticleMetadata,
+  candidates: readonly T[],
+  limit = 3,
+): T[] {
+  const safeLimit = Math.max(0, Math.min(3, Math.trunc(limit)));
+
+  return candidates
+    .filter((candidate) => candidate.slug !== article.slug)
+    .map((candidate) => {
+      const sharedTags = candidate.tags.filter((tag) => article.tags.includes(tag)).length;
+      const score =
+        sharedTags * 6 +
+        Number(candidate.category === article.category) * 4 +
+        Number(candidate.contentType === article.contentType);
+      return { candidate, score, sharedTags };
+    })
+    .filter(({ score }) => score > 0)
+    .sort(
+      (left, right) =>
+        right.score - left.score ||
+        right.sharedTags - left.sharedTags ||
+        left.candidate.slug.localeCompare(right.candidate.slug, "pt-BR"),
+    )
+    .slice(0, safeLimit)
+    .map(({ candidate }) => candidate);
+}
+
 function toPublishedArticle(record: ArticleFrontmatter): Article {
   const author = authors[record.author];
   if (!author) throw new Error(`${record.slug}: autor não encontrado.`);
@@ -57,19 +88,7 @@ export function createContentRepository(
     getArticlesByAuthor: (slug) => published.filter((article) => article.author.slug === slug),
     getFeaturedArticles: () => published.filter((article) => article.featured),
     getLatestArticles: (limit = 8) => published.slice(0, limit),
-    getRelatedArticles: (article, limit = 3) =>
-      published
-        .filter((candidate) => candidate.slug !== article.slug)
-        .map((candidate) => ({
-          candidate,
-          score:
-            Number(candidate.category === article.category) * 10 +
-            candidate.tags.filter((tag) => article.tags.includes(tag)).length,
-        }))
-        .filter(({ score }) => score > 0)
-        .sort((left, right) => right.score - left.score)
-        .slice(0, limit)
-        .map(({ candidate }) => candidate),
+    getRelatedArticles: (article, limit = 3) => selectRelatedArticles(article, published, limit),
     searchArticles: (query) => {
       const term = normalize(query.trim());
       if (!term) return [];

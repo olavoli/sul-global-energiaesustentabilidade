@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link as LinkIcon, Check, Twitter, Linkedin } from "lucide-react";
+import { Link as LinkIcon, Check, Linkedin, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { buildArticleShareUrls, copyArticleLink } from "./article-sharing";
 
 export function ShareBar({ title, path }: { title: string; path: string }) {
   const [copied, setCopied] = useState(false);
@@ -8,12 +9,11 @@ export function ShareBar({ title, path }: { title: string; path: string }) {
   const shareUrl =
     typeof window !== "undefined" ? window.location.origin + path : `${siteConfig.url}${path}`;
 
-  const encoded = encodeURIComponent(shareUrl);
-  const text = encodeURIComponent(title);
+  const shareUrls = buildArticleShareUrls(title, shareUrl);
 
   const copy = async () => {
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      await copyArticleLink(navigator.clipboard, shareUrl);
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -29,21 +29,29 @@ export function ShareBar({ title, path }: { title: string; path: string }) {
       <span className="overline text-muted-foreground">Compartilhar</span>
       <a
         className={btn}
-        href={`https://twitter.com/intent/tweet?url=${encoded}&text=${text}`}
+        href={shareUrls.whatsapp}
         target="_blank"
         rel="noreferrer noopener"
+        aria-label="Compartilhar no WhatsApp"
       >
-        <Twitter className="h-4 w-4" aria-hidden /> X
+        <MessageCircle className="h-4 w-4" aria-hidden /> WhatsApp
       </a>
       <a
         className={btn}
-        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encoded}`}
+        href={shareUrls.linkedin}
         target="_blank"
         rel="noreferrer noopener"
+        aria-label="Compartilhar no LinkedIn"
       >
         <Linkedin className="h-4 w-4" aria-hidden /> LinkedIn
       </a>
-      <button type="button" onClick={copy} className={btn} aria-live="polite">
+      <button
+        type="button"
+        onClick={copy}
+        className={btn}
+        aria-label="Copiar link do artigo"
+        aria-live="polite"
+      >
         {copied ? (
           <>
             <Check className="h-4 w-4" aria-hidden /> Link copiado

@@ -161,10 +161,16 @@ function ArticleDetail() {
             <SponsoredDisclosure sponsorName={article.sponsorName} />
           )}
 
+          <ArticleBody slug={article.slug} section="keyPoints" />
+
           <ArticleTtsPlayer contentRef={editorialBodyRef} articleKey={article.slug} />
 
           <div ref={editorialBodyRef} data-tts-article-body="true">
             <ArticleBody slug={article.slug} />
+          </div>
+
+          <div className="mt-8">
+            <ShareBar title={article.title} path={`/artigo/${article.slug}`} />
           </div>
 
           {article.updatedAt && (
@@ -178,6 +184,8 @@ function ArticleDetail() {
           )}
 
           <EditorialHistory updateNote={article.updateNote} corrections={article.corrections} />
+
+          <ArticleBody slug={article.slug} section="references" />
 
           <SourceList sources={article.sources} urls={article.sourceUrls} />
 
@@ -216,17 +224,13 @@ function ArticleDetail() {
             <p className="text-sm text-muted-foreground">{article.author.role}</p>
             <p className="mt-3 text-sm text-foreground">{article.author.shortBio}</p>
           </div>
-
-          <div className="mt-8">
-            <ShareBar title={article.title} path={`/artigo/${article.slug}`} />
-          </div>
         </div>
       </Container>
 
       {typedRelated.length > 0 && (
         <Container className="py-12">
           <h2 className="mb-6 border-b border-border pb-3 font-serif text-2xl font-semibold">
-            Leia também
+            Continue aprendendo
           </h2>
           <div className="grid gap-x-8 gap-y-10 md:grid-cols-3">
             {typedRelated.map((a: Article) => (

@@ -7,10 +7,11 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import mdx from "@mdx-js/rollup";
 import remarkFrontmatter from "remark-frontmatter";
+import { remarkEditorialSlots } from "./src/content/remark-editorial-slots";
 
 export default defineConfig({
   vite: {
-    plugins: [mdx({ remarkPlugins: [remarkFrontmatter] })],
+    plugins: [mdx({ remarkPlugins: [remarkFrontmatter, remarkEditorialSlots] })],
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
