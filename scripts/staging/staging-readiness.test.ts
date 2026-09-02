@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "a-energia-nuclear-esta-voltando",
       "o-paradoxo-da-energia-barata",
       "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
       "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",

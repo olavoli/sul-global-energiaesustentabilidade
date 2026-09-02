@@ -136,9 +136,7 @@ describe("proveniência de IA em imagens", () => {
       year: 2026,
     });
 
-    expect(provenance.contributions).toEqual([
-      { role: "generation", tool: "Reve (app.reve.com)" },
-    ]);
+    expect(provenance.contributions).toEqual([{ role: "generation", tool: "Reve (app.reve.com)" }]);
     expect(renderToStaticMarkup(<ImageAiCredit provenance={provenance} />)).toBe(
       "Fonte: SGES, (2026).",
     );

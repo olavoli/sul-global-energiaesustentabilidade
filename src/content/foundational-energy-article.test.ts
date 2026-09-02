@@ -106,8 +106,10 @@ describe("Artigo 001 — O que é energia?", () => {
             slug !== "por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade" &&
             slug !== "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos" &&
             slug !== "a-transicao-energetica-vai-aumentar-o-consumo-de-agua" &&
-            slug !== "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo" &&
+            slug !==
+              "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo" &&
             slug !== "o-paradoxo-da-energia-barata" &&
+            slug !== "a-energia-nuclear-esta-voltando" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",
