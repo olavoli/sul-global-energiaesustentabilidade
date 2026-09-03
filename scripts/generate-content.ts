@@ -17,7 +17,23 @@ const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url));
 const ARTICLE_DIRECTORY = resolve(SCRIPT_DIRECTORY, "../content/articles");
 const TEMPLATE_DIRECTORY = resolve(SCRIPT_DIRECTORY, "../content/templates");
 const GENERATED_DIRECTORY = resolve(SCRIPT_DIRECTORY, "../src/content/generated");
-const ALLOWED_COMPONENTS = new Set(["Callout", "Quote", "Figure", "KeyPoints"]);
+const ALLOWED_COMPONENTS = new Set([
+  "Callout",
+  "Quote",
+  "Figure",
+  "KeyPoints",
+  "EditorialTable",
+  "TableHead",
+  "TableBody",
+  "TableRow",
+  "TableHeader",
+  "TableCell",
+  "Emphasis",
+  "Strong",
+  "Superscript",
+  "Subscript",
+  "Underline",
+]);
 
 export interface ParsedEditorialFile {
   frontmatter: ArticleFrontmatter;

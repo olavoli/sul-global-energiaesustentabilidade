@@ -40,6 +40,7 @@ export function Figure({
   aiGenerationTool,
   aiEditingTool,
   aiCreditYear,
+  creditPlacement = "caption",
 }: {
   src: string;
   alt: string;
@@ -56,6 +57,8 @@ export function Figure({
   aiGenerationTool?: string;
   aiEditingTool?: string;
   aiCreditYear?: number | string;
+  /** An approved raster may already display its credit; retain it for screen readers only. */
+  creditPlacement?: "caption" | "embedded";
 }) {
   const normalizedWidth = typeof width === "string" ? Number(width) : width;
   const normalizedHeight = typeof height === "string" ? Number(height) : height;
@@ -101,9 +104,13 @@ export function Figure({
       {(caption || credit || license || hasSgesCredit) && (
         <figcaption className="mt-2 text-xs text-muted-foreground">
           {caption}
-          {caption && (hasSgesCredit || credit || license) ? " — " : ""}
+          {caption && creditPlacement !== "embedded" && (hasSgesCredit || credit || license)
+            ? " — "
+            : ""}
           {hasSgesCredit ? (
-            <ImageAiCredit provenance={aiProvenance} />
+            <span className={creditPlacement === "embedded" ? "sr-only" : undefined}>
+              <ImageAiCredit provenance={aiProvenance} />
+            </span>
           ) : (
             <>
               {sourceUrl && credit ? (

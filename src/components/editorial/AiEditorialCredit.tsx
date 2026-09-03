@@ -6,10 +6,12 @@ export function AiEditorialCredit({
   assistance,
   publicationDate,
   imageTools = [],
+  disclosure,
 }: {
   assistance: ArticleFrontmatter["aiAssistance"];
   publicationDate: string;
   imageTools?: string[];
+  disclosure?: string;
 }) {
   if (assistance === "none") return null;
   const publicationYear = publicationDate.slice(0, 4);
@@ -23,7 +25,9 @@ export function AiEditorialCredit({
         Transparência sobre uso de IA
       </h2>
       <p className="mt-2">
-        {imageTools.length > 0 ? (
+        {disclosure ? (
+          disclosure
+        ) : imageTools.length > 0 ? (
           <>
             Texto e imagens geradas por IA (
             {imageTools.map((tool, index) => (

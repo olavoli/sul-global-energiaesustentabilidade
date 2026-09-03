@@ -193,6 +193,7 @@ function ArticleDetail() {
             assistance={article.aiAssistance}
             publicationDate={article.publishedAt ?? article.createdAt}
             imageTools={verifiedAiImageTools}
+            disclosure={article.aiDisclosureMode === "detailed" ? article.aiDisclosure : undefined}
           />
 
           {article.opinionDisclosure && (

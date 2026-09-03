@@ -6,6 +6,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo.mdx"),
   "a-energia-nuclear-esta-voltando": () =>
     import("../../../content/articles/a-energia-nuclear-esta-voltando.mdx"),
+  "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico": () =>
+    import("../../../content/articles/a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico.mdx"),
   "a-rede-eletrica-esta-preparada-para-a-transicao-energetica": () =>
     import("../../../content/articles/a-rede-eletrica-esta-preparada-para-a-transicao-energetica.mdx"),
   "a-transicao-energetica-vai-aumentar-o-consumo-de-agua": () =>

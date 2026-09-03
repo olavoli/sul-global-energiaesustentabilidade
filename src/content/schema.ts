@@ -194,6 +194,7 @@ export const articleFrontmatterSchema = z
     interviewAuthorizationConfirmed: z.boolean().optional(),
     aiAssistance: z.enum(["none", "limited", "substantial"]).default("none"),
     aiDisclosure: z.string().min(3).max(400).optional(),
+    aiDisclosureMode: z.enum(["summary", "detailed"]).optional(),
     aiImageTools: z.array(z.string().trim().min(2).max(80)).max(4).optional(),
     seoTitle: z.string().max(120).optional(),
     seoDescription: z.string().max(180).optional(),

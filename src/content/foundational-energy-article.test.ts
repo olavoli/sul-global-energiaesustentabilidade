@@ -110,6 +110,7 @@ describe("Artigo 001 — O que é energia?", () => {
               "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo" &&
             slug !== "o-paradoxo-da-energia-barata" &&
             slug !== "a-energia-nuclear-esta-voltando" &&
+            slug !== "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",
