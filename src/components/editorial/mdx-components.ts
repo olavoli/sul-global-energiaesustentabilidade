@@ -1,6 +1,7 @@
 import { Callout, Figure, KeyPoints, Quote } from "./MdxComponents";
 import type { EditorialMdxComponents } from "@/content/types";
 import { YouTubeEmbed } from "./YouTubeEmbed";
+import { VideoCard } from "./VideoCard";
 import {
   EditorialTable,
   TableHead,
@@ -32,4 +33,5 @@ export const editorialMdxComponents = {
   Subscript,
   Underline,
   YouTubeEmbed,
+  VideoCard,
 } satisfies EditorialMdxComponents;

@@ -34,6 +34,7 @@ const ALLOWED_COMPONENTS = new Set([
   "Subscript",
   "Underline",
   "YouTubeEmbed",
+  "VideoCard",
 ]);
 
 export interface ParsedEditorialFile {
