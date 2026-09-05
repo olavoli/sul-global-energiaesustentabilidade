@@ -33,6 +33,7 @@ const ALLOWED_COMPONENTS = new Set([
   "Superscript",
   "Subscript",
   "Underline",
+  "MathExpression",
   "YouTubeEmbed",
   "VideoCard",
 ]);

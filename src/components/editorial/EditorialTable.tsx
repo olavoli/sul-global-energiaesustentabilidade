@@ -34,3 +34,20 @@ export const Strong = ({ children }: Children) => <strong>{children}</strong>;
 export const Superscript = ({ children }: Children) => <sup>{children}</sup>;
 export const Subscript = ({ children }: Children) => <sub>{children}</sub>;
 export const Underline = ({ children }: Children) => <u>{children}</u>;
+
+/** Preserves Word/OMML equations as accessible, selectable editorial math. */
+export function MathExpression({ children, display }: Children & { display?: "block" }) {
+  if (display === "block") {
+    return (
+      <span role="math" className="block whitespace-nowrap font-serif text-base leading-relaxed">
+        {children}
+      </span>
+    );
+  }
+
+  return (
+    <span role="math" className="whitespace-nowrap font-serif">
+      {children}
+    </span>
+  );
+}

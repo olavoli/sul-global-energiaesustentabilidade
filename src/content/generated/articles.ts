@@ -3,6 +3,64 @@ import type { ArticleFrontmatter } from "@/content/schema";
 
 export const articleRecords = [
   {
+    slug: "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+    title: "A bomba d’água que não precisa de eletricidade",
+    subtitle:
+      "Como o carneiro hidráulico usa a própria energia da água para bombear água morro acima",
+    excerpt:
+      "Como o carneiro hidráulico usa a energia potencial da água em queda para elevar uma parcela da vazão sem motor elétrico.",
+    contentType: "guide",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "funcional",
+    tags: ["eficiência energética", "sustentabilidade", "desenvolvimento"],
+    createdAt: "2026-09-04",
+    publishedAt: "2026-09-04",
+    reviewedAt: "2026-09-04",
+    approvedAt: "2026-09-04",
+    corrections: [],
+    readingTime: 10,
+    cover: {
+      src: "/images/articles/a-bomba-dagua-que-nao-precisa-de-eletricidade/art-022-hero.webp",
+      alt: "Sistema de carneiro hidráulico entre a captação em um riacho e um reservatório elevado",
+      decorative: false,
+      width: 4984,
+      height: 3322,
+      caption:
+        "Figura 1. Sistema de captação, alimentação, carneiro hidráulico, descarte e recalque.",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "Reve (app.reve.com)",
+          },
+        ],
+        year: 2026,
+      },
+      license: "Imagem SGES fornecida pelo autor",
+      focalPoint: {
+        x: 50,
+        y: 48,
+      },
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sourceUrls: [],
+    sources: [],
+    aiAssistance: "substantial",
+    aiDisclosure:
+      "A IA auxiliou na adaptação fiel do Word para MDX. Hero e Figura 2: geração no Reve (app.reve.com). Figura 3: origem no Reve (app.reve.com), seguida de reconstrução pela ferramenta de imagens do Codex (OpenAI); essa edição não foi realizada no Reve.",
+    aiDisclosureMode: "detailed",
+    aiImageTools: ["Reve (app.reve.com)", "Ferramenta de imagens do Codex (OpenAI)"],
+    seoTitle: "Carneiro hidráulico: a bomba d’água sem eletricidade",
+    seoDescription:
+      "Como o carneiro hidráulico usa a queda d’água e o golpe de aríete para bombear água sem motor elétrico.",
+    canonicalUrl: "/artigo/a-bomba-dagua-que-nao-precisa-de-eletricidade",
+  },
+  {
     slug: "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
     title: "A Conta da Transição Energética: Entre a Geração Barata e o Sistema Complexo",
     subtitle:

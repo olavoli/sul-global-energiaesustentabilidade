@@ -221,6 +221,7 @@
     color: var(--primary);
     text-decoration: underline;
     text-underline-offset: 3px;
+    overflow-wrap: anywhere;
   }
   & figure {
     margin: 2rem 0;

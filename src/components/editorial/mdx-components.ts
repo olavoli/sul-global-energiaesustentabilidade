@@ -14,6 +14,7 @@ import {
   Superscript,
   Subscript,
   Underline,
+  MathExpression,
 } from "./EditorialTable";
 
 export const editorialMdxComponents = {
@@ -32,6 +33,7 @@ export const editorialMdxComponents = {
   Superscript,
   Subscript,
   Underline,
+  MathExpression,
   YouTubeEmbed,
   VideoCard,
 } satisfies EditorialMdxComponents;
