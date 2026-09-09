@@ -24,7 +24,7 @@ describe("crédito editorial de IA", () => {
     );
     expect(html).toContain("Texto elaborado com auxílio de inteligência artificial (IA)");
     expect(html).toContain("Olavo Oliveira, SGES (2031)");
-    expect(html).toContain("Transparência sobre uso de IA");
+    expect(html).toContain("Nota de Transparência");
   });
 
   test("consolida texto e imagens somente com ferramenta comprovada", () => {
@@ -39,7 +39,7 @@ describe("crédito editorial de IA", () => {
     expect(html).toContain(
       "Texto e imagens geradas por IA (<em>GPT Image 2, OpenAI</em>), com edição e conferência técnica de Olavo Oliveira, SGES (2026).",
     );
-    expect(html.match(/Transparência sobre uso de IA/g)).toHaveLength(1);
+    expect(html.match(/Nota de Transparência/g)).toHaveLength(1);
     expect(html.match(/GPT Image 2, OpenAI/g)).toHaveLength(1);
   });
 

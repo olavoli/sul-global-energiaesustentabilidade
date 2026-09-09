@@ -22,7 +22,7 @@ export function AiEditorialCredit({
       aria-labelledby="ai-transparency-title"
     >
       <h2 id="ai-transparency-title" className="font-semibold text-foreground">
-        Transparência sobre uso de IA
+        Nota de Transparência
       </h2>
       <p className="mt-2">
         {disclosure ? (

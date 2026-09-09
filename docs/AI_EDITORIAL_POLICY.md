@@ -50,6 +50,18 @@ Todo fato sugerido por IA deve ser conferido na fonte primária ou em evidência
 
 O disclosure descreve o tipo de auxílio e confirma revisão humana. Ele não transfere responsabilidade para a ferramenta. Conteúdo sensível, acusatório, científico, jurídico ou financeiro exige cautela proporcional, e pode ser recusado até haver competência e fontes suficientes.
 
+### Nota de Transparência: modelo editorial permanente
+
+O texto público não é log de desenvolvimento, revisão ou publicação e não pode ser redigido autonomamente durante a integração. O modelo-base canônico é:
+
+> **Nota de Transparência:** Este artigo contou com o auxílio de ferramentas de Inteligência Artificial (ChatGPT) e imagens geradas por REVE (app.reve.com) durante as etapas de: pesquisa inicial; estruturação de tópicos; e revisão gramatical. Todo o conteúdo factual foi verificado, expandido e editado por Olavo Oliveira, visando garantir a precisão das informações apresentadas.
+
+Somente a atribuição das ferramentas utilizadas nas imagens pode variar, conforme proveniência explicitamente fornecida pelo responsável humano. Não inferir ferramenta pela aparência. Quando houver edição posterior, acrescentar apenas essa atribuição à parte das imagens, sem reescrever o restante da nota.
+
+Não mencionar Word para MDX, integração, staging, testes, auditoria, correções autorizadas, fluxo interno, reconstrução de imagens, decisões do Codex ou cadeia operacional de publicação. Não substituir `ChatGPT` por `Codex`, alterar `Olavo Oliveira` ou modificar as etapas declaradas sem autorização humana.
+
+O crédito público das figuras permanece separado e exatamente `Fonte: SGES, (2026).`. Proveniência técnica detalhada pertence aos metadados internos e não determina autonomamente a redação pública.
+
 ## Dados e direitos
 
 Não inserir em serviços de IA segredos, dados pessoais, material embargado, fontes confidenciais ou conteúdo sem direito de processamento. Antes de usar uma ferramenta externa, avaliar retenção, treinamento, acesso, contrato e jurisdição. Esta Sprint não integra qualquer provedor de IA.
