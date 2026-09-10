@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
       "o-ar-condicionado-que-funciona-sem-compressor",
       "a-bomba-dagua-que-nao-precisa-de-eletricidade",
       "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico",

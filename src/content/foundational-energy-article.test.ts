@@ -113,6 +113,7 @@ describe("Artigo 001 — O que é energia?", () => {
             slug !== "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico" &&
             slug !== "a-bomba-dagua-que-nao-precisa-de-eletricidade" &&
             slug !== "o-ar-condicionado-que-funciona-sem-compressor" &&
+            slug !== "a-chamine-que-produz-eletricidade-com-o-calor-do-sol" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
             slug !== "rascunho-como-funciona-matriz-eletrica-brasileira",

@@ -4,6 +4,8 @@ import type { MdxModuleLoader } from "@/content/types";
 export const articleLoaders: Record<string, MdxModuleLoader> = {
   "a-bomba-dagua-que-nao-precisa-de-eletricidade": () =>
     import("../../../content/articles/a-bomba-dagua-que-nao-precisa-de-eletricidade.mdx"),
+  "a-chamine-que-produz-eletricidade-com-o-calor-do-sol": () =>
+    import("../../../content/articles/a-chamine-que-produz-eletricidade-com-o-calor-do-sol.mdx"),
   "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo": () =>
     import("../../../content/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo.mdx"),
   "a-energia-nuclear-esta-voltando": () =>
