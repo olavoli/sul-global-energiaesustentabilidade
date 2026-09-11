@@ -11,6 +11,7 @@ export const adminSections = [
   "runs",
   "reports",
   "pitches",
+  "comments",
   "scientific-radar",
   "scientific-memory",
   "scientific-trends",

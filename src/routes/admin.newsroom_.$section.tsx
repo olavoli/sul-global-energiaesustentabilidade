@@ -10,6 +10,7 @@ import { AdminScientificTrends } from "@/components/admin/AdminScientificTrends"
 import { AdminScientificConcepts } from "@/components/admin/AdminScientificConcepts";
 import { AdminScientificEvidence } from "@/components/admin/AdminScientificEvidence";
 import { ResearchWorkspaceLinks } from "@/components/admin/ResearchWorkspaceLinks";
+import { AdminComments } from "@/components/admin/AdminComments";
 import { useAdminData } from "@/components/admin/use-admin-data";
 import { adminSections, type AdminSection } from "@/lib/admin/contracts";
 
@@ -24,6 +25,7 @@ const labels: Record<AdminSection, [string, string]> = {
   runs: ["Execuções", "Histórico, estágios, checkpoints, warnings e recuperação."],
   reports: ["Relatórios", "Resumos operacionais privados produzidos pelo pipeline."],
   pitches: ["Pautas", "Pautas estruturadas criadas somente após aprovação humana."],
+  comments: ["Comentários", "Fila privada de comentários aguardando moderação."],
   "scientific-radar": [
     "Radar Científico",
     "Descoberta privada de publicações científicas para decisão humana, sem geração de conteúdo.",
@@ -84,43 +86,48 @@ function SectionRoute() {
   if (detailActive) return <Outlet />;
   return (
     <AdminShell title={title} description={description}>
-      {state.loading && <AdminLoading />}
-      {state.error && <AdminError message={state.error} />}
-      {state.data && Array.isArray(state.data) && current !== "scientific-radar" && (
-        <ResearchWorkspaceLinks entries={state.data} />
+      {current === "comments" && <AdminComments />}
+      {current !== "comments" && (
+        <>
+          {state.loading && <AdminLoading />}
+          {state.error && <AdminError message={state.error} />}
+          {state.data && Array.isArray(state.data) && current !== "scientific-radar" && (
+            <ResearchWorkspaceLinks entries={state.data} />
+          )}
+          {state.data && current === "scientific-radar" && Array.isArray(state.data) && (
+            <AdminScientificRadar entries={state.data} />
+          )}
+          {state.data && current === "scientific-memory" && Array.isArray(state.data) && (
+            <AdminScientificMemory entries={state.data} />
+          )}
+          {state.data && current === "scientific-trends" && Array.isArray(state.data) && (
+            <AdminScientificTrends entries={state.data} />
+          )}
+          {state.data && current === "scientific-concepts" && Array.isArray(state.data) && (
+            <AdminScientificConcepts entries={state.data} />
+          )}
+          {state.data && current === "scientific-evidence" && Array.isArray(state.data) && (
+            <AdminScientificEvidence entries={state.data} />
+          )}
+          {state.data && current === "scientific-graph" && Array.isArray(state.data) && (
+            <AdminScientificGraph entries={state.data} />
+          )}
+          {state.data &&
+            ![
+              "scientific-radar",
+              "scientific-memory",
+              "scientific-trends",
+              "scientific-concepts",
+              "scientific-evidence",
+              "scientific-graph",
+            ].includes(current) &&
+            (Array.isArray(state.data) ? (
+              <AdminSectionList section={section} entries={state.data} />
+            ) : (
+              <AdminSectionList section={section} entries={[state.data]} />
+            ))}
+        </>
       )}
-      {state.data && current === "scientific-radar" && Array.isArray(state.data) && (
-        <AdminScientificRadar entries={state.data} />
-      )}
-      {state.data && current === "scientific-memory" && Array.isArray(state.data) && (
-        <AdminScientificMemory entries={state.data} />
-      )}
-      {state.data && current === "scientific-trends" && Array.isArray(state.data) && (
-        <AdminScientificTrends entries={state.data} />
-      )}
-      {state.data && current === "scientific-concepts" && Array.isArray(state.data) && (
-        <AdminScientificConcepts entries={state.data} />
-      )}
-      {state.data && current === "scientific-evidence" && Array.isArray(state.data) && (
-        <AdminScientificEvidence entries={state.data} />
-      )}
-      {state.data && current === "scientific-graph" && Array.isArray(state.data) && (
-        <AdminScientificGraph entries={state.data} />
-      )}
-      {state.data &&
-        ![
-          "scientific-radar",
-          "scientific-memory",
-          "scientific-trends",
-          "scientific-concepts",
-          "scientific-evidence",
-          "scientific-graph",
-        ].includes(current) &&
-        (Array.isArray(state.data) ? (
-          <AdminSectionList section={section} entries={state.data} />
-        ) : (
-          <AdminSectionList section={section} entries={[state.data]} />
-        ))}
     </AdminShell>
   );
 }

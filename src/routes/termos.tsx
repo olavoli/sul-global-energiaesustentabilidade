@@ -38,6 +38,12 @@ function TermsPage() {
         portal pode corrigir, atualizar, suspender ou remover conteúdo para preservar precisão,
         segurança e integridade editorial.
       </p>
+      <h2>Comentários e moderação</h2>
+      <p>
+        Comentários devem tratar do tema publicado e respeitar outras pessoas. Ofensas, ameaças,
+        discriminação, spam, dados pessoais, publicidade e links maliciosos podem ser rejeitados ou
+        removidos. Todos os comentários dependem de moderação prévia.
+      </p>
       <h2>Contato e alterações</h2>
       <p>
         O formulário de contato é demonstrativo e ainda não entrega mensagens. Estes termos podem

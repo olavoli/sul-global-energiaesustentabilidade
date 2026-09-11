@@ -32,6 +32,8 @@ import {
   rateLimitKey,
   recordFailedLogin,
 } from "./rate-limit";
+import type { D1Database } from "../../../scripts/newsroom/storage/d1-types";
+import { D1PublicCommentRepository } from "../comments/repository";
 
 type ServerEnvironment = Record<string, string | undefined>;
 
@@ -134,7 +136,52 @@ async function api(
   pathname: string,
   environment: ServerEnvironment,
   session: AdminSession,
+  runtimeEnvironment: unknown,
 ): Promise<Response> {
+  const runtime = runtimeEnvironment as { COMMENTS_ENABLED?: string; NEWSROOM_DB?: D1Database };
+  if (pathname.startsWith("/api/admin/comments")) {
+    if (runtime?.COMMENTS_ENABLED !== "true" || !runtime.NEWSROOM_DB)
+      return json({ error: "Recurso não encontrado." }, 404);
+    const repository = new D1PublicCommentRepository(runtime.NEWSROOM_DB);
+    if (pathname === "/api/admin/comments" && request.method === "GET") {
+      const status = new URL(request.url).searchParams.get("status") ?? "pending";
+      const page = await repository.listCommentsForModeration(status as never, { limit: 100 });
+      return json({ data: page.items });
+    }
+    if (pathname === "/api/admin/comments/actions" && request.method === "POST") {
+      const csrf = request.headers.get("x-csrf-token");
+      if (!csrf || !(await secureEqual(csrf, session.csrf)))
+        return json({ error: "Requisição não autorizada." }, 403);
+      if (!(await mutationAllowed(session.actor, request)))
+        return json({ error: "Limite temporário de ações atingido." }, 429);
+      const action = adminActionSchema.parse(await body(request));
+      if (!(await secureEqual(action.actor, session.actor)) || !action.id)
+        return json({ error: "Requisição não autorizada." }, 403);
+      const input = {
+        commentId: action.id,
+        actor: session.actor,
+        reason: action.note || undefined,
+      };
+      if (action.action === "approve") await repository.approveComment(input);
+      else if (action.action === "reject") await repository.rejectComment(input);
+      else if (action.action === "spam") await repository.markCommentAsSpam(input);
+      else if (action.action === "delete") await repository.softDeleteAndAnonymize(input);
+      else return json({ error: "Ação não permitida." }, 400);
+      await storageAdapter().appendAudit({
+        id: crypto.randomUUID(),
+        timestamp: new Date().toISOString(),
+        actor: session.actor,
+        action: `comment.${action.action}`,
+        entity: "comment",
+        entityId: action.id,
+        origin: "editorial-console",
+        success: true,
+        version: 1,
+      });
+      return json({ ok: true });
+    }
+    return json({ error: "Método não permitido." }, 405);
+  }
   if (pathname === "/api/admin/session")
     return json({ actor: session.actor, csrf: session.csrf, expiresAt: session.expiresAt });
   if (pathname === "/api/admin/storage/health" && request.method === "GET") {
@@ -227,7 +274,7 @@ export async function handleAdminRequest(
         : redirect("/admin/login");
     }
     if (pathname.startsWith("/api/admin")) {
-      const response = await api(request, pathname, environment, session);
+      const response = await api(request, pathname, environment, session, runtimeEnvironment);
       reportEvent("admin.request", {
         requestId,
         path: pathname,

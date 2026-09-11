@@ -12,6 +12,7 @@ import { ImageAiCredit } from "@/components/editorial/ImageAiCredit";
 import { ShareBar } from "@/components/article/ShareBar";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
+import { CommentsSection } from "@/components/comments/CommentsSection";
 import { EditorialImage } from "@/components/media/EditorialImage";
 import { EditorialBreadcrumb } from "@/components/navigation/EditorialBreadcrumb";
 import { SponsoredDisclosure } from "@/components/editorial/SponsoredDisclosure";
@@ -240,6 +241,10 @@ function ArticleDetail() {
           </div>
         </Container>
       )}
+
+      <Container>
+        <CommentsSection articleSlug={article.slug} />
+      </Container>
 
       <NewsletterCTA />
     </article>

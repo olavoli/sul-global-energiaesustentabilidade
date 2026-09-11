@@ -15,6 +15,7 @@ const navigation = [
   ["Execuções", "runs"],
   ["Relatórios", "reports"],
   ["Pautas", "pitches"],
+  ["Comentários", "comments"],
   ["Radar Científico", "scientific-radar"],
   ["Memória Temporal", "scientific-memory"],
   ["Tendências Científicas", "scientific-trends"],

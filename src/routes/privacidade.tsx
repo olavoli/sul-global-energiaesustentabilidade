@@ -43,6 +43,14 @@ function PrivacyPage() {
         compartilhar um link só ocorre após ação do usuário. Links, imagens e fontes externas podem
         seguir políticas próprias dos respectivos provedores.
       </p>
+      <h2>Comentários públicos</h2>
+      <p>
+        Comentários passam por moderação antes da publicação. O nome ou apelido pode ser exibido; o
+        e-mail permanece privado e é usado somente para moderação, segurança e pedidos de exclusão.
+        Comentários rejeitados ou classificados como spam têm seus dados pessoais anonimizados após
+        90 dias. A exclusão de comentário publicado pode ser solicitada pelos canais de contato
+        indicados pelo Sul Global.
+      </p>
       <h2>Mudanças futuras</h2>
       <p>
         Newsletter, contato, analytics ou publicidade somente poderão ser ativados após revisão de
