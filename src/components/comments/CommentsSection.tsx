@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 const consent =
   "Li e concordo com as Regras de Participação e com a Política de Privacidade. Autorizo o uso do meu nome ou apelido para publicação do comentário e do meu e-mail apenas para moderação, segurança e atendimento a pedidos de exclusão. O e-mail não será exibido publicamente.";
@@ -11,20 +11,86 @@ interface PublicComment {
   approvedAt: string;
 }
 
+const TURNSTILE_ACTION = "comment-submit";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        container: HTMLElement,
+        options: {
+          sitekey: string;
+          action: string;
+          callback: (token: string) => void;
+          "expired-callback": () => void;
+          "error-callback": () => void;
+        },
+      ) => string;
+      reset: (widgetId?: string) => void;
+      remove: (widgetId: string) => void;
+    };
+  }
+}
+
 export function CommentsSection({ articleSlug }: { articleSlug: string }) {
   const endpoint = `/api/articles/${articleSlug}/comments`;
   const [comments, setComments] = useState<PublicComment[] | null>(null);
+  const [siteKey, setSiteKey] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
+  const widgetContainer = useRef<HTMLDivElement>(null);
+  const widgetId = useRef<string | undefined>(undefined);
 
   useEffect(() => {
     fetch(endpoint)
       .then(async (response) =>
-        response.ok ? ((await response.json()) as { items: PublicComment[] }) : null,
+        response.ok
+          ? ((await response.json()) as { items: PublicComment[]; turnstileSiteKey: string })
+          : null,
       )
-      .then((result) => result && setComments(result.items))
+      .then((result) => {
+        if (!result) return;
+        setComments(result.items);
+        setSiteKey(result.turnstileSiteKey);
+      })
       .catch(() => undefined);
   }, [endpoint]);
+
+  useEffect(() => {
+    if (!siteKey || !widgetContainer.current) return;
+    let cancelled = false;
+    const render = () => {
+      if (cancelled || !window.turnstile || !widgetContainer.current || widgetId.current) return;
+      widgetId.current = window.turnstile.render(widgetContainer.current, {
+        sitekey: siteKey,
+        action: TURNSTILE_ACTION,
+        callback: setTurnstileToken,
+        "expired-callback": () => setTurnstileToken(""),
+        "error-callback": () => setTurnstileToken(""),
+      });
+    };
+    const existing = document.querySelector<HTMLScriptElement>(
+      'script[data-sges-turnstile="true"]',
+    );
+    if (existing) {
+      if (window.turnstile) render();
+      else existing.addEventListener("load", render, { once: true });
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      script.dataset.sgesTurnstile = "true";
+      script.addEventListener("load", render, { once: true });
+      document.head.appendChild(script);
+    }
+    return () => {
+      cancelled = true;
+      if (widgetId.current && window.turnstile) window.turnstile.remove(widgetId.current);
+      widgetId.current = undefined;
+    };
+  }, [siteKey]);
 
   if (comments === null) return null;
 
@@ -43,6 +109,7 @@ export function CommentsSection({ articleSlug }: { articleSlug: string }) {
         bodyText: form.get("bodyText"),
         consentAccepted: form.get("consentAccepted") === "on",
         honeypot: form.get("website"),
+        turnstileToken,
       }),
     }).catch(() => undefined);
     setSending(false);
@@ -52,6 +119,8 @@ export function CommentsSection({ articleSlug }: { articleSlug: string }) {
         : "Não foi possível enviar o comentário.",
     );
     if (response?.status === 202) event.currentTarget.reset();
+    setTurnstileToken("");
+    window.turnstile?.reset(widgetId.current);
   }
 
   return (
@@ -150,9 +219,10 @@ export function CommentsSection({ articleSlug }: { articleSlug: string }) {
             .
           </span>
         </label>
+        <div ref={widgetContainer} aria-label="Verificação de segurança" />
         <button
           type="submit"
-          disabled={sending}
+          disabled={sending || !turnstileToken}
           className="rounded-md bg-primary px-4 py-2 text-primary-foreground disabled:opacity-60"
         >
           {sending ? "Enviando…" : "Enviar comentário"}

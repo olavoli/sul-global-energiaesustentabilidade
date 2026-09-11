@@ -94,6 +94,8 @@ describe("preparação para produção", () => {
   test("CSP bloqueia embedding e não usa unsafe-eval", () => {
     const policy = contentSecurityPolicy();
     expect(policy).toContain("frame-ancestors 'none'");
+    expect(policy).toContain("frame-src https://challenges.cloudflare.com");
+    expect(policy).toContain("script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com");
     expect(policy).not.toContain("unsafe-eval");
   });
 

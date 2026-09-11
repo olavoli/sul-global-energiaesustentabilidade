@@ -19,6 +19,7 @@ const publicInput = {
   bodyText: "Comentário respeitoso.",
   consentAccepted: true,
   honeypot: "",
+  turnstileToken: "token-de-teste",
 } as const;
 
 const persistedBase = {

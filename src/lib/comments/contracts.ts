@@ -39,6 +39,7 @@ export const publicCommentInputSchema = z
     bodyText: plainTextSchema(3, 2_000),
     consentAccepted: z.literal(true),
     honeypot: z.literal("").optional(),
+    turnstileToken: z.string().trim().min(1).max(2_048),
   })
   .strict();
 
