@@ -8,7 +8,7 @@ const sql = readFileSync(new URL("./0002_newsletter_subscribers.sql", import.met
 describe("migration da newsletter", () => {
   test("registra a versão 2 sem operação destrutiva", () => {
     expect(() => validateMigrations(storageMigrations)).not.toThrow();
-    expect(storageMigrations.at(-1)).toMatchObject({
+    expect(storageMigrations.find(({ version }) => version === 2)).toMatchObject({
       version: 2,
       name: "newsletter-subscribers",
     });

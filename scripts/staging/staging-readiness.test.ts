@@ -56,7 +56,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
 
   test("6. migration emulada é idempotente", async () => {
     const adapter = new D1EmulatorStorageAdapter();
-    expect(await applyMigrationsToEmulator(adapter)).toEqual([1]);
+    expect(await applyMigrationsToEmulator(adapter)).toEqual([1, 2, 3]);
     expect(await applyMigrationsToEmulator(adapter)).toEqual([]);
   });
 
