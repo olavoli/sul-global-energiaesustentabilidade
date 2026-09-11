@@ -28,13 +28,14 @@ export function NewsletterCTA() {
       <div className="mx-auto max-w-2xl px-4 text-center">
         <span className="overline text-primary">Newsletter Sul Global</span>
         <h2 className="mt-3 font-serif text-3xl font-semibold text-foreground md:text-4xl">
-          Uma análise semanal sobre energia e transição.
+          Energia e sustentabilidade explicadas para todos.
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Reportagem original, sem ruído, para quem trabalha no setor.
+          Receba reportagens, curiosidades e informações sobre as transformações que afetam o nosso
+          dia a dia e o futuro do planeta.
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
-          Formulário demonstrativo: nenhum e-mail será enviado, cadastrado ou armazenado.
+          Este formulário ainda está em fase de testes. Nenhum e-mail será cadastrado ou armazenado.
         </p>
         <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-2 sm:flex-row" noValidate>
           <label htmlFor="newsletter-email" className="sr-only">
@@ -58,7 +59,7 @@ export function NewsletterCTA() {
             type="submit"
             className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-5 font-medium text-primary-foreground transition-colors hover:opacity-90"
           >
-            Assinar
+            Quero receber
           </button>
         </form>
         {status.kind === "error" && (
