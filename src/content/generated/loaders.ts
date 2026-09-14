@@ -48,6 +48,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/o-ar-condicionado-que-funciona-sem-compressor.mdx"),
   "o-paradoxo-da-energia-barata": () =>
     import("../../../content/articles/o-paradoxo-da-energia-barata.mdx"),
+  "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar": () =>
+    import("../../../content/articles/o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar.mdx"),
   "o-que-acontece-com-um-painel-solar-no-fim-da-vida": () =>
     import("../../../content/articles/o-que-acontece-com-um-painel-solar-no-fim-da-vida.mdx"),
   "o-que-e-energia": () => import("../../../content/articles/o-que-e-energia.mdx"),

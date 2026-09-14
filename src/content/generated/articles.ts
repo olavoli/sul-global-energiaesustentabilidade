@@ -2388,6 +2388,172 @@ export const articleRecords = [
     canonicalUrl: "/artigo/o-paradoxo-da-energia-barata",
   },
   {
+    slug: "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar",
+    title: "O que acontece com a rede quando todo mundo instala painel solar?",
+    subtitle:
+      "A geração distribuída pode reduzir o consumo vindo da rede, mas sua expansão também transforma o fluxo de potência, altera tensões e exige novos critérios para transformadores, proteção, controle, armazenamento e regulação tarifária.",
+    excerpt:
+      "Como a geração distribuída altera fluxos, tensões, proteção, operação do sistema elétrico, armazenamento e regulação tarifária.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: ["geração distribuída", "energia solar", "redes elétricas", "armazenamento"],
+    createdAt: "2026-09-14",
+    publishedAt: "2026-09-14",
+    reviewedAt: "2026-09-14",
+    approvedAt: "2026-09-14",
+    corrections: [],
+    readingTime: 9,
+    cover: {
+      src: "/images/articles/o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar/art-025-hero.png",
+      alt: "Representação conceitual de um bairro com geração distribuída fotovoltaica",
+      decorative: false,
+      width: 1672,
+      height: 941,
+      caption:
+        "Figura 1. Representação conceitual da geração distribuída fotovoltaica em uma área urbana.",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "ChatGPT/OpenAI",
+          },
+        ],
+        year: 2026,
+      },
+      license: "Imagem SGES fornecida pelo autor",
+      focalPoint: {
+        x: 50,
+        y: 48,
+      },
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sourceUrls: [
+      "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm",
+      "https://www2.aneel.gov.br/cedoc/ren20211000.pdf",
+      "https://www2.aneel.gov.br/cedoc/prodist-modulo8-rev10.pdf",
+      "https://www2.aneel.gov.br/cedoc/ren20231059.pdf",
+      "https://agenciainfra.com/",
+      "https://www.gov.br/aneel/pt-br/assuntos/participacao-social/consultas-publicas/2026/cp-033-2026",
+      "https://www.ons.org.br/paginas/energia-agora/estudos-e-publicacoes",
+      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia-pde",
+      "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Reverse%20power%20flow%20and%20voltage%20regulation%20issues%20in%20a%20real%20Brazilian%20rural%20feeder%20with%20high%20PV%20penetration",
+      "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Coordinated%20Voltage%20Control%20in%20Distribution%20Networks%20with%20High%20PV%20Penetration%20using%20Smart%20Inverters",
+    ],
+    sources: [
+      {
+        title:
+          "BRASIL. Lei nº 14.300, de 6 de janeiro de 2022. Marco Legal da Microgeração e Minigeração Distribuída e do Sistema de Compensação de Energia Elétrica (SCEE).",
+        url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm",
+        organizationOrAuthor: "Brasil",
+        publishedAt: "2022-01-06",
+        verifiedAt: "2026-09-14",
+        type: "regulatory",
+        isDemo: false,
+      },
+      {
+        title:
+          "ANEEL. Resolução Normativa nº 1.000, de 7 de dezembro de 2021. Estabelece as Regras de Fornecimento de Energia Elétrica.",
+        url: "https://www2.aneel.gov.br/cedoc/ren20211000.pdf",
+        organizationOrAuthor: "Agência Nacional de Energia Elétrica",
+        publishedAt: "2021-12-07",
+        verifiedAt: "2026-09-14",
+        type: "regulatory",
+        isDemo: false,
+      },
+      {
+        title:
+          "ANEEL. Módulo 8 do PRODIST – Qualidade da Energia Elétrica (REN nº 956/2021). Procedimentos de Distribuição de Energia Elétrica no Sistema Elétrico Nacional.",
+        url: "https://www2.aneel.gov.br/cedoc/prodist-modulo8-rev10.pdf",
+        organizationOrAuthor: "Agência Nacional de Energia Elétrica",
+        publishedAt: "2021-12-07",
+        verifiedAt: "2026-09-14",
+        type: "regulatory",
+        isDemo: false,
+      },
+      {
+        title:
+          "ANEEL. Resolução Normativa nº 1.059, de 20 de junho de 2023. Regulamenta a Lei nº 14.300/2022 e consolida normas sobre micro e minigeração distribuída.",
+        url: "https://www2.aneel.gov.br/cedoc/ren20231059.pdf",
+        organizationOrAuthor: "Agência Nacional de Energia Elétrica",
+        publishedAt: "2023-02-07",
+        verifiedAt: "2026-09-14",
+        type: "regulatory",
+        isDemo: false,
+      },
+      {
+        title:
+          "Parecer nº 00166/2026/PFANEEL/PGF/AGU. Tarifa Horária aos Consumidores-Geradores: Legalidade e Competência Regulamentar.",
+        url: "https://agenciainfra.com/",
+        organizationOrAuthor: "AGÊNCIA iNFRA",
+        verifiedAt: "2026-09-14",
+        type: "news",
+        note: "Link institucional de referência.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Consulta Pública nº 033/2026. Novas Regras de Conexão e Recursos Energéticos Distribuídos (REDs) – Atualização do Módulo 3 do PRODIST.",
+        url: "https://www.gov.br/aneel/pt-br/assuntos/participacao-social/consultas-publicas/2026/cp-033-2026",
+        organizationOrAuthor: "GOV.BR / ANEEL",
+        verifiedAt: "2026-09-14",
+        type: "regulatory",
+        isDemo: false,
+      },
+      {
+        title: "Estudos sobre Excedentes Energéticos, Curtailment e Integração da MMGD ao SIN.",
+        url: "https://www.ons.org.br/paginas/energia-agora/estudos-e-publicacoes",
+        organizationOrAuthor: "Operador Nacional do Sistema Elétrico",
+        verifiedAt: "2026-09-14",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "Plano Decenal de Expansão de Energia (PDE) e Notas Técnicas sobre Recursos Energéticos Distribuídos e Eficiência Energética.",
+        url: "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia-pde",
+        organizationOrAuthor: "Empresa de Pesquisa Energética",
+        verifiedAt: "2026-09-14",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "BRITO, M. A. G. et al. Reverse power flow and voltage regulation issues in a real Brazilian rural feeder with high PV penetration. IEEE Latin America Transactions, 2023.",
+        url: "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Reverse%20power%20flow%20and%20voltage%20regulation%20issues%20in%20a%20real%20Brazilian%20rural%20feeder%20with%20high%20PV%20penetration",
+        organizationOrAuthor: "M. A. G. Brito et al.",
+        publishedAt: "2023-01-01",
+        verifiedAt: "2026-09-14",
+        type: "academic",
+        isDemo: false,
+      },
+      {
+        title:
+          "LONG, C.; ELLIOTT, D.; KIRSCHEN, D. S. Coordinated Voltage Control in Distribution Networks with High PV Penetration using Smart Inverters. IEEE Transactions on Sustainable Energy, 2022.",
+        url: "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Coordinated%20Voltage%20Control%20in%20Distribution%20Networks%20with%20High%20PV%20Penetration%20using%20Smart%20Inverters",
+        organizationOrAuthor: "C. Long; D. Elliott; D. S. Kirschen",
+        publishedAt: "2022-01-01",
+        verifiedAt: "2026-09-14",
+        type: "academic",
+        isDemo: false,
+      },
+    ],
+    aiAssistance: "substantial",
+    aiDisclosure:
+      "Nota de Transparência: Este artigo contou com o auxílio de ferramentas de Inteligência Artificial (ChatGPT), incluindo a geração de imagens, durante as etapas de: pesquisa inicial; estruturação de tópicos; e revisão gramatical. Todo o conteúdo factual foi verificado, expandido e editado por Olavo Oliveira, visando garantir a precisão das informações apresentadas.",
+    aiDisclosureMode: "detailed",
+    aiImageTools: ["ChatGPT/OpenAI"],
+    seoTitle: "Geração distribuída: impactos dos painéis solares na rede",
+    seoDescription:
+      "Entenda como a geração distribuída solar altera fluxos, tensões, proteção, operação, armazenamento e regulação do sistema elétrico.",
+    canonicalUrl: "/artigo/o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar",
+  },
+  {
     slug: "o-que-acontece-com-um-painel-solar-no-fim-da-vida",
     title: "O que acontece com um painel solar quando ele chega ao fim da vida?",
     subtitle:
