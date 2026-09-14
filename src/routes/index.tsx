@@ -7,7 +7,7 @@ import { InPauta } from "@/components/home/InPauta";
 import { SectionTitle } from "@/components/home/SectionTitle";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
-import { getFeaturedArticles, getLatestArticles, getPublishedArticles } from "@/content/repository";
+import { getLatestArticles, getPublishedArticles } from "@/content/repository";
 import { categories } from "@/data/categories";
 import type { CategorySlug } from "@/types/content";
 import { siteConfig } from "@/config/site";
@@ -37,9 +37,8 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const featured = getFeaturedArticles();
   const latest = getLatestArticles(12);
-  const hero = featured[0] ?? latest[0];
+  const hero = latest[0];
   const secondary = latest.filter((a) => a.slug !== hero?.slug).slice(0, 2);
   const rest = latest.filter((a) => a.slug !== hero?.slug && !secondary.includes(a));
 

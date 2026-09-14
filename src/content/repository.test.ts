@@ -99,4 +99,16 @@ describe("repositório editorial", () => {
     const results = createContentRepository([baseArticle], true).searchArticles("solar");
     expect(results.map((article) => article.slug)).toEqual(["artigo-valido"]);
   });
+
+  test("ordena os mais recentes por publicação e desempata pelo slug", () => {
+    const older = { ...baseArticle, slug: "artigo-anterior", publishedAt: "2026-07-12" };
+    const tiedLater = { ...baseArticle, slug: "zeta-no-mesmo-dia" };
+    const tiedFirst = { ...baseArticle, slug: "alfa-no-mesmo-dia" };
+
+    expect(
+      createContentRepository([older, tiedLater, tiedFirst], true)
+        .getLatestArticles()
+        .map(({ slug }) => slug),
+    ).toEqual(["alfa-no-mesmo-dia", "zeta-no-mesmo-dia", "artigo-anterior"]);
+  });
 });

@@ -77,7 +77,11 @@ export function createContentRepository(
         (!record.isDemo || allowDemo),
     )
     .map(toPublishedArticle)
-    .sort((left, right) => right.publishedAt.localeCompare(left.publishedAt));
+    .sort(
+      (left, right) =>
+        right.publishedAt.localeCompare(left.publishedAt) ||
+        left.slug.localeCompare(right.slug, "pt-BR"),
+    );
 
   const byCategoryName = new Map(categories.map((category) => [category.slug, category.name]));
 
