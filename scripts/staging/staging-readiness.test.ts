@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
       "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar",
       "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
       "o-ar-condicionado-que-funciona-sem-compressor",
