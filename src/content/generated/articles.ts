@@ -1600,6 +1600,173 @@ export const articleRecords = [
     aiAssistance: "none",
   },
   {
+    slug: "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+    title: "É possível resfriar uma casa sem ar-condicionado?",
+    subtitle:
+      "Estratégias passivas podem evitar ganhos de calor, aumentar a perda de calor e ampliar o conforto. O resultado depende do clima, do projeto, do uso do edifício e das condições externas.",
+    excerpt:
+      "Como sombreamento, ventilação, massa térmica, evaporação, torres de vento e resfriamento radiativo podem reduzir a demanda de climatização.",
+    contentType: "guide",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "funcional",
+    tags: ["eficiência energética", "sustentabilidade", "arquitetura bioclimática"],
+    createdAt: "2026-09-17",
+    publishedAt: "2026-09-17",
+    reviewedAt: "2026-09-17",
+    approvedAt: "2026-09-17",
+    corrections: [],
+    readingTime: 9,
+    cover: {
+      src: "/images/articles/e-possivel-resfriar-uma-casa-sem-ar-condicionado/art-026-hero.png",
+      alt: "Residência com brises, janelas abertas e torre de vento em uma paisagem de Cerrado ao entardecer.",
+      decorative: false,
+      width: 1672,
+      height: 941,
+      caption:
+        "Representação conceitual de uma residência no Cerrado que combina sombreamento, ventilação natural e torre de vento.",
+      credit: "Fonte: SGES (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "ChatGPT/OpenAI",
+          },
+        ],
+        year: 2026,
+      },
+      license: "Imagem SGES fornecida pelo autor",
+      focalPoint: {
+        x: 54,
+        y: 48,
+      },
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sourceUrls: [
+      "https://www.ashrae.org/technical-resources/bookstore/standard-55-thermal-environmental-conditions-for-human-occupancy",
+      "https://handbook.ashrae.org/Handbooks/A23/SI/A23_Ch53/a23_ch53_si.aspx",
+      "https://www.aivc.org/sites/default/files/members_area/medias/pdf/Inive/palenc/2005/Azami2.pdf",
+      "https://igbc.in/frontend-assets/html_pdfs/CII_20%20Years_8th_JAN_2025_Approval%20%281%29.pdf",
+      "https://doi.org/10.1038/s41566-021-00921-9",
+      "https://doi.org/10.1016/j.rser.2016.11.254",
+      "https://labeee.ufsc.br/pt-br/publicacoes/livros",
+      "https://www.arup.com/en-us/projects/the-arup-journal-1990s/the-arup-journal-1997-issue-1/",
+      "https://www.energy.gov/home-cooling",
+      "https://bsesc.energy.gov/energy-basics/natural-ventilation-and-cooling",
+    ],
+    sources: [
+      {
+        title:
+          "ASHRAE. (2023a). ANSI/ASHRAE Standard 55-2023: Thermal Environmental Conditions for Human Occupancy.",
+        url: "https://www.ashrae.org/technical-resources/bookstore/standard-55-thermal-environmental-conditions-for-human-occupancy",
+        organizationOrAuthor: "ASHRAE",
+        publishedAt: "2023-01-01",
+        verifiedAt: "2026-09-17",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "ASHRAE. (2023b). ASHRAE Handbook—HVAC Applications, Chapter 53: Evaporative Cooling.",
+        url: "https://handbook.ashrae.org/Handbooks/A23/SI/A23_Ch53/a23_ch53_si.aspx",
+        organizationOrAuthor: "ASHRAE",
+        publishedAt: "2023-01-01",
+        verifiedAt: "2026-09-17",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "A'zami, A. (2005). Badgir in traditional Iranian architecture. Proceedings of the International Conference Passive and Low Energy Cooling for the Built Environment, Santorini, Greece, vol. II, 1021–1026.",
+        url: "https://www.aivc.org/sites/default/files/members_area/medias/pdf/Inive/palenc/2005/Azami2.pdf",
+        organizationOrAuthor: "A. A'zami",
+        publishedAt: "2005-01-01",
+        verifiedAt: "2026-09-17",
+        type: "academic",
+        isDemo: false,
+      },
+      {
+        title:
+          "Confederation of Indian Industry (CII). (2025). 20 Years of CII–Sohrabji Godrej Green Business Centre: In Pursuit of a Greener and Healthier India.",
+        url: "https://igbc.in/frontend-assets/html_pdfs/CII_20%20Years_8th_JAN_2025_Approval%20%281%29.pdf",
+        organizationOrAuthor: "Confederation of Indian Industry",
+        publishedAt: "2025-01-01",
+        verifiedAt: "2026-09-17",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "Fan, S., & Li, W. (2022). Photonics and thermodynamics concepts in radiative cooling. Nature Photonics, 16, 182–190.",
+        url: "https://doi.org/10.1038/s41566-021-00921-9",
+        organizationOrAuthor: "S. Fan; W. Li",
+        publishedAt: "2022-01-01",
+        verifiedAt: "2026-09-17",
+        type: "academic",
+        isDemo: false,
+      },
+      {
+        title:
+          "Jomehzadeh, F., Nejat, P., Calautit, J. K., Yusof, M. B. M., Zaki, S. A., Hughes, B. R., & Yazid, M. N. A. W. M. (2017). A review on windcatcher for passive cooling and natural ventilation in buildings, Part 1: Indoor air quality and thermal comfort assessment.",
+        url: "https://doi.org/10.1016/j.rser.2016.11.254",
+        organizationOrAuthor: "F. Jomehzadeh et al.",
+        publishedAt: "2017-01-01",
+        verifiedAt: "2026-09-17",
+        type: "academic",
+        isDemo: false,
+      },
+      {
+        title:
+          "Lamberts, R., Dutra, L., & Pereira, F. O. R. (2014). Eficiência energética na arquitetura (3ª ed.). Eletrobras/Procel.",
+        url: "https://labeee.ufsc.br/pt-br/publicacoes/livros",
+        organizationOrAuthor: "R. Lamberts; L. Dutra; F. O. R. Pereira",
+        publishedAt: "2014-01-01",
+        verifiedAt: "2026-09-17",
+        type: "academic",
+        isDemo: false,
+      },
+      {
+        title: "Smith, F. (1997). Eastgate, Harare, Zimbabwe. The Arup Journal, 32(1), 3–8.",
+        url: "https://www.arup.com/en-us/projects/the-arup-journal-1990s/the-arup-journal-1997-issue-1/",
+        organizationOrAuthor: "F. Smith",
+        publishedAt: "1997-01-01",
+        verifiedAt: "2026-09-17",
+        type: "company",
+        isDemo: false,
+      },
+      {
+        title: "U.S. Department of Energy. (s.d.-a). Home Cooling.",
+        url: "https://www.energy.gov/home-cooling",
+        organizationOrAuthor: "U.S. Department of Energy",
+        verifiedAt: "2026-09-17",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "U.S. Department of Energy. (s.d.-b). Natural Ventilation and Cooling. Building Science Education.",
+        url: "https://bsesc.energy.gov/energy-basics/natural-ventilation-and-cooling",
+        organizationOrAuthor: "U.S. Department of Energy",
+        verifiedAt: "2026-09-17",
+        type: "official",
+        isDemo: false,
+      },
+    ],
+    aiAssistance: "substantial",
+    aiDisclosure:
+      "Nota de Transparência: Este artigo contou com o auxílio de ferramentas de Inteligência Artificial (ChatGPT), incluindo a geração das Figuras 1, 3 e 4, e do Gemini Notebook na geração da Figura 2, durante as etapas de: pesquisa inicial; estruturação de tópicos; e revisão gramatical. Todo o conteúdo factual foi verificado, expandido e editado por Olavo Oliveira, visando garantir a precisão das informações apresentadas.",
+    aiDisclosureMode: "detailed",
+    aiImageTools: ["ChatGPT/OpenAI", "Gemini Notebook"],
+    seoTitle: "Como resfriar uma casa sem ar-condicionado",
+    seoDescription:
+      "Entenda quando sombreamento, ventilação, massa térmica, evaporação, torres de vento e resfriamento radiativo podem reduzir o calor em uma casa.",
+    canonicalUrl: "/artigo/e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+  },
+  {
     slug: "eolica-offshore-brasileira-marco-regulatorio-em-construcao",
     title: "Eólica offshore brasileira: marco regulatório em construção",
     subtitle:
