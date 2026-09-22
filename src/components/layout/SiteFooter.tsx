@@ -1,4 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import { Instagram, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Container } from "./Container";
 import { categories } from "@/data/categories";
 
@@ -80,15 +82,36 @@ export function SiteFooter() {
 
         <div>
           <h3 className="overline text-muted-foreground">Acompanhe</h3>
-          <p className="mt-4 text-sm text-muted-foreground">
-            Perfis oficiais em redes sociais serão anunciados em breve.
-          </p>
           <ul
-            className="mt-3 flex flex-wrap gap-3 text-sm text-muted-foreground"
-            aria-label="Redes sociais (em breve)"
+            className="mt-4 flex flex-wrap gap-3 text-sm text-foreground"
+            aria-label="Redes sociais e RSS"
           >
-            <li className="rounded border border-dashed border-border px-2 py-1">LinkedIn</li>
-            <li className="rounded border border-dashed border-border px-2 py-1">Bluesky</li>
+            <li>
+              <Button asChild variant="outline" className="min-h-11 focus-visible:ring-2">
+                <a
+                  href="https://www.linkedin.com/company/sul-global-energia-e-sustentabilidade"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin aria-hidden="true" />
+                  LinkedIn
+                  <span className="sr-only"> (abre em nova aba)</span>
+                </a>
+              </Button>
+            </li>
+            <li>
+              <Button asChild variant="outline" className="min-h-11 focus-visible:ring-2">
+                <a
+                  href="https://www.instagram.com/sulglobalenergia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram aria-hidden="true" />
+                  Instagram
+                  <span className="sr-only"> (abre em nova aba)</span>
+                </a>
+              </Button>
+            </li>
             <li>
               <a
                 href="/rss.xml"
