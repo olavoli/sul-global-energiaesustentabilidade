@@ -28,6 +28,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/baterias-de-sodio-estao-chegando.mdx"),
   "captura-de-carbono-realidade-tecnica-ou-narrativa": () =>
     import("../../../content/articles/captura-de-carbono-realidade-tecnica-ou-narrativa.mdx"),
+  "e-possivel-produzir-eletricidade-de-dia-e-de-noite": () =>
+    import("../../../content/articles/e-possivel-produzir-eletricidade-de-dia-e-de-noite.mdx"),
   "e-possivel-resfriar-uma-casa-sem-ar-condicionado": () =>
     import("../../../content/articles/e-possivel-resfriar-uma-casa-sem-ar-condicionado.mdx"),
   "eolica-offshore-brasileira-marco-regulatorio-em-construcao": () =>
