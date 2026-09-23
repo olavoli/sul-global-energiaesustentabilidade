@@ -202,7 +202,9 @@ describe("ART-026 — integração canônica do DOCX revisado v5", () => {
     expect(article?.slug).toBe(slug);
     expect(getArticlesByCategory("funcional").map((article) => article.slug)).toContain(slug);
     expect(searchArticles("resfriar uma casa").map((article) => article.slug)).toContain(slug);
-    expect(getLatestArticles(1)[0]?.slug).toBe(slug);
+    expect(getLatestArticles(1)[0]?.slug).toBe(
+      "e-possivel-produzir-eletricidade-de-dia-e-de-noite",
+    );
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);
     expect(getRelatedArticles(article!)).not.toHaveLength(0);
 

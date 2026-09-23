@@ -115,6 +115,7 @@ describe("Artigo 001 — O que é energia?", () => {
             slug !== "o-ar-condicionado-que-funciona-sem-compressor" &&
             slug !== "a-chamine-que-produz-eletricidade-com-o-calor-do-sol" &&
             slug !== "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar" &&
+            slug !== "e-possivel-produzir-eletricidade-de-dia-e-de-noite" &&
             slug !== "e-possivel-resfriar-uma-casa-sem-ar-condicionado" &&
             slug !== "por-que-armazenar-energia-e-tao-dificil" &&
             slug !== "por-que-nenhuma-maquina-e-100-eficiente" &&
