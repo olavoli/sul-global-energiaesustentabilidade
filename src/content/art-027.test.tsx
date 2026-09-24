@@ -130,7 +130,7 @@ describe("ART-027 — integração canônica do DOCX revisado v4", () => {
 
   test("preserva título, categoria, quatro pontos-chave e referências", async () => {
     expect(parsed.frontmatter.title).toBe("É possível produzir eletricidade de dia e de noite?");
-    expect(parsed.frontmatter.category).toBe("funcional");
+    expect(parsed.frontmatter.category).toBe("ciencia");
     expect(parsed.frontmatter.status).toBe("published");
     expect(parsed.frontmatter.publishedAt).toBe("2026-09-23");
     expect(parsed.frontmatter.sources).toHaveLength(11);
@@ -183,7 +183,7 @@ describe("ART-027 — integração canônica do DOCX revisado v4", () => {
   test("integra artigo, categoria, busca, home, sitemap, RSS e metadados sociais", () => {
     const article = getArticleBySlug(slug);
     expect(article?.slug).toBe(slug);
-    expect(getArticlesByCategory("funcional").map((item) => item.slug)).toContain(slug);
+    expect(getArticlesByCategory("ciencia").map((item) => item.slug)).toContain(slug);
     expect(searchArticles("termoelétrico").map((item) => item.slug)).toContain(slug);
     expect(getLatestArticles(1)[0]?.slug).toBe(slug);
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);

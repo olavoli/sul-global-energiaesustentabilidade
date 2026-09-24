@@ -1609,7 +1609,7 @@ export const articleRecords = [
     status: "published",
     draftStage: "review-ready",
     author: "olavo-oliveira",
-    category: "funcional",
+    category: "ciencia",
     tags: ["termoeletricidade", "armazenamento", "energia solar"],
     createdAt: "2026-09-23",
     publishedAt: "2026-09-23",
