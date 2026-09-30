@@ -4205,6 +4205,162 @@ export const articleRecords = [
     aiAssistance: "none",
   },
   {
+    slug: "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao",
+    title:
+      "Transição Energética Justa em Santa Catarina: Empregos e cidades depois do carvão - Parte 1",
+    subtitle: "Parte 1 — Empregos e cidades depois do carvão",
+    excerpt:
+      "Este artigo, o primeiro de uma trilogia, examina estimativas históricas sobre empregos, participação econômica municipal e conexões logísticas da cadeia do carvão.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: ["carvão", "emprego", "santa catarina", "transição justa"],
+    createdAt: "2026-09-30",
+    publishedAt: "2026-09-30",
+    reviewedAt: "2026-09-30",
+    approvedAt: "2026-09-30",
+    corrections: [],
+    readingTime: 9,
+    cover: {
+      src: "/images/articles/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao/art-028-hero.png",
+      alt: "Ex-mineiro segura um capacete e uma muda entre uma mina de carvão e uma área verde com painéis solares.",
+      decorative: false,
+      width: 4927,
+      height: 3360,
+      caption:
+        "Representação conceitual da transição de um território dependente do carvão para atividades econômicas de baixo carbono.",
+      credit: "Fonte: SGES (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "Reve (app.reve.com)",
+          },
+        ],
+        year: 2026,
+      },
+      license: "Imagem SGES fornecida pelo autor",
+      focalPoint: {
+        x: 50,
+        y: 48,
+      },
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sourceUrls: [
+      "https://www.gov.br/mme/pt-br/destaques/gt-sc/relatorio-1/relatorio_gt_sc_vf-002.pdf",
+      "https://www.semae.sc.gov.br/governo-de-santa-catarina-conclui-a-primeira-etapa-participativa-do-plano-de-transicao-energetica-justa-com-recorde-de-publico-e-apresentacao-dos-diagnosticos-finais/",
+      "https://leis.alesc.sc.gov.br/ato-normativo/21328",
+      "https://leis.alesc.sc.gov.br/ato-normativo/17156",
+      "https://www.gov.br/casacivil/pt-br/assuntos/colegiados/conselho-do-programa-de-transicao-energetica-justa/anexo-i-da-resolucao-4-plano-de-transicao-justa.pdf",
+      "https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_emp/@emp_ent/documents/publication/wcms_432859.pdf",
+      "https://www.gov.br/aneel/pt-br/assuntos/tarifas/gestao-de-recursos-tarifarios",
+      "http://observatorio.unesc.net/upload/estudos/observatorio-unesc-diagnostico-qualitativo-e-quantitativo-da-amrec.pdf",
+    ],
+    sources: [
+      {
+        title:
+          "BRASIL. Ministério de Minas e Energia. Relatório do Grupo de Trabalho para Avaliar as Atividades de Geração Termelétrica a Carvão Mineral e de Mineração de Carvão Mineral no Estado de Santa Catarina. Brasília: MME, julho de 2021.",
+        url: "https://www.gov.br/mme/pt-br/destaques/gt-sc/relatorio-1/relatorio_gt_sc_vf-002.pdf",
+        organizationOrAuthor: "Ministério de Minas e Energia",
+        publishedAt: "2021-07-01",
+        verifiedAt: "2026-09-30",
+        type: "official",
+        note: "Ver pp. 43–48 (emprego e valor adicionado), pp. 76–82 (cadeia e ferrovia) e pp. 105–108 (CDE e subsídios).",
+        isDemo: false,
+      },
+      {
+        title:
+          "SANTA CATARINA. Secretaria de Estado do Meio Ambiente e da Economia Verde. Governo de Santa Catarina conclui a primeira etapa participativa do Plano de Transição Energética Justa com apresentação dos diagnósticos finais. 18 jun. 2026.",
+        url: "https://www.semae.sc.gov.br/governo-de-santa-catarina-conclui-a-primeira-etapa-participativa-do-plano-de-transicao-energetica-justa-com-recorde-de-publico-e-apresentacao-dos-diagnosticos-finais/",
+        organizationOrAuthor:
+          "Secretaria de Estado do Meio Ambiente e da Economia Verde de Santa Catarina",
+        publishedAt: "2026-06-18",
+        verifiedAt: "2026-09-30",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "SANTA CATARINA. Lei nº 18.330, de 5 de janeiro de 2022. Institui a Política Estadual de Transição Energética Justa e o Polo de Transição Energética Justa do Sul.",
+        url: "https://leis.alesc.sc.gov.br/ato-normativo/21328",
+        organizationOrAuthor: "Estado de Santa Catarina",
+        publishedAt: "2022-01-05",
+        verifiedAt: "2026-09-30",
+        type: "regulatory",
+        note: "Ver arts. 1º–13.",
+        isDemo: false,
+      },
+      {
+        title:
+          "SANTA CATARINA. Lei Complementar nº 495, de 26 de janeiro de 2010. Institui as Regiões Metropolitanas de Florianópolis, do Vale do Itajaí, do Alto Vale do Itajaí, do Norte/Nordeste Catarinense, de Lages, da Foz do Rio Itajaí, Carbonífera e de Tubarão.",
+        url: "https://leis.alesc.sc.gov.br/ato-normativo/17156",
+        organizationOrAuthor: "Estado de Santa Catarina",
+        publishedAt: "2010-01-26",
+        verifiedAt: "2026-09-30",
+        type: "regulatory",
+        note: "Ver art. 10, na redação vigente.",
+        isDemo: false,
+      },
+      {
+        title:
+          "BRASIL. Casa Civil da Presidência da República. Plano de Transição Justa. Anexo I da Resolução nº 4, de 27 de dezembro de 2023.",
+        url: "https://www.gov.br/casacivil/pt-br/assuntos/colegiados/conselho-do-programa-de-transicao-energetica-justa/anexo-i-da-resolucao-4-plano-de-transicao-justa.pdf",
+        organizationOrAuthor: "Casa Civil da Presidência da República",
+        publishedAt: "2023-12-27",
+        verifiedAt: "2026-09-30",
+        type: "official",
+        note: "Ver pp. 4–10 e 14–18.",
+        isDemo: false,
+      },
+      {
+        title:
+          "ORGANIZAÇÃO INTERNACIONAL DO TRABALHO. Guidelines for a just transition towards environmentally sustainable economies and societies for all. Genebra: OIT, 2015. 23 p. ISBN 978-92-2-130628-3.",
+        url: "https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_emp/@emp_ent/documents/publication/wcms_432859.pdf",
+        organizationOrAuthor: "Organização Internacional do Trabalho",
+        publishedAt: "2015-01-01",
+        verifiedAt: "2026-09-30",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title:
+          "AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA. Gestão de Recursos Tarifários: Conta de Desenvolvimento Energético. Publicado em 25 fev. 2022; atualizado em 16 maio 2022.",
+        url: "https://www.gov.br/aneel/pt-br/assuntos/tarifas/gestao-de-recursos-tarifarios",
+        organizationOrAuthor: "Agência Nacional de Energia Elétrica",
+        publishedAt: "2022-02-25",
+        verifiedAt: "2026-09-30",
+        type: "official",
+        note: "Seção Conta de Desenvolvimento Energético.",
+        isDemo: false,
+      },
+      {
+        title:
+          "UNIVERSIDADE DO EXTREMO SUL CATARINENSE. Observatório de Desenvolvimento Socioeconômico e Inovação. Plano de Desenvolvimento Socioeconômico AMREC: diagnóstico qualitativo e quantitativo. Criciúma: UNESC, setembro de 2020.",
+        url: "http://observatorio.unesc.net/upload/estudos/observatorio-unesc-diagnostico-qualitativo-e-quantitativo-da-amrec.pdf",
+        organizationOrAuthor: "Universidade do Extremo Sul Catarinense",
+        publishedAt: "2020-09-01",
+        verifiedAt: "2026-09-30",
+        type: "official",
+        note: "Documento identificado no Relatório GT-SC, p. 10.",
+        isDemo: false,
+      },
+    ],
+    aiAssistance: "limited",
+    aiDisclosureMode: "summary",
+    aiImageTools: ["Reve (app.reve.com)", "ChatGPT/OpenAI"],
+    seoTitle:
+      "Transição Energética Justa em Santa Catarina: Empregos e cidades depois do carvão - Parte 1",
+    seoDescription:
+      "Empregos, participação econômica municipal e conexões logísticas da cadeia do carvão no Sul catarinense.",
+    canonicalUrl:
+      "/artigo/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao",
+  },
+  {
     slug: "uma-bateria-precisa-mesmo-ser-pequena",
     title: "Uma bateria precisa mesmo ser pequena?",
     subtitle:
