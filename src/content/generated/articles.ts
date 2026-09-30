@@ -4351,7 +4351,9 @@ export const articleRecords = [
       },
     ],
     aiAssistance: "limited",
-    aiDisclosureMode: "summary",
+    aiDisclosure:
+      "Este artigo contou com o auxílio de ferramentas de Inteligência Artificial (ChatGPT) e imagens geradas por REVE (app.reve.com) e ChatGPT/OpenAI durante as etapas de pesquisa inicial, estruturação de tópicos e revisão gramatical. Todo o conteúdo factual foi verificado, expandido e editado por Olavo Oliveira, visando garantir a precisão das informações apresentadas.",
+    aiDisclosureMode: "detailed",
     aiImageTools: ["Reve (app.reve.com)", "ChatGPT/OpenAI"],
     seoTitle:
       "Transição Energética Justa em Santa Catarina: Empregos e cidades depois do carvão - Parte 1",

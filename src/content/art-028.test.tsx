@@ -6,6 +6,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import * as runtime from "react/jsx-runtime";
 import remarkFrontmatter from "remark-frontmatter";
 import { editorialMdxComponents } from "@/components/editorial/mdx-components";
+import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
 import {
   getArticleBySlug,
   getArticlesByCategory,
@@ -21,6 +22,8 @@ import { parseEditorialFile } from "../../scripts/generate-content";
 const slug = "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao";
 const canonicalTitle =
   "Transição Energética Justa em Santa Catarina: Empregos e cidades depois do carvão - Parte 1";
+const transparencyNote =
+  "Este artigo contou com o auxílio de ferramentas de Inteligência Artificial (ChatGPT) e imagens geradas por REVE (app.reve.com) e ChatGPT/OpenAI durante as etapas de pesquisa inicial, estruturação de tópicos e revisão gramatical. Todo o conteúdo factual foi verificado, expandido e editado por Olavo Oliveira, visando garantir a precisão das informações apresentadas.";
 const articlePath = `content/articles/${slug}.mdx`;
 const canonicalDocxPath = "docs/editorial/art-028-revisao/art-028-revisado-v2.docx";
 const imageDirectory = `public/images/articles/${slug}`;
@@ -72,6 +75,19 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
     expect(parsed.frontmatter.publishedAt).toBe("2026-09-30");
     expect(parsed.frontmatter.sources).toHaveLength(8);
     expect(parsed.frontmatter.sourceUrls).toHaveLength(8);
+    expect(parsed.frontmatter.aiDisclosureMode).toBe("detailed");
+    expect(parsed.frontmatter.aiDisclosure).toBe(transparencyNote);
+
+    const transparencyHtml = renderToStaticMarkup(
+      <AiEditorialCredit
+        assistance={parsed.frontmatter.aiAssistance}
+        publicationDate={parsed.frontmatter.publishedAt!}
+        imageTools={parsed.frontmatter.aiImageTools}
+        disclosure={parsed.frontmatter.aiDisclosure}
+      />,
+    );
+    expect(transparencyHtml.match(/Nota de Transparência/g)).toHaveLength(1);
+    expect(transparencyHtml).toContain(transparencyNote);
 
     const html = await renderArticle();
     const keyPoints = html.match(/aria-label="Pontos-chave"[\s\S]*?<\/section>/)?.[0] ?? "";
