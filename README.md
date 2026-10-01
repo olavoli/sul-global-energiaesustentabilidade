@@ -103,7 +103,7 @@ bun run typecheck
 bun run lint
 bun run test
 bun run content:validate
-bun run smoke:artifact
+bun run smoke:preview:artifact
 ```
 
 Crie um rascunho tipado, sempre sem publicação automática:

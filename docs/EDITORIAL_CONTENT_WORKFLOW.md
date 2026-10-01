@@ -55,7 +55,7 @@ bun run typecheck
 bun run lint
 bun run test
 bun run build
-bun run smoke:artifact
+bun run smoke:preview:artifact
 ```
 
 Revise título, resumo, categoria, autoria, datas, alt, dimensões, licença, fontes, patrocínio, fallback e renderização local antes de solicitar integração. Para lançamento, use também `EDITORIAL_LAUNCH_CHECKLIST.md`; `license: unknown`, `isDemo: true`, autoria não validada ou fonte sem verificação impedem publicação oficial.

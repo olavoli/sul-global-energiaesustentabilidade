@@ -9,7 +9,6 @@ import { editorialMdxComponents } from "@/components/editorial/mdx-components";
 import {
   getArticleBySlug,
   getArticlesByCategory,
-  getLatestArticles,
   getPublishedArticles,
   getRelatedArticles,
   searchArticles,
@@ -180,16 +179,16 @@ describe("ART-027 — integração canônica do DOCX revisado v4", () => {
     expect(parsed.frontmatter.cover.credit).toBe("Fonte: SGES (2026).");
   });
 
-  test("integra artigo, categoria, busca, home, sitemap, RSS e metadados sociais", () => {
+  test("integra artigo publicado, categoria, busca, sitemap, RSS e metadados sociais", () => {
     const article = getArticleBySlug(slug);
     expect(article?.slug).toBe(slug);
     expect(getArticlesByCategory("ciencia").map((item) => item.slug)).toContain(slug);
     expect(searchArticles("termoelétrico").map((item) => item.slug)).toContain(slug);
-    expect(getLatestArticles(1)[0]?.slug).toBe(slug);
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);
     expect(getRelatedArticles(article!)).not.toHaveLength(0);
 
     const published = getPublishedArticles();
+    expect(published.map((item) => item.slug)).toContain(slug);
     expect(generateSitemap(published)).toContain(`/artigo/${slug}`);
     expect(generateRss(published)).toContain("É possível produzir eletricidade de dia e de noite?");
 

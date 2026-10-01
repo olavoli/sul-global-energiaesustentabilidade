@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao",
       "e-possivel-produzir-eletricidade-de-dia-e-de-noite",
       "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
       "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar",
@@ -226,7 +227,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
       scripts: Record<string, string>;
     };
     expect(packageJson.scripts["staging:check"]).toBe("bun run staging:validate");
-    expect(packageJson.scripts["staging:smoke:local"]).toBe("bun run smoke");
+    expect(packageJson.scripts["staging:smoke:local"]).toBe("bun run smoke:preview");
   });
 
   test("seed pode ser aplicado somente no emulador", async () => {

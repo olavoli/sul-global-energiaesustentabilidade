@@ -9,7 +9,6 @@ import { editorialMdxComponents } from "@/components/editorial/mdx-components";
 import {
   getArticleBySlug,
   getArticlesByCategory,
-  getLatestArticles,
   getPublishedArticles,
   getRelatedArticles,
   searchArticles,
@@ -197,18 +196,16 @@ describe("ART-026 — integração canônica do DOCX revisado v5", () => {
     expect(source).not.toContain("art-026-imagem-1-torre-de-vento-corrigida-v1.png");
   });
 
-  test("integra artigo, categoria, busca, home, sitemap e RSS", () => {
+  test("integra artigo publicado, categoria, busca, sitemap e RSS", () => {
     const article = getArticleBySlug(slug);
     expect(article?.slug).toBe(slug);
     expect(getArticlesByCategory("funcional").map((article) => article.slug)).toContain(slug);
     expect(searchArticles("resfriar uma casa").map((article) => article.slug)).toContain(slug);
-    expect(getLatestArticles(1)[0]?.slug).toBe(
-      "e-possivel-produzir-eletricidade-de-dia-e-de-noite",
-    );
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);
     expect(getRelatedArticles(article!)).not.toHaveLength(0);
 
     const published = getPublishedArticles();
+    expect(published.map((item) => item.slug)).toContain(slug);
     expect(generateSitemap(published)).toContain(`/artigo/${slug}`);
     expect(generateRss(published)).toContain("É possível resfriar uma casa sem ar-condicionado?");
 

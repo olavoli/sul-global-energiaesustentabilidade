@@ -14,7 +14,7 @@ bun run typecheck
 bun run lint
 bun test
 bun run build
-bun run smoke:artifact
+bun run smoke:preview:artifact
 bun run preview
 ```
 

@@ -47,11 +47,21 @@ bun run typecheck
 bun run lint
 bun test
 bun run build
-bun run smoke
+bun run smoke:preview
 bun run preview
 ```
 
-O build gera assets em `.output/public`, entrypoint em `.output/server/index.mjs` e configuração em `.output/server/wrangler.json`. `bun run preview` usa um launcher local que valida Node >=20 antes de iniciar o Wrangler, sem instalação global. Se Node não estiver no `PATH`, defina `NODE_BINARY` com o caminho do executável; o launcher falha de forma explícita em vez de permitir que Bun se apresente como Node. Essa substituição causou o erro local `Unexpected server response: 101` observado na Sprint 19. `bun run smoke:artifact` automatiza dois builds: valida rotas com demo explicitamente habilitada e recompila/valida o estado seguro com demos bloqueadas.
+O build gera assets em `.output/public`, entrypoint em `.output/server/index.mjs` e configuração em `.output/server/wrangler.json`. `bun run preview` usa um launcher local que valida Node >=20 antes de iniciar o Wrangler, sem instalação global. Se Node não estiver no `PATH`, defina `NODE_BINARY` com o caminho do executável; o launcher falha de forma explícita em vez de permitir que Bun se apresente como Node. Essa substituição causou o erro local `Unexpected server response: 101` observado na Sprint 19. `bun run smoke:preview:artifact` automatiza dois builds de preview: valida rotas com demo explicitamente habilitada e recompila/valida o estado seguro com demos bloqueadas.
+
+O smoke local é explicitamente de preview e preserva `noindex, nofollow` e `Disallow: /`. A produção possui um smoke remoto separado, somente leitura, que aceita exclusivamente a origem oficial e exige confirmação explícita:
+
+```powershell
+$env:PRODUCTION_BASE_URL='https://sulglobalenergia.com.br'
+$env:PRODUCTION_TARGET_CONFIRMATION='PRODUCTION-READ-ONLY'
+bun run smoke:production
+```
+
+O smoke de produção usa somente requisições GET, não autentica, não envia formulários e não executa ações administrativas.
 
 ## Segurança e indexação
 

@@ -15,14 +15,14 @@ const previewEnvironment = {
   VITE_PUBLIC_SITE_URL: "http://localhost:8080",
 };
 
-console.log("[smoke] Build de preview com demos explicitamente habilitadas.");
+console.log("[smoke:preview] Build de preview com demos explicitamente habilitadas.");
 await run(["bun", "run", "build"], {
   ...previewEnvironment,
   VITE_ALLOW_DEMO_CONTENT: "true",
 });
 await run(["bun", "run", "scripts/smoke-worker.ts", "--expect-demo"], previewEnvironment);
 
-console.log("[smoke] Rebuild seguro com demos bloqueadas.");
+console.log("[smoke:preview] Rebuild seguro com demos bloqueadas.");
 await run(["bun", "run", "build"], {
   ...previewEnvironment,
   VITE_ALLOW_DEMO_CONTENT: "false",
