@@ -132,8 +132,8 @@ describe("ART-027 — integração canônica do DOCX revisado v4", () => {
     expect(parsed.frontmatter.category).toBe("ciencia");
     expect(parsed.frontmatter.status).toBe("published");
     expect(parsed.frontmatter.publishedAt).toBe("2026-09-23");
-    expect(parsed.frontmatter.sources).toHaveLength(11);
-    expect(parsed.frontmatter.sourceUrls).toHaveLength(12);
+    expect(parsed.frontmatter.sources).toHaveLength(12);
+    expect(parsed.frontmatter.sourceUrls).toBeUndefined();
 
     const html = await renderArticle();
     const keyPoints = html.match(/aria-label="Pontos-chave"[\s\S]*?<\/section>/)?.[0] ?? "";

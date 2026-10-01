@@ -5,13 +5,6 @@ import { loadEditorialFiles } from "../../scripts/editorial-operations";
 import { articleRecords } from "./generated/articles";
 import { articleFrontmatterSchema, canonicalSourceUrls, sourceUrlDivergence } from "./schema";
 
-const divergentSlugs = [
-  "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
-  "e-possivel-produzir-eletricidade-de-dia-e-de-noite",
-  "geotermia-de-nova-geracao",
-  "perovskita-silicio-por-que-empilhar-duas-celulas-solares",
-];
-
 describe("contrato canônico de fontes editoriais", () => {
   test("todos os registros gerados preservam as fontes do parsing", async () => {
     const files = await loadEditorialFiles();
@@ -25,14 +18,13 @@ describe("contrato canônico de fontes editoriais", () => {
     }
   });
 
-  test("mantém somente as quatro divergências publicadas conhecidas", async () => {
+  test("artigos publicados usam somente sources, sem divergência legada", async () => {
     const files = await loadEditorialFiles();
-    const divergent = files
-      .filter(({ frontmatter }) => frontmatter.status === "published")
-      .filter(({ frontmatter }) => sourceUrlDivergence(frontmatter))
-      .map(({ frontmatter }) => frontmatter.slug)
-      .sort();
-    expect(divergent).toEqual([...divergentSlugs].sort());
+    const published = files.filter(({ frontmatter }) => frontmatter.status === "published");
+    for (const { frontmatter } of published) {
+      expect(frontmatter.sourceUrls).toBeUndefined();
+      expect(sourceUrlDivergence(frontmatter)).toBeUndefined();
+    }
   });
 
   test("templates novos não exigem sourceUrls", async () => {
