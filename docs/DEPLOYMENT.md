@@ -51,7 +51,7 @@ bun run smoke:preview
 bun run preview
 ```
 
-O build gera assets em `.output/public`, entrypoint em `.output/server/index.mjs` e configuração em `.output/server/wrangler.json`. `bun run preview` usa um launcher local que valida Node >=20 antes de iniciar o Wrangler, sem instalação global. Se Node não estiver no `PATH`, defina `NODE_BINARY` com o caminho do executável; o launcher falha de forma explícita em vez de permitir que Bun se apresente como Node. Essa substituição causou o erro local `Unexpected server response: 101` observado na Sprint 19. `bun run smoke:preview:artifact` automatiza dois builds de preview: valida rotas com demo explicitamente habilitada e recompila/valida o estado seguro com demos bloqueadas.
+O build gera assets em `.output/public`, entrypoint em `.output/server/index.mjs` e uma configuração automática do Nitro em `.output/server/wrangler.json`. Essa configuração automática atende ao runtime e ao preview, mas **não é a configuração oficial de deploy de produção**. `bun run preview` usa um launcher local que valida Node >=20 antes de iniciar o Wrangler, sem instalação global. Se Node não estiver no `PATH`, defina `NODE_BINARY` com o caminho do executável; o launcher falha de forma explícita em vez de permitir que Bun se apresente como Node. Essa substituição causou o erro local `Unexpected server response: 101` observado na Sprint 19. `bun run smoke:preview:artifact` automatiza dois builds de preview: valida rotas com demo explicitamente habilitada e recompila/valida o estado seguro com demos bloqueadas.
 
 O smoke local é explicitamente de preview e preserva `noindex, nofollow` e `Disallow: /`. A produção possui um smoke remoto separado, somente leitura, que aceita exclusivamente a origem oficial e exige confirmação explícita:
 
@@ -72,14 +72,32 @@ Development, preview e staging recebem `noindex, nofollow` no HTML e em `X-Robot
 ## Procedimento de deploy controlado
 
 1. Concluir [RELEASE_CHECKLIST.md](./RELEASE_CHECKLIST.md) e [EDITORIAL_LAUNCH_CHECKLIST.md](./EDITORIAL_LAUNCH_CHECKLIST.md).
-2. Configurar `VITE_APP_ENV=production`, URL oficial real e demos desativadas na plataforma.
-3. Executar instalação congelada, gates, build e smoke em revisão.
-4. Conferir entrypoint, assets e configuração gerada sem inserir token no código.
-5. Fazer deploy manual pela conta Cloudflare autorizada.
-6. Validar headers, status, canonical, robots, sitemap, RSS e páginas legais no domínio real.
+2. Fazer o build aprovado com `VITE_APP_ENV=production`, `VITE_PUBLIC_SITE_URL=https://sulglobalenergia.com.br` e `VITE_ALLOW_DEMO_CONTENT=false`.
+3. Obter o `database_id` do D1 `sul-global-newsroom-production` por canal protegido e defini-lo somente no processo local:
 
-O staging foi conectado por OAuth autorizado. Nenhum token foi versionado e
-produção não foi configurada.
+   ```powershell
+   $env:PRODUCTION_D1_DATABASE_ID='<ID protegido>'
+   bun run production:config
+   ```
+
+4. Executar a sequência oficial, que consulta a versão ativa somente para comparar estrutura e nunca exibe o ID:
+
+   ```powershell
+   bun run production:check
+   bun run production:dry-run
+   ```
+
+5. Revisar o dry-run. Somente após autorização humana explícita, executar manualmente:
+
+   ```powershell
+   bunx wrangler deploy --config .wrangler/production.generated.json --keep-vars
+   ```
+
+6. Executar `smoke:production` e validar headers, status, canonical, robots, sitemap, RSS e páginas legais no domínio real.
+
+`cloudflare/wrangler.production.template.jsonc` é a fonte de verdade versionada para a estrutura pública do deploy. O único placeholder é preenchido por `production:config`, que cria exclusivamente `.wrangler/production.generated.json`; todo `.wrangler/` permanece ignorado. O template fixa `sul-global-production`, `compatibility_date: 2026-09-24`, `nodejs_compat`, `ASSETS`, `NEWSROOM_DB` e o nome público do D1. IDs, tokens e secrets não pertencem ao Git.
+
+`production:check` recusa staging, entrypoint automático do Nitro, data inferior à aprovada, downgrade em relação à versão ativa, mudança do D1 e desaparecimento dos bindings obrigatórios. A comparação remota é somente leitura. `production:dry-run` sempre repete essas guardas e usa `--keep-vars`; o mesmo parâmetro é obrigatório no deploy manual para preservar variáveis e secrets remotos não declarados no template. A configuração automática `.output/server/wrangler.json` nunca deve ser passada ao deploy de produção.
 
 ## Cache, rollback e operação
 
@@ -89,7 +107,7 @@ A observabilidade atual não envia dados: em desenvolvimento registra diagnósti
 
 ## Limitações
 
-- domínio oficial e produção ainda não definidos/conectados;
+- o deploy de produção permanece manual e depende de autorização humana, autenticação Wrangler e ID D1 fornecido por canal protegido;
 - Node precisa estar instalado para o preview Wrangler;
 - imagens demo externas, ativo social e revisão jurídica continuam pendentes;
 - não há E2E de navegador, monitoramento remoto ou métricas de campo;

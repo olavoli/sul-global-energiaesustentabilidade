@@ -1,0 +1,39 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "sul-global-production",
+  "main": "../.output/server/index.mjs",
+  "compatibility_date": "2026-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": ["**/*.mjs", "**/*.js"],
+    },
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "../.output/public",
+  },
+  "d1_databases": [
+    {
+      "binding": "NEWSROOM_DB",
+      "database_name": "sul-global-newsroom-production",
+      "database_id": "__PRODUCTION_D1_DATABASE_ID__",
+      "migrations_dir": "../scripts/newsroom/storage",
+    },
+  ],
+  "vars": {
+    "VITE_APP_ENV": "production",
+    "VITE_PUBLIC_SITE_URL": "https://sulglobalenergia.com.br",
+    "VITE_ALLOW_DEMO_CONTENT": "false",
+    "NEWSROOM_ENVIRONMENT": "production",
+    "NEWSROOM_STORAGE_DRIVER": "d1",
+    "NEWSROOM_ENABLED": "true",
+    "NEWSROOM_COLLECTION_ENABLED": "false",
+    "NEWSROOM_TRANSLATION_ENABLED": "false",
+    "NEWSROOM_ORCHESTRATION_ENABLED": "false",
+    "NEWSROOM_NOTIFICATIONS_ENABLED": "false",
+    "NEWSROOM_SCHEDULE_ENABLED": "false",
+  },
+}
