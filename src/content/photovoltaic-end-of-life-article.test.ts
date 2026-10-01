@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { existsSync, readFileSync } from "node:fs";
 
 import { parseEditorialFile } from "../../scripts/generate-content";
+import { canonicalSourceUrls } from "./schema";
 
 const articlePath = new URL(
   "../../content/articles/o-que-acontece-com-um-painel-solar-no-fim-da-vida.mdx",
@@ -29,7 +30,9 @@ describe("ART-011 — fim da vida de módulos fotovoltaicos", () => {
     });
     expect(source.split(/\s+/).length).toBeGreaterThan(3500);
     expect(parsed.frontmatter.sources.every((item) => !item.isDemo)).toBeTrue();
-    expect(parsed.frontmatter.sourceUrls.every((url) => !url.includes("utm_"))).toBeTrue();
+    expect(
+      canonicalSourceUrls(parsed.frontmatter).every((url) => !url.includes("utm_")),
+    ).toBeTrue();
   });
 
   test("preserva as ressalvas científicas e regulatórias auditadas", () => {

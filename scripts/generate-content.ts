@@ -8,6 +8,7 @@ import { format, resolveConfig } from "prettier";
 import {
   articleFrontmatterSchema,
   authorSchema,
+  sourceUrlDivergence,
   type ArticleFrontmatter,
 } from "../src/content/schema";
 import { authors } from "../src/data/authors";
@@ -198,9 +199,15 @@ async function main(): Promise<void> {
         `${file.path}: imagem e licença pendentes. Ação: selecione mídia local licenciada antes da revisão.`,
       );
     }
-    if (file.frontmatter.sourceUrls.length > 0 && file.frontmatter.sources.length === 0) {
+    if ((file.frontmatter.sourceUrls?.length ?? 0) > 0 && file.frontmatter.sources.length === 0) {
       result.push(
         `${file.path}: migre sourceUrls para fontes estruturadas antes da publicação real. Ação: preencha sources com origem e data de verificação.`,
+      );
+    }
+    const divergence = sourceUrlDivergence(file.frontmatter);
+    if (divergence && file.frontmatter.sources.length > 0) {
+      result.push(
+        `${file.path}: sourceUrls diverge de sources (${divergence.legacy.length} legado; ${divergence.structured.length} estruturadas). Ação: preserve ambas e faça revisão editorial antes de migrar.`,
       );
     }
     return result;

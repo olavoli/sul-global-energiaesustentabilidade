@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { existsSync, readFileSync } from "node:fs";
 
 import { parseEditorialFile } from "../../scripts/generate-content";
+import { canonicalSourceUrls } from "./schema";
 
 const articlePath = new URL(
   "../../content/articles/por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade.mdx",
@@ -31,7 +32,9 @@ describe("ART-015 — hidrogênio verde e eletrificação", () => {
     expect(source.split(/\s+/).length).toBeLessThan(2400);
     expect(parsed.frontmatter.sources).toHaveLength(8);
     expect(parsed.frontmatter.sources.every((item) => !item.isDemo)).toBeTrue();
-    expect(parsed.frontmatter.sourceUrls.every((url) => !url.includes("utm_"))).toBeTrue();
+    expect(
+      canonicalSourceUrls(parsed.frontmatter).every((url) => !url.includes("utm_")),
+    ).toBeTrue();
   });
 
   test("preserva as ressalvas factuais centrais", () => {

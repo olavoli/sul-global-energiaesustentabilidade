@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { existsSync, readFileSync } from "node:fs";
 
 import { parseEditorialFile } from "../../scripts/generate-content";
+import { canonicalSourceUrls } from "./schema";
 
 const articlePath = new URL(
   "../../content/articles/a-transicao-energetica-vai-ficar-sem-cobre.mdx",
@@ -30,7 +31,9 @@ describe("ART-012 — cobre e transição energética", () => {
     expect(source.split(/\s+/).length).toBeGreaterThan(1500);
     expect(source.split(/\s+/).length).toBeLessThan(2600);
     expect(parsed.frontmatter.sources.every((item) => !item.isDemo)).toBeTrue();
-    expect(parsed.frontmatter.sourceUrls.every((url) => !url.includes("utm_"))).toBeTrue();
+    expect(
+      canonicalSourceUrls(parsed.frontmatter).every((url) => !url.includes("utm_")),
+    ).toBeTrue();
   });
 
   test("preserva as ressalvas científicas auditadas", () => {

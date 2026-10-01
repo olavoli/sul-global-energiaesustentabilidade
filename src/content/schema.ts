@@ -146,6 +146,9 @@ export const editorialSourceSchema = z.object({
   isDemo: z.boolean().default(false),
 });
 
+/** @deprecated Use `sources`; mantido temporariamente apenas para conteúdo legado. */
+export const legacySourceUrlsSchema = z.array(z.url()).optional();
+
 export const correctionEntrySchema = z.object({
   type: z.enum(["update", "correction"]),
   date: isoDateSchema,
@@ -185,7 +188,7 @@ export const articleFrontmatterSchema = z
     isDemo: z.boolean(),
     sponsored: z.boolean(),
     sponsorName: z.string().min(1).optional(),
-    sourceUrls: z.array(z.url()),
+    sourceUrls: legacySourceUrlsSchema,
     sources: z.array(editorialSourceSchema).default([]),
     lastVerifiedAt: isoDateSchema.optional(),
     opinionDisclosure: z.string().min(3).max(400).optional(),
@@ -347,3 +350,38 @@ export type ImageAiContribution = z.infer<typeof imageAiContributionSchema>;
 export type ResponsiveImageSource = z.infer<typeof responsiveImageSourceSchema>;
 export type EditorialSource = z.infer<typeof editorialSourceSchema>;
 export type CorrectionEntry = z.infer<typeof correctionEntrySchema>;
+
+export interface SourceUrlDivergence {
+  legacy: string[];
+  structured: string[];
+  onlyLegacy: string[];
+  onlyStructured: string[];
+  sameOrder: boolean;
+}
+
+/** Return canonical source URLs, falling back to the deprecated field only for legacy content. */
+export function canonicalSourceUrls(
+  article: Pick<ArticleFrontmatter, "sources" | "sourceUrls">,
+): string[] {
+  const structured = article.sources.map((source) => source.url);
+  return structured.length > 0 ? structured : [...(article.sourceUrls ?? [])];
+}
+
+/** Report legacy/structured divergence without modifying or discarding either representation. */
+export function sourceUrlDivergence(
+  article: Pick<ArticleFrontmatter, "sources" | "sourceUrls">,
+): SourceUrlDivergence | undefined {
+  const legacy = article.sourceUrls;
+  if (!legacy || legacy.length === 0) return undefined;
+  const structured = article.sources.map((source) => source.url);
+  const sameOrder =
+    legacy.length === structured.length && legacy.every((url, index) => url === structured[index]);
+  if (sameOrder) return undefined;
+  return {
+    legacy: [...legacy],
+    structured,
+    onlyLegacy: legacy.filter((url) => !structured.includes(url)),
+    onlyStructured: structured.filter((url) => !legacy.includes(url)),
+    sameOrder,
+  };
+}

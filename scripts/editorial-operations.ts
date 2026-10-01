@@ -3,6 +3,7 @@ import { basename, join, relative, resolve } from "node:path";
 
 import {
   articleFrontmatterSchema,
+  sourceUrlDivergence,
   type ArticleFrontmatter,
   type ArticleStatus,
   type Author,
@@ -77,7 +78,13 @@ export function reviewArticle(
   if (/\[RASCUNHO\]|provisóri|pendente/i.test(article.title))
     blockers.push("Título ainda é provisório.");
   if (!article.canonicalUrl) warnings.push("Canonical será derivado automaticamente do slug.");
-  if (article.sourceUrls.length > 0) warnings.push("sourceUrls legado deve migrar para sources.");
+  if ((article.sourceUrls?.length ?? 0) > 0) {
+    warnings.push(
+      sourceUrlDivergence(article)
+        ? "sourceUrls diverge de sources e exige revisão editorial antes da migração."
+        : "sourceUrls legado redundante deve migrar para sources.",
+    );
+  }
   if (article.sponsored && !article.sponsorName) blockers.push("Patrocínio exige sponsorName.");
   if (article.aiAssistance === "substantial" && !article.aiDisclosure) {
     blockers.push("Uso substancial de IA exige disclosure.");

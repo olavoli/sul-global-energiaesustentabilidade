@@ -3,10 +3,11 @@ import type { EditorialSource } from "@/content/schema";
 /** List structured and legacy references with safe external links. */
 export function SourceList({
   sources = [],
-  urls,
+  urls = [],
 }: {
   sources?: EditorialSource[];
-  urls: string[];
+  /** @deprecated Fallback temporário para URLs que ainda não possuem metadados estruturados. */
+  urls?: string[];
 }) {
   if (sources.length === 0 && urls.length === 0) return null;
   const structuredUrls = new Set(sources.map((source) => source.url));

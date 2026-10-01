@@ -112,6 +112,29 @@ describe("mídia e acessibilidade", () => {
     expect(html.match(new RegExp(url, "g"))).toHaveLength(1);
   });
 
+  test("preserva URL exclusivamente legada até a revisão editorial", () => {
+    const structuredUrl = "https://www.gov.br/mme/pt-br";
+    const legacyOnlyUrl = "https://example.test/fonte-legada";
+    const html = renderToStaticMarkup(
+      <SourceList
+        sources={[
+          {
+            title: "Ministério de Minas e Energia",
+            organizationOrAuthor: "MME",
+            url: structuredUrl,
+            verifiedAt: "2026-08-24",
+            type: "official",
+            isDemo: false,
+          },
+        ]}
+        urls={[structuredUrl, legacyOnlyUrl]}
+      />,
+    );
+
+    expect(html).toContain(structuredUrl);
+    expect(html).toContain(legacyOnlyUrl);
+  });
+
   test("slot publicitário desativado não reserva espaço visível", () => {
     const html = renderToStaticMarkup(
       <AdSlot slot={{ name: "article-end", position: "article-end", minHeight: 250 }} />,

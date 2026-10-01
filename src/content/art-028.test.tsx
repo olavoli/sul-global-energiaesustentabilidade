@@ -74,7 +74,7 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
     expect(parsed.frontmatter.status).toBe("published");
     expect(parsed.frontmatter.publishedAt).toBe("2026-09-30");
     expect(parsed.frontmatter.sources).toHaveLength(8);
-    expect(parsed.frontmatter.sourceUrls).toHaveLength(8);
+    expect(parsed.frontmatter.sources).toHaveLength(8);
     expect(parsed.frontmatter.aiDisclosureMode).toBe("detailed");
     expect(parsed.frontmatter.aiDisclosure).toBe(transparencyNote);
 

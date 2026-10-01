@@ -1,7 +1,12 @@
 import { describe, expect, test } from "bun:test";
 
 import { parseEditorialFile, validateArticleCollection } from "../../scripts/generate-content";
-import { articleFrontmatterSchema, type ArticleFrontmatter } from "./schema";
+import {
+  articleFrontmatterSchema,
+  canonicalSourceUrls,
+  sourceUrlDivergence,
+  type ArticleFrontmatter,
+} from "./schema";
 import { createContentRepository } from "./repository";
 
 const baseArticle: ArticleFrontmatter = {
@@ -29,7 +34,6 @@ const baseArticle: ArticleFrontmatter = {
   featured: true,
   isDemo: false,
   sponsored: false,
-  sourceUrls: [],
   sources: [
     {
       title: "Fonte técnica de teste",
@@ -66,6 +70,54 @@ describe("frontmatter editorial", () => {
   test("rejeita JavaScript no corpo MDX", () => {
     const source = `---\n${JSON.stringify(baseArticle)}\n---\n\n{alert('não')}`;
     expect(() => parseEditorialFile(source)).toThrow("JavaScript");
+  });
+
+  test("aceita artigo novo somente com sources e preserva sua ordem", () => {
+    const secondSource = {
+      ...baseArticle.sources[0],
+      title: "Segunda fonte técnica",
+      url: "https://www.gov.br/mme/pt-br",
+    };
+    const parsed = articleFrontmatterSchema.parse({
+      ...baseArticle,
+      sources: [...baseArticle.sources, secondSource],
+    });
+    expect(parsed.sourceUrls).toBeUndefined();
+    expect(canonicalSourceUrls(parsed)).toEqual([
+      "https://www.gov.br/aneel/pt-br",
+      "https://www.gov.br/mme/pt-br",
+    ]);
+  });
+
+  test("aceita sourceUrls legado durante a transição", () => {
+    const sourceUrls = [baseArticle.sources[0].url];
+    const parsed = articleFrontmatterSchema.parse({ ...baseArticle, sourceUrls });
+    expect(parsed.sourceUrls).toEqual(sourceUrls);
+    expect(canonicalSourceUrls(parsed)).toEqual(sourceUrls);
+  });
+
+  test("fallback legado funciona quando ainda não há sources estruturadas", () => {
+    const legacy = articleFrontmatterSchema.parse({
+      ...baseArticle,
+      status: "draft",
+      sources: [],
+      sourceUrls: ["https://example.test/fonte-legada"],
+    });
+    expect(canonicalSourceUrls(legacy)).toEqual(["https://example.test/fonte-legada"]);
+  });
+
+  test("detecta divergência sem perder nenhuma URL", () => {
+    const legacyOnly = "https://example.test/fonte-legada-adicional";
+    const parsed = articleFrontmatterSchema.parse({
+      ...baseArticle,
+      sourceUrls: [baseArticle.sources[0].url, legacyOnly],
+    });
+    expect(sourceUrlDivergence(parsed)).toMatchObject({
+      onlyLegacy: [legacyOnly],
+      onlyStructured: [],
+      sameOrder: false,
+    });
+    expect(new Set([...canonicalSourceUrls(parsed), ...(parsed.sourceUrls ?? [])]).size).toBe(2);
   });
 });
 

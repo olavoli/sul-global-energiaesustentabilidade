@@ -320,12 +320,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/world-energy-outlook-2023",
-      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia-pde",
-      "https://about.bnef.com/insights/finance/new-outlooks-for-regional-energy-futures/",
-      "https://www.ipcc.ch/report/sixth-assessment-report-working-group-3/",
-    ],
     sources: [
       {
         title:
@@ -437,18 +431,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://pris.iaea.org/PRIS/",
-      "https://world-nuclear.org/information-library/facts-and-figures/world-nuclear-power-reactors-and-uranium-requirements.aspx",
-      "https://www.iea.org/reports/nuclear-power-and-secure-energy-transitions",
-      "https://www.ipcc.ch/report/ar6/wg3/",
-      "https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/adv-reactor-designs.html",
-      "https://aris.iaea.org/Publications/20-02619E_ALWCR_ARIS_Booklet_WEB.pdf",
-      "https://www.energy.gov/sites/default/files/2024-10/final-eis-0559-haleu-vol-3-2024-10_0.pdf",
-      "https://www.edf.fr/en/group/dedicated-sections/new-nuclear-epr2",
-      "https://www.energy.gov/ne/articles/civil-nuclear-credit-program",
-      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia",
-    ],
     sources: [
       {
         title: "IAEA. Power Reactor Information System (PRIS).",
@@ -583,17 +565,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
-      "https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai",
-      "https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design_0.pdf",
-      "https://www.nvidia.com/en-gb/data-center/technologies/800-vdc-architecture/",
-      "https://cloud.google.com/blog/topics/sustainability/a-policy-roadmap-for-achieving-247-carbon-free-energy",
-      "https://investors.constellationenergy.com/node/8711/pdf",
-      "https://www.epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-894/topico-824/PDE%202035_Relat%C3%B3rio%20para%20Consulta%20P%C3%BAblica.pdf",
-      "https://www.nerc.com/globalassets/who-we-are/legal--regulatory/filings--orders/nerc-filings-to-ferc/2025/comments-re-large-loads-el25-49_signed.pdf",
-      "https://english.www.gov.cn/archive/statistics/202501/11/content_WS6781ad3dc6d0868f4e8eeb62.html",
-    ],
     sources: [
       {
         title: "Key Questions on Energy and AI — Executive summary",
@@ -742,23 +713,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/electricity-2026/grids",
-      "https://www.iea.org/reports/electricity-2026/flexibility",
-      "https://www.aemo.com.au/energy-systems/major-publications/integrated-system-plan-isp/2026-integrated-system-plan-isp",
-      "https://www.gov.br/aneel/pt-br/assuntos/geracao-distribuida/",
-      "https://www.gov.br/aneel/pt-br/assuntos/distribuicao/regulacao",
-      "https://ec.europa.eu/commission/presscorner/api/files/attachment/876888/Factsheet_EU%20Action%20Plan%20for%20Grids.pdf",
-      "https://energy.ec.europa.eu/document/download/62c46b3d-0df9-42a1-a5fe-c3c71ed5f18c_en?filename=C_2025_8473_1_EN_ACT_part1_v4.pdf",
-      "https://www.energy.gov/cmei/systems/articles/smart-transmission-tools-modernize-americas-power-grid",
-      "https://www.energy.gov/oe/advanced-conductor-scan-report",
-      "https://www.gov.br/mme/pt-br/assuntos/secretarias/sntep/publicacoes/plano-decenal-de-expansao-de-energia/pde-2035/relatorio_cp/pde2035_relatorio_consulta_publica",
-      "https://www.epe.gov.br/pt/imprensa/noticias/epe-atualiza-painel-interativo-sobre-mmgd-com-dados-de-2025",
-      "https://english.www.gov.cn/news/202506/10/content_WS6847c6eac6d0868f4e8f33c6.html",
-      "https://emp.lbl.gov/publications/queued-2025-edition-characteristics",
-      "https://www.gov.br/mme/pt-br/assuntos/noticias/capacidade-de-contribuicao-energetica-das-regioes-norte-e-nordeste-vai-aumentar-aponta-relatorio-do-ons",
-      "https://www.gov.br/mme/pt-br/assuntos/noticias/leiloes-de-transmissao-transformam-infraestrutura-eletrica-e-impulsionam-crescimento-do-setor-energetico",
-    ],
     sources: [
       {
         title: "Electricity 2026 — Grids",
@@ -969,17 +923,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/water-energy-nexus",
-      "https://www.iea.org/reports/global-hydrogen-review-2023",
-      "https://www.gov.br/ana/pt-br/assuntos/segurancahidrica-e-barragens/plano-nacional-de-seguranca-hidrica",
-      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/anuario-estatistico-de-energia-eletrica",
-      "https://www.ons.org.br/paginas/resultados-da-operacao/relatorios-da-operacao",
-      "https://www.mme.gov.br/web/guest/publicacoes/plano-nacional-de-energia-2050",
-      "https://www.nrel.gov/docs/fy23osti/84882.pdf",
-      "https://www.worldbank.org/en/topic/water/brief/high-and-dry-climate-change-water-and-the-economy",
-      "https://www.unwater.org/publications/un-world-water-development-report-2024",
-    ],
     sources: [
       {
         title:
@@ -1135,16 +1078,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
-      "https://www.iea.org/reports/global-critical-minerals-outlook-2025",
-      "https://www.iea.org/reports/recycling-of-critical-minerals",
-      "https://pubs.usgs.gov/publication/mcs2026",
-      "https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/sumario-mineral/sumario-mineral-brasileiro-2025/sumario-2025.pdf",
-      "https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/anuario-mineral/anuario-mineral-brasileiro/amb_metalicos__rev_2.pdf",
-      "https://www.gov.br/anm/pt-br/acesso-a-informacao/perguntas-frequentes/minerais-criticos-e-estrategicos",
-      "https://www.energy.gov/sites/default/files/2024-08/Advanced%20Conductor%20Report%20December%202023.pdf",
-    ],
     sources: [
       {
         title: "Global Critical Minerals Outlook 2026",
@@ -1286,17 +1219,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
-      "https://www.iea.org/reports/global-critical-minerals-outlook-2026/outlook",
-      "https://www.iea.org/reports/global-critical-minerals-outlook-2026/latin-america",
-      "https://www.gov.br/anm/pt-br/acesso-a-informacao/perguntas-frequentes/minerais-criticos-e-estrategicos",
-      "https://www.gov.br/mme/pt-br/assuntos/secretarias/geologia-mineracao-e-transformacao-mineral/pnm-2050/sobre-o-pnm-2050",
-      "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2097309&lang=2&reg=48",
-      "https://www.gov.za/documents/other/critical-minerals-and-metals-strategy-south-africa-2025-12-may-2025",
-      "https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
-      "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
-    ],
     sources: [
       {
         title: "Global Critical Minerals Outlook 2026 — Executive summary",
@@ -1498,14 +1420,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/commentaries/sodium-ion-battery-momentum-grows-but-challenges-remain",
-      "https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries",
-      "https://www.nature.com/articles/s41560-024-01701-9",
-      "https://www.nature.com/articles/s41578-025-00857-4",
-      "https://www.catl.com/en/news/6861.html",
-      "https://www.nature.com/articles/d41586-026-02150-y",
-    ],
     sources: [
       {
         title: "Sodium-ion battery momentum grows, but challenges remain",
@@ -1827,18 +1741,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.ashrae.org/technical-resources/bookstore/standard-55-thermal-environmental-conditions-for-human-occupancy",
-      "https://handbook.ashrae.org/Handbooks/A23/SI/A23_Ch53/a23_ch53_si.aspx",
-      "https://www.aivc.org/sites/default/files/members_area/medias/pdf/Inive/palenc/2005/Azami2.pdf",
-      "https://igbc.in/frontend-assets/html_pdfs/CII_20%20Years_8th_JAN_2025_Approval%20%281%29.pdf",
-      "https://doi.org/10.1038/s41566-021-00921-9",
-      "https://doi.org/10.1016/j.rser.2016.11.254",
-      "https://labeee.ufsc.br/pt-br/publicacoes/livros",
-      "https://www.arup.com/en-us/projects/the-arup-journal-1990s/the-arup-journal-1997-issue-1/",
-      "https://www.energy.gov/home-cooling",
-      "https://bsesc.energy.gov/energy-basics/natural-ventilation-and-cooling",
-    ],
     sources: [
       {
         title:
@@ -2053,16 +1955,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://annual.llnl.gov/fy-2025/national-ignition-facility-2025",
-      "https://lasers.llnl.gov/science/achieving-fusion-ignition",
-      "https://www.iter.org/machine/supporting-systems/tritium-breeding",
-      "https://www.iter.org/machine/blanket",
-      "https://www.energy.gov/fusion/articles/fusion-st-roadmap",
-      "https://www.energy.gov/articles/energy-department-releases-finalized-fusion-science-and-technology-roadmap-accelerate",
-      "https://www.nature.com/articles/s41560-026-02023-8",
-      "https://lasers.llnl.gov/news/target-breakthrough-enabled-fusion-record-nif",
-    ],
     sources: [
       {
         title: "National Ignition Facility — 2025",
@@ -2469,18 +2361,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://handbook.ashrae.org/Handbooks/R22/SI/r22_ch18/r22_ch18_si.aspx",
-      "https://www.routledge.com/Absorption-Chillers-and-Heat-Pumps/Herold-Radermacher-Klein/p/book/9781498714341",
-      "https://www.energy.gov/sites/default/files/2017/06/f35/CHP-Absorption%20Chiller-compliant.pdf",
-      "https://handbook.ashrae.org/Handbooks/F17/IP/f17_ch02/f17_ch02_ip.aspx",
-      "https://repositorio.ufrn.br/server/api/core/bitstreams/cafed9c9-fb5b-43fa-8ab9-d99409ded4e6/content",
-      "https://www.sciencedirect.com/science/article/abs/pii/S1364032113008356",
-      "https://doi.org/10.1016/j.ijrefrig.2005.10.007",
-      "https://www.osha.gov/etools/ammonia-refrigeration/ammonia",
-      "https://betterbuildingssolutioncenter.energy.gov/resources/combined-heat-and-power-technology-fact-sheet-absorption-chillers-chp-systems",
-      "https://www.sciencedirect.com/science/article/pii/S0017931025002005",
-    ],
     sources: [
       {
         title:
@@ -2646,16 +2526,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.gov.br/aneel/pt-br/assuntos/tarifas/composicao-da-tarifa",
-      "http://www.ons.org.br/Paginas/resultados-da-operacao/historico-da-operacao/relatorios-de-acompanhamento.aspx",
-      "https://www.iea.org/reports/world-energy-outlook-2023",
-      "https://about.bnef.com/new-energy-outlook/",
-      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/Balanco-Energetico-Nacional-2023",
-      "https://www.ren21.net/gsr/",
-      "https://www.ipea.gov.br/portal/index.php?option=com_content&view=category&id=106&Itemid=106",
-      "https://www.irena.org/publications/2023/Aug/Renewable-Power-Generation-Costs-in-2022",
-    ],
     sources: [
       {
         title:
@@ -2781,18 +2651,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14300.htm",
-      "https://www2.aneel.gov.br/cedoc/ren20211000.pdf",
-      "https://www2.aneel.gov.br/cedoc/prodist-modulo8-rev10.pdf",
-      "https://www2.aneel.gov.br/cedoc/ren20231059.pdf",
-      "https://agenciainfra.com/",
-      "https://www.gov.br/aneel/pt-br/assuntos/participacao-social/consultas-publicas/2026/cp-033-2026",
-      "https://www.ons.org.br/paginas/energia-agora/estudos-e-publicacoes",
-      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/plano-decenal-de-expansao-de-energia-pde",
-      "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Reverse%20power%20flow%20and%20voltage%20regulation%20issues%20in%20a%20real%20Brazilian%20rural%20feeder%20with%20high%20PV%20penetration",
-      "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=Coordinated%20Voltage%20Control%20in%20Distribution%20Networks%20with%20High%20PV%20Penetration%20using%20Smart%20Inverters",
-    ],
     sources: [
       {
         title:
@@ -2963,19 +2821,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://iea-pvps.org/key-topics/t12-advances-module-recycling-3rd-edition-2026/",
-      "https://iea-pvps.org/key-topics/t12-lci-pv-systems-2026/",
-      "https://iea-pvps.org/key-topics/t12-status-recycling-2025/",
-      "https://www.irena.org/Publications/2016/Jun/End-of-life-management-Solar-Photovoltaic-Panels",
-      "https://www.irena.org/-/media/Files/IRENA/Remember/Assembly/Thirteenth-session-of-the-Assembly/13A_End-of-life-Management-of-Solar-PV-and-the-Circular-Economy.pdf",
-      "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm",
-      "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10240.htm",
-      "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2483680",
-      "https://doi.org/10.1016/j.ssaho.2023.100456",
-      "https://doi.org/10.14488/ENEGEP2023_TN_WPG_407_2004_45600",
-      "https://iea-pvps.org/snapshot-reports/snapshot-2026/",
-    ],
     sources: [
       {
         title: "Advances in Photovoltaic Module Recycling",
@@ -3135,10 +2980,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.bipm.org/en/publications/si-brochure",
-      "https://www.wiley.com/en-us/general-physics-c-PH00",
-    ],
     sources: [
       {
         title: "The International System of Units (SI Brochure)",
@@ -3213,12 +3054,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.nist.gov/glossary-term/34606",
-      "https://www.nist.gov/glossary-term/26261",
-      "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
-      "https://www.energy.gov/cmei/communicationstandards/style-guide-full-text",
-    ],
     sources: [
       {
         title: "Watt (W)",
@@ -3505,13 +3340,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.energy.gov/cmei/systems/solar-integration-solar-energy-and-storage-basics",
-      "https://www.energy.gov/edf/energy-storage-projects",
-      "https://www.energy.gov/cmei/oced/long-duration-energy-storage",
-      "https://www.energy.gov/oe/storage-innovations-2030",
-      "https://www.iea.org/reports/global-energy-review-2026/technology-battery-storage",
-    ],
     sources: [
       {
         title: "Solar Integration: Solar Energy and Storage Basics",
@@ -3613,11 +3441,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.energy.gov/cmei/femp/articles/take-five-what-energy-efficiency",
-      "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/first-law-internal-energy/",
-      "https://www.nist.gov/glossary-term/26261",
-    ],
     sources: [
       {
         title: "Take Five: What Is Energy Efficiency?",
@@ -3710,16 +3533,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/global-hydrogen-review-2026",
-      "https://www.iea.org/reports/energy-technology-perspectives-2026/executive-summary",
-      "https://www.iea.org/reports/the-future-of-heat-pumps/how-a-heat-pump-works",
-      "https://www.irena.org/Publications/2024/Jul/Green-hydrogen-strategy-A-guide-to-design",
-      "https://www.imo.org/en/ourwork/environment/pages/lifecycle-ghg---carbon-intensity-guidelines.aspx",
-      "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14948.htm",
-      "https://www.epe.gov.br/pt/imprensa/noticias/epe-e-itaipu-parquetec-publicam-roadmap-tecnologico-de-hidrogenio",
-      "https://mnre.gov.in/en/national-green-hydrogen-mission/",
-    ],
     sources: [
       {
         title: "Global Hydrogen Review 2026",
@@ -3867,16 +3680,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.ons.org.br/Paginas/energia-no-futuro/suprimento-eletrico/parpel2025/sumario-executivo/index.aspx",
-      "https://www.iea.org/reports/renewables-2025/renewable-electricity",
-      "https://www.iea.org/reports/electricity-2026/flexibility",
-      "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
-      "https://www.coordinador.cl/operacion/documentos/reducciones-de-generacion-renovable/reducciones-erv-2025/",
-      "https://cms.eirgrid.ie/annual-renewable-constraint-and-curtailment-report-2024",
-      "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2024/20240701_13k.html",
-      "https://www.gov.br/mme/pt-br/assuntos/noticias/mme-regulamenta-procedimentos-para-celebracao-de-termo-de-compromisso-sobre-compensacao-por-cortes-de-geracao",
-    ],
     sources: [
       {
         title: "PAR/PEL 2025 — Sumário Executivo",
@@ -4094,15 +3897,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.iea.org/reports/electricity-2026/grids",
-      "https://www.energy.gov/cmei/systems/articles/smart-transmission-tools-modernize-americas-power-grid",
-      "https://www.energy.gov/edf/articles/lpo-tech-talk-transmission",
-      "https://www.energy.gov/sites/default/files/2024-08/Advanced%20Conductor%20Report%20December%202023.pdf",
-      "https://www.ferc.gov/explainer-implementation-dynamic-line-ratings",
-      "https://www.nrel.gov/grid/news/program/2024/on-the-road-to-increased-transmission-dynamic-line-ratings",
-      "https://www.epe.gov.br/pt/imprensa/noticias/redata-epe-acelera-planejamento-da-rede-para-suportar-crescimento-recorde-de-data-centers",
-    ],
     sources: [
       {
         title: "Grids",
@@ -4251,16 +4045,6 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.gov.br/mme/pt-br/destaques/gt-sc/relatorio-1/relatorio_gt_sc_vf-002.pdf",
-      "https://www.semae.sc.gov.br/governo-de-santa-catarina-conclui-a-primeira-etapa-participativa-do-plano-de-transicao-energetica-justa-com-recorde-de-publico-e-apresentacao-dos-diagnosticos-finais/",
-      "https://leis.alesc.sc.gov.br/ato-normativo/21328",
-      "https://leis.alesc.sc.gov.br/ato-normativo/17156",
-      "https://www.gov.br/casacivil/pt-br/assuntos/colegiados/conselho-do-programa-de-transicao-energetica-justa/anexo-i-da-resolucao-4-plano-de-transicao-justa.pdf",
-      "https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_emp/@emp_ent/documents/publication/wcms_432859.pdf",
-      "https://www.gov.br/aneel/pt-br/assuntos/tarifas/gestao-de-recursos-tarifarios",
-      "http://observatorio.unesc.net/upload/estudos/observatorio-unesc-diagnostico-qualitativo-e-quantitativo-da-amrec.pdf",
-    ],
     sources: [
       {
         title:
@@ -4418,17 +4202,6 @@ export const articleRecords = [
     featured: true,
     isDemo: false,
     sponsored: false,
-    sourceUrls: [
-      "https://www.energy.gov/cmei/oced/long-duration-energy-storage",
-      "https://www.energy.gov/nepa/articles/cx-033539-multiday-iron-air-demonstration-mind-project",
-      "https://www.energy.gov/sites/default/files/2023-07/Technology%20Strategy%20Assessment%20-%20Flow%20Batteries.pdf",
-      "https://www.energy.gov/cmei/oced/long-duration-energy-storage-demonstrations-selections-lab-call",
-      "https://www.energy.gov/cmei/water/how-pumped-storage-hydropower-works",
-      "https://www.iea.org/commentaries/battery-storage-is-scaling-up-and-taking-on-a-larger-system-role",
-      "https://www.ons.org.br/Paginas/energia-no-futuro/suprimento-eletrico/parpel2025/sumario-executivo/index.aspx",
-      "https://www.gov.br/aneel/pt-br/assuntos/noticias/2026-defeso-eleitoral/primeiros-leiloes-de-armazenamento-de-energia-do-brasil-entram-em-consulta-publica",
-      "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/caderno-de-estudos-roadmap-usinas-hidreletricas-reversiveis-uhr-perspectivas-e-caminhos-para-a-insercao-das-usinas-reversiveis-no-brasil-",
-    ],
     sources: [
       {
         title: "Long-Duration Energy Storage",

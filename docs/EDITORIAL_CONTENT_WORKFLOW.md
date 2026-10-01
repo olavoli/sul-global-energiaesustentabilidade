@@ -40,7 +40,7 @@ Tipos aceitos: news, explainer, analysis, guide, interview e opinion. O arquivo 
 - Registre crédito, `sourceUrl` e licença quando aplicáveis; `license: unknown` é bloqueio para conteúdo real.
 - Use `sources` apenas para arquivos realmente gerados. Não derive URLs de terceiros nem copie mídia sem autorização.
 - Imagem decorativa usa `decorative: true` e `alt: ""`.
-- Conteúdo real usa `sources` estruturadas com título, URL, autoria/organização, tipo e `verifiedAt`. `sourceUrls` é legado dos demos.
+- Conteúdo real usa `sources` estruturadas com título, URL, autoria/organização, tipo e `verifiedAt`. Novos conteúdos não declaram `sourceUrls`; o campo permanece opcional somente para compatibilidade transitória com artigos legados e divergências ainda sob revisão editorial.
 - Links de fontes são abertos com `noopener noreferrer`.
 - Para patrocínio, use `sponsored: true` e informe `sponsorName`; a interface exibe disclosure.
 - Conteúdo fictício mantém `isDemo: true`. Produção o bloqueia por padrão; a habilitação deliberada mantém o aviso global.

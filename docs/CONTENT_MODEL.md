@@ -6,7 +6,7 @@ Categorias mantêm os seis slugs existentes para preservar URLs. Política energ
 
 Estados: `draft`, `review`, `approved`, `scheduled`, `published`, `archived` e `correction-needed`. Somente `published`, com `publishedAt` não futuro, é público. Conteúdo real publicado exige `approvedAt`; `scheduled` exige data/hora com fuso.
 
-Fontes estruturadas usam `title`, `url`, `organizationOrAuthor`, `publishedAt` opcional, `verifiedAt`, `type`, `note` opcional e `isDemo`. Os tipos são official, academic, regulatory, company, news, data, interview e other. `sourceUrls` permanece apenas por compatibilidade com demos.
+Fontes estruturadas usam `title`, `url`, `organizationOrAuthor`, `publishedAt` opcional, `verifiedAt`, `type`, `note` opcional e `isDemo`. Os tipos são official, academic, regulatory, company, news, data, interview e other. `sources` é a fonte canônica; `sourceUrls` é opcional e permanece temporariamente apenas para compatibilidade com conteúdo legado. Quando ambos coexistem e divergem, a diferença exige revisão editorial antes da remoção do campo legado.
 
 Atualizações usam `updatedAt` e `updateNote` ou `corrections`. Cada correção registra `type`, `date`, `reason` e `description`. `opinionDisclosure`, dados de entrevista e `aiDisclosure` são exigidos conforme o tipo e o uso. O contrato executável em `src/content/schema.ts` é a autoridade em caso de divergência com exemplos históricos abaixo.
 
@@ -81,7 +81,7 @@ Exemplos:
 
 ### 2.2 Frontmatter obrigatório
 
-O contrato implementado vive em `src/content/schema.ts`. Além dos campos básicos, ele exige `slug`, `contentType`, `status`, `isDemo`, `sponsored`, `sourceUrls` e seus guardrails. `publishedAt` é obrigatório quando `status: published`; `sponsorName` é obrigatório quando `sponsored: true`.
+O contrato implementado vive em `src/content/schema.ts`. Além dos campos básicos, ele exige `slug`, `contentType`, `status`, `isDemo`, `sponsored`, `sources` e seus guardrails. Novos artigos não declaram `sourceUrls`; o campo opcional é aceito somente durante a transição de conteúdo legado. `publishedAt` é obrigatório quando `status: published`; `sponsorName` é obrigatório quando `sponsored: true`.
 
 ```yaml
 ---

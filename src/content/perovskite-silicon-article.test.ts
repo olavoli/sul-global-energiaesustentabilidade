@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { existsSync, readFileSync } from "node:fs";
 
 import { parseEditorialFile } from "../../scripts/generate-content";
+import { canonicalSourceUrls } from "./schema";
 
 const articlePath = new URL(
   "../../content/articles/perovskita-silicio-por-que-empilhar-duas-celulas-solares.mdx",
@@ -28,7 +29,9 @@ describe("ART-009 — tandem perovskita-silício", () => {
       aiAssistance: "substantial",
     });
     expect(parsed.frontmatter.sources.every((item) => !item.isDemo)).toBeTrue();
-    expect(parsed.frontmatter.sourceUrls.every((url) => !url.includes("utm_"))).toBeTrue();
+    expect(
+      canonicalSourceUrls(parsed.frontmatter).every((url) => !url.includes("utm_")),
+    ).toBeTrue();
   });
 
   test("preserva as cautelas científicas e a distinção brasileira", () => {
