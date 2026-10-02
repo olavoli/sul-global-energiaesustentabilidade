@@ -63,7 +63,7 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
     );
     expect(
       createHash("sha256").update(parsed.body.replace(/\r\n/g, "\n").trim()).digest("hex"),
-    ).toBe("93ee2ee8d348fe8f50d7a1f398ec803310d28bd89f325aa80edd4ce746a8361e");
+    ).toBe("57383e17a5e933aa1b47d4ce4dd0d42a65c56db8c7358a74713c54b9150ebb28");
   });
 
   test("preserva título, categoria, pontos-chave e referências", async () => {
@@ -91,7 +91,15 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
 
     const html = await renderArticle();
     const keyPoints = html.match(/aria-label="Pontos-chave"[\s\S]*?<\/section>/)?.[0] ?? "";
-    expect(keyPoints.match(/<li>/g)).toHaveLength(4);
+    expect(keyPoints.match(/<li>/g)).toHaveLength(5);
+    expect(keyPoints).toContain("7 mil empregos diretos e 28 mil postos diretos e indiretos");
+    expect(keyPoints).toContain("110 mil pessoas");
+    expect(keyPoints).toContain("Treviso (95,0%)");
+    expect(keyPoints).toContain("ferrovia, fornecedores, indústrias, serviços, comércio");
+    expect(keyPoints).toContain("diversificação econômica");
+    expect(html).toContain(
+      "os números são estimativas históricas de diferentes períodos e metodologias e não representam uma contagem atual exata",
+    );
     expect(source).not.toContain("## Referências");
     expect(source).not.toContain("Registro de imagens");
   });
