@@ -80,6 +80,9 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/transicao-energetica-justa-alem-do-slogan.mdx"),
   "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao": () =>
     import("../../../content/articles/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao.mdx"),
+  "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2":
+    () =>
+      import("../../../content/articles/transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2.mdx"),
   "uma-bateria-precisa-mesmo-ser-pequena": () =>
     import("../../../content/articles/uma-bateria-precisa-mesmo-ser-pequena.mdx"),
 };

@@ -23,8 +23,8 @@ export const TableBody = ({ children }: Children) => <tbody>{children}</tbody>;
 export const TableRow = ({ children }: Children) => (
   <tr className="border-b border-border">{children}</tr>
 );
-export const TableHeader = ({ children }: Children) => (
-  <th scope="col" className="p-4 align-top">
+export const TableHeader = ({ children, scope = "col" }: Children & { scope?: "col" | "row" }) => (
+  <th scope={scope} className="p-4 align-top">
     {children}
   </th>
 );
