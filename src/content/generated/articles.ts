@@ -4332,6 +4332,8 @@ export const articleRecords = [
       },
     ],
     aiAssistance: "limited",
+    aiDisclosure:
+      "Este artigo foi elaborado com auxílio de inteligência artificial (IA) na revisão e organização do conteúdo. As imagens foram geradas com o ChatGPT. A direção editorial e a conferência final das informações foram realizadas por Olavo Oliveira, SGES (2026).",
     canonicalUrl:
       "/artigo/transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
   },
