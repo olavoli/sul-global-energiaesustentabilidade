@@ -5,7 +5,9 @@ import { describe, expect, test } from "bun:test";
 import { renderToStaticMarkup } from "react-dom/server";
 import * as runtime from "react/jsx-runtime";
 import remarkFrontmatter from "remark-frontmatter";
+import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
 import { editorialMdxComponents } from "@/components/editorial/mdx-components";
+import { articleAiImageTools } from "@/content/image-ai-credit";
 import { getArticleBySlug } from "@/content/repository";
 import { parseEditorialFile } from "../../scripts/generate-content";
 
@@ -40,6 +42,35 @@ async function renderArticle() {
 }
 
 describe("ART-029 — integração editorial aprovada", () => {
+  test("exibe a nota personalizada uma única vez no modo detalhado", () => {
+    const disclosure =
+      "Este artigo foi elaborado com auxílio de inteligência artificial (IA) na revisão e organização do conteúdo. As imagens foram geradas com o ChatGPT. A direção editorial e a conferência final das informações foram realizadas por Olavo Oliveira, SGES (2026).";
+    expect(parsed.frontmatter.aiDisclosureMode).toBe("detailed");
+    expect(parsed.frontmatter.aiDisclosure).toBe(disclosure);
+
+    const article = getArticleBySlug(slug);
+    if (!article) throw new Error("ART-029 não encontrado.");
+    expect(article.aiDisclosureMode).toBe("detailed");
+    expect(article.aiDisclosure).toBe(disclosure);
+    const pageDisclosure =
+      article.aiDisclosureMode === "detailed" ? article.aiDisclosure : undefined;
+    expect(pageDisclosure).toBe(disclosure);
+
+    const html = renderToStaticMarkup(
+      <AiEditorialCredit
+        assistance={article.aiAssistance}
+        publicationDate={article.publishedAt ?? article.createdAt}
+        imageTools={articleAiImageTools(article)}
+        disclosure={pageDisclosure}
+      />,
+    );
+    expect(html.match(/Nota de Transparência/g)).toHaveLength(1);
+    expect(html.split(disclosure)).toHaveLength(2);
+    expect(html.replace(/<[^>]+>/g, "")).not.toContain(
+      "Texto elaborado com auxílio de inteligência artificial (IA); direção editorial e conferência técnica: Olavo Oliveira, SGES (2026).",
+    );
+  });
+
   test("registra slug, categoria, título e fontes canônicas", () => {
     expect(getArticleBySlug(slug)).toMatchObject({
       slug,
