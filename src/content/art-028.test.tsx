@@ -145,7 +145,11 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
       searchArticles("empregos e cidades depois do carvão").find((item) => item.slug === slug)
         ?.title,
     ).toBe(canonicalTitle);
-    expect(getLatestArticles(1)[0]).toMatchObject({ slug, title: canonicalTitle });
+    expect(getLatestArticles(1)[0]).toMatchObject({
+      slug: "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
+      title:
+        "Transição Energética Justa em Santa Catarina: quem paga a conta e quem decide o futuro da região carbonífera? — Parte 2",
+    });
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);
     expect(getRelatedArticles(article!)).not.toHaveLength(0);
 
