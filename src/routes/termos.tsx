@@ -20,7 +20,7 @@ export const Route = createFileRoute("/termos")({
 
 function TermsPage() {
   return (
-    <LegalPage eyebrow="Termos" title="Termos de uso" updatedAt="13 de julho de 2026">
+    <LegalPage eyebrow="Termos" title="Termos de uso" updatedAt="4 de outubro de 2026">
       <h2>Finalidade</h2>
       <p>
         O Sul Global publica conteúdo informativo e educativo. O material não substitui orientação
@@ -42,7 +42,11 @@ function TermsPage() {
       <p>
         Comentários devem tratar do tema publicado e respeitar outras pessoas. Ofensas, ameaças,
         discriminação, spam, dados pessoais, publicidade e links maliciosos podem ser rejeitados ou
-        removidos. Todos os comentários dependem de moderação prévia.
+        ocultados, classificados como spam ou excluídos. Comentários e respostas válidos são
+        publicados imediatamente e sujeitos a moderação posterior. A exclusão apaga o conteúdo e não
+        permite restauração. Reações podem ser trocadas ou removidas. Denúncias são analisadas pela
+        administração e não ocultam automaticamente o conteúdo. Não manipule reações ou denúncias
+        nem use estes recursos para perseguir pessoas.
       </p>
       <h2>Contato e alterações</h2>
       <p>

@@ -143,10 +143,27 @@ async function api(
     if (runtime?.COMMENTS_ENABLED !== "true" || !runtime.NEWSROOM_DB)
       return json({ error: "Recurso não encontrado." }, 404);
     const repository = new D1PublicCommentRepository(runtime.NEWSROOM_DB);
+    if (
+      request.method === "GET" &&
+      ["/api/admin/comments", "/api/admin/comments/reports"].includes(pathname)
+    )
+      await repository.anonymizeExpiredRejectedOrSpam(session.actor);
     if (pathname === "/api/admin/comments" && request.method === "GET") {
-      const status = new URL(request.url).searchParams.get("status") ?? "pending";
-      const page = await repository.listCommentsForModeration(status as never, { limit: 100 });
-      return json({ data: page.items });
+      const params = new URL(request.url).searchParams;
+      const status = params.get("status") ?? "approved";
+      const page = await repository.listCommentsForModeration(status as never, {
+        limit: 20,
+        cursor: params.get("cursor") ?? undefined,
+      });
+      return json({ data: page.items, cursor: page.cursor });
+    }
+    if (pathname === "/api/admin/comments/reports" && request.method === "GET") {
+      const params = new URL(request.url).searchParams;
+      const page = await repository.listReports(params.get("status") ?? "open", {
+        limit: 20,
+        cursor: params.get("cursor") ?? undefined,
+      });
+      return json({ data: page.items, cursor: page.cursor });
     }
     if (pathname === "/api/admin/comments/actions" && request.method === "POST") {
       const csrf = request.headers.get("x-csrf-token");
@@ -163,9 +180,17 @@ async function api(
         reason: action.note || undefined,
       };
       if (action.action === "approve") await repository.approveComment(input);
-      else if (action.action === "reject") await repository.rejectComment(input);
+      else if (action.action === "reject" || action.action === "hide")
+        await repository.rejectComment(input);
+      else if (action.action === "restore") await repository.restoreComment(input);
       else if (action.action === "spam") await repository.markCommentAsSpam(input);
       else if (action.action === "delete") await repository.softDeleteAndAnonymize(input);
+      else if (action.action === "review-report" || action.action === "dismiss-report")
+        await repository.reviewReport(
+          action.id,
+          session.actor,
+          action.action === "review-report" ? "reviewed" : "dismissed",
+        );
       else return json({ error: "Ação não permitida." }, 400);
       await storageAdapter().appendAudit({
         id: crypto.randomUUID(),

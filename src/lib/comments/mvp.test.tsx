@@ -50,7 +50,7 @@ describe("MVP de comentários", () => {
       expect(source).toContain("O e-mail não será exibido publicamente");
       expect(source).toContain("Regras de Participação");
       expect(source).toContain("https://challenges.cloudflare.com/turnstile/v0/api.js");
-      expect(source).toContain("action: TURNSTILE_ACTION");
+      expect(source).toContain("action={TURNSTILE_ACTION}");
     });
   });
 });

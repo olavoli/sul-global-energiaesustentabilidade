@@ -125,6 +125,13 @@ describe("repositório D1 de comentários", () => {
       publicName: "Pessoa",
       bodyText: "Texto aprovado.",
       approvedAt: now.toISOString(),
+      publishedAt: now.toISOString(),
+      parentCommentId: null,
+      rootCommentId: null,
+      replyingTo: null,
+      likes: 0,
+      dislikes: 0,
+      viewerReaction: null,
     });
     expect(JSON.stringify(page)).not.toMatch(/email|hash|consent|actor|reason/i);
     expect(database.statements[0].query).toContain("status='approved'");
@@ -143,7 +150,7 @@ describe("repositório D1 de comentários", () => {
     const first = await comments.listApprovedComments("artigo-publicado", { limit: 500 });
     expect(first.items).toHaveLength(50);
     expect(first.cursor).toBeDefined();
-    expect(database.statements[0].values.at(-1)).toBe(51);
+    expect(database.statements[0].values[3]).toBe(51);
 
     database.scripted.push({ all: [] });
     await comments.listApprovedComments("artigo-publicado", { cursor: first.cursor, limit: 1 });
@@ -174,7 +181,7 @@ describe("repositório D1 de comentários", () => {
     ] as const) {
       const { database, repository: comments } = repository();
       await comments[method]({ commentId: "comment-1", actor: "editor", reason: "regra" });
-      expect(database.statements).toHaveLength(2);
+      expect(database.statements).toHaveLength(action === "delete" ? 3 : 2);
       const event = database.statements[1];
       expect(event.query).toContain("INSERT INTO comment_moderation_events");
       expect(event.values).toContain(action);
@@ -203,16 +210,16 @@ describe("repositório D1 de comentários", () => {
 
   test("não anonimiza rejected/spam antes do corte de 90 dias", async () => {
     const { database, repository: comments } = repository();
-    database.scripted.push({ changes: 0 });
+    database.batchChanges = [0, 0, 0];
     expect(await comments.anonymizeExpiredRejectedOrSpam()).toBe(0);
-    expect(database.statements[0].values[1]).toBe("2026-09-11T12:00:00.000Z");
+    expect(database.statements[1].values[1]).toBe("2026-09-11T12:00:00.000Z");
   });
 
   test("anonimiza rejected/spam após o corte de 90 dias", async () => {
     const { database, repository: comments } = repository();
-    database.scripted.push({ changes: 2 });
+    database.batchChanges = [2, 2, 0];
     expect(await comments.anonymizeExpiredRejectedOrSpam()).toBe(2);
-    const statement = database.statements[0];
+    const statement = database.statements[1];
     expect(statement.query).toContain("status IN ('rejected','spam')");
     expect(statement.query).toContain("rejected_at<=?2");
     expect(statement.values[1]).toBe("2026-09-11T12:00:00.000Z");

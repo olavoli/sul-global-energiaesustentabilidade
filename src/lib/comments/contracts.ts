@@ -20,14 +20,19 @@ const plainTextSchema = (minimum: number, maximum: number) =>
     .max(maximum)
     .refine((value) => !htmlTagPattern.test(value), "HTML não é permitido.");
 
-export const normalizedCommentEmailSchema = z.string().trim().toLowerCase().pipe(z.email());
+export const normalizedCommentEmailSchema = z
+  .string()
+  .trim()
+  .max(254)
+  .toLowerCase()
+  .pipe(z.email());
 
 /**
  * `emailHash` deve ser HMAC-SHA-256 do e-mail normalizado, usando um secret
  * exclusivo (`COMMENTS_HASH_SECRET`). Nunca use SHA-256 simples do e-mail.
  *
  * E-mail, nome, corpo integral do comentário e secret nunca podem ser
- * registrados em logs. A geração do hash pertence à camada de serviço futura.
+ * registrados em logs. A camada de serviço gera o hash antes da persistência.
  */
 export const commentEmailHashSchema = z.string().regex(/^[a-f0-9]{64}$/);
 
@@ -40,6 +45,7 @@ export const publicCommentInputSchema = z
     consentAccepted: z.literal(true),
     honeypot: z.literal("").optional(),
     turnstileToken: z.string().trim().min(1).max(2_048),
+    parentCommentId: z.string().min(1).max(128).optional(),
   })
   .strict();
 
@@ -57,6 +63,9 @@ const persistedCommentBaseSchema = z.object({
   consentedAt: z.iso.datetime(),
   createdAt: z.iso.datetime(),
   updatedAt: z.iso.datetime(),
+  parentCommentId: z.string().min(1).max(128).nullable().default(null),
+  rootCommentId: z.string().min(1).max(128).nullable().default(null),
+  publishedAt: z.iso.datetime().nullable().default(null),
 });
 
 const retainedCommentSchema = persistedCommentBaseSchema.extend({
@@ -124,6 +133,17 @@ export const persistedCommentSchema = z
     }),
   ])
   .superRefine((comment, context) => {
+    if (
+      (comment.parentCommentId === null) !== (comment.rootCommentId === null) ||
+      comment.parentCommentId === comment.id ||
+      comment.rootCommentId === comment.id
+    ) {
+      context.addIssue({
+        code: "custom",
+        path: ["parentCommentId"],
+        message: "Parentesco inválido.",
+      });
+    }
     const consentedAt = Date.parse(comment.consentedAt);
     const createdAt = Date.parse(comment.createdAt);
     const updatedAt = Date.parse(comment.updatedAt);
@@ -180,3 +200,14 @@ export type CommentStatus = z.infer<typeof commentStatusSchema>;
 export type CommentModerationAction = z.infer<typeof commentModerationActionSchema>;
 export type PublicCommentInput = z.infer<typeof publicCommentInputSchema>;
 export type PersistedComment = z.infer<typeof persistedCommentSchema>;
+
+export const reactionInputSchema = z.object({ value: z.enum(["like", "dislike"]) }).strict();
+export const reportInputSchema = z
+  .object({
+    reason: z.enum(["spam", "abuso", "privacidade", "outro"]),
+    detail: plainTextSchema(1, 500).optional(),
+    turnstileToken: z.string().trim().min(1).max(2_048),
+  })
+  .strict();
+export type ReactionValue = z.infer<typeof reactionInputSchema>["value"];
+export type ReportInput = z.infer<typeof reportInputSchema>;

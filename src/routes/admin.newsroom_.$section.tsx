@@ -25,7 +25,7 @@ const labels: Record<AdminSection, [string, string]> = {
   runs: ["Execuções", "Histórico, estágios, checkpoints, warnings e recuperação."],
   reports: ["Relatórios", "Resumos operacionais privados produzidos pelo pipeline."],
   pitches: ["Pautas", "Pautas estruturadas criadas somente após aprovação humana."],
-  comments: ["Comentários", "Fila privada de comentários aguardando moderação."],
+  comments: ["Comentários", "Comentários publicados, respostas, denúncias e moderação posterior."],
   "scientific-radar": [
     "Radar Científico",
     "Descoberta privada de publicações científicas para decisão humana, sem geração de conteúdo.",

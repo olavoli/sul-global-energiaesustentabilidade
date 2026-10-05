@@ -23,7 +23,7 @@ function PrivacyPage() {
     <LegalPage
       eyebrow="Privacidade"
       title="Política de privacidade"
-      updatedAt="13 de julho de 2026"
+      updatedAt="4 de outubro de 2026"
     >
       <h2>Estado atual</h2>
       <p>
@@ -34,8 +34,8 @@ function PrivacyPage() {
       <h2>Preferências e armazenamento</h2>
       <p>
         A preferência de tema claro ou escuro pode ser guardada no armazenamento local do navegador
-        sob a chave <code>sul-global-theme</code>, até ser removida pelo usuário. A aplicação
-        principal não define cookies nem usa armazenamento de sessão.
+        sob a chave <code>sul-global-theme</code>, até ser removida pelo usuário. A aplicação usa um
+        cookie necessário à identificação de interações nos comentários, descrito abaixo.
       </p>
       <h2>Busca, compartilhamento e terceiros</h2>
       <p>
@@ -45,11 +45,29 @@ function PrivacyPage() {
       </p>
       <h2>Comentários públicos</h2>
       <p>
-        Comentários passam por moderação antes da publicação. O nome ou apelido pode ser exibido; o
-        e-mail permanece privado e é usado somente para moderação, segurança e pedidos de exclusão.
-        Comentários rejeitados ou classificados como spam têm seus dados pessoais anonimizados após
-        90 dias. A exclusão de comentário publicado pode ser solicitada pelos canais de contato
-        indicados pelo Sul Global.
+        Comentários e respostas válidos são publicados imediatamente e sujeitos a moderação
+        posterior. O nome ou apelido pode ser exibido; o e-mail permanece privado e é usado somente
+        para moderação, segurança e pedidos de exclusão. Conteúdos ocultados ou classificados como
+        spam podem ser restaurados enquanto seus dados estiverem retidos. A anonimização desses
+        dados ocorre nos acessos administrativos às listas de comentários ou denúncias, para
+        conteúdos ocultados ou classificados como spam há pelo menos 90 dias. Não há limpeza
+        agendada; sem esses acessos, a anonimização pode ocorrer depois do prazo. A exclusão é
+        irreversível e pode ser solicitada pelos canais de contato indicados pelo Sul Global.
+      </p>
+      <p>
+        Gostei, Não gostei e denúncias usam um identificador aleatório em cookie protegido, com
+        validade de 180 dias. Somente um hash dessa identidade é armazenado no banco para limitar
+        duplicações e abuso. Não usamos fingerprint nem e-mail como identidade de reação. A
+        identidade não comprova quem é a pessoa e não garante anonimato absoluto; remover o cookie
+        ou mudar de dispositivo cria outra identidade. Denúncias são privadas e não ocultam
+        automaticamente o comentário. Limites de requisições e verificação de segurança também
+        protegem o serviço.
+      </p>
+      <p>
+        Ao anonimizar ou excluir definitivamente um comentário, também eliminamos o detalhe livre
+        das denúncias relacionadas. Preservamos o registro da denúncia, o motivo categórico, o
+        estado, as datas, o hash necessário à unicidade e a identificação da revisão administrativa.
+        Os eventos administrativos são preservados para auditoria.
       </p>
       <h2>Mudanças futuras</h2>
       <p>
