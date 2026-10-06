@@ -81,9 +81,9 @@ O build Nitro produz um worker `cloudflare-module` em `.output/server/`. O previ
 - **Vite 8** — build.
 - **Tailwind CSS v4** — estilo, tokens em `src/styles.css`.
 - **MDX no repositório** — fonte de conteúdo (artigos e autores).
-- **Lovable Cloud (Supabase gerenciado)** — apenas para a tabela de
-  assinantes de newsletter. Nenhum outro backend nesta fase.
-- **Hospedagem** — Vercel (ou hosting Lovable). Edge/Worker compatível.
+- **Cloudflare D1** — consentimento, estado e auditoria da newsletter.
+- **Kit** — double opt-in e disparo operacional da newsletter.
+- **Hospedagem** — Cloudflare Worker com assets estáticos.
 - **GitHub** — versionamento e fluxo de PR.
 
 ## Stack (fase 2 e além)
@@ -167,14 +167,14 @@ O subconjunto editorial não aceita imports, exports, expressões JavaScript ou 
 - Capas desejadas: 1200×630; dimensões não podem ser inventadas.
 - Sempre `alt` descritivo, salvo decoração explicitamente marcada.
 
-### Backend mínimo (Lovable Cloud)
+### Backend da newsletter (D1 + Kit)
 
-Fase 1 tem exatamente uma tabela: `subscribers`.
-
-- `id uuid`, `email text unique`, `created_at timestamptz`.
-- RLS habilitado. Policy: `INSERT` público (via anon key), `SELECT` só
-  `service_role`.
-- Sem PII sensível, sem senhas, sem sessão.
+- O D1 mantém assinantes, eventos de consentimento, supressões e pendências de sincronização.
+- O Kit mantém o double opt-in e os disparos; somente seu webhook assinado ativa ou descadastra o
+  registro local.
+- O e-mail de uma pessoa descadastrada é removido do D1; permanece apenas o HMAC necessário à
+  supressão e à trilha de auditoria.
+- Chaves do Kit, Turnstile e HMAC são secrets server-side e nunca são expostas ao cliente.
 
 ### SEO técnico
 
@@ -193,7 +193,7 @@ Fase 1 tem exatamente uma tabela: `subscribers`.
 
 | Integração         | Fase | Uso                        |
 | ------------------ | ---- | -------------------------- |
-| Lovable Cloud      | 1    | Newsletter (`subscribers`) |
+| Kit + D1           | 1    | Newsletter, consentimento e double opt-in |
 | Google Analytics 4 | 2    | Métricas de audiência      |
 | AdSense            | 2    | Anúncios simples           |
 | Ad Manager         | 3    | Campanhas e patrocínios    |

@@ -9,7 +9,7 @@ const commentsMigration = storageMigrations.find(({ version }) => version === 3)
 describe("migration de comentários públicos", () => {
   test("registra a versão 3 depois da newsletter e mantém versões crescentes", () => {
     expect(() => validateMigrations(storageMigrations)).not.toThrow();
-    expect(storageMigrations.map(({ version }) => version)).toEqual([1, 2, 3, 4]);
+    expect(storageMigrations.map(({ version }) => version)).toEqual([1, 2, 3, 4, 5]);
     expect(commentsMigration).toMatchObject({ version: 3, name: "public-comments" });
   });
 

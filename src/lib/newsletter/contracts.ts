@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const newsletterStatusSchema = z.enum(["pending", "active"]);
+export const NEWSLETTER_CONSENT_VERSION = "newsletter-v1";
 export const newsletterConsentEventTypeSchema = z.enum([
   "consent_recorded",
   "subscription_confirmed",
@@ -26,6 +27,7 @@ const subscriberBaseSchema = z.object({
   source: z.string().min(1).max(120),
   createdAt: z.iso.datetime(),
   updatedAt: z.iso.datetime(),
+  kitSubscriberId: z.string().min(1).max(64).nullable().optional(),
 });
 
 export const newsletterSubscriberSchema = z.discriminatedUnion("status", [
@@ -58,6 +60,57 @@ export const newsletterSuppressionSchema = z.object({
   createdAt: z.iso.datetime(),
 });
 
+export const publicNewsletterSubscriptionSchema = z
+  .object({
+    email: normalizedEmailSchema,
+    consentAccepted: z.literal(true),
+    turnstileToken: z.string().trim().min(1).max(2_048),
+    honeypot: z.string().max(120).default(""),
+  })
+  .strict();
+
+export const newsletterKitPendingSchema = z.object({
+  id: z.string().min(1).max(128),
+  emailNormalized: normalizedEmailSchema,
+  emailHash: newsletterHashSchema,
+  kitSubscriberId: z.string().min(1).max(64).nullable(),
+  syncStatus: z.enum(["queued", "associated", "failed"]),
+  consentVersion: z.literal(NEWSLETTER_CONSENT_VERSION),
+  consentedAt: z.iso.datetime(),
+  source: z.string().min(1).max(120),
+  lastAttemptAt: z.iso.datetime().nullable(),
+  createdAt: z.iso.datetime(),
+  updatedAt: z.iso.datetime(),
+});
+
+const kitSubscriberEventSchema = z.object({
+  subscriber: z.object({
+    id: z.union([z.string(), z.number()]).transform(String),
+    email_address: normalizedEmailSchema,
+  }),
+});
+
+export const kitWebhookEnvelopeSchema = z.object({
+  delivery_id: z.union([z.string(), z.number()]),
+  events: z
+    .array(
+      z.object({
+        id: z.uuid(),
+        type: z.string().min(1).max(120),
+        created: z.iso.datetime(),
+        data: z.unknown(),
+      }),
+    )
+    .min(1)
+    .max(100),
+});
+
+export function parseKitSubscriberEvent(data: unknown) {
+  return kitSubscriberEventSchema.safeParse(data);
+}
+
 export type NewsletterSubscriber = z.infer<typeof newsletterSubscriberSchema>;
 export type NewsletterConsentEvent = z.infer<typeof newsletterConsentEventSchema>;
 export type NewsletterSuppression = z.infer<typeof newsletterSuppressionSchema>;
+export type PublicNewsletterSubscription = z.infer<typeof publicNewsletterSubscriptionSchema>;
+export type NewsletterKitPending = z.infer<typeof newsletterKitPendingSchema>;

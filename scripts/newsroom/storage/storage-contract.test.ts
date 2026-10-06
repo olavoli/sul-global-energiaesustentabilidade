@@ -230,7 +230,7 @@ describe("Sprint 18 — contrato comum de armazenamento", () => {
   });
 
   test("19-20. migrations são ordenadas e não destrutivas", () => {
-    expect(storageMigrations.map(({ version }) => version)).toEqual([1, 2, 3, 4]);
+    expect(storageMigrations.map(({ version }) => version)).toEqual([1, 2, 3, 4, 5]);
     expect(storageMigrations.flatMap(({ statements }) => statements).join(" ")).not.toContain(
       "DROP TABLE",
     );

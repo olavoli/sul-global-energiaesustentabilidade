@@ -23,13 +23,26 @@ function PrivacyPage() {
     <LegalPage
       eyebrow="Privacidade"
       title="Política de privacidade"
-      updatedAt="4 de outubro de 2026"
+      updatedAt="6 de outubro de 2026"
     >
       <h2>Estado atual</h2>
       <p>
-        O portal não utiliza analytics, publicidade ativa ou cadastro real de newsletter. Os
-        formulários de contato e newsletter validam dados apenas no navegador: não enviam, não
-        persistem e não registram nomes, e-mails ou mensagens.
+        O portal não utiliza analytics ou publicidade ativa. O formulário de contato valida dados
+        apenas no navegador e não os envia. A newsletter trata o e-mail conforme descrito abaixo.
+      </p>
+      <h2>Newsletter</h2>
+      <p>
+        Ao solicitar a newsletter, registramos seu e-mail, a versão e a data do consentimento e a
+        origem da inscrição. O Kit é o provedor responsável pelo double opt-in e pelos envios: a
+        inscrição só se torna ativa depois da confirmação feita pela mensagem enviada pelo Kit. Até
+        lá, o registro permanece pendente.
+      </p>
+      <p>
+        O descadastro pode ser realizado pelos links das mensagens. Após o aviso do Kit, removemos o
+        e-mail legível da base local e mantemos somente o hash necessário à supressão, além da
+        trilha de consentimento e auditoria. Uma nova inscrição é permitida apenas mediante novo
+        consentimento explícito e exige outro double opt-in; ela nunca restaura silenciosamente o
+        estado ativo.
       </p>
       <h2>Preferências e armazenamento</h2>
       <p>
@@ -71,9 +84,9 @@ function PrivacyPage() {
       </p>
       <h2>Mudanças futuras</h2>
       <p>
-        Newsletter, contato, analytics ou publicidade somente poderão ser ativados após revisão de
-        finalidade, base legal, retenção, segurança e transparência. Um banner de cookies não é
-        exibido porque não há cookies não essenciais ativos.
+        Contato, analytics ou publicidade somente poderão ser ativados após revisão de finalidade,
+        base legal, retenção, segurança e transparência. Um banner de cookies não é exibido porque
+        não há cookies não essenciais ativos.
       </p>
     </LegalPage>
   );

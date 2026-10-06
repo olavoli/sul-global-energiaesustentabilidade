@@ -25,7 +25,7 @@ afterAll(async () => {
 
 test("D1 emulado local: migrations, concorrência, respostas e eventos atômicos", async () => {
   const database = await emulator.getD1Database("NEWSROOM_DB");
-  expect(await applyMigrations(database)).toEqual([1, 2, 3, 4]);
+  expect(await applyMigrations(database)).toEqual([1, 2, 3, 4, 5]);
   expect(await applyMigrations(database)).toEqual([]);
   const repo = new D1PublicCommentRepository(database);
   const input = {
@@ -132,7 +132,7 @@ test("D1 real emulado: falha SQL na versão 4 reverte DDL, backfill e registro",
     ).results,
   ).toEqual([]);
   await db.prepare("DROP INDEX public_comments_article_published").run();
-  expect(await applyMigrations(db)).toEqual([4]);
+  expect(await applyMigrations(db)).toEqual([4, 5]);
   expect(
     (
       await db

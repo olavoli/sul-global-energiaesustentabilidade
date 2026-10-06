@@ -34,7 +34,7 @@ function NewsletterPage() {
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             A proposta é oferecer uma síntese do que importa em energia, transição e desenvolvimento
-            — com contexto, fontes e sem clickbait. O envio ainda não está ativo.
+            — com contexto, fontes e sem clickbait. Confirme seu e-mail para concluir a inscrição.
           </p>
           <ul className="mt-8 space-y-3 text-foreground">
             <li>• Uma reportagem exclusiva por edição.</li>

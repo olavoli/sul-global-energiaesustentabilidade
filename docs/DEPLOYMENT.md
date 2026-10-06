@@ -99,6 +99,15 @@ Development, preview e staging recebem `noindex, nofollow` no HTML e em `X-Robot
 
 `production:check` recusa staging, entrypoint automático do Nitro, data inferior à aprovada, downgrade em relação à versão ativa, mudança do D1 e desaparecimento dos bindings obrigatórios. A comparação remota é somente leitura. `production:dry-run` sempre repete essas guardas e usa `--keep-vars`; o mesmo parâmetro é obrigatório no deploy manual para preservar variáveis e secrets remotos não declarados no template. A configuração automática `.output/server/wrangler.json` nunca deve ser passada ao deploy de produção.
 
+## Newsletter com Kit
+
+A newsletter permanece desativada por padrão. A ativação exige a migration 5 previamente auditada e aplicada, um Form do Kit com double opt-in e webhook apontando para `/api/newsletter/webhooks/kit`, configurado para `subscriber.activated` e `subscriber.unsubscribed`. Configure fora do Git:
+
+- secrets server-side: `KIT_API_KEY`, `KIT_WEBHOOK_SECRET`, `NEWSLETTER_HASH_SECRET` e `TURNSTILE_SECRET_KEY`;
+- vars de runtime: `KIT_FORM_ID`, `NEWSLETTER_ENABLED` e `TURNSTILE_SITE_KEY`.
+
+`NEWSLETTER_HASH_SECRET` deve ser exclusivo da newsletter. O endpoint público cria o subscriber explicitamente como `inactive`, associa-o ao Form e aguarda o webhook assinado antes de marcar a assinatura como ativa no D1. Nunca inclua esses valores no template versionado ou em variáveis `VITE_*`. O deploy oficial continua usando `--keep-vars` para preservar a configuração remota.
+
 ## Cache, rollback e operação
 
 Assets com hash podem usar cache imutável; HTML, robots, sitemap e RSS devem permitir atualização controlada. Não armazenar respostas personalizadas em cache futuro sem revisão. Para rollback, manter o artefato/commit anteriormente aprovado e reimplantar essa versão pela plataforma; nunca reescrever histórico publicado.

@@ -14,7 +14,7 @@ describe("migration aditiva de interações", () => {
   });
   test("registro controla aplicação única da migration local", async () => {
     const db = new LocalCommentDatabase(0);
-    expect(await applyMigrations(db)).toEqual([1, 2, 3, 4]);
+    expect(await applyMigrations(db)).toEqual([1, 2, 3, 4, 5]);
     expect(await applyMigrations(db)).toEqual([]);
     expect(db.sqlite.query("PRAGMA foreign_key_check").all()).toEqual([]);
   });
@@ -74,7 +74,7 @@ describe("migration aditiva de interações", () => {
       string,
       unknown
     >[];
-    expect(await applyMigrations(db)).toEqual([4]);
+    expect(await applyMigrations(db)).toEqual([4, 5]);
     const after = db.sqlite.query("SELECT * FROM public_comments ORDER BY id").all() as Record<
       string,
       unknown

@@ -2,9 +2,11 @@ import { describe, expect, test } from "bun:test";
 
 import {
   newsletterConsentEventSchema,
+  newsletterKitPendingSchema,
   newsletterSubscriberSchema,
   newsletterSuppressionSchema,
   normalizedEmailSchema,
+  publicNewsletterSubscriptionSchema,
 } from "./contracts";
 
 const timestamp = "2026-09-11T12:00:00.000Z";
@@ -74,5 +76,50 @@ describe("contratos da newsletter", () => {
     expect(() =>
       newsletterSuppressionSchema.parse({ emailHash: "A".repeat(64), createdAt: timestamp }),
     ).toThrow();
+  });
+
+  test("entrada pública é estrita, normaliza e exige consentimento", () => {
+    expect(
+      publicNewsletterSubscriptionSchema.parse({
+        email: " Leitor@Example.COM ",
+        consentAccepted: true,
+        turnstileToken: "token",
+        honeypot: "",
+      }).email,
+    ).toBe("leitor@example.com");
+    expect(() =>
+      publicNewsletterSubscriptionSchema.parse({
+        email: "leitor@example.com",
+        consentAccepted: false,
+        turnstileToken: "token",
+        honeypot: "",
+      }),
+    ).toThrow();
+    expect(() =>
+      publicNewsletterSubscriptionSchema.parse({
+        email: "leitor@example.com",
+        consentAccepted: true,
+        turnstileToken: "token",
+        honeypot: "",
+        status: "active",
+      }),
+    ).toThrow();
+  });
+
+  test("pending Kit não contém token de confirmação local", () => {
+    const pending = newsletterKitPendingSchema.parse({
+      id: "pending-1",
+      emailNormalized: "leitor@example.com",
+      emailHash: hash,
+      kitSubscriberId: null,
+      syncStatus: "queued",
+      consentVersion: "newsletter-v1",
+      consentedAt: timestamp,
+      source: "newsletter-cta",
+      lastAttemptAt: null,
+      createdAt: timestamp,
+      updatedAt: timestamp,
+    });
+    expect(pending).not.toHaveProperty("confirmationTokenHash");
   });
 });

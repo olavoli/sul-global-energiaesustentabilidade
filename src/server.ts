@@ -8,6 +8,7 @@ import { reportError } from "./lib/observability";
 import { applySecurityHeaders } from "./lib/security-headers";
 import { handleAdminRequest } from "./lib/admin/handler";
 import { handleCommentsRequest } from "./lib/comments/handler";
+import { handleNewsletterRequest } from "./lib/newsletter/handler";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -77,6 +78,8 @@ export default {
       const runtime = cloudflareRuntime(request, env, ctx);
       const adminResponse = await handleAdminRequest(request, runtime.env);
       if (adminResponse) return applySecurityHeaders(adminResponse, request);
+      const newsletterResponse = await handleNewsletterRequest(request, runtime.env);
+      if (newsletterResponse) return applySecurityHeaders(newsletterResponse, request);
       const commentsResponse = await handleCommentsRequest(request, runtime.env);
       if (commentsResponse) return applySecurityHeaders(commentsResponse, request);
       const distributionResponse = createDistributionResponse(
