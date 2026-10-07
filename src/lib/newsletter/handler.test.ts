@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test";
+import { describe, expect, spyOn, test } from "bun:test";
 import { LocalCommentDatabase } from "../comments/test-database";
 import { handleNewsletterRequest } from "./handler";
 
@@ -7,6 +7,57 @@ const endpoint = `${origin}/api/newsletter/subscriptions`;
 const webhookEndpoint = `${origin}/api/newsletter/webhooks/kit`;
 const webhookSecret = "kit-webhook-test-secret";
 const nowSeconds = 1_800_000_000;
+
+test("log de falha Kit usa somente campos sanitizados e mantém resposta pública", async () => {
+  const f = fixture();
+  const logger = spyOn(console, "error").mockImplementation(() => {});
+  try {
+    const response = await handleNewsletterRequest(
+      new Request(endpoint, {
+        method: "POST",
+        headers: { origin, "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      }),
+      f.env,
+      {
+        fetcher: (async (input) =>
+          String(input).includes("turnstile")
+            ? Response.json({
+                success: true,
+                hostname: "sulglobalenergia.com.br",
+                action: "newsletter-subscribe",
+              })
+            : new Response("reader@example.com kit-api-test-secret turnstile-token", {
+                status: 401,
+              })) as typeof fetch,
+      },
+    );
+    expect(response?.status).toBe(503);
+    expect(await response?.json()).toEqual({
+      error: "Não foi possível iniciar a confirmação. Tente novamente mais tarde.",
+    });
+    expect(logger.mock.calls).toEqual([
+      [
+        "[newsletter] operation failed",
+        {
+          stage: "create-subscriber",
+          httpStatus: 401,
+          category: "authentication",
+        },
+      ],
+    ]);
+    const logs = JSON.stringify(logger.mock.calls);
+    for (const sensitive of [
+      "reader@example.com",
+      "kit-api-test-secret",
+      "turnstile-token",
+      "newsletter-hash-test-secret",
+    ])
+      expect(logs).not.toContain(sensitive);
+  } finally {
+    logger.mockRestore();
+  }
+});
 const payload = {
   email: " Reader@Example.com ",
   consentAccepted: true,

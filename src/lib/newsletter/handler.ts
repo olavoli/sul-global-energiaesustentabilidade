@@ -4,7 +4,7 @@ import {
   parseKitSubscriberEvent,
   publicNewsletterSubscriptionSchema,
 } from "./contracts";
-import { KitNewsletterClient, KitOptInRequiredError } from "./kit-client";
+import { KitClientError, KitNewsletterClient, KitOptInRequiredError } from "./kit-client";
 import { D1NewsletterRepository } from "./repository";
 import {
   newsletterEmailHash,
@@ -31,6 +31,25 @@ function json(value: unknown, status = 200): Response {
       "cache-control": "private, no-store",
       "x-robots-tag": "noindex, nofollow",
     },
+  });
+}
+
+function logNewsletterFailure(error: unknown, stage: string): void {
+  // Explicit allowlist: never serialize the error, request, response or subscriber.
+  console.error("[newsletter] operation failed", {
+    stage: error instanceof KitClientError ? error.operation : stage,
+    httpStatus:
+      error instanceof KitClientError || error instanceof KitOptInRequiredError
+        ? error.httpStatus
+        : null,
+    category:
+      error instanceof KitClientError
+        ? error.category
+        : error instanceof KitOptInRequiredError
+          ? "opt-in-required"
+          : stage.startsWith("d1-")
+            ? "d1"
+            : "internal",
   });
 }
 
@@ -166,6 +185,7 @@ export async function handleNewsletterRequest(
     request.headers.get("sec-fetch-site") === "cross-site"
   )
     return json({ error: "Origem não autorizada." }, 403);
+  let subscriptionStage = "validate-request";
   try {
     if (request.headers.get("content-type")?.split(";")[0].trim() !== "application/json")
       return json({ error: "Não foi possível receber a inscrição." }, 400);
@@ -193,6 +213,7 @@ export async function handleNewsletterRequest(
       return json({ error: "Verificação de segurança inválida." }, 400);
 
     const emailHash = await newsletterEmailHash(parsed.data.email, hashSecret);
+    subscriptionStage = "d1-prepare-pending";
     const pending = await repository.preparePending({
       emailNormalized: parsed.data.email,
       emailHash,
@@ -200,20 +221,26 @@ export async function handleNewsletterRequest(
     });
     if (!pending.active && !pending.associated) {
       try {
+        subscriptionStage = "create-subscriber";
         const client = new KitNewsletterClient(
           env.KIT_API_KEY.trim(),
           env.KIT_FORM_ID.trim(),
           dependencies.fetcher,
         );
         const subscriber = await client.createInactiveSubscriber(parsed.data.email);
+        subscriptionStage = "d1-record-kit-subscriber";
         await repository.recordKitSubscriber(emailHash, subscriber.id);
+        subscriptionStage = "associate-form";
         await client.associateSubscriberWithForm(subscriber.id, url.origin + "/newsletter");
+        subscriptionStage = "d1-mark-associated";
         await repository.markAssociated(emailHash);
       } catch (error) {
+        logNewsletterFailure(error, subscriptionStage);
         if (
           error instanceof KitOptInRequiredError &&
           ["cancelled", "bounced", "complained"].includes(error.state)
         ) {
+          subscriptionStage = "d1-unsubscribe";
           await repository.unsubscribe({
             eventId: crypto.randomUUID(),
             occurredAt: new Date().toISOString(),
@@ -222,7 +249,10 @@ export async function handleNewsletterRequest(
             emailHash,
             source: "kit-api-sync",
           });
-        } else await repository.markSyncFailed(emailHash);
+        } else {
+          subscriptionStage = "d1-mark-failed";
+          await repository.markSyncFailed(emailHash);
+        }
         return json(
           { error: "Não foi possível iniciar a confirmação. Tente novamente mais tarde." },
           503,
@@ -234,6 +264,7 @@ export async function handleNewsletterRequest(
       202,
     );
   } catch (error) {
+    logNewsletterFailure(error, subscriptionStage);
     if (error instanceof SyntaxError || (error instanceof Error && /Payload/.test(error.message)))
       return json({ error: "Não foi possível receber a inscrição." }, 400);
     return json({ error: "Newsletter indisponível no momento." }, 503);
