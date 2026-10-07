@@ -34,7 +34,9 @@ export class D1NewsletterRepository {
     private readonly id: () => string = () => crypto.randomUUID(),
   ) {}
 
-  async preparePending(input: PendingInput): Promise<{ active: boolean; id?: string }> {
+  async preparePending(
+    input: PendingInput,
+  ): Promise<{ active: boolean; associated?: boolean; id?: string }> {
     const active = await this.database
       .prepare(
         "SELECT id FROM newsletter_subscribers WHERE email_normalized=?1 AND status='active'",
@@ -48,15 +50,16 @@ export class D1NewsletterRepository {
       .bind(input.emailNormalized)
       .first<{ id: string }>();
     const current = await this.database
-      .prepare("SELECT id,created_at FROM newsletter_kit_pending WHERE email_normalized=?1")
+      .prepare(
+        "SELECT id,created_at,sync_status FROM newsletter_kit_pending WHERE email_normalized=?1",
+      )
       .bind(input.emailNormalized)
-      .first<{ id: string; created_at: string }>();
+      .first<{ id: string; created_at: string; sync_status: string }>();
+    if (current?.sync_status === "associated")
+      return { active: false, associated: true, id: current.id };
     const id = current?.id ?? historical?.id ?? this.id();
     const occurredAt = this.now().toISOString();
     await this.database.batch([
-      this.database
-        .prepare("DELETE FROM newsletter_suppressions WHERE email_hash=?1")
-        .bind(input.emailHash),
       this.database
         .prepare(
           `INSERT INTO newsletter_kit_pending
@@ -143,10 +146,13 @@ export class D1NewsletterRepository {
     kitSubscriberId: string;
     emailNormalized: string;
     emailHash: string;
+    source?: "kit-api-sync";
+    expectedConsent?: string;
   }): Promise<void> {
     if (await this.webhookProcessed(input.eventId)) return;
     const pending = await this.findPending(input.kitSubscriberId, input.emailHash);
-    if (!pending) {
+    if (pending && input.occurredAt < pending.consented_at) return;
+    if (!pending || (input.expectedConsent && pending.consented_at !== input.expectedConsent)) {
       await this.recordWebhook(input.eventId, "subscriber.activated", input.occurredAt);
       return;
     }
@@ -157,7 +163,10 @@ export class D1NewsletterRepository {
           `INSERT INTO newsletter_subscribers
           (id,email_normalized,status,consent_version,consented_at,source,confirmation_token_hash,
             confirmation_expires_at,created_at,confirmed_at,updated_at,kit_subscriber_id)
-          VALUES (?1,?2,'active',?3,?4,?5,NULL,NULL,?6,?7,?7,?8)
+          SELECT ?1,?2,'active',?3,?4,?5,NULL,NULL,?6,?7,?7,?8
+          FROM newsletter_kit_pending
+          WHERE id=?1 AND email_hash=?9 AND kit_subscriber_id=?8
+            AND consented_at=?4 AND sync_status='associated'
           ON CONFLICT(email_normalized) DO UPDATE SET
             status='active',consent_version=excluded.consent_version,
             consented_at=excluded.consented_at,source=excluded.source,
@@ -174,12 +183,15 @@ export class D1NewsletterRepository {
           pending.created_at,
           input.occurredAt,
           input.kitSubscriberId,
+          input.emailHash,
         ),
       this.database
         .prepare(
           `INSERT OR IGNORE INTO newsletter_consent_events
           (id,subscriber_id,email_hash,event_type,consent_version,source,occurred_at)
-          VALUES (?1,?2,?3,'subscription_confirmed',?4,'kit-webhook',?5)`,
+          SELECT ?1,?2,?3,'subscription_confirmed',?4,?6,?5
+          WHERE EXISTS (SELECT 1 FROM newsletter_subscribers
+            WHERE id=?2 AND status='active' AND consented_at=?7 AND kit_subscriber_id=?8)`,
         )
         .bind(
           `${input.eventId}:confirmed`,
@@ -187,8 +199,19 @@ export class D1NewsletterRepository {
           input.emailHash,
           pending.consent_version,
           input.occurredAt,
+          input.source ?? "kit-webhook",
+          pending.consented_at,
+          input.kitSubscriberId,
         ),
-      this.database.prepare("DELETE FROM newsletter_kit_pending WHERE id=?1").bind(pending.id),
+      this.database
+        .prepare(
+          `DELETE FROM newsletter_suppressions WHERE email_hash=?1 AND EXISTS
+          (SELECT 1 FROM newsletter_subscribers WHERE id=?2 AND status='active' AND consented_at=?3)`,
+        )
+        .bind(input.emailHash, pending.id, pending.consented_at),
+      this.database
+        .prepare("DELETE FROM newsletter_kit_pending WHERE id=?1 AND consented_at=?2")
+        .bind(pending.id, pending.consented_at),
       this.database
         .prepare(
           `INSERT OR IGNORE INTO newsletter_kit_webhook_events
@@ -204,16 +227,25 @@ export class D1NewsletterRepository {
     kitSubscriberId: string;
     emailNormalized: string;
     emailHash: string;
+    source?: "kit-api-sync";
+    expectedConsent?: string;
   }): Promise<void> {
     if (await this.webhookProcessed(input.eventId)) return;
     const subscriber = await this.findSubscriber(input.kitSubscriberId, input.emailNormalized);
+    if (input.expectedConsent) {
+      const pending = await this.findPending(input.kitSubscriberId, input.emailHash);
+      if ((subscriber?.consented_at ?? pending?.consented_at) !== input.expectedConsent) return;
+    }
     const processedAt = this.now().toISOString();
     await this.database.batch([
       this.database
         .prepare(
           `INSERT OR IGNORE INTO newsletter_consent_events
           (id,subscriber_id,email_hash,event_type,consent_version,source,occurred_at)
-          VALUES (?1,?2,?3,'unsubscribed',?4,'kit-webhook',?5)`,
+          SELECT ?1,?2,?3,'unsubscribed',?4,?6,?5
+          WHERE ?7 IS NULL OR EXISTS
+            (SELECT 1 FROM newsletter_subscribers WHERE email_normalized=?8 AND kit_subscriber_id=?9 AND consented_at=?7)
+            OR EXISTS (SELECT 1 FROM newsletter_kit_pending WHERE email_hash=?3 AND kit_subscriber_id=?9 AND consented_at=?7)`,
         )
         .bind(
           `${input.eventId}:unsubscribed`,
@@ -221,19 +253,28 @@ export class D1NewsletterRepository {
           input.emailHash,
           subscriber?.consent_version ?? NEWSLETTER_CONSENT_VERSION,
           input.occurredAt,
+          input.source ?? "kit-webhook",
+          input.expectedConsent ?? null,
+          input.emailNormalized,
+          input.kitSubscriberId,
         ),
       this.database
         .prepare(
-          `INSERT INTO newsletter_suppressions (email_hash,created_at) VALUES (?1,?2)
+          `INSERT INTO newsletter_suppressions (email_hash,created_at) SELECT ?1,?2
+          WHERE EXISTS (SELECT 1 FROM newsletter_consent_events WHERE id=?3)
           ON CONFLICT(email_hash) DO UPDATE SET created_at=excluded.created_at`,
         )
-        .bind(input.emailHash, input.occurredAt),
+        .bind(input.emailHash, input.occurredAt, `${input.eventId}:unsubscribed`),
       this.database
-        .prepare("DELETE FROM newsletter_kit_pending WHERE email_hash=?1")
-        .bind(input.emailHash),
+        .prepare(
+          "DELETE FROM newsletter_kit_pending WHERE email_hash=?1 AND EXISTS (SELECT 1 FROM newsletter_consent_events WHERE id=?2)",
+        )
+        .bind(input.emailHash, `${input.eventId}:unsubscribed`),
       this.database
-        .prepare("DELETE FROM newsletter_subscribers WHERE email_normalized=?1")
-        .bind(input.emailNormalized),
+        .prepare(
+          "DELETE FROM newsletter_subscribers WHERE email_normalized=?1 AND EXISTS (SELECT 1 FROM newsletter_consent_events WHERE id=?2)",
+        )
+        .bind(input.emailNormalized, `${input.eventId}:unsubscribed`),
       this.database
         .prepare(
           `INSERT OR IGNORE INTO newsletter_kit_webhook_events
@@ -260,7 +301,8 @@ export class D1NewsletterRepository {
     return this.database
       .prepare(
         `SELECT id,email_normalized,email_hash,kit_subscriber_id,consent_version,consented_at,source,created_at
-        FROM newsletter_kit_pending WHERE kit_subscriber_id=?1 OR email_hash=?2 LIMIT 1`,
+        FROM newsletter_kit_pending WHERE kit_subscriber_id=?1 AND email_hash=?2
+          AND sync_status='associated' LIMIT 1`,
       )
       .bind(kitSubscriberId, emailHash)
       .first<PendingRow>();
@@ -277,5 +319,29 @@ export class D1NewsletterRepository {
       )
       .bind(kitSubscriberId, emailNormalized)
       .first<SubscriberRow>();
+  }
+
+  async syncCandidates(cursor = "", limit = 20) {
+    return (
+      (
+        await this.database
+          .prepare(
+            `SELECT id,email_normalized,kit_subscriber_id,consented_at,'pending' AS status
+       FROM newsletter_kit_pending WHERE sync_status='associated' AND kit_subscriber_id IS NOT NULL AND id>?1
+       UNION ALL
+       SELECT id,email_normalized,kit_subscriber_id,consented_at,'active' AS status
+       FROM newsletter_subscribers WHERE status='active' AND kit_subscriber_id IS NOT NULL AND id>?1
+       ORDER BY id LIMIT ?2`,
+          )
+          .bind(cursor, limit)
+          .all<{
+            id: string;
+            email_normalized: string;
+            kit_subscriber_id: string;
+            consented_at: string;
+            status: "pending" | "active";
+          }>()
+      ).results ?? []
+    );
   }
 }

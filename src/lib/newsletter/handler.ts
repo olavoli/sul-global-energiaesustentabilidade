@@ -4,7 +4,7 @@ import {
   parseKitSubscriberEvent,
   publicNewsletterSubscriptionSchema,
 } from "./contracts";
-import { KitNewsletterClient } from "./kit-client";
+import { KitNewsletterClient, KitOptInRequiredError } from "./kit-client";
 import { D1NewsletterRepository } from "./repository";
 import {
   newsletterEmailHash,
@@ -70,7 +70,6 @@ function configured(env: NewsletterEnvironment): env is NewsletterEnvironment & 
   NEWSLETTER_HASH_SECRET: string;
   KIT_API_KEY: string;
   KIT_FORM_ID: string;
-  KIT_WEBHOOK_SECRET: string;
   TURNSTILE_SECRET_KEY: string;
   TURNSTILE_SITE_KEY: string;
   NEWSROOM_DB: D1Database;
@@ -80,7 +79,6 @@ function configured(env: NewsletterEnvironment): env is NewsletterEnvironment & 
     env.NEWSLETTER_HASH_SECRET?.trim() &&
     env.KIT_API_KEY?.trim() &&
     /^\d+$/.test(env.KIT_FORM_ID?.trim() ?? "") &&
-    env.KIT_WEBHOOK_SECRET?.trim() &&
     env.TURNSTILE_SECRET_KEY?.trim() &&
     env.TURNSTILE_SITE_KEY?.trim(),
   );
@@ -112,6 +110,7 @@ export async function handleNewsletterRequest(
   const repository = new D1NewsletterRepository(env.NEWSROOM_DB);
   const hashSecret = env.NEWSLETTER_HASH_SECRET.trim();
   if (isWebhook) {
+    if (!env.KIT_WEBHOOK_SECRET?.trim()) return json({ error: "Recurso indisponível." }, 404);
     if (request.method !== "POST") return json({ error: "Método não permitido." }, 405);
     try {
       const rawBody = await boundedBytes(request, 600_000);
@@ -142,8 +141,18 @@ export async function handleNewsletterRequest(
           emailNormalized,
           emailHash: await newsletterEmailHash(emailNormalized, hashSecret),
         };
-        if (event.type === "subscriber.activated") await repository.activate(common);
-        else await repository.unsubscribe(common);
+        if (event.type === "subscriber.activated") {
+          // Optional webhooks are hints, never an alternative to API evidence.
+          const client = new KitNewsletterClient(
+            env.KIT_API_KEY.trim(),
+            env.KIT_FORM_ID.trim(),
+            dependencies.fetcher,
+          );
+          const observed = await client.getSubscriber(common.kitSubscriberId);
+          if (observed.email_address !== emailNormalized)
+            return json({ error: "Payload inválido." }, 400);
+          if (observed.state === "active") await repository.activate(common);
+        } else await repository.unsubscribe(common);
       }
       return new Response(null, { status: 204 });
     } catch {
@@ -189,7 +198,7 @@ export async function handleNewsletterRequest(
       emailHash,
       source: "newsletter-cta",
     });
-    if (!pending.active) {
+    if (!pending.active && !pending.associated) {
       try {
         const client = new KitNewsletterClient(
           env.KIT_API_KEY.trim(),
@@ -200,8 +209,20 @@ export async function handleNewsletterRequest(
         await repository.recordKitSubscriber(emailHash, subscriber.id);
         await client.associateSubscriberWithForm(subscriber.id, url.origin + "/newsletter");
         await repository.markAssociated(emailHash);
-      } catch {
-        await repository.markSyncFailed(emailHash);
+      } catch (error) {
+        if (
+          error instanceof KitOptInRequiredError &&
+          ["cancelled", "bounced", "complained"].includes(error.state)
+        ) {
+          await repository.unsubscribe({
+            eventId: crypto.randomUUID(),
+            occurredAt: new Date().toISOString(),
+            kitSubscriberId: error.subscriberId,
+            emailNormalized: parsed.data.email,
+            emailHash,
+            source: "kit-api-sync",
+          });
+        } else await repository.markSyncFailed(emailHash);
         return json(
           { error: "Não foi possível iniciar a confirmação. Tente novamente mais tarde." },
           503,

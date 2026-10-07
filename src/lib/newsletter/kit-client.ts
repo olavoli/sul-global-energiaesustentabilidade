@@ -14,6 +14,15 @@ export class KitClientError extends Error {
   }
 }
 
+export class KitOptInRequiredError extends Error {
+  constructor(
+    readonly subscriberId: string,
+    readonly state: string,
+  ) {
+    super("Kit did not start a fresh double opt-in.");
+  }
+}
+
 export class KitNewsletterClient {
   constructor(
     private readonly apiKey: string,
@@ -21,17 +30,17 @@ export class KitNewsletterClient {
     private readonly fetcher: typeof fetch = fetch,
   ) {}
 
-  private async post(path: string, body: unknown): Promise<unknown> {
+  private async request(path: string, method: "GET" | "POST", body?: unknown): Promise<unknown> {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 5_000);
     try {
       const response = await this.fetcher(`https://api.kit.com/v4${path}`, {
-        method: "POST",
+        method,
         headers: {
           "content-type": "application/json",
           "x-kit-api-key": this.apiKey,
         },
-        body: JSON.stringify(body),
+        body: body === undefined ? undefined : JSON.stringify(body),
         signal: controller.signal,
       });
       if (!response.ok) throw new KitClientError("unavailable");
@@ -52,19 +61,43 @@ export class KitNewsletterClient {
 
   async createInactiveSubscriber(emailNormalized: string): Promise<{ id: string }> {
     const result = kitSubscriberResponseSchema.safeParse(
-      await this.post("/subscribers", { email_address: emailNormalized, state: "inactive" }),
+      await this.request("/subscribers", "POST", {
+        email_address: emailNormalized,
+        state: "inactive",
+      }),
     );
+    // Existing subscribers retain their state on upsert. Never treat an existing
+    // active/cancelled record as the start of a fresh double opt-in.
     if (!result.success) throw new KitClientError("invalid-response");
+    if (result.data.subscriber.state !== "inactive")
+      throw new KitOptInRequiredError(result.data.subscriber.id, result.data.subscriber.state);
     return { id: result.data.subscriber.id };
   }
 
   async associateSubscriberWithForm(subscriberId: string, referrer: string): Promise<void> {
     const result = kitSubscriberResponseSchema.safeParse(
-      await this.post(
+      await this.request(
         `/forms/${encodeURIComponent(this.formId)}/subscribers/${encodeURIComponent(subscriberId)}`,
+        "POST",
         { referrer },
       ),
     );
     if (!result.success) throw new KitClientError("invalid-response");
+  }
+
+  async getSubscriber(subscriberId: string) {
+    const schema = z.object({
+      subscriber: z.object({
+        id: z.union([z.string().regex(/^\d+$/), z.number().int().positive()]).transform(String),
+        email_address: z.string().trim().toLowerCase().pipe(z.email()),
+        state: z.enum(["active", "inactive", "cancelled", "bounced", "complained"]),
+      }),
+    });
+    const result = schema.safeParse(
+      await this.request(`/subscribers/${encodeURIComponent(subscriberId)}`, "GET"),
+    );
+    if (!result.success || result.data.subscriber.id !== subscriberId)
+      throw new KitClientError("invalid-response");
+    return result.data.subscriber;
   }
 }

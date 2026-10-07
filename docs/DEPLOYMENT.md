@@ -101,12 +101,24 @@ Development, preview e staging recebem `noindex, nofollow` no HTML e em `X-Robot
 
 ## Newsletter com Kit
 
-A newsletter permanece desativada por padrão. A ativação exige a migration 5 previamente auditada e aplicada, um Form do Kit com double opt-in e webhook apontando para `/api/newsletter/webhooks/kit`, configurado para `subscriber.activated` e `subscriber.unsubscribed`. Configure fora do Git:
+A newsletter permanece desativada por padrão (`NEWSLETTER_ENABLED=false`). A ativação futura exige a migration 5 previamente auditada e aplicada e um Form do Kit com e-mail de confirmação ativado e confirmação automática desativada. O Kit Free funciona sem webhook. Configure fora do Git:
 
-- secrets server-side: `KIT_API_KEY`, `KIT_WEBHOOK_SECRET`, `NEWSLETTER_HASH_SECRET` e `TURNSTILE_SECRET_KEY`;
+- secrets server-side: `KIT_API_KEY`, `NEWSLETTER_HASH_SECRET` e `TURNSTILE_SECRET_KEY`;
 - vars de runtime: `KIT_FORM_ID`, `NEWSLETTER_ENABLED` e `TURNSTILE_SITE_KEY`.
+- binding: `NEWSROOM_DB`; a sincronização reutiliza `NEWSROOM_ADMIN_SECRET` e a configuração de armazenamento D1 da Central Editorial, sem um novo secret de sincronização.
+- opcional: `KIT_WEBHOOK_SECRET` habilita exclusivamente `/api/newsletter/webhooks/kit`; sem ele esse endpoint retorna 404 e o fluxo normal continua disponível.
 
-`NEWSLETTER_HASH_SECRET` deve ser exclusivo da newsletter. O endpoint público cria o subscriber explicitamente como `inactive`, associa-o ao Form e aguarda o webhook assinado antes de marcar a assinatura como ativa no D1. Nunca inclua esses valores no template versionado ou em variáveis `VITE_*`. O deploy oficial continua usando `--keep-vars` para preservar a configuração remota.
+`NEWSLETTER_HASH_SECRET` deve ser exclusivo da newsletter. O endpoint público solicita um subscriber `inactive`, valida esse estado na resposta e associa-o ao Form. Isso mantém o D1 pendente. O Form ID permanece somente na var de runtime `KIT_FORM_ID`; não fixe o ID real no código ou em fixtures. Nunca inclua secrets no template versionado ou em variáveis `VITE_*`. O deploy oficial continua usando `--keep-vars` para preservar a configuração remota.
+
+### Sincronização sem webhook
+
+Após autenticação na Central Editorial, use `POST /api/admin/newsletter/sync` com cookie da sessão, `Origin` da própria aplicação, `Content-Type: application/json` e `X-CSRF-Token` obtido em `GET /api/admin/session`. Corpo inicial: `{}`. Cada chamada consulta até 10 registros locais associados/ativos por `GET /v4/subscribers/{id}`. A resposta traz `{ checked, cursor }`; se `cursor` não for `null`, envie `{ "cursor": "valor retornado" }` até completar a rodada. Em 503, use o cursor retornado para repetir a partir do registro que falhou. Reinicie a próxima rodada com `{}` para rever todos os registros. Respostas e logs não incluem e-mails ou secrets.
+
+Estado `inactive` conserva pending; `active` promove apenas um pending associado com ID/e-mail correspondentes e consentimento preservado; `cancelled`, `bounced` ou `complained` removem e-mail local e mantêm HMAC/supressão/auditoria. Falhas da API e identidades divergentes não autorizam ativação. Repetir um POST público já associado não envia outra associação nem duplica consentimento. A supressão só é removida após confirmação nova.
+
+Essa solução não depende do retorno do navegador. Não é necessário alterar o redirecionamento atual do Kit (`https://app.kit.com/confirm-subscription`). A rota existente `https://sulglobalenergia.com.br/newsletter` pode receber um retorno editorial, mas visitá-la não confirma nem sincroniza a assinatura. Não há cron ou botão de sincronização criado nesta etapa: um operador precisa executar as rodadas autenticadas regularmente para refletir confirmações e descadastros.
+
+Limitação documentada da API: [Create a subscriber](https://developers.kit.com/api-reference/subscribers/create-a-subscriber) não muda o estado de um subscriber existente; a documentação de [adição a Forms](https://developers.kit.com/api-reference/forms/bulk-add-subscribers-to-forms) informa que assinantes já associados não recebem novamente o Incentive Email. Portanto não prometemos reinscrição automática via upsert: retornos não `inactive` falham fechados, e `cancelled`/`bounced`/`complained` também removem o pending legível. Uma nova tentativa só pode ser ativada após consentimento explícito, baseline realmente `inactive`, associação ao Form e posterior evidência `active`; não há reset forçado, exclusão do subscriber no Kit nem ativação silenciosa. A disponibilidade da API V4 e a entrega do e-mail na conta Free ainda precisam ser verificadas em etapa autorizada; nenhum teste local acessa o Kit real.
 
 ## Cache, rollback e operação
 

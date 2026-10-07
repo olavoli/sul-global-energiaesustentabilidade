@@ -38,11 +38,11 @@ function PrivacyPage() {
         lá, o registro permanece pendente.
       </p>
       <p>
-        O descadastro pode ser realizado pelos links das mensagens. Após o aviso do Kit, removemos o
-        e-mail legível da base local e mantemos somente o hash necessário à supressão, além da
-        trilha de consentimento e auditoria. Uma nova inscrição é permitida apenas mediante novo
-        consentimento explícito e exige outro double opt-in; ela nunca restaura silenciosamente o
-        estado ativo.
+        O descadastro pode ser realizado pelos links das mensagens. Após a sincronização com o Kit,
+        removemos o e-mail legível da base local e mantemos somente o hash necessário à supressão,
+        além da trilha de consentimento e auditoria. Uma nova inscrição é permitida apenas mediante
+        novo consentimento explícito e exige outro double opt-in; ela nunca restaura silenciosamente
+        o estado ativo.
       </p>
       <h2>Preferências e armazenamento</h2>
       <p>

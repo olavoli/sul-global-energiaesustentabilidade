@@ -170,11 +170,18 @@ O subconjunto editorial não aceita imports, exports, expressões JavaScript ou 
 ### Backend da newsletter (D1 + Kit)
 
 - O D1 mantém assinantes, eventos de consentimento, supressões e pendências de sincronização.
-- O Kit mantém o double opt-in e os disparos; somente seu webhook assinado ativa ou descadastra o
-  registro local.
+- O Kit mantém o double opt-in e os disparos. No Kit Free, `POST /api/admin/newsletter/sync`
+  consulta o estado pela API V4, protegido por sessão administrativa, CSRF, origem e rate limit.
+  Somente a evidência de estado `active` obtida pela API, após um cadastro `inactive` associado
+  ao Form e consentimento local, promove o registro pendente. O webhook assinado é opcional e
+  sua notificação de ativação também exige consulta à API.
 - O e-mail de uma pessoa descadastrada é removido do D1; permanece apenas o HMAC necessário à
   supressão e à trilha de auditoria.
 - Chaves do Kit, Turnstile e HMAC são secrets server-side e nunca são expostas ao cliente.
+- A supressão permanece até nova confirmação; retries associados preservam o consentimento e
+  não repetem a associação. Upsert de subscriber existente não redefine seu estado. Um retorno
+  `active`, `cancelled`, `bounced` ou `complained` na criação não inicia novo double opt-in e
+  nunca autoriza reativação local.
 
 ### SEO técnico
 

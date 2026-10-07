@@ -34,6 +34,7 @@ import {
 } from "./rate-limit";
 import type { D1Database } from "../../../scripts/newsroom/storage/d1-types";
 import { D1PublicCommentRepository } from "../comments/repository";
+import { handleNewsletterSync } from "../newsletter/sync";
 
 type ServerEnvironment = Record<string, string | undefined>;
 
@@ -137,7 +138,22 @@ async function api(
   environment: ServerEnvironment,
   session: AdminSession,
   runtimeEnvironment: unknown,
+  dependencies: { fetcher?: typeof fetch } = {},
 ): Promise<Response> {
+  if (pathname === "/api/admin/newsletter/sync") {
+    if (request.method !== "POST") return json({ error: "Método não permitido." }, 405);
+    if (
+      request.headers.get("origin") !== new URL(request.url).origin ||
+      request.headers.get("sec-fetch-site") === "cross-site"
+    )
+      return json({ error: "Origem não autorizada." }, 403);
+    const csrf = request.headers.get("x-csrf-token");
+    if (!csrf || !(await secureEqual(csrf, session.csrf)))
+      return json({ error: "Requisição não autorizada." }, 403);
+    if (!(await mutationAllowed(session.actor, request)))
+      return json({ error: "Limite temporário de ações atingido." }, 429);
+    return handleNewsletterSync(request, runtimeEnvironment, dependencies.fetcher);
+  }
   const runtime = runtimeEnvironment as { COMMENTS_ENABLED?: string; NEWSROOM_DB?: D1Database };
   if (pathname.startsWith("/api/admin/comments")) {
     if (runtime?.COMMENTS_ENABLED !== "true" || !runtime.NEWSROOM_DB)
@@ -274,6 +290,7 @@ async function api(
 export async function handleAdminRequest(
   request: Request,
   runtimeEnvironment: unknown,
+  dependencies: { fetcher?: typeof fetch } = {},
 ): Promise<Response | undefined> {
   const pathname = new URL(request.url).pathname;
   if (!pathname.startsWith("/admin") && !pathname.startsWith("/api/admin")) return undefined;
@@ -299,7 +316,14 @@ export async function handleAdminRequest(
         : redirect("/admin/login");
     }
     if (pathname.startsWith("/api/admin")) {
-      const response = await api(request, pathname, environment, session, runtimeEnvironment);
+      const response = await api(
+        request,
+        pathname,
+        environment,
+        session,
+        runtimeEnvironment,
+        dependencies,
+      );
       reportEvent("admin.request", {
         requestId,
         path: pathname,

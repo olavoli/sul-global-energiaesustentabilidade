@@ -34,8 +34,16 @@ async function signature(rawBody: string): Promise<string> {
   return `t=${timestamp},v1=${digest}`;
 }
 
-function fixture(options: { enabled?: boolean; kitFailure?: boolean; turnstile?: boolean } = {}) {
+function fixture(
+  options: {
+    enabled?: boolean;
+    kitFailure?: boolean;
+    turnstile?: boolean;
+    unconfirmed?: boolean;
+  } = {},
+) {
   const database = new LocalCommentDatabase(5);
+  let providerState = "inactive";
   const calls: Array<{ url: string; init?: RequestInit }> = [];
   const fetcher = (async (input, init) => {
     const url = String(input);
@@ -47,7 +55,13 @@ function fixture(options: { enabled?: boolean; kitFailure?: boolean; turnstile?:
         action: "newsletter-subscribe",
       });
     if (options.kitFailure) return new Response(null, { status: 503 });
-    return Response.json({ subscriber: { id: 123, state: "inactive" } });
+    return Response.json({
+      subscriber: {
+        id: 123,
+        state: init?.method === "GET" ? providerState : "inactive",
+        email_address: "reader@example.com",
+      },
+    });
   }) as typeof fetch;
   const env = {
     NEWSLETTER_ENABLED: options.enabled === false ? "false" : "true",
@@ -75,6 +89,11 @@ function fixture(options: { enabled?: boolean; kitFailure?: boolean; turnstile?:
       { fetcher, nowSeconds },
     );
   const webhook = async (events: unknown[], valid = true) => {
+    providerState =
+      !options.unconfirmed &&
+      events.some((event) => (event as { type: string }).type === "subscriber.activated")
+        ? "active"
+        : "inactive";
     const rawBody = JSON.stringify({ delivery_id: 1, events });
     return handleNewsletterRequest(
       new Request(webhookEndpoint, {
@@ -104,6 +123,20 @@ function kitEvent(id: string, type: string) {
 }
 
 describe("API da newsletter", () => {
+  test("webhook assinado não ativa quando a API ainda retorna inactive", async () => {
+    const { database, send, webhook } = fixture({ unconfirmed: true });
+    await send();
+    expect(
+      (await webhook([kitEvent("55555555-5555-4555-8555-555555555555", "subscriber.activated")]))
+        ?.status,
+    ).toBe(204);
+    expect(
+      database.sqlite.query("SELECT COUNT(*) AS total FROM newsletter_subscribers").get(),
+    ).toEqual({ total: 0 });
+    expect(
+      database.sqlite.query("SELECT COUNT(*) AS total FROM newsletter_kit_pending").get(),
+    ).toEqual({ total: 1 });
+  });
   test("configuração pública não expõe secrets e flag false não escreve nem chama Kit", async () => {
     const { database, calls, env, send } = fixture({ enabled: false });
     const config = await handleNewsletterRequest(new Request(endpoint), env);
@@ -244,7 +277,7 @@ describe("API da newsletter", () => {
     expect((await send())?.status).toBe(202);
     expect(
       database.sqlite.query("SELECT COUNT(*) AS total FROM newsletter_suppressions").get(),
-    ).toEqual({ total: 0 });
+    ).toEqual({ total: 1 });
     expect(database.sqlite.query("SELECT sync_status FROM newsletter_kit_pending").get()).toEqual({
       sync_status: "associated",
     });
