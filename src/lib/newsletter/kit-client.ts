@@ -55,7 +55,9 @@ export class KitNewsletterClient {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 5_000);
     try {
-      const response = await this.fetcher(`https://api.kit.com/v4${path}`, {
+      // Workers' native fetch rejects the client instance as its receiver.
+      const fetcher = this.fetcher;
+      const response = await fetcher(`https://api.kit.com/v4${path}`, {
         method,
         headers: {
           "content-type": "application/json",
