@@ -87,6 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: siteConfig.description,
       },
       { name: "author", content: siteConfig.name },
+      { name: "google-adsense-account", content: "ca-pub-2626435516434249" },
       { name: "theme-color", content: "#0f2a1f" },
       { property: "og:site_name", content: siteConfig.name },
       { property: "og:locale", content: siteConfig.locale },

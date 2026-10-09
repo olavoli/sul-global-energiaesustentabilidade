@@ -79,6 +79,23 @@ const home = resultFor("/");
 assert(home.body.includes("<title>"), "home deve conter metadata SSR");
 assert(home.response.headers.get("x-robots-tag") === "noindex, nofollow", "preview noindex");
 
+for (const path of ["/", foundationalArticle, "/privacidade"]) {
+  const { body } = resultFor(path);
+  const head = body.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
+  const accountTags = (html: string) =>
+    (html.match(/<meta\b[^>]*>/gi) ?? []).filter((tag) =>
+      /\bname=["']google-adsense-account["']/i.test(tag),
+    );
+  const tags = accountTags(head);
+  assert(tags.length === 1, `${path}: metatag AdSense única no head SSR`);
+  assert(accountTags(body).length === 1, `${path}: sem metatag AdSense duplicada`);
+  assert(
+    /\bcontent=["']ca-pub-2626435516434249["']/.test(tags[0]),
+    `${path}: conta AdSense deve corresponder à identificação autorizada`,
+  );
+  assert(!body.includes("adsbygoogle.js"), `${path}: não deve instalar script de anúncios`);
+}
+
 const search = resultFor("/busca?q=energia");
 assert(search.body.includes("noindex, follow"), "busca deve declarar noindex");
 
