@@ -14,10 +14,13 @@ const source = readFileSync(
 );
 
 describe("ART-022 — integração canônica do DOCX v2", () => {
-  test("corpo editorial aprovado permanece congelado", () => {
-    const body = parseEditorialFile(source).body.replace(/\r\n/g, "\n").trim();
+  test("corpo científico/editorial aprovado permanece congelado", () => {
+    const body = parseEditorialFile(source)
+      .body.replace(/\r\n/g, "\n")
+      .split("## Bibliografia complementar")[0]
+      .trim();
     expect(createHash("sha256").update(body).digest("hex")).toBe(
-      "13e30437acb9e0c4aba06ebf148fd6e325d58e47edb7a3ce39b3a184ec488ec9",
+      "834bfa4dd57e6001fc9d057716204d4401e2243fcb0999aabb32d090715a95b4",
     );
   });
 
@@ -54,6 +57,32 @@ describe("ART-022 — integração canônica do DOCX v2", () => {
     ).toBe(1);
     expect(source).toContain("art-022-figura-3-corrigida.png");
     expect(source).not.toContain("<YouTubeEmbed");
+  });
+
+  test("preserva oito referências sem repetir as três fontes estruturadas na bibliografia", () => {
+    const { frontmatter, body } = parseEditorialFile(source);
+    expect(frontmatter.sources).toHaveLength(3);
+    expect(frontmatter.sources.map(({ organizationOrAuthor }) => organizationOrAuthor)).toEqual([
+      "FAO — P. L. Fraenkel",
+      "NC State Extension — Greg Jennings",
+      "Epagri",
+    ]);
+    const bibliography = body.split("## Bibliografia complementar")[1];
+    for (const name of [
+      "EMBRAPA",
+      "Fox, R. W.",
+      "Streeter, V. L.",
+      "Munson, B. R.",
+      "PRACTICAL ACTION",
+    ]) {
+      expect(bibliography).toContain(name);
+    }
+    for (const source of frontmatter.sources) {
+      expect(bibliography).not.toContain(source.url);
+      expect(source.note).toContain("Uso:");
+    }
+    expect(body).not.toContain("## Fontes e referências");
+    expect(body).toContain("https://www.youtube.com/watch?v=6sqSbXuB6Nk");
   });
 
   test("componente matemático não libera HTML ou expressões executáveis", () => {

@@ -23,12 +23,13 @@ function PrivacyPage() {
     <LegalPage
       eyebrow="Privacidade"
       title="Política de privacidade"
-      updatedAt="6 de outubro de 2026"
+      updatedAt="9 de outubro de 2026"
     >
       <h2>Estado atual</h2>
       <p>
-        O portal não utiliza analytics ou publicidade ativa. O formulário de contato valida dados
-        apenas no navegador e não os envia. A newsletter trata o e-mail conforme descrito abaixo.
+        O portal não utiliza tags de analytics de audiência ou publicidade ativa. A página Contato
+        disponibiliza o canal de e-mail indicado para atendimento; não realiza envio por formulário
+        próprio. A newsletter trata o e-mail conforme descrito abaixo.
       </p>
       <h2>Newsletter</h2>
       <p>
@@ -46,15 +47,31 @@ function PrivacyPage() {
       </p>
       <h2>Preferências e armazenamento</h2>
       <p>
-        A preferência de tema claro ou escuro pode ser guardada no armazenamento local do navegador
-        sob a chave <code>sul-global-theme</code>, até ser removida pelo usuário. A aplicação usa um
-        cookie necessário à identificação de interações nos comentários, descrito abaixo.
+        As preferências de tema, velocidade e voz de leitura podem ser guardadas no armazenamento
+        local do navegador sob as chaves <code>sul-global-theme</code>, <code>sges:tts:rate</code> e{" "}
+        <code>sges:tts:voice</code>, até serem removidas pelo usuário. A síntese de voz depende do
+        navegador e da voz selecionada. A aplicação usa um cookie necessário à identificação de
+        interações nos comentários, descrito abaixo.
       </p>
       <h2>Busca, compartilhamento e terceiros</h2>
       <p>
         O termo de busca aparece na URL e pode integrar o histórico do navegador. Copiar ou
         compartilhar um link só ocorre após ação do usuário. Links, imagens e fontes externas podem
         seguir políticas próprias dos respectivos provedores.
+      </p>
+      <p>
+        A Cloudflare fornece a infraestrutura do portal e verificações de segurança. O Turnstile
+        protege a newsletter e os comentários contra abuso: a verificação envia à Cloudflare o token
+        gerado pelo desafio e, quando disponível, o endereço IP da requisição.
+      </p>
+      <p>
+        O portal carrega fontes externas pelo Google Fonts. O Kit é utilizado para a newsletter,
+        conforme descrito acima. Esses serviços possuem políticas próprias.
+      </p>
+      <h2>Sessão administrativa</h2>
+      <p>
+        O acesso à Central Editorial utiliza um cookie necessário à autenticação da sessão
+        administrativa, separado das interações públicas nos comentários.
       </p>
       <h2>Comentários públicos</h2>
       <p>
@@ -84,9 +101,9 @@ function PrivacyPage() {
       </p>
       <h2>Mudanças futuras</h2>
       <p>
-        Contato, analytics ou publicidade somente poderão ser ativados após revisão de finalidade,
-        base legal, retenção, segurança e transparência. Um banner de cookies não é exibido porque
-        não há cookies não essenciais ativos.
+        Novas funcionalidades de analytics ou publicidade serão acompanhadas de revisão desta
+        política e dos controles aplicáveis de privacidade. Um banner de cookies não é exibido
+        porque não há cookies não essenciais ativos.
       </p>
     </LegalPage>
   );

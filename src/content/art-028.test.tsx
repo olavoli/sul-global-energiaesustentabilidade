@@ -122,6 +122,9 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
     expect(readdirSync(imageDirectory).sort()).toEqual([
       "art-028-figura-1-va-municipal.png",
       "art-028-figura-2-cadeia.png",
+      "art-028-hero-1200.webp",
+      "art-028-hero-1536.webp",
+      "art-028-hero-720.webp",
       "art-028-hero.png",
     ]);
     expect(parsed.frontmatter.cover.aiProvenance?.contributions).toEqual([
@@ -159,7 +162,7 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
 
     expect(articleJsonLd(article!)).toMatchObject({
       headline: canonicalTitle,
-      image: [expect.stringContaining("art-028-hero.png")],
+      image: [expect.stringContaining("art-028-hero-1200.webp")],
     });
     expect(
       socialMeta({
@@ -173,7 +176,7 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
     ).toEqual(
       expect.arrayContaining([
         { property: "og:title", content: article!.seoTitle },
-        { property: "og:image", content: expect.stringContaining("art-028-hero.png") },
+        { property: "og:image", content: expect.stringContaining("art-028-hero-1200.webp") },
       ]),
     );
   });

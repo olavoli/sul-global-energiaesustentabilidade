@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/legal/LegalPage";
 import { resolveCanonical, socialMeta } from "@/lib/seo";
 
 const title = "Termos de uso — Sul Global";
-const description = "Termos iniciais de uso do conteúdo informativo e educativo do Sul Global.";
+const description = "Termos de uso do conteúdo informativo e educativo do Sul Global.";
 
 export const Route = createFileRoute("/termos")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/termos")({
 
 function TermsPage() {
   return (
-    <LegalPage eyebrow="Termos" title="Termos de uso" updatedAt="4 de outubro de 2026">
+    <LegalPage eyebrow="Termos" title="Termos de uso" updatedAt="9 de outubro de 2026">
       <h2>Finalidade</h2>
       <p>
         O Sul Global publica conteúdo informativo e educativo. O material não substitui orientação
@@ -28,9 +28,9 @@ function TermsPage() {
       </p>
       <h2>Conteúdo e propriedade intelectual</h2>
       <p>
-        Textos, identidade e ativos próprios permanecem protegidos pela legislação aplicável. A
-        licença geral do projeto ainda precisa ser definida; ausência de licença explícita não
-        autoriza redistribuição. Materiais de terceiros mantêm seus direitos e condições.
+        Textos, identidade e ativos próprios permanecem protegidos pela legislação aplicável.
+        Materiais de terceiros mantêm seus direitos e condições. Permissões específicas, quando
+        concedidas, serão indicadas no material correspondente.
       </p>
       <h2>Links externos e disponibilidade</h2>
       <p>
@@ -50,9 +50,9 @@ function TermsPage() {
       </p>
       <h2>Contato e alterações</h2>
       <p>
-        O formulário de contato é demonstrativo e ainda não entrega mensagens. Estes termos podem
-        mudar antes do lançamento; a versão revisada deverá indicar a data e o canal operacional de
-        contato, sem inventar dados institucionais.
+        Para contato editorial, pedidos de correção e solicitações relacionadas a estes termos,
+        consulte a página <a href="/contato">Contato</a>. Alterações destes termos serão publicadas
+        nesta página, com a respectiva data de atualização.
       </p>
     </LegalPage>
   );

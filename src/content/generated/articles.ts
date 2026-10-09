@@ -48,7 +48,35 @@ export const articleRecords = [
     featured: false,
     isDemo: false,
     sponsored: false,
-    sources: [],
+    sources: [
+      {
+        title: "Water Lifting Devices",
+        url: "https://www.fao.org/4/ah810e/ah810e00.htm",
+        organizationOrAuthor: "FAO — P. L. Fraenkel",
+        verifiedAt: "2026-10-09",
+        type: "official",
+        note: "Food and Agriculture Organization of the United Nations. Rome: FAO, 1986. Seção 4.9.3 — Hydraulic ram pumps. Uso: princípios de operação, configuração do sistema e relações de desempenho.",
+        isDemo: false,
+      },
+      {
+        title: "Hydraulic Ram Pumps",
+        url: "https://content.ces.ncsu.edu/hydraulic-ram-pumps",
+        organizationOrAuthor: "NC State Extension — Greg Jennings",
+        verifiedAt: "2026-10-09",
+        type: "official",
+        note: "North Carolina State University. Uso: requisitos de instalação, ciclo de funcionamento, dimensionamento e desempenho indicativo.",
+        isDemo: false,
+      },
+      {
+        title: "Carneiro hidráulico de PVC",
+        url: "https://transforma.fbb.org.br/tecnologia-social/carneiro-hidraulico-de-pvc",
+        organizationOrAuthor: "Epagri",
+        verifiedAt: "2026-10-09",
+        type: "official",
+        note: "Tecnologia social certificada pela Fundação Banco do Brasil. Uso: aplicação rural, montagem, operação sem motor elétrico e experiência de campo.",
+        isDemo: false,
+      },
+    ],
     aiAssistance: "substantial",
     aiDisclosure:
       "A IA auxiliou na adaptação fiel do Word para MDX. Hero e Figura 2: geração no Reve (app.reve.com). Figura 3: origem no Reve (app.reve.com), seguida de reconstrução pela ferramenta de imagens do Codex (OpenAI); essa edição não foi realizada no Reve.",
@@ -269,11 +297,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 7,
     cover: {
-      src: "/images/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo/art-018-conta-energia-hero.png",
+      src: "/images/articles/a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo/art-018-conta-energia-hero-1200.webp",
       alt: "Conta de energia ilustrativa diante de uma paisagem com rede elétrica, hidrelétrica, painéis solares e turbinas eólicas",
       decorative: false,
-      width: 5408,
-      height: 3072,
+      width: 1200,
+      height: 682,
       caption:
         "Figura 1. A conta de energia representa o custo final de um sistema que combina geração, redes, flexibilidade e distribuição.",
       aiProvenance: {
@@ -380,11 +408,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 9,
     cover: {
-      src: "/images/articles/a-energia-nuclear-esta-voltando/art-020-nuclear-hero.png",
+      src: "/images/articles/a-energia-nuclear-esta-voltando/art-020-nuclear-hero-1200.webp",
       alt: "Usina nuclear próxima a uma cidade e integrada a uma paisagem com vegetação e rede elétrica",
       decorative: false,
-      width: 5408,
-      height: 3072,
+      width: 1200,
+      height: 682,
       caption:
         "Figura 1. A energia nuclear retorna ao planejamento energético em meio à urbanização, à expansão da demanda elétrica e à busca por fontes de baixo carbono.",
       aiProvenance: {
@@ -528,11 +556,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 15,
     cover: {
-      src: "/images/articles/a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico/art-021-hero.png",
+      src: "/images/articles/a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico/art-021-hero-1200.webp",
       alt: "Ilustração conceitual de servidores, subestação e profissionais",
       decorative: false,
-      width: 5408,
-      height: 3072,
+      width: 1200,
+      height: 682,
       caption:
         "Figura 1. Representação editorial da conexão entre centros de dados e infraestrutura elétrica.",
       aiProvenance: {
@@ -546,6 +574,20 @@ export const articleRecords = [
         year: 2026,
       },
       license: "Imagem SGES fornecida pelo autor",
+      sources: [
+        {
+          src: "/images/articles/a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico/art-021-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico/art-021-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico/art-021-hero-1536.webp",
+          width: 1536,
+        },
+      ],
     },
     featured: false,
     isDemo: false,
@@ -662,11 +704,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 12,
     cover: {
-      src: "/images/articles/a-rede-eletrica-esta-preparada-para-a-transicao-energetica/art-014-rede-eletrica-hero.png",
+      src: "/images/articles/a-rede-eletrica-esta-preparada-para-a-transicao-energetica/art-014-rede-eletrica-hero-1200.webp",
       alt: "Parques solares e eólicos, linhas de transmissão, subestações e uma cidade mostram que a transição depende da integração entre geração, rede e consumo",
       decorative: false,
-      width: 5408,
-      height: 3072,
+      width: 1200,
+      height: 682,
       caption:
         "Figura 1. Representação editorial conceitual de geração renovável, redes, subestações e centro de carga. A cena não representa um sistema real específico nem demonstra, por si, integração adequada entre os ativos.",
       aiProvenance: {
@@ -872,11 +914,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 13,
     cover: {
-      src: "/images/articles/a-transicao-energetica-vai-aumentar-o-consumo-de-agua/art-017-agua-energia-hero.png",
+      src: "/images/articles/a-transicao-energetica-vai-aumentar-o-consumo-de-agua/art-017-agua-energia-hero-1200.webp",
       alt: "Cidade, reservatório, usina, painéis solares e turbinas eólicas representam o nexo entre água, energia e infraestrutura",
       decorative: false,
-      width: 1920,
-      height: 1080,
+      width: 1200,
+      height: 675,
       caption:
         "Figura 1. Representação editorial do nexo água-energia em uma paisagem com infraestrutura urbana, hídrica, industrial, solar e eólica.",
       aiProvenance: {
@@ -1168,11 +1210,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 8,
     cover: {
-      src: "/images/articles/a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos/art-016-dependencia-mineral-hero.png",
+      src: "/images/articles/a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos/art-016-dependencia-mineral-hero-1200.webp",
       alt: "Trabalhador observa uma mina a céu aberto em representação editorial genérica da etapa de extração mineral",
       decorative: false,
-      width: 5376,
-      height: 3072,
+      width: 1200,
+      height: 686,
       caption:
         "Figura 1. Representação editorial genérica de mineração a céu aberto. A imagem não identifica mineral, localização ou projeto e mostra apenas a etapa de extração, não toda a cadeia mineral.",
       aiProvenance: {
@@ -2296,11 +2338,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 9,
     cover: {
-      src: "/images/articles/o-ar-condicionado-que-funciona-sem-compressor/art-023-hero.png",
+      src: "/images/articles/o-ar-condicionado-que-funciona-sem-compressor/art-023-hero-1200.webp",
       alt: "Chiller de absorção em instalação industrial acompanhado por dois profissionais",
       decorative: false,
-      width: 5376,
-      height: 3072,
+      width: 1200,
+      height: 686,
       caption: "Figura 1. Chiller de absorção em uma instalação industrial.",
       aiProvenance: {
         status: "verified",
@@ -2317,6 +2359,20 @@ export const articleRecords = [
         x: 55,
         y: 50,
       },
+      sources: [
+        {
+          src: "/images/articles/o-ar-condicionado-que-funciona-sem-compressor/art-023-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/o-ar-condicionado-que-funciona-sem-compressor/art-023-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/o-ar-condicionado-que-funciona-sem-compressor/art-023-hero-1536.webp",
+          width: 1536,
+        },
+      ],
     },
     featured: false,
     isDemo: false,
@@ -2450,11 +2506,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 8,
     cover: {
-      src: "/images/articles/o-paradoxo-da-energia-barata/art-019-energia-barata-hero.png",
+      src: "/images/articles/o-paradoxo-da-energia-barata/art-019-energia-barata-hero-1200.webp",
       alt: "Composição editorial contrapõe geração solar e eólica a uma conta de luz, rede elétrica e indicadores de alta",
       decorative: false,
-      width: 5408,
-      height: 3072,
+      width: 1200,
+      height: 682,
       caption:
         "Figura 1. A redução do custo da geração renovável convive com componentes tarifários ligados à rede, aos encargos e aos tributos.",
       aiProvenance: {
@@ -3969,11 +4025,11 @@ export const articleRecords = [
     corrections: [],
     readingTime: 9,
     cover: {
-      src: "/images/articles/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao/art-028-hero.png",
+      src: "/images/articles/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao/art-028-hero-1200.webp",
       alt: "Ex-mineiro segura um capacete e uma muda entre uma mina de carvão e uma área verde com painéis solares.",
       decorative: false,
-      width: 4927,
-      height: 3360,
+      width: 1200,
+      height: 818,
       caption:
         "Representação conceitual da transição de um território dependente do carvão para atividades econômicas de baixo carbono.",
       credit: "Fonte: SGES (2026).",
@@ -3992,6 +4048,20 @@ export const articleRecords = [
         x: 50,
         y: 48,
       },
+      sources: [
+        {
+          src: "/images/articles/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao/art-028-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao/art-028-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao/art-028-hero-1536.webp",
+          width: 1536,
+        },
+      ],
     },
     featured: false,
     isDemo: false,

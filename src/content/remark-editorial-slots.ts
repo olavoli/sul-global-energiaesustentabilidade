@@ -32,7 +32,11 @@ export function remarkEditorialSlots() {
         if (title === "continue aprendendo") {
           section = "navigation";
           sectionDepth = node.depth ?? 2;
-        } else if (title === "referências" || title === "fontes e referências") {
+        } else if (
+          title === "referências" ||
+          title === "fontes e referências" ||
+          title === "bibliografia complementar"
+        ) {
           section = "references";
           sectionDepth = node.depth ?? 2;
         }

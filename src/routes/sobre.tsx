@@ -45,8 +45,8 @@ function SobrePage() {
           <h2>Independência</h2>
           <p>
             Não somos um blog pessoal nem um agregador. Não temos vínculo com partido, empresa ou
-            universidade específica. Patrocínios existem, são identificados como tal e não
-            interferem em pauta.
+            universidade específica. Quando houver conteúdo patrocinado, sua natureza comercial será
+            identificada de forma clara, conforme a política editorial.
           </p>
           <h2>Referências editoriais</h2>
           <p>

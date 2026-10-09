@@ -153,7 +153,7 @@ describe("ART-023 — integração canônica do DOCX revisado v1", () => {
   });
 
   test("usa somente as três imagens canônicas e separa crédito de proveniência", () => {
-    expect(parsed.frontmatter.cover.src).toContain("art-023-hero.png");
+    expect(parsed.frontmatter.cover.src).toContain("art-023-hero-1200.webp");
     expect(parsed.frontmatter.cover.aiProvenance?.contributions).toEqual([
       { role: "generation", tool: "Reve (app.reve.com)" },
     ]);

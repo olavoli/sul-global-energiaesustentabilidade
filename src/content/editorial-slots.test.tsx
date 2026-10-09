@@ -42,6 +42,16 @@ describe("consolidação dos blocos editoriais históricos", () => {
     expect(result.references).toContain("Fonte intacta.");
   });
 
+  test("mantém bibliografia complementar no rodapé, fora do corpo científico", async () => {
+    const result = await renderSlots(
+      "Corpo preservado.\n\n## Bibliografia complementar\n\nLivro sem URL inventada.",
+    );
+    expect(result.body).toContain("Corpo preservado.");
+    expect(result.body).not.toContain("Livro sem URL inventada.");
+    expect(result.references).toContain("Bibliografia complementar");
+    expect(result.references).toContain("Livro sem URL inventada.");
+  });
+
   test("não inventa pontos-chave para artigos sem conteúdo explícito", async () => {
     const result = await renderSlots("Somente o texto fornecido.");
     expect(result.keyPoints.trim()).toBe("");
