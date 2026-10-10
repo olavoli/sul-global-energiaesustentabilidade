@@ -7,6 +7,7 @@ import * as runtime from "react/jsx-runtime";
 import remarkFrontmatter from "remark-frontmatter";
 import { editorialMdxComponents } from "@/components/editorial/mdx-components";
 import { SourceList } from "@/components/editorial/SourceList";
+import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
 import { generateRss, generateSitemap } from "@/lib/distribution";
 import { parseEditorialFile } from "../../scripts/generate-content";
 import { articleRecords } from "./generated/articles";
@@ -16,7 +17,7 @@ import { resolveCanonical, socialMeta } from "@/lib/seo";
 
 const slug = "a-maquina-que-transforma-calor-desperdicado-em-eletricidade";
 const source = readFileSync(`content/articles/${slug}.mdx`, "utf8");
-const canonical = readFileSync("docs/editorial/art-030-revisao/art-030-canonico-v3.md", "utf8");
+const canonical = readFileSync("src/content/fixtures/art-030-restaurado-aprovado.md", "utf8");
 const parsed = parseEditorialFile(source);
 const hash = (path: string) => createHash("sha256").update(readFileSync(path)).digest("hex");
 
@@ -29,7 +30,7 @@ async function renderArticle() {
   return renderToStaticMarkup(<Content components={editorialMdxComponents} />);
 }
 
-describe("ART-030 — publicação local V3", () => {
+describe("ART-030 — integração local da versão restaurada", () => {
   test("registra publicação aprovada, independente e com base de uso das imagens", () => {
     expect(parsed.frontmatter.status).toBe("published");
     expect(parsed.frontmatter.approvedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
@@ -103,26 +104,28 @@ describe("ART-030 — publicação local V3", () => {
     expect(meta).toContainEqual({ name: "twitter:card", content: "summary_large_image" });
   });
 
-  test("preserva exatamente cinco pontos-chave e o destaque V3", async () => {
+  test("preserva cinco pontos-chave, destaque e exemplo de eficiência elétrica líquida", async () => {
     const html = await renderArticle();
     const points = html.match(/aria-label="Pontos-chave"[\s\S]*?<\/section>/)?.[0] ?? "";
     expect(points.match(/<li>/g)).toHaveLength(5);
     expect(source.match(/<KeyPoints>/g)).toHaveLength(1);
     expect(source.match(/<Callout\b/g)).toHaveLength(1);
     expect(html.match(/O Paradoxo da Eficiência/g)).toHaveLength(1);
-    expect(html).toContain("1 MW térmico efetivamente aproveitado");
-    expect(html).toContain("eficiência elétrica líquida de 15%");
-    expect(html).toContain("0,15 × 1.000 kW = 150 kW elétricos");
+    expect(html).toContain("1 MW térmico efetivamente transferido ao ciclo");
+    expect(html).toContain("eficiência elétrica líquida hipotética de 15%");
+    expect(html).toContain("1 MW térmico × 0,15 = 150 kW elétricos líquidos");
+    expect(html).toContain("A eficiência térmica do ciclo relaciona o trabalho mecânico líquido");
+    expect(html).toContain("Já a eficiência elétrica líquida relaciona a eletricidade disponível");
   });
 
-  test("preserva todas as células V3 em uma tabela responsiva acessível", async () => {
+  test("preserva as quatro colunas e todas as células restauradas em tabela acessível", async () => {
     const html = await renderArticle();
     expect(html.match(/<table\b/g)).toHaveLength(1);
     expect(html).toContain('role="region"');
     expect(html).toContain('tabindex="0"');
     expect(html).toContain("overflow-x-auto");
-    expect(html.match(/scope="col"/g)).toHaveLength(3);
-    expect(html.match(/scope="row"/g)).toHaveLength(6);
+    expect(html.match(/scope="col"/g)).toHaveLength(4);
+    expect(html.match(/scope="row"/g)).toHaveLength(5);
     const cells = canonical
       .split(/\r?\n/)
       .filter((line) => line.startsWith("| ") && !line.startsWith("| ---"));
@@ -131,37 +134,60 @@ describe("ART-030 — publicação local V3", () => {
     }
   });
 
-  test("preserva os parágrafos V3 sem instruções internas ou casos rejeitados", () => {
-    const body = canonical.split("## Cinco pontos-chave")[1].split("## Referências")[0];
-    const plain = (text: string) =>
-      text
-        .replace(/\[(\d)\]\([^)]*\)/g, "[$1]")
-        .replace(/\*/g, "")
-        .trim();
-    const integrated = plain(parsed.body);
+  test("preserva a narrativa restaurada sem transportar marcadores ou comentários internos", () => {
+    const body = canonical.split("## 5 Pontos-Chave")[1].split("## Referências Bibliográficas")[0];
     for (const paragraph of body.split(/\r?\n\s*\r?\n/)) {
       const value = paragraph.trim();
-      if (!value || value.startsWith("#") || value.startsWith("|") || /^\d\./.test(value)) continue;
-      expect(integrated).toContain(plain(value.replace(/^> /, "")));
+      if (
+        !value ||
+        value.startsWith("#") ||
+        value.startsWith("|") ||
+        value.startsWith("<!--") ||
+        value.startsWith("![") ||
+        value.startsWith("**Figura") ||
+        value.startsWith("Fonte: SGES") ||
+        value.startsWith("Fontes da tabela")
+      )
+        continue;
+      expect(parsed.body).toContain(value.replace(/\s*\[[\d, –-]+\]\.?$/, ""));
     }
+    expect(parsed.body).not.toContain("<!--");
+    expect(parsed.body).not.toContain("Word B");
+    expect(parsed.body).not.toContain("confirmação humana");
+    expect(parsed.body).toContain(
+      "Onde o ORC Já Está Mudando a Realidade: Aplicações Reais e Estudos de Engenharia",
+    );
+    expect(parsed.body).not.toContain("(Casos Reais)");
+    expect(parsed.body).toContain("Starwood/Mendez Enerji");
+    expect(parsed.body).toContain(
+      "não de uma recuperação comprovada do calor já rejeitado pelos secadores",
+    );
+    expect(parsed.body).toContain(
+      "Trata-se de otimização de projeto, não comprovação de um módulo instalado",
+    );
     for (const rejected of ["Nesjavellir", "ThyssenKrupp", "Suzano", "Klabin", "Metsä"]) {
       expect(parsed.body).not.toContain(rejected);
     }
   });
 
-  test("mantém cinco fontes estruturadas com citações e bibliografia única", () => {
-    expect(parsed.frontmatter.sources).toHaveLength(5);
-    expect(new Set(parsed.frontmatter.sources.map((item) => item.url)).size).toBe(5);
+  test("estrutura as dezoito referências restauradas e preserva as cinco fontes anteriores", () => {
+    expect(parsed.frontmatter.sources).toHaveLength(18);
+    expect(new Set(parsed.frontmatter.sources.map((item) => item.url)).size).toBe(18);
     for (const [index, item] of parsed.frontmatter.sources.entries()) {
       expect(canonical).toContain(item.url);
-      expect(parsed.body).toContain(`[${index + 1}](${item.url})`);
-      expect(item.verifiedAt).toBe("2026-10-09");
+      if (parsed.body.includes(`[${index + 1}](`)) {
+        expect(parsed.body).toContain(`[${index + 1}](${item.url})`);
+      }
+      expect(item.verifiedAt).toMatch(/^2026-10-(09|10)$/);
     }
+    expect(
+      parsed.frontmatter.sources.filter((item) => item.verifiedAt === "2026-10-09"),
+    ).toHaveLength(5);
     expect(source).not.toContain("sourceUrls");
     expect(parsed.body).not.toContain("## Referências");
     const html = renderToStaticMarkup(<SourceList sources={parsed.frontmatter.sources} />);
     expect(html.match(/Fontes e referências/g)).toHaveLength(1);
-    expect(html.match(/<li>/g)).toHaveLength(5);
+    expect(html.match(/<li>/g)).toHaveLength(18);
   });
 
   test("preserva as três artes e centraliza a informação sobre IA na transparência", async () => {
@@ -178,6 +204,7 @@ describe("ART-030 — publicação local V3", () => {
       "2043aa84f4f256650747381082f57edc3a7589306c52be3901be1bf2828f00ba",
     );
     expect(parsed.frontmatter.cover).toMatchObject({ width: 2848, height: 1600 });
+    expect(parsed.frontmatter.cover.credit).toBe("Fonte: SGES, (2026).");
     expect(hash(`${directory}/art-030-comparativo.png`)).toBe(
       "8087b00769c7f61299cff1e030573b63ee67a919450d5cecf037b3f78867166f",
     );
@@ -186,10 +213,7 @@ describe("ART-030 — publicação local V3", () => {
     expect(parsed.frontmatter.aiDisclosureMode).toBe("detailed");
     expect(parsed.frontmatter.aiImageTools).toEqual(["ChatGPT/OpenAI"]);
     expect(parsed.frontmatter.aiDisclosure).toBe(
-      "Este artigo contou com auxílio de inteligência artificial na revisão e organização do texto. As imagens são ilustrações didáticas geradas por IA.",
-    );
-    expect(parsed.frontmatter.aiDisclosure).toContain(
-      "As imagens são ilustrações didáticas geradas por IA",
+      canonical.split("## Nota de Transparência")[1].trim(),
     );
     expect(parsed.frontmatter.cover.aiProvenance).toBeUndefined();
     expect(parsed.body.match(/<Figure\b/g)).toHaveLength(2);
@@ -202,6 +226,27 @@ describe("ART-030 — publicação local V3", () => {
     expect(html).toContain('height="1536"');
     expect(html).toContain("não são limites universais");
     expect(html).not.toContain("gerada por IA");
+    expect(html).toContain("Figura 2.");
+    expect(html).toContain("Figura 3.");
+    expect(html.match(/Fonte: SGES, \(2026\)\./g)).toHaveLength(2);
+  });
+
+  test("usa a nota autorizada uma vez sem alegar revisão humana integral não confirmada", () => {
+    const html = renderToStaticMarkup(
+      <AiEditorialCredit
+        assistance={parsed.frontmatter.aiAssistance}
+        publicationDate={parsed.frontmatter.publishedAt!}
+        imageTools={parsed.frontmatter.aiImageTools}
+        disclosure={parsed.frontmatter.aiDisclosure}
+      />,
+    );
+    expect(html.match(/Nota de Transparência/g)).toHaveLength(1);
+    expect(parsed.body).not.toContain("Nota de Transparência");
+    expect(html).not.toContain("pendente");
+    expect(html).toContain("verificação documental");
+    expect(html).toContain("A autoria e a direção editorial são de Olavo Oliveira");
+    expect(html).toContain("não substitui a revisão factual humana integral");
+    expect(html).not.toContain("Todo o conteúdo factual foi verificado, expandido e editado");
   });
 
   test("arquiva exatamente o manuscrito canônico V3 recebido", () => {

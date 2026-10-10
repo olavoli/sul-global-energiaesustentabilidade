@@ -1,0 +1,216 @@
+![Unidade ORC ilustrada entre tubulações, profissionais e equipamentos industriais.](C:/Projetos/sul-global-energiaesustentabilidade/public/images/articles/a-maquina-que-transforma-calor-desperdicado-em-eletricidade/art-030-hero.png)
+
+**Figura 1.** Unidade ORC em cenário industrial: ilustração didática da recuperação de calor.
+
+Fonte: SGES, (2026).
+
+# A máquina que transforma calor desperdiçado em eletricidade
+
+Como o Ciclo Rankine Orgânico aproveita calor industrial, geotérmico e outras fontes de baixa temperatura para gerar energia.
+
+## 5 Pontos-Chave
+
+1. Recuperação de Baixa Temperatura: O ORC pode converter calor residual de baixa e média temperatura. A faixa de 80°C a 300°C ilustra aplicações possíveis, não limites universais ou uma regra de ineficiência das turbinas a vapor. [1, 2]
+
+2. Fluidos Orgânicos Estratégicos: A substituição da água por fluidos orgânicos (como pentano ou siloxanos) pode permitir condições adequadas à fonte e reduzir o risco de umidade no expansor, conforme o fluido e o projeto.
+
+3. Eficiência Realista: A faixa de 10% a 20% de eficiência elétrica líquida é uma ilustração para os balanços deste artigo, não uma eficiência garantida nem os limites da tecnologia. O valor não está na alta conversão, mas no fato de a matéria-prima (calor) poder ser residual e já estar disponível, embora recuperá-la tenha custos.
+
+4. Aplicações Específicas: Ideal para indústrias de processo contínuo (cimento, vidro, química), geotermia de baixa entalpia e cogeração com biomassa.
+
+5. Barreiras Econômicas: O alto custo inicial (CAPEX) e a importância das horas de operação limitam sua adoção em pequenas escalas ou fontes intermitentes.
+
+Imagine uma fábrica de cimento. Seus fornos giram incansavelmente, atingindo temperaturas superiores a 1.400°C. Ao redor, o ar vibra com o calor intenso. Agora, imagine um motor de caminhão na estrada: uma parcela da energia do combustível é convertida em movimento; outra se dissipa como calor pelos escapamentos e pelo sistema de arrefecimento. Em usinas termelétricas, torres de resfriamento liberam plumas colossais de vapor e gotículas de água para a atmosfera. Em todas essas situações, estamos testemunhando um dos maiores desperdícios energéticos da era industrial: o calor residual. [17, 18]
+
+Esse calor não é "lixo" no sentido comum. É energia térmica pura, paga com combustíveis fósseis, biomassa ou processos eletrointensivos, da qual parte escapa sem aproveitamento, enquanto outra precisa ser rejeitada para o processo funcionar. Mas e se parte desse calor pudesse voltar? E se, em vez de deixar essa energia se dissipar irreversivelmente, pudéssemos transformá-la novamente em eletricidade útil?
+
+É exatamente aqui que entra uma tecnologia discreta, porém revolucionária: o Ciclo Rankine Orgânico, conhecido pela sigla ORC (Organic Rankine Cycle). Diferente das grandes turbinas a vapor das usinas nucleares ou termelétricas convencionais, o ORC foi projetado para operar com fontes de calor mais modestas, aquelas que a engenharia tradicional considerava "muito frias" para valer a pena. Este artigo explora como essa máquina funciona, por que ela utiliza fluidos diferentes da água, onde ela faz sentido econômico e ambiental, e quais são seus limites termodinâmicos intransponíveis.
+
+## O Primo "Ecológico" do Vapor Tradicional
+
+Para compreender o ORC, precisamos primeiro revisitar seu ancestral: o Ciclo Rankine convencional. Inventado no século XIX, esse ciclo é a base da geração de energia a vapor. Nele, a água é aquecida até virar vapor de alta pressão, que expande através de uma turbina, gerando trabalho mecânico que aciona um gerador elétrico. Depois, o vapor é condensado de volta à forma líquida e bombeado novamente para a caldeira.
+
+O problema? Em certas aplicações de baixa temperatura e pequena potência, o uso da água pode exigir equipamentos de expansão menos favoráveis técnica e economicamente. Isso não estabelece um limite universal de 300°C nem torna todo ciclo a vapor abaixo dessa temperatura inviável.
+
+O Ciclo Rankine Orgânico mantém a mesma arquitetura básica do evaporador, expansor, condensador e bomba, mas troca a água por um fluido orgânico. Esses fluidos, como pentano, siloxanos ou refrigerantes específicos, podem apresentar propriedades de vaporização adequadas à aplicação. Dependendo do fluido, da pressão e do projeto, isso permite aproveitar fontes de calor na faixa ilustrativa de 80°C a 300°C, entre outras condições. É como trocar um motor de Fórmula 1, que precisa de altas rotações para funcionar, por um motor elétrico de torque imediato: cada um tem sua faixa de operação ideal.
+
+### O Paradoxo da Eficiência
+
+Muitas pessoas acreditam que "energia renovável" significa apenas sol e vento. No entanto, uma oportunidade imediata de eficiência pode estar na energia que já estamos utilizando. Ao instalar um ORC, uma fábrica não precisa plantar nenhuma árvore nem construir nenhuma barragem. Ela pode reduzir o desperdício pela chaminé, desde que o investimento faça sentido. O ORC é a prova de que, às vezes, a inovação não está em descobrir algo novo, mas em enxergar valor onde outros veem apenas desperdício.
+
+## A Anatomia da Máquina: Um Fluxo Contínuo
+
+O funcionamento do ORC pode ser descrito pela circulação do fluido em um loop fechado — evaporador, expansor, condensador e bomba — com o gerador acoplado ao expansor, fora desse circuito:
+
+Evaporação: O fluido orgânico líquido recebe calor da fonte residual (gases de exaustão, água quente industrial, fluido geotérmico) em um trocador de calor. A vaporização depende do fluido, da pressão e da transferência de calor, podendo ocorrer com fontes de temperatura moderada.
+
+Expansão: O vapor de alta pressão entra em um expansor, que pode ser uma turbina axial, uma turbina radial ou, em aplicações menores, um expansor de parafuso ou de espiral (scroll expander). Aqui, a energia térmica é convertida em trabalho mecânico.
+
+Geração Elétrica: O eixo do expansor está conectado a um gerador elétrico, produzindo eletricidade que pode ser usada localmente ou injetada na rede.
+
+Condensação e Bombeamento: Após passar pelo expansor, o vapor, agora a baixa pressão e temperatura, entra no condensador, onde libera calor residual para um sumidouro frio (ar ambiente ou água de rio). Ele volta ao estado líquido e é bombeado de volta ao evaporador, reiniciando o ciclo.
+
+
+![Diagrama do circuito fechado do fluido orgânico e do acionamento mecânico do gerador.](C:/Projetos/sul-global-energiaesustentabilidade/public/images/articles/a-maquina-que-transforma-calor-desperdicado-em-eletricidade/art-030-funcionamento.png)
+
+**Figura 2.** Circuito básico do ORC: evaporador, expansor, condensador e bomba; o gerador é acoplado ao expansor, fora do percurso do fluido.
+
+Fonte: SGES, (2026).
+
+A beleza desse sistema reside na sua simplicidade relativa e na possibilidade de automação, embora expansor e bomba sejam partes móveis e a manutenção dependa do equipamento e das condições de operação.
+
+## Por Que Não Usar Água? A Química da Eficiência
+
+Este é, talvez, o ponto mais crucial para entender a vantagem do ORC. A água é um excelente fluido de trabalho para altas temperaturas devido ao seu alto calor latente de vaporização e estabilidade química. No entanto, suas propriedades podem tornar o projeto menos favorável em certas aplicações de baixa temperatura e pequena potência.
+
+Para ilustrar, considere a pressão de saturação da água a 100°C: é de aproximadamente 1 atm. Para gerar trabalho útil em uma turbina, precisamos de uma diferença de pressão significativa entre a entrada e a saída. Uma fonte de calor a 150°C não determina sozinha a pressão do vapor nem o tamanho e a eficiência da turbina: também importam as condições de evaporação e condensação, a vazão e a potência desejada. Além disso, a presença de umidade no vapor d'água durante a expansão pode causar erosão nas pás da turbina, um mecanismo de erosão por gotículas, diferente do golpe de aríete. [2, 4]
+
+Os fluidos orgânicos, por outro lado, apresentam curvas de saturação diferentes no diagrama temperatura-entropia. Muitos deles são chamados de fluidos de "vapor seco" ou "isentrópicos", o que pode favorecer uma expansão sem formação de gotículas, conforme as condições escolhidas. Isso pode reduzir a necessidade de superaquecimento, mas não garante sua dispensa nem um expansor mais simples e barato. [4]
+
+Além disso, a escolha do fluido permite "ajustar" o ciclo à temperatura específica da fonte. Se temos uma fonte a 90°C, escolhemos um fluido que opere adequadamente com essa fonte. Se a fonte está a 250°C, selecionamos outro composto. Com a água, não se troca a substância de trabalho, mas pressão e temperatura do ciclo também podem ser ajustadas. [4]
+
+## A Realidade Termodinâmica: Quanta Energia Realmente Geramos?
+
+É fundamental temperar o entusiasmo com rigor científico. O ORC não é uma máquina de movimento perpétuo, nem viola as leis da termodinâmica. Entre dois reservatórios ideais a temperaturas constantes, sua eficiência é limitada pelo Ciclo de Carnot, que estabelece o máximo teórico de conversão de calor em trabalho baseado nas temperaturas da fonte quente (T_H) e do sumidouro frio (T_C), em kelvin:
+
+η_max = 1 − T_C / T_H [7]
+
+A eficiência térmica do ciclo relaciona o trabalho mecânico líquido ao calor recebido. Já a eficiência elétrica líquida relaciona a eletricidade disponível, após os consumos auxiliares considerados, ao calor efetivamente transferido ao ciclo.
+
+A faixa ilustrativa de 10% a 20% de eficiência elétrica líquida não é universal: o rendimento depende da fonte, do fluido, do resfriamento e do projeto. Nessa ilustração, adotando eficiência elétrica líquida de 10% a 20%, para cada 100 unidades de calor efetivamente transferido ao ciclo, 10 a 20 unidades se tornam eletricidade líquida. O restante do balanço inclui calor rejeitado, perdas e consumos auxiliares. Há projetos com rendimentos fora dessa faixa.
+
+Vamos a um exemplo numérico hipotético, essencial para construir a intuição energética:
+
+Cenário hipotético: Uma indústria cerâmica rejeita continuamente 1 MW térmico (megawatt térmico) em gases de exaustão a 250°C.
+
+Aplicação do ORC: Instalamos um sistema ORC otimizado para essa faixa de temperatura. Supondo 1 MW térmico efetivamente transferido ao ciclo e adotando uma eficiência elétrica líquida hipotética de 15%, já descontados os consumos auxiliares incluídos no balanço, quanto de eletricidade geraremos?
+
+Cálculo: 1 MW térmico × 0,15 = 150 kW elétricos líquidos.
+
+Conclusão: Os 150 kW elétricos líquidos representam potência; o número de máquinas ou residências atendidas depende de seus consumos e das horas de operação. Embora pareça pouco comparado ao 1 MW inicial, esses 150 kW podem dispensar combustível adicional no cenário considerado, embora a recuperação exija investimento e operação. Eles representam energia que já foi paga e estava sendo jogada fora.
+
+Esse exemplo demonstra o valor agregado que o ORC pode trazer ao processo existente. Uma comparação econômica com usinas solares ou eólicas exige considerar investimento, energia efetivamente gerada, horas de operação e condições de cada projeto; o custo por watt instalado, sozinho, não resolve a comparação. [1, 2]
+
+## Onde Faz Sentido: Aplicações Ideais
+
+O ORC brilha em nichos específicos onde há disponibilidade contínua de calor residual de média e baixa temperatura:
+
+Indústria Pesada: Siderúrgicas, cimenteiras, indústrias vidreiras e químicas possuem fluxos massivos de calor residual. A integração de ORCs pode reduzir a compra de energia elétrica dessas plantas, conforme a potência recuperada, as horas de operação e os custos de integração.
+
+Geração Distribuída com Biomassa: Usinas de biomassa podem fornecer calor ao ORC por circuitos intermediários, como óleo térmico ou água quente; a configuração depende do projeto. O ORC pode gerar eletricidade a partir do calor transferido pela fonte de biomassa ao fluido de trabalho, conforme o projeto.
+
+Energia Geotérmica: Recursos geotérmicos de temperatura moderada podem ser aproveitados em ciclos binários, nos quais o fluido geotérmico transfere calor a outro fluido de trabalho. O ORC é uma das tecnologias utilizadas nesses projetos, como mostra a experiência islandesa descrita adiante. A temperatura, sozinha, não estabelece uma fronteira universal de viabilidade. [6]
+
+Motores de Combustão Interna: Grandes motores estacionários usados em geração de energia ou propulsão naval podem ter ORCs acoplados aos sistemas de exaustão e de arrefecimento da jaqueta d'água, aumentando a geração útil do conjunto conforme a fonte disponível e os consumos auxiliares, sem um ganho percentual universal.
+
+## Onde Não Faz Sentido: Limitações Econômicas e Técnicas
+
+Apesar das vantagens, o ORC não é uma solução universal. Existem cenários onde sua aplicação é inviável:
+
+Fontes Intermitentes: Se o calor residual só aparece esporadicamente (ex.: um forno que liga duas vezes por semana), o ORC passará a maior parte do tempo parado. Como o equipamento tem custo fixo elevado, o retorno sobre o investimento (ROI) pode ser prejudicado.
+
+Temperaturas Muito Baixas: Quando a temperatura da fonte se aproxima da temperatura do resfriamento, diminui o potencial de conversão em trabalho. Não há um limite universal de 80°C; tamanho e custo do trocador precisam ser avaliados.
+
+Ausência de Sumidouro Térmico: O ORC precisa rejeitar calor. Em locais sem acesso a água fria ou com ar ambiente muito quente, as condições de condensação tornam-se menos favoráveis, reduzindo a geração elétrica. [16]
+
+CAPEX Elevado: O custo inicial de um sistema ORC pode ser alto devido, entre outros fatores, aos materiais compatíveis com o fluido selecionado (que pode ser inflamável ou tóxico) e aos trocadores de calor de grande superfície. Em pequenas potências, o custo por unidade de potência pode ser maior. O payback depende das horas de operação, do investimento, da manutenção e do valor da eletricidade; não há um prazo geral aplicável a todos os projetos. [1, 2]
+
+## Tabela: Características, Prós e Contras do ORC
+
+| Característica | Descrição | Vantagens (Prós) | Desvantagens (Contras) |
+| --- | --- | --- | --- |
+| Faixa de Temperatura | 80°C–300°C como faixa ilustrativa de fontes, não limites universais. | Pode aproveitar calor de temperatura moderada, conforme o fluido e o projeto. | Fontes próximas à temperatura do resfriamento reduzem o potencial de conversão; limites e superaquecimento dependem do fluido e do ciclo. |
+| Fluido de Trabalho | Orgânico (pentano, siloxanos, refrigerantes específicos etc.), selecionado para a aplicação. | Permite ajustar condições operacionais à fonte; fluidos e projetos adequados podem evitar gotículas no expansor. | Pressão não é necessariamente baixa; alguns fluidos são inflamáveis, tóxicos ou têm alto potencial de aquecimento global (GWP). |
+| Eficiência Térmica e Elétrica Líquida | Eficiência térmica: trabalho mecânico líquido dividido pelo calor recebido. Eficiência elétrica líquida: eletricidade após auxiliares dividida pelo calor transferido; 10%–20% ilustra esta última, não uma garantia. | Automação e manutenção planejada podem favorecer operação e vida útil prolongada. | Consumos auxiliares reduzem a potência líquida; trocadores podem ser grandes e caros. Vida útil superior a 20 anos exige comprovação específica. |
+| Custo (CAPEX) | Investimento variável com escala, equipamentos e integração. | Pode reduzir a compra de eletricidade; incentivos dependem da legislação e elegibilidade locais. | Retorno depende de investimento, horas, tarifas e manutenção. Payback de 5–10 anos não é regra geral; pequenas escalas podem ter maior custo específico. |
+| Impacto Ambiental | Depende da origem do calor, do fluido e da instalação. | Recuperação residual pode reduzir consumo e emissões sem combustível adicional; cogeração aproveita eletricidade e calor. | Combustão dedicada de biomassa possui emissões; vazamentos, água de resfriamento e destinação dos fluidos precisam de controle. |
+
+Fontes da tabela: [1, 2, 4, 13, 16].
+
+![Comparação dos principais equipamentos de Rankine com água e ORC com fluido orgânico.](C:/Projetos/sul-global-energiaesustentabilidade/public/images/articles/a-maquina-que-transforma-calor-desperdicado-em-eletricidade/art-030-comparativo.png)
+
+**Figura 3.** Rankine convencional e ORC compartilham a conversão de calor em trabalho, com fluidos e condições definidos conforme a aplicação.
+
+Fonte: SGES, (2026).
+
+## Onde o ORC Já Está Mudando a Realidade: Aplicações Reais e Estudos de Engenharia
+
+A teoria é elegante, mas a prática confirma o potencial. O Ciclo Rankine Orgânico deixou de ser uma promessa de laboratório para se tornar uma solução industrial robusta em diversos países. Aqui estão quatro exemplos emblemáticos, distinguindo experiências operacionais de estudos de aplicação:
+
+### 1. Usina Geotérmica de Svartsengi (Islândia)
+
+A Islândia tem uma experiência histórica documentada no uso de ORC. Em Svartsengi, na península de Reykjanes, sete módulos Ormat somavam 8,4 MW elétricos, utilizando vapor a 105°C de uma turbina a vapor para aquecer isopentano em circuito fechado. Era uma maneira de extrair mais valor do recurso geotérmico, combinando geração e aproveitamento térmico. Esses módulos representam um caso real histórico: a operadora informa que as unidades antigas foram substituídas pelo novo estágio da usina em dezembro de 2025. [8, 9]
+
+### 2. Recuperação de Calor em Siderúrgicas (Alemanha e Itália)
+
+Grandes siderúrgicas europeias implementaram sistemas ORC para recuperar calor dos gases de exaustão de fornos a arco elétrico. Na Alemanha, a ESF Elbe-Stahlwerke Feralpi, em Riesa, aparece no registro do fornecedor com um ORC de 2,7 MW elétricos em operação desde 2013. Na Itália, a ORI Martin, em Brescia, utiliza um ORC de 2,2 MW elétricos desde 2016. O projeto italiano alterna o aproveitamento do calor entre aquecimento urbano no inverno e geração elétrica no verão. São exemplos de integração do calor recuperado ao processo existente, sem transformar a economia de uma instalação em promessa para todas as siderúrgicas. [10, 11]
+
+### 3. Cogeração com Biomassa Florestal (Turquia)
+
+No setor florestal, resíduos do processamento da madeira podem alimentar sistemas de cogeração. Na Turquia, a Starwood/Mendez Enerji, em İnegöl, utiliza desde outubro de 2016 um ORC de 5,5 MW elétricos na produção de painéis MDF. A caldeira queima resíduos de biomassa do processo e resíduos florestais; o ORC também fornece água quente para usos industriais, incluindo secagem. Aqui, a eletricidade vem do calor da combustão da biomassa, com aproveitamento térmico complementar — não de uma recuperação comprovada do calor já rejeitado pelos secadores. [12]
+
+### 4. Motores a Gás e Estudos Offshore (Finlândia e Mar do Norte)
+
+Motores a gás também podem ter o calor dos escapamentos aproveitado para gerar eletricidade. Em Ämmässuo, na região de Espoo, Finlândia, a HSY opera um ORC associado a motores alimentados com gás de aterro, com geração registrada pela operadora. O fornecedor informa potência de 1,3 MW elétricos e eficiência elétrica líquida de 20,6% para o ORC, não um aumento de 20,6 pontos percentuais no rendimento dos motores. No ambiente offshore, um estudo da DTU analisou um ORC para o calor de uma turbina a gás SGT-500 da plataforma Draugen, no Mar do Norte. Trata-se de otimização de projeto, não comprovação de um módulo instalado. Em ambos os contextos, ganhos energéticos e financeiros dependem da instalação e das condições de operação. [13–15]
+
+## Considerações Finais sobre a Implementação
+
+Ao ler sobre esses casos, percebe-se um padrão: o ORC não é uma solução única, mas uma tecnologia habilitadora. Ela permite que indústrias maduras, que já operam há décadas, se tornem mais eficientes sem precisar trocar todo o seu parque fabril.
+
+A implementação bem-sucedida depende de três pilares:
+
+Caracterização Precisa da Fonte: Saber exatamente quanta energia térmica está disponível e em qual temperatura.
+
+Seleção do Fluido: Escolher o composto orgânico certo para maximizar a eficiência naquela faixa específica.
+
+Integração Sistêmica: Garantir que o ORC não interfira negativamente no processo industrial principal (ex.: não aumentar a contrapressão na chaminé a ponto de prejudicar a combustão).
+
+## Conclusão: Valorizando o Que Já Foi Pago
+
+A narrativa em torno do Ciclo Rankine Orgânico não deve ser a de uma "fonte mágica de energia limpa", mas sim a de uma ferramenta de eficiência extrema. Em um mundo que consome recursos finitos, ignorar o calor residual é como comprar um livro caro, ler metade e jogar o resto no lixo. O ORC nos permite ler a segunda metade.
+
+Ele não cria energia do nada. Ele recupera uma parcela de uma energia que já foi extraída, processada e paga. Transformar calor desperdiçado em eletricidade útil é um ato de racionalidade econômica e responsabilidade ambiental. Se os custos dos equipamentos diminuírem e a regulamentação carbônica se tornar mais rigorosa, o ORC poderá ampliar sua presença e se tornar um componente mais comum da infraestrutura industrial sustentável.
+
+A próxima vez que você vir vapor saindo de uma chaminé industrial, não pense apenas em poluição. Pense na possibilidade de eletricidade não gerada, quando o calor puder ser recuperado. E lembre-se: há uma máquina silenciosa, cheia de fluidos orgânicos circulando em tubos fechados, pronta para transformar esse desperdício em valor.
+
+## Referências Bibliográficas
+
+1. BCS, Incorporated. Waste Heat Recovery: Technology and Opportunities in U.S. Industry. Março de 2008. Relatório para o U.S. Department of Energy. [Documento](https://www1.eere.energy.gov/manufacturing/intensiveprocesses/pdfs/waste_heat_recovery.pdf).
+
+2. Quoilin, S.; van den Broeck, M.; Declaye, S.; Dewallef, P.; Lemort, V. Techno-economic survey of Organic Rankine Cycle (ORC) systems. Renewable and Sustainable Energy Reviews, 22, 168–186, 2013. DOI: 10.1016/j.rser.2013.01.028. [Documento](https://orbi.uliege.be/handle/2268/138756).
+
+3. U.S. Department of Energy. Waste Heat Recovery Basics. Sem data editorial identificada. [Documento](https://www.energy.gov/cmei/ito/waste-heat-recovery-basics).
+
+4. Saleh, B.; Koglbauer, G.; Wendland, M.; Fischer, J. Working fluids for low-temperature organic Rankine cycles. Energy, 32(7), 1210–1221, 2007. DOI: 10.1016/j.energy.2006.07.001. [Documento](https://forschung.boku.ac.at/en/publications/64831).
+
+5. Akasaka, R.; Zhou, Y.; Lemmon, E. W. A Fundamental Equation of State for 1,1,1,3,3-Pentafluoropropane (R-245fa). Journal of Physical and Chemical Reference Data, 44, 013104, 2015. DOI: 10.1063/1.4913493. [Documento](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=917507).
+
+6. U.S. Department of Energy. Geothermal Electricity Generation. Sem data editorial identificada. [Documento](https://www.energy.gov/hgeo/geothermal/geothermal-electricity-generation).
+
+7. OpenStax. University Physics Volume 2, seção 4.5: The Carnot Cycle. [Documento](https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle).
+
+8. Verkís. Utilisation of geothermal resources. Gangverk, edição especial, 2014, pp. 12–13. [Documento](https://www.verkis.com/wp-content/uploads/2024/02/Utilisation_geothermal_resources.pdf).
+
+9. HS Orka. Svartsengi. Histórico da operadora, incluindo atualização de dezembro de 2025. [Documento](https://www.hsorka.is/um-okkur/starfsemi/orkuverin-okkar/svartsengi/).
+
+10. Turboden. Waste Heat Recovery. Cadastro de instalações, incluindo Feralpi, Riesa. [Documento](https://www.turboden.com/solutions/1053/waste-heat-recovery).
+
+11. Turboden. ORI Martin. Ficha técnica, Brescia, Itália. [Documento](https://www.turboden.com/it/case-history/1162/ori-martin).
+
+12. Turboden. Starwood / Mendez Enerji. Ficha técnica, İnegöl, Turquia. [Documento](https://www.turboden.com/case-histories/1437/starwood-mendez-enerji).
+
+13. Turboden. HSY. Ficha técnica, Espoo, Finlândia. [Documento](https://www.turboden.com/case-histories/1445/hsy).
+
+14. HSY. Ämmässuon ekoteollisuuskeskuksen toiminta vuonna 2024. Seção 14, tabela 45. [Documento](https://julkaisu.hsy.fi/ammassuon-ekoteollisuuskeskuksen-toiminta-vuonna-2024/14.html).
+
+15. Pierobon, L.; Nguyen, T.-V.; Larsen, U.; Haglind, F.; Elmegaard, B. Multi-objective optimization of organic Rankine cycles for waste heat recovery: Application in an offshore platform. Energy, 58, 538–549, 2013. DOI: 10.1016/j.energy.2013.05.039. [Documento](https://orbit.dtu.dk/en/publications/multi-objective-optimization-of-organic-rankine-cycles-for-waste-/).
+
+16. European Commission. Reference Document on the Application of Best Available Techniques to Industrial Cooling Systems. Dezembro de 2001. [Documento](https://bureau-industrial-transformation.jrc.ec.europa.eu/reference/industrial-cooling-systems).
+
+17. U.S. Department of Energy. Cement and Concrete Manufacturing. [Documento](https://www.energy.gov/cmei/ito/cement-and-concrete-manufacturing).
+
+18. U.S. Department of Energy. SuperTruck Program: Engine Project Review. Rendimento térmico no eixo não equivale a rendimento nas rodas. [Documento](https://www.energy.gov/eere/vehicles/articles/supertruck-program-engine-project-review).
+
+## Nota de Transparência
+
+Este artigo contou com o auxílio de ferramentas de Inteligência Artificial (ChatGPT/OpenAI) e imagens geradas por ChatGPT/OpenAI durante as etapas de: pesquisa inicial; estruturação de tópicos; revisão gramatical; e verificação documental. A autoria e a direção editorial são de Olavo Oliveira. A verificação documental assistida não substitui a revisão factual humana integral.
