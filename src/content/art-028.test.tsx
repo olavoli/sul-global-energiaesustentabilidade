@@ -149,14 +149,19 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
         ?.title,
     ).toBe(canonicalTitle);
     expect(getLatestArticles(1)[0]).toMatchObject({
-      slug: "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
-      title:
-        "Transição Energética Justa em Santa Catarina: quem paga a conta e quem decide o futuro da região carbonífera? — Parte 2",
+      slug: "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+      title: "A máquina que transforma calor desperdiçado em eletricidade",
+      publishedAt: "2026-10-10",
     });
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);
     expect(getRelatedArticles(article!)).not.toHaveLength(0);
 
     const published = getPublishedArticles();
+    for (let index = 1; index < published.length; index++) {
+      expect(
+        published[index - 1].publishedAt.localeCompare(published[index].publishedAt),
+      ).toBeGreaterThanOrEqual(0);
+    }
     expect(generateSitemap(published)).toContain(`/artigo/${slug}`);
     expect(generateRss(published)).toContain(canonicalTitle);
 

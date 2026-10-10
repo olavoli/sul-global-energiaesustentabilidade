@@ -1,0 +1,70 @@
+articleSlug: a-maquina-que-transforma-calor-desperdicado-em-eletricidade
+researchQuestion: Como o ORC converte parte do calor disponível em eletricidade e quais condições determinam sua adequação?
+scope: Circuito básico, seleção de fluido, balanço líquido, aplicações e limites técnicos/econômicos; sem resultados de instalações não comprovadas.
+audience: Leitores do Sul Global interessados em energia, sem exigir formação em engenharia.
+keyQuestions:
+  - Como o circuito fechado se relaciona com o gerador?
+  - Por que eficiência, temperatura e pressão dependem do projeto?
+  - Quais fatores condicionam a viabilidade?
+requiredData:
+  - Exemplo hipotético de 1 MW térmico efetivamente aproveitado e 15% líquidos, resultando em 150 kW elétricos.
+requiredSourceTypes: [official, academic]
+candidateSources: []
+confirmedSources:
+  - title: Waste Heat Recovery Basics
+    url: https://www.energy.gov/cmei/ito/waste-heat-recovery-basics
+    organization: U.S. Department of Energy
+    verifiedAt: "2026-10-09"
+  - title: Techno-economic survey of Organic Rankine Cycle (ORC) systems
+    url: https://orbi.uliege.be/handle/2268/138756
+    organization: Quoilin, S.; van den Broeck, M.; Declaye, S.; Dewallef, P.; Lemort, V.
+    verifiedAt: "2026-10-09"
+  - title: A Fundamental Equation of State for 1,1,1,3,3-Pentafluoropropane (R-245fa)
+    url: https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=917507
+    organization: Akasaka, R.; Zhou, Y.; Lemmon, E. W.
+    verifiedAt: "2026-10-09"
+  - title: Geothermal Electricity Generation
+    url: https://www.energy.gov/hgeo/geothermal/geothermal-electricity-generation
+    organization: U.S. Department of Energy
+    verifiedAt: "2026-10-09"
+  - title: University Physics Volume 2 — 4.5 The Carnot Cycle
+    url: https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle
+    organization: OpenStax
+    verifiedAt: "2026-10-09"
+rejectedSources: []
+openQuestions: []
+factChecks:
+  - statement: O circuito básico contém evaporador, expansor, condensador e bomba; o gerador é acoplado mecanicamente ao expansor.
+    status: confirmed
+    sourceUrls: [https://orbi.uliege.be/handle/2268/138756]
+  - statement: A seleção do fluido e as condições de operação são específicas do projeto, sem percentuais universais.
+    status: confirmed
+    sourceUrls: [https://orbi.uliege.be/handle/2268/138756]
+  - statement: O R245fa tem temperatura crítica de 427,01 K; a curva de coexistência líquido-vapor não se estende acima dela.
+    status: confirmed
+    sourceUrls: [https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=917507]
+  - statement: O limite de Carnot usa temperaturas absolutas entre reservatórios ideais; não prevê o rendimento líquido de uma instalação.
+    status: confirmed
+    sourceUrls: [https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle]
+  - statement: Recuperação de calor exige integração e avaliação de custos; geração geotérmica binária utiliza circuitos separados.
+    status: confirmed
+    sourceUrls: [https://www.energy.gov/cmei/ito/waste-heat-recovery-basics, https://www.energy.gov/hgeo/geothermal/geothermal-electricity-generation]
+imageRequirements:
+  origin: Três ilustrações geradas no ChatGPT especificamente para ART-030, conforme declaração do responsável editorial.
+  license: Output gerado no ChatGPT para o ART-030; uso editorial conforme os termos da OpenAI, na medida permitida pela lei aplicável.
+  authorization: Integração e preparação local autorizadas pelo responsável editorial nesta conversa; publicação remota ainda não autorizada.
+  credit: Origem declarada na Nota de Transparência e em docs/editorial/art-030-revisao/proveniencia-e-termos-imagens.md; sem atribuição individual inventada.
+  alt: Unidade ORC ilustrada em um cenário industrial, com tubulações, equipamentos e profissionais.
+  width: 2848
+  height: 1600
+  aspectRatio: "2848:1600"
+  socialVersion: Hero original utilizada no Open Graph; sem nova arte social ou recompressão.
+  usageRisk: Ilustrações didáticas, não instalações comprovadas; direitos contratuais documentados, sem alegar exclusividade. PNGs pesados e textos raster pequenos no celular.
+  isDemoConfirmed: true
+# Confirmação direta do responsável editorial: ART-030 independente, sem patrocínio,
+# pagamento, parceria comercial ou conflito de interesse identificado.
+# Declaração específica deste artigo; relações futuras exigem avaliação individual.
+conflictsOfInterestEvaluated: true
+editorialRisks:
+  - Casos específicos não comprovados permaneceram fora do texto V3.
+researchStatus: ready-for-writing
