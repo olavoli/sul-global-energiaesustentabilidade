@@ -7,9 +7,11 @@ import { articleLoaders } from "@/content/generated/loaders";
 export function ArticleBody({
   slug,
   section = "body",
+  wrapLongWords = false,
 }: {
   slug: string;
   section?: "body" | "keyPoints" | "references";
+  wrapLongWords?: boolean;
 }) {
   const Content = useMemo(() => {
     const loader = articleLoaders[slug];
@@ -27,7 +29,9 @@ export function ArticleBody({
   );
 
   return (
-    <div className="prose-editorial text-foreground">
+    <div
+      className={`prose-editorial text-foreground${wrapLongWords ? " [overflow-wrap:anywhere]" : ""}`}
+    >
       <Suspense
         fallback={
           section === "body" ? (

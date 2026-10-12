@@ -1196,6 +1196,7 @@ export const articleRecords = [
         isDemo: false,
       },
     ],
+    referencesInBody: true,
     aiAssistance: "substantial",
     aiDisclosure:
       "Este artigo foi desenvolvido com apoio de ferramentas de inteligência artificial na organização editorial, pesquisa assistida e produção de imagens e infográficos. A seleção das fontes, as interpretações apresentadas e a responsabilidade pelo conteúdo publicado pertencem à autoria e à equipe editorial do Sul Global Energia e Sustentabilidade.",

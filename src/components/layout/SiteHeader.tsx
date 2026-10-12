@@ -7,6 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { MobileMenu } from "@/components/navigation/MobileMenu";
 import { mobileMenuReducer } from "@/components/navigation/mobile-menu-state";
 import { primaryNav } from "@/components/navigation/nav-items";
+import { ScienceMenu } from "@/components/navigation/ScienceMenu";
 
 export function SiteHeader() {
   const [menuOpen, dispatchMenu] = useReducer(mobileMenuReducer, false);
@@ -51,17 +52,21 @@ export function SiteHeader() {
           aria-label="Navegação principal"
           className="hidden lg:flex lg:items-center lg:gap-3 xl:gap-6"
         >
-          {primaryNav.slice(0, 6).map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              params={item.params}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {primaryNav.slice(0, 6).map((item) =>
+            item.params?.slug === "ciencia" ? (
+              <ScienceMenu key={item.label} />
+            ) : (
+              <Link
+                key={item.label}
+                to={item.to}
+                params={item.params}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                activeProps={{ className: "text-foreground" }}
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-2">

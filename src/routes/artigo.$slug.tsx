@@ -168,7 +168,7 @@ function ArticleDetail() {
           <ArticleTtsPlayer contentRef={editorialBodyRef} articleKey={article.slug} />
 
           <div ref={editorialBodyRef} data-tts-article-body="true">
-            <ArticleBody slug={article.slug} />
+            <ArticleBody slug={article.slug} wrapLongWords={article.referencesInBody} />
           </div>
 
           <div className="mt-8">
@@ -189,7 +189,9 @@ function ArticleDetail() {
 
           <ArticleBody slug={article.slug} section="references" />
 
-          <SourceList sources={article.sources} urls={article.sourceUrls} />
+          {!article.referencesInBody && (
+            <SourceList sources={article.sources} urls={article.sourceUrls} />
+          )}
 
           <AiEditorialCredit
             assistance={article.aiAssistance}

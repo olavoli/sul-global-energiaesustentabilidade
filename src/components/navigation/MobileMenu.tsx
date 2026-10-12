@@ -3,6 +3,7 @@ import { useEffect, useRef, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { primaryNav } from "./nav-items";
+import { ScienceMenu } from "./ScienceMenu";
 
 export function MobileMenu({
   open,
@@ -89,14 +90,18 @@ export function MobileMenu({
           <ul className="mt-2 flex flex-col divide-y divide-border">
             {primaryNav.slice(0, 6).map((item) => (
               <li key={item.label}>
-                <Link
-                  to={item.to}
-                  params={item.params}
-                  onClick={onClose}
-                  className="block py-3 font-serif text-xl font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  {item.label}
-                </Link>
+                {item.params?.slug === "ciencia" ? (
+                  <ScienceMenu mobile onNavigate={onClose} />
+                ) : (
+                  <Link
+                    to={item.to}
+                    params={item.params}
+                    onClick={onClose}
+                    className="block py-3 font-serif text-xl font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

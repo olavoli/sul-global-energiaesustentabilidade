@@ -191,6 +191,7 @@ export const articleFrontmatterSchema = z
     sponsorName: z.string().min(1).optional(),
     sourceUrls: legacySourceUrlsSchema,
     sources: z.array(editorialSourceSchema).default([]),
+    referencesInBody: z.boolean().optional(),
     lastVerifiedAt: isoDateSchema.optional(),
     opinionDisclosure: z.string().min(3).max(400).optional(),
     interviewee: z.string().min(2).optional(),
