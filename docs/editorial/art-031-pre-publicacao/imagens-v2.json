@@ -2,7 +2,7 @@
   {
     "key": "financiamento",
     "originalPreserved": "art-031-financiamento.png",
-    "edited": "public\\images\\articles\\a-pandemia-salvou-o-sus\\art-031-financiamento-v2.png",
+    "edited": "public/images/articles/a-pandemia-salvou-o-sus/art-031-financiamento-v2.png",
     "sha256": "404951ec4c62449b1eddaf9b781495ed9cf7cfa40bf7c59e4fe751d2de21ce77",
     "width": 941,
     "height": 1672,
@@ -25,7 +25,7 @@
   {
     "key": "legado",
     "originalPreserved": "art-031-legado.png",
-    "edited": "public\\images\\articles\\a-pandemia-salvou-o-sus\\art-031-legado-v2.png",
+    "edited": "public/images/articles/a-pandemia-salvou-o-sus/art-031-legado-v2.png",
     "sha256": "d4af9843191a80a7c3651198ad4f05d27fe9ba3eaded13df3ddff9f9bb96a26e",
     "width": 941,
     "height": 1672,
