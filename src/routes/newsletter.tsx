@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Container } from "@/components/layout/Container";
-import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
+import { NewsletterPageContent } from "@/components/newsletter/NewsletterPageContent";
 import { resolveCanonical, socialMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/newsletter")({
+  validateSearch: (search: Record<string, unknown>): { confirmado?: 1 } =>
+    search.confirmado === "1" || search.confirmado === 1 ? { confirmado: 1 } : {},
   head: () => ({
     meta: [
       { title: "Newsletter — Sul Global" },
@@ -24,26 +25,6 @@ export const Route = createFileRoute("/newsletter")({
 });
 
 function NewsletterPage() {
-  return (
-    <>
-      <Container className="py-16">
-        <div className="mx-auto max-w-2xl">
-          <span className="overline text-primary">Newsletter</span>
-          <h1 className="mt-3 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Uma análise semanal, sem ruído.
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            A proposta é oferecer uma síntese do que importa em energia, transição e desenvolvimento
-            — com contexto, fontes e sem clickbait. Confirme seu e-mail para concluir a inscrição.
-          </p>
-          <ul className="mt-8 space-y-3 text-foreground">
-            <li>• Uma reportagem exclusiva por edição.</li>
-            <li>• Três leituras recomendadas com comentário editorial.</li>
-            <li>• Gráfico da semana, com fonte primária.</li>
-          </ul>
-        </div>
-      </Container>
-      <NewsletterCTA />
-    </>
-  );
+  const { confirmado } = Route.useSearch();
+  return <NewsletterPageContent confirmationReturn={confirmado === 1} />;
 }
