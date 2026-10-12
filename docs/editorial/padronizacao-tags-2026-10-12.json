@@ -1,0 +1,979 @@
+{
+  "summary": {
+    "reviewed": 31,
+    "changed": 25,
+    "distinctTagsBefore": 81,
+    "distinctTagsAfter": 92,
+    "assignmentsBefore": 142,
+    "assignmentsAfter": 144,
+    "overFiveBefore": 11,
+    "overFiveAfter": 8,
+    "searchPairsLost": 13,
+    "relatedListsChanged": 16
+  },
+  "records": [
+    {
+      "slug": "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+      "title": "A bomba d’água que não precisa de eletricidade",
+      "category": "funcional",
+      "beforeTags": ["eficiência energética", "sustentabilidade", "desenvolvimento"],
+      "afterTags": [
+        "carneiro hidráulico",
+        "bombeamento de água",
+        "golpe de aríete",
+        "eficiência energética"
+      ],
+      "changed": true,
+      "protectedContentSha256": "5ffe4fa17008773cefbd9a278e244317847e0b86418444a0c5b724b8eb1b51f4",
+      "exception": null
+    },
+    {
+      "slug": "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+      "title": "A chaminé que produz eletricidade com o calor do Sol",
+      "category": "funcional",
+      "beforeTags": ["energia solar", "tecnologia", "eficiência energética"],
+      "afterTags": ["energia solar", "chaminé solar", "eficiência energética"],
+      "changed": true,
+      "protectedContentSha256": "bc73d82d6ca7319321c809751d90349cc879356893fc22a4fa721a6840bf55ce",
+      "exception": null
+    },
+    {
+      "slug": "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+      "title": "A Conta da Transição Energética: Entre a Geração Barata e o Sistema Complexo",
+      "category": "transicao-energetica",
+      "beforeTags": [
+        "energia solar",
+        "energia eólica",
+        "brasil",
+        "armazenamento",
+        "redes elétricas",
+        "custos"
+      ],
+      "afterTags": [
+        "energia solar",
+        "energia eólica",
+        "brasil",
+        "armazenamento de energia",
+        "redes elétricas",
+        "custos do sistema elétrico"
+      ],
+      "changed": true,
+      "protectedContentSha256": "338082a6b8bac6f6bb01aa689949bb83fdb39fa759de598fd00b5241cb038b50",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "a-energia-nuclear-esta-voltando",
+      "title": "A energia nuclear está voltando?",
+      "category": "transicao-energetica",
+      "beforeTags": [
+        "energia nuclear",
+        "transição energética",
+        "segurança energética",
+        "descarbonização",
+        "brasil",
+        "china"
+      ],
+      "afterTags": [
+        "energia nuclear",
+        "segurança energética",
+        "descarbonização",
+        "brasil",
+        "china"
+      ],
+      "changed": true,
+      "protectedContentSha256": "8263956be39757d3696bb2b00b44af31982d7f5dab566cdcc7d3ab5871f807dd",
+      "exception": null
+    },
+    {
+      "slug": "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico",
+      "title": "A inteligência artificial vai virar um problema para o sistema elétrico?",
+      "category": "tecnologia",
+      "beforeTags": ["redes elétricas", "eficiência energética", "armazenamento", "brasil"],
+      "afterTags": [
+        "inteligência artificial",
+        "centros de dados",
+        "redes elétricas",
+        "eficiência energética",
+        "armazenamento de energia",
+        "brasil"
+      ],
+      "changed": true,
+      "protectedContentSha256": "aeb8c9369e26cc24a47219fa3958b6f98448f197da2a6d6ea8221bc2df0ffa04",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+      "title": "A máquina que transforma calor desperdiçado em eletricidade",
+      "category": "energia",
+      "beforeTags": ["eficiência energética", "tecnologia", "biomassa"],
+      "afterTags": [
+        "ciclo rankine orgânico",
+        "calor residual",
+        "eficiência energética",
+        "biomassa",
+        "cogeração"
+      ],
+      "changed": true,
+      "protectedContentSha256": "9e872f8ed3ac2e72896f8fcf00e5e30149bee0d8fbc8b111ae7b564c0c401367",
+      "exception": null
+    },
+    {
+      "slug": "a-pandemia-salvou-o-sus",
+      "title": "A Pandemia salvou o SUS?",
+      "category": "politicas-publicas",
+      "beforeTags": ["ciência", "saúde", "políticas públicas", "sus", "saúde pública", "covid-19"],
+      "afterTags": [
+        "sus",
+        "saúde pública",
+        "covid-19",
+        "financiamento da saúde",
+        "atenção primária à saúde"
+      ],
+      "changed": true,
+      "protectedContentSha256": "1f305d27f5056eeb36271b77d4ab3035d7611497cb0004922622c4ca33c4d335",
+      "exception": null
+    },
+    {
+      "slug": "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
+      "title": "A rede elétrica está preparada para a transição energética?",
+      "category": "energia",
+      "beforeTags": [
+        "rede elétrica",
+        "transmissão",
+        "distribuição",
+        "conexão",
+        "flexibilidade",
+        "gets",
+        "mmgd"
+      ],
+      "afterTags": [
+        "redes elétricas",
+        "transmissão",
+        "distribuição",
+        "conexão à rede",
+        "flexibilidade do sistema elétrico",
+        "gets",
+        "mmgd"
+      ],
+      "changed": true,
+      "protectedContentSha256": "bb54c5cf1bcc1f99b9065b04ed067edf76236bf069341ff507afd04912bba205",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+      "title": "A transição energética vai aumentar o consumo de água?",
+      "category": "transicao-energetica",
+      "beforeTags": [
+        "energia solar",
+        "energia eólica",
+        "hidrogênio",
+        "brasil",
+        "mudanças climáticas",
+        "eficiência energética"
+      ],
+      "afterTags": [
+        "água e energia",
+        "energia solar",
+        "energia eólica",
+        "hidrogênio",
+        "brasil",
+        "mudanças climáticas"
+      ],
+      "changed": true,
+      "protectedContentSha256": "8f337e17366f2555517d49db4306ba3ac1c4bd08f4ef1173d9463d54f1af2da1",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "a-transicao-energetica-vai-ficar-sem-cobre",
+      "title": "A transição energética vai ficar sem cobre?",
+      "category": "energia",
+      "beforeTags": [
+        "cobre",
+        "minerais críticos",
+        "transição energética",
+        "mineração",
+        "reciclagem",
+        "eletrificação"
+      ],
+      "afterTags": ["cobre", "minerais críticos", "mineração", "reciclagem", "eletrificação"],
+      "changed": true,
+      "protectedContentSha256": "35c8cd8d3e5167030ad7f590d6f34f6a3fe1c79ea867fe3457e0c38e174c40c8",
+      "exception": null
+    },
+    {
+      "slug": "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos",
+      "title": "A transição energética pode criar uma nova dependência mineral?",
+      "category": "energia",
+      "beforeTags": [
+        "minerais críticos",
+        "transição energética",
+        "mineração",
+        "processamento",
+        "reciclagem",
+        "segurança mineral"
+      ],
+      "afterTags": [
+        "minerais críticos",
+        "segurança mineral",
+        "mineração",
+        "processamento mineral",
+        "reciclagem"
+      ],
+      "changed": true,
+      "protectedContentSha256": "98528a8da45806e036ff696de4f0b4066132c8b132a92419471e9378a418f180",
+      "exception": null
+    },
+    {
+      "slug": "baterias-de-sodio-estao-chegando",
+      "title": "Baterias de sódio estão chegando. Elas vão substituir o lítio?",
+      "category": "tecnologia",
+      "beforeTags": [
+        "baterias de sódio",
+        "armazenamento de energia",
+        "baterias",
+        "transição energética"
+      ],
+      "afterTags": ["baterias de sódio", "baterias", "armazenamento de energia"],
+      "changed": true,
+      "protectedContentSha256": "c8f2840a25b6e669f3e7c59299a66aa3b632fc618798e29e75d9a4c87ae4f152",
+      "exception": null
+    },
+    {
+      "slug": "e-possivel-produzir-eletricidade-de-dia-e-de-noite",
+      "title": "É possível produzir eletricidade de dia e de noite?",
+      "category": "ciencia",
+      "beforeTags": ["termoeletricidade", "armazenamento", "energia solar"],
+      "afterTags": ["termoeletricidade", "armazenamento térmico", "energia solar"],
+      "changed": true,
+      "protectedContentSha256": "f65551f95c238af4ed99c0ed8cea82871d7b3b2f4c6bdb0fa9464f6a015e4c6a",
+      "exception": null
+    },
+    {
+      "slug": "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+      "title": "É possível resfriar uma casa sem ar-condicionado?",
+      "category": "funcional",
+      "beforeTags": ["eficiência energética", "sustentabilidade", "arquitetura bioclimática"],
+      "afterTags": ["arquitetura bioclimática", "resfriamento passivo", "eficiência energética"],
+      "changed": true,
+      "protectedContentSha256": "418b957bd7bc72a8ce0b67aa0f8b821c3dcd80af445e72846fa170465e97fd9a",
+      "exception": null
+    },
+    {
+      "slug": "fusao-nuclear-esta-mais-perto-mas-perto-de-que",
+      "title": "Fusão nuclear está mais perto. Mas perto de quê?",
+      "category": "ciencia",
+      "beforeTags": ["fusão nuclear", "nif", "iter", "trítio", "energia"],
+      "afterTags": ["fusão nuclear", "trítio", "nif", "iter"],
+      "changed": true,
+      "protectedContentSha256": "dab068bf9b3633b6a4e6e8d4c5d6e10f582e2b10b80c2e1c002563384ac53649",
+      "exception": null
+    },
+    {
+      "slug": "geotermia-de-nova-geracao",
+      "title": "Geotermia de nova geração: podemos levar o calor da Terra a muito mais lugares?",
+      "category": "tecnologia",
+      "beforeTags": ["geotermia", "egs", "energia firme", "perfuração", "progeo"],
+      "afterTags": ["geotermia", "egs", "energia firme", "perfuração", "progeo"],
+      "changed": false,
+      "protectedContentSha256": "9e436ea2d6fcd5438c8fd32598ec9f1214e38e051201a70051a316cc9344ab3d",
+      "exception": null
+    },
+    {
+      "slug": "o-ar-condicionado-que-funciona-sem-compressor",
+      "title": "O ar-condicionado que funciona sem compressor",
+      "category": "funcional",
+      "beforeTags": ["eficiência energética", "sustentabilidade", "tecnologia"],
+      "afterTags": ["refrigeração", "refrigeração por absorção", "eficiência energética"],
+      "changed": true,
+      "protectedContentSha256": "71e2c03cfb492d5c6e9119cdfaf32d9717a129e244ba9b34f093c63e34daf3f1",
+      "exception": null
+    },
+    {
+      "slug": "o-paradoxo-da-energia-barata",
+      "title": "O paradoxo da energia barata: Por que a conta de luz não cai apesar da revolução solar e eólica?",
+      "category": "transicao-energetica",
+      "beforeTags": [
+        "energia solar",
+        "energia eólica",
+        "tarifas",
+        "redes elétricas",
+        "brasil",
+        "brics"
+      ],
+      "afterTags": [
+        "energia solar",
+        "energia eólica",
+        "tarifas de energia",
+        "redes elétricas",
+        "brasil",
+        "brics"
+      ],
+      "changed": true,
+      "protectedContentSha256": "03dffbd9fc23aa463b5c97788141caa80c289124f5e35866138da8594714e8ff",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar",
+      "title": "O que acontece com a rede quando todo mundo instala painel solar?",
+      "category": "transicao-energetica",
+      "beforeTags": ["geração distribuída", "energia solar", "redes elétricas", "armazenamento"],
+      "afterTags": [
+        "geração distribuída",
+        "energia solar",
+        "redes elétricas",
+        "armazenamento de energia"
+      ],
+      "changed": true,
+      "protectedContentSha256": "387b0eda2dc7baa610529799ebfe06419f82cd48472cead8594088522d07e867",
+      "exception": null
+    },
+    {
+      "slug": "o-que-acontece-com-um-painel-solar-no-fim-da-vida",
+      "title": "O que acontece com um painel solar quando ele chega ao fim da vida?",
+      "category": "sustentabilidade",
+      "beforeTags": [
+        "energia solar",
+        "reciclagem",
+        "módulos fotovoltaicos",
+        "economia circular",
+        "logística reversa"
+      ],
+      "afterTags": [
+        "energia solar",
+        "reciclagem",
+        "módulos fotovoltaicos",
+        "economia circular",
+        "logística reversa"
+      ],
+      "changed": false,
+      "protectedContentSha256": "67f9c116b6080469ad110df56e9f548ac04fdd60bf62de83bd29429050a9b0bf",
+      "exception": null
+    },
+    {
+      "slug": "o-que-e-energia",
+      "title": "O que é energia?",
+      "category": "energia",
+      "beforeTags": ["energia", "eficiência energética", "energia nuclear", "energia solar"],
+      "afterTags": ["energia", "conservação de energia", "conversão de energia"],
+      "changed": true,
+      "protectedContentSha256": "77e0f0862835ae8ab59c9fc36b28b850c867d64337a2863376e897eee9a180f6",
+      "exception": null
+    },
+    {
+      "slug": "o-que-e-potencia",
+      "title": "O que é potência e por que ela não é a mesma coisa que energia?",
+      "category": "energia",
+      "beforeTags": ["potência", "energia", "eficiência energética"],
+      "afterTags": ["potência", "energia", "eficiência energética"],
+      "changed": false,
+      "protectedContentSha256": "93e06dfebf5ef8c1cbe15e9cbf65e527619fff95cfb6f8a09277b91e3aae6108",
+      "exception": null
+    },
+    {
+      "slug": "perovskita-silicio-por-que-empilhar-duas-celulas-solares",
+      "title": "Perovskita + silício: por que empilhar duas células solares?",
+      "category": "tecnologia",
+      "beforeTags": ["energia solar", "perovskita", "silício", "células tandem", "fotovoltaica"],
+      "afterTags": ["energia solar", "perovskita", "silício", "células tandem", "fotovoltaica"],
+      "changed": false,
+      "protectedContentSha256": "d486a1d01df0e0e36d8a31a54960e0dd93d4c46b2174d654d9bf80cf237cca7e",
+      "exception": null
+    },
+    {
+      "slug": "por-que-armazenar-energia-e-tao-dificil",
+      "title": "Por que armazenar energia é tão difícil?",
+      "category": "energia",
+      "beforeTags": ["armazenamento", "baterias", "longa duração", "potência"],
+      "afterTags": [
+        "armazenamento de energia",
+        "baterias",
+        "armazenamento de longa duração (ldes)",
+        "potência"
+      ],
+      "changed": true,
+      "protectedContentSha256": "71ab51036a27779fffcfcbe26bd345e070045cbd13c8e324fa62ae5c6185c608",
+      "exception": null
+    },
+    {
+      "slug": "por-que-nenhuma-maquina-e-100-eficiente",
+      "title": "Por que nenhuma máquina é 100% eficiente?",
+      "category": "energia",
+      "beforeTags": ["eficiência energética"],
+      "afterTags": ["eficiência energética", "termodinâmica", "conservação de energia"],
+      "changed": true,
+      "protectedContentSha256": "cb3532b495f4e24c20efcdcc5ba31e89ab0ea8d9ab2bd97ca4db5ee3ac7f55f9",
+      "exception": null
+    },
+    {
+      "slug": "por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade",
+      "title": "Por que o hidrogênio verde não vai substituir toda a eletricidade?",
+      "category": "energia",
+      "beforeTags": [
+        "hidrogênio verde",
+        "eletrificação",
+        "eletrólise",
+        "amônia",
+        "siderurgia",
+        "brics"
+      ],
+      "afterTags": [
+        "hidrogênio verde",
+        "eletrificação",
+        "eletrólise",
+        "amônia",
+        "siderurgia",
+        "brics"
+      ],
+      "changed": false,
+      "protectedContentSha256": "d35a8627d9b36b26d379fab3f7c7090e2150a3ff1e4679a660eec654ecd72674",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao",
+      "title": "Por que usinas solares e eólicas precisam reduzir a geração?",
+      "category": "energia",
+      "beforeTags": [
+        "curtailment",
+        "restrição de geração",
+        "energia solar",
+        "energia eólica",
+        "flexibilidade",
+        "transmissão"
+      ],
+      "afterTags": [
+        "restrição de geração (curtailment)",
+        "energia solar",
+        "energia eólica",
+        "flexibilidade do sistema elétrico",
+        "transmissão"
+      ],
+      "changed": true,
+      "protectedContentSha256": "7a84e5d02e3da62af6e43f581a3eb67fed09d5570e1a7e3452faaf5990c8e364",
+      "exception": null
+    },
+    {
+      "slug": "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
+      "title": "Temos energia. Por que não conseguimos conectá-la à rede?",
+      "category": "tecnologia",
+      "beforeTags": ["transmissão", "redes elétricas", "dlr", "gets", "facts", "htls"],
+      "afterTags": ["transmissão", "redes elétricas", "dlr", "gets", "facts", "htls"],
+      "changed": false,
+      "protectedContentSha256": "61d800578c3bdadf3e4a2c5c587959566b32d383479401c489b495439f8e63e0",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao",
+      "title": "Transição Energética Justa em Santa Catarina: Empregos e cidades depois do carvão - Parte 1",
+      "category": "transicao-energetica",
+      "beforeTags": ["carvão", "emprego", "santa catarina", "transição justa"],
+      "afterTags": [
+        "carvão",
+        "transição justa",
+        "santa catarina",
+        "emprego",
+        "requalificação profissional"
+      ],
+      "changed": true,
+      "protectedContentSha256": "59c3f452b57feb2cc71e2d8854ca753c0de79083d2e5f46889fa9f8f25c1805b",
+      "exception": null
+    },
+    {
+      "slug": "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
+      "title": "Transição Energética Justa em Santa Catarina: quem paga a conta e quem decide o futuro da região carbonífera? — Parte 2",
+      "category": "transicao-energetica",
+      "beforeTags": ["carvão", "emprego", "santa catarina", "transição justa"],
+      "afterTags": [
+        "carvão",
+        "emprego",
+        "santa catarina",
+        "transição justa",
+        "financiamento da transição",
+        "participação social"
+      ],
+      "changed": true,
+      "protectedContentSha256": "a913e8e192e568fc9eba93dc80cb54bcef2554c439acf03081405fa7dabd6d28",
+      "exception": "Preserva tecnologias distintas, siglas e contextos geográficos úteis já presentes."
+    },
+    {
+      "slug": "uma-bateria-precisa-mesmo-ser-pequena",
+      "title": "Uma bateria precisa mesmo ser pequena?",
+      "category": "tecnologia",
+      "beforeTags": [
+        "armazenamento de energia",
+        "baterias",
+        "ldes",
+        "ferro-ar",
+        "usinas reversíveis"
+      ],
+      "afterTags": [
+        "armazenamento de energia",
+        "armazenamento de longa duração (ldes)",
+        "baterias",
+        "ferro-ar",
+        "usinas reversíveis"
+      ],
+      "changed": true,
+      "protectedContentSha256": "97a91d27f5fe0daa42db6c2d4e7c5c32a186766c9ee52a7bfb25398cfc52d8db",
+      "exception": null
+    }
+  ],
+  "searchPairsLost": [
+    {
+      "slug": "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+      "query": "sustentabilidade"
+    },
+    {
+      "slug": "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+      "query": "desenvolvimento"
+    },
+    {
+      "slug": "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+      "query": "tecnologia"
+    },
+    {
+      "slug": "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+      "query": "tecnologia"
+    },
+    {
+      "slug": "a-pandemia-salvou-o-sus",
+      "query": "ciência"
+    },
+    {
+      "slug": "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+      "query": "eficiência energética"
+    },
+    {
+      "slug": "baterias-de-sodio-estao-chegando",
+      "query": "transição energética"
+    },
+    {
+      "slug": "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+      "query": "sustentabilidade"
+    },
+    {
+      "slug": "fusao-nuclear-esta-mais-perto-mas-perto-de-que",
+      "query": "energia"
+    },
+    {
+      "slug": "o-ar-condicionado-que-funciona-sem-compressor",
+      "query": "sustentabilidade"
+    },
+    {
+      "slug": "o-que-e-energia",
+      "query": "eficiência energética"
+    },
+    {
+      "slug": "o-que-e-energia",
+      "query": "energia nuclear"
+    },
+    {
+      "slug": "o-que-e-energia",
+      "query": "energia solar"
+    }
+  ],
+  "related": [
+    {
+      "slug": "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+      "before": [
+        "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+        "o-ar-condicionado-que-funciona-sem-compressor",
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol"
+      ],
+      "after": [
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+        "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+        "o-ar-condicionado-que-funciona-sem-compressor"
+      ]
+    },
+    {
+      "slug": "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+      "before": [
+        "o-ar-condicionado-que-funciona-sem-compressor",
+        "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua"
+      ],
+      "after": [
+        "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+        "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+        "o-ar-condicionado-que-funciona-sem-compressor"
+      ]
+    },
+    {
+      "slug": "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+      "before": [
+        "o-paradoxo-da-energia-barata",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar"
+      ],
+      "after": [
+        "o-paradoxo-da-energia-barata",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar"
+      ]
+    },
+    {
+      "slug": "a-energia-nuclear-esta-voltando",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-paradoxo-da-energia-barata"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-paradoxo-da-energia-barata"
+      ]
+    },
+    {
+      "slug": "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-paradoxo-da-energia-barata"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "o-paradoxo-da-energia-barata",
+        "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar"
+      ]
+    },
+    {
+      "slug": "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+      "before": [
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+        "o-ar-condicionado-que-funciona-sem-compressor",
+        "o-que-e-energia"
+      ],
+      "after": [
+        "o-que-e-potencia",
+        "por-que-nenhuma-maquina-e-100-eficiente",
+        "a-bomba-dagua-que-nao-precisa-de-eletricidade"
+      ]
+    },
+    {
+      "slug": "a-pandemia-salvou-o-sus",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-energia-nuclear-esta-voltando",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-energia-nuclear-esta-voltando",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ]
+    },
+    {
+      "slug": "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
+      "before": [
+        "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao",
+        "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
+        "a-transicao-energetica-vai-ficar-sem-cobre"
+      ],
+      "after": [
+        "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
+        "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo"
+      ]
+    },
+    {
+      "slug": "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "o-paradoxo-da-energia-barata",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "o-paradoxo-da-energia-barata",
+        "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao"
+      ]
+    },
+    {
+      "slug": "a-transicao-energetica-vai-ficar-sem-cobre",
+      "before": [
+        "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos",
+        "por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade",
+        "a-energia-nuclear-esta-voltando"
+      ],
+      "after": [
+        "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos",
+        "por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade",
+        "o-que-acontece-com-um-painel-solar-no-fim-da-vida"
+      ]
+    },
+    {
+      "slug": "a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos",
+      "before": [
+        "a-transicao-energetica-vai-ficar-sem-cobre",
+        "a-energia-nuclear-esta-voltando",
+        "baterias-de-sodio-estao-chegando"
+      ],
+      "after": [
+        "a-transicao-energetica-vai-ficar-sem-cobre",
+        "o-que-acontece-com-um-painel-solar-no-fim-da-vida",
+        "a-rede-eletrica-esta-preparada-para-a-transicao-energetica"
+      ]
+    },
+    {
+      "slug": "baterias-de-sodio-estao-chegando",
+      "before": [
+        "uma-bateria-precisa-mesmo-ser-pequena",
+        "a-energia-nuclear-esta-voltando",
+        "a-transicao-energetica-vai-ficar-sem-cobre"
+      ],
+      "after": [
+        "uma-bateria-precisa-mesmo-ser-pequena",
+        "por-que-armazenar-energia-e-tao-dificil",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ]
+    },
+    {
+      "slug": "e-possivel-produzir-eletricidade-de-dia-e-de-noite",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar",
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol"
+      ],
+      "after": [
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua"
+      ]
+    },
+    {
+      "slug": "e-possivel-resfriar-uma-casa-sem-ar-condicionado",
+      "before": [
+        "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+        "o-ar-condicionado-que-funciona-sem-compressor",
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol"
+      ],
+      "after": [
+        "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+        "o-ar-condicionado-que-funciona-sem-compressor"
+      ]
+    },
+    {
+      "slug": "fusao-nuclear-esta-mais-perto-mas-perto-de-que",
+      "before": [
+        "o-que-e-energia",
+        "o-que-e-potencia",
+        "e-possivel-produzir-eletricidade-de-dia-e-de-noite"
+      ],
+      "after": [
+        "e-possivel-produzir-eletricidade-de-dia-e-de-noite",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-energia-nuclear-esta-voltando"
+      ]
+    },
+    {
+      "slug": "geotermia-de-nova-geracao",
+      "before": [
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico",
+        "baterias-de-sodio-estao-chegando",
+        "perovskita-silicio-por-que-empilhar-duas-celulas-solares"
+      ],
+      "after": [
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico",
+        "baterias-de-sodio-estao-chegando",
+        "perovskita-silicio-por-que-empilhar-duas-celulas-solares"
+      ]
+    },
+    {
+      "slug": "o-ar-condicionado-que-funciona-sem-compressor",
+      "before": [
+        "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+        "e-possivel-resfriar-uma-casa-sem-ar-condicionado"
+      ],
+      "after": [
+        "a-bomba-dagua-que-nao-precisa-de-eletricidade",
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+        "e-possivel-resfriar-uma-casa-sem-ar-condicionado"
+      ]
+    },
+    {
+      "slug": "o-paradoxo-da-energia-barata",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar"
+      ]
+    },
+    {
+      "slug": "o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "o-paradoxo-da-energia-barata",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "o-paradoxo-da-energia-barata",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ]
+    },
+    {
+      "slug": "o-que-acontece-com-um-painel-solar-no-fim-da-vida",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "a-transicao-energetica-vai-ficar-sem-cobre"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "a-transicao-energetica-vai-ficar-sem-cobre"
+      ]
+    },
+    {
+      "slug": "o-que-e-energia",
+      "before": [
+        "o-que-e-potencia",
+        "a-chamine-que-produz-eletricidade-com-o-calor-do-sol",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua"
+      ],
+      "after": [
+        "o-que-e-potencia",
+        "por-que-nenhuma-maquina-e-100-eficiente",
+        "a-maquina-que-transforma-calor-desperdicado-em-eletricidade"
+      ]
+    },
+    {
+      "slug": "o-que-e-potencia",
+      "before": [
+        "o-que-e-energia",
+        "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+        "por-que-armazenar-energia-e-tao-dificil"
+      ],
+      "after": [
+        "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+        "o-que-e-energia",
+        "por-que-armazenar-energia-e-tao-dificil"
+      ]
+    },
+    {
+      "slug": "perovskita-silicio-por-que-empilhar-duas-celulas-solares",
+      "before": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-paradoxo-da-energia-barata"
+      ],
+      "after": [
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua",
+        "o-paradoxo-da-energia-barata"
+      ]
+    },
+    {
+      "slug": "por-que-armazenar-energia-e-tao-dificil",
+      "before": [
+        "o-que-e-potencia",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ],
+      "after": [
+        "uma-bateria-precisa-mesmo-ser-pequena",
+        "baterias-de-sodio-estao-chegando",
+        "o-que-e-potencia"
+      ]
+    },
+    {
+      "slug": "por-que-nenhuma-maquina-e-100-eficiente",
+      "before": [
+        "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+        "o-que-e-energia",
+        "o-que-e-potencia"
+      ],
+      "after": [
+        "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
+        "o-que-e-energia",
+        "o-que-e-potencia"
+      ]
+    },
+    {
+      "slug": "por-que-o-hidrogenio-verde-nao-vai-substituir-toda-a-eletricidade",
+      "before": [
+        "a-transicao-energetica-vai-ficar-sem-cobre",
+        "o-paradoxo-da-energia-barata",
+        "a-rede-eletrica-esta-preparada-para-a-transicao-energetica"
+      ],
+      "after": [
+        "a-transicao-energetica-vai-ficar-sem-cobre",
+        "o-paradoxo-da-energia-barata",
+        "a-rede-eletrica-esta-preparada-para-a-transicao-energetica"
+      ]
+    },
+    {
+      "slug": "por-que-usinas-solares-e-eolicas-precisam-reduzir-a-geracao",
+      "before": [
+        "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua"
+      ],
+      "after": [
+        "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-transicao-energetica-vai-aumentar-o-consumo-de-agua"
+      ]
+    },
+    {
+      "slug": "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
+      "before": [
+        "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo"
+      ],
+      "after": [
+        "a-rede-eletrica-esta-preparada-para-a-transicao-energetica",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo"
+      ]
+    },
+    {
+      "slug": "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao",
+      "before": [
+        "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-energia-nuclear-esta-voltando"
+      ],
+      "after": [
+        "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-energia-nuclear-esta-voltando"
+      ]
+    },
+    {
+      "slug": "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
+      "before": [
+        "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-energia-nuclear-esta-voltando"
+      ],
+      "after": [
+        "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao",
+        "a-conta-da-transicao-energetica-entre-a-geracao-barata-e-o-sistema-complexo",
+        "a-energia-nuclear-esta-voltando"
+      ]
+    },
+    {
+      "slug": "uma-bateria-precisa-mesmo-ser-pequena",
+      "before": [
+        "baterias-de-sodio-estao-chegando",
+        "por-que-armazenar-energia-e-tao-dificil",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ],
+      "after": [
+        "por-que-armazenar-energia-e-tao-dificil",
+        "baterias-de-sodio-estao-chegando",
+        "a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico"
+      ]
+    }
+  ]
+}

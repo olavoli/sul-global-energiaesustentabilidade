@@ -83,7 +83,8 @@ describe("ART-031 — integração fiel e aprovação editorial proporcional", (
     expect(parsed.frontmatter.status).toBe("published");
     expect(parsed.frontmatter.author).toBe("olavo-oliveira");
     expect(parsed.frontmatter.category).toBe("politicas-publicas");
-    expect(parsed.frontmatter.tags).toContain("políticas públicas");
+    expect(parsed.frontmatter.tags).toContain("saúde pública");
+    expect(parsed.frontmatter.tags).toContain("financiamento da saúde");
     expect(parsed.frontmatter.approvedAt).toBeDefined();
     expect(parsed.frontmatter.publishedAt).toBe("2026-10-12");
     expect(parsed.frontmatter.cover.license).toBe("pending");
