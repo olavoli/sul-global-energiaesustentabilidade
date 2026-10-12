@@ -1,4 +1,5 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { basename, join, relative, resolve } from "node:path";
 
 import {
@@ -10,7 +11,13 @@ import {
 } from "../src/content/schema";
 import { authors } from "../src/data/authors";
 import { parseEditorialFile, type ParsedEditorialFile } from "./generate-content";
-import { evaluateResearch, loadResearchBrief, type ResearchReport } from "./research-operations";
+import {
+  evaluateResearch,
+  loadResearchBrief,
+  residualRiskApprovalSchema,
+  type ResidualRiskApproval,
+  type ResearchReport,
+} from "./research-operations";
 
 export const allowedTransitions: Readonly<Record<ArticleStatus, readonly ArticleStatus[]>> = {
   draft: ["review"],
@@ -52,10 +59,25 @@ export async function loadEditorialFiles(root = process.cwd()): Promise<ParsedEd
 export function reviewArticle(
   article: ArticleFrontmatter,
   authorDirectory: Readonly<Record<string, Author>> = authors,
+  riskApproval?: ResidualRiskApproval,
 ): ReviewReport {
   const blockers: string[] = [];
   const warnings: string[] = [];
   const checks = ["schema válido", "slug e taxonomia válidos"];
+  const decision = riskApproval ? residualRiskApprovalSchema.parse(riskApproval) : undefined;
+  if (
+    decision &&
+    (decision.articleSlug !== article.slug ||
+      authorDirectory[decision.responsible]?.status !== "verified")
+  ) {
+    blockers.push("Decisão de riscos exige escopo do artigo e responsável verified.");
+  }
+  const acceptsLicense =
+    decision?.articleSlug === article.slug &&
+    authorDirectory[decision.responsible]?.status === "verified" &&
+    decision.acceptedRisks.some((risk) => risk.code === "image-license-documentation") &&
+    article.cover.license === "pending" &&
+    article.cover.aiProvenance?.status === "verified";
   const author = authorDirectory[article.author];
 
   if (!author) blockers.push("Autor inexistente.");
@@ -72,7 +94,11 @@ export function reviewArticle(
   if (article.sources.some((source) => source.isDemo))
     blockers.push("Fonte demo não sustenta conteúdo real.");
   if (!article.cover.license || ["unknown", "pending"].includes(article.cover.license)) {
-    blockers.push("Imagem sem licença verificável.");
+    if (acceptsLicense)
+      warnings.push(
+        `Documentação de licença pendente aceita por ${decision?.responsible}; proveniência registrada, sem atribuir licença.`,
+      );
+    else blockers.push("Imagem sem licença verificável.");
   }
   if (article.cover.src.includes("pendente")) warnings.push("Imagem ainda usa caminho provisório.");
   if (/\[RASCUNHO\]|provisóri|pendente/i.test(article.title))
@@ -98,9 +124,10 @@ export function publishCheck(
   article: ArticleFrontmatter,
   context: OperationContext,
   authorDirectory: Readonly<Record<string, Author>> = authors,
+  riskApproval?: ResidualRiskApproval,
 ): ReviewReport {
-  const report = reviewArticle(article, authorDirectory);
-  if (!article.isDemo && !["approved", "scheduled"].includes(article.status)) {
+  const report = reviewArticle(article, authorDirectory, riskApproval);
+  if (!article.isDemo && !["approved", "scheduled", "published"].includes(article.status)) {
     report.blockers.push("Publicação exige estado approved ou scheduled elegível.");
   }
   if (article.isDemo)
@@ -149,7 +176,8 @@ export function prepareStatusChange(
   target: ArticleStatus,
   context: OperationContext,
   authorDirectory: Readonly<Record<string, Author>> = authors,
-  researchReport?: Pick<ResearchReport, "readyForWriting" | "blockers">,
+  researchReport?: Pick<ResearchReport, "readyForWriting" | "blockers"> &
+    Partial<Pick<ResearchReport, "readyForReview" | "riskApproval">>,
 ): { content: string; summary: string } {
   const current = parseEditorialFile(source).frontmatter;
   if (!allowedTransitions[current.status].includes(target)) {
@@ -163,7 +191,10 @@ export function prepareStatusChange(
     throw new Error("Conteúdo real exige autor verified antes de sair de draft.");
   }
   if (!current.isDemo && current.status === "draft" && target === "review") {
-    if (!researchReport?.readyForWriting) {
+    if (
+      !researchReport?.readyForWriting &&
+      !(researchReport?.readyForReview && researchReport.riskApproval)
+    ) {
       throw new Error(
         `Pesquisa ainda não permite review: ${researchReport?.blockers.join(" ") ?? "briefing ausente."}`,
       );
@@ -171,7 +202,7 @@ export function prepareStatusChange(
     if (current.draftStage !== "review-ready") {
       throw new Error("Draft deve estar em draftStage: review-ready antes do review.");
     }
-    const report = reviewArticle(current, authorDirectory);
+    const report = reviewArticle(current, authorDirectory, researchReport?.riskApproval);
     if (report.blockers.length > 0) throw new Error(report.blockers.join("\n"));
   }
 
@@ -179,7 +210,7 @@ export function prepareStatusChange(
   const today = context.now.toISOString().slice(0, 10);
   if (target === "approved") content = setYamlField(content, "approvedAt", today);
   if (target === "published") {
-    const report = publishCheck(current, context, authorDirectory);
+    const report = publishCheck(current, context, authorDirectory, researchReport?.riskApproval);
     if (report.blockers.length > 0) throw new Error(report.blockers.join("\n"));
     content = setYamlField(content, "publishedAt", current.publishedAt ?? today);
   }
@@ -218,19 +249,31 @@ async function main(): Promise<void> {
   if (command === "list") return console.log(listArticles(files));
   const file = files.find((candidate) => candidate.frontmatter.slug === slug);
   if (!file) throw new Error(`Artigo não encontrado: ${slug ?? "(slug ausente)"}.`);
-  if (command === "review") return console.log(formatReport(reviewArticle(file.frontmatter)));
+  const researchReport = existsSync(resolve("content/research", `${file.frontmatter.slug}.yml`))
+    ? evaluateResearch(await loadResearchBrief(file.frontmatter.slug))
+    : undefined;
+  if (researchReport?.riskApproval && !researchReport.readyForReview) {
+    throw new Error(
+      `Decisão não supera impedimentos restantes: ${researchReport.blockers.join(" ")}`,
+    );
+  }
+  if (command === "review")
+    return console.log(
+      formatReport(reviewArticle(file.frontmatter, authors, researchReport?.riskApproval)),
+    );
   if (command === "publish-check") {
-    const report = publishCheck(file.frontmatter, defaultContext());
+    const report = publishCheck(
+      file.frontmatter,
+      defaultContext(),
+      authors,
+      researchReport?.riskApproval,
+    );
     console.log(formatReport(report));
     if (report.blockers.length > 0) process.exitCode = 1;
     return;
   }
   if (command === "status") {
     if (!target) throw new Error("Informe o novo status.");
-    const researchReport =
-      file.frontmatter.status === "draft" && target === "review" && !file.frontmatter.isDemo
-        ? evaluateResearch(await loadResearchBrief(file.frontmatter.slug))
-        : undefined;
     const result = prepareStatusChange(
       await readFile(file.path, "utf8"),
       target as ArticleStatus,

@@ -1,0 +1,142 @@
+[
+  {
+    "key": "hero",
+    "input": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 031\\Hero - SUS Entre Esperança e Crise.png",
+    "original": "public/images/articles/a-pandemia-salvou-o-sus/art-031-hero.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2813464,
+    "sha256": "c01cc30ba33eb0c90ae73ef7e47277e8e2962496de29521034724f559620fc71",
+    "variants": [
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-hero-720.webp",
+        "width": 720,
+        "height": 405,
+        "bytes": 77028
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-hero-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 174262
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-hero-1536.webp",
+        "width": 1536,
+        "height": 864,
+        "bytes": 242962
+      }
+    ],
+    "fallback": {
+      "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-hero-1200.webp",
+      "width": 1200,
+      "height": 675,
+      "bytes": 174262
+    },
+    "alt": "Ilustração de profissionais e usuários do SUS diante de um cenário que contrapõe esperança e dificuldades no financiamento da saúde.",
+    "caption": "Ilustração editorial sobre o SUS, entre reconhecimento social e desafios estruturais.",
+    "publicationBlocked": false
+  },
+  {
+    "key": "financiamento",
+    "input": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 031\\Imagem 1 - Financiamento do SUS_ 2016–2026 (1).png",
+    "original": "public/images/articles/a-pandemia-salvou-o-sus/art-031-financiamento.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 1993341,
+    "sha256": "5e8dcbc86094cbfee316ed0c41d2249181cca1e0ec09858a3021f90e58cdb4ae",
+    "variants": [
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-financiamento-720.webp",
+        "width": 720,
+        "height": 1279,
+        "bytes": 156854
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-financiamento-941.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 222866
+      }
+    ],
+    "fallback": {
+      "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-financiamento-941.webp",
+      "width": 941,
+      "height": 1672,
+      "bytes": 222866
+    },
+    "alt": "Infográfico fornecido sobre financiamento do SUS entre 2016 e 2026, com linha do tempo e gráfico de gastos federais.",
+    "caption": "Figura 2. Financiamento do SUS e marcos fiscais, conforme o infográfico fornecido.",
+    "publicationBlocked": true
+  },
+  {
+    "key": "legado",
+    "input": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 031\\Imagem 2 - Infográfico SUS_ legado da pandemia.png",
+    "original": "public/images/articles/a-pandemia-salvou-o-sus/art-031-legado.png",
+    "width": 941,
+    "height": 1672,
+    "bytes": 2451712,
+    "sha256": "a98b632882251c07fa553440394d86759b6e1e20842aecdc58412464e8342c1e",
+    "variants": [
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-legado-720.webp",
+        "width": 720,
+        "height": 1279,
+        "bytes": 208180
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-legado-941.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 307006
+      }
+    ],
+    "fallback": {
+      "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-legado-941.webp",
+      "width": 941,
+      "height": 1672,
+      "bytes": 307006
+    },
+    "alt": "Infográfico fornecido sobre o legado da pandemia para o SUS nas dimensões social, institucional e financeira.",
+    "caption": "Figura 3. As dimensões social, institucional e financeira do legado da pandemia, conforme o infográfico fornecido.",
+    "publicationBlocked": true
+  },
+  {
+    "key": "viva-o-sus",
+    "input": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 031\\Imsgem 3  - Viva o SUS_ Saúde e Esperança no Brasil (1).png",
+    "original": "public/images/articles/a-pandemia-salvou-o-sus/art-031-viva-o-sus.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2115730,
+    "sha256": "4ccf9ea1bc8ba56de0ffac66229165c87cbb3c51c6e1ac8eea66a21f9cefbce9",
+    "variants": [
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-viva-o-sus-720.webp",
+        "width": 720,
+        "height": 405,
+        "bytes": 58240
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-viva-o-sus-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 118280
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-viva-o-sus-1536.webp",
+        "width": 1536,
+        "height": 864,
+        "bytes": 158716
+      }
+    ],
+    "fallback": {
+      "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-viva-o-sus-1200.webp",
+      "width": 1200,
+      "height": 675,
+      "bytes": 118280
+    },
+    "alt": "Ilustração com profissionais de saúde, bandeira brasileira e a expressão Viva o SUS.",
+    "caption": "Figura 4. Viva o SUS: saúde pública como patrimônio coletivo.",
+    "publicationBlocked": false
+  }
+]

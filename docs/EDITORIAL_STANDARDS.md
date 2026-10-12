@@ -74,3 +74,8 @@ Os 12 artigos atuais permanecem `isDemo: true`, com capas de licença desconheci
 Conteúdo real pode coexistir com demos, mas a home de produção usa somente material real publicável e aceita estado vazio honesto. Autores possuem `demo`, `pending`, `verified` ou `inactive`; somente `verified` permite conteúdo real sair de draft. `pending` pode assinar scaffold/draft, credenciais são opcionais e mudanças de status nunca alteram `isDemo`.
 
 O gate para review exige pesquisa `ready-for-writing`, artigo `review-ready`, fontes confirmadas, fact-checks concluídos, conflitos avaliados e imagem licenciada. Onboarding e briefing permanecem privados e fora da distribuição.
+
+Pendências documentais específicas podem ser aceitas expressamente por responsável
+verified no briefing, conforme `EDITORIAL_OPERATIONS.md`, seção “Aprovação
+proporcional de riscos residuais”. Isso permite review sem alterar os estados
+reais de pesquisa e não dispensa impedimentos concretos ou controles de integridade.

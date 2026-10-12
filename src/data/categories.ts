@@ -3,6 +3,11 @@ import { normalize } from "@/lib/format";
 
 export const categories = [
   {
+    slug: "politicas-publicas",
+    name: "Políticas Públicas",
+    description: "Políticas públicas, saúde coletiva, financiamento e instituições brasileiras.",
+  },
+  {
     slug: "energia",
     name: "Energia",
     description: "Mercado, infraestrutura e regulação do setor elétrico brasileiro e global.",

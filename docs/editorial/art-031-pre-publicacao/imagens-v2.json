@@ -1,0 +1,48 @@
+[
+  {
+    "key": "financiamento",
+    "originalPreserved": "art-031-financiamento.png",
+    "edited": "public\\images\\articles\\a-pandemia-salvou-o-sus\\art-031-financiamento-v2.png",
+    "sha256": "404951ec4c62449b1eddaf9b781495ed9cf7cfa40bf7c59e4fe751d2de21ce77",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-financiamento-v2-720.webp",
+        "width": 720,
+        "height": 1279,
+        "bytes": 197228
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-financiamento-v2-941.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 284840
+      }
+    ],
+    "provenance": "ChatGPT: geração/edição para esta rodada; números não comprovados substituídos por síntese qualitativa."
+  },
+  {
+    "key": "legado",
+    "originalPreserved": "art-031-legado.png",
+    "edited": "public\\images\\articles\\a-pandemia-salvou-o-sus\\art-031-legado-v2.png",
+    "sha256": "d4af9843191a80a7c3651198ad4f05d27fe9ba3eaded13df3ddff9f9bb96a26e",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-legado-v2-720.webp",
+        "width": 720,
+        "height": 1279,
+        "bytes": 190656
+      },
+      {
+        "src": "/images/articles/a-pandemia-salvou-o-sus/art-031-legado-v2-941.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 271266
+      }
+    ],
+    "provenance": "ChatGPT: geração/edição para esta rodada; números não comprovados substituídos por síntese qualitativa."
+  }
+]

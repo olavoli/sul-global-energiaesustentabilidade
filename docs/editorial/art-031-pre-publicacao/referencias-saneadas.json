@@ -1,0 +1,114 @@
+[
+  {
+    "number": 1,
+    "previous": "[1] CONSELHO NACIONAL DE SAÚDE. Relatório Final da 16ª Conferência Nacional de Saúde. Brasília: CNS, 2023. Disponível em: https://conselho.saude.gov.br",
+    "replacement": "[1] VIEIRA, F. S.; BENEVIDES, R. P. S. Os Impactos do novo regime fiscal para o financiamento do Sistema Único de Saúde e para a efetivação do direito à saúde no Brasil. Ipea, Nota Técnica 28, 2016. https://repositorio.ipea.gov.br/items/55b935f8-aa07-496a-814e-63fd27cd9f13",
+    "url": "https://repositorio.ipea.gov.br/items/55b935f8-aa07-496a-814e-63fd27cd9f13",
+    "scope": "Projeções condicionais do regime fiscal; não perda realizada de R$ 48 bilhões."
+  },
+  {
+    "number": 2,
+    "previous": "[2] DATAFOLHA. Opinião dos brasileiros sobre o SUS. São Paulo: Datafolha, 2021. Disponível em: https://datafolha.folha.uol.com.br",
+    "replacement": "[2] CONSELHO FEDERAL DE MEDICINA/DATAFOLHA. Pesquisa sobre saúde e acesso à rede pública, 2018. https://portal.cfm.org.br/images/PDF/datafolha_sus_cfm2018.pdf",
+    "url": "https://portal.cfm.org.br/images/PDF/datafolha_sus_cfm2018.pdf",
+    "scope": "Questionário distingue avaliação geral da saúde e acesso à rede pública; não série de confiança."
+  },
+  {
+    "number": 3,
+    "previous": "[3] IBGE. Assistência Médica Sanitária 2022. Rio de Janeiro: IBGE, 2023. Disponível em: https://www.ibge.gov.br",
+    "replacement": "[3] BRASIL. Lei nº 8.080, de 19 de setembro de 1990. https://www.planalto.gov.br/ccivil_03/leis/l8080.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8080.htm",
+    "scope": "Direção em cada esfera e descentralização; artigos 7 e 9."
+  },
+  {
+    "number": 4,
+    "previous": "[4] MINISTÉRIO DA SAÚDE. Atlas da Atenção Primária à Saúde. Brasília: MS, 2022. Disponível em: https://aps.saude.gov.br",
+    "replacement": "[4] MEDINA, M. G. et al. Atenção primária à saúde em tempos de COVID-19: o que fazer? Cadernos de Saúde Pública, 36(8), 2020. DOI: 10.1590/0102-311X00149720. https://www.scielo.br/j/csp/a/rYKzdVs9CwSSHNrPTcBb7Yy/?ilang=pt_BR&lang=pt",
+    "url": "https://www.scielo.br/j/csp/a/rYKzdVs9CwSSHNrPTcBb7Yy/?ilang=pt_BR&lang=pt",
+    "scope": "Análise e recomendações de APS; não cobertura de 63% ou resultado longitudinal até 2026."
+  },
+  {
+    "number": 5,
+    "previous": "[5] FUNDAÇÃO OSWALDO CRUZ. MonitoraCovid-19: Leitos de UTI no Brasil. Rio de Janeiro: Fiocruz, 2021. Disponível em: https://monitoracovid.fiocruz.br",
+    "replacement": "[5] PERES, I. T. et al. Sociodemographic factors associated with COVID-19 in-hospital mortality in Brazil. Public Health, 192, 15–20, 2021. DOI: 10.1016/j.puhe.2021.01.005. https://pubmed.ncbi.nlm.nih.gov/33607516/",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33607516/",
+    "scope": "Internações, UTI e desigualdades; não expansão de 15 mil leitos."
+  },
+  {
+    "number": 10,
+    "previous": "[10] SCHMIDT, B. et al. \"Confiança nas instituições de saúde durante a pandemia no Brasil\". Ciência & Saúde Coletiva, v.27, n.6, 2022. Disponível em: https://www.cienciaesaudecoletiva.com.br",
+    "replacement": "[10] SARDINHA, D. M. et al. Prevalence of COVID-19 vaccine hesitancy in Brazil: a systematic review and meta-analysis. Frontiers in Public Health, 13, 2025. DOI: 10.3389/fpubh.2025.1622247. https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1622247/full",
+    "url": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1622247/full",
+    "scope": "Hesitação heterogênea entre estudos; não mede confiança em todo o SUS."
+  },
+  {
+    "number": 12,
+    "previous": "[12] TRIBUNAL DE CONTAS DA UNIÃO. Acórdão nº 1.234/2022 – Auditoria em OSs na Saúde. Brasília: TCU, 2022. Disponível em: https://tcu.jus.br",
+    "replacement": "[12] BRASIL. Lei nº 9.637, de 15 de maio de 1998. https://www.planalto.gov.br/ccivil_03/leis/l9637.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9637.htm",
+    "scope": "OSs e contratos de gestão; não demonstra aceleração na pandemia nem PPPs."
+  },
+  {
+    "number": 13,
+    "previous": "[13] GADELHA, C.A.G. \"Complexo econômico-industrial da saúde e privatização\". Cadernos de Saúde Pública, v.38, n.3, 2022. Disponível em: https://cadernos.ensp.fiocruz.br",
+    "replacement": "[13] CONTREIRAS, H.; MATTA, G. C. Privatização da gestão do sistema municipal de saúde por meio de Organizações Sociais na cidade de São Paulo, Brasil: caracterização e análise da regulação. Cadernos de Saúde Pública, 31(2), 285–297, 2015. DOI: 10.1590/0102-311X00015914. https://www.scielo.br/j/csp/a/jkFv3sVQhYX4Q6CKQnbhNwB/?lang=pt",
+    "url": "https://www.scielo.br/j/csp/a/jkFv3sVQhYX4Q6CKQnbhNwB/?lang=pt",
+    "scope": "Regulação e controle em São Paulo; não efeitos universais de OSs."
+  },
+  {
+    "number": 14,
+    "previous": "[14] SANTOS, L. et al. \"Desempenho de municípios com e sem OSs na APS\". Revista Brasileira de Ciências Sociais, v.37, n.109, 2022. Disponível em: https://anpocs.org",
+    "replacement": "[14] PILOTTO, B. S.; JUNQUEIRA, V. Organizações Sociais do setor de saúde no estado de São Paulo: avanços e limites do controle externo. Serviço Social & Sociedade, 130, 547–563, 2017. DOI: 10.1590/0101-6628.123. https://www.scielo.br/j/sssoc/a/MhHy6ytmCHGBdDgF4ntBsHf/?lang=pt",
+    "url": "https://www.scielo.br/j/sssoc/a/MhHy6ytmCHGBdDgF4ntBsHf/?lang=pt",
+    "scope": "Relatórios de controle externo; não comparação municipal de custos e continuidade."
+  },
+  {
+    "number": 15,
+    "previous": "[15] UNIVERSIDADE DE SÃO PAULO. Excesso de mortalidade no Brasil durante a pandemia. São Paulo: USP/CDC, 2023. Disponível em: https://mortalidade.usp.br",
+    "replacement": "[15] SANTOS, A. M. dos et al. Excess deaths from all causes and by COVID-19 in Brazil in 2020. Revista de Saúde Pública, 55, 71, 2021. DOI: 10.11606/s1518-8787.2021055004137. https://revistas.usp.br/rsp/pt_BR/article/view/192892",
+    "url": "https://revistas.usp.br/rsp/pt_BR/article/view/192892",
+    "scope": "SIM 2020 comparado ao esperado; excesso por todas as causas não é total de Covid."
+  },
+  {
+    "number": 16,
+    "previous": "[16] WERNECK, J.; BATISTA, L. \"Racismo estrutural e mortalidade por Covid-19\". Saúde e Sociedade, v.30, n.2, 2021. Disponível em: https://www.revistas.usp.br/sauesoc",
+    "replacement": "[16] PERES, I. T. et al. Sociodemographic factors associated with COVID-19 in-hospital mortality in Brazil. Public Health, 192, 15–20, 2021. DOI: 10.1016/j.puhe.2021.01.005. https://pubmed.ncbi.nlm.nih.gov/33607516/",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33607516/",
+    "scope": "Adultos hospitalizados, fevereiro–agosto de 2020; associação ajustada, não causalidade populacional."
+  },
+  {
+    "number": 17,
+    "previous": "[17] AGÊNCIA NACIONAL DE SAÚDE SUPLEMENTAR. Impacto da pandemia nos procedimentos eletivos. Rio de Janeiro: ANS, 2022. Disponível em: https://ans.gov.br",
+    "replacement": "[17] RIBEIRO, C. M.; CORREA, F. M.; MIGOWSKI, A. Efeitos de curto prazo da pandemia de COVID-19 na realização de procedimentos de rastreamento, investigação diagnóstica e tratamento do câncer no Brasil: estudo descritivo, 2019-2020. Epidemiologia e Serviços de Saúde, 31(1), 2022. DOI: 10.1590/S1679-49742022000100010. https://www.scielo.br/j/ress/a/txZ8ZMpQ3FgcLdpLrh8LbbD/?lang=pt",
+    "url": "https://www.scielo.br/j/ress/a/txZ8ZMpQ3FgcLdpLrh8LbbD/?lang=pt",
+    "scope": "SIA/SIH, 2019 versus 2020; citologia e mamografias, não consultas gerais ou desfechos por décadas."
+  },
+  {
+    "number": 18,
+    "previous": "[18] INSTITUTO QUESTÃO DE CIÊNCIA. Percepção pública sobre ciência e saúde no Brasil. São Paulo: IQC, 2024. Disponível em: https://iqc.org.br",
+    "replacement": "[18] CONSELHO NACIONAL DE SAÚDE. Resolução nº 719, 2023. Diretrizes, propostas e moções da 17ª Conferência Nacional de Saúde. https://www.gov.br/conselho-nacional-de-saude/pt-br/atos-normativos/resolucoes/2023/resolucao-no-719.pdf",
+    "url": "https://www.gov.br/conselho-nacional-de-saude/pt-br/atos-normativos/resolucoes/2023/resolucao-no-719.pdf",
+    "scope": "Deliberação da conferência, não pesquisa representativa de opinião."
+  },
+  {
+    "number": 19,
+    "previous": "[19] FIOCRUZ. Rede Genômica Fiocruz: Relatório Técnico 2023. Rio de Janeiro: Fiocruz, 2023. Disponível em: https://genomahcov.fiocruz.br",
+    "replacement": "[19] FIOCRUZ. Rede Genômica: Dúvidas. https://redegenomica.fiocruz.br/duvidas/",
+    "url": "https://redegenomica.fiocruz.br/duvidas/",
+    "scope": "Organização do sequenciamento e vigilância de variantes; página sem ano bibliográfico presumido."
+  },
+  {
+    "number": 20,
+    "previous": "[20] MEDINA, M.G. et al. \"Programa Mais Médicos e cobertura da APS pós-Covid\". Epidemiologia e Serviços de Saúde, v.32, n.1, 2023. Disponível em: https://scielosp.org",
+    "replacement": "[20] BRASIL. Decreto nº 7.508, de 28 de junho de 2011. https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm",
+    "scope": "Comissões intergestores, artigos 30–32; não mede reposição do Mais Médicos."
+  },
+  {
+    "number": 21,
+    "previous": "[21] TESOURO NACIONAL. Relatório de Execução Orçamentária da Saúde 2020-2022. Brasília: STN, 2023. Disponível em: https://tesourotransparente.gov.br",
+    "replacement": "[21] TESOURO NACIONAL. Despesas pagas pela União: metodologia e painéis. https://www.tesourotransparente.gov.br/paginas-complementares/despesas-pagas-pela-uniao",
+    "url": "https://www.tesourotransparente.gov.br/paginas-complementares/despesas-pagas-pela-uniao",
+    "scope": "Créditos extraordinários em funções distintas; saúde discricionária não equivale a gasto total em saúde."
+  }
+]

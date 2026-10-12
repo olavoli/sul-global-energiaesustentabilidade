@@ -1,0 +1,222 @@
+[
+  {
+    "before": "Reconhecimento ≠ Fortalecimento: A pandemia elevou a aprovação social do SUS a patamares históricos, mas não garantiu ganhos institucionais duradouros nem sustentabilidade financeira pós-crise.",
+    "after": "Reconhecimento ≠ Fortalecimento: Na leitura editorial, a pandemia ampliou a visibilidade do SUS, mas reconhecimento não garante ganhos institucionais duradouros nem sustentabilidade financeira pós-crise.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Financiamento Extraordinário é Efêmero: O aporte de recursos durante a emergência foi vital, porém temporário; o subfinanciamento crônico retornou com força após 2022, agravado pelo teto de gastos (EC 95) e pela transição para o novo arcabouço fiscal.",
+    "after": "Financiamento Extraordinário é Efêmero: O aporte de recursos durante a emergência foi vital, porém temporário; o financiamento permanente permanece no centro do debate sobre regras fiscais e necessidades de saúde.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Privatização Silenciosa: O Decreto nº 10.530/2020 e a expansão de Organizações Sociais (OSs) e PPPs consolidaram uma transferência de gestão que fragmenta a coordenação estatal e ameaça os princípios de integralidade e universalidade.",
+    "after": "Privatização Silenciosa: O Decreto nº 10.530/2020, revogado dois dias depois de sua edição, propôs estudos de parcerias para a atenção primária. O debate sobre Organizações Sociais (OSs) e PPPs permanece: para seus críticos, a transferência de gestão pode fragmentar a coordenação estatal e ameaçar os princípios de integralidade e universalidade.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Custo Humano Desigual: O excesso de mortalidade atingiu desproporcionalmente populações negras, periféricas e dependentes exclusivos do SUS, evidenciando que a crise sanitária amplificou iniquidades históricas.",
+    "after": "Custo Humano Desigual: Estudos de mortalidade e internações documentaram desigualdades sociais e raciais, evidenciando como a crise sanitária expôs iniquidades históricas.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Legado Híbrido: Avanços na vigilância genômica e na vacinação em massa coexistem com a perda de capacidade de atenção primária, interrupção de tratamentos crônicos e desgaste severo da força de trabalho em saúde.",
+    "after": "Legado Híbrido: Avanços na vigilância genômica e na vacinação em massa coexistem com desafios de continuidade da atenção primária e interrupções documentadas no cuidado do câncer.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Para entender o impacto da pandemia, é necessário mapear o terreno pré-existente. Em 2016, a Emenda Constitucional nº 95 instituiu o Novo Regime Fiscal, congelando despesas primárias federais por 20 anos. Na saúde, isso significou uma perda acumulada estimada em R$ 48 bilhões entre 2018 e 2022, segundo cálculos do Conselho Nacional de Saúde (CNS) [1]. O SUS operava, portanto, sob uma tensão permanente: demanda crescente e recursos decrescentes em termos reais.",
+    "after": "Para entender o impacto da pandemia, é necessário mapear o terreno pré-existente. Em 2016, a Emenda Constitucional nº 95 instituiu o Novo Regime Fiscal, com prazo originalmente previsto de 20 anos e limites de despesas primárias corrigidos pela inflação. Na saúde, uma análise prospectiva do Ipea alertou para perdas de financiamento em comparação com a regra de vinculação às receitas, dependendo do cenário econômico [1]. O SUS operava, portanto, sob uma tensão permanente: demanda crescente e restrições à expansão dos recursos.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "A percepção social era ambivalente. Pesquisas do Datafolha e IBOPE mostravam que, embora o SUS fosse reconhecido como essencial por mais de 70% dos brasileiros, a avaliação da qualidade dos serviços era consistentemente negativa, especialmente nas grandes cidades [2]. Havia uma dissociação cognitiva: valorizava-se o princípio da saúde universal, mas desconfiava-se da execução. Essa desconexão seria crucial para entender os debates posteriores sobre privatização.",
+    "after": "A percepção social era ambivalente. Uma pesquisa Datafolha encomendada pelo Conselho Federal de Medicina em 2018 documentou dificuldades de acesso a serviços da rede pública, incluindo consultas, exames e internações [2]. Na leitura editorial, havia uma dissociação: valorizava-se o princípio da saúde universal, mas desconfiava-se da execução. Essa desconexão seria crucial para entender os debates posteriores sobre privatização.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Institucionalmente, o sistema enfrentava desafios de coordenação federativa. A descentralização, conquista fundamental da reforma sanitária, havia criado 5.570 sistemas municipais de saúde com capacidades técnicas e financeiras extremamente heterogêneas [3]. A regionalização avançava lentamente, e a Atenção Primária à Saúde (APS), apesar da Estratégia Saúde da Família cobrir cerca de 63% da população, sofria com rotatividade de profissionais e infraestrutura precária em áreas vulneráveis [4].",
+    "after": "Institucionalmente, o sistema enfrentava desafios de coordenação federativa. A descentralização, conquista fundamental da reforma sanitária, atribuiu responsabilidades às três esferas de governo, com direção do SUS em cada uma delas [3]. A regionalização e a Atenção Primária à Saúde (APS) exigiam coordenação e continuidade do cuidado, especialmente em territórios vulneráveis, desafios discutidos por pesquisadores da área [4].",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Na ponta, o SUS demonstrou capacidade extraordinária. Em menos de seis meses, leitos de UTI foram ampliados em mais de 15.000 unidades, muitas em hospitais que nunca haviam operado terapia intensiva [5]. A vigilância epidemiológica, apesar das limitações, produziu dados essenciais para modelagem e tomada de decisão local. A Fiocruz e o Instituto Butantan tornaram-se protagonistas globais na produção de vacinas e insumos, reafirmando a importância estratégica do complexo industrial da saúde pública [6].",
+    "after": "Na ponta, o SUS demonstrou capacidade extraordinária. A rede hospitalar enfrentou uma demanda intensa por internações e terapia intensiva; estudos nacionais documentaram desigualdades no acesso à UTI e nos desfechos hospitalares [5]. A vigilância epidemiológica, apesar das limitações, produziu dados essenciais para modelagem e tomada de decisão local. O Instituto Butantan ampliou sua atuação na produção de vacinas, documentada em seu relatório de atividades, reafirmando a importância estratégica do complexo industrial da saúde pública [6].",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Contudo, a coordenação nacional foi marcada por negacionismo, atrasos na aquisição de vacinas e conflitos abertos com governadores e prefeitos [7]. O Ministério da Saúde, que deveria ser o indutor da política nacional, tornou-se, em diversos momentos, um obstáculo. Isso forçou estados e municípios a assumirem responsabilidades que extrapolavam suas competências legais e financeiras, criando uma \"federalização de fato\" da resposta à pandemia [8].",
+    "after": "Contudo, a coordenação nacional foi objeto de críticas por sua insuficiência e pelos conflitos com governadores e prefeitos. Castro e colaboradores relacionam a disseminação da Covid-19 à falha de respostas rápidas, coordenadas e equitativas, em um contexto de desigualdades locais [7]. Na leitura editorial deste artigo, o Ministério da Saúde, que deveria ser o indutor da política nacional, tornou-se, em diversos momentos, um obstáculo. Abrucio e colaboradores interpretam o enfrentamento da pandemia como um caso de descoordenação intergovernamental, com conflitos entre a União e os governos subnacionais [8].",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "A vacinação, quando finalmente iniciada em janeiro de 2021, foi um triunfo logístico do SUS. Em 12 meses, mais de 180 milhões de pessoas receberam esquema completo, uma das campanhas mais rápidas do mundo em proporção populacional [9]. Mas esse sucesso ocorreu apesar da liderança federal, não por causa dela. A confiança na vacina e no SUS prevaleceu sobre a desinformação oficial, demonstrando que a legitimidade social do sistema residia mais na memória coletiva e na experiência direta dos usuários do que no discurso governamental [10].",
+    "after": "A vacinação, quando finalmente iniciada em janeiro de 2021, foi um triunfo logístico do SUS. Segundo o Relatório Anual de Gestão 2022 do Ministério da Saúde, até 19 de janeiro de 2023 quase 80% da população havia recebido o esquema vacinal completo [9]. Na interpretação editorial deste artigo, esse sucesso ocorreu apesar das falhas da liderança federal. A literatura sobre hesitação vacinal no Brasil registra diferenças entre populações, períodos e métodos de pesquisa [10]. Na leitura editorial, a memória coletiva e a experiência direta dos usuários ajudam a compreender a legitimidade social do sistema, sem que a adesão à vacinação seja uma medida direta de confiança em todo o SUS.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "A pandemia reacendeu, com urgência, o debate sobre o papel do setor privado na saúde pública. Em setembro de 2020, o Decreto nº 10.530 incluiu Unidades Básicas de Saúde (UBS) no Programa de Parcerias de Investimentos (PPI), sinalizando a intenção de transferir a gestão da APS para o setor privado [11]. Embora revogado semanas depois diante de forte reação social, o decreto não foi um acidente: era a expressão de uma visão de mundo que entende a gestão privada como inerentemente mais eficiente.",
+    "after": "A pandemia reacendeu, com urgência, o debate sobre o papel do setor privado na saúde pública. Em 26 de outubro de 2020, o Decreto nº 10.530 qualificou a política de fomento à atenção primária no Programa de Parcerias de Investimentos (PPI), para elaboração de estudos de alternativas de parcerias na construção, modernização e operação de Unidades Básicas de Saúde (UBS) [11]. Revogado em 28 de outubro pelo Decreto nº 10.533, não chegou a comprovar, por si só, uma transferência efetiva de gestão. Na interpretação editorial deste artigo, o decreto não foi um acidente: era a expressão de uma visão de mundo que entende a gestão privada como inerentemente mais eficiente.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "As Organizações Sociais (OSs) e as Parcerias Público-Privadas (PPPs) já vinham expandindo sua presença antes de 2020. Durante a pandemia, essa tendência se acelerou. Hospitais de campanha, UPAs e até serviços de vacinação foram geridos por entidades privadas sem fins lucrativos ou empresas [12]. Os argumentos favoráveis apontam agilidade na contratação de pessoal e compra de insumos, contornando a rigidez da administração pública. Os críticos alertam para a fragmentação do cuidado, a perda de controle estatal sobre prioridades e a precarização do trabalho em saúde [13].",
+    "after": "As Organizações Sociais (OSs) e as Parcerias Público-Privadas (PPPs) já integravam o debate sobre gestão pública antes de 2020. A Lei nº 9.637/1998 prevê a qualificação de entidades como OSs e contratos de gestão, inclusive na saúde [12]. Essa base jurídica não demonstra, por si só, uma aceleração nacional durante a pandemia. Os argumentos favoráveis apontam agilidade na contratação de pessoal e compra de insumos, contornando a rigidez da administração pública. Estudos sobre a gestão por OSs em São Paulo, por sua vez, identificam fragilidades na regulação e no controle dos contratos [13].",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "O dado mais preocupante é a naturalização desse modelo. O que era apresentado como exceção emergencial tende a se tornar regra permanente. Estudos mostram que municípios com maior dependência de OSs apresentaram, em alguns casos, piores indicadores de continuidade do cuidado e maior custo per capita, questionando a premissa de eficiência [14]. A privatização da gestão não resolve o subfinanciamento; apenas transfere a alocação de recursos escassos para lógicas de mercado que podem não coincidir com as necessidades de saúde da população.",
+    "after": "Na leitura editorial, o dado mais preocupante é a naturalização desse modelo. O que era apresentado como exceção emergencial pode se tornar regra permanente. Uma análise dos relatórios do controle externo de hospitais geridos por OSs em São Paulo identificou limites no acesso a informações e na fiscalização, questionando a suficiência dos mecanismos de controle [14]. A privatização da gestão não resolve, por si só, o subfinanciamento; apenas transfere a alocação de recursos escassos para modelos que podem não coincidir com as necessidades de saúde da população.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Nenhuma análise do legado pandêmico pode ignorar o custo humano. O Brasil registrou mais de 700 mil mortes oficiais por Covid-19, mas estudos de excesso de mortalidade sugerem que o número real pode superar 800 mil [15]. Esse custo não foi distribuído igualmente.",
+    "after": "Nenhuma análise do legado pandêmico pode ignorar o custo humano. Estudos de excesso de mortalidade por todas as causas em 2020 documentam impactos da pandemia para além da contagem de mortes atribuídas à Covid-19 [15]. Excesso de mortalidade e óbitos registrados por Covid-19 são indicadores distintos, que não devem ser somados nem tratados como estimativa direta um do outro. Esse custo não foi distribuído igualmente.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Populações negras, indígenas e residentes em periferias urbanas tiveram taxas de mortalidade significativamente maiores, mesmo ajustando por idade e comorbidades [16]. A pandemia atuou como um amplificador de iniquidades: quem dependia exclusivamente do SUS teve menor acesso a testes, tratamento precoce e UTIs de qualidade. A raça, a classe e o território determinaram quem viveu e quem morreu com precisão estatística cruel.",
+    "after": "Entre adultos hospitalizados com Covid-19 no Brasil em 2020, pacientes pretos e pardos apresentaram maior mortalidade hospitalar e menor frequência de admissão em UTI do que pacientes brancos; a associação com mortalidade persistiu após ajuste por características demográficas e comorbidades [16]. A pandemia atuou como um amplificador de iniquidades: esse resultado evidencia desigualdades dentro da população hospitalizada, sem demonstrar isoladamente o risco de todos os indígenas, moradores de periferias ou usuários exclusivos do SUS. Na leitura editorial, raça e território atravessaram de maneira cruel as chances de enfrentar a doença.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Além das mortes diretas, houve um custo indireto devastador. A reorganização da rede para atender a demanda aguda interrompeu diagnósticos de câncer, cirurgias eletivas, acompanhamento de doenças crônicas e ações de saúde mental [17]. Estima-se que milhões de consultas e exames deixaram de ser realizados entre 2020 e 2021, criando uma \"dívida assistencial\" cujos efeitos serão sentidos por décadas. O SUS salvou vidas na pandemia, mas também deixou de salvar outras por falta de condições de manter sua rotina de cuidado integral.",
+    "after": "Além das mortes diretas, houve um custo indireto devastador. Na rede pública, um estudo dos registros de 2019 e 2020 documentou queda no rastreamento, na investigação diagnóstica e em procedimentos de tratamento do câncer [17]. Milhões de exames de rastreamento deixaram de ser realizados em 2020 em comparação com 2019, criando uma \"dívida assistencial\" cujos efeitos exigem acompanhamento. O SUS salvou vidas na pandemia, mas enfrentou dificuldades para manter sua rotina de cuidado integral.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Dimensão Social: A confiança no SUS aumentou. Pesquisas recentes indicam que mais de 80% dos brasileiros consideram o sistema essencial e defendem seu fortalecimento [18]. Esse é um ativo político valioso, mas volátil. A aprovação está vinculada à memória da vacinação e do atendimento emergencial, não necessariamente à experiência cotidiana atual, que volta a enfrentar filas e desassistência.",
+    "after": "Dimensão Social: Na leitura editorial, o reconhecimento do SUS ganhou centralidade. A 17ª Conferência Nacional de Saúde, em 2023, aprovou diretrizes de defesa e fortalecimento do sistema [18]. Isso documenta uma posição de participantes da conferência, não uma pesquisa representativa de opinião dos brasileiros. Esse é um ativo político valioso, mas volátil. A memória da vacinação e do atendimento emergencial convive com a experiência cotidiana de filas e dificuldades de acesso.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Dimensão Institucional: Houve ganhos pontuais e perdas sistêmicas. A vigilância genômica e a capacidade de produção de vacinas avançaram significativamente [19]. Contudo, a APS sofreu erosão. A saída de profissionais cubanos do Mais Médicos em 2018, somada à pandemia, deixou vazios assistenciais que programas subsequentes não preencheram integralmente [20]. A coordenação federativa, testada ao extremo, revelou a necessidade urgente de mecanismos permanentes de governança interfederativa, ainda inexistentes.",
+    "after": "Dimensão Institucional: Houve ganhos pontuais e desafios persistentes. A Rede Genômica Fiocruz documenta a organização da vigilância de variantes do SARS-CoV-2, e a produção de vacinas é registrada pelo Butantan [19][6]. Contudo, a continuidade da APS permaneceu um desafio, como discutido na literatura [4]. A coordenação federativa, testada ao extremo, revelou a necessidade urgente de aperfeiçoar mecanismos permanentes de governança interfederativa: as comissões intergestores já estão previstas no Decreto nº 7.508/2011 [20].",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Dimensão Financeira: Esta é a dimensão mais crítica. Os gastos extraordinários da pandemia (mais de R$ 600 bilhões em créditos extraordinários) mascararam temporariamente o subfinanciamento [21]. Com o fim da calamidade, o orçamento da saúde voltou a ser comprimido. O novo arcabouço fiscal, embora mais flexível que o teto de gastos, impõe limites reais ao crescimento da despesa [22]. Sem reforma tributária que vincule receitas adicionais à saúde e sem revisão das regras fiscais que protegem o mínimo existencial sanitário, o SUS continuará operando no limite.",
+    "after": "Dimensão Financeira: Esta é a dimensão mais crítica. Os recursos extraordinários destinados ao enfrentamento da pandemia precisam ser separados por função e fase de execução: totais federais não equivalem ao orçamento da saúde [21]. Na leitura editorial, o aporte emergencial não resolveu o desafio estrutural de financiamento. O novo arcabouço fiscal, embora mais flexível que o teto de gastos, impõe limites reais ao crescimento da despesa [22]. Sem escolhas tributárias e orçamentárias que protejam o mínimo existencial sanitário, o SUS continuará operando no limite.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "A investigação conduzida ao longo deste artigo permite afirmar, com critério e baseado em evidências, que a pandemia não salvou o SUS. O que ocorreu foi um fenômeno de hipervisibilidade seletiva: a crise sanitária funcionou como um catalisador de reconhecimento social, mas não como um mecanismo de reparação estrutural. Distinguir esses dois processos é fundamental para evitar que a euforia da legitimação pública mascare a urgência das reformas pendentes.",
+    "after": "Na interpretação editorial, a investigação conduzida ao longo deste artigo permite afirmar que a pandemia não salvou o SUS. O que ocorreu foi um fenômeno de hipervisibilidade seletiva: a crise sanitária funcionou como um catalisador de reconhecimento social, mas não como um mecanismo de reparação estrutural. Distinguir esses dois processos é fundamental para evitar que a euforia da legitimação pública mascare a urgência das reformas pendentes.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "Na dimensão institucional, o balanço é assimétrico. Avanços em vigilância genômica, produção de vacinas e resposta hospitalar demonstraram capacidade técnica de excelência. Mas esses ganhos coexistem com a erosão da Atenção Primária, a fragmentação da coordenação federativa e a naturalização de modelos de gestão privada que enfraquecem a integralidade do cuidado. A pandemia revelou que o SUS sabe responder a crises agudas com competência, mas ainda não consolidou mecanismos permanentes para garantir o cuidado contínuo e equânime em tempos de normalidade. A resiliência emergencial não substitui a robustez sistêmica.",
+    "after": "Na dimensão institucional, o balanço é assimétrico. Avanços em vigilância genômica, produção de vacinas e resposta hospitalar demonstraram capacidade técnica. Mas esses ganhos coexistem com dificuldades de continuidade da Atenção Primária, conflitos na coordenação federativa e controvérsias sobre modelos de gestão privada. A pandemia revelou a necessidade de aperfeiçoar os mecanismos existentes para garantir o cuidado contínuo e equânime em tempos de normalidade. A resiliência emergencial não substitui a robustez sistêmica.",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[1] CONSELHO NACIONAL DE SAÚDE. Relatório Final da 16ª Conferência Nacional de Saúde. Brasília: CNS, 2023. Disponível em: https://conselho.saude.gov.br",
+    "after": "[1] VIEIRA, F. S.; BENEVIDES, R. P. S. Os Impactos do novo regime fiscal para o financiamento do Sistema Único de Saúde e para a efetivação do direito à saúde no Brasil. Ipea, Nota Técnica 28, 2016. https://repositorio.ipea.gov.br/items/55b935f8-aa07-496a-814e-63fd27cd9f13",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[2] DATAFOLHA. Opinião dos brasileiros sobre o SUS. São Paulo: Datafolha, 2021. Disponível em: https://datafolha.folha.uol.com.br",
+    "after": "[2] CONSELHO FEDERAL DE MEDICINA/DATAFOLHA. Pesquisa sobre saúde e acesso à rede pública, 2018. https://portal.cfm.org.br/images/PDF/datafolha_sus_cfm2018.pdf",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[3] IBGE. Assistência Médica Sanitária 2022. Rio de Janeiro: IBGE, 2023. Disponível em: https://www.ibge.gov.br",
+    "after": "[3] BRASIL. Lei nº 8.080, de 19 de setembro de 1990. https://www.planalto.gov.br/ccivil_03/leis/l8080.htm",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[4] MINISTÉRIO DA SAÚDE. Atlas da Atenção Primária à Saúde. Brasília: MS, 2022. Disponível em: https://aps.saude.gov.br",
+    "after": "[4] MEDINA, M. G. et al. Atenção primária à saúde em tempos de COVID-19: o que fazer? Cadernos de Saúde Pública, 36(8), 2020. DOI: 10.1590/0102-311X00149720. https://www.scielo.br/j/csp/a/rYKzdVs9CwSSHNrPTcBb7Yy/?ilang=pt_BR&lang=pt",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[5] FUNDAÇÃO OSWALDO CRUZ. MonitoraCovid-19: Leitos de UTI no Brasil. Rio de Janeiro: Fiocruz, 2021. Disponível em: https://monitoracovid.fiocruz.br",
+    "after": "[5] PERES, I. T. et al. Sociodemographic factors associated with COVID-19 in-hospital mortality in Brazil. Public Health, 192, 15–20, 2021. DOI: 10.1016/j.puhe.2021.01.005. https://pubmed.ncbi.nlm.nih.gov/33607516/",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[6] BUTANTAN. Relatório Anual de Produção de Vacinas 2022. São Paulo: Instituto Butantan, 2023. Disponível em: https://butantan.gov.br",
+    "after": "[6] FUNDAÇÃO BUTANTAN. Relatório de atividades 2022. Seção Produtos e Negócios — Capacidade Industrial. https://fundacaobutantan.org.br/assets/Relatorio_Anual_2022_V2_BX.pdf",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[7] CASTRO, M.C. et al. \"Brazil’s response to the COVID-19 pandemic: a tale of two narratives\". The Lancet Global Health, v.9, n.8, 2021. Disponível em: https://www.thelancet.com",
+    "after": "[7] CASTRO, M. C. et al. Spatiotemporal pattern of COVID-19 spread in Brazil. Science, 372(6544), 821–826, 2021. DOI: 10.1126/science.abh1558. https://pubmed.ncbi.nlm.nih.gov/33853971/",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[8] ARRETCHE, L. \"Federalismo e coordenação na pandemia brasileira\". Revista de Administração Pública, v.55, n.4, 2021. Disponível em: https://www.scielo.br/j/rap",
+    "after": "[8] ABRUCIO, F. L.; GRIN, E. J.; FRANZESE, C.; SEGATTO, C. I.; COUTO, C. G. Combate à COVID-19 sob o federalismo bolsonarista: um caso de descoordenação intergovernamental. Revista de Administração Pública, 54(4), 663–677, 2020. DOI: 10.1590/0034-761220200354. https://pesquisa-eaesp.fgv.br/sites/gvpesquisa.fgv.br/files/arquivos/combate_a_covid-19_sob_o_fderalismo_bolsonarista.pdf",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[9] MINISTÉRIO DA SAÚDE. Plano Nacional de Operacionalização da Vacinação contra a Covid-19. Brasília: MS, 2022. Disponível em: https://gov.br/saude",
+    "after": "[9] MINISTÉRIO DA SAÚDE. Relatório Anual de Gestão 2022. Dados de vacinação com referência em 19 de janeiro de 2023: quase 80% da população com esquema vacinal completo. https://bvsms.saude.gov.br/bvs/publicacoes/relatorio_anual_gestao_2022.pdf",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[10] SCHMIDT, B. et al. \"Confiança nas instituições de saúde durante a pandemia no Brasil\". Ciência & Saúde Coletiva, v.27, n.6, 2022. Disponível em: https://www.cienciaesaudecoletiva.com.br",
+    "after": "[10] SARDINHA, D. M. et al. Prevalence of COVID-19 vaccine hesitancy in Brazil: a systematic review and meta-analysis. Frontiers in Public Health, 13, 2025. DOI: 10.3389/fpubh.2025.1622247. https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1622247/full",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[11] BRASIL. Decreto nº 10.530, de 28 de outubro de 2020. Diário Oficial da União, Brasília, 2020. Disponível em: https://www.planalto.gov.br",
+    "after": "[11] BRASIL. Decreto nº 10.530, de 26 de outubro de 2020, revogado pelo Decreto nº 10.533, de 28 de outubro de 2020. Textos oficiais: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10530.htm e https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10533.htm",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[12] TRIBUNAL DE CONTAS DA UNIÃO. Acórdão nº 1.234/2022 – Auditoria em OSs na Saúde. Brasília: TCU, 2022. Disponível em: https://tcu.jus.br",
+    "after": "[12] BRASIL. Lei nº 9.637, de 15 de maio de 1998. https://www.planalto.gov.br/ccivil_03/leis/l9637.htm",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[13] GADELHA, C.A.G. \"Complexo econômico-industrial da saúde e privatização\". Cadernos de Saúde Pública, v.38, n.3, 2022. Disponível em: https://cadernos.ensp.fiocruz.br",
+    "after": "[13] CONTREIRAS, H.; MATTA, G. C. Privatização da gestão do sistema municipal de saúde por meio de Organizações Sociais na cidade de São Paulo, Brasil: caracterização e análise da regulação. Cadernos de Saúde Pública, 31(2), 285–297, 2015. DOI: 10.1590/0102-311X00015914. https://www.scielo.br/j/csp/a/jkFv3sVQhYX4Q6CKQnbhNwB/?lang=pt",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[14] SANTOS, L. et al. \"Desempenho de municípios com e sem OSs na APS\". Revista Brasileira de Ciências Sociais, v.37, n.109, 2022. Disponível em: https://anpocs.org",
+    "after": "[14] PILOTTO, B. S.; JUNQUEIRA, V. Organizações Sociais do setor de saúde no estado de São Paulo: avanços e limites do controle externo. Serviço Social & Sociedade, 130, 547–563, 2017. DOI: 10.1590/0101-6628.123. https://www.scielo.br/j/sssoc/a/MhHy6ytmCHGBdDgF4ntBsHf/?lang=pt",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[15] UNIVERSIDADE DE SÃO PAULO. Excesso de mortalidade no Brasil durante a pandemia. São Paulo: USP/CDC, 2023. Disponível em: https://mortalidade.usp.br",
+    "after": "[15] SANTOS, A. M. dos et al. Excess deaths from all causes and by COVID-19 in Brazil in 2020. Revista de Saúde Pública, 55, 71, 2021. DOI: 10.11606/s1518-8787.2021055004137. https://revistas.usp.br/rsp/pt_BR/article/view/192892",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[16] WERNECK, J.; BATISTA, L. \"Racismo estrutural e mortalidade por Covid-19\". Saúde e Sociedade, v.30, n.2, 2021. Disponível em: https://www.revistas.usp.br/sauesoc",
+    "after": "[16] PERES, I. T. et al. Sociodemographic factors associated with COVID-19 in-hospital mortality in Brazil. Public Health, 192, 15–20, 2021. DOI: 10.1016/j.puhe.2021.01.005. https://pubmed.ncbi.nlm.nih.gov/33607516/",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[17] AGÊNCIA NACIONAL DE SAÚDE SUPLEMENTAR. Impacto da pandemia nos procedimentos eletivos. Rio de Janeiro: ANS, 2022. Disponível em: https://ans.gov.br",
+    "after": "[17] RIBEIRO, C. M.; CORREA, F. M.; MIGOWSKI, A. Efeitos de curto prazo da pandemia de COVID-19 na realização de procedimentos de rastreamento, investigação diagnóstica e tratamento do câncer no Brasil: estudo descritivo, 2019-2020. Epidemiologia e Serviços de Saúde, 31(1), 2022. DOI: 10.1590/S1679-49742022000100010. https://www.scielo.br/j/ress/a/txZ8ZMpQ3FgcLdpLrh8LbbD/?lang=pt",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[18] INSTITUTO QUESTÃO DE CIÊNCIA. Percepção pública sobre ciência e saúde no Brasil. São Paulo: IQC, 2024. Disponível em: https://iqc.org.br",
+    "after": "[18] CONSELHO NACIONAL DE SAÚDE. Resolução nº 719, 2023. Diretrizes, propostas e moções da 17ª Conferência Nacional de Saúde. https://www.gov.br/conselho-nacional-de-saude/pt-br/atos-normativos/resolucoes/2023/resolucao-no-719.pdf",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[19] FIOCRUZ. Rede Genômica Fiocruz: Relatório Técnico 2023. Rio de Janeiro: Fiocruz, 2023. Disponível em: https://genomahcov.fiocruz.br",
+    "after": "[19] FIOCRUZ. Rede Genômica: Dúvidas. https://redegenomica.fiocruz.br/duvidas/",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[20] MEDINA, M.G. et al. \"Programa Mais Médicos e cobertura da APS pós-Covid\". Epidemiologia e Serviços de Saúde, v.32, n.1, 2023. Disponível em: https://scielosp.org",
+    "after": "[20] BRASIL. Decreto nº 7.508, de 28 de junho de 2011. https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[21] TESOURO NACIONAL. Relatório de Execução Orçamentária da Saúde 2020-2022. Brasília: STN, 2023. Disponível em: https://tesourotransparente.gov.br",
+    "after": "[21] TESOURO NACIONAL. Despesas pagas pela União: metodologia e painéis. https://www.tesourotransparente.gov.br/paginas-complementares/despesas-pagas-pela-uniao",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  },
+  {
+    "before": "[22] LEI COMPLEMENTAR Nº 200, DE 2023. Novo Arcabouço Fiscal. Brasília: Congresso Nacional, 2023. Disponível em: https://legis.senado.leg.br",
+    "after": "[22] BRASIL. Lei Complementar nº 200, de 30 de agosto de 2023. Institui regime fiscal sustentável. https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp200.htm\n",
+    "reason": "Correção documental delimitada; alcance e justificativas no relatório final."
+  }
+]

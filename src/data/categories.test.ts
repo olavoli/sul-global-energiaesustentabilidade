@@ -4,6 +4,10 @@ import { primaryNav } from "@/components/navigation/nav-items";
 import { getCategory, searchCategories } from "./categories";
 
 describe("categoria Funcional", () => {
+  test("Políticas Públicas é independente e não entra no menu principal", () => {
+    expect(getCategory("politicas-publicas")?.name).toBe("Políticas Públicas");
+    expect(primaryNav.some((item) => item.params?.slug === "politicas-publicas")).toBeFalse();
+  });
   test("está disponível na taxonomia editorial", () => {
     expect(getCategory("funcional")).toEqual({
       slug: "funcional",

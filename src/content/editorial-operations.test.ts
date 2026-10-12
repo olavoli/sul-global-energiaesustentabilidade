@@ -10,6 +10,7 @@ import {
   type OperationContext,
 } from "../../scripts/editorial-operations";
 import { parseEditorialFile } from "../../scripts/generate-content";
+import { evaluateResearch, type ResidualRiskApproval } from "../../scripts/research-operations";
 import { generateRss, generateSitemap } from "@/lib/distribution";
 import { createContentRepository } from "./repository";
 import { articleFrontmatterSchema, type ArticleFrontmatter, type Author } from "./schema";
@@ -79,6 +80,145 @@ function mdx(record: ArticleFrontmatter): string {
 }
 
 describe("operação editorial diária", () => {
+  const riskApproval: ResidualRiskApproval = {
+    articleSlug: base.slug,
+    responsible: verifiedAuthor.slug,
+    decidedAt: "2026-07-13",
+    justification: "Decisão humana explícita limitada às pendências documentais desta fixture.",
+    acceptedRisks: [
+      {
+        code: "source-verification",
+        justification: "Fontes disponíveis; aceito a falta de confirmação humana integral.",
+      },
+      {
+        code: "fact-check-completion",
+        justification:
+          "Aceito review com os fact-checks ainda pendentes, sem marcá-los concluídos.",
+      },
+      {
+        code: "image-license-documentation",
+        justification: "Origem de geração conhecida; aceito a pendência documental de licença.",
+      },
+    ],
+  };
+  const research = {
+    articleSlug: base.slug,
+    researchQuestion: "Pergunta de pesquisa para a fixture?",
+    scope: "Fixture controlada.",
+    audience: "Testes",
+    keyQuestions: ["Questão"],
+    requiredData: [],
+    requiredSourceTypes: ["official"],
+    candidateSources: [{ title: "Fonte documental", url: "https://example.org/documento" }],
+    confirmedSources: [],
+    rejectedSources: [],
+    openQuestions: [],
+    factChecks: [{ statement: "Conferência ainda pendente", status: "pending", sourceUrls: [] }],
+    imageRequirements: {
+      origin: "Geração de teste declarada",
+      license: "pending",
+      authorization: "Uso em teste autorizado",
+      credit: "Fixture",
+      alt: "Fixture",
+      width: 1200,
+      height: 675,
+      aspectRatio: "16:9",
+      socialVersion: "Fixture",
+      usageRisk: "Pendência documental conhecida",
+      isDemoConfirmed: true,
+    },
+    conflictsOfInterestEvaluated: true,
+    editorialRisks: [],
+    researchStatus: "blocked",
+  };
+  test("decisão explícita permite review sem falsificar pesquisa ou licença", () => {
+    const input = { ...research, residualRiskApproval: riskApproval };
+    const report = evaluateResearch(input);
+    expect(report.readyForWriting).toBeFalse();
+    expect(report.readyForReview).toBeTrue();
+    expect(input.confirmedSources).toHaveLength(0);
+    expect(input.factChecks[0].status).toBe("pending");
+    const draft = article({
+      status: "draft",
+      draftStage: "review-ready",
+      approvedAt: undefined,
+      cover: {
+        ...base.cover,
+        license: "pending",
+        aiProvenance: {
+          status: "verified",
+          year: 2026,
+          contributions: [{ role: "generation", tool: "ChatGPT" }],
+        },
+      },
+    });
+    const reviewed = parseEditorialFile(
+      prepareStatusChange(mdx(draft), "review", context, authorDirectory, report).content,
+    ).frontmatter;
+    expect(reviewed.status).toBe("review");
+    expect(reviewed.cover.license).toBe("pending");
+    const approved = { ...reviewed, status: "approved" as const, approvedAt: "2026-07-13" };
+    expect(publishCheck(approved, context, authorDirectory, riskApproval).blockers).toHaveLength(0);
+    expect(
+      publishCheck(approved, context, authorDirectory, riskApproval).warnings.join(" "),
+    ).toContain("pendente");
+  });
+  test("impedimento concreto e perguntas substantivas não podem ser aceitos", () => {
+    expect(
+      evaluateResearch({
+        ...research,
+        residualRiskApproval: riskApproval,
+        concreteImpediments: ["Erro factual concreto identificado no documento."],
+      }).readyForReview,
+    ).toBeFalse();
+    expect(
+      evaluateResearch({
+        ...research,
+        residualRiskApproval: riskApproval,
+        openQuestions: ["Quem autorizou a entrevista?"],
+      }).readyForReview,
+    ).toBeFalse();
+    expect(
+      evaluateResearch({ ...research, residualRiskApproval: riskApproval, candidateSources: [] })
+        .readyForReview,
+    ).toBeFalse();
+  });
+  test("sem decisão, decisão incompleta ou de outro artigo não libera review", () => {
+    expect(evaluateResearch(research).readyForReview).toBeFalse();
+    expect(
+      evaluateResearch({
+        ...research,
+        residualRiskApproval: { ...riskApproval, justification: "ok" },
+      }).readyForWriting,
+    ).toBeFalse();
+    expect(
+      evaluateResearch({
+        ...research,
+        residualRiskApproval: { ...riskApproval, articleSlug: "outro-artigo" },
+      }).readyForReview,
+    ).toBeFalse();
+    expect(
+      evaluateResearch({
+        ...research,
+        residualRiskApproval: { ...riskApproval, acceptedRisks: [riskApproval.acceptedRisks[0]] },
+      }).readyForReview,
+    ).toBeFalse();
+  });
+  test("aceitação de licença não supera falta de proveniência ou responsável não verificado", () => {
+    const draft = article({ status: "draft", cover: { ...base.cover, license: "pending" } });
+    expect(reviewArticle(draft, authorDirectory, riskApproval).blockers.join(" ")).toContain(
+      "licença",
+    );
+    expect(
+      reviewArticle(draft, authorDirectory, {
+        ...riskApproval,
+        responsible: "nao-verificado",
+      }).blockers.join(" "),
+    ).toContain("responsável verified");
+    expect(
+      reviewArticle({ ...draft, sources: [] }, authorDirectory, riskApproval).blockers.join(" "),
+    ).toContain("fonte estruturada");
+  });
   test("aceita transição válida", () => {
     const draft = article({ status: "draft", draftStage: "review-ready", approvedAt: undefined });
     const result = prepareStatusChange(mdx(draft), "review", context, authorDirectory, {
@@ -98,6 +238,13 @@ describe("operação editorial diária", () => {
   test("publicação sem aprovação falha", () => {
     const draft = article({ status: "draft", approvedAt: undefined });
     expect(publishCheck(draft, context, authorDirectory).blockers.join(" ")).toContain("approved");
+  });
+  test("publish-check pode verificar published sem permitir repetir a transição", () => {
+    const published = article({ status: "published", publishedAt: "2026-07-13" });
+    expect(publishCheck(published, context, authorDirectory).blockers).toHaveLength(0);
+    expect(() =>
+      prepareStatusChange(mdx(published), "published", context, authorDirectory),
+    ).toThrow("Transição inválida");
   });
 
   test("publicação sem fonte falha", () => {

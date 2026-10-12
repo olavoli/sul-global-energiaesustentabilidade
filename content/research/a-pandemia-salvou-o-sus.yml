@@ -1,0 +1,131 @@
+articleSlug: a-pandemia-salvou-o-sus
+researchQuestion: A pandemia fortaleceu o SUS nas dimensões social, institucional e financeira?
+scope: Manuscrito original integral; integração local em rascunho, com referências e infográficos pendentes de validação.
+audience: Leitores interessados em saúde pública e políticas públicas.
+keyQuestions:
+  - Como distinguir reconhecimento social de fortalecimento institucional?
+  - Quais séries documentam financiamento e cobertura antes e depois da pandemia?
+requiredData:
+  - Fontes específicas para cada uma das 22 referências e afirmações quantitativas.
+  - Infográficos qualitativos sem a série numérica não comprovada; aprovação editorial das versões v2.
+  - Relatórios das pesquisas de percepção social e seus questionários.
+requiredSourceTypes: [official, academic, data, regulatory]
+candidateSources:
+  - title: Decreto nº 10.530, de 26 de outubro de 2020
+    url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10530.htm
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: Decreto nº 10.533, de 28 de outubro de 2020
+    url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10533.htm
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: Portaria GM/MS nº 913, de 22 de abril de 2022
+    url: https://bvsms.saude.gov.br/bvs/saudelegis/gm/2022/prt0913_22_04_2022.html
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "VIEIRA, F. S.; BENEVIDES, R. P. S. Os Impactos do novo regime fiscal para o financiamento do Sistema Único de Saúde e para a efetivação do direito à saúde no Brasil. Ipea, Nota Técnica 28, 2016."
+    url: https://repositorio.ipea.gov.br/items/55b935f8-aa07-496a-814e-63fd27cd9f13
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "CONSELHO FEDERAL DE MEDICINA/DATAFOLHA. Pesquisa sobre saúde e acesso à rede pública, 2018."
+    url: https://portal.cfm.org.br/images/PDF/datafolha_sus_cfm2018.pdf
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "BRASIL. Lei nº 8.080, de 19 de setembro de 1990."
+    url: https://www.planalto.gov.br/ccivil_03/leis/l8080.htm
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "MEDINA, M. G. et al. Atenção primária à saúde em tempos de COVID-19: o que fazer? Cadernos de Saúde Pública, 36(8), 2020. DOI: 10.1590/0102-311X00149720."
+    url: https://www.scielo.br/j/csp/a/rYKzdVs9CwSSHNrPTcBb7Yy/?ilang=pt_BR&lang=pt
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "PERES, I. T. et al. Sociodemographic factors associated with COVID-19 in-hospital mortality in Brazil. Public Health, 192, 15–20, 2021. DOI: 10.1016/j.puhe.2021.01.005."
+    url: https://pubmed.ncbi.nlm.nih.gov/33607516/
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "SARDINHA, D. M. et al. Prevalence of COVID-19 vaccine hesitancy in Brazil: a systematic review and meta-analysis. Frontiers in Public Health, 13, 2025. DOI: 10.3389/fpubh.2025.1622247."
+    url: https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1622247/full
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "BRASIL. Lei nº 9.637, de 15 de maio de 1998."
+    url: https://www.planalto.gov.br/ccivil_03/leis/l9637.htm
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "CONTREIRAS, H.; MATTA, G. C. Privatização da gestão do sistema municipal de saúde por meio de Organizações Sociais na cidade de São Paulo, Brasil: caracterização e análise da regulação. Cadernos de Saúde Pública, 31(2), 285–297, 2015. DOI: 10.1590/0102-311X00015914."
+    url: https://www.scielo.br/j/csp/a/jkFv3sVQhYX4Q6CKQnbhNwB/?lang=pt
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "PILOTTO, B. S.; JUNQUEIRA, V. Organizações Sociais do setor de saúde no estado de São Paulo: avanços e limites do controle externo. Serviço Social & Sociedade, 130, 547–563, 2017. DOI: 10.1590/0101-6628.123."
+    url: https://www.scielo.br/j/sssoc/a/MhHy6ytmCHGBdDgF4ntBsHf/?lang=pt
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "SANTOS, A. M. dos et al. Excess deaths from all causes and by COVID-19 in Brazil in 2020. Revista de Saúde Pública, 55, 71, 2021. DOI: 10.11606/s1518-8787.2021055004137."
+    url: https://revistas.usp.br/rsp/pt_BR/article/view/192892
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "PERES, I. T. et al. Sociodemographic factors associated with COVID-19 in-hospital mortality in Brazil. Public Health, 192, 15–20, 2021. DOI: 10.1016/j.puhe.2021.01.005."
+    url: https://pubmed.ncbi.nlm.nih.gov/33607516/
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "RIBEIRO, C. M.; CORREA, F. M.; MIGOWSKI, A. Efeitos de curto prazo da pandemia de COVID-19 na realização de procedimentos de rastreamento, investigação diagnóstica e tratamento do câncer no Brasil: estudo descritivo, 2019-2020. Epidemiologia e Serviços de Saúde, 31(1), 2022. DOI: 10.1590/S1679-49742022000100010."
+    url: https://www.scielo.br/j/ress/a/txZ8ZMpQ3FgcLdpLrh8LbbD/?lang=pt
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "CONSELHO NACIONAL DE SAÚDE. Resolução nº 719, 2023. Diretrizes, propostas e moções da 17ª Conferência Nacional de Saúde."
+    url: https://www.gov.br/conselho-nacional-de-saude/pt-br/atos-normativos/resolucoes/2023/resolucao-no-719.pdf
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "FIOCRUZ. Rede Genômica: Dúvidas."
+    url: https://redegenomica.fiocruz.br/duvidas/
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "BRASIL. Decreto nº 7.508, de 28 de junho de 2011."
+    url: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "TESOURO NACIONAL. Despesas pagas pela União: metodologia e painéis."
+    url: https://www.tesourotransparente.gov.br/paginas-complementares/despesas-pagas-pela-uniao
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "FUNDAÇÃO BUTANTAN. Relatório de atividades 2022. Seção Produtos e Negócios — Capacidade Industrial."
+    url: https://fundacaobutantan.org.br/assets/Relatorio_Anual_2022_V2_BX.pdf
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "CASTRO, M. C. et al. Spatiotemporal pattern of COVID-19 spread in Brazil. Science, 372(6544), 821–826, 2021. DOI: 10.1126/science.abh1558."
+    url: https://pubmed.ncbi.nlm.nih.gov/33853971/
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "ABRUCIO, F. L.; GRIN, E. J.; FRANZESE, C.; SEGATTO, C. I.; COUTO, C. G. Combate à COVID-19 sob o federalismo bolsonarista: um caso de descoordenação intergovernamental. Revista de Administração Pública, 54(4), 663–677, 2020. DOI: 10.1590/0034-761220200354."
+    url: https://pesquisa-eaesp.fgv.br/sites/gvpesquisa.fgv.br/files/arquivos/combate_a_covid-19_sob_o_fderalismo_bolsonarista.pdf
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "MINISTÉRIO DA SAÚDE. Relatório Anual de Gestão 2022. Dados de vacinação com referência em 19 de janeiro de 2023: quase 80% da população com esquema vacinal completo."
+    url: https://bvsms.saude.gov.br/bvs/publicacoes/relatorio_anual_gestao_2022.pdf
+    note: Conferência documental assistida; aprovação factual humana pendente.
+  - title: "BRASIL. Lei Complementar nº 200, de 30 de agosto de 2023. Institui regime fiscal sustentável."
+    url: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp200.htm
+    note: Conferência documental assistida; aprovação factual humana pendente.
+confirmedSources: []
+rejectedSources: []
+openQuestions: []
+factChecks:
+  - statement: Datas e alcance do Decreto 10.530 e de sua revogação.
+    status: pending
+    sourceUrls:
+      - https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10530.htm
+      - https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10533.htm
+  - statement: Aprovação humana das fontes específicas e das versões qualitativas sem valores ou percentuais.
+    status: pending
+    sourceUrls: []
+imageRequirements:
+  origin: As quatro imagens foram geradas por ChatGPT, conforme confirmação expressa do responsável editorial; duas versões qualitativas v2 editadas para publicação.
+  license: pending
+  authorization: Integração e otimização locais autorizadas nesta conversa; deploy exige confirmação posterior.
+  credit: "Fonte: SGES, (2026)."
+  alt: Profissionais e usuários do SUS em ilustração sobre esperança e dificuldades estruturais.
+  width: 1200
+  height: 675
+  aspectRatio: "1200:675 (fallback); original 1672:941, sem crop."
+  socialVersion: Fallback WebP da hero, sem nova arte ou alteração de enquadramento.
+  usageRisk: Representação editorial examinada sem impedimento concreto identificado; manual SUS com acesso restrito. Semelhança visual não constitui prova de infração nem licença. Avaliação em aprovacao-editorial-final.md.
+  isDemoConfirmed: true
+conflictsOfInterestEvaluated: true
+editorialRisks:
+  - Avaliação comercial registra a orientação humana de não exigir declaração genérica individual; monetização geral não é conflito automático. Relações diretamente ligadas ao artigo devem ser divulgadas quando houver. Não foi declarada inexistência de vínculos específicos.
+  - Aprovação editorial expressa concedida em 12/10/2026; Olavo Oliveira responsável pela conferência e pelo conteúdo. A conferência humana integral das 22 referências não foi confirmada; fact-checks não foram promovidos a concluídos.
+  - A redação da Nota de Transparência foi aprovada especificamente para o ART-031 em 12/10/2026, divergindo do modelo permanente sem alterar a política global; avanço aprovado condicionado à declaração de conflitos e aos direitos das imagens, sem deploy ou newsletter nesta etapa.
+researchStatus: blocked
+
+# Decisão expressa registrada na conversa e em aprovacao-editorial-final.md.
+# Não confirma fontes, fact-checks ou licença; admite review com riscos específicos.
+residualRiskApproval:
+  articleSlug: a-pandemia-salvou-o-sus
+  responsible: olavo-oliveira
+  decidedAt: 2026-10-12
+  justification: Aprovação editorial expressa e aceitação dos riscos residuais conhecidos, conforme decisões registradas em aprovacao-editorial-final.md; conteúdo e Nota de Transparência preservados.
+  acceptedRisks:
+    - code: source-verification
+      justification: Fontes específicas foram reunidas e documentadas; o responsável aceita avançar sem confirmação humana integral das 22 referências, sem alterar confirmedSources.
+    - code: fact-check-completion
+      justification: Aceita o risco residual da conferência assistida por IA e mantém os fact-checks pendentes, sem declarar revisão humana integral inexistente.
+    - code: image-license-documentation
+      justification: Origem ChatGPT das quatro imagens e uso ilustrativo do símbolo SUS decididos expressamente; aceita pendência documental sem atribuir licença de banco ou autorização de terceiros.
+concreteImpediments: []

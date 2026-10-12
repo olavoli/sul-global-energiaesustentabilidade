@@ -36,6 +36,33 @@ Os cinco nomes herdados são demos. `autoria-pendente` é marcador técnico pend
 
 O briefing privado usa `research:status` durante a apuração e `research:validate` como gate. `ready-for-writing` autoriza apenas iniciar a redação factual. A passagem para review ainda exige `draftStage: review-ready`, autor verified, fontes confirmadas, fact-checks concluídos, conflitos avaliados e imagem licenciada.
 
+### Aprovação proporcional de riscos residuais
+
+O responsável pode registrar `residualRiskApproval` no briefing existente, com
+`articleSlug`, `responsible` (autor/editor verified), `decidedAt`, justificativa
+geral e `acceptedRisks` com código e justificativa individual. Códigos admitidos:
+`source-verification`, `fact-check-completion`, `image-license-documentation`.
+Nenhuma decisão é criada automaticamente pela CLI ou aplicada a outro artigo.
+
+A decisão pode permitir review com fontes documentadas ainda não confirmadas,
+fact-checks pendentes e licença `pending` de imagem cuja proveniência esteja
+registrada como verified. Ela não atribui licença, autorização legal ou conclusão
+de conferência. `readyForWriting`, fontes, fact-checks e licenças mantêm o estado
+real; `readyForReview` informa a elegibilidade proporcional. `research:validate`
+continua a verificar conclusão da pesquisa, sem converter aceitação em confirmação.
+
+`concreteImpediments` registra erros ou impedimentos concretos e não pode ser
+dispensado por essa aprovação. Perguntas substantivas abertas, falta de fontes,
+schema inválido, autoria não verificada, fonte demo, licença ausente/unknown ou
+sem proveniência, transição inválida e controles de publicação continuam
+bloqueantes. Canonical derivado e outras recomendações continuam warnings.
+Pendências aceitas aparecem como warnings, com responsável e data. O registro
+de decisão fica privado no briefing; a Nota pública continua conforme aprovada.
+
+Para ART-031, o registro reproduz as decisões expressas de Olavo Oliveira em
+12/10/2026 e mantém as verificações incompletas. Não há publicação ou envio
+automático: permanecem draft → review → approved → published e o deploy separado.
+
 ## Demos e piloto
 
 Demos continuam visíveis somente em desenvolvimento autorizado. Conteúdo real pode coexistir, mas produção nunca completa espaços com demos. O piloto `rascunho-como-funciona-matriz-eletrica-brasileira` contém apenas estrutura: autoria, fontes e imagem são bloqueadores deliberados.

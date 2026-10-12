@@ -14,6 +14,7 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/a-inteligencia-artificial-vai-virar-um-problema-para-o-sistema-eletrico.mdx"),
   "a-maquina-que-transforma-calor-desperdicado-em-eletricidade": () =>
     import("../../../content/articles/a-maquina-que-transforma-calor-desperdicado-em-eletricidade.mdx"),
+  "a-pandemia-salvou-o-sus": () => import("../../../content/articles/a-pandemia-salvou-o-sus.mdx"),
   "a-rede-eletrica-esta-preparada-para-a-transicao-energetica": () =>
     import("../../../content/articles/a-rede-eletrica-esta-preparada-para-a-transicao-energetica.mdx"),
   "a-transicao-energetica-vai-aumentar-o-consumo-de-agua": () =>

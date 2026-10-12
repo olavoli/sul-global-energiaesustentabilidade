@@ -10,6 +10,36 @@ const sourceReferenceSchema = z.object({
   url: z.url(),
 });
 
+export const residualRiskApprovalSchema = z
+  .object({
+    articleSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    responsible: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    decidedAt: z.iso.date(),
+    justification: z.string().trim().min(20),
+    acceptedRisks: z
+      .array(
+        z.object({
+          code: z.enum([
+            "source-verification",
+            "fact-check-completion",
+            "image-license-documentation",
+          ]),
+          justification: z.string().trim().min(20),
+        }),
+      )
+      .min(1)
+      .max(3),
+  })
+  .superRefine((approval, context) => {
+    if (
+      new Set(approval.acceptedRisks.map((risk) => risk.code)).size !==
+      approval.acceptedRisks.length
+    ) {
+      context.addIssue({ code: "custom", message: "Não repetir riscos aceitos." });
+    }
+  });
+export type ResidualRiskApproval = z.infer<typeof residualRiskApprovalSchema>;
+
 export const researchStatuses = [
   "not-started",
   "researching",
@@ -61,6 +91,8 @@ export const researchBriefSchema = z.object({
   conflictsOfInterestEvaluated: z.boolean(),
   editorialRisks: z.array(z.string().trim().min(1)),
   researchStatus: z.enum(researchStatuses),
+  residualRiskApproval: residualRiskApprovalSchema.optional(),
+  concreteImpediments: z.array(z.string().trim().min(10)).default([]),
 });
 
 export type ResearchBrief = z.infer<typeof researchBriefSchema>;
@@ -75,6 +107,8 @@ export interface ResearchReport {
   warnings: string[];
   nextAction: string;
   readyForWriting: boolean;
+  readyForReview?: boolean;
+  riskApproval?: ResidualRiskApproval;
 }
 
 export function evaluateResearch(input: unknown): ResearchReport {
@@ -96,6 +130,21 @@ export function evaluateResearch(input: unknown): ResearchReport {
   }
 
   const brief = parsed.data;
+  const approval = brief.residualRiskApproval;
+  if (approval && approval.articleSlug !== brief.articleSlug) {
+    return {
+      slug: brief.articleSlug,
+      status: "inválido",
+      candidateCount: brief.candidateSources.length,
+      confirmedCount: brief.confirmedSources.length,
+      openQuestionCount: brief.openQuestions.length,
+      blockers: ["A decisão de riscos pertence a outro artigo."],
+      warnings: [],
+      nextAction: "Corrigir o escopo da decisão.",
+      readyForWriting: false,
+      readyForReview: false,
+    };
+  }
   const blockers: string[] = [];
   const warnings: string[] = [];
   if (!brief.researchQuestion) blockers.push("Definir a pergunta central.");
@@ -135,6 +184,34 @@ export function evaluateResearch(input: unknown): ResearchReport {
   if (brief.researchStatus !== "ready-for-writing") {
     blockers.push("researchStatus ainda não é ready-for-writing.");
   }
+  blockers.push(...brief.concreteImpediments.map((reason) => `Impedimento concreto: ${reason}`));
+  // A decisão admite review, sem transformar pesquisa incompleta em concluída.
+  const reviewBlockers = [...blockers];
+  const accepted = new Set<string>(approval?.acceptedRisks.map((risk) => risk.code));
+  const documentary: Record<string, string> = {
+    "Confirmar ao menos uma fonte real.": "source-verification",
+    "Resolver fact-checks pendentes com fontes confirmadas.": "fact-check-completion",
+  };
+  if (approval && brief.candidateSources.length + brief.confirmedSources.length > 0) {
+    for (let index = reviewBlockers.length - 1; index >= 0; index--) {
+      const blocker = reviewBlockers[index];
+      if (accepted.has(documentary[blocker])) {
+        warnings.push(
+          `Pendência aceita por ${approval.responsible} em ${approval.decidedAt}: ${blocker}`,
+        );
+        reviewBlockers.splice(index, 1);
+      }
+    }
+    if (
+      reviewBlockers.length === 1 &&
+      reviewBlockers[0] === "researchStatus ainda não é ready-for-writing."
+    ) {
+      warnings.push(
+        "Pesquisa não concluída; review permitido por decisão explícita de riscos residuais.",
+      );
+      reviewBlockers.pop();
+    }
+  }
   const readyForWriting = blockers.length === 0;
   const nextAction = readyForWriting
     ? "Iniciar draft factual; publicação e review continuam bloqueados."
@@ -149,8 +226,13 @@ export function evaluateResearch(input: unknown): ResearchReport {
     openQuestionCount: brief.openQuestions.length,
     blockers,
     warnings,
-    nextAction,
+    nextAction:
+      !readyForWriting && reviewBlockers.length === 0
+        ? "Review permitido com riscos residuais documentados; verificações permanecem pendentes."
+        : nextAction,
     readyForWriting,
+    readyForReview: reviewBlockers.length === 0,
+    riskApproval: approval,
   };
 }
 
@@ -172,8 +254,13 @@ function printReport(report: ResearchReport): void {
   console.log(`Fontes candidatas: ${report.candidateCount}`);
   console.log(`Fontes confirmadas: ${report.confirmedCount}`);
   console.log(`Perguntas abertas: ${report.openQuestionCount}`);
+  console.log(
+    `Review com decisão documentada: ${report.readyForReview && report.riskApproval ? "permitido" : "não aplicado"}`,
+  );
   report.warnings.forEach((warning) => console.log(`[warning] ${warning}`));
-  report.blockers.forEach((blocker) => console.log(`[erro] ${blocker}`));
+  report.blockers.forEach((blocker) =>
+    console.log(`[${report.readyForReview ? "pendência de pesquisa" : "erro"}] ${blocker}`),
+  );
   console.log(`Próxima ação: ${report.nextAction}`);
 }
 
