@@ -11,6 +11,7 @@ import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
 import { ImageAiCredit } from "@/components/editorial/ImageAiCredit";
 import { ShareBar } from "@/components/article/ShareBar";
 import { ArticleCard } from "@/components/article/ArticleCard";
+import { ArticleTags } from "@/components/article/ArticleTags";
 import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
 import { CommentsSection } from "@/components/comments/CommentsSection";
 import { EditorialImage } from "@/components/media/EditorialImage";
@@ -203,16 +204,7 @@ function ArticleDetail() {
             </p>
           )}
 
-          <div className="mt-10 flex flex-wrap gap-2">
-            {typedArticle.tags.map((t: string) => (
-              <span
-                key={t}
-                className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
-              >
-                #{t}
-              </span>
-            ))}
-          </div>
+          <ArticleTags tags={typedArticle.tags} />
 
           <div className="mt-10 rounded-md border border-border bg-muted/40 p-5">
             <p className="overline text-muted-foreground">Sobre o autor</p>

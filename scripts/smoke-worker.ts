@@ -50,6 +50,9 @@ const cases = [
   ["/categoria/funcional", 200],
   ["/busca?q=energia", 200],
   ["/busca?q=funcional", 200],
+  ["/tag/energia-solar", 200],
+  ["/tag/carneiro-hidraulico", 200],
+  ["/tag/tema-inexistente", 404],
   ["/robots.txt", 200],
   ["/sitemap.xml", 200],
   ["/rss.xml", 200],
@@ -78,6 +81,36 @@ function resultFor(path: string): { response: Response; body: string } {
 const home = resultFor("/");
 assert(home.body.includes("<title>"), "home deve conter metadata SSR");
 assert(home.response.headers.get("x-robots-tag") === "noindex, nofollow", "preview noindex");
+
+const solarTopic = resultFor("/tag/energia-solar");
+assert(solarTopic.body.includes("energia solar</h1>"), "tema deve renderizar título por SSR");
+assert(
+  solarTopic.body.includes(
+    'href="/artigo/o-que-acontece-com-a-rede-quando-todo-mundo-instala-painel-solar"',
+  ),
+  "tema deve listar artigos associados à tag exata",
+);
+assert(
+  !solarTopic.body.includes('href="/artigo/o-que-e-energia"'),
+  "tema não pode trazer artigo por mera correspondência textual",
+);
+for (const path of ["/tag/energia-solar", "/tag/carneiro-hidraulico"]) {
+  const { response, body } = resultFor(path);
+  assert(
+    response.headers.get("x-robots-tag") === "noindex, nofollow",
+    `${path}: preview não indexável`,
+  );
+  assert(body.includes('name="robots" content="noindex, nofollow"'), `${path}: robots no head SSR`);
+  const canonical = body.match(/rel="canonical" href="([^"]+)"/)?.[1];
+  assert(
+    canonical && /^https?:/.test(canonical) && new URL(canonical).pathname === path,
+    `${path}: canonical absoluto do tema`,
+  );
+}
+assert(
+  resultFor(foundationalArticle).body.includes('href="/tag/conservacao-de-energia"'),
+  "tags do artigo devem ser links presentes no HTML inicial",
+);
 
 for (const path of ["/", foundationalArticle, "/privacidade"]) {
   const { body } = resultFor(path);

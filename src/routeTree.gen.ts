@@ -18,6 +18,7 @@ import { Route as MetodologiaRouteImport } from './routes/metodologia'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as BuscaRouteImport } from './routes/busca'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TagSlugRouteImport } from './routes/tag.$slug'
 import { Route as CategoriaSlugRouteImport } from './routes/categoria.$slug'
 import { Route as AutorSlugRouteImport } from './routes/autor.$slug'
 import { Route as ArtigoSlugRouteImport } from './routes/artigo.$slug'
@@ -70,6 +71,11 @@ const BuscaRoute = BuscaRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TagSlugRoute = TagSlugRouteImport.update({
+  id: '/tag/$slug',
+  path: '/tag/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CategoriaSlugRoute = CategoriaSlugRouteImport.update({
@@ -129,6 +135,7 @@ export interface FileRoutesByFullPath {
   '/artigo/$slug': typeof ArtigoSlugRoute
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
+  '/tag/$slug': typeof TagSlugRoute
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
@@ -148,6 +155,7 @@ export interface FileRoutesByTo {
   '/artigo/$slug': typeof ArtigoSlugRoute
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
+  '/tag/$slug': typeof TagSlugRoute
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
@@ -168,6 +176,7 @@ export interface FileRoutesById {
   '/artigo/$slug': typeof ArtigoSlugRoute
   '/autor/$slug': typeof AutorSlugRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
+  '/tag/$slug': typeof TagSlugRoute
   '/admin/newsroom_/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/admin/newsroom_/$section/$id': typeof AdminNewsroomSectionIdRoute
@@ -189,6 +198,7 @@ export interface FileRouteTypes {
     | '/artigo/$slug'
     | '/autor/$slug'
     | '/categoria/$slug'
+    | '/tag/$slug'
     | '/admin/newsroom/$section'
     | '/admin/research-workspace/$scientificWorkId'
     | '/admin/newsroom/$section/$id'
@@ -208,6 +218,7 @@ export interface FileRouteTypes {
     | '/artigo/$slug'
     | '/autor/$slug'
     | '/categoria/$slug'
+    | '/tag/$slug'
     | '/admin/newsroom/$section'
     | '/admin/research-workspace/$scientificWorkId'
     | '/admin/newsroom/$section/$id'
@@ -227,6 +238,7 @@ export interface FileRouteTypes {
     | '/artigo/$slug'
     | '/autor/$slug'
     | '/categoria/$slug'
+    | '/tag/$slug'
     | '/admin/newsroom_/$section'
     | '/admin/research-workspace/$scientificWorkId'
     | '/admin/newsroom_/$section/$id'
@@ -247,6 +259,7 @@ export interface RootRouteChildren {
   ArtigoSlugRoute: typeof ArtigoSlugRoute
   AutorSlugRoute: typeof AutorSlugRoute
   CategoriaSlugRoute: typeof CategoriaSlugRoute
+  TagSlugRoute: typeof TagSlugRoute
   AdminNewsroomSectionRoute: typeof AdminNewsroomSectionRouteWithChildren
   AdminResearchWorkspaceScientificWorkIdRoute: typeof AdminResearchWorkspaceScientificWorkIdRoute
 }
@@ -314,6 +327,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tag/$slug': {
+      id: '/tag/$slug'
+      path: '/tag/$slug'
+      fullPath: '/tag/$slug'
+      preLoaderRoute: typeof TagSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/categoria/$slug': {
@@ -401,6 +421,7 @@ const rootRouteChildren: RootRouteChildren = {
   ArtigoSlugRoute: ArtigoSlugRoute,
   AutorSlugRoute: AutorSlugRoute,
   CategoriaSlugRoute: CategoriaSlugRoute,
+  TagSlugRoute: TagSlugRoute,
   AdminNewsroomSectionRoute: AdminNewsroomSectionRouteWithChildren,
   AdminResearchWorkspaceScientificWorkIdRoute:
     AdminResearchWorkspaceScientificWorkIdRoute,
