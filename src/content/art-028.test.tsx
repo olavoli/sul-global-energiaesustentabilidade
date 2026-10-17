@@ -148,11 +148,14 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
       searchArticles("empregos e cidades depois do carvão").find((item) => item.slug === slug)
         ?.title,
     ).toBe(canonicalTitle);
-    expect(getLatestArticles(1)[0]).toMatchObject({
-      slug: "a-pandemia-salvou-o-sus",
-      title: "A Pandemia salvou o SUS?",
-      publishedAt: "2026-10-12",
-    });
+    const latest = getLatestArticles(1);
+    expect(latest).toHaveLength(1);
+    const latestDate = getPublishedArticles()
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    expect(latest[0].publishedAt).toBe(latestDate);
+    expect(getArticleBySlug(latest[0].slug)).toEqual(latest[0]);
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);
     expect(getRelatedArticles(article!)).not.toHaveLength(0);
 
