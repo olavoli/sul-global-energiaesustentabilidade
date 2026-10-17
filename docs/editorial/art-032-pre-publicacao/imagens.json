@@ -1,0 +1,162 @@
+[
+  {
+    "index": 0,
+    "name": "Hero - Agricultura solar ao pôr do sol.png",
+    "tool": "ChatGPT (OpenAI)",
+    "alt": "Ilustração de cultivo sob painéis solares ao pôr do sol, com uma coruja em primeiro plano.",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2662042,
+    "sha256": "be0bf7a9a4808866a2e2407a3cc250bd64dc44149d43231dcc43a04e1eec8115",
+    "original": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-original.png",
+    "variants": [
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-720.webp",
+        "width": 720,
+        "height": 405,
+        "bytes": 91700
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 201320
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-1536.webp",
+        "width": 1536,
+        "height": 864,
+        "bytes": 280940
+      }
+    ],
+    "license": "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/",
+    "thirdPartyInputs": {
+      "status": "none-declared",
+      "confirmedBy": "responsável editorial, declaração expressa nesta conversa",
+      "confirmedAt": "2026-10-16",
+      "statement": "Hero gerada pelo ChatGPT sem incorporar imagens, mapas, fotografias ou outros ativos de terceiros que dependam de licença separada."
+    }
+  },
+  {
+    "index": 1,
+    "name": "Imagem 1  - infografico_agrivoltaico_vertical_04.png",
+    "tool": "Pippit (www.pippit.ai)",
+    "alt": "Diagrama de painéis elevados, fileiras espaçadas e estufa fotovoltaica integradas a cultivos.",
+    "width": 1600,
+    "height": 2848,
+    "bytes": 5243608,
+    "sha256": "4a4a0b88a0b16b79dd9dfca9296316949dadf3a6e27b79d3d4c25e75628ae82f",
+    "original": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-configuracoes-original.png",
+    "variants": [
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-configuracoes-720.webp",
+        "width": 720,
+        "height": 1282,
+        "bytes": 929960
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-configuracoes-1200.webp",
+        "width": 1200,
+        "height": 2136,
+        "bytes": 2285624
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-configuracoes-1536.webp",
+        "width": 1536,
+        "height": 2734,
+        "bytes": 3477088
+      }
+    ],
+    "license": "pending"
+  },
+  {
+    "index": 2,
+    "name": "Imagem 2 - Infográfico Agrivoltaica_ Uso Eficiente da Terra.png",
+    "tool": "ChatGPT (OpenAI)",
+    "alt": "Comparação ilustrativa de uso da terra: agricultura relativa de 0,80 e eletricidade relativa de 0,75, totalizando LER de 1,55.",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1959975,
+    "sha256": "2e7311d34e776701ff527e2663f606e8f356c4b3d7630a46b88ec49fdbf4bde6",
+    "original": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-ler-original.png",
+    "variants": [
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-ler-720.webp",
+        "width": 720,
+        "height": 405,
+        "bytes": 320504
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-ler-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 801682
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-ler-1536.webp",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1214566
+      }
+    ],
+    "license": "pending"
+  },
+  {
+    "index": 3,
+    "name": "Imagem 3 - Mapa-múndi da Cooperação BRICS Jpeg.jpg",
+    "tool": "ChatGPT (OpenAI)",
+    "alt": "Mapa ilustrativo que distingue países BRICS em azul e países-parceiros em laranja; classificação geopolítica pendente de conferência.",
+    "width": 1878,
+    "height": 1021,
+    "bytes": 292346,
+    "sha256": "4ab2300b7a24936501babd92762a00fbe80fe54c840e7a94664fa728101e79dc",
+    "original": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-brics-original.jpg",
+    "variants": [
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-brics-720.jpg",
+        "width": 720,
+        "height": 391,
+        "bytes": 92898
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-brics-1200.jpg",
+        "width": 1200,
+        "height": 652,
+        "bytes": 209082
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-brics-1536.jpg",
+        "width": 1536,
+        "height": 835,
+        "bytes": 300702
+      }
+    ],
+    "license": "pending"
+  },
+  {
+    "index": 4,
+    "name": "Imagem 4 - Agrivoltaico_ Brasil versus Exterior.png",
+    "tool": "ChatGPT (OpenAI) + Gemini (Google)",
+    "alt": "Infográfico comparativo de modelos agrivoltaicos no Brasil e no exterior, com estimativas econômicas pendentes de validação.",
+    "width": 940,
+    "height": 1672,
+    "bytes": 2209122,
+    "sha256": "1505fdacdec6b28f340852887c7d2f1f6d72413b968dfc831691160988d56692",
+    "original": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-brasil-exterior-original.png",
+    "variants": [
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-brasil-exterior-720.webp",
+        "width": 720,
+        "height": 1281,
+        "bytes": 990262
+      },
+      {
+        "src": "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-brasil-exterior-940.webp",
+        "width": 940,
+        "height": 1672,
+        "bytes": 1539002
+      }
+    ],
+    "license": "pending"
+  }
+]

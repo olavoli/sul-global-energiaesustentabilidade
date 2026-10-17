@@ -1,0 +1,172 @@
+[
+  {
+    "number": 1,
+    "id": "S02",
+    "author": "Fraunhofer Institute for Solar Energy Systems ISE",
+    "year": 2024,
+    "title": "Agrivoltaics: Opportunities for Agriculture and the Energy Transition, terceira edição, fevereiro",
+    "url": "https://www.ise.fraunhofer.de/content/dam/ise/en/documents/publications/studies/APV-Guideline.pdf",
+    "location": "Seções 2 (configurações/projetos), 3 (agricultura), 4.1–4.4 (economia); figuras 38–40; edição na folha de créditos",
+    "kind": "guia técnico e estimativas de custos",
+    "evidence": "Custos variam com configuração, altura e contexto alemão; o capítulo econômico separa CAPEX, OPEX e LCOE. Não foi confirmada uma faixa geral de CAPEX 20–30%. O LCOE cerca de 50% maior no arranjo elevado acima de 4 m não é CAPEX. Heggelbach inclui batata, trigo, aipo e trevo; respostas dependem do ano e cultivo."
+  },
+  {
+    "number": 2,
+    "id": "S01",
+    "author": "Barron-Gafford, G. A.; Pavao-Zuckerman, M. A.; Minor, R. L. et al.",
+    "year": 2019,
+    "title": "Agrivoltaics provide mutual benefits across the food–energy–water nexus in drylands",
+    "url": "https://energy.arizona.edu/sites/default/files/2022-09/Barron-Gafford%20et%20al%20Nature%20Sustainability%202019.pdf",
+    "doi": "10.1038/s41893-019-0364-5",
+    "location": "Nature Sustainability 2, 848–855; Results: Microclimatic impacts, Crop responses, Potential impacts on PV panel performance; Methods",
+    "kind": "experimento de campo + simulação elétrica",
+    "evidence": "Experimento de 2017 no Arizona. Média diurna do ar 1,2 ± 0,3 °C inferior; média noturna 0,5 ± 0,4 °C superior. Respostas variam entre três culturas. Menor transpiração não equivale a igual redução de irrigação. Módulos mais frios são outro indicador; ganhos elétricos anuais foram simulados. Não sustenta o par ar −3 °C/solo −5 °C tal como atribuído no Word."
+  },
+  {
+    "number": 3,
+    "id": "S05",
+    "author": "Horowitz, K.; Ramasamy, V.; Macknick, J.; Margolis, R.",
+    "year": 2020,
+    "title": "Capital Costs for Dual-Use Photovoltaic Installations: 2020 Benchmark for Ground-Mounted PV Systems with Pollinator-Friendly Vegetation, Grazing, and Crops",
+    "url": "https://www.nlr.gov/docs/fy21osti/77811.pdf",
+    "location": "NREL/TP-6A20-77811; Executive Summary; seção 5 e figuras comparativas; seção 6, p. 19",
+    "kind": "modelo de custos bottom-up, Estados Unidos, benchmark 2020",
+    "evidence": "Figura 3, p.11: benchmark de 500 kW, EUA, custos instalados US$1,53/WDC (fixo convencional), US$1,66/WDC (tracker convencional), US$1,83/WDC (cultivos vertical), US$2,09/WDC (cultivos tracker elevado), US$2,33/WDC (cultivos elevado e reforçado). Acréscimo reforçado/fixo=(2,33/1,53−1)×100=52,29%, aproximadamente52%. Modelo de custos, não levantamento mundial. Comparações vertical/fixo≈19,61% e tracker elevado/tracker convencional≈25,90%; não demonstram faixa geral Fraunhofer20–30%."
+  },
+  {
+    "number": 4,
+    "id": "S03",
+    "author": "Strub, L.; Wittke, M.; Trommsdorff, M.; Stoll, M.; Kammann, C.; Loose, S.",
+    "year": 2024,
+    "title": "Assessing the economic performance of agrivoltaic systems in vineyards – framework development, simulated scenarios and directions for future research",
+    "url": "https://www.frontiersin.org/journals/horticulture/articles/10.3389/fhort.2024.1473072/full",
+    "doi": "10.3389/fhort.2024.1473072",
+    "location": "Resumo; seções 3, 4 e 5.4; tabelas de cenários",
+    "kind": "simulação econômica de vinhedos alemães",
+    "evidence": "Cenários alemães apresentam VPL negativo em horizonte de 20 anos sob premissas adotadas. Não é observação de payback nem prova universal de inviabilidade sem subsídios. ROI é razão de retorno; prazo de retorno é payback."
+  },
+  {
+    "number": 5,
+    "id": "S19",
+    "title": "The 5 Cs of Agrivoltaic Success Factors in the United States: Lessons From the InSPIRE Research Study",
+    "author": "Macknick, J. et al. / NREL",
+    "year": 2022,
+    "url": "https://www.nlr.gov/docs/fy22osti/83566.pdf",
+    "location": "NREL/TP-6A20-83566, agosto; Executive Summary, pesquisa2015–2021",
+    "kind": "síntese de pesquisa de campo",
+    "evidence": "PDF consultado; mais de25locais; não garante resposta positiva de toda cultura."
+  },
+  {
+    "number": 6,
+    "id": "S06",
+    "author": "Vidotto, L. C.; Schneider, K.; Morato, R. W.; do Nascimento, L. R.; Rüther, R.",
+    "year": 2024,
+    "title": "An evaluation of the potential of agrivoltaic systems in Brazil",
+    "url": "https://www.sciencedirect.com/science/article/pii/S030626192400165X",
+    "doi": "10.1016/j.apenergy.2024.122782",
+    "location": "Applied Energy360,122782; metadados e resumo primário; desafios e potencial regional",
+    "kind": "avaliação de potencial; escopo do resumo consultado",
+    "evidence": "Existência, título, periódico e DOI localizados. Resumo aborda GD, potencial e obstáculos. Não certifica números microclimáticos nem a coincidência espacial exata de irrigação e estresse hídrico sem conferir os resultados integrais."
+  },
+  {
+    "number": 7,
+    "id": "S07",
+    "author": "Schneider, K.; Vidotto, L.; Morato, R.; Rüther, R.; Nascimento, L. / GIZ",
+    "year": 2025,
+    "title": "Sistemas Agrivoltaicos no Brasil — Estudo de potencial e viabilidade técnico-econômicos",
+    "url": "https://www.gov.br/mme/pt-br/assuntos/secretarias/sntep/parcerias-energeticas/publicacoes/EstudoAgriPVPT.pdf",
+    "location": "Expediente p.2: atualização junho2024, tradução março2025, publicação novembro2025; seção4.1.3,p42; tabela3,p45; desafios pp14–15; estudo de caso capítulo5",
+    "kind": "estudo técnico específico, PDF consultado",
+    "evidence": "CCampo em Santarém/PA, piloto instalado em2023, em operação no recorte; distinto de APOI/AM proposto. Data de publicação confirmada; não presumir estado de todos os projetos em2026."
+  },
+  {
+    "number": 8,
+    "id": "S08",
+    "author": "Congresso Nacional brasileiro",
+    "year": 2025,
+    "title": "11º Fórum Parlamentar do Brics — Brasil 2025",
+    "url": "https://www.congressonacional.leg.br/brics/",
+    "location": "Participantes > Países Membros / Países Parceiros",
+    "kind": "registro oficial histórico de participação",
+    "evidence": "Lista 11 membros, incluindo Arábia Saudita e Indonésia, e nove parceiros naquele evento. Não inclui ainda Vietnã. Não demonstra adoção agrivoltaica nem fixa a composição em outubro de 2026."
+  },
+  {
+    "number": 9,
+    "id": "S09",
+    "author": "Presidência brasileira do BRICS",
+    "year": 2025,
+    "title": "Vietnã torna-se país parceiro do BRICS",
+    "url": "https://brics.br/pt-br/noticias/vietna-torna-se-pais-parceiro-do-brics",
+    "location": "Anúncio de 13/06/2025 localizado em busca oficial; abertura integral falhou",
+    "kind": "anúncio oficial localizado, acesso parcial",
+    "evidence": "Vietnã como décimo parceiro em junho de 2025; exige combinar recortes históricos e datar mapa, não tratar a lista anterior de nove como contradição nem inventar adesão em 2026."
+  },
+  {
+    "number": 10,
+    "id": "S16",
+    "author": "Huawei",
+    "year": null,
+    "title": "Smart Agrivoltaic Power Plant in Ningxia: Turning a Desert into an Oasis",
+    "url": "https://www.huawei.com/en/sustainability/the-latest/stories/smart-agrivoltaic-power-plant-in-ningxia-en",
+    "location": "Descrição Baofeng/goji e efeitos sobre trabalho local",
+    "kind": "relato corporativo de instalação real",
+    "evidence": "Documenta integração produtiva descrita pela fornecedora; não apresenta renda provincial medida +30%. Ano não confirmado."
+  },
+  {
+    "number": 11,
+    "id": "S17",
+    "author": "Ministry of Agriculture and Farmers Welfare, Government of India",
+    "year": 2021,
+    "title": "Lok Sabha Unstarred Question 2401: Agriculture Voltage Technology",
+    "url": "https://www.icar.gov.in/sites/default/files/inline-files/Annexure-IX_compressed.pdf",
+    "location": "Resposta de 09/03/2021, itens (a) e (b); resultado documental indexado, abertura direta falhou",
+    "kind": "documento oficial localizado; acesso parcial",
+    "evidence": "ICAR-CAZRI Jodhpur desenvolveu sistema de105kW. Distinguir sistema existente das capacidades previstas no programa KUSUM. Não comprova pilotos de Gujarat/Karnataka ou IIT."
+  },
+  {
+    "number": 12,
+    "id": "S15",
+    "author": "Ghamari, Mehrdad; Ramasamy, Mahendiran; Sundaram, Senthilarasu",
+    "year": 2026,
+    "title": "Agrivoltaics in India: A promising nexus of solar energy and agriculture for sustainable development",
+    "url": "https://doi.org/10.1016/j.solener.2026.114438",
+    "location": "Solar Energy 309, 114438; trecho indexado sobre alface e consumo de água, chamada [45]",
+    "kind": "revisão; acesso parcial",
+    "evidence": "Menciona 20–30% de redução de consumo de água. Não usar como prova primária indiana, nem como demonstração do par IIT/4°C/irrigação do Word."
+  },
+  {
+    "number": 13,
+    "id": "S14",
+    "author": "Elamri, Y.; Cheviron, B.; Lopez, J.-M.; Dejean, C.; Belaud, G.",
+    "year": 2018,
+    "title": "Water budget and crop modelling for agrivoltaic systems: Application to irrigated lettuces",
+    "url": "https://publications.cirad.fr/une_notice.php?dk=598808",
+    "doi": "10.1016/j.agwat.2018.07.001",
+    "location": "Agricultural Water Management 208, 440–453; resumo institucional e trechos primários indexados; texto integral não recuperado",
+    "kind": "experimentos e modelagem; verificação parcial",
+    "evidence": "Consumo hídrico da alface 20–30% menor, em estudo de Lavalette/Montpellier, França. Não demonstra IIT/Índia nem vinculação a −4°C. A identidade literal do item [45] da revisão de 2026 não foi recuperada; correspondência textual identificada, não ordinal certificado."
+  },
+  {
+    "number": 14,
+    "id": "S10",
+    "author": "Punt, C.; Marais, D.; Fischer, T.; Govender, M.; Pugin, J.; Kühl, J.; Haasbroek, B.",
+    "year": 2021,
+    "title": "Exploring Water Supply Economics, Opportunity Costs, and Cost of Unserved Water in the Context of Various Water Augmentation Considerations – Using the Western Cape Water Supply System as a Case Study",
+    "url": "https://www.wrc.org.za/wp-content/uploads/mdocs/TT%20864%20final%20web.pdf",
+    "location": "WRC TT 864/21, outubro; seção 3.5.3, p. 42 em diante; tabelas 3-22 e seguintes",
+    "kind": "modelagem regional",
+    "evidence": "Modela citros e uvas de mesa no Cabo Ocidental. Não é ensaio de vinícola demonstrando acidez de uvas para vinho. Proposta de substituição factual disponível sem converter estudo em instalação operacional."
+  },
+  {
+    "number": 15,
+    "id": "S04",
+    "author": "Vidotto, L. C.; Schneider, K.; Ribeiro, M. P. T. M.; Nascimento, L.; Rüther, R.; Morato, R. W.",
+    "year": 2024,
+    "title": "Sistemas agrivoltaicos na agricultura familiar: estudo de caso e análise de viabilidade econômica",
+    "url": "https://rbens.emnuvens.com.br/rbens/article/download/469/326/972",
+    "doi": "10.59627/rbens.2024v15i2.469",
+    "location": "RBENS 15(2), 131–139; p. 132 metodologia; p. 137 tabelas 5 e 6 e seção 3.4",
+    "kind": "projeto proposto / simulação de viabilidade",
+    "evidence": "APOI, Iranduba/AM, quatro famílias. Horizonte 25 anos; TMA 13,25%; crescimento tarifário 9,2% adotado. Payback descontado 7 anos e 10 meses no cenário de investimento integral dos agricultores. Perdas agrícolas de 5–20% são cenários, não medições. Não comprova projeto CCampo/PA nem retorno nacional típico."
+  }
+]

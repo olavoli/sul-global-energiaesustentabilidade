@@ -1,10 +1,14 @@
 import { describe, expect, test } from "bun:test";
 
 import { stringify } from "yaml";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
 import {
   listArticles,
   prepareStatusChange,
+  persistStatusChange,
   publishCheck,
   reviewArticle,
   type OperationContext,
@@ -78,6 +82,72 @@ function article(overrides: Partial<ArticleFrontmatter> = {}): ArticleFrontmatte
 function mdx(record: ArticleFrontmatter): string {
   return `---\n${stringify(record)}---\n\nTexto estrutural de teste.`;
 }
+
+describe("persistência editorial JSON e YAML", () => {
+  test("JSON draft → review preserva todos os bytes exceto o status", () => {
+    const record = article({ status: "draft", draftStage: "review-ready" });
+    const source = `---\n${JSON.stringify(record, null, 2)}\n---\n\nFixture.`;
+    const result = prepareStatusChange(source, "review", context, authorDirectory, {
+      readyForWriting: true,
+      blockers: [],
+    });
+    expect(result.content).toBe(source.replace('"status": "draft"', '"status": "review"'));
+  });
+  for (const format of ["json", "yaml"] as const) {
+    test(`${format}: persiste transição e preserva outros campos e corpo`, async () => {
+      const record = article({ status: "review", approvedAt: undefined });
+      const body = "\nTexto de fixture.\n\nstatus: draft\n";
+      const source = `---\r\n${format === "json" ? JSON.stringify(record, null, 2) : stringify(record)}\r\n---\r\n${body}`;
+      const result = prepareStatusChange(source, "approved", context, authorDirectory);
+      const parsed = parseEditorialFile(result.content);
+      expect(parsed.frontmatter).toEqual({
+        ...record,
+        status: "approved",
+        approvedAt: "2026-07-13",
+      });
+      expect(parsed.body).toBe(body);
+      const dir = await mkdtemp(join(tmpdir(), "editorial-status-"));
+      try {
+        const path = join(dir, "fixture.mdx");
+        await persistStatusChange(path, result.content, "approved");
+        expect(parseEditorialFile(await readFile(path, "utf8")).frontmatter.status).toBe(
+          "approved",
+        );
+        await writeFile(path, source);
+        await expect(
+          persistStatusChange(path, result.content, "approved", {
+            readFile,
+            writeFile: async () => {},
+          }),
+        ).rejects.toThrow("Status persistido review; solicitado approved");
+        await expect(persistStatusChange(path, "inválido", "approved")).rejects.toThrow(
+          "Falha ao persistir",
+        );
+        await expect(
+          persistStatusChange(join(dir, "ausente", "fixture.mdx"), result.content, "approved"),
+        ).rejects.toThrow("Falha ao persistir");
+      } finally {
+        await rm(dir, { recursive: true, force: true });
+      }
+    });
+  }
+
+  test("JSON altera somente o escalar status quando não há campos novos", () => {
+    const source = `---\n${JSON.stringify(base, null, 2)}\n---\n\nFixture.`;
+    const result = prepareStatusChange(source, "published", context, authorDirectory);
+    expect(parseEditorialFile(result.content).frontmatter.publishedAt).toBe("2026-07-13");
+    const withDate = source.replace('"status": "approved"', '"status": "review"');
+    const approved = prepareStatusChange(withDate, "approved", context, authorDirectory);
+    expect(approved.content).toBe(withDate.replace('"status": "review"', '"status": "approved"'));
+  });
+
+  test("arquivo inválido e transição proibida são rejeitados antes da escrita", () => {
+    expect(() => prepareStatusChange("inválido", "review", context, authorDirectory)).toThrow();
+    expect(() => prepareStatusChange(mdx(base), "review", context, authorDirectory)).toThrow(
+      "Transição inválida",
+    );
+  });
+});
 
 describe("operação editorial diária", () => {
   const riskApproval: ResidualRiskApproval = {

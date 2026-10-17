@@ -1,0 +1,1632 @@
+{
+  "filename": "ART 032 - Agrivoltaica.docx",
+  "sha256": "f0e02dff6570aa29e0ec1041c62564ccf88390ba5be6f63f3664f5fba57b6501",
+  "blocks": [
+    {
+      "index": 0,
+      "kind": "paragraph",
+      "text": "Agrivoltaica: É possível colher alimentos e eletricidade na mesma terra?",
+      "mdx": "Agrivoltaica: É possível colher alimentos e eletricidade na mesma terra?",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 1,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": [
+        "rId5"
+      ]
+    },
+    {
+      "index": 2,
+      "kind": "paragraph",
+      "text": "5 Pontos-Chave",
+      "mdx": "5 Pontos-Chave",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 3,
+      "kind": "paragraph",
+      "text": "Sinergia, não sobreposição: A agrivoltaica busca otimizar o uso da terra, não apenas colocar painéis sobre plantações. O sucesso depende da interação entre sombra, temperatura e umidade.",
+      "mdx": "Sinergia, não sobreposição: A agrivoltaica busca otimizar o uso da terra, não apenas colocar painéis sobre plantações. O sucesso depende da interação entre sombra, temperatura e umidade.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 4,
+      "kind": "paragraph",
+      "text": "O Indicador LER é crucial: A Land Equivalent Ratio (LER) mede a eficiência combinada. Um LER > 1 indica que o sistema integrado usa a terra melhor do que sistemas separados, mesmo que a produtividade agrícola individual caia.",
+      "mdx": "O Indicador LER é crucial: A Land Equivalent Ratio (LER) mede a eficiência combinada. Um LER &gt; 1 indica que o sistema integrado usa a terra melhor do que sistemas separados, mesmo que a produtividade agrícola individual caia.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 5,
+      "kind": "paragraph",
+      "text": "Cultura importa: Nem todas as plantas se adaptam. Culturas tolerantes à sombra ou sensíveis ao calor (como hortaliças e algumas frutíferas) tendem a se beneficiar mais do que culturas de pleno sol exigentes.",
+      "mdx": "Cultura importa: Nem todas as plantas se adaptam. Culturas tolerantes à sombra ou sensíveis ao calor (como hortaliças e algumas frutíferas) tendem a se beneficiar mais do que culturas de pleno sol exigentes.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 6,
+      "kind": "paragraph",
+      "text": "Custo elevado de estrutura: Sistemas agrivoltaicos exigem estruturas mais altas e robustas, aumentando o CAPEX. A viabilidade econômica depende de incentivos, preço da energia e modelos de negócio compartilhados.",
+      "mdx": "Custo elevado de estrutura: Sistemas agrivoltaicos exigem estruturas mais altas e robustas, aumentando o CAPEX. A viabilidade econômica depende de incentivos, preço da energia e modelos de negócio compartilhados.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 7,
+      "kind": "paragraph",
+      "text": "Contexto Brasileiro: O Brasil tem alto potencial devido à irradiação solar e desafios hídricos, mas carece de regulamentação clara e mão de obra especializada. Projetos piloto estão em andamento, mas a escala comercial ainda é incipiente.",
+      "mdx": "Contexto Brasileiro: O Brasil tem alto potencial devido à irradiação solar e desafios hídricos, mas carece de regulamentação clara e mão de obra especializada. Projetos piloto estão em andamento, mas a escala comercial ainda é incipiente.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 8,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 9,
+      "kind": "paragraph",
+      "text": "Bloco de Destaque",
+      "mdx": "Bloco de Destaque",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 10,
+      "kind": "paragraph",
+      "text": "\"A agrivoltaica não deve ser avaliada apenas por quantos quilowatts-hora produz, mas pelo que acontece com a terra, a água, a lavoura e a renda de quem trabalha nela.\"",
+      "mdx": "\"A agrivoltaica não deve ser avaliada apenas por quantos quilowatts-hora produz, mas pelo que acontece com a terra, a água, a lavoura e a renda de quem trabalha nela.\"",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 11,
+      "kind": "paragraph",
+      "text": "Esta é a premissa central para entender a tecnologia. Não se trata apenas de energia renovável, mas de resiliência agrícola. Em regiões onde o calor extremo já limita a produção, a sombra dos painéis pode ser a diferença entre uma colheita razoável e uma perda total. No entanto, essa resiliência tem um preço: a complexidade de gestão e o investimento inicial. O agricultor não está apenas vendendo energia; está gerenciando um ecossistema artificial complexo.",
+      "mdx": "Esta é a premissa central para entender a tecnologia. Não se trata apenas de energia renovável, mas de resiliência agrícola. Em regiões onde o calor extremo já limita a produção, a sombra dos painéis pode ser a diferença entre uma colheita razoável e uma perda total. No entanto, essa resiliência tem um preço: a complexidade de gestão e o investimento inicial. O agricultor não está apenas vendendo energia; está gerenciando um ecossistema artificial complexo.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 12,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 13,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 14,
+      "kind": "paragraph",
+      "text": "Imagine caminhar por uma plantação de soja ou milho. O sol bate forte, o calor é intenso e a umidade do solo evapora rapidamente. Agora, imagine essa mesma cena, mas com uma diferença crucial: acima das plantas, painéis solares elevados criam uma sombra parcial, protegendo as culturas do estresse térmico enquanto geram energia limpa. Não é ficção científica. É agrivoltaica.",
+      "mdx": "Imagine caminhar por uma plantação de soja ou milho. O sol bate forte, o calor é intenso e a umidade do solo evapora rapidamente. Agora, imagine essa mesma cena, mas com uma diferença crucial: acima das plantas, painéis solares elevados criam uma sombra parcial, protegendo as culturas do estresse térmico enquanto geram energia limpa. Não é ficção científica. É agrivoltaica.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 15,
+      "kind": "paragraph",
+      "text": "Mas aqui surge a pergunta que define este artigo: instalar painéis solares sobre uma plantação realmente melhora o aproveitamento da terra ou apenas transfere custos e dificuldades para o agricultor?",
+      "mdx": "Mas aqui surge a pergunta que define este artigo: instalar painéis solares sobre uma plantação realmente melhora o aproveitamento da terra ou apenas transfere custos e dificuldades para o agricultor?",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 16,
+      "kind": "paragraph",
+      "text": "A resposta não é simples. A agrivoltaica pode transformar a disputa histórica entre produção de alimentos e geração de eletricidade em uma oportunidade de uso compartilhado. No entanto, seus benefícios dependem criticamente do clima, da cultura agrícola, da configuração dos painéis e, claro, da viabilidade econômica. Nem toda plantação ganha com sombra, nem toda usina solar é compatível com a agricultura.",
+      "mdx": "A resposta não é simples. A agrivoltaica pode transformar a disputa histórica entre produção de alimentos e geração de eletricidade em uma oportunidade de uso compartilhado. No entanto, seus benefícios dependem criticamente do clima, da cultura agrícola, da configuração dos painéis e, claro, da viabilidade econômica. Nem toda plantação ganha com sombra, nem toda usina solar é compatível com a agricultura.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 17,
+      "kind": "paragraph",
+      "text": "Neste texto, vamos além do otimismo tecnológico. Vamos analisar onde a agrivoltaica funciona, onde ainda é experimental e em quais condições pode fracassar. Porque produzir mais valor por hectare, produzir mais alimentos por hectare e produzir mais eletricidade por hectare são objetivos diferentes — e nem sempre aumentam juntos.",
+      "mdx": "Neste texto, vamos além do otimismo tecnológico. Vamos analisar onde a agrivoltaica funciona, onde ainda é experimental e em quais condições pode fracassar. Porque produzir mais valor por hectare, produzir mais alimentos por hectare e produzir mais eletricidade por hectare são objetivos diferentes — e nem sempre aumentam juntos.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 18,
+      "kind": "paragraph",
+      "text": "O que é agrivoltaica? Mais do que painéis no meio do mato",
+      "mdx": "O que é agrivoltaica? Mais do que painéis no meio do mato",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 19,
+      "kind": "paragraph",
+      "text": "Agrivoltaica (ou agrofotovoltaica) é o uso simultâneo da mesma área de terra para produção agrícola e geração de energia fotovoltaica. Diferente de uma usina solar convencional, que ocupa o solo exclusivamente, ou de uma lavoura tradicional, a agrivoltaica busca a sinergia entre os dois usos.",
+      "mdx": "Agrivoltaica (ou agrofotovoltaica) é o uso simultâneo da mesma área de terra para produção agrícola e geração de energia fotovoltaica. Diferente de uma usina solar convencional, que ocupa o solo exclusivamente, ou de uma lavoura tradicional, a agrivoltaica busca a sinergia entre os dois usos.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 20,
+      "kind": "paragraph",
+      "text": "Existem três configurações principais:",
+      "mdx": "Existem três configurações principais:",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 21,
+      "kind": "paragraph",
+      "text": "Painéis Elevados: Estruturas altas (geralmente acima de 2,5 metros) que permitem a passagem de maquinário agrícola abaixo deles. É o modelo mais comum para grandes culturas como soja, milho e trigo.",
+      "mdx": "Painéis Elevados: Estruturas altas (geralmente acima de 2,5 metros) que permitem a passagem de maquinário agrícola abaixo deles. É o modelo mais comum para grandes culturas como soja, milho e trigo.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 22,
+      "kind": "paragraph",
+      "text": "Sistemas Verticais ou Espaçados: Painéis instalados verticalmente ou com espaçamento maior entre fileiras, permitindo que a luz solar penetre lateralmente. Ideal para culturas que exigem mais radiação direta.",
+      "mdx": "Sistemas Verticais ou Espaçados: Painéis instalados verticalmente ou com espaçamento maior entre fileiras, permitindo que a luz solar penetre lateralmente. Ideal para culturas que exigem mais radiação direta.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 23,
+      "kind": "paragraph",
+      "text": "Estufas Fotovoltaicas: Painéis semitransparentes integrados à cobertura de estufas, comuns em horticultura de alto valor agregado.",
+      "mdx": "Estufas Fotovoltaicas: Painéis semitransparentes integrados à cobertura de estufas, comuns em horticultura de alto valor agregado.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 24,
+      "kind": "paragraph",
+      "text": "A chave não está apenas na instalação, mas na gestão da sombra. Demasiada sombra reduz a fotossíntese; pouca sombra não protege contra o estresse hídrico. O equilíbrio é delicado e específico para cada região.",
+      "mdx": "A chave não está apenas na instalação, mas na gestão da sombra. Demasiada sombra reduz a fotossíntese; pouca sombra não protege contra o estresse hídrico. O equilíbrio é delicado e específico para cada região.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 25,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": [
+        "rId6"
+      ]
+    },
+    {
+      "index": 26,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 27,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 28,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 29,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 30,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 31,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 32,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 33,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 34,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 35,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 36,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 37,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 38,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 39,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 40,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 41,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 42,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 43,
+      "kind": "paragraph",
+      "text": "A sombra pode ajudar? A física por trás do microclima",
+      "mdx": "A sombra pode ajudar? A física por trás do microclima",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 44,
+      "kind": "paragraph",
+      "text": "Para entender se a agrivoltaica funciona, precisamos olhar para a fisiologia vegetal. Plantas não gostam de calor extremo. Quando a temperatura foliar sobe demais, os estômatos (poros das folhas) fecham para evitar perda de água, interrompendo a absorção de CO₂ e, consequentemente, a fotossíntese.",
+      "mdx": "Para entender se a agrivoltaica funciona, precisamos olhar para a fisiologia vegetal. Plantas não gostam de calor extremo. Quando a temperatura foliar sobe demais, os estômatos (poros das folhas) fecham para evitar perda de água, interrompendo a absorção de CO₂ e, consequentemente, a fotossíntese.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 45,
+      "kind": "paragraph",
+      "text": "Estudos realizados em regiões áridas, como os publicados na Nature Sustainability, demonstraram que a sombra parcial dos painéis pode reduzir a temperatura do ar em até 3°C e a temperatura do solo em até 5°C [3]. Isso diminui a evapotranspiração, mantendo a umidade do solo por mais tempo. Em outras palavras: a planta sofre menos estresse hídrico e pode manter sua produtividade mesmo com menos irrigação.",
+      "mdx": "Estudos realizados em regiões áridas, como os publicados na Nature Sustainability, demonstraram que a sombra parcial dos painéis pode reduzir a temperatura do ar em até 3°C e a temperatura do solo em até 5°C [3]. Isso diminui a evapotranspiração, mantendo a umidade do solo por mais tempo. Em outras palavras: a planta sofre menos estresse hídrico e pode manter sua produtividade mesmo com menos irrigação.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 46,
+      "kind": "paragraph",
+      "text": "No entanto, isso não é uma regra universal. Culturas de pleno sol, como algumas variedades de milho híbrido de alta produtividade, podem ter sua taxa fotossintética limitada pela redução da radiação global. A sombra é benéfica quando mitiga o estresse, mas prejudicial quando limita a energia disponível para o crescimento.",
+      "mdx": "No entanto, isso não é uma regra universal. Culturas de pleno sol, como algumas variedades de milho híbrido de alta produtividade, podem ter sua taxa fotossintética limitada pela redução da radiação global. A sombra é benéfica quando mitiga o estresse, mas prejudicial quando limita a energia disponível para o crescimento.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 47,
+      "kind": "paragraph",
+      "text": "Quando a agricultura perde produtividade",
+      "mdx": "Quando a agricultura perde produtividade",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 48,
+      "kind": "paragraph",
+      "text": "O maior risco da agrivoltaica é a incompatibilidade mecânica e biológica. Se os painéis forem muito baixos, impedem a entrada de colheitadeiras modernas. Se forem muito densos, criam zonas de sombra excessiva que favorecem doenças fúngicas devido à maior retenção de umidade.",
+      "mdx": "O maior risco da agrivoltaica é a incompatibilidade mecânica e biológica. Se os painéis forem muito baixos, impedem a entrada de colheitadeiras modernas. Se forem muito densos, criam zonas de sombra excessiva que favorecem doenças fúngicas devido à maior retenção de umidade.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 49,
+      "kind": "paragraph",
+      "text": "Além disso, a mecanização exige espaço. Curvas de giro de tratores, altura de barras de pulverização e largura de implementos devem ser considerados no projeto desde o início. Um erro de planejamento aqui pode tornar a lavoura inviável, transformando a \"dupla colheita\" em um pesadelo logístico para o produtor.",
+      "mdx": "Além disso, a mecanização exige espaço. Curvas de giro de tratores, altura de barras de pulverização e largura de implementos devem ser considerados no projeto desde o início. Um erro de planejamento aqui pode tornar a lavoura inviável, transformando a \"dupla colheita\" em um pesadelo logístico para o produtor.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 50,
+      "kind": "paragraph",
+      "text": "Como medir se o sistema funciona: O indicador LER",
+      "mdx": "Como medir se o sistema funciona: O indicador LER",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 51,
+      "kind": "paragraph",
+      "text": "Como comparar maçãs com laranjas? Ou melhor, como comparar quilos de soja com quilowatts-hora de energia? A ciência utiliza a Land Equivalent Ratio (LER), ou Razão Equivalente de Uso da Terra.",
+      "mdx": "Como comparar maçãs com laranjas? Ou melhor, como comparar quilos de soja com quilowatts-hora de energia? A ciência utiliza a Land Equivalent Ratio (LER), ou Razão Equivalente de Uso da Terra.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 52,
+      "kind": "paragraph",
+      "text": "A fórmula é elegante em sua simplicidade:",
+      "mdx": "A fórmula é elegante em sua simplicidade:",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 53,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "<MathExpression>LER=(Y_AV)/(Y_AG)+(E_AV)/(E_FV)</MathExpression>",
+      "math": [
+        "LER=(Y_AV)/(Y_AG)+(E_AV)/(E_FV)"
+      ],
+      "images": []
+    },
+    {
+      "index": 54,
+      "kind": "paragraph",
+      "text": "Onde:",
+      "mdx": "Onde:",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 55,
+      "kind": "paragraph",
+      "text": ": Produtividade agrícola no sistema agrivoltaico.",
+      "mdx": "<MathExpression>Y_AV</MathExpression>: Produtividade agrícola no sistema agrivoltaico.",
+      "math": [
+        "Y_AV"
+      ],
+      "images": []
+    },
+    {
+      "index": 56,
+      "kind": "paragraph",
+      "text": ": Produtividade agrícola no cultivo convencional (referência).",
+      "mdx": "<MathExpression>Y_AG</MathExpression>: Produtividade agrícola no cultivo convencional (referência).",
+      "math": [
+        "Y_AG"
+      ],
+      "images": []
+    },
+    {
+      "index": 57,
+      "kind": "paragraph",
+      "text": ": Eletricidade produzida no sistema agrivoltaico.",
+      "mdx": "<MathExpression>E_AV</MathExpression>: Eletricidade produzida no sistema agrivoltaico.",
+      "math": [
+        "E_AV"
+      ],
+      "images": []
+    },
+    {
+      "index": 58,
+      "kind": "paragraph",
+      "text": ": Eletricidade produzida no sistema fotovoltaico convencional (referência).",
+      "mdx": "<MathExpression>E_FV</MathExpression>: Eletricidade produzida no sistema fotovoltaico convencional (referência).",
+      "math": [
+        "E_FV"
+      ],
+      "images": []
+    },
+    {
+      "index": 59,
+      "kind": "paragraph",
+      "text": "Um LER superior a 1 indica que o uso combinado da terra é mais eficiente do que separar as duas atividades em áreas distintas.",
+      "mdx": "Um LER superior a 1 indica que o uso combinado da terra é mais eficiente do que separar as duas atividades em áreas distintas.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 60,
+      "kind": "paragraph",
+      "text": "Exemplo Didático: Imagine que, em um sistema agrivoltaico, a produção de milho caiu para 80% da referência convencional () devido à sombra. Por outro lado, a geração de energia atingiu 75% da capacidade de uma usina solar dedicada ().",
+      "mdx": "Exemplo Didático: Imagine que, em um sistema agrivoltaico, a produção de milho caiu para 80% da referência convencional (<MathExpression>Y_AV/Y_AG=0,8</MathExpression>) devido à sombra. Por outro lado, a geração de energia atingiu 75% da capacidade de uma usina solar dedicada (<MathExpression>E_AV/E_FV=0,75</MathExpression>).",
+      "math": [
+        "Y_AV/Y_AG=0,8",
+        "E_AV/E_FV=0,75"
+      ],
+      "images": []
+    },
+    {
+      "index": 61,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "<MathExpression>LER=0,8+0,75=1,55</MathExpression>",
+      "math": [
+        "LER=0,8+0,75=1,55"
+      ],
+      "images": []
+    },
+    {
+      "index": 62,
+      "kind": "paragraph",
+      "text": "Isso significa que, para obter a mesma quantidade de comida e energia, você precisaria de 55% mais terra se usasse sistemas separados. O uso combinado foi superior, mesmo com queda na produtividade agrícola isolada. Note bem: LER > 1 não significa necessariamente mais lucro ou mais comida absoluta, mas sim uma eficiência no uso do recurso \"terra\".",
+      "mdx": "Isso significa que, para obter a mesma quantidade de comida e energia, você precisaria de 55% mais terra se usasse sistemas separados. O uso combinado foi superior, mesmo com queda na produtividade agrícola isolada. Note bem: LER &gt; 1 não significa necessariamente mais lucro ou mais comida absoluta, mas sim uma eficiência no uso do recurso \"terra\".",
+      "math": [],
+      "images": [
+        "rId7"
+      ]
+    },
+    {
+      "index": 63,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 64,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 65,
+      "kind": "paragraph",
+      "text": "A conta econômica: quem paga a conta?",
+      "mdx": "A conta econômica: quem paga a conta?",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 66,
+      "kind": "paragraph",
+      "text": "Aqui entramos no terreno escorregadio da viabilidade financeira. Instalar painéis elevados custa significativamente mais do que uma usina solar no solo. As estruturas precisam ser mais robustas, mais altas e resistentes a ventos e cargas operacionais.",
+      "mdx": "Aqui entramos no terreno escorregadio da viabilidade financeira. Instalar painéis elevados custa significativamente mais do que uma usina solar no solo. As estruturas precisam ser mais robustas, mais altas e resistentes a ventos e cargas operacionais.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 67,
+      "kind": "paragraph",
+      "text": "Segundo relatórios do Fraunhofer ISE, o CAPEX (custo de capital) de sistemas agrivoltaicos pode ser 20% a 30% superior ao de sistemas fotovoltaicos convencionais [4]. Quem absorve esse custo extra?",
+      "mdx": "Segundo relatórios do Fraunhofer ISE, o CAPEX (custo de capital) de sistemas agrivoltaicos pode ser 20% a 30% superior ao de sistemas fotovoltaicos convencionais [4]. Quem absorve esse custo extra?",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 68,
+      "kind": "paragraph",
+      "text": "O Agricultor? Raramente tem capital para investir em infraestrutura energética complexa.",
+      "mdx": "O Agricultor? Raramente tem capital para investir em infraestrutura energética complexa.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 69,
+      "kind": "paragraph",
+      "text": "O Investidor Energético? Pode estar disposto, mas exige contratos de longo prazo e garantias de que a atividade agrícola não danificará os painéis.",
+      "mdx": "O Investidor Energético? Pode estar disposto, mas exige contratos de longo prazo e garantias de que a atividade agrícola não danificará os painéis.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 70,
+      "kind": "paragraph",
+      "text": "O Proprietário da Terra? Pode alugar a área para ambos os fins, diversificando a renda.",
+      "mdx": "O Proprietário da Terra? Pode alugar a área para ambos os fins, diversificando a renda.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 71,
+      "kind": "paragraph",
+      "text": "Estudos econômicos, como os publicados na Frontiers in Horticulture, indicam que a viabilidade depende fortemente dos preços da energia e dos subsídios governamentais [6]. Sem incentivos fiscais ou tarifas diferenciadas, o retorno sobre o investimento (ROI) pode levar décadas, tornando o modelo pouco atraente para o pequeno produtor.]",
+      "mdx": "Estudos econômicos, como os publicados na Frontiers in Horticulture, indicam que a viabilidade depende fortemente dos preços da energia e dos subsídios governamentais [6]. Sem incentivos fiscais ou tarifas diferenciadas, o retorno sobre o investimento (ROI) pode levar décadas, tornando o modelo pouco atraente para o pequeno produtor.]",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 72,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 73,
+      "kind": "paragraph",
+      "text": "Tabela: Características, Vantagens e Desvantagens da Agrivoltaica",
+      "mdx": "Tabela: Características, Vantagens e Desvantagens da Agrivoltaica",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 74,
+      "kind": "table",
+      "rows": [
+        [
+          "Característica",
+          "Vantagens",
+          "Desvantagens / Desafios"
+        ],
+        [
+          "Uso do Solo",
+          "Dupla finalidade (alimentos + energia); maior eficiência por hectare (LER > 1).",
+          "Conflito de espaço para maquinário; necessidade de planejamento espacial rigoroso."
+        ],
+        [
+          "Microclima",
+          "Redução da temperatura do ar e solo; menor evapotranspiração; economia de água.",
+          "Risco de aumento de umidade relativa favorecendo doenças fúngicas; sombreamento excessivo."
+        ],
+        [
+          "Produtividade Agrícola",
+          "Proteção contra estresse térmico e granizo; possibilidade de cultivos de maior valor em sombra.",
+          "Queda potencial na produtividade de culturas exigentes em luz plena; limitação fotossintética."
+        ],
+        [
+          "Geração de Energia",
+          "Receita adicional para o produtor; diversificação de renda; energia limpa local.",
+          "Eficiência energética ligeiramente menor que usinas convencionais devido ao espaçamento/ângulo."
+        ],
+        [
+          "Economia",
+          "Estabilidade financeira via contrato de energia; valorização da propriedade.",
+          "Alto CAPEX (estrutura elevada); complexidade nos modelos de financiamento e seguros."
+        ],
+        [
+          "Ambiental",
+          "Menor pegada de carbono por unidade de produto; conservação do solo.",
+          "Impacto visual na paisagem; necessidade de descarte adequado dos painéis ao final da vida útil."
+        ]
+      ]
+    },
+    {
+      "index": 75,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 76,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 77,
+      "kind": "paragraph",
+      "text": "Experiências internacionais: o que já sabemos?",
+      "mdx": "Experiências internacionais: o que já sabemos?",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 78,
+      "kind": "paragraph",
+      "text": "Os Estados Unidos, através do programa InSPIRE do NREL, têm testado diversas configurações em climas variados [5]. Os resultados mostram que culturas tolerantes à sombra, como alface, espinafre e certas variedades de pimentão, respondem muito bem. Já na Alemanha, o Fraunhofer ISE demonstrou sucesso com batatas e cereais, mas alertou para a necessidade de adaptação das máquinas agrícolas [4].",
+      "mdx": "Os Estados Unidos, através do programa InSPIRE do NREL, têm testado diversas configurações em climas variados [5]. Os resultados mostram que culturas tolerantes à sombra, como alface, espinafre e certas variedades de pimentão, respondem muito bem. Já na Alemanha, o Fraunhofer ISE demonstrou sucesso com batatas e cereais, mas alertou para a necessidade de adaptação das máquinas agrícolas [4].",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 79,
+      "kind": "paragraph",
+      "text": "Um ponto crucial: muitos desses resultados vêm de estações experimentais. A transição para a escala comercial enfrenta barreiras burocráticas e de seguro que ainda estão sendo resolvidas.",
+      "mdx": "Um ponto crucial: muitos desses resultados vêm de estações experimentais. A transição para a escala comercial enfrenta barreiras burocráticas e de seguro que ainda estão sendo resolvidas.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 80,
+      "kind": "paragraph",
+      "text": "Agrivoltaica no Brasil: potencial e desafios",
+      "mdx": "Agrivoltaica no Brasil: potencial e desafios",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 81,
+      "kind": "paragraph",
+      "text": "O Brasil possui um potencial enorme, mas peculiar. Um estudo recente publicado na Applied Energy avaliou especificamente o cenário brasileiro [1]. Os autores destacam que nossas regiões com maior irradiação solar muitas vezes coincidem com áreas de stress hídrico, onde a proteção térmica da agrivoltaica seria mais valiosa.",
+      "mdx": "O Brasil possui um potencial enorme, mas peculiar. Um estudo recente publicado na Applied Energy avaliou especificamente o cenário brasileiro [1]. Os autores destacam que nossas regiões com maior irradiação solar muitas vezes coincidem com áreas de stress hídrico, onde a proteção térmica da agrivoltaica seria mais valiosa.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 82,
+      "kind": "paragraph",
+      "text": "Em novembro de 2025, o Ministério de Minas e Energia (MME) lançou um estudo detalhado sobre a viabilidade técnico-econômica dos sistemas agrivoltaicos no país [2]. O documento aponta que, embora a tecnologia seja promissora, faltam diretrizes técnicas claras e profissionais capacitados para a instalação e manutenção.",
+      "mdx": "Em novembro de 2025, o Ministério de Minas e Energia (MME) lançou um estudo detalhado sobre a viabilidade técnico-econômica dos sistemas agrivoltaicos no país [2]. O documento aponta que, embora a tecnologia seja promissora, faltam diretrizes técnicas claras e profissionais capacitados para a instalação e manutenção.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 83,
+      "kind": "paragraph",
+      "text": "Além disso, a legislação brasileira ainda trata a ocupação do solo rural para fins energéticos com certa ambiguidade. Questões fundiárias, ambientais e tributárias precisam ser esclarecidas para dar segurança jurídica aos investidores. Projetos piloto estão surgindo em estados como São Paulo e Minas Gerais, mas ainda são exceções, não a regra.",
+      "mdx": "Além disso, a legislação brasileira ainda trata a ocupação do solo rural para fins energéticos com certa ambiguidade. Questões fundiárias, ambientais e tributárias precisam ser esclarecidas para dar segurança jurídica aos investidores. Projetos piloto estão surgindo em estados como São Paulo e Minas Gerais, mas ainda são exceções, não a regra.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 84,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": [
+        "rId8"
+      ]
+    },
+    {
+      "index": 85,
+      "kind": "paragraph",
+      "text": "Agrivoltaica nos BRICS: Escala, necessidade e adaptação",
+      "mdx": "Agrivoltaica nos BRICS: Escala, necessidade e adaptação",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 86,
+      "kind": "paragraph",
+      "text": "Nos países do BRICS, a agrivoltaica não é apenas uma \"inovação verde\"; é muitas vezes uma resposta estratégica à pressão demográfica, à escassez hídrica e à necessidade de modernização rural.",
+      "mdx": "Nos países do BRICS, a agrivoltaica não é apenas uma \"inovação verde\"; é muitas vezes uma resposta estratégica à pressão demográfica, à escassez hídrica e à necessidade de modernização rural.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 87,
+      "kind": "paragraph",
+      "text": "1. China: O gigante da escala e da tecnologia",
+      "mdx": "1. China: O gigante da escala e da tecnologia",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 88,
+      "kind": "paragraph",
+      "text": "A China é, sem dúvida, o líder mundial em implementação de agrivoltaica em larga escala. Diferente dos projetos piloto europeus, a chinesa opera em nível industrial.",
+      "mdx": "A China é, sem dúvida, o líder mundial em implementação de agrivoltaica em larga escala. Diferente dos projetos piloto europeus, a chinesa opera em nível industrial.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 89,
+      "kind": "paragraph",
+      "text": "O modelo \"painéis no deserto\": Em regiões como Ningxia e Inner Mongolia, a China instalou gigawatts de capacidade fotovoltaica sobre áreas desertificadas. Abaixo dos painéis, cultiva-se goji berry, alfafa e até cria-se ovelhas. A sombra reduz a evaporação, permitindo a recuperação do solo degradado [7].",
+      "mdx": "O modelo \"painéis no deserto\": Em regiões como Ningxia e Inner Mongolia, a China instalou gigawatts de capacidade fotovoltaica sobre áreas desertificadas. Abaixo dos painéis, cultiva-se goji berry, alfafa e até cria-se ovelhas. A sombra reduz a evaporação, permitindo a recuperação do solo degradado [7].",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 90,
+      "kind": "paragraph",
+      "text": "Aquavoltaica: Uma variação chinesa muito comum é a instalação de painéis sobre tanques de aquicultura (peixes e camarões). Isso protege a água do aquecimento excessivo e reduz o crescimento de algas nocivas, aumentando a produtividade tanto da energia quanto do pescado.",
+      "mdx": "Aquavoltaica: Uma variação chinesa muito comum é a instalação de painéis sobre tanques de aquicultura (peixes e camarões). Isso protege a água do aquecimento excessivo e reduz o crescimento de algas nocivas, aumentando a produtividade tanto da energia quanto do pescado.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 91,
+      "kind": "paragraph",
+      "text": "Dados verificáveis: Estudos indicam que em algumas províncias chinesas, a agrivoltaica aumentou a renda dos agricultores locais em até 30% devido à dupla fonte de receita e à redução de custos com irrigação [8].",
+      "mdx": "Dados verificáveis: Estudos indicam que em algumas províncias chinesas, a agrivoltaica aumentou a renda dos agricultores locais em até 30% devido à dupla fonte de receita e à redução de custos com irrigação [8].",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 92,
+      "kind": "paragraph",
+      "text": "2. Índia: Foco na pequena propriedade e segurança hídrica",
+      "mdx": "2. Índia: Foco na pequena propriedade e segurança hídrica",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 93,
+      "kind": "paragraph",
+      "text": "Na Índia, a agrivoltaica é vista como uma ferramenta de resiliência para pequenos agricultores que sofrem com monções irregulares e ondas de calor.",
+      "mdx": "Na Índia, a agrivoltaica é vista como uma ferramenta de resiliência para pequenos agricultores que sofrem com monções irregulares e ondas de calor.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 94,
+      "kind": "paragraph",
+      "text": "Projetos piloto em Gujarat e Karnataka: O governo indiano, em parceria com institutos de pesquisa, tem testado sistemas em culturas de pimentão, tomate e batata. O foco é a economia de água, recurso crítico no subcontinente.",
+      "mdx": "Projetos piloto em Gujarat e Karnataka: O governo indiano, em parceria com institutos de pesquisa, tem testado sistemas em culturas de pimentão, tomate e batata. O foco é a economia de água, recurso crítico no subcontinente.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 95,
+      "kind": "paragraph",
+      "text": "Desafio da mecanização: Ao contrário da China ou do Brasil, a agricultura indiana ainda é predominantemente manual ou usa maquinário pequeno. Isso facilita a instalação de painéis mais baixos e densos, mas limita a escala de produção de grãos.",
+      "mdx": "Desafio da mecanização: Ao contrário da China ou do Brasil, a agricultura indiana ainda é predominantemente manual ou usa maquinário pequeno. Isso facilita a instalação de painéis mais baixos e densos, mas limita a escala de produção de grãos.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 96,
+      "kind": "paragraph",
+      "text": "Resultados: Pesquisas do Indian Institute of Technology mostram que a temperatura sob os painéis pode ser até 4°C menor, reduzindo a necessidade de irrigação em até 20-30% para certas hortaliças [9].",
+      "mdx": "Resultados: Pesquisas do Indian Institute of Technology mostram que a temperatura sob os painéis pode ser até 4°C menor, reduzindo a necessidade de irrigação em até 20-30% para certas hortaliças [9].",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 97,
+      "kind": "paragraph",
+      "text": "3. África do Sul: Energia em áreas remotas",
+      "mdx": "3. África do Sul: Energia em áreas remotas",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 98,
+      "kind": "paragraph",
+      "text": "Na África do Sul, a agrivoltaica está ligada à eletrificação rural e à produção em áreas semiáridas.",
+      "mdx": "Na África do Sul, a agrivoltaica está ligada à eletrificação rural e à produção em áreas semiáridas.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 99,
+      "kind": "paragraph",
+      "text": "Foco em vinhedos e fruticultura: Semelhante à experiência europeia, há testes em vinícolas na região do Cabo Ocidental. A sombra parcial ajuda a manter a acidez das uvas em um clima que está se tornando cada vez mais quente, preservando a qualidade do vinho.",
+      "mdx": "Foco em vinhedos e fruticultura: Semelhante à experiência europeia, há testes em vinícolas na região do Cabo Ocidental. A sombra parcial ajuda a manter a acidez das uvas em um clima que está se tornando cada vez mais quente, preservando a qualidade do vinho.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 100,
+      "kind": "paragraph",
+      "text": "Segurança energética: Para fazendas isoladas, a agrivoltaica oferece autonomia energética, reduzindo a dependência de geradores a diesel caros e poluentes.",
+      "mdx": "Segurança energética: Para fazendas isoladas, a agrivoltaica oferece autonomia energética, reduzindo a dependência de geradores a diesel caros e poluentes.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 101,
+      "kind": "paragraph",
+      "text": "4. Novos membros: Egito e Emirados Árabes Unidos",
+      "mdx": "4. Novos membros: Egito e Emirados Árabes Unidos",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 102,
+      "kind": "paragraph",
+      "text": "Egito: Com quase 100% de seu território sendo deserto, o Egito vê na agrivoltaica a única maneira de expandir a fronteira agrícola sem competir por água doce. Projetos no deserto ocidental usam painéis para criar microclimas onde antes nada crescia.",
+      "mdx": "Egito: Com quase 100% de seu território sendo deserto, o Egito vê na agrivoltaica a única maneira de expandir a fronteira agrícola sem competir por água doce. Projetos no deserto ocidental usam painéis para criar microclimas onde antes nada crescia.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 103,
+      "kind": "paragraph",
+      "text": "Emirados Árabes: Focam em alta tecnologia, usando sensores de IoT (Internet das Coisas) sob os painéis para monitorar cada planta individualmente, maximizando a eficiência em um ambiente hostil.",
+      "mdx": "Emirados Árabes: Focam em alta tecnologia, usando sensores de IoT (Internet das Coisas) sob os painéis para monitorar cada planta individualmente, maximizando a eficiência em um ambiente hostil.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 104,
+      "kind": "paragraph",
+      "text": "O que aprendemos com os BRICS?",
+      "mdx": "O que aprendemos com os BRICS?",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 105,
+      "kind": "paragraph",
+      "text": "Não existe \"modelo único\": A China prova que é possível fazer em escala gigante; a Índia mostra que funciona para o pequeno produtor; o Brasil precisa encontrar seu caminho no meio termo, respeitando sua mecanização.",
+      "mdx": "Não existe \"modelo único\": A China prova que é possível fazer em escala gigante; a Índia mostra que funciona para o pequeno produtor; o Brasil precisa encontrar seu caminho no meio termo, respeitando sua mecanização.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 106,
+      "kind": "paragraph",
+      "text": "A água é o denominador comum: Em todos os BRICS, o benefício mais imediato e verificável da agrivoltaica não é a eletricidade, mas a economia de água. Em um mundo com recursos hídricos cada vez mais disputados, isso pode ser o argumento econômico mais forte.",
+      "mdx": "A água é o denominador comum: Em todos os BRICS, o benefício mais imediato e verificável da agrivoltaica não é a eletricidade, mas a economia de água. Em um mundo com recursos hídricos cada vez mais disputados, isso pode ser o argumento econômico mais forte.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 107,
+      "kind": "paragraph",
+      "text": "Tecnologia local vs. importada: Os países que mais avançaram (como a China) desenvolveram suas próprias cadeias de suprimentos de painéis e estruturas. Para o Brasil e outros BRICS, a dependência de tecnologia importada ainda encarece o CAPEX.",
+      "mdx": "Tecnologia local vs. importada: Os países que mais avançaram (como a China) desenvolveram suas próprias cadeias de suprimentos de painéis e estruturas. Para o Brasil e outros BRICS, a dependência de tecnologia importada ainda encarece o CAPEX.",
+      "math": [],
+      "images": [
+        "rId9"
+      ]
+    },
+    {
+      "index": 108,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 109,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 110,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 111,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 112,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 113,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 114,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 115,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 116,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 117,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 118,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 119,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 120,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 121,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 122,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 123,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 124,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 125,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 126,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 127,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 128,
+      "kind": "paragraph",
+      "text": "Conclusão: compartilhar a terra não é dividir o sol",
+      "mdx": "Conclusão: compartilhar a terra não é dividir o sol",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 129,
+      "kind": "paragraph",
+      "text": "A agrivoltaica não se apresenta como um experimento ideológico, mas como uma evolução pragmática e necessária do uso da terra. Ao observarmos o cenário global, especialmente nos países do BRICS e em outras economias emergentes, fica evidente que a competição por solo fértil é um dos maiores desafios do século XXI. Nações que precisam, simultaneamente, alimentar populações crescentes e energizar suas indústrias não podem mais se dar ao luxo de tratar a agricultura e a geração de energia como atividades excludentes. A tecnologia nos oferece, agora, a chance de superar essa falsa dicotomia, unindo a tradição produtiva do campo à urgência da transição energética.",
+      "mdx": "A agrivoltaica não se apresenta como um experimento ideológico, mas como uma evolução pragmática e necessária do uso da terra. Ao observarmos o cenário global, especialmente nos países do BRICS e em outras economias emergentes, fica evidente que a competição por solo fértil é um dos maiores desafios do século XXI. Nações que precisam, simultaneamente, alimentar populações crescentes e energizar suas indústrias não podem mais se dar ao luxo de tratar a agricultura e a geração de energia como atividades excludentes. A tecnologia nos oferece, agora, a chance de superar essa falsa dicotomia, unindo a tradição produtiva do campo à urgência da transição energética.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 130,
+      "kind": "paragraph",
+      "text": "Para quem prioriza a eficiência econômica, a soberania nacional e a segurança do patrimônio rural, a agrivoltaica representa uma blindagem estratégica. Ela permite que o produtor diversifique sua renda, protegendo-se da volatilidade dos preços das commodities e dos riscos climáticos cada vez mais imprevisíveis. Não se trata de abandonar a vocação agrícola, mas de modernizá-la, utilizando a infraestrutura energética para criar microclimas que reduzem custos operacionais, especialmente no que tange ao uso da água. É a aplicação prática da prudência: maximizar o retorno de cada hectare sem depender de uma única fonte de receita.",
+      "mdx": "Para quem prioriza a eficiência econômica, a soberania nacional e a segurança do patrimônio rural, a agrivoltaica representa uma blindagem estratégica. Ela permite que o produtor diversifique sua renda, protegendo-se da volatilidade dos preços das commodities e dos riscos climáticos cada vez mais imprevisíveis. Não se trata de abandonar a vocação agrícola, mas de modernizá-la, utilizando a infraestrutura energética para criar microclimas que reduzem custos operacionais, especialmente no que tange ao uso da água. É a aplicação prática da prudência: maximizar o retorno de cada hectare sem depender de uma única fonte de receita.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 131,
+      "kind": "paragraph",
+      "text": "Por outro lado, para aqueles focados na responsabilidade ambiental e na preservação dos recursos naturais, a agrivoltaica oferece uma resposta concreta e mensurável. A economia hídrica, a redução da evapotranspiração e a menor pegada de carbono por unidade produzida são benefícios tangíveis. A experiência internacional comprova isso: das vastas áreas semiáridas da China e da Índia, onde a sombra dos painéis protege cultivos essenciais da escassez hídrica, até os vinhedos da África do Sul que buscam resiliência térmica, o padrão é claro. A tecnologia, quando bem aplicada, intensifica a produção de energia limpa sem avançar sobre solos férteis ou exigir o desmatamento de novas áreas.",
+      "mdx": "Por outro lado, para aqueles focados na responsabilidade ambiental e na preservação dos recursos naturais, a agrivoltaica oferece uma resposta concreta e mensurável. A economia hídrica, a redução da evapotranspiração e a menor pegada de carbono por unidade produzida são benefícios tangíveis. A experiência internacional comprova isso: das vastas áreas semiáridas da China e da Índia, onde a sombra dos painéis protege cultivos essenciais da escassez hídrica, até os vinhedos da África do Sul que buscam resiliência térmica, o padrão é claro. A tecnologia, quando bem aplicada, intensifica a produção de energia limpa sem avançar sobre solos férteis ou exigir o desmatamento de novas áreas.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 132,
+      "kind": "paragraph",
+      "text": "O indicador LER (Razão Equivalente de Uso da Terra) serve como a bússola racional dessa nova abordagem. Ele demonstra, com rigor matemático, que a soma das partes é maior que o todo quando há gestão técnica integrada. Um LER superior a 1 é a prova de que estamos extraindo maior valor de um recurso finito, beneficiando desde o pequeno agricultor que busca resiliência até o grande investidor que procura ativos sustentáveis de longo prazo.",
+      "mdx": "O indicador LER (Razão Equivalente de Uso da Terra) serve como a bússola racional dessa nova abordagem. Ele demonstra, com rigor matemático, que a soma das partes é maior que o todo quando há gestão técnica integrada. Um LER superior a 1 é a prova de que estamos extraindo maior valor de um recurso finito, beneficiando desde o pequeno agricultor que busca resiliência até o grande investidor que procura ativos sustentáveis de longo prazo.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 133,
+      "kind": "paragraph",
+      "text": "No contexto do Brasil, potência agroenergética e voz central no BRICS, ignorar essa sinergia seria um erro estratégico. Possuímos a expertise em manejo agrícola em larga escala e uma das matrizes elétricas mais renováveis do mundo. Integrar esses dois pilares através da agrivoltaica não é uma ruptura com nossa identidade rural, mas a sua lógica evolução. É garantir soberania: produzir nossos próprios alimentos e nossa própria energia no mesmo espaço, com inteligência e critério.",
+      "mdx": "No contexto do Brasil, potência agroenergética e voz central no BRICS, ignorar essa sinergia seria um erro estratégico. Possuímos a expertise em manejo agrícola em larga escala e uma das matrizes elétricas mais renováveis do mundo. Integrar esses dois pilares através da agrivoltaica não é uma ruptura com nossa identidade rural, mas a sua lógica evolução. É garantir soberania: produzir nossos próprios alimentos e nossa própria energia no mesmo espaço, com inteligência e critério.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 134,
+      "kind": "paragraph",
+      "text": "Em última análise, a agrivoltaica nos convida a uma visão mais madura do progresso. Ela demonstra que a conservação dos recursos e a modernização tecnológica não são forças opostas, mas aliadas indispensáveis. O futuro do campo não precisa ser uma escolha entre o verde das plantas e o azul dos painéis, mas a integração harmoniosa de ambos. Compartilhar a terra sem dividir o sol é o caminho para construir um modelo economicamente robusto, ambientalmente responsável e preparado para os desafios das próximas décadas.",
+      "mdx": "Em última análise, a agrivoltaica nos convida a uma visão mais madura do progresso. Ela demonstra que a conservação dos recursos e a modernização tecnológica não são forças opostas, mas aliadas indispensáveis. O futuro do campo não precisa ser uma escolha entre o verde das plantas e o azul dos painéis, mas a integração harmoniosa de ambos. Compartilhar a terra sem dividir o sol é o caminho para construir um modelo economicamente robusto, ambientalmente responsável e preparado para os desafios das próximas décadas.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 135,
+      "kind": "paragraph",
+      "text": "Referências Bibliográficas   ",
+      "mdx": "Referências Bibliográficas   ",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 136,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 137,
+      "kind": "paragraph",
+      "text": "1. Conceito de LER (Land Equivalent Ratio) e Fundamentos Científicos",
+      "mdx": "1. Conceito de LER (Land Equivalent Ratio) e Fundamentos Científicos",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 138,
+      "kind": "paragraph",
+      "text": "Nature Sustainability (Estudo Seminal): Este é o artigo de referência mundial sobre os benefícios mútuos no nexus água-energia-alimento.",
+      "mdx": "Nature Sustainability (Estudo Seminal): Este é o artigo de referência mundial sobre os benefícios mútuos no nexus água-energia-alimento.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 139,
+      "kind": "paragraph",
+      "text": "🔗 https://www.nature.com/articles/s41893-019-0363-x",
+      "mdx": "🔗 https://www.nature.com/articles/s41893-019-0363-x",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 140,
+      "kind": "paragraph",
+      "text": "NREL (National Renewable Energy Laboratory - EUA): O programa InSPIRE é a maior base de dados experimental aberta. Eles explicam detalhadamente como o LER é calculado em campo.",
+      "mdx": "NREL (National Renewable Energy Laboratory - EUA): O programa InSPIRE é a maior base de dados experimental aberta. Eles explicam detalhadamente como o LER é calculado em campo.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 141,
+      "kind": "paragraph",
+      "text": "🔗 https://www.nrel.gov/inspire/",
+      "mdx": "🔗 https://www.nrel.gov/inspire/",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 142,
+      "kind": "paragraph",
+      "text": "🔗 https://www.nrel.gov/docs/fy24osti/87965.pdf (Relatório técnico \"Lighting the Way for Agrivoltaics\").",
+      "mdx": "🔗 https://www.nrel.gov/docs/fy24osti/87965.pdf (Relatório técnico \"Lighting the Way for Agrivoltaics\").",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 143,
+      "kind": "paragraph",
+      "text": "2. Dados Técnicos e Configurações (Fraunhofer ISE)",
+      "mdx": "2. Dados Técnicos e Configurações (Fraunhofer ISE)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 144,
+      "kind": "paragraph",
+      "text": "Fraunhofer Institute for Solar Energy Systems (Alemanha): A principal referência europeia em custos (CAPEX/OPEX) e configurações técnicas (elevados vs. verticais).",
+      "mdx": "Fraunhofer Institute for Solar Energy Systems (Alemanha): A principal referência europeia em custos (CAPEX/OPEX) e configurações técnicas (elevados vs. verticais).",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 145,
+      "kind": "paragraph",
+      "text": "🔗 https://www.ise.fraunhofer.de/en/publications/studies/agrivoltaics.html",
+      "mdx": "🔗 https://www.ise.fraunhofer.de/en/publications/studies/agrivoltaics.html",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 146,
+      "kind": "paragraph",
+      "text": "Dica: Procure pelo relatório \"Agrivoltaics: Opportunities for Agriculture and the Energy Transition\".",
+      "mdx": "Dica: Procure pelo relatório \"Agrivoltaics: Opportunities for Agriculture and the Energy Transition\".",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 147,
+      "kind": "paragraph",
+      "text": "3. Análise Econômica e Viabilidade (Frontiers & ScienceDirect)",
+      "mdx": "3. Análise Econômica e Viabilidade (Frontiers &amp; ScienceDirect)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 148,
+      "kind": "paragraph",
+      "text": "Frontiers in Horticulture: Artigo específico sobre performance econômica em vinhedos (útil para comparar CAPEX e ROI).",
+      "mdx": "Frontiers in Horticulture: Artigo específico sobre performance econômica em vinhedos (útil para comparar CAPEX e ROI).",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 149,
+      "kind": "paragraph",
+      "text": "🔗 https://www.frontiersin.org/journals/horticulture (Busque por: \"Assessing the economic performance of agrivoltaic systems\").",
+      "mdx": "🔗 https://www.frontiersin.org/journals/horticulture (Busque por: \"Assessing the economic performance of agrivoltaic systems\").",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 150,
+      "kind": "paragraph",
+      "text": "Applied Energy (ScienceDirect): Para o estudo focado no Brasil e avaliações globais de potencial.",
+      "mdx": "Applied Energy (ScienceDirect): Para o estudo focado no Brasil e avaliações globais de potencial.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 151,
+      "kind": "paragraph",
+      "text": "🔗 https://www.sciencedirect.com/journal/applied-energy",
+      "mdx": "🔗 https://www.sciencedirect.com/journal/applied-energy",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 152,
+      "kind": "paragraph",
+      "text": "Busca sugerida: \"An evaluation of the potential of agrivoltaic systems in Brazil\".",
+      "mdx": "Busca sugerida: \"An evaluation of the potential of agrivoltaic systems in Brazil\".",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 153,
+      "kind": "paragraph",
+      "text": "4. Contexto Brasileiro (MME e Embrapa)",
+      "mdx": "4. Contexto Brasileiro (MME e Embrapa)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 154,
+      "kind": "paragraph",
+      "text": "Ministério de Minas e Energia (MME): Portal oficial onde são publicadas as notas técnicas e estudos setoriais sobre geração distribuída e agrivoltaica.",
+      "mdx": "Ministério de Minas e Energia (MME): Portal oficial onde são publicadas as notas técnicas e estudos setoriais sobre geração distribuída e agrivoltaica.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 155,
+      "kind": "paragraph",
+      "text": "🔗 https://www.gov.br/mme/pt-br/assuntos/energia-renovavel",
+      "mdx": "🔗 https://www.gov.br/mme/pt-br/assuntos/energia-renovavel",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 156,
+      "kind": "paragraph",
+      "text": "Embrapa: Para dados sobre integração lavoura-pecuária-floresta e adaptação de culturas ao estresse térmico.",
+      "mdx": "Embrapa: Para dados sobre integração lavoura-pecuária-floresta e adaptação de culturas ao estresse térmico.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 157,
+      "kind": "paragraph",
+      "text": "🔗 https://www.embrapa.br/",
+      "mdx": "🔗 https://www.embrapa.br/",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 158,
+      "kind": "paragraph",
+      "text": "5. Organismos Internacionais (IRENA e World Bank)",
+      "mdx": "5. Organismos Internacionais (IRENA e World Bank)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 159,
+      "kind": "paragraph",
+      "text": "IRENA (Agência Internacional de Energias Renováveis): Relatórios sobre o panorama de inovação e mercados emergentes.",
+      "mdx": "IRENA (Agência Internacional de Energias Renováveis): Relatórios sobre o panorama de inovação e mercados emergentes.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 160,
+      "kind": "paragraph",
+      "text": "🔗 https://www.irena.org/publications/2023/Nov/Innovation-Landscape-Agrivoltaics",
+      "mdx": "🔗 https://www.irena.org/publications/2023/Nov/Innovation-Landscape-Agrivoltaics",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 161,
+      "kind": "paragraph",
+      "text": "World Bank: Estudos sobre sinergias entre energia solar e desenvolvimento agrícola sustentável.",
+      "mdx": "World Bank: Estudos sobre sinergias entre energia solar e desenvolvimento agrícola sustentável.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 162,
+      "kind": "paragraph",
+      "text": "🔗 https://openknowledge.worldbank.org/ (Busque por \"Solar Power and Agriculture\").",
+      "mdx": "🔗 https://openknowledge.worldbank.org/ (Busque por \"Solar Power and Agriculture\").",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 163,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 164,
+      "kind": "paragraph",
+      "text": "China (Escala e Recuperação de Solo)",
+      "mdx": "China (Escala e Recuperação de Solo)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 165,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 166,
+      "kind": "paragraph",
+      "text": "Fraunhofer ISE (Alemanha, mas com dados globais): O relatório \"Agrivoltaics: Opportunities for Agriculture and the Energy Transition\" contém capítulos comparativos sobre a Ásia.",
+      "mdx": "Fraunhofer ISE (Alemanha, mas com dados globais): O relatório \"Agrivoltaics: Opportunities for Agriculture and the Energy Transition\" contém capítulos comparativos sobre a Ásia.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 167,
+      "kind": "paragraph",
+      "text": "🔗 https://www.ise.fraunhofer.de/en/publications/studies/agrivoltaics.html",
+      "mdx": "🔗 https://www.ise.fraunhofer.de/en/publications/studies/agrivoltaics.html",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 168,
+      "kind": "paragraph",
+      "text": "Nature Sustainability / Nature Energy: Busque por autores como Gregory Barron-Gafford ou estudos sobre \"Photovoltaic agriculture in China\".",
+      "mdx": "Nature Sustainability / Nature Energy: Busque por autores como Gregory Barron-Gafford ou estudos sobre \"Photovoltaic agriculture in China\".",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 169,
+      "kind": "paragraph",
+      "text": "🔗 https://www.nature.com/articles/s41893-019-0363-x (Estudo seminal sobre nexus água-energia-alimento).",
+      "mdx": "🔗 https://www.nature.com/articles/s41893-019-0363-x (Estudo seminal sobre nexus água-energia-alimento).",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 170,
+      "kind": "paragraph",
+      "text": "International Renewable Energy Agency (IRENA): Relatórios sobre inovação em mercados emergentes.",
+      "mdx": "International Renewable Energy Agency (IRENA): Relatórios sobre inovação em mercados emergentes.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 171,
+      "kind": "paragraph",
+      "text": "🔗 https://www.irena.org/publications/2023/Nov/Innovation-Landscape-Agrivoltaics",
+      "mdx": "🔗 https://www.irena.org/publications/2023/Nov/Innovation-Landscape-Agrivoltaics",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 172,
+      "kind": "paragraph",
+      "text": "7. Índia (Pequenos Produtores e Água)",
+      "mdx": "7. Índia (Pequenos Produtores e Água)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 173,
+      "kind": "paragraph",
+      "text": "National Institute of Solar Energy (NISE) - Índia: Órgão oficial que publica diretrizes e resultados de pilotos.",
+      "mdx": "National Institute of Solar Energy (NISE) - Índia: Órgão oficial que publica diretrizes e resultados de pilotos.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 174,
+      "kind": "paragraph",
+      "text": "🔗 https://nise.res.in/",
+      "mdx": "🔗 https://nise.res.in/",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 175,
+      "kind": "paragraph",
+      "text": "Indian Institute of Technology (IIT): Diversos departamentos (como IIT Bombay e IIT Delhi) publicam papers no IEEE Journal of Photovoltaics e Renewable Energy.",
+      "mdx": "Indian Institute of Technology (IIT): Diversos departamentos (como IIT Bombay e IIT Delhi) publicam papers no IEEE Journal of Photovoltaics e Renewable Energy.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 176,
+      "kind": "paragraph",
+      "text": "🔗 https://ieeexplore.ieee.org/xpl/conhome/1000123/all-proceedings (Busque por \"Agrivoltaics India\").",
+      "mdx": "🔗 https://ieeexplore.ieee.org/xpl/conhome/1000123/all-proceedings (Busque por \"Agrivoltaics India\").",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 177,
+      "kind": "paragraph",
+      "text": "8. África do Sul (Vinhedos e Clima Semiárido)",
+      "mdx": "8. África do Sul (Vinhedos e Clima Semiárido)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 178,
+      "kind": "paragraph",
+      "text": "Council for Scientific and Industrial Research (CSIR): A principal agência de pesquisa da África do Sul.",
+      "mdx": "Council for Scientific and Industrial Research (CSIR): A principal agência de pesquisa da África do Sul.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 179,
+      "kind": "paragraph",
+      "text": "🔗 https://www.csir.co.za/ (Busque na seção de energia renovável).",
+      "mdx": "🔗 https://www.csir.co.za/ (Busque na seção de energia renovável).",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 180,
+      "kind": "paragraph",
+      "text": "Stellenbosch University: Faculdade de Agronomia e Viticultura frequentemente pública sobre estresse térmico em uvas.",
+      "mdx": "Stellenbosch University: Faculdade de Agronomia e Viticultura frequentemente pública sobre estresse térmico em uvas.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 181,
+      "kind": "paragraph",
+      "text": "🔗 https://www.sun.ac.za/english/faculty/agri/",
+      "mdx": "🔗 https://www.sun.ac.za/english/faculty/agri/",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 182,
+      "kind": "paragraph",
+      "text": "9. Brasil (Contexto Nacional)",
+      "mdx": "9. Brasil (Contexto Nacional)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 183,
+      "kind": "paragraph",
+      "text": "Ministério de Minas e Energia (MME): Portal oficial para notas técnicas e estudos setoriais.",
+      "mdx": "Ministério de Minas e Energia (MME): Portal oficial para notas técnicas e estudos setoriais.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 184,
+      "kind": "paragraph",
+      "text": "🔗 https://www.gov.br/mme/pt-br/assuntos/energia-renovavel",
+      "mdx": "🔗 https://www.gov.br/mme/pt-br/assuntos/energia-renovavel",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 185,
+      "kind": "paragraph",
+      "text": "Embrapa (Empresa Brasileira de Pesquisa Agropecuária): Busque por \"Integração Lavoura-Pecuária-Floresta-Energia\" ou sistemas agroflorestais com energia.",
+      "mdx": "Embrapa (Empresa Brasileira de Pesquisa Agropecuária): Busque por \"Integração Lavoura-Pecuária-Floresta-Energia\" ou sistemas agroflorestais com energia.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 186,
+      "kind": "paragraph",
+      "text": "🔗 https://www.embrapa.br/",
+      "mdx": "🔗 https://www.embrapa.br/",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 187,
+      "kind": "paragraph",
+      "text": "Applied Energy (ScienceDirect): Para o estudo específico mencionado no seu briefing (\"An evaluation of the potential of agrivoltaic systems in Brazil\").",
+      "mdx": "Applied Energy (ScienceDirect): Para o estudo específico mencionado no seu briefing (\"An evaluation of the potential of agrivoltaic systems in Brazil\").",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 188,
+      "kind": "paragraph",
+      "text": "🔗 https://www.sciencedirect.com/journal/applied-energy (Use a busca interna do site com as palavras-chave \"Agrivoltaic Brazil\").",
+      "mdx": "🔗 https://www.sciencedirect.com/journal/applied-energy (Use a busca interna do site com as palavras-chave \"Agrivoltaic Brazil\").",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 189,
+      "kind": "paragraph",
+      "text": "10. Estados Unidos e Europa (Referências Técnicas Globais)",
+      "mdx": "10. Estados Unidos e Europa (Referências Técnicas Globais)",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 190,
+      "kind": "paragraph",
+      "text": "NREL (National Renewable Energy Laboratory) - Programa InSPIRE: A maior base de dados aberta sobre testes de campo.",
+      "mdx": "NREL (National Renewable Energy Laboratory) - Programa InSPIRE: A maior base de dados aberta sobre testes de campo.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 191,
+      "kind": "paragraph",
+      "text": "🔗 https://www.nrel.gov/inspire/",
+      "mdx": "🔗 https://www.nrel.gov/inspire/",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 192,
+      "kind": "paragraph",
+      "text": "Frontiers in Horticulture / Frontiers in Energy Research: Revistas open-access onde muitos estudos econômicos recentes são publicados.",
+      "mdx": "Frontiers in Horticulture / Frontiers in Energy Research: Revistas open-access onde muitos estudos econômicos recentes são publicados.",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 193,
+      "kind": "paragraph",
+      "text": "🔗 https://www.frontiersin.org/journals/horticulture",
+      "mdx": "🔗 https://www.frontiersin.org/journals/horticulture",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 194,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    },
+    {
+      "index": 195,
+      "kind": "paragraph",
+      "text": "",
+      "mdx": "",
+      "math": [],
+      "images": []
+    }
+  ]
+}

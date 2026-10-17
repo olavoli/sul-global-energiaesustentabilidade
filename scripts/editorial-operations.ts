@@ -1,6 +1,7 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { basename, join, relative, resolve } from "node:path";
+import { isScalar, parseDocument } from "yaml";
 
 import {
   articleFrontmatterSchema,
@@ -166,9 +167,49 @@ export function listArticles(files: readonly ParsedEditorialFile[]): string {
 }
 
 function setYamlField(source: string, field: string, value: string): string {
-  const expression = new RegExp(`^${field}:.*$`, "m");
-  if (expression.test(source)) return source.replace(expression, `${field}: ${value}`);
-  return source.replace(/^status:.*$/m, (status) => `${status}\n${field}: ${value}`);
+  const match = source.match(/^(---\r?\n)([\s\S]*?)(\r?\n---(?:\r?\n|$))/);
+  if (!match) throw new Error("Frontmatter delimitado por --- é obrigatório.");
+  const header = match[2];
+  const document = parseDocument(header);
+  if (document.errors.length) throw new Error("Frontmatter inválido para escrita editorial.");
+  const node = document.get(field, true);
+  let updated: string;
+  if (isScalar(node) && node.range) {
+    // Alter only the top-level scalar, retaining all other bytes and comments.
+    updated = header.slice(0, node.range[0]) + JSON.stringify(value) + header.slice(node.range[1]);
+  } else if (node !== undefined) {
+    throw new Error(`Campo editorial ${field} deve ser escalar.`);
+  } else if (header.trimStart().startsWith("{")) {
+    const end = header.lastIndexOf("}");
+    const newline = header.includes("\r\n") ? "\r\n" : "\n";
+    updated =
+      header.slice(0, end).trimEnd() +
+      `,${newline}  ${JSON.stringify(field)}: ${JSON.stringify(value)}${newline}` +
+      header.slice(end);
+  } else {
+    const newline = header.includes("\r\n") ? "\r\n" : "\n";
+    updated = header + `${newline}${field}: ${JSON.stringify(value)}`;
+  }
+  return match[1] + updated + source.slice(match[1].length + header.length);
+}
+
+export async function persistStatusChange(
+  path: string,
+  content: string,
+  target: ArticleStatus,
+  io = { readFile, writeFile },
+): Promise<void> {
+  try {
+    await io.writeFile(path, content, "utf8");
+    const persisted = parseEditorialFile(await io.readFile(path, "utf8"), path).frontmatter;
+    if (persisted.status !== target) {
+      throw new Error(`Status persistido ${persisted.status}; solicitado ${target}.`);
+    }
+  } catch (error) {
+    throw new Error(
+      `Falha ao persistir transição editorial: ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
 }
 
 export function prepareStatusChange(
@@ -218,6 +259,7 @@ export function prepareStatusChange(
     throw new Error("Agendamento exige scheduledAt preenchido antes da transição.");
   }
   const parsedCandidate = parseEditorialFile(content).frontmatter;
+  if (parsedCandidate.status !== target) throw new Error("Status preparado difere do solicitado.");
   if (parsedCandidate.isDemo !== current.isDemo)
     throw new Error("A transição não pode alterar isDemo.");
   articleFrontmatterSchema.parse(parsedCandidate);
@@ -281,9 +323,12 @@ async function main(): Promise<void> {
       authors,
       researchReport,
     );
+    if (!options.includes("--apply")) {
+      console.log(result.summary);
+      return console.log("Dry-run: use --apply para gravar.");
+    }
+    await persistStatusChange(file.path, result.content, target as ArticleStatus);
     console.log(result.summary);
-    if (!options.includes("--apply")) return console.log("Dry-run: use --apply para gravar.");
-    await writeFile(file.path, result.content, "utf8");
     console.log("Status gravado. Revise o diff antes de continuar.");
     return;
   }

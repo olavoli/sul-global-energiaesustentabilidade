@@ -25,8 +25,12 @@ test("bibliografia manual do ART-031 conserva os 22 números e não desativa out
   expect(
     articleRecords
       .filter((article) => "referencesInBody" in article && article.referencesInBody)
-      .map((article) => article.slug),
-  ).toEqual(["a-pandemia-salvou-o-sus"]);
+      .map((article) => article.slug)
+      .sort(),
+  ).toEqual([
+    "a-pandemia-salvou-o-sus",
+    "agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
+  ]);
   expect(readFileSync("src/routes/artigo.$slug.tsx", "utf8")).toMatch(
     /!article\.referencesInBody\s*&&\s*\(?\s*<SourceList/,
   );

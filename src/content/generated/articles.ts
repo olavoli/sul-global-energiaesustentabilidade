@@ -1860,6 +1860,225 @@ export const articleRecords = [
     canonicalUrl: "/artigo/a-transicao-energetica-vai-trocar-petroleo-por-minerais-criticos",
   },
   {
+    slug: "agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
+    title: "Agrivoltaica: É possível colher alimentos e eletricidade na mesma terra?",
+    subtitle:
+      "Alimentos e eletricidade no mesmo terreno: possibilidades, limites e condições da agrivoltaica.",
+    excerpt:
+      "Uma análise sobre o uso compartilhado da terra, o indicador LER, os efeitos sobre cultivos e os desafios econômicos da agrivoltaica.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "energia",
+    tags: ["agrivoltaica", "energia solar", "agricultura", "uso da terra", "sustentabilidade"],
+    createdAt: "2026-10-16",
+    publishedAt: "2026-10-17",
+    approvedAt: "2026-10-17",
+    corrections: [],
+    readingTime: 17,
+    cover: {
+      src: "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-1200.webp",
+      alt: "Ilustração de cultivo sob painéis solares ao pôr do sol, com uma coruja em primeiro plano.",
+      decorative: false,
+      width: 1200,
+      height: 675,
+      caption: "Figura 1. Agricultura e geração solar compartilhando a mesma área.",
+      credit: "Fonte: SGES, (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "ChatGPT (OpenAI)",
+          },
+        ],
+        year: 2026,
+      },
+      license:
+        "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/",
+      sources: [
+        {
+          src: "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra/art-032-hero-1536.webp",
+          width: 1536,
+        },
+      ],
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sources: [
+      {
+        title:
+          "Agrivoltaics: Opportunities for Agriculture and the Energy Transition, terceira edição, fevereiro",
+        url: "https://www.ise.fraunhofer.de/content/dam/ise/en/documents/publications/studies/APV-Guideline.pdf",
+        organizationOrAuthor: "Fraunhofer Institute for Solar Energy Systems ISE",
+        verifiedAt: "2026-10-16",
+        type: "official",
+        note: "[1] 2024. Seções 2 (configurações/projetos), 3 (agricultura), 4.1–4.4 (economia); figuras 38–40; edição na folha de créditos. guia técnico e estimativas de custos.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Agrivoltaics provide mutual benefits across the food–energy–water nexus in drylands",
+        url: "https://energy.arizona.edu/sites/default/files/2022-09/Barron-Gafford%20et%20al%20Nature%20Sustainability%202019.pdf",
+        organizationOrAuthor: "Barron-Gafford, G. A.; Pavao-Zuckerman, M. A.; Minor, R. L. et al.",
+        verifiedAt: "2026-10-16",
+        type: "academic",
+        note: "[2] 2019. Nature Sustainability 2, 848–855; Results: Microclimatic impacts, Crop responses, Potential impacts on PV panel performance; Methods. experimento de campo + simulação elétrica.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Capital Costs for Dual-Use Photovoltaic Installations: 2020 Benchmark for Ground-Mounted PV Systems with Pollinator-Friendly Vegetation, Grazing, and Crops",
+        url: "https://www.nlr.gov/docs/fy21osti/77811.pdf",
+        organizationOrAuthor: "Horowitz, K.; Ramasamy, V.; Macknick, J.; Margolis, R.",
+        verifiedAt: "2026-10-16",
+        type: "official",
+        note: "[3] 2020. NREL/TP-6A20-77811; Executive Summary; seção 5 e figuras comparativas; seção 6, p. 19. modelo de custos bottom-up, Estados Unidos, benchmark 2020.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Assessing the economic performance of agrivoltaic systems in vineyards – framework development, simulated scenarios and directions for future research",
+        url: "https://www.frontiersin.org/journals/horticulture/articles/10.3389/fhort.2024.1473072/full",
+        organizationOrAuthor:
+          "Strub, L.; Wittke, M.; Trommsdorff, M.; Stoll, M.; Kammann, C.; Loose, S.",
+        verifiedAt: "2026-10-16",
+        type: "academic",
+        note: "[4] 2024. Resumo; seções 3, 4 e 5.4; tabelas de cenários. simulação econômica de vinhedos alemães.",
+        isDemo: false,
+      },
+      {
+        title:
+          "The 5 Cs of Agrivoltaic Success Factors in the United States: Lessons From the InSPIRE Research Study",
+        url: "https://www.nlr.gov/docs/fy22osti/83566.pdf",
+        organizationOrAuthor: "Macknick, J. et al. / NREL",
+        verifiedAt: "2026-10-16",
+        type: "official",
+        note: "[5] 2022. NREL/TP-6A20-83566, agosto; Executive Summary, pesquisa2015–2021. síntese de pesquisa de campo.",
+        isDemo: false,
+      },
+      {
+        title: "An evaluation of the potential of agrivoltaic systems in Brazil",
+        url: "https://www.sciencedirect.com/science/article/pii/S030626192400165X",
+        organizationOrAuthor:
+          "Vidotto, L. C.; Schneider, K.; Morato, R. W.; do Nascimento, L. R.; Rüther, R.",
+        verifiedAt: "2026-10-16",
+        type: "academic",
+        note: "[6] 2024. Applied Energy360,122782; metadados e resumo primário; desafios e potencial regional. avaliação de potencial; escopo do resumo consultado.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Sistemas Agrivoltaicos no Brasil — Estudo de potencial e viabilidade técnico-econômicos",
+        url: "https://www.gov.br/mme/pt-br/assuntos/secretarias/sntep/parcerias-energeticas/publicacoes/EstudoAgriPVPT.pdf",
+        organizationOrAuthor:
+          "Schneider, K.; Vidotto, L.; Morato, R.; Rüther, R.; Nascimento, L. / GIZ",
+        verifiedAt: "2026-10-16",
+        type: "official",
+        note: "[7] 2025. Expediente p.2: atualização junho2024, tradução março2025, publicação novembro2025; seção4.1.3,p42; tabela3,p45; desafios pp14–15; estudo de caso capítulo5. estudo técnico específico, PDF consultado.",
+        isDemo: false,
+      },
+      {
+        title: "11º Fórum Parlamentar do Brics — Brasil 2025",
+        url: "https://www.congressonacional.leg.br/brics/",
+        organizationOrAuthor: "Congresso Nacional brasileiro",
+        verifiedAt: "2026-10-16",
+        type: "official",
+        note: "[8] 2025. Participantes > Países Membros / Países Parceiros. registro oficial histórico de participação.",
+        isDemo: false,
+      },
+      {
+        title: "Vietnã torna-se país parceiro do BRICS",
+        url: "https://brics.br/pt-br/noticias/vietna-torna-se-pais-parceiro-do-brics",
+        organizationOrAuthor: "Presidência brasileira do BRICS",
+        verifiedAt: "2026-10-16",
+        type: "official",
+        note: "[9] 2025. Anúncio de 13/06/2025 localizado em busca oficial; abertura integral falhou. anúncio oficial localizado, acesso parcial.",
+        isDemo: false,
+      },
+      {
+        title: "Smart Agrivoltaic Power Plant in Ningxia: Turning a Desert into an Oasis",
+        url: "https://www.huawei.com/en/sustainability/the-latest/stories/smart-agrivoltaic-power-plant-in-ningxia-en",
+        organizationOrAuthor: "Huawei",
+        verifiedAt: "2026-10-16",
+        type: "company",
+        note: "[10] Sem ano confirmado. Descrição Baofeng/goji e efeitos sobre trabalho local. relato corporativo de instalação real.",
+        isDemo: false,
+      },
+      {
+        title: "Lok Sabha Unstarred Question 2401: Agriculture Voltage Technology",
+        url: "https://www.icar.gov.in/sites/default/files/inline-files/Annexure-IX_compressed.pdf",
+        organizationOrAuthor: "Ministry of Agriculture and Farmers Welfare, Government of India",
+        verifiedAt: "2026-10-16",
+        type: "official",
+        note: "[11] 2021. Resposta de 09/03/2021, itens (a) e (b); resultado documental indexado, abertura direta falhou. documento oficial localizado; acesso parcial.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Agrivoltaics in India: A promising nexus of solar energy and agriculture for sustainable development",
+        url: "https://doi.org/10.1016/j.solener.2026.114438",
+        organizationOrAuthor: "Ghamari, Mehrdad; Ramasamy, Mahendiran; Sundaram, Senthilarasu",
+        verifiedAt: "2026-10-16",
+        type: "academic",
+        note: "[12] 2026. Solar Energy 309, 114438; trecho indexado sobre alface e consumo de água, chamada [45]. revisão; acesso parcial.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Water budget and crop modelling for agrivoltaic systems: Application to irrigated lettuces",
+        url: "https://publications.cirad.fr/une_notice.php?dk=598808",
+        organizationOrAuthor: "Elamri, Y.; Cheviron, B.; Lopez, J.-M.; Dejean, C.; Belaud, G.",
+        verifiedAt: "2026-10-16",
+        type: "academic",
+        note: "[13] 2018. Agricultural Water Management 208, 440–453; resumo institucional e trechos primários indexados; texto integral não recuperado. experimentos e modelagem; verificação parcial.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Exploring Water Supply Economics, Opportunity Costs, and Cost of Unserved Water in the Context of Various Water Augmentation Considerations – Using the Western Cape Water Supply System as a Case Study",
+        url: "https://www.wrc.org.za/wp-content/uploads/mdocs/TT%20864%20final%20web.pdf",
+        organizationOrAuthor:
+          "Punt, C.; Marais, D.; Fischer, T.; Govender, M.; Pugin, J.; Kühl, J.; Haasbroek, B.",
+        verifiedAt: "2026-10-16",
+        type: "academic",
+        note: "[14] 2021. WRC TT 864/21, outubro; seção 3.5.3, p. 42 em diante; tabelas 3-22 e seguintes. modelagem regional.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Sistemas agrivoltaicos na agricultura familiar: estudo de caso e análise de viabilidade econômica",
+        url: "https://rbens.emnuvens.com.br/rbens/article/download/469/326/972",
+        organizationOrAuthor:
+          "Vidotto, L. C.; Schneider, K.; Ribeiro, M. P. T. M.; Nascimento, L.; Rüther, R.; Morato, R. W.",
+        verifiedAt: "2026-10-16",
+        type: "academic",
+        note: "[15] 2024. RBENS 15(2), 131–139; p. 132 metodologia; p. 137 tabelas 5 e 6 e seção 3.4. projeto proposto / simulação de viabilidade.",
+        isDemo: false,
+      },
+    ],
+    referencesInBody: true,
+    aiAssistance: "limited",
+    aiDisclosure:
+      "As ilustrações deste artigo foram produzidas com auxílio de ferramentas de inteligência artificial generativa. A imagem de capa (Hero) e as imagens 2 e 3 foram geradas com o ChatGPT (OpenAI). A imagem 1 foi produzida com o Pippit (www.pippit.ai). A imagem 4 foi elaborada com auxílio do ChatGPT (OpenAI) e do Gemini (Google).\n\nAs imagens têm finalidade ilustrativa e educativa, não constituindo registros fotográficos de instalações reais nem comprovação de resultados científicos. A interpretação dos dados, a revisão técnica e a responsabilidade editorial permanecem sob responsabilidade do Sul Global Energia e Sustentabilidade.",
+    aiDisclosureMode: "detailed",
+    aiImageTools: ["ChatGPT (OpenAI)", "Pippit (www.pippit.ai)", "Gemini (Google)"],
+    seoTitle: "Agrivoltaica: É possível colher alimentos e eletricidade na mesma terra?",
+    seoDescription:
+      "Entenda como a agrivoltaica combina agricultura e energia solar, o indicador LER e os limites técnicos, agrícolas e econômicos do uso compartilhado da terra.",
+    canonicalUrl: "/artigo/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
+  },
+  {
     slug: "amazonia-mercado-de-carbono-e-o-risco-de-integridade",
     title: "Amazônia, mercado de carbono e o risco de integridade",
     subtitle:

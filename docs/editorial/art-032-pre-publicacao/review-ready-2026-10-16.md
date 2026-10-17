@@ -1,0 +1,13 @@
+# ART-032 — estágio review-ready
+
+**APTO para avançar à revisão e para a decisão editorial final, sem autorização automática de publicação.** O único campo alterado no MDX nesta rodada foi `draftStage`, de `writing` para `review-ready`. `status: draft` foi preservado. Comparação integral com cópia anterior confirmou ausência de qualquer outra mudança no MDX. O índice gerado foi regenerado pelo mecanismo oficial.
+
+O briefing existe no caminho oficial `content/research/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra.yml`. `research:validate` passou, com 15 fontes e sem perguntas abertas. `content:review` retornou zero erros e avisos. A simulação oficial `content:status <slug> review`, sem `--apply`, agora passou: draft → review seria permitido. Nenhuma transição de status foi aplicada.
+
+Validações: 57 testes focados (ART-032, pesquisa/autoria, operações editoriais e tags), sem falhas; `content:validate` sem erros e com os mesmos 27 avisos de outros conteúdos; typecheck aprovado; `git diff --check` aprovado. Testes cobrem sequência e vínculos das 15 referências, fontes estruturadas, licença contratual da Hero, cinco originais e variantes, Nota de Transparência integral, componentes e exclusão das rotas públicas, busca, tags, RSS e sitemap. SEO, categoria e tags são idênticos ao estado anterior, assim como o corpo científico e as imagens.
+
+`content:publish-check` mantém dois bloqueios esperados: o artigo ainda é draft, não approved/scheduled elegível, e o ambiente desta execução é local, não oficial. São condições a cumprir posteriormente pelo fluxo oficial, não falhas de conteúdo. Não foram criadas aprovações, declarações de revisão humana integral ou autorizações de terceiros. Limites documentais já descritos no briefing continuam válidos, inclusive acesso parcial a fontes e incertezas de direitos das imagens de apoio; passagem no gate não transforma esses registros em licença ou confirmação humana.
+
+O inventário seletivo `arquivos-previstos-publicacao.json` foi atualizado para 33 caminhos: os 30 anteriores, o briefing oficial, seu relatório de validação e este registro. O inventário é arquivo de controle local, fora de sua própria lista. Não inclui capturas, prévias, scripts em `.wrangler/`, `artifacts/`, segredos, documentos ART-030/031 ou mudanças de Kit/newsletter/storage/admin. O inventário deve ser reconferido após as futuras transições oficiais e geração final, antes de qualquer staging.
+
+Nenhum staging, commit, push, deploy ou publicação realizado. As próximas ações são decisão editorial, transições oficiais expressamente autorizadas e validação no ambiente oficial antes da publicação.

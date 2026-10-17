@@ -1,0 +1,11 @@
+# ART-032 — briefing de pesquisa
+
+Schema, carregamento e validação localizados antes da criação em `scripts/research-operations.ts`: `researchBriefSchema`, `loadResearchBrief` e `evaluateResearch`. Caminho oficial: `content/research/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra.yml`, em YAML. Consultados os briefings ART-030 e ART-031 e `docs/RESEARCH_WORKFLOW.md` / `docs/EDITORIAL_OPERATIONS.md`. A exceção de ART-031 não foi transportada.
+
+Criado o briefing com a pergunta fornecida, hipótese e escopo, 15 fontes vinculadas ao MDX e à matriz, 12 fact-checks delimitados, cenários econômicos e limitações documentais. Datas de verificação reutilizadas dos metadados existentes. Confirmação documental assistida não significa revisão humana integral. A avaliação de conflitos registra expressamente a ausência de declaração específica recebida, sem declarar inexistência de vínculos. As incertezas de direitos das imagens de apoio continuam registradas; não foram inventadas licenças nem aceitação de riscos.
+
+Resultados: `research:validate` aprovado; `research:status` sem bloqueios de pesquisa; `content:review` sem erros ou avisos. 49 testes focados aprovados, zero falhas. `git diff --check` aprovado. Os 30 arquivos do inventário anterior foram comparados por hash e permaneceram intactos; nada em staging.
+
+**APTO quanto ao briefing e ao gate de pesquisa para preparar review.** A transição real ainda exige o ajuste explícito de `draftStage: writing` para `review-ready`: `content:status <slug> review` (dry-run) identifica apenas essa exigência. Teste usando a função oficial `prepareStatusChange`, com estágio alterado exclusivamente em memória, aceitou draft → review. Nenhum status ou estágio foi alterado em arquivo. Não houve publicação nem aprovação humana inferida.
+
+Arquivos novos desta rodada: o briefing oficial e este relatório. O inventário anterior não foi reescrito; o briefing deverá ser acrescentado ao próximo inventário de publicação após a conferência. Scripts locais ignorados em `.wrangler/` serviram apenas à geração e checagem, fora do pacote de publicação. `artifacts/`, artigos, imagens, configurações e alterações não relacionadas foram preservados.

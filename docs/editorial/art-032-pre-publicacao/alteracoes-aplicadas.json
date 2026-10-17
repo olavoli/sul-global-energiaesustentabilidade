@@ -1,0 +1,344 @@
+{
+  "date": "2026-10-16",
+  "status": "draft",
+  "structuredSources": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05"
+  ],
+  "edits": [
+    {
+      "before": "https://www.nature.com/articles/s41893-019-0363-x",
+      "after": "https://doi.org/10.1038/s41893-019-0364-5",
+      "reason": "Correção documental do DOI, nas duas ocorrências bibliográficas; não substitui silenciosamente números do corpo."
+    },
+    {
+      "before": "retorno sobre o investimento (ROI) pode levar décadas",
+      "after": "prazo de retorno do investimento (payback) pode levar décadas",
+      "reason": "Correção do nome do indicador de tempo; a generalização sobre décadas continua explicitamente pendente no relatório."
+    },
+    {
+      "before": "pouco atraente para o pequeno produtor.]",
+      "after": "pouco atraente para o pequeno produtor.",
+      "reason": "Remoção de colchete residual de integração."
+    },
+    {
+      "before": "75% da capacidade de uma usina solar dedicada",
+      "after": "75% da geração elétrica por unidade de área de uma usina solar dedicada, no mesmo período",
+      "reason": "Compatibilidade dimensional do exemplo LER, mantendo 80%, 75% e 1,55."
+    },
+    {
+      "before": "Figura 5. Comparação ilustrativa entre modelos de negócio no Brasil e no exterior.",
+      "after": "Figura 5. Comparação ilustrativa entre modelos de negócio no Brasil e no exterior. Os 52% correspondem aproximadamente ao benchmark de custos instalado do NREL (Horowitz et al., 2020): US$ 2,33/WDC no arranjo elevado e reforçado contra US$ 1,53/WDC no fixo convencional, para 500 kW. O payback descontado de 7 anos e 10 meses é estimado para o projeto proposto em Iranduba/AM (Vidotto et al., 2024); a perda agrícola de até 20% é hipótese de sensibilidade, não medição.",
+      "reason": "Contextualização comprovada de números preservados na arte. Não valida a atribuição CCampo/PA, ainda pendente."
+    },
+    {
+      "before": "Sinergia, não sobreposição: A agrivoltaica busca otimizar o uso da terra, não apenas colocar painéis sobre plantações. O sucesso depende da interação entre sombra, temperatura e umidade.",
+      "after": "Sinergia, não sobreposição: A agrivoltaica busca otimizar o uso da terra, não apenas colocar painéis sobre plantações. O sucesso depende da interação entre sombra, temperatura e umidade [S02].",
+      "reason": "Vincular conceito e condições ao guia técnico; primeiro ponto preservado."
+    },
+    {
+      "before": "Custo elevado de estrutura: Sistemas agrivoltaicos exigem estruturas mais altas e robustas, aumentando o CAPEX. A viabilidade econômica depende de incentivos, preço da energia e modelos de negócio compartilhados.",
+      "after": "Custo elevado de estrutura: Sistemas agrivoltaicos elevados exigem estruturas mais altas e robustas, aumentando o CAPEX. A viabilidade econômica depende do preço da energia, dos modelos de negócio e, conforme o contexto, de incentivos.",
+      "reason": "Distinguir elevados de todas as tipologias e evitar dependência universal de incentivos."
+    },
+    {
+      "before": "Painéis Elevados: Estruturas altas (geralmente acima de 2,5 metros) que permitem a passagem de maquinário agrícola abaixo deles. É o modelo mais comum para grandes culturas como soja, milho e trigo.",
+      "after": "Painéis Elevados: Estruturas altas, dimensionadas para a passagem do maquinário agrícola abaixo delas. Altura e espaçamento dependem da cultura e dos implementos utilizados, inclusive em projetos com grandes culturas como soja, milho e trigo [S02].",
+      "reason": "Altura não universal nem ranking de configuração mais comum sem inventário."
+    },
+    {
+      "before": "Sistemas Verticais ou Espaçados: Painéis instalados verticalmente ou com espaçamento maior entre fileiras, permitindo que a luz solar penetre lateralmente. Ideal para culturas que exigem mais radiação direta.",
+      "after": "Sistemas Verticais ou Espaçados: São configurações distintas: os primeiros utilizam módulos na posição vertical; os segundos ampliam o espaço entre fileiras. A escolha depende da luz necessária aos cultivos e das condições do projeto [S02].",
+      "reason": "Distinguir arranjos que o desenho agrupa."
+    },
+    {
+      "before": "Estufas Fotovoltaicas: Painéis semitransparentes integrados à cobertura de estufas, comuns em horticultura de alto valor agregado.",
+      "after": "Estufas Fotovoltaicas: Painéis semitransparentes ou módulos opacos intercalados com áreas transparentes integram a cobertura de estufas, uma opção para a horticultura de alto valor agregado [S02].",
+      "reason": "Não tornar semitransparência obrigatória."
+    },
+    {
+      "before": "interrompendo a absorção de CO₂ e, consequentemente, a fotossíntese.",
+      "after": "podendo reduzir a absorção de CO₂ e, consequentemente, a fotossíntese.",
+      "reason": "Qualificação fisiológica aprovada."
+    },
+    {
+      "before": "Estudos realizados em regiões áridas, como os publicados na Nature Sustainability, demonstraram que a sombra parcial dos painéis pode reduzir a temperatura do ar em até 3°C e a temperatura do solo em até 5°C [3]. Isso diminui a evapotranspiração, mantendo a umidade do solo por mais tempo. Em outras palavras: a planta sofre menos estresse hídrico e pode manter sua produtividade mesmo com menos irrigação.",
+      "after": "Em um experimento com pimentas e tomate-cereja no Arizona, Estados Unidos, Barron-Gafford e colaboradores registraram temperatura média diurna do ar 1,2 ± 0,3 °C menor sob o sistema agrivoltaico do que no cultivo de referência a céu aberto [S01]. Os efeitos sobre transpiração e produtividade variaram entre as culturas; os tratamentos receberam a mesma irrigação. Em outras palavras: a planta pode sofrer menos estresse hídrico, mas isso não equivale, por si só, a medir uma redução igual no volume de água aplicado.",
+      "reason": "Valores publicados do experimento; distinguir medição, irrigação aplicada e resposta da cultura."
+    },
+    {
+      "before": "favorecem doenças fúngicas devido à maior retenção de umidade.",
+      "after": "podem favorecer doenças fúngicas em condições de umidade e manejo propícias.",
+      "reason": "Risco condicionado, não efeito inevitável."
+    },
+    {
+      "before": "Segundo relatórios do Fraunhofer ISE, o CAPEX (custo de capital) de sistemas agrivoltaicos pode ser 20% a 30% superior ao de sistemas fotovoltaicos convencionais [4]. Quem absorve esse custo extra?",
+      "after": "O custo adicional depende da configuração e da referência de comparação. No benchmark norte-americano do NREL para sistemas de 500 kW, o custo instalado com cultivos foi estimado em US$ 1,83/WDC para o arranjo vertical, contra US$ 1,53/WDC no fixo convencional — cerca de 20% a mais. Para o arranjo elevado com rastreamento, a comparação com o tracker convencional resulta em aproximadamente 26%; no elevado e reforçado, a diferença em relação ao fixo convencional chega a aproximadamente 52% [S05]. Quem absorve esse custo extra?",
+      "reason": "Substituição aprovada da faixa geral; valores e denominadores conferidos na figura 3, p.11."
+    },
+    {
+      "before": "Estudos econômicos, como os publicados na Frontiers in Horticulture, indicam que a viabilidade depende fortemente dos preços da energia e dos subsídios governamentais [6]. Sem incentivos fiscais ou tarifas diferenciadas, o prazo de retorno do investimento (payback) pode levar décadas, tornando o modelo pouco atraente para o pequeno produtor.",
+      "after": "Estudos econômicos, como os publicados na Frontiers in Horticulture, indicam que a viabilidade depende fortemente dos preços da energia e das condições regulatórias [S03]. Nas simulações para vinhedos alemães discutidas nesse estudo, os custos e as receitas adotados resultaram em valor presente líquido negativo em um horizonte de 20 anos, mostrando como a viabilidade depende das condições do projeto.",
+      "reason": "Resultado de simulação identificado, não payback observado ou generalização a pequenos produtores."
+    },
+    {
+      "before": "Dupla finalidade (alimentos + energia); maior eficiência por hectare (LER > 1).",
+      "after": "Dupla finalidade (alimentos + energia); possibilidade de maior eficiência de uso da terra (LER > 1).",
+      "reason": "Tabela: possibilidade, não resultado garantido."
+    },
+    {
+      "before": "Redução da temperatura do ar e solo; menor evapotranspiração; economia de água.",
+      "after": "Possível moderação do microclima e redução do consumo hídrico, conforme cultura, clima e manejo.",
+      "reason": "Tabela: consistência com experimento e limites de extrapolação."
+    },
+    {
+      "before": "Eficiência energética ligeiramente menor que usinas convencionais devido ao espaçamento/ângulo.",
+      "after": "Geração elétrica por área pode variar com espaçamento e orientação; não equivale à eficiência de conversão dos módulos.",
+      "reason": "Tabela: separar geração por área de eficiência do módulo."
+    },
+    {
+      "before": "Estabilidade financeira via contrato de energia; valorização da propriedade.",
+      "after": "Potencial de diversificação de receitas via contrato de energia, conforme a viabilidade do projeto.",
+      "reason": "Tabela: não garantir valorização ou estabilidade."
+    },
+    {
+      "before": "Menor pegada de carbono por unidade de produto; conservação do solo.",
+      "after": "Potencial de menor impacto por uso compartilhado da terra; pegada por produto depende de avaliação de ciclo de vida.",
+      "reason": "Tabela: não afirmar ACV inexistente ou benefício incondicional."
+    },
+    {
+      "before": "Os Estados Unidos, através do programa InSPIRE do NREL, têm testado diversas configurações em climas variados [5]. Os resultados mostram que culturas tolerantes à sombra, como alface, espinafre e certas variedades de pimentão, respondem muito bem. Já na Alemanha, o Fraunhofer ISE demonstrou sucesso com batatas e cereais, mas alertou para a necessidade de adaptação das máquinas agrícolas [4].",
+      "after": "Os Estados Unidos, através do programa InSPIRE do NREL, têm testado diversas configurações em climas variados [S19]. Experimentos como o do Arizona mostram respostas distintas de pimentas e tomate à sombra [S01]. Já na Alemanha, o Fraunhofer ISE documenta experiências com batatas e cereais, com resultados dependentes do cultivo e do ano e necessidade de adaptação das máquinas agrícolas [S02].",
+      "reason": "Referências específicas; retirar lista de culturas e sucesso universal não demonstrados."
+    },
+    {
+      "before": "O Brasil possui um potencial enorme, mas peculiar. Um estudo recente publicado na Applied Energy avaliou especificamente o cenário brasileiro [1]. Os autores destacam que nossas regiões com maior irradiação solar muitas vezes coincidem com áreas de stress hídrico, onde a proteção térmica da agrivoltaica seria mais valiosa.",
+      "after": "O Brasil possui um potencial enorme, mas peculiar. Um estudo publicado na Applied Energy avaliou especificamente o cenário brasileiro [S06]. Os autores destacam o potencial de adaptação da tecnologia às diferentes regiões agrícolas do país e os desafios de CAPEX, capacitação e diretrizes específicas.",
+      "reason": "Resumo primário sustenta diversidade regional, sem atribuir coincidência espacial não conferida."
+    },
+    {
+      "before": "Em novembro de 2025, o Ministério de Minas e Energia (MME) lançou um estudo detalhado sobre a viabilidade técnico-econômica dos sistemas agrivoltaicos no país [2]. O documento aponta que, embora a tecnologia seja promissora, faltam diretrizes técnicas claras e profissionais capacitados para a instalação e manutenção.",
+      "after": "Em novembro de 2025, o Ministério de Minas e Energia (MME) disponibilizou o estudo Sistemas Agrivoltaicos no Brasil: Estudo de potencial e viabilidade técnico-econômicos, elaborado no âmbito da Parceria Energética Brasil–Alemanha [S07]. O documento aponta que, embora a tecnologia seja promissora, faltam diretrizes específicas e profissionais capacitados para o planejamento e a instalação.",
+      "reason": "Expediente do PDF: publicação novembro/2025; autoria e editor separados do órgão que disponibiliza."
+    },
+    {
+      "before": "Além disso, a legislação brasileira ainda trata a ocupação do solo rural para fins energéticos com certa ambiguidade. Questões fundiárias, ambientais e tributárias precisam ser esclarecidas para dar segurança jurídica aos investidores. Projetos piloto estão surgindo em estados como São Paulo e Minas Gerais, mas ainda são exceções, não a regra.",
+      "after": "Além disso, questões fundiárias, ambientais e tributárias precisam ser consideradas para dar segurança jurídica aos investidores. A existência do marco de geração distribuída não elimina a necessidade de diretrizes agrivoltaicas específicas. No levantamento do estudo, projetos em operação e em desenvolvimento aparecem em estados como Minas Gerais, Santa Catarina e Pará, ainda como experiências piloto [S07].",
+      "reason": "Recorte histórico do levantamento, não inventário atualizado em 2026."
+    },
+    {
+      "before": "Figura 4. Países BRICS e países-parceiros representados no mapa fornecido.",
+      "after": "Figura 4. Países BRICS e países-parceiros no recorte da presidência brasileira de 2025, incluindo o Vietnã como parceiro a partir de junho [S08][S09]. O mapa representa cooperação diplomática, não a localização de instalações agrivoltaicas.",
+      "reason": "Datar mapa sem modificar arte ou confundir participação com adoção tecnológica."
+    },
+    {
+      "before": "Mapa ilustrativo que distingue países BRICS em azul e países-parceiros em laranja; classificação geopolítica pendente de conferência.",
+      "after": "Mapa ilustrativo de países BRICS em azul e parceiros em laranja, conforme o recorte brasileiro de 2025.",
+      "reason": "Texto alternativo descritivo e recorte histórico comprovado."
+    },
+    {
+      "before": "A China é, sem dúvida, o líder mundial em implementação de agrivoltaica em larga escala. Diferente dos projetos piloto europeus, a chinesa opera em nível industrial.",
+      "after": "A China oferece exemplos de agrivoltaica em grande escala. Projetos com integração produtiva já instalada coexistem com propostas e experimentos, e devem ser avaliados individualmente [S16].",
+      "reason": "Remover ranking universal não documentado; preservar o exemplo de escala."
+    },
+    {
+      "before": "O modelo \"painéis no deserto\": Em regiões como Ningxia e Inner Mongolia, a China instalou gigawatts de capacidade fotovoltaica sobre áreas desertificadas. Abaixo dos painéis, cultiva-se goji berry, alfafa e até cria-se ovelhas. A sombra reduz a evaporação, permitindo a recuperação do solo degradado [7].",
+      "after": "O modelo \"painéis no deserto\": Em Ningxia, o caso da Baofeng descrito pela fornecedora Huawei combina geração fotovoltaica e cultivo de goji em uma região árida [S16]. A sombra pode moderar as condições locais, mas recuperação do solo e desempenho agrícola precisam ser avaliados para cada instalação.",
+      "reason": "Instalação identificável, sem agrupar cultivos/regiões/capacidades não conferidos."
+    },
+    {
+      "before": "Aquavoltaica: Uma variação chinesa muito comum é a instalação de painéis sobre tanques de aquicultura (peixes e camarões). Isso protege a água do aquecimento excessivo e reduz o crescimento de algas nocivas, aumentando a produtividade tanto da energia quanto do pescado.",
+      "after": "Aquavoltaica: Outra possibilidade de integração é a instalação de painéis sobre áreas de aquicultura. O compartilhamento da área pode alterar a radiação e as condições da água, mas ganhos para peixes, controle de algas e geração de energia não são automáticos; dependem do desenho e do manejo do sistema [S07].",
+      "reason": "Separar possibilidade de resultado produtivo comprovado."
+    },
+    {
+      "before": "Dados verificáveis: Estudos indicam que em algumas províncias chinesas, a agrivoltaica aumentou a renda dos agricultores locais em até 30% devido à dupla fonte de receita e à redução de custos com irrigação [8].",
+      "after": "Dados verificáveis: No caso da usina de Baofeng, em Ningxia, a fornecedora Huawei relata a integração entre geração fotovoltaica e cultivo de goji, com oportunidades de trabalho e renda para moradores locais [S16]. O relato não quantifica um aumento percentual da renda das famílias.",
+      "reason": "Substituição qualitativa aprovada; não transferir simulação de valor econômico para renda chinesa."
+    },
+    {
+      "before": "Projetos piloto em Gujarat e Karnataka: O governo indiano, em parceria com institutos de pesquisa, tem testado sistemas em culturas de pimentão, tomate e batata. O foco é a economia de água, recurso crítico no subcontinente.",
+      "after": "Projetos experimentais: O ICAR-Central Arid Zone Research Institute desenvolveu um sistema agrivoltaico de 105 kW em Jodhpur, no Rajastão, documentado em resposta oficial ao Parlamento indiano [S17]. O exemplo mostra a pesquisa sobre o uso compartilhado da terra; não deve ser confundido com uma demonstração de viabilidade para qualquer cultura ou região.",
+      "reason": "Projeto específico documentado em lugar de pilotos/culturas sem identificação."
+    },
+    {
+      "before": "Desafio da mecanização: Ao contrário da China ou do Brasil, a agricultura indiana ainda é predominantemente manual ou usa maquinário pequeno. Isso facilita a instalação de painéis mais baixos e densos, mas limita a escala de produção de grãos.",
+      "after": "Desafio da mecanização: Em pequenas propriedades, o porte dos equipamentos influencia a altura e o espaçamento dos painéis. Isso pode permitir arranjos diferentes daqueles exigidos por grandes colheitadeiras, mas a densidade e a escala precisam respeitar as condições agrícolas de cada projeto [S02].",
+      "reason": "Evitar generalização nacional não comprovada sobre mecanização indiana."
+    },
+    {
+      "before": "Resultados: Pesquisas do Indian Institute of Technology mostram que a temperatura sob os painéis pode ser até 4°C menor, reduzindo a necessidade de irrigação em até 20-30% para certas hortaliças [9].",
+      "after": "Resultados: Uma revisão sobre agrivoltaica na Índia discute a economia de água entre os benefícios potenciais da tecnologia [S15]. Como referência internacional, o estudo de Elamri e colaboradores sobre alface irrigada em Montpellier, França, combinou experimentos e modelagem de balanço hídrico e relata redução de 20% a 30% no consumo de água da cultura nas configurações investigadas [S14]. É um resultado francês específico, não uma medição atribuível ao IIT ou uma demonstração de resfriamento de 4 °C na Índia.",
+      "reason": "Preservar 20–30% no contexto francês, sem equiparar consumo hídrico e volume aplicado; não alegar leitura do item45 da revisão."
+    },
+    {
+      "before": "Foco em vinhedos e fruticultura: Semelhante à experiência europeia, há testes em vinícolas na região do Cabo Ocidental. A sombra parcial ajuda a manter a acidez das uvas em um clima que está se tornando cada vez mais quente, preservando a qualidade do vinho.",
+      "after": "Foco em fruticultura: No Cabo Ocidental, um relatório da Water Research Commission apresenta modelagem do potencial agrivoltaico em áreas de citros e uvas de mesa [S10]. Trata-se de estudo de engenharia, não de medição de acidez em uma vinícola comercial. A adaptação ao calor e à disponibilidade de água permanece uma questão relevante para o projeto.",
+      "reason": "Distinguir cultura, modelagem e instalação operacional."
+    },
+    {
+      "before": "Segurança energética: Para fazendas isoladas, a agrivoltaica oferece autonomia energética, reduzindo a dependência de geradores a diesel caros e poluentes.",
+      "after": "Segurança energética: Para fazendas isoladas, a agrivoltaica pode contribuir para reduzir a dependência de geradores a diesel caros e poluentes. Autonomia, porém, depende também do perfil de consumo, do armazenamento e da configuração elétrica.",
+      "reason": "Não garantir autonomia a partir apenas da geração solar."
+    },
+    {
+      "before": "4. Novos membros: Egito e Emirados Árabes Unidos",
+      "after": "4. Egito e Emirados Árabes Unidos: possibilidades em regiões áridas",
+      "reason": "Preservar subseção e países, sem pressupor implantação."
+    },
+    {
+      "before": "Egito: Com quase 100% de seu território sendo deserto, o Egito vê na agrivoltaica a única maneira de expandir a fronteira agrícola sem competir por água doce. Projetos no deserto ocidental usam painéis para criar microclimas onde antes nada crescia.",
+      "after": "Egito: Em regiões áridas, a agrivoltaica pode ser investigada como uma alternativa para compartilhar terra e recursos hídricos. Não é a única forma de ampliar a produção agrícola, e o potencial técnico não deve ser confundido com projetos já implantados no deserto ocidental.",
+      "reason": "Remover percentual territorial, exclusividade e instalações sem fonte; apresentar como possibilidade, sem inventar caso."
+    },
+    {
+      "before": "Emirados Árabes: Focam em alta tecnologia, usando sensores de IoT (Internet das Coisas) sob os painéis para monitorar cada planta individualmente, maximizando a eficiência em um ambiente hostil.",
+      "after": "Emirados Árabes: Sensores de IoT (Internet das Coisas) podem apoiar o acompanhamento das condições de cultivo e o uso da água em ambientes hostis. Essa possibilidade tecnológica não equivale a comprovar o monitoramento de cada planta em instalações agrivoltaicas comerciais no país.",
+      "reason": "Separar aplicação potencial de instalação não documentada."
+    },
+    {
+      "before": "Não existe \"modelo único\": A China prova que é possível fazer em escala gigante; a Índia mostra que funciona para o pequeno produtor; o Brasil precisa encontrar seu caminho no meio termo, respeitando sua mecanização.",
+      "after": "Não existe \"modelo único\": O caso chinês ilustra a integração produtiva em uma instalação de grande escala; a experiência indiana documenta um sistema de pesquisa; o Brasil precisa encontrar seu caminho, respeitando sua mecanização e suas condições agrícolas.",
+      "reason": "Síntese compatível com níveis de evidência dos exemplos."
+    },
+    {
+      "before": "A água é o denominador comum: Em todos os BRICS, o benefício mais imediato e verificável da agrivoltaica não é a eletricidade, mas a economia de água. Em um mundo com recursos hídricos cada vez mais disputados, isso pode ser o argumento econômico mais forte.",
+      "after": "A água é um denominador importante: Em regiões sob estresse hídrico, a redução do consumo de água pode ser um benefício relevante da agrivoltaica. Os resultados franceses para alface e os estudos de outros contextos mostram possibilidades, não uma economia garantida em todos os BRICS. Em um mundo com recursos hídricos cada vez mais disputados, isso pode ser um argumento econômico forte.",
+      "reason": "Corrigir universalidade e ranking do benefício sem neutralizar a argumentação."
+    },
+    {
+      "before": "Tecnologia local vs. importada: Os países que mais avançaram (como a China) desenvolveram suas próprias cadeias de suprimentos de painéis e estruturas. Para o Brasil e outros BRICS, a dependência de tecnologia importada ainda encarece o CAPEX.",
+      "after": "Tecnologia local vs. importada: O desenvolvimento de fornecedores, estruturas adaptadas e equipes capacitadas faz parte da viabilidade. Para o Brasil e outros BRICS, o peso de equipamentos importados no CAPEX precisa ser avaliado no orçamento de cada projeto, sem pressupor uma condição igual em todos os países [S07].",
+      "reason": "Substituir generalização nacional por condicionante de projeto documentado."
+    },
+    {
+      "before": "até os vinhedos da África do Sul que buscam resiliência térmica",
+      "after": "até os estudos sul-africanos sobre citros e uvas de mesa que investigam resiliência hídrica e energética",
+      "reason": "Conclusão: coerência com estudo regional, não vinícola operacional."
+    },
+    {
+      "before": "das vastas áreas semiáridas da China e da Índia, onde a sombra dos painéis protege cultivos essenciais da escassez hídrica",
+      "after": "dos casos de integração produtiva na China e dos sistemas experimentais da Índia",
+      "reason": "Conclusão: não atribuir resultado hídrico específico a países inteiros."
+    },
+    {
+      "before": "A economia hídrica, a redução da evapotranspiração e a menor pegada de carbono por unidade produzida são benefícios tangíveis.",
+      "after": "A economia hídrica e a moderação do microclima são benefícios documentados em condições específicas; a pegada de carbono por unidade produzida depende da avaliação de ciclo de vida e do sistema de referência.",
+      "reason": "Conclusão consistente com tabela e alcance das fontes."
+    },
+    {
+      "before": "maior valor de um recurso finito",
+      "after": "maior eficiência de uso combinado de um recurso finito",
+      "reason": "LER não é medida monetária."
+    },
+    {
+      "before": "beneficiando desde o pequeno agricultor que busca resiliência até o grande investidor que procura ativos sustentáveis de longo prazo.",
+      "after": "com potencial para beneficiar desde o pequeno agricultor que busca resiliência até o grande investidor que procura ativos sustentáveis de longo prazo, conforme a viabilidade do projeto.",
+      "reason": "Benefício financeiro não demonstrado pelo LER isolado."
+    },
+    {
+      "before": "Figura 2. Configurações ilustrativas de sistemas agrivoltaicos.",
+      "after": "Figura 2. Configurações ilustrativas de sistemas agrivoltaicos [S02]. O painel intermediário mostra fileiras inclinadas e espaçadas; módulos verticais constituem outra configuração.",
+      "reason": "Esclarecer rótulo agrupado na arte sem alterá-la."
+    },
+    {
+      "before": "caption=\"Figura 5. Comparação ilustrativa entre modelos de negócio no Brasil e no exterior. Os 52% correspondem aproximadamente ao benchmark de custos instalado do NREL (Horowitz et al., 2020): US$ 2,33/WDC no arranjo elevado e reforçado contra US$ 1,53/WDC no fixo convencional, para 500 kW. O payback descontado de 7 anos e 10 meses é estimado para o projeto proposto em Iranduba/AM (Vidotto et al., 2024); a perda agrícola de até 20% é hipótese de sensibilidade, não medição.\"",
+      "after": "caption=\"Figura 5. Modelos de negócio ilustrativos. Os 52% correspondem ao benchmark NREL de 500 kW: US$ 2,33/WDC no arranjo elevado e reforçado contra US$ 1,53/WDC no fixo convencional [S05]. O payback descontado de 7 anos e 10 meses é simulado para o projeto proposto em Iranduba/AM, e a perda agrícola de até 20% é hipótese de sensibilidade [S04]. A CCampo, em Santarém/PA, é outro projeto documentado, distinto desse cenário econômico [S07]. Autoconsumo, cooperativas e venda de energia não são exclusivos de um país; compensação tarifária não equivale automaticamente a pagamento em dinheiro.\"",
+      "reason": "Preservar números e projeto CCampo agora confirmado; delimitar comparação geográfica e cenários da arte."
+    },
+    {
+      "before": "Infográfico comparativo de modelos agrivoltaicos no Brasil e no exterior, com estimativas econômicas pendentes de validação.",
+      "after": "Infográfico de modelos agrivoltaicos, com CAPEX de um benchmark norte-americano e payback de um cenário brasileiro, contextualizados na legenda.",
+      "reason": "Alt acessível após verificação."
+    },
+    {
+      "before": "[S02]",
+      "after": "[1]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S01]",
+      "after": "[2]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S05]",
+      "after": "[3]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S03]",
+      "after": "[4]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S19]",
+      "after": "[5]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S06]",
+      "after": "[6]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S07]",
+      "after": "[7]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S08]",
+      "after": "[8]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S09]",
+      "after": "[9]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S16]",
+      "after": "[10]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S17]",
+      "after": "[11]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S15]",
+      "after": "[12]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S14]",
+      "after": "[13]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S10]",
+      "after": "[14]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "[S04]",
+      "after": "[15]",
+      "reason": "Numeração sequencial por primeira aparição; reutilizar número nas repetições."
+    },
+    {
+      "before": "A experiência internacional comprova isso:",
+      "after": "A experiência internacional oferece referências para essa análise:",
+      "reason": "Conclusão: estudos de engenharia não equivalem a comprovação universal dos benefícios."
+    }
+  ],
+  "authorization": "Decisão editorial expressa: aplicar correções científicas pontuais; manter draft.",
+  "bibliographyReplacement": {
+    "beforeFile": "bibliografia-original-preservada.md",
+    "after": "## Referências Bibliográficas\n\n[1] Fraunhofer Institute for Solar Energy Systems ISE. Agrivoltaics: Opportunities for Agriculture and the Energy Transition, terceira edição, fevereiro. 2024. https://www.ise.fraunhofer.de/content/dam/ise/en/documents/publications/studies/APV-Guideline.pdf\n\n[2] Barron-Gafford, G. A.; Pavao-Zuckerman, M. A.; Minor, R. L. et al. Agrivoltaics provide mutual benefits across the food–energy–water nexus in drylands. Nature Sustainability, 2, 848–855. 2019. DOI: 10.1038/s41893-019-0364-5. https://energy.arizona.edu/sites/default/files/2022-09/Barron-Gafford%20et%20al%20Nature%20Sustainability%202019.pdf\n\n[3] Horowitz, K.; Ramasamy, V.; Macknick, J.; Margolis, R. Capital Costs for Dual-Use Photovoltaic Installations: 2020 Benchmark for Ground-Mounted PV Systems with Pollinator-Friendly Vegetation, Grazing, and Crops. NREL/TP-6A20-77811. 2020. https://www.nlr.gov/docs/fy21osti/77811.pdf\n\n[4] Strub, L.; Wittke, M.; Trommsdorff, M.; Stoll, M.; Kammann, C.; Loose, S. Assessing the economic performance of agrivoltaic systems in vineyards – framework development, simulated scenarios and directions for future research. Frontiers in Horticulture, 3, 1473072. 2024. DOI: 10.3389/fhort.2024.1473072. https://www.frontiersin.org/journals/horticulture/articles/10.3389/fhort.2024.1473072/full\n\n[5] Macknick, J. et al. / NREL. The 5 Cs of Agrivoltaic Success Factors in the United States: Lessons From the InSPIRE Research Study. NREL/TP-6A20-83566. 2022. https://www.nlr.gov/docs/fy22osti/83566.pdf\n\n[6] Vidotto, L. C.; Schneider, K.; Morato, R. W.; do Nascimento, L. R.; Rüther, R. An evaluation of the potential of agrivoltaic systems in Brazil. Applied Energy, 360, 122782. 2024. DOI: 10.1016/j.apenergy.2024.122782. https://www.sciencedirect.com/science/article/pii/S030626192400165X\n\n[7] Schneider, K.; Vidotto, L.; Morato, R.; Rüther, R.; Nascimento, L. / GIZ. Sistemas Agrivoltaicos no Brasil — Estudo de potencial e viabilidade técnico-econômicos. GIZ / Parceria Energética Brasil–Alemanha. 2025. https://www.gov.br/mme/pt-br/assuntos/secretarias/sntep/parcerias-energeticas/publicacoes/EstudoAgriPVPT.pdf\n\n[8] Congresso Nacional brasileiro. 11º Fórum Parlamentar do Brics — Brasil 2025. 2025. https://www.congressonacional.leg.br/brics/\n\n[9] Presidência brasileira do BRICS. Vietnã torna-se país parceiro do BRICS. 2025. https://brics.br/pt-br/noticias/vietna-torna-se-pais-parceiro-do-brics\n\n[10] Huawei. Smart Agrivoltaic Power Plant in Ningxia: Turning a Desert into an Oasis. s.d. (ano não informado na página). https://www.huawei.com/en/sustainability/the-latest/stories/smart-agrivoltaic-power-plant-in-ningxia-en\n\n[11] Ministry of Agriculture and Farmers Welfare, Government of India. Lok Sabha Unstarred Question 2401: Agriculture Voltage Technology. Resposta ao Parlamento indiano, 09/03/2021. 2021. https://www.icar.gov.in/sites/default/files/inline-files/Annexure-IX_compressed.pdf\n\n[12] Ghamari, Mehrdad; Ramasamy, Mahendiran; Sundaram, Senthilarasu. Agrivoltaics in India: A promising nexus of solar energy and agriculture for sustainable development. Solar Energy, 309, 114438. 2026. https://doi.org/10.1016/j.solener.2026.114438\n\n[13] Elamri, Y.; Cheviron, B.; Lopez, J.-M.; Dejean, C.; Belaud, G. Water budget and crop modelling for agrivoltaic systems: Application to irrigated lettuces. Agricultural Water Management, 208, 440–453. 2018. DOI: 10.1016/j.agwat.2018.07.001. https://publications.cirad.fr/une_notice.php?dk=598808\n\n[14] Punt, C.; Marais, D.; Fischer, T.; Govender, M.; Pugin, J.; Kühl, J.; Haasbroek, B. Exploring Water Supply Economics, Opportunity Costs, and Cost of Unserved Water in the Context of Various Water Augmentation Considerations – Using the Western Cape Water Supply System as a Case Study. 2021. https://www.wrc.org.za/wp-content/uploads/mdocs/TT%20864%20final%20web.pdf\n\n[15] Vidotto, L. C.; Schneider, K.; Ribeiro, M. P. T. M.; Nascimento, L.; Rüther, R.; Morato, R. W. Sistemas agrivoltaicos na agricultura familiar: estudo de caso e análise de viabilidade econômica. Revista Brasileira de Energia Solar, 15(2), 131–139. 2024. DOI: 10.59627/rbens.2024v15i2.469. https://rbens.emnuvens.com.br/rbens/article/download/469/326/972\n",
+    "reason": "Troca autorizada de agrupamentos temáticos, buscas e instruções por documentos específicos citados, sem apagar o original."
+  }
+}
