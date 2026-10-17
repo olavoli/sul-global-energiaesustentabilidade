@@ -154,6 +154,9 @@ describe("ART-028 — integração canônica do DOCX revisado v2", () => {
       .map((item) => item.publishedAt)
       .sort()
       .at(-1);
+    if (latestDate === undefined) {
+      throw new Error("A coleção publicada deve conter artigos para verificar a data mais recente.");
+    }
     expect(latest[0].publishedAt).toBe(latestDate);
     expect(getArticleBySlug(latest[0].slug)).toEqual(latest[0]);
     expect(getRelatedArticles(article!).map((related) => related.slug)).not.toContain(slug);
