@@ -5,6 +5,7 @@ import { Container } from "@/components/layout/Container";
 import { CategoryTag } from "@/components/article/CategoryTag";
 import { Byline } from "@/components/article/Byline";
 import { ArticleBody } from "@/components/article/ArticleBody";
+import { ArticleAdRail } from "@/components/article/ArticleAdRail";
 import { ArticleTtsPlayer } from "@/components/article/ArticleTtsPlayer";
 import { SourceList } from "@/components/editorial/SourceList";
 import { AiEditorialCredit } from "@/components/editorial/AiEditorialCredit";
@@ -158,7 +159,8 @@ function ArticleDetail() {
       </Container>
 
       <Container className="pb-12">
-        <div className="mx-auto max-w-[72ch]">
+        <div className="relative mx-auto max-w-[72ch] min-[1440px]:min-h-[640px]">
+          <ArticleAdRail articleKey={article.slug} />
           {article.sponsored && article.sponsorName && (
             <SponsoredDisclosure sponsorName={article.sponsorName} />
           )}

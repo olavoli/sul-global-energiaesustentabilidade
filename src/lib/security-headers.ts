@@ -1,4 +1,5 @@
 import { environmentConfig } from "@/config/environment";
+import { ADSTERRA_FRAME_CSP, ADSTERRA_FRAME_PATH } from "./advertising/adsterra";
 
 const CSP_DIRECTIVES = [
   "default-src 'self'",
@@ -17,23 +18,31 @@ const CSP_DIRECTIVES = [
   "worker-src 'self' blob:",
 ];
 
-export function contentSecurityPolicy(officialProduction = false): string {
-  return [...CSP_DIRECTIVES, ...(officialProduction ? ["upgrade-insecure-requests"] : [])].join(
-    "; ",
+export function contentSecurityPolicy(officialProduction = false, allowAdFrame = false): string {
+  const directives = CSP_DIRECTIVES.map((directive) =>
+    allowAdFrame && directive.startsWith("frame-src ") ? `${directive} 'self'` : directive,
   );
+  return [...directives, ...(officialProduction ? ["upgrade-insecure-requests"] : [])].join("; ");
 }
 
 /** Apply defense-in-depth headers to SSR, assets and distribution endpoints. */
 export function applySecurityHeaders(response: Response, request: Request): Response {
   const headers = new Headers(response.headers);
+  const pathname = new URL(request.url).pathname;
+  const adFrame = pathname === ADSTERRA_FRAME_PATH;
   headers.set(
     "Content-Security-Policy",
-    contentSecurityPolicy(environmentConfig.isOfficialProduction),
+    adFrame
+      ? ADSTERRA_FRAME_CSP
+      : contentSecurityPolicy(
+          environmentConfig.isOfficialProduction,
+          /^\/artigo\/[^/]+\/?$/.test(pathname),
+        ),
   );
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=()");
-  headers.set("X-Frame-Options", "DENY");
+  headers.set("X-Frame-Options", adFrame ? "SAMEORIGIN" : "DENY");
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
 
   if (!environmentConfig.indexingEnabled) {

@@ -6,6 +6,7 @@ import { getPublishedArticles } from "./content/repository";
 import { createDistributionResponse } from "./lib/distribution";
 import { reportError } from "./lib/observability";
 import { applySecurityHeaders } from "./lib/security-headers";
+import { createAdsterraFrameResponse } from "./lib/advertising/adsterra";
 import { handleAdminRequest } from "./lib/admin/handler";
 import { handleCommentsRequest } from "./lib/comments/handler";
 import { handleNewsletterRequest } from "./lib/newsletter/handler";
@@ -73,6 +74,8 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const adFrameResponse = createAdsterraFrameResponse(request);
+      if (adFrameResponse) return applySecurityHeaders(adFrameResponse, request);
       // Nitro's Cloudflare module augments requests before delegating to the SSR
       // service, whose fetch call receives only the Request object.
       const runtime = cloudflareRuntime(request, env, ctx);
