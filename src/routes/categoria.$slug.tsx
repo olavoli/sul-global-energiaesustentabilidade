@@ -5,7 +5,7 @@ import { ArticleCard } from "@/components/article/ArticleCard";
 import { getArticlesByCategory } from "@/content/repository";
 import { getCategory, categories } from "@/data/categories";
 import type { Article } from "@/types/content";
-import { categoryBreadcrumb, resolveCanonical, socialMeta } from "@/lib/seo";
+import { categoryPageHead } from "@/lib/category-seo";
 import { EditorialBreadcrumb } from "@/components/navigation/EditorialBreadcrumb";
 
 export const Route = createFileRoute("/categoria/$slug")({
@@ -26,22 +26,8 @@ export const Route = createFileRoute("/categoria/$slug")({
         ],
       };
     }
-    const { category } = loaderData;
-    return {
-      meta: [
-        { title: `${category.name} — Sul Global` },
-        { name: "description", content: category.description },
-        ...socialMeta({
-          title: `${category.name} — Sul Global`,
-          description: category.description,
-          path: `/categoria/${category.slug}`,
-        }),
-      ],
-      links: [{ rel: "canonical", href: resolveCanonical(`/categoria/${category.slug}`) }],
-      scripts: [
-        { type: "application/ld+json", children: JSON.stringify(categoryBreadcrumb(category)) },
-      ],
-    };
+    const { category, articles } = loaderData;
+    return categoryPageHead(category, articles.length);
   },
   notFoundComponent: CategoryNotFound,
   component: CategoryPage,

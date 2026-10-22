@@ -23,13 +23,38 @@ function PrivacyPage() {
     <LegalPage
       eyebrow="Privacidade"
       title="Política de privacidade"
-      updatedAt="9 de outubro de 2026"
+      updatedAt="22 de outubro de 2026"
     >
       <h2>Estado atual</h2>
       <p>
-        O portal não utiliza tags de analytics de audiência ou publicidade ativa. A página Contato
-        disponibiliza o canal de e-mail indicado para atendimento; não realiza envio por formulário
-        próprio. A newsletter trata o e-mail conforme descrito abaixo.
+        O portal integra publicidade Adsterra nas páginas de artigos, conforme descrito abaixo. A
+        página Contato disponibiliza o canal de e-mail indicado para atendimento; não realiza envio
+        por formulário próprio. A newsletter trata o e-mail conforme descrito abaixo.
+      </p>
+      <h2>Publicidade e serviços de terceiros</h2>
+      <p>
+        As páginas de artigos podem carregar uma unidade Adsterra de 160 × 600, identificada como
+        Publicidade. O carregamento ocorre em telas a partir de 1440 pixels de largura, quando há
+        espaço lateral suficiente. O anúncio utiliza um iframe isolado e um script externo de
+        bicea.org; a entrega de um anúncio depende do fornecedor.
+      </p>
+      <p>
+        Ao carregar o recurso externo, o navegador realiza requisições ao fornecedor, que recebe
+        informações técnicas da conexão, como endereço IP e dados do navegador. O fornecedor e os
+        anúncios podem utilizar cookies, armazenamento e outros mecanismos de medição, sujeitos às
+        restrições do navegador e do iframe. O isolamento não comprova ausência de rastreamento ou
+        compartilhamento de dados. Consulte a{" "}
+        <a href="https://adsterra.com/privacy-policy-managed/">
+          Política de Privacidade da Adsterra
+        </a>{" "}
+        e sua <a href="https://adsterra.com/cookies/">Política de Cookies</a>.
+      </p>
+      <p>
+        Atualmente não há um controle de consentimento publicitário no portal: o carregamento da
+        unidade depende do espaço disponível, sem uma escolha prévia de aceitar ou recusar
+        publicidade. Os consentimentos da newsletter e dos comentários não autorizam esse
+        carregamento. A avaliação dos controles de privacidade aplicáveis à publicidade permanece
+        pendente.
       </p>
       <h2>Newsletter</h2>
       <p>
@@ -101,9 +126,10 @@ function PrivacyPage() {
       </p>
       <h2>Mudanças futuras</h2>
       <p>
-        Novas funcionalidades de analytics ou publicidade serão acompanhadas de revisão desta
-        política e dos controles aplicáveis de privacidade. Um banner de cookies não é exibido
-        porque não há cookies não essenciais ativos.
+        Mudanças nos serviços de terceiros e nas funcionalidades do portal exigem revisão desta
+        política e dos controles aplicáveis de privacidade. A ausência de um banner de cookies não
+        significa ausência de cookies não essenciais, rastreamento ou tratamento de dados por
+        terceiros.
       </p>
     </LegalPage>
   );

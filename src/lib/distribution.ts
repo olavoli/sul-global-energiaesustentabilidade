@@ -3,6 +3,7 @@ import { getPublicAuthors } from "@/data/authors";
 import { categories } from "@/data/categories";
 import { resolveCanonical } from "@/lib/seo";
 import { buildTagTopics } from "@/content/tags";
+import { isCategoryIndexable } from "@/lib/category-seo";
 import type { Article } from "@/types/content";
 
 const XML_HEADERS = { "content-type": "application/xml; charset=utf-8" };
@@ -43,7 +44,15 @@ export function generateSitemap(articles: readonly Article[], publishable = true
   ];
   const paths = [
     ...(publishable ? staticPaths : []),
-    ...(publishable ? categories.map((category) => `/categoria/${category.slug}`) : []),
+    ...(publishable
+      ? categories
+          .filter((category) =>
+            isCategoryIndexable(
+              articles.filter((article) => article.category === category.slug).length,
+            ),
+          )
+          .map((category) => `/categoria/${category.slug}`)
+      : []),
     ...(publishable ? getPublicAuthors(false).map((author) => `/autor/${author.slug}`) : []),
     ...(publishable
       ? articles.map((article) => article.canonicalUrl ?? `/artigo/${article.slug}`)
