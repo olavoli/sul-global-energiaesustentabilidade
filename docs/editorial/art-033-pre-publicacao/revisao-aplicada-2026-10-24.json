@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-24",
+  "replacements": [
+    {
+      "before": "Journal of Hazardous Materials, v. 485, 2025.",
+      "after": "Journal of Hazardous Materials, v. 500, 2025."
+    },
+    {
+      "before": "Minerals Engineering, v. 215, 2024.",
+      "after": "Minerals Engineering, v. 216, 2024."
+    },
+    {
+      "before": "Science of The Total Environment, v. 912, 2024.",
+      "after": "Science of The Total Environment, v. 908, 2024."
+    },
+    {
+      "before": "https://www.energy.gov/sites/default/files/2023-05/2023-critical-materials-assessment.pdf",
+      "after": "https://www.energy.gov/sites/default/files/2023-07/doe-critical-material-assessment_07312023.pdf"
+    },
+    {
+      "before": "em 2024, a China respondeu por ~60% da mineração, mas dominou 91% do refino e 94% da fabricação de ímãs permanentes sinterizados [1].",
+      "after": "em 2024, para as terras raras magnéticas (neodímio, praseodímio, disprósio e térbio), a China respondeu por ~60% da mineração e 91% do refino; na fabricação de ímãs permanentes sinterizados, sua participação atingiu 94% [1]."
+    },
+    {
+      "before": "Lítio, níquel, cobalto e grafite são essenciais para armazenamento eletroquímico.",
+      "after": "Lítio, níquel, cobalto e grafite participam de diferentes cadeias de baterias, conforme a química utilizada."
+    },
+    {
+      "before": "algumas baterias antigas (Ni-MH)",
+      "after": "algumas baterias de níquel-hidreto metálico (Ni-MH)"
+    },
+    {
+      "before": "O neodímio (Nd) e o praseodímio (Pr) formam a base da liga, enquanto disprósio (Dy) e térbio (Tb) são adicionados para melhorar o desempenho térmico e a coercividade.",
+      "after": "A fase magnética característica é baseada em neodímio, ferro e boro; o praseodímio (Pr) pode substituir parte do neodímio (Nd), enquanto disprósio (Dy) e térbio (Tb) podem ser adicionados conforme as exigências de desempenho e temperatura, para melhorar a coercividade e o desempenho térmico."
+    },
+    {
+      "before": "a reciclagem ainda enfrenta barreiras de escala e logística, não substituindo imediatamente a produção primária diante do crescimento da demanda.",
+      "after": "a reciclagem ainda enfrenta barreiras de escala e logística, não substituindo imediatamente a produção primária diante do crescimento da demanda [13]."
+    }
+  ],
+  "citationMapping": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 6,
+    "6": 5,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11,
+    "12": 13,
+    "13": 12,
+    "14": 14
+  },
+  "duanEvidence": {
+    "url": "https://ace.ewapub.com/article/view/11867.pdf",
+    "pages": "80, seção 5",
+    "scope": "Barreiras de coleta, desmontagem, separação e processamento na reciclagem; revisão, não experimento."
+  },
+  "notApplied": [
+    "C01: manter 21 Mt por decisão expressa",
+    "C02/C03: comparação ANM/USGS não autorizada nesta rodada",
+    "C09: imagem preservada; qualificação visual pendente"
+  ]
+}

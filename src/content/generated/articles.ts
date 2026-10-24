@@ -4727,6 +4727,109 @@ export const articleRecords = [
     canonicalUrl: "/artigo/temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
   },
   {
+    slug: "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
+    title:
+      "Terras raras: Os 17 elementos que movem a tecnologia e colocam o Brasil no centro de uma disputa mundial",
+    subtitle: "Parte 1 — Natureza, aplicações e desafios industriais das terras raras.",
+    excerpt:
+      "Os 17 elementos das terras raras, suas aplicações tecnológicas e os desafios para transformar reservas minerais brasileiras em capacidade industrial.",
+    contentType: "analysis",
+    status: "approved",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: ["terras raras", "minerais críticos", "mineração", "reciclagem", "brasil"],
+    createdAt: "2026-10-23",
+    approvedAt: "2026-10-24",
+    corrections: [],
+    readingTime: 15,
+    cover: {
+      src: "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-hero-1200.webp",
+      alt: "Ilustração de rochas minerais, mineração, turbinas eólicas e um motor elétrico ao pôr do sol, com aves no céu.",
+      decorative: false,
+      width: 1200,
+      height: 674,
+      caption: "Figura 1. Terras raras e suas aplicações tecnológicas.",
+      credit: "Fonte: SGES, (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "ChatGPT (OpenAI)",
+          },
+          {
+            role: "editing",
+            tool: "Pippit (pippit.ai)",
+          },
+        ],
+        year: 2026,
+      },
+      license:
+        "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/; edição posterior: Saída de Pippit / Seedream 4.0, uso editorial e comercial sujeito aos termos Pippit: https://www.pippit.ai/clause/terms-of-service e orientação oficial: https://www.pippit.ai/tools/text-to-design",
+      sources: [
+        {
+          src: "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-hero-2000.webp",
+          width: 2000,
+        },
+      ],
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sources: [
+      {
+        title:
+          "Rare Earth Elements: Pathways to Secure and Diversified Supply Chains. Paris: IEA, 2026",
+        url: "https://www.iea.org/reports/rare-earth-elements",
+        organizationOrAuthor: "International Energy Agency (IEA)",
+        verifiedAt: "2026-10-23",
+        type: "official",
+        note: "[1] Existência/metadados conferidos nesta integração; isto não certifica todas as afirmações científicas do artigo. Bibliografia original preservada no corpo.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Autorizações de Pesquisa para terras raras tiveram um aumento de 485,4% entre 2021 e 2025. Brasília: ANM, 2026",
+        url: "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+        organizationOrAuthor: "Agência Nacional de Mineração (ANM)",
+        verifiedAt: "2026-10-23",
+        type: "official",
+        note: "[6] Existência/metadados conferidos nesta integração; isto não certifica todas as afirmações científicas do artigo. Bibliografia original preservada no corpo.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Rare earth elements: A review of exploration, processing, environmental impact, recycling and prospect analysis. Applied and Computational Engineering, v. 56, 2024",
+        url: "https://doi.org/10.54254/2755-2721/56/20240620",
+        organizationOrAuthor: "Wenkai Duan",
+        verifiedAt: "2026-10-23",
+        type: "academic",
+        note: "[12] Existência/metadados conferidos nesta integração; isto não certifica todas as afirmações científicas do artigo. Bibliografia original preservada no corpo.",
+        isDemo: false,
+      },
+    ],
+    referencesInBody: true,
+    aiAssistance: "limited",
+    aiDisclosure:
+      "As ilustrações deste artigo foram produzidas com auxílio de ferramentas de inteligência artificial generativa. A imagem de capa (Hero) foi produzida inicialmente com o ChatGPT (OpenAI) e posteriormente trabalhada no Pippit (www.pippit.ai). As imagens 1 e 2 foram geradas com o ChatGPT (OpenAI). A imagem 3 foi produzida com o Pippit (www.pippit.ai). As imagens têm finalidade ilustrativa e educativa, não constituindo registros fotográficos de instalações reais nem comprovação de resultados científicos. A interpretação dos dados, a revisão técnica e a responsabilidade editorial permanecem sob responsabilidade do Sul Global Energia e Sustentabilidade.",
+    aiDisclosureMode: "detailed",
+    aiImageTools: ["ChatGPT (OpenAI)", "Pippit (pippit.ai)"],
+    seoTitle:
+      "Terras raras: Os 17 elementos que movem a tecnologia e colocam o Brasil no centro de uma disputa mundial",
+    seoDescription:
+      "Conheça os 17 elementos das terras raras, suas aplicações e os desafios tecnológicos, industriais e ambientais para o Brasil. Parte 1 da série.",
+    canonicalUrl: "/artigo/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
+  },
+  {
     slug: "transicao-energetica-justa-alem-do-slogan",
     title: "Transição energética justa, além do slogan",
     subtitle:

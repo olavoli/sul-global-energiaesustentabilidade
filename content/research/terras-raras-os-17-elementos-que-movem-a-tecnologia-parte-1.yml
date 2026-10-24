@@ -1,0 +1,117 @@
+# Briefing retrospectivo, não registro histórico original.
+{
+  "articleSlug": "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
+  "researchQuestion": "O que são as terras raras e por que reservas minerais não garantem domínio das cadeias industriais e tecnológicas?",
+  "scope": "Briefing reconstruído retrospectivamente em 24/10/2026 a partir do Word, MDX e matriz existentes; não representa planejamento histórico original. Parte 1: definição química, 17 elementos, propriedades, aplicações, depósitos, processamento, produção brasileira e sustentabilidade. Preservar estrutura de dez seções, cinco pontos-chave, destaque, 14 referências e nota aprovada. Autoria e responsabilidade editorial: Olavo Oliveira. Decisão expressa: manter 21 Mt sem declarar confirmação científica; riscos residuais documentados internamente. Não reescrever nem produzir novos dados.",
+  "audience": "Leitores do Sul Global interessados em energia, sustentabilidade, ciência e política industrial, sem pressupor especialização em química.",
+  "keyQuestions":
+    [
+      "Quais são os 17 elementos e suas aplicações?",
+      "Por que mineração, refino e fabricação de ímãs são etapas diferentes?",
+      "Como comparar dados de produção e reservas e reconhecer limites das fontes?",
+      "Quais desafios ambientais e de reciclagem permanecem?",
+    ],
+  "requiredData":
+    [
+      "Definições e configurações: NIST e USGS.",
+      "Percentuais chineses, ano e universo: IEA 2026.",
+      "Dados brasileiros: ANM/USGS, com divergências internas não reconciliadas.",
+      "Volumes bibliográficos 500/216/908 corrigidos; Duan p.80 sustenta barreiras de reciclagem.",
+    ],
+  "requiredSourceTypes":
+    [
+      "Agências oficiais de energia e mineração",
+      "Metadados e artigos científicos identificáveis",
+      "Documentação oficial das ferramentas de imagem",
+    ],
+  "candidateSources":
+    [
+      {
+        "title": "USGS Rare Earths, MCS 2026",
+        "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+        "note": "Não confirma os 21 Mt mantidos editorialmente; não tratar esta pendência como resolvida.",
+      },
+    ],
+  "confirmedSources":
+    [
+      {
+        "title": "Rare Earth Elements: Pathways to Secure and Diversified Supply Chains. Paris: IEA, 2026",
+        "url": "https://www.iea.org/reports/rare-earth-elements",
+        "organization": "International Energy Agency (IEA)",
+        "verifiedAt": "2026-10-23",
+      },
+      {
+        "title": "Autorizações de Pesquisa para terras raras tiveram um aumento de 485,4% entre 2021 e 2025. Brasília: ANM, 2026",
+        "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+        "organization": "Agência Nacional de Mineração (ANM)",
+        "verifiedAt": "2026-10-23",
+      },
+      {
+        "title": "Rare earth elements: A review of exploration, processing, environmental impact, recycling and prospect analysis. Applied and Computational Engineering, v. 56, 2024",
+        "url": "https://doi.org/10.54254/2755-2721/56/20240620",
+        "organization": "Wenkai Duan",
+        "verifiedAt": "2026-10-23",
+      },
+    ],
+  "rejectedSources": [],
+  "openQuestions": [],
+  "factChecks":
+    [
+      {
+        "statement": "Reservas brasileiras de 21 Mt mantidas por decisão editorial; não confirmadas pela tabela atual consultada.",
+        "status": "pending",
+        "sourceUrls": ["https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf"],
+      },
+      {
+        "statement": "Causa da divergência entre 326 t ANM e 2.000 t USGS não reconciliada.",
+        "status": "pending",
+        "sourceUrls":
+          [
+            "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+            "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+          ],
+      },
+      {
+        "statement": "Percentuais 60/91/94 correspondem a 2024 e ao universo magnético da IEA; atribuição contextualizada.",
+        "status": "confirmed",
+        "sourceUrls": ["https://www.iea.org/reports/rare-earth-elements/executive-summary"],
+      },
+    ],
+  "imageRequirements":
+    {
+      "origin": "Hero: ChatGPT, edição Seedream 4.0 via Pippit; figuras 2/3: ChatGPT; figura4: Seedream4/Pippit. Marca criada com ChatGPT e aplicada manualmente pelo responsável.",
+      "license": "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/; edição posterior: Saída de Pippit / Seedream 4.0, uso editorial e comercial sujeito aos termos Pippit: https://www.pippit.ai/clause/terms-of-service e orientação oficial: https://www.pippit.ai/tools/text-to-design",
+      "authorization": "Publicação autorizada expressamente pelo responsável editorial; insumos de geração sem arquivos externos de terceiros, marca de origem declarada ChatGPT. Uso documentado nos termos e orientação Pippit, sem presumir exclusividade ou registro.",
+      "credit": "Fonte: SGES, (2026).",
+      "alt": "Ilustração de rochas minerais, mineração, turbinas eólicas e um motor elétrico ao pôr do sol, com aves no céu.",
+      "width": 1200,
+      "height": 674,
+      "aspectRatio": "1200:674",
+      "socialVersion": "Capa local disponível em 1200px; sem nova composição social; preservar enquadramento aprovado.",
+      "usageRisk": "Conteúdo ilustrativo, não registro real; termos não garantem exclusividade nem proteção marcária. Ver dossiê de condições.",
+      "isDemoConfirmed": true,
+    },
+  "conflictsOfInterestEvaluated": true,
+  "editorialRisks":
+    [
+      "Avaliação documental dos vínculos limitada ao material fornecido: não foi declarada relação comercial específica; não equivale a declaração de ausência de vínculos.",
+      "Revisão científica não integral; 21 Mt e reconciliação ANM/USGS permanecem pendentes por decisão editorial.",
+      "Infográfico conserva generalização sobre Dy/Tb; imagem preservada por decisão editorial.",
+    ],
+  "researchStatus": "fact-checking",
+  "residualRiskApproval":
+    {
+      "articleSlug": "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
+      "responsible": "olavo-oliveira",
+      "decidedAt": "2026-10-24",
+      "justification": "Aprovação expressa e reiterada da versão revisada para publicação, preservando 21 Mt e as limitações científicas no registro interno; não transforma apuração incompleta em fato confirmado.",
+      "acceptedRisks":
+        [
+          {
+            "code": "fact-check-completion",
+            "justification": "Responsável determinou manter 21 Mt e aprovou a publicação da versão com pendências científicas documentadas, sem exigir declaração fictícia de verificação integral.",
+          },
+        ],
+    },
+  "concreteImpediments": [],
+}
