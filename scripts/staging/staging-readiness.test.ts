@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
       "agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
       "a-pandemia-salvou-o-sus",
       "a-maquina-que-transforma-calor-desperdicado-em-eletricidade",
