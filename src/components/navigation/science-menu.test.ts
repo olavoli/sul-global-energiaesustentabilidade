@@ -30,6 +30,7 @@ test("bibliografia manual do ART-031 conserva os 22 números e não desativa out
   ).toEqual([
     "a-pandemia-salvou-o-sus",
     "agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
+    "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
   ]);
   expect(readFileSync("src/routes/artigo.$slug.tsx", "utf8")).toMatch(
     /!article\.referencesInBody\s*&&\s*\(?\s*<SourceList/,

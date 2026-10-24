@@ -1,0 +1,146 @@
+[
+  {
+    "n": 1,
+    "url": "https://www.iea.org/reports/rare-earth-elements",
+    "status": 403,
+    "finalUrl": "https://www.iea.org/reports/rare-earth-elements"
+  },
+  {
+    "n": 2,
+    "url": "https://www.usgs.gov/centers/national-minerals-information-center/rare-earth-elements",
+    "status": 403,
+    "finalUrl": "https://www.usgs.gov/centers/national-minerals-information-center/rare-earth-elements"
+  },
+  {
+    "n": 3,
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+    "status": 200,
+    "finalUrl": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf"
+  },
+  {
+    "n": 4,
+    "url": "https://www.energy.gov/sites/default/files/2023-05/2023-critical-materials-assessment.pdf",
+    "status": 200,
+    "finalUrl": "https://www.energy.gov/sites/default/files/2023-05/2023-critical-materials-assessment.pdf"
+  },
+  {
+    "n": 5,
+    "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+    "status": 403,
+    "finalUrl": "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos"
+  },
+  {
+    "n": 6,
+    "url": "https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/sumario-mineral/sumario-mineral-brasileiro-2025/sumario-2025.pdf",
+    "status": 403,
+    "finalUrl": "https://www.gov.br/anm/pt-br/assuntos/economia-mineral/publicacoes/sumario-mineral/sumario-mineral-brasileiro-2025/sumario-2025.pdf"
+  },
+  {
+    "n": 7,
+    "url": "https://rigeo.sgb.gov.br/handle/doc/25452",
+    "status": 200,
+    "finalUrl": "https://rigeo.sgb.gov.br/handle/doc/25452"
+  },
+  {
+    "n": 8,
+    "url": "https://rigeo.sgb.gov.br/handle/doc/26032",
+    "status": 200,
+    "finalUrl": "https://rigeo.sgb.gov.br/handle/doc/26032"
+  },
+  {
+    "n": 9,
+    "url": "https://doi.org/10.1016/j.jhazmat.2025.140400",
+    "status": 200,
+    "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0304389425033205"
+  },
+  {
+    "n": 10,
+    "url": "https://doi.org/10.1016/j.mineng.2024.108889",
+    "status": 200,
+    "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0892687524003182"
+  },
+  {
+    "n": 11,
+    "url": "https://doi.org/10.1016/j.scitotenv.2023.168210",
+    "status": 200,
+    "finalUrl": "https://linkinghub.elsevier.com/retrieve/pii/S0048969723068377"
+  },
+  {
+    "n": 12,
+    "url": "https://www.iea.org/reports/critical-mineral-traceability-for-energy-and-economic-security",
+    "status": 403,
+    "finalUrl": "https://www.iea.org/reports/critical-mineral-traceability-for-energy-and-economic-security"
+  },
+  {
+    "n": 13,
+    "url": "https://doi.org/10.54254/2755-2721/56/20240620",
+    "status": 200,
+    "finalUrl": "https://ace.ewapub.com/article/view/11867"
+  },
+  {
+    "n": 14,
+    "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
+    "status": 403,
+    "finalUrl": "https://www.iea.org/reports/global-critical-minerals-outlook-2026"
+  },
+  {
+    "doi": "10.1016/j.jhazmat.2025.140400",
+    "status": 200,
+    "title": [
+      "Environmental impacts of rare earth elements mining and strategies for sustainable management: A comprehensive review"
+    ],
+    "author": [
+      "Yong-He Han",
+      "Xi-Wen Cui"
+    ],
+    "volume": "500",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          12
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.mineng.2024.108889",
+    "status": 200,
+    "title": [
+      "Navigating the rare earth elements landscape: Challenges, innovations, and sustainability"
+    ],
+    "author": [
+      "Hongli Diao",
+      "Hang Yang"
+    ],
+    "volume": "216",
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          9
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.scitotenv.2023.168210",
+    "status": 200,
+    "title": [
+      "Biomining for sustainable recovery of rare earth elements from mining waste: A comprehensive review"
+    ],
+    "author": [
+      "Phong H.N. Vo",
+      "Soroosh Danaee"
+    ],
+    "volume": "908",
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          1
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,245 @@
+[
+  {
+    "name": "hero",
+    "source": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 033\\Hero - Terras raras com aves..jpg",
+    "original": "public/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/originals/art-033-hero-original.jpg",
+    "sha256": "e2b7860090a1e74bb0fc5a2b73ac2163a21ee6ab1ebac4d72e38889f347297fb",
+    "originalWidth": 2000,
+    "originalHeight": 1123,
+    "originalBytes": 681582,
+    "tool": "ChatGPT (OpenAI) + Pippit (pippit.ai)",
+    "provenanceBasis": "Declarações do responsável: geração original ChatGPT (OpenAI); mesma imagem editada em Pippit / Seedream 4.0 para reduzir os pássaros; logomarca Sul Global inserida manualmente pelo responsável, não gerada por IA.",
+    "editingDescription": "Reduzir o tamanho dos pássaros presentes na composição, no Pippit, usando a mesma imagem gerada originalmente no ChatGPT (OpenAI).",
+    "license": "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/; edição posterior: Saída de Pippit / Seedream 4.0, uso editorial e comercial sujeito aos termos Pippit: https://www.pippit.ai/clause/terms-of-service e orientação oficial: https://www.pippit.ai/tools/text-to-design",
+    "alt": "Ilustração de rochas minerais, mineração, turbinas eólicas e um motor elétrico ao pôr do sol, com aves no céu.",
+    "caption": "Figura 1. Terras raras e suas aplicações tecnológicas.",
+    "sizes": [
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-hero-720.webp",
+        "width": 720,
+        "height": 404,
+        "bytes": 116170
+      },
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-hero-1200.webp",
+        "width": 1200,
+        "height": 674,
+        "bytes": 256664
+      },
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-hero-2000.webp",
+        "width": 2000,
+        "height": 1123,
+        "bytes": 530404
+      }
+    ],
+    "contributions": [
+      {
+        "role": "generation",
+        "tool": "ChatGPT (OpenAI)"
+      },
+      {
+        "role": "editing",
+        "tool": "Pippit (pippit.ai)"
+      }
+    ],
+    "inputDeclaration": {
+      "declaredBy": "Responsável editorial do ART-033",
+      "recordedOn": "2026-10-24",
+      "basis": "Declaração expressa na autorização de regularização e publicação",
+      "externalThirdPartyFilesUsed": false,
+      "promptPreparation": "Prompts elaborados com auxílio do ChatGPT"
+    },
+    "usageConditions": {
+      "status": "documented-conditional-editorial-commercial-use",
+      "source": "https://www.pippit.ai/clause/terms-of-service",
+      "termsUpdatedOn": "2026-04-15",
+      "consultedOn": "2026-10-24",
+      "conclusion": "Base de uso documentada nos termos e na orientação oficial de design por texto; declarações editoriais sobre insumos e marca registradas. Sem garantia de exclusividade, registro marcário ou direitos inexistentes.",
+      "featureGuidance": "https://www.pippit.ai/tools/text-to-design"
+    },
+    "manualBranding": {
+      "brand": "Sul Global Energia e Sustentabilidade",
+      "performedBy": "Responsável editorial",
+      "method": "Inserção manual posterior, nas imagens em que a logomarca aparece",
+      "basis": "Declaração expressa do responsável em 24/10/2026",
+      "notAiGenerated": true,
+      "visibleInSuppliedImage": true,
+      "rightsStatus": "Declaração de origem e aplicação; não é prova de registro de marca, exclusividade ou proteção autoral.",
+      "origin": "Criação assistida por IA, ChatGPT (OpenAI)",
+      "creativeDirection": "Responsável editorial do Sul Global",
+      "externalDesigner": "Nenhuma contratação de designer externo indicada nas informações recebidas"
+    },
+    "pippitModel": "Seedream 4.0"
+  },
+  {
+    "name": "elementos",
+    "source": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 033\\Imagem 1 - Os 17 Elementos das Terras Raras.png",
+    "original": "public/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/originals/art-033-elementos-original.png",
+    "sha256": "5cfba9a3e8f6458f0cecfee190f24378ae6530316fb94931cebcacc760674143",
+    "originalWidth": 941,
+    "originalHeight": 1672,
+    "originalBytes": 2156441,
+    "tool": "ChatGPT (OpenAI)",
+    "provenanceBasis": "Declaração expressa do responsável em 23/10/2026",
+    "license": "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/",
+    "alt": "Infográfico dos 15 lantanídeos, do lantânio ao lutécio, além de escândio e ítrio; apresenta símbolos, números atômicos, configurações eletrônicas e aplicações.",
+    "caption": "Figura 2. Os 17 elementos das terras raras.",
+    "sizes": [
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-elementos-720.webp",
+        "width": 720,
+        "height": 1279,
+        "bytes": 1026582
+      },
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-elementos-941.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 1577020
+      }
+    ],
+    "inputDeclaration": {
+      "declaredBy": "Responsável editorial do ART-033",
+      "recordedOn": "2026-10-24",
+      "basis": "Declaração expressa na autorização de regularização e publicação",
+      "externalThirdPartyFilesUsed": false,
+      "promptPreparation": "Prompts elaborados com auxílio do ChatGPT"
+    },
+    "usageConditions": {
+      "status": "documented-conditional-editorial-commercial-use",
+      "source": "https://openai.com/policies/row-terms-of-use/",
+      "termsEffectiveDate": "2026-01-01",
+      "consultedOn": "2026-10-24",
+      "conclusion": "Base de uso documentada nos termos e na orientação oficial de design por texto; declarações editoriais sobre insumos e marca registradas. Sem garantia de exclusividade, registro marcário ou direitos inexistentes."
+    },
+    "manualBranding": {
+      "brand": "Sul Global Energia e Sustentabilidade",
+      "performedBy": "Responsável editorial",
+      "method": "Inserção manual posterior, nas imagens em que a logomarca aparece",
+      "basis": "Declaração expressa do responsável em 24/10/2026",
+      "notAiGenerated": true,
+      "visibleInSuppliedImage": false,
+      "rightsStatus": "Declaração de origem e aplicação; não é prova de registro de marca, exclusividade ou proteção autoral.",
+      "origin": "Criação assistida por IA, ChatGPT (OpenAI)",
+      "creativeDirection": "Responsável editorial do Sul Global",
+      "externalDesigner": "Nenhuma contratação de designer externo indicada nas informações recebidas"
+    }
+  },
+  {
+    "name": "reservas",
+    "source": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 033\\Imagem 2 - Infográfico das Reservas de Terras Raras.png",
+    "original": "public/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/originals/art-033-reservas-original.png",
+    "sha256": "4541192e6d023ea42990ff5070f76077258668f9dc592032c3b2e1dcfc00f69f",
+    "originalWidth": 941,
+    "originalHeight": 1672,
+    "originalBytes": 1837569,
+    "tool": "ChatGPT (OpenAI)",
+    "provenanceBasis": "Declaração expressa do responsável em 23/10/2026",
+    "license": "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/",
+    "alt": "Gráfico e mapa de reservas selecionadas em milhões de toneladas de REO: China 44; Brasil 21; Austrália 6,3; Rússia 3,8; Vietnã 3,5; Estados Unidos 1,9; Groenlândia 1,5.",
+    "caption": "Figura 3. Reservas estimadas de terras raras em países e territórios selecionados.",
+    "sizes": [
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-reservas-720.webp",
+        "width": 720,
+        "height": 1279,
+        "bytes": 816618
+      },
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-reservas-941.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 1243330
+      }
+    ],
+    "inputDeclaration": {
+      "declaredBy": "Responsável editorial do ART-033",
+      "recordedOn": "2026-10-24",
+      "basis": "Declaração expressa na autorização de regularização e publicação",
+      "externalThirdPartyFilesUsed": false,
+      "promptPreparation": "Prompts elaborados com auxílio do ChatGPT"
+    },
+    "usageConditions": {
+      "status": "documented-conditional-editorial-commercial-use",
+      "source": "https://openai.com/policies/row-terms-of-use/",
+      "termsEffectiveDate": "2026-01-01",
+      "consultedOn": "2026-10-24",
+      "conclusion": "Base de uso documentada nos termos e na orientação oficial de design por texto; declarações editoriais sobre insumos e marca registradas. Sem garantia de exclusividade, registro marcário ou direitos inexistentes."
+    },
+    "manualBranding": {
+      "brand": "Sul Global Energia e Sustentabilidade",
+      "performedBy": "Responsável editorial",
+      "method": "Inserção manual posterior, nas imagens em que a logomarca aparece",
+      "basis": "Declaração expressa do responsável em 24/10/2026",
+      "notAiGenerated": true,
+      "visibleInSuppliedImage": false,
+      "rightsStatus": "Declaração de origem e aplicação; não é prova de registro de marca, exclusividade ou proteção autoral.",
+      "origin": "Criação assistida por IA, ChatGPT (OpenAI)",
+      "creativeDirection": "Responsável editorial do Sul Global",
+      "externalDesigner": "Nenhuma contratação de designer externo indicada nas informações recebidas"
+    }
+  },
+  {
+    "name": "reciclagem",
+    "source": "C:\\Users\\IMAGINE SOL SUS\\Downloads\\000000000001 Imagens Sul Global\\ART 033\\Imagem 3 -  reciclagem.jpg",
+    "original": "public/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/originals/art-033-reciclagem-original.jpg",
+    "sha256": "f5d7afdb99b35552c2ef9c5c385450188652c1d79b633773d9ebf6212d525396",
+    "originalWidth": 2000,
+    "originalHeight": 1123,
+    "originalBytes": 882220,
+    "tool": "Pippit (pippit.ai)",
+    "provenanceBasis": "Declarações do responsável: geração em Pippit / Seedream 4.0 por prompt elaborado com auxílio do ChatGPT, sem arquivos externos de terceiros como insumos de geração; logomarca Sul Global inserida manualmente posteriormente pelo responsável.",
+    "license": "Saída de Pippit / Seedream 4.0, uso editorial e comercial sujeito aos termos Pippit: https://www.pippit.ai/clause/terms-of-service e orientação oficial: https://www.pippit.ai/tools/text-to-design",
+    "alt": "Ilustração que contrapõe uma mina a céu aberto e uma instalação de desmontagem e reciclagem de motores e componentes eletrônicos, conectadas por uma seta circular.",
+    "caption": "Figura 4. Extração mineral e reciclagem de componentes.",
+    "sizes": [
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-reciclagem-720.webp",
+        "width": 720,
+        "height": 404,
+        "bytes": 125766
+      },
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-reciclagem-1200.webp",
+        "width": 1200,
+        "height": 674,
+        "bytes": 312906
+      },
+      {
+        "src": "/images/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1/art-033-reciclagem-2000.webp",
+        "width": 2000,
+        "height": 1123,
+        "bytes": 759852
+      }
+    ],
+    "inputDeclaration": {
+      "declaredBy": "Responsável editorial do ART-033",
+      "recordedOn": "2026-10-24",
+      "basis": "Declaração expressa na autorização de regularização e publicação",
+      "externalThirdPartyFilesUsed": false,
+      "promptPreparation": "Prompts elaborados com auxílio do ChatGPT"
+    },
+    "usageConditions": {
+      "status": "documented-conditional-editorial-commercial-use",
+      "source": "https://www.pippit.ai/clause/terms-of-service",
+      "termsUpdatedOn": "2026-04-15",
+      "consultedOn": "2026-10-24",
+      "conclusion": "Base de uso documentada nos termos e na orientação oficial de design por texto; declarações editoriais sobre insumos e marca registradas. Sem garantia de exclusividade, registro marcário ou direitos inexistentes.",
+      "featureGuidance": "https://www.pippit.ai/tools/text-to-design"
+    },
+    "manualBranding": {
+      "brand": "Sul Global Energia e Sustentabilidade",
+      "performedBy": "Responsável editorial",
+      "method": "Inserção manual posterior, nas imagens em que a logomarca aparece",
+      "basis": "Declaração expressa do responsável em 24/10/2026",
+      "notAiGenerated": true,
+      "visibleInSuppliedImage": true,
+      "rightsStatus": "Declaração de origem e aplicação; não é prova de registro de marca, exclusividade ou proteção autoral.",
+      "origin": "Criação assistida por IA, ChatGPT (OpenAI)",
+      "creativeDirection": "Responsável editorial do Sul Global",
+      "externalDesigner": "Nenhuma contratação de designer externo indicada nas informações recebidas"
+    },
+    "pippitModel": "Seedream 4.0"
+  }
+]

@@ -81,6 +81,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/supercondutores-a-temperatura-ambiente-uma-decada-depois.mdx"),
   "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede": () =>
     import("../../../content/articles/temos-energia-por-que-nao-conseguimos-conecta-la-a-rede.mdx"),
+  "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1": () =>
+    import("../../../content/articles/terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1.mdx"),
   "transicao-energetica-justa-alem-do-slogan": () =>
     import("../../../content/articles/transicao-energetica-justa-alem-do-slogan.mdx"),
   "transicao-energetica-justa-em-santa-catarina-empregos-e-cidades-depois-do-carvao": () =>
