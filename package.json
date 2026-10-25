@@ -154,7 +154,8 @@
     "smoke:i18n": "bun run scripts/i18n-smoke.ts",
     "preview:i18n": "node scripts/visual/preview-server.ts",
     "test:visual": "playwright test --config playwright.config.ts",
-    "report:visual": "playwright show-report playwright-report"
+    "report:visual": "playwright show-report playwright-report",
+    "i18n:simulate": "bun run scripts/i18n-simulation/run.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
