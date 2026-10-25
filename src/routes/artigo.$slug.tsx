@@ -189,7 +189,12 @@ export function ArticleDetailView({
               <SponsoredDisclosure sponsorName={article.sponsorName} />
             )}
 
-            <ArticleBody locale={locale} slug={article.slug} section="keyPoints" />
+            <ArticleBody
+              locale={locale}
+              slug={article.slug}
+              section="keyPoints"
+              wrapLongWords={locale !== "pt-BR"}
+            />
 
             {locale === "pt-BR" && !previewOnly && (
               <ArticleTtsPlayer contentRef={editorialBodyRef} articleKey={article.slug} />

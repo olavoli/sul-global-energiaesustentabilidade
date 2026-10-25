@@ -58,3 +58,23 @@ O Chromium foi baixado, mas sua primeira execução falhou antes de abrir págin
 Documentação oficial: https://playwright.dev/docs/ci e https://playwright.dev/docs/test-snapshots .
 
 Gates locais: typecheck e lint aprovados; suíte completa sem servidor concorrente: 879 aprovados, zero falhas (13,98 s). Na execução anterior, com o servidor ativo, houve 878 aprovados e timeout de 30 s no teste workerd de Kit. Não se alteraram Kit, timeouts, testes ou configuração de workers; contenção de recursos é hipótese, não causa comprovada. O CI executa novamente a suíte em runner limpo.
+
+### Diagnóstico complementar do navegador local
+
+A ausência de sudo não foi contornada com privilégios: foram baixados pacotes oficiais e extraídas bibliotecas **somente em diretório temporário**, sem executar instaladores ou alterar pacotes/configuração do SO. Foram usados libnspr4, libnss3, libasound2t64 e fontes Liberation/FreeFont. O Chromium iniciou com LD_LIBRARY_PATH e FONTCONFIG_FILE definidos apenas para o processo de teste. A instalação administrativa padrão continua sendo o procedimento permanente documentado acima; o cache temporário não entra no commit.
+
+Nesta sessão, é possível repetir a execução temporária assim (enquanto os arquivos /tmp existirem):
+
+```sh
+LD_LIBRARY_PATH="$(cat /tmp/sul-global-browser-library-path)" \
+FONTCONFIG_FILE="$(cat /tmp/sul-global-browser-font-config)" \
+bun run test:visual
+```
+
+O primeiro CI com navegador teve 10 casos aprovados e uma falha de medida de largura em EN/360 px, antes do último caso. A investigação reproduziu uma leitura de scrollWidth 390 com todos os retângulos dentro de 360 após a rolagem de imagens; outras leituras assentadas retornaram 360. O teste passou a medir após dois paints, depois de decodificar imagens e retornar ao topo, e anexa geometria + captura completa se houver overflow. A condição de largura, os timeouts e os limites de tolerância não foram ampliados. O resultado final da nova execução é registrado no PR; as capturas continuam candidatas.
+
+A espera por paint não resolveu a falha. O diagnóstico com scroll containers identificou o quarto ponto-chave EN: a expressão refinamento/separação/manufatura em inglês ocupava scrollWidth 329 px numa coluna de 262 px; documento total 390 px num viewport 360. A correção usa a regra existente de quebra de palavras nos pontos-chave EN/ES, sem modificar seu texto nem esconder overflow; PT mantém a regra anterior. O teste também aguarda explicitamente pontos-chave e referências, além das imagens, antes de medir/capturar, para não aprovar uma renderização ainda incompleta.
+
+Resultado local após a correção: 12 testes Playwright aprovados (1,8 min), nas quatro resoluções e três idiomas, com teclado/toque, sem erros de console ou requisições externas. Capturas são candidatas, sem aprovação humana ou comparação com baseline ainda.
+
+Relatório local nesta sessão: http://localhost:9323/ (iniciado com `bun run report:visual --host 127.0.0.1 --port 9323`). Prévia e relatório responderam HTTP 200 a consultas feitas pelo Windows. A prévia não exibe recomendações de outros artigos; os dados publicados, o algoritmo de relacionados e os serviços do portal não são alterados. Gates após a correção: 12 testes editoriais focados, typecheck, build e smoke multilíngue aprovados.

@@ -28,6 +28,18 @@ for (const [locale, path] of Object.entries(paths)) {
     expect(response?.headers()["x-robots-tag"]).toContain("noindex");
     await expect(page.locator("article h1")).toBeVisible();
     await expect(page.locator("article figcaption")).toHaveCount(4);
+    await expect(
+      page.getByRole("region", {
+        name: locale === "en" ? "Key takeaways" : locale === "es" ? "Puntos clave" : "Pontos-chave",
+        exact: true,
+      }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("heading", {
+        name: locale === "en" ? "References" : locale === "es" ? "Referencias" : "Referências",
+        exact: true,
+      }),
+    ).toHaveCount(1);
     await expect(page.locator("#ai-transparency-title")).toHaveCount(1);
     await expect(page.locator("article")).toHaveAttribute("lang", locale);
     for (const image of await page.locator("article img").all()) {
@@ -37,9 +49,49 @@ for (const [locale, path] of Object.entries(paths)) {
     }
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(() => window.scrollTo(0, 0));
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(
-      true,
+    // Measure the settled viewport after the lazy-image scroll traversal has painted.
+    await page.evaluate(
+      () =>
+        new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        ),
     );
+    const geometry = await page.evaluate(() => ({
+      viewport: innerWidth,
+      document: document.documentElement.scrollWidth,
+      scrollNodes: [...document.querySelectorAll("body *")]
+        .filter((element) => element.scrollWidth > element.clientWidth + 1)
+        .map((element) => ({
+          tag: element.tagName,
+          text: element.textContent?.slice(0, 160),
+          cls: element.getAttribute("class"),
+          scroll: element.scrollWidth,
+          client: element.clientWidth,
+        })),
+      overflowing: [...document.querySelectorAll("body *")]
+        .filter((element) => {
+          const bounds = element.getBoundingClientRect();
+          return bounds.right > innerWidth + 1 || bounds.left < -1;
+        })
+        .slice(0, 50)
+        .map((element) => ({
+          tag: element.tagName,
+          text: element.textContent?.slice(0, 160),
+          className: element.getAttribute("class"),
+          right: element.getBoundingClientRect().right,
+        })),
+    }));
+    if (geometry.document > geometry.viewport + 1) {
+      await info.attach("overflow-geometry", {
+        body: JSON.stringify(geometry, null, 2),
+        contentType: "application/json",
+      });
+      await info.attach("overflow-full-page", {
+        body: await page.screenshot({ fullPage: true }),
+        contentType: "image/png",
+      });
+    }
+    expect(geometry.document <= geometry.viewport + 1).toBe(true);
     // Long titles, body/figures and the footer must stay inside the horizontal viewport.
     const clipped = await page
       .locator("header, article h1, article figure, article .prose-editorial, footer")
