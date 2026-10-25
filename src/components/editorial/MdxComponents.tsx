@@ -1,3 +1,4 @@
+import { useEditorialLocale, articleUi } from "@/content/locale-context";
 import type { ReactNode } from "react";
 import { EditorialImage } from "@/components/media/EditorialImage";
 import { imageAiProvenanceSchema } from "@/content/schema";
@@ -131,12 +132,13 @@ export function Figure({
 
 /** Group the most important takeaways of an article. */
 export function KeyPoints({ children }: { children: ReactNode }) {
+  const ui = articleUi[useEditorialLocale()];
   return (
     <section
       className="my-8 rounded-md border border-border bg-muted/30 p-5"
-      aria-label="Pontos-chave"
+      aria-label={ui.points}
     >
-      <p className="overline mb-3 text-primary">Pontos-chave</p>
+      <p className="overline mb-3 text-primary">{ui.points}</p>
       {children}
     </section>
   );

@@ -1,3 +1,4 @@
+import { translationSchema, translationLocales } from "../src/content/translation-schema";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { basename, join, relative, resolve } from "node:path";
@@ -45,9 +46,20 @@ export interface ReviewReport {
 export async function loadEditorialFiles(root = process.cwd()): Promise<ParsedEditorialFile[]> {
   const directory = resolve(root, "content/articles");
   const names = (await readdir(directory)).filter((name) => name.endsWith(".mdx")).sort();
+  const paths = names.map((name) => join(directory, name));
+  for (const locale of translationLocales) {
+    const translatedDirectory = resolve(root, "content/translations", locale);
+    if (existsSync(translatedDirectory))
+      paths.push(
+        ...(await readdir(translatedDirectory))
+          .filter((name) => name.endsWith(".mdx"))
+          .sort()
+          .map((name) => join(translatedDirectory, name)),
+      );
+  }
   return Promise.all(
-    names.map(async (name) => {
-      const path = join(directory, name);
+    paths.map(async (path) => {
+      const name = basename(path);
       const parsed = parseEditorialFile(await readFile(path, "utf8"), relative(root, path));
       if (basename(name, ".mdx") !== parsed.frontmatter.slug) {
         throw new Error(`${name}: nome do arquivo diferente do slug.`);
@@ -65,6 +77,11 @@ export function reviewArticle(
   const blockers: string[] = [];
   const warnings: string[] = [];
   const checks = ["schema válido", "slug e taxonomia válidos"];
+  if (
+    "locale" in article &&
+    translationSchema.parse(article).translationReview.status === "pending"
+  )
+    warnings.push("Tradução completa em draft; revisão editorial humana ainda pendente.");
   const decision = riskApproval ? residualRiskApprovalSchema.parse(riskApproval) : undefined;
   if (
     decision &&
@@ -128,6 +145,15 @@ export function publishCheck(
   riskApproval?: ResidualRiskApproval,
 ): ReviewReport {
   const report = reviewArticle(article, authorDirectory, riskApproval);
+  if ("locale" in article) {
+    const translation = translationSchema.parse(article);
+    if (
+      translation.translationReview.status !== "approved" ||
+      !translation.translationReview.reviewer ||
+      !translation.translationReview.reviewedAt
+    )
+      report.blockers.push("Tradução aguarda revisão editorial humana identificada.");
+  }
   if (!article.isDemo && !["approved", "scheduled", "published"].includes(article.status)) {
     report.blockers.push("Publicação exige estado approved ou scheduled elegível.");
   }
@@ -243,7 +269,11 @@ export function prepareStatusChange(
     if (current.draftStage !== "review-ready") {
       throw new Error("Draft deve estar em draftStage: review-ready antes do review.");
     }
-    const report = reviewArticle(current, authorDirectory, researchReport?.riskApproval);
+    const report = reviewArticle(
+      current,
+      authorDirectory,
+      "locale" in current ? undefined : researchReport?.riskApproval,
+    );
     if (report.blockers.length > 0) throw new Error(report.blockers.join("\n"));
   }
 
@@ -289,27 +319,34 @@ async function main(): Promise<void> {
   const [command, slug, target, ...options] = process.argv.slice(2);
   const files = await loadEditorialFiles();
   if (command === "list") return console.log(listArticles(files));
-  const file = files.find((candidate) => candidate.frontmatter.slug === slug);
+  const candidates = files.filter(
+    (candidate) =>
+      candidate.frontmatter.slug === slug ||
+      ("locale" in candidate.frontmatter &&
+        `${candidate.frontmatter.locale}:${candidate.frontmatter.slug}` === slug),
+  );
+  if (candidates.length > 1)
+    throw new Error("Slug ambíguo; informe en:slug ou es:slug para selecionar a edição.");
+  const file = candidates[0];
   if (!file) throw new Error(`Artigo não encontrado: ${slug ?? "(slug ausente)"}.`);
-  const researchReport = existsSync(resolve("content/research", `${file.frontmatter.slug}.yml`))
-    ? evaluateResearch(await loadResearchBrief(file.frontmatter.slug))
+  const translation =
+    "locale" in file.frontmatter ? translationSchema.parse(file.frontmatter) : undefined;
+  // A translation reuses the scientific brief for the exact source revision. Its language review is a separate gate.
+  const researchSlug = translation?.translationOf ?? file.frontmatter.slug;
+  const researchReport = existsSync(resolve("content/research", `${researchSlug}.yml`))
+    ? evaluateResearch(await loadResearchBrief(researchSlug))
     : undefined;
+  // Never relabel the source's residual-risk decision as approval of a translation.
+  const articleRiskApproval = translation ? undefined : researchReport?.riskApproval;
   if (researchReport?.riskApproval && !researchReport.readyForReview) {
     throw new Error(
       `Decisão não supera impedimentos restantes: ${researchReport.blockers.join(" ")}`,
     );
   }
   if (command === "review")
-    return console.log(
-      formatReport(reviewArticle(file.frontmatter, authors, researchReport?.riskApproval)),
-    );
+    return console.log(formatReport(reviewArticle(file.frontmatter, authors, articleRiskApproval)));
   if (command === "publish-check") {
-    const report = publishCheck(
-      file.frontmatter,
-      defaultContext(),
-      authors,
-      researchReport?.riskApproval,
-    );
+    const report = publishCheck(file.frontmatter, defaultContext(), authors, articleRiskApproval);
     console.log(formatReport(report));
     if (report.blockers.length > 0) process.exitCode = 1;
     return;

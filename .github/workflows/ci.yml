@@ -46,3 +46,6 @@ jobs:
 
       - name: Smoke preview worker
         run: bun run smoke:preview
+
+      - name: Smoke multilingual SSR
+        run: bun run smoke:i18n

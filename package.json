@@ -150,7 +150,8 @@
     "typecheck": "bun run content:generate && tsc --noEmit",
     "lint": "eslint .",
     "test": "bun test",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "smoke:i18n": "bun run scripts/i18n-smoke.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

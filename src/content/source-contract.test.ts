@@ -1,3 +1,5 @@
+import { translationRecords } from "./generated/translations";
+import { translationSchema } from "./translation-schema";
 import { readFile } from "node:fs/promises";
 import { describe, expect, test } from "bun:test";
 
@@ -8,10 +10,18 @@ import { articleFrontmatterSchema, canonicalSourceUrls, sourceUrlDivergence } fr
 describe("contrato canônico de fontes editoriais", () => {
   test("todos os registros gerados preservam as fontes do parsing", async () => {
     const files = await loadEditorialFiles();
+    expect(files).toHaveLength(articleRecords.length + translationRecords.length);
     for (const { frontmatter } of files) {
-      const generated = articleRecords.find(({ slug }) => slug === frontmatter.slug);
+      const generated =
+        "locale" in frontmatter
+          ? translationRecords.find(
+              (record) => record.slug === frontmatter.slug && record.locale === frontmatter.locale,
+            )
+          : articleRecords.find(({ slug }) => slug === frontmatter.slug);
       expect(generated).toBeDefined();
-      const normalized = articleFrontmatterSchema.parse(generated);
+      const normalized = (
+        "locale" in frontmatter ? translationSchema : articleFrontmatterSchema
+      ).parse(generated);
       expect(normalized.sources).toEqual(frontmatter.sources);
       expect(canonicalSourceUrls(normalized)).toEqual(frontmatter.sources.map(({ url }) => url));
       expect(normalized.sourceUrls).toEqual(frontmatter.sourceUrls);

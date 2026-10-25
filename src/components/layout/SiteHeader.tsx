@@ -1,3 +1,4 @@
+import { LanguageSelector } from "@/components/navigation/LanguageSelector";
 import { Link } from "@tanstack/react-router";
 import { useCallback, useReducer, useRef } from "react";
 import { Menu, Search } from "lucide-react";
@@ -45,7 +46,9 @@ export function SiteHeader() {
           >
             <Menu className="h-5 w-5" aria-hidden />
           </button>
-          <Logo />
+          <div className="max-[399px]:[&_span]:hidden">
+            <Logo />
+          </div>
         </div>
 
         <nav
@@ -70,6 +73,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSelector />
           <Link
             to="/busca"
             aria-label="Buscar no portal"

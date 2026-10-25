@@ -1,3 +1,6 @@
+import { articleAlternates } from "@/content/i18n";
+import { EditorialLocaleContext, articleUi } from "@/content/locale-context";
+import type { ContentLocale } from "@/content/translation-schema";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useRef } from "react";
 
@@ -64,7 +67,7 @@ export const Route = createFileRoute("/artigo/$slug")({
           imageHeight: article.cover.height,
         }),
       ],
-      links: [{ rel: "canonical", href: canonical }],
+      links: [{ rel: "canonical", href: canonical }, ...articleAlternates(article.slug)],
       scripts: [
         articleJsonLd(article),
         breadcrumbJsonLd([
@@ -100,149 +103,183 @@ function ArticleNotFound() {
 
 function ArticleDetail() {
   const { article, related } = Route.useLoaderData();
+  return <ArticleDetailView article={article} related={related} />;
+}
+
+export function ArticleDetailView({
+  article,
+  related,
+  locale = "pt-BR",
+}: {
+  article: Article;
+  related: Article[];
+  locale?: ContentLocale;
+}) {
+  const ui = articleUi[locale];
   const typedArticle: Article = article;
   const typedRelated: Article[] = related;
   const verifiedAiImageTools = articleAiImageTools(article);
   const editorialBodyRef = useRef<HTMLDivElement>(null);
 
   return (
-    <article>
-      <DemoContentNotice visible={article.isDemo} />
-      <Container className="pt-10 pb-4 md:pt-14">
-        <div className="mx-auto max-w-3xl text-center">
-          <EditorialBreadcrumb
-            items={[
-              {
-                label: "Início",
-                content: (
-                  <Link to="/" className="hover:underline">
-                    Início
-                  </Link>
-                ),
-              },
-            ]}
-            current={article.title}
-          />
-          <CategoryTag slug={article.category} className="justify-self-center" />
-          <h1 className="mt-4 font-serif text-3xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            {article.title}
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground md:text-xl">{article.subtitle}</p>
-          <div className="mt-6 flex justify-center">
-            <Byline article={article} />
-          </div>
-        </div>
-      </Container>
-
-      <Container className="pb-10">
-        <figure className="mx-auto max-w-4xl">
-          <EditorialImage
-            image={article.cover}
-            priority
-            aspectRatio={16 / 9}
-            sizes="(min-width: 1280px) 896px, (min-width: 768px) calc(100vw - 96px), calc(100vw - 32px)"
-          />
-          {(article.cover.caption ||
-            article.cover.credit ||
-            article.cover.aiProvenance?.status === "verified") && (
-            <figcaption className="mt-2 text-xs text-muted-foreground">
-              {article.cover.caption}
-              {article.cover.caption &&
-              (article.cover.credit || article.cover.aiProvenance?.status === "verified")
-                ? " — "
-                : ""}
-              <ImageAiCredit provenance={article.cover.aiProvenance} />
-              {article.cover.aiProvenance?.status !== "verified" && article.cover.credit}
-            </figcaption>
-          )}
-        </figure>
-      </Container>
-
-      <Container className="pb-12">
-        <div className="relative mx-auto max-w-[72ch] min-[1440px]:min-h-[640px]">
-          <ArticleAdRail articleKey={article.slug} />
-          {article.sponsored && article.sponsorName && (
-            <SponsoredDisclosure sponsorName={article.sponsorName} />
-          )}
-
-          <ArticleBody slug={article.slug} section="keyPoints" />
-
-          <ArticleTtsPlayer contentRef={editorialBodyRef} articleKey={article.slug} />
-
-          <div ref={editorialBodyRef} data-tts-article-body="true">
-            <ArticleBody slug={article.slug} wrapLongWords={article.referencesInBody} />
-          </div>
-
-          <div className="mt-8">
-            <ShareBar title={article.title} path={`/artigo/${article.slug}`} />
-          </div>
-
-          {article.updatedAt && (
-            <p className="mt-8 text-sm text-muted-foreground">
-              Atualizado em {article.updatedAt}
-              {article.lastVerifiedAt
-                ? ` · Informações verificadas em ${article.lastVerifiedAt}`
-                : ""}
-              .
-            </p>
-          )}
-
-          <EditorialHistory updateNote={article.updateNote} corrections={article.corrections} />
-
-          <ArticleBody slug={article.slug} section="references" />
-
-          {!article.referencesInBody && (
-            <SourceList sources={article.sources} urls={article.sourceUrls} />
-          )}
-
-          <AiEditorialCredit
-            assistance={article.aiAssistance}
-            publicationDate={article.publishedAt ?? article.createdAt}
-            imageTools={verifiedAiImageTools}
-            disclosure={article.aiDisclosureMode === "detailed" ? article.aiDisclosure : undefined}
-          />
-
-          {article.opinionDisclosure && (
-            <p className="mt-8 rounded-md border border-border p-4 text-sm">
-              <strong>Transparência da opinião:</strong> {article.opinionDisclosure}
-            </p>
-          )}
-
-          <ArticleTags tags={typedArticle.tags} />
-
-          <div className="mt-10 rounded-md border border-border bg-muted/40 p-5">
-            <p className="overline text-muted-foreground">Sobre o autor</p>
-            <Link
-              to="/autor/$slug"
-              params={{ slug: article.author.slug }}
-              className="mt-2 block font-serif text-lg font-semibold text-foreground hover:underline"
-            >
-              {article.author.displayName}
-            </Link>
-            <p className="text-sm text-muted-foreground">{article.author.role}</p>
-            <p className="mt-3 text-sm text-foreground">{article.author.shortBio}</p>
-          </div>
-        </div>
-      </Container>
-
-      {typedRelated.length > 0 && (
-        <Container className="py-12">
-          <h2 className="mb-6 border-b border-border pb-3 font-serif text-2xl font-semibold">
-            Continue aprendendo
-          </h2>
-          <div className="grid gap-x-8 gap-y-10 md:grid-cols-3">
-            {typedRelated.map((a: Article) => (
-              <ArticleCard key={a.id} article={a} size="sm" />
-            ))}
+    <EditorialLocaleContext.Provider value={locale}>
+      <article lang={locale}>
+        <DemoContentNotice visible={article.isDemo} />
+        <Container className="pt-10 pb-4 md:pt-14">
+          <div className="mx-auto max-w-3xl text-center">
+            <EditorialBreadcrumb
+              items={[
+                {
+                  label: ui.home,
+                  content:
+                    locale === "pt-BR" ? (
+                      <Link to="/" className="hover:underline">
+                        {ui.home}
+                      </Link>
+                    ) : (
+                      <a href={`/${locale}`} className="hover:underline">
+                        {ui.home}
+                      </a>
+                    ),
+                },
+              ]}
+              current={article.title}
+            />
+            <CategoryTag slug={article.category} className="justify-self-center" />
+            <h1 className="mt-4 font-serif text-3xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-4xl md:text-5xl">
+              {article.title}
+            </h1>
+            <p className="mt-4 text-lg text-muted-foreground md:text-xl">{article.subtitle}</p>
+            <div className="mt-6 flex justify-center">
+              <Byline article={article} />
+            </div>
           </div>
         </Container>
-      )}
 
-      <Container>
-        <CommentsSection articleSlug={article.slug} />
-      </Container>
+        <Container className="pb-10">
+          <figure className="mx-auto max-w-4xl">
+            <EditorialImage
+              image={article.cover}
+              priority
+              aspectRatio={16 / 9}
+              sizes="(min-width: 1280px) 896px, (min-width: 768px) calc(100vw - 96px), calc(100vw - 32px)"
+            />
+            {(article.cover.caption ||
+              article.cover.credit ||
+              article.cover.aiProvenance?.status === "verified") && (
+              <figcaption className="mt-2 text-xs text-muted-foreground">
+                {article.cover.caption}
+                {article.cover.caption &&
+                (article.cover.credit || article.cover.aiProvenance?.status === "verified")
+                  ? " — "
+                  : ""}
+                <ImageAiCredit provenance={article.cover.aiProvenance} />
+                {article.cover.aiProvenance?.status !== "verified" && article.cover.credit}
+              </figcaption>
+            )}
+          </figure>
+        </Container>
 
-      <NewsletterCTA />
-    </article>
+        <Container className="pb-12">
+          <div className="relative mx-auto max-w-[72ch] min-[1440px]:min-h-[640px]">
+            <ArticleAdRail articleKey={article.slug} />
+            {article.sponsored && article.sponsorName && (
+              <SponsoredDisclosure sponsorName={article.sponsorName} />
+            )}
+
+            <ArticleBody locale={locale} slug={article.slug} section="keyPoints" />
+
+            {locale === "pt-BR" && (
+              <ArticleTtsPlayer contentRef={editorialBodyRef} articleKey={article.slug} />
+            )}
+
+            <div ref={editorialBodyRef} data-tts-article-body="true">
+              <ArticleBody
+                locale={locale}
+                slug={article.slug}
+                wrapLongWords={article.referencesInBody}
+              />
+            </div>
+
+            <div className="mt-8">
+              <ShareBar
+                title={article.title}
+                path={article.canonicalUrl ?? `/artigo/${article.slug}`}
+              />
+            </div>
+
+            {article.updatedAt && (
+              <p className="mt-8 text-sm text-muted-foreground">
+                Atualizado em {article.updatedAt}
+                {article.lastVerifiedAt
+                  ? ` · Informações verificadas em ${article.lastVerifiedAt}`
+                  : ""}
+                .
+              </p>
+            )}
+
+            <EditorialHistory updateNote={article.updateNote} corrections={article.corrections} />
+
+            <ArticleBody locale={locale} slug={article.slug} section="references" />
+
+            {!article.referencesInBody && (
+              <SourceList sources={article.sources} urls={article.sourceUrls} />
+            )}
+
+            <AiEditorialCredit
+              assistance={article.aiAssistance}
+              publicationDate={article.publishedAt ?? article.createdAt}
+              imageTools={verifiedAiImageTools}
+              disclosure={
+                article.aiDisclosureMode === "detailed" ? article.aiDisclosure : undefined
+              }
+            />
+
+            {article.opinionDisclosure && (
+              <p className="mt-8 rounded-md border border-border p-4 text-sm">
+                <strong>Transparência da opinião:</strong> {article.opinionDisclosure}
+              </p>
+            )}
+
+            <ArticleTags tags={typedArticle.tags} />
+
+            <div className="mt-10 rounded-md border border-border bg-muted/40 p-5">
+              <p className="overline text-muted-foreground">{ui.author}</p>
+              <Link
+                to="/autor/$slug"
+                params={{ slug: article.author.slug }}
+                className="mt-2 block font-serif text-lg font-semibold text-foreground hover:underline"
+              >
+                {article.author.displayName}
+              </Link>
+              <p className="text-sm text-muted-foreground">{article.author.role}</p>
+              <p className="mt-3 text-sm text-foreground">{article.author.shortBio}</p>
+            </div>
+          </div>
+        </Container>
+
+        {typedRelated.length > 0 && (
+          <Container className="py-12">
+            <h2 className="mb-6 border-b border-border pb-3 font-serif text-2xl font-semibold">
+              {ui.related}
+            </h2>
+            <div className="grid gap-x-8 gap-y-10 md:grid-cols-3">
+              {typedRelated.map((a: Article) => (
+                <ArticleCard key={a.id} article={a} size="sm" />
+              ))}
+            </div>
+          </Container>
+        )}
+
+        {locale === "pt-BR" && (
+          <>
+            <Container>
+              <CommentsSection articleSlug={article.slug} />
+            </Container>
+            <NewsletterCTA />
+          </>
+        )}
+      </article>
+    </EditorialLocaleContext.Provider>
   );
 }

@@ -1,3 +1,5 @@
+import { translationLoaders } from "@/content/generated/translations";
+import type { ContentLocale } from "@/content/translation-schema";
 import { lazy, Suspense, useMemo, type ReactNode } from "react";
 
 import { editorialMdxComponents } from "@/components/editorial/mdx-components";
@@ -8,16 +10,19 @@ export function ArticleBody({
   slug,
   section = "body",
   wrapLongWords = false,
+  locale = "pt-BR",
 }: {
   slug: string;
+  locale?: ContentLocale;
   section?: "body" | "keyPoints" | "references";
   wrapLongWords?: boolean;
 }) {
   const Content = useMemo(() => {
-    const loader = articleLoaders[slug];
+    const loader =
+      locale === "pt-BR" ? articleLoaders[slug] : translationLoaders[`${locale}:${slug}`];
     if (!loader) throw new Error(`Corpo MDX não encontrado para ${slug}.`);
     return lazy(loader);
-  }, [slug]);
+  }, [slug, locale]);
 
   const components = useMemo(
     () => ({
@@ -36,7 +41,11 @@ export function ArticleBody({
         fallback={
           section === "body" ? (
             <p className="text-muted-foreground" data-tts-exclude="true">
-              Carregando artigo…
+              {locale === "en"
+                ? "Loading article…"
+                : locale === "es"
+                  ? "Cargando artículo…"
+                  : "Carregando artigo…"}
             </p>
           ) : null
         }

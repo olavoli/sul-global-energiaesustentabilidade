@@ -1,9 +1,9 @@
 /** Format helpers for editorial UI (dates, reading time). */
 
-export function formatDate(iso: string): string {
+export function formatDate(iso: string, locale = "pt-BR"): string {
   try {
     const d = new Date(iso + "T12:00:00Z");
-    return new Intl.DateTimeFormat("pt-BR", {
+    return new Intl.DateTimeFormat(locale, {
       day: "2-digit",
       month: "long",
       year: "numeric",

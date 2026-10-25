@@ -1,3 +1,5 @@
+import { languageForPath } from "@/content/i18n";
+import { EditorialLocaleContext } from "@/content/locale-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -121,8 +123,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
   return (
-    <html lang={siteConfig.language}>
+    <html lang={languageForPath(pathname)}>
       <head>
         <HeadContent />
       </head>
@@ -141,19 +144,21 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SkipLink />
-      {admin ? (
-        <Outlet />
-      ) : (
-        <div className="flex min-h-dvh flex-col bg-background text-foreground">
-          <SiteHeader />
-          <main id="conteudo" className="flex-1">
-            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-            <Outlet />
-          </main>
-          <SiteFooter />
-        </div>
-      )}
+      <EditorialLocaleContext.Provider value={languageForPath(pathname)}>
+        <SkipLink />
+        {admin ? (
+          <Outlet />
+        ) : (
+          <div className="flex min-h-dvh flex-col bg-background text-foreground">
+            <SiteHeader />
+            <main id="conteudo" className="flex-1">
+              {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+              <Outlet />
+            </main>
+            <SiteFooter />
+          </div>
+        )}
+      </EditorialLocaleContext.Provider>
     </QueryClientProvider>
   );
 }
