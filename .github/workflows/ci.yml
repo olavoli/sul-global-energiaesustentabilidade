@@ -44,6 +44,17 @@ jobs:
       - name: Offline multilingual decision simulation
         run: bun run i18n:simulate
 
+      - name: Real-cost pilot planning (offline, no credentials)
+        run: bun run i18n:pilot
+
+      - name: Upload real-cost pilot plan
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: i18n-real-cost-pilot-plan
+          path: test-results/i18n-real-cost-pilot/plan-report.json
+          retention-days: 14
+
       - name: Upload simulation evidence
         if: always()
         uses: actions/upload-artifact@v4
