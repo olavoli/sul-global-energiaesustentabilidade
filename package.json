@@ -152,7 +152,7 @@
     "test": "bun test",
     "format": "prettier --write .",
     "smoke:i18n": "bun run scripts/i18n-smoke.ts",
-    "preview:i18n": "bun run scripts/visual/preview-server.ts",
+    "preview:i18n": "node scripts/visual/preview-server.ts",
     "test:visual": "playwright test --config playwright.config.ts",
     "report:visual": "playwright show-report playwright-report"
   },

@@ -3,16 +3,19 @@ import react from "@vitejs/plugin-react";
 import tailwind from "@tailwindcss/vite";
 import mdx from "@mdx-js/rollup";
 import remarkFrontmatter from "remark-frontmatter";
-import { remarkEditorialSlots } from "../../src/content/remark-editorial-slots";
+import { remarkEditorialSlots } from "../../src/content/remark-editorial-slots.ts";
 import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 // Separate local SPA harness. No public file route, editorial mutation or production switch.
+const root = fileURLToPath(new URL("../../", import.meta.url));
 const port = Number(process.env.I18N_PREVIEW_PORT ?? 8093);
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error("Invalid preview port");
+console.log(`[preview] Node ${process.version}; initializing isolated Vite server`);
 const server = await createServer({
   configFile: false,
-  root: process.cwd(),
-  resolve: { alias: { "@": resolve("src") } },
+  root,
+  resolve: { alias: { "@": resolve(root, "src") } },
   optimizeDeps: { entries: ["scripts/visual/review-entry.tsx"] },
   plugins: [
     react(),
@@ -75,4 +78,5 @@ const server = await createServer({
   },
 });
 await server.listen();
+console.log("[preview] ready; loopback only; no publication");
 server.printUrls();
