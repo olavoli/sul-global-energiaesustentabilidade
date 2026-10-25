@@ -215,3 +215,51 @@ test("traduções preservam todos os blocos, números, 14 referências e quatro 
     expect(html).not.toContain("@@FIG");
   }
 });
+
+test("revisão ART-033: números por seção, ativos e proveniência coincidem com PT", () => {
+  const sections = (body: string) => body.split(/^## .*$/gm);
+  const numericValues = (body: string) =>
+    [...body.matchAll(/\d+(?:[.,]\d+)?/g)].map(([value]) =>
+      Number(
+        /^[0-9]+[.,][0-9]{3}$/.test(value) ? value.replace(/[.,]/, "") : value.replace(",", "."),
+      ),
+    );
+  const figures = (body: string) =>
+    [...body.matchAll(/<Figure\b[\s\S]*?\/>/g)].map(([figure]) => ({
+      assets: [...figure.matchAll(/(?:src|source720|source1200|sourceFull)="([^"]+)"/g)].map(
+        (m) => m[1],
+      ),
+      provenance: [
+        ...figure.matchAll(/(?:aiProvenanceStatus|aiGenerationTool|aiCreditYear)="([^"]+)"/g),
+      ].map((m) => m[1]),
+    }));
+  for (const record of records) {
+    const parsed = parseEditorialFile(
+      readFileSync(`content/translations/${record.locale}/${record.slug}.mdx`, "utf8"),
+    );
+    const translatedSections = sections(parsed.body);
+    const originalSections = sections(pt.body);
+    expect(translatedSections).toHaveLength(originalSections.length);
+    originalSections.forEach((section, index) =>
+      expect(numericValues(translatedSections[index]).sort((a, b) => a - b)).toEqual(
+        numericValues(section).sort((a, b) => a - b),
+      ),
+    );
+    expect(figures(parsed.body)).toEqual(figures(pt.body));
+    expect(record.cover.sources).toEqual(pt.frontmatter.cover.sources);
+    expect(record.cover.aiProvenance).toEqual(pt.frontmatter.cover.aiProvenance);
+    expect(record.cover.license).toBe(pt.frontmatter.cover.license);
+    expect(record.translationReview).toEqual({ status: "pending" });
+    expect(record.approvedAt).toBeUndefined();
+    expect(record.publishedAt).toBeUndefined();
+    expect(parsed.body).toContain(
+      record.locale === "en"
+        ? "The original edition uses an estimate"
+        : "La edición original utiliza una estimación",
+    );
+    expect(parsed.body).toContain(
+      record.locale === "en" ? "mineral exploration permits" : "permisos de exploración minera",
+    );
+    expect(parsed.body).not.toContain("datos fiscales de la ANM");
+  }
+});
