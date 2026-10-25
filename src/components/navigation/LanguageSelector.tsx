@@ -1,8 +1,16 @@
+import { useContext } from "react";
+import { LanguageNavigationContext } from "@/content/locale-context";
 import { useRouterState } from "@tanstack/react-router";
 import { languageOptions, languageForPath, languageLabels } from "@/content/i18n";
 
 /** Native links work with keyboard/touch and without client-side translation. */
-export function LanguageLinks({ pathname }: { pathname: string }) {
+export function LanguageLinks({
+  pathname,
+  options,
+}: {
+  pathname: string;
+  options?: ReturnType<typeof languageOptions>;
+}) {
   const locale = languageForPath(pathname);
   const catalogLabel = {
     "pt-BR": "catálogo; tradução indisponível",
@@ -21,7 +29,7 @@ export function LanguageLinks({ pathname }: { pathname: string }) {
         aria-label="Language / Idioma"
         className="absolute right-0 z-50 mt-1 w-64 rounded-md border border-border bg-background p-2 shadow-lg"
       >
-        {languageOptions(pathname).map((option) => (
+        {(options ?? languageOptions(pathname)).map((option) => (
           <a
             key={option.locale}
             href={option.href}
@@ -40,5 +48,6 @@ export function LanguageLinks({ pathname }: { pathname: string }) {
 }
 export function LanguageSelector() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
-  return <LanguageLinks pathname={pathname} />;
+  const options = useContext(LanguageNavigationContext);
+  return <LanguageLinks pathname={pathname} options={options} />;
 }

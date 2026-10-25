@@ -34,3 +34,7 @@ newsroom/audit/storage-events.jsonl
 *.njsproj
 *.sln
 *.sw?
+
+# Local browser review outputs (not approved baselines)
+playwright-report/
+test-results/

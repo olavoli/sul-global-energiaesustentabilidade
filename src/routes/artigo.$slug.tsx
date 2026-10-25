@@ -25,7 +25,7 @@ import { EditorialHistory } from "@/components/editorial/EditorialHistory";
 import { DemoContentNotice } from "@/components/layout/DemoContentNotice";
 import { articleAiImageTools } from "@/content/image-ai-credit";
 import { getArticleBySlug, getRelatedArticles } from "@/content/repository";
-import type { Article } from "@/types/content";
+import type { Article, ArticleDisplay } from "@/types/content";
 import { articleJsonLd, breadcrumbJsonLd, resolveCanonical, socialMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/artigo/$slug")({
@@ -110,13 +110,15 @@ export function ArticleDetailView({
   article,
   related,
   locale = "pt-BR",
+  previewOnly = false,
 }: {
-  article: Article;
+  article: ArticleDisplay;
+  previewOnly?: boolean;
   related: Article[];
   locale?: ContentLocale;
 }) {
   const ui = articleUi[locale];
-  const typedArticle: Article = article;
+  const typedArticle = article;
   const typedRelated: Article[] = related;
   const verifiedAiImageTools = articleAiImageTools(article);
   const editorialBodyRef = useRef<HTMLDivElement>(null);
@@ -182,14 +184,14 @@ export function ArticleDetailView({
 
         <Container className="pb-12">
           <div className="relative mx-auto max-w-[72ch] min-[1440px]:min-h-[640px]">
-            <ArticleAdRail articleKey={article.slug} />
+            {!previewOnly && <ArticleAdRail articleKey={article.slug} />}
             {article.sponsored && article.sponsorName && (
               <SponsoredDisclosure sponsorName={article.sponsorName} />
             )}
 
             <ArticleBody locale={locale} slug={article.slug} section="keyPoints" />
 
-            {locale === "pt-BR" && (
+            {locale === "pt-BR" && !previewOnly && (
               <ArticleTtsPlayer contentRef={editorialBodyRef} articleKey={article.slug} />
             )}
 
@@ -228,7 +230,7 @@ export function ArticleDetailView({
 
             <AiEditorialCredit
               assistance={article.aiAssistance}
-              publicationDate={article.publishedAt ?? article.createdAt}
+              publicationDate={article.publishedAt ?? article.createdAt ?? ""}
               imageTools={verifiedAiImageTools}
               disclosure={
                 article.aiDisclosureMode === "detailed" ? article.aiDisclosure : undefined
@@ -271,7 +273,7 @@ export function ArticleDetailView({
           </Container>
         )}
 
-        {locale === "pt-BR" && (
+        {locale === "pt-BR" && !previewOnly && (
           <>
             <Container>
               <CommentsSection articleSlug={article.slug} />

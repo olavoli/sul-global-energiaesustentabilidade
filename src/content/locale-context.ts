@@ -34,3 +34,8 @@ export const articleUi = {
     related: "Siga aprendiendo",
   },
 };
+
+/** Supplied only by isolated presentation harnesses, never by the public router. */
+export const LanguageNavigationContext = createContext<
+  { locale: ContentLocale; href: string; fallback: boolean }[] | undefined
+>(undefined);
