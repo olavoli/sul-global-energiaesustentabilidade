@@ -1,3 +1,5 @@
+import { translationSchema } from "../src/content/translation-schema";
+import { generateTranslations } from "./generate-translations";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { basename, dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -57,7 +59,11 @@ export function parseEditorialFile(source: string, path = "conteúdo.mdx"): Pars
     throw new Error(`${path}: YAML inválido: ${String(error)}`);
   }
 
-  const result = articleFrontmatterSchema.safeParse(rawFrontmatter);
+  const isTranslation =
+    typeof rawFrontmatter === "object" && rawFrontmatter !== null && "locale" in rawFrontmatter;
+  const result = (isTranslation ? translationSchema : articleFrontmatterSchema).safeParse(
+    rawFrontmatter,
+  );
   if (!result.success) {
     throw new Error(
       `${path}: frontmatter inválido:\n${result.error.issues
@@ -171,6 +177,7 @@ async function emit(path: string, content: string, check: boolean): Promise<void
 async function main(): Promise<void> {
   const files = await loadArticles();
   const check = process.argv.includes("--check");
+  await generateTranslations(files, parseEditorialFile, check);
   const templates = (await readdir(TEMPLATE_DIRECTORY)).filter((name) => name.endsWith(".mdx"));
   const demos = files.filter((file) => file.frontmatter.isDemo);
   const warnings = files.flatMap((file) => {

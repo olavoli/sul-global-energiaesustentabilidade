@@ -16,6 +16,7 @@ export function socialMeta({
   imageAlt = siteConfig.socialImageAlt,
   imageWidth,
   imageHeight,
+  locale = siteConfig.locale,
 }: {
   title: string;
   description: string;
@@ -25,12 +26,13 @@ export function socialMeta({
   imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
+  locale?: string;
 }) {
   const url = resolveCanonical(path);
   const resolvedImage = resolveCanonical(image);
   return [
     { property: "og:site_name", content: siteConfig.name },
-    { property: "og:locale", content: siteConfig.locale },
+    { property: "og:locale", content: locale },
     { property: "og:type", content: type },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
@@ -91,7 +93,7 @@ export function websiteJsonLd() {
   };
 }
 
-export function articleJsonLd(article: Article) {
+export function articleJsonLd(article: Article, language: string = siteConfig.language) {
   const canonical = resolveCanonical(article.canonicalUrl ?? `/artigo/${article.slug}`);
   return {
     "@context": "https://schema.org",
@@ -102,7 +104,7 @@ export function articleJsonLd(article: Article) {
     datePublished: article.publishedAt,
     dateModified: article.updatedAt ?? article.publishedAt,
     mainEntityOfPage: canonical,
-    inLanguage: siteConfig.language,
+    inLanguage: language,
     author: {
       "@type": "Person",
       name: article.author.displayName,

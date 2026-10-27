@@ -23,3 +23,7 @@ export type ArticleSummary = Pick<
   Article,
   "slug" | "title" | "subtitle" | "excerpt" | "category" | "tags" | "author" | "publishedAt"
 >;
+
+/** Presentation may render a real draft in the isolated local review harness. */
+export type ArticleDisplay = Omit<Article, "status" | "publishedAt"> &
+  Pick<ArticleFrontmatter, "status" | "publishedAt">;

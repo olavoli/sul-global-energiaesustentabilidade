@@ -17,6 +17,7 @@ import { Route as NewsletterRouteImport } from './routes/newsletter'
 import { Route as MetodologiaRouteImport } from './routes/metodologia'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as BuscaRouteImport } from './routes/busca'
+import { Route as LanguageRouteImport } from './routes/$language'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TagSlugRouteImport } from './routes/tag.$slug'
 import { Route as CategoriaSlugRouteImport } from './routes/categoria.$slug'
@@ -24,6 +25,8 @@ import { Route as AutorSlugRouteImport } from './routes/autor.$slug'
 import { Route as ArtigoSlugRouteImport } from './routes/artigo.$slug'
 import { Route as AdminNewsroomRouteImport } from './routes/admin.newsroom'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as EsArticuloSlugRouteImport } from './routes/es.articulo.$slug'
+import { Route as EnArticleSlugRouteImport } from './routes/en.article.$slug'
 import { Route as AdminResearchWorkspaceScientificWorkIdRouteImport } from './routes/admin.research-workspace.$scientificWorkId'
 import { Route as AdminNewsroomSectionRouteImport } from './routes/admin.newsroom_.$section'
 import { Route as AdminNewsroomSectionIdRouteImport } from './routes/admin.newsroom_.$section.$id'
@@ -68,6 +71,11 @@ const BuscaRoute = BuscaRouteImport.update({
   path: '/busca',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LanguageRoute = LanguageRouteImport.update({
+  id: '/$language',
+  path: '/$language',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -103,6 +111,16 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
   path: '/admin/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EsArticuloSlugRoute = EsArticuloSlugRouteImport.update({
+  id: '/es/articulo/$slug',
+  path: '/es/articulo/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnArticleSlugRoute = EnArticleSlugRouteImport.update({
+  id: '/en/article/$slug',
+  path: '/en/article/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminResearchWorkspaceScientificWorkIdRoute =
   AdminResearchWorkspaceScientificWorkIdRouteImport.update({
     id: '/admin/research-workspace/$scientificWorkId',
@@ -122,6 +140,7 @@ const AdminNewsroomSectionIdRoute = AdminNewsroomSectionIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$language': typeof LanguageRoute
   '/busca': typeof BuscaRoute
   '/contato': typeof ContatoRoute
   '/metodologia': typeof MetodologiaRoute
@@ -138,10 +157,13 @@ export interface FileRoutesByFullPath {
   '/tag/$slug': typeof TagSlugRoute
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
+  '/en/article/$slug': typeof EnArticleSlugRoute
+  '/es/articulo/$slug': typeof EsArticuloSlugRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$language': typeof LanguageRoute
   '/busca': typeof BuscaRoute
   '/contato': typeof ContatoRoute
   '/metodologia': typeof MetodologiaRoute
@@ -158,11 +180,14 @@ export interface FileRoutesByTo {
   '/tag/$slug': typeof TagSlugRoute
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
+  '/en/article/$slug': typeof EnArticleSlugRoute
+  '/es/articulo/$slug': typeof EsArticuloSlugRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$language': typeof LanguageRoute
   '/busca': typeof BuscaRoute
   '/contato': typeof ContatoRoute
   '/metodologia': typeof MetodologiaRoute
@@ -179,12 +204,15 @@ export interface FileRoutesById {
   '/tag/$slug': typeof TagSlugRoute
   '/admin/newsroom_/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
+  '/en/article/$slug': typeof EnArticleSlugRoute
+  '/es/articulo/$slug': typeof EsArticuloSlugRoute
   '/admin/newsroom_/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$language'
     | '/busca'
     | '/contato'
     | '/metodologia'
@@ -201,10 +229,13 @@ export interface FileRouteTypes {
     | '/tag/$slug'
     | '/admin/newsroom/$section'
     | '/admin/research-workspace/$scientificWorkId'
+    | '/en/article/$slug'
+    | '/es/articulo/$slug'
     | '/admin/newsroom/$section/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$language'
     | '/busca'
     | '/contato'
     | '/metodologia'
@@ -221,10 +252,13 @@ export interface FileRouteTypes {
     | '/tag/$slug'
     | '/admin/newsroom/$section'
     | '/admin/research-workspace/$scientificWorkId'
+    | '/en/article/$slug'
+    | '/es/articulo/$slug'
     | '/admin/newsroom/$section/$id'
   id:
     | '__root__'
     | '/'
+    | '/$language'
     | '/busca'
     | '/contato'
     | '/metodologia'
@@ -241,11 +275,14 @@ export interface FileRouteTypes {
     | '/tag/$slug'
     | '/admin/newsroom_/$section'
     | '/admin/research-workspace/$scientificWorkId'
+    | '/en/article/$slug'
+    | '/es/articulo/$slug'
     | '/admin/newsroom_/$section/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LanguageRoute: typeof LanguageRoute
   BuscaRoute: typeof BuscaRoute
   ContatoRoute: typeof ContatoRoute
   MetodologiaRoute: typeof MetodologiaRoute
@@ -262,6 +299,8 @@ export interface RootRouteChildren {
   TagSlugRoute: typeof TagSlugRoute
   AdminNewsroomSectionRoute: typeof AdminNewsroomSectionRouteWithChildren
   AdminResearchWorkspaceScientificWorkIdRoute: typeof AdminResearchWorkspaceScientificWorkIdRoute
+  EnArticleSlugRoute: typeof EnArticleSlugRoute
+  EsArticuloSlugRoute: typeof EsArticuloSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -322,6 +361,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BuscaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$language': {
+      id: '/$language'
+      path: '/$language'
+      fullPath: '/$language'
+      preLoaderRoute: typeof LanguageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -371,6 +417,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/es/articulo/$slug': {
+      id: '/es/articulo/$slug'
+      path: '/es/articulo/$slug'
+      fullPath: '/es/articulo/$slug'
+      preLoaderRoute: typeof EsArticuloSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/article/$slug': {
+      id: '/en/article/$slug'
+      path: '/en/article/$slug'
+      fullPath: '/en/article/$slug'
+      preLoaderRoute: typeof EnArticleSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/research-workspace/$scientificWorkId': {
       id: '/admin/research-workspace/$scientificWorkId'
       path: '/admin/research-workspace/$scientificWorkId'
@@ -408,6 +468,7 @@ const AdminNewsroomSectionRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LanguageRoute: LanguageRoute,
   BuscaRoute: BuscaRoute,
   ContatoRoute: ContatoRoute,
   MetodologiaRoute: MetodologiaRoute,
@@ -425,6 +486,8 @@ const rootRouteChildren: RootRouteChildren = {
   AdminNewsroomSectionRoute: AdminNewsroomSectionRouteWithChildren,
   AdminResearchWorkspaceScientificWorkIdRoute:
     AdminResearchWorkspaceScientificWorkIdRoute,
+  EnArticleSlugRoute: EnArticleSlugRoute,
+  EsArticuloSlugRoute: EsArticuloSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

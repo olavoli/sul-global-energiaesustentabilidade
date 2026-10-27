@@ -150,7 +150,18 @@
     "typecheck": "bun run content:generate && tsc --noEmit",
     "lint": "eslint .",
     "test": "bun test",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "smoke:i18n": "bun run scripts/i18n-smoke.ts",
+    "preview:i18n": "node scripts/visual/preview-server.ts",
+    "test:visual": "playwright test --config playwright.config.ts",
+    "report:visual": "playwright show-report playwright-report",
+    "i18n:simulate": "bun run scripts/i18n-simulation/run.ts",
+    "i18n:pilot": "bun run scripts/i18n-real-pilot/run.ts",
+    "i18n:cloudflare:experiment": "bun run scripts/i18n-cloudflare-experiment/run.ts",
+    "i18n:operations": "bun run scripts/i18n-operations/run.ts",
+    "i18n:operations:test": "bun test scripts/i18n-operations",
+    "i18n:batch": "bun run scripts/i18n-operations/batch.ts",
+    "i18n:auto": "bun run scripts/i18n-operations/automatic-cli.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -211,6 +222,7 @@
     "@eslint/js": "^9.32.0",
     "@lovable.dev/vite-tanstack-config": "^2.7.1",
     "@mdx-js/rollup": "^3.1.1",
+    "@playwright/test": "^1.64.1",
     "@types/bun": "^1.3.11",
     "@types/node": "^22.16.5",
     "@types/react": "^19.2.0",

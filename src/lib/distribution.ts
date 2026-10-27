@@ -1,3 +1,7 @@
+import { translationRecords } from "@/content/generated/translations";
+import type { TranslationRecord } from "@/content/translation-schema";
+import { publishedTranslations, articleAlternates } from "@/content/i18n";
+import { translatedArticlePath, type TranslationLocale } from "@/content/translation-schema";
 import { siteConfig } from "@/config/site";
 import { getPublicAuthors } from "@/data/authors";
 import { categories } from "@/data/categories";
@@ -31,7 +35,11 @@ export function generateRobots(indexingEnabled = siteConfig.indexingEnabled): st
   ].join("\n");
 }
 
-export function generateSitemap(articles: readonly Article[], publishable = true): string {
+export function generateSitemap(
+  articles: readonly Article[],
+  publishable = true,
+  translations: readonly TranslationRecord[] = translationRecords,
+): string {
   const staticPaths = [
     "/",
     "/sobre",
@@ -63,19 +71,50 @@ export function generateSitemap(articles: readonly Article[], publishable = true
           .map((topic) => `/tag/${topic.slug}`)
       : []),
   ];
-  const entries = paths.map(
-    (path) => `  <url><loc>${escapeXml(resolveCanonical(path))}</loc></url>`,
-  );
+  const translated = publishable ? publishedTranslations(translations) : [];
+  paths.push(...translated.map((article) => translatedArticlePath(article.locale, article.slug)));
+  for (const locale of ["en", "es"] as const) {
+    if (translated.filter((a) => a.locale === locale).length >= 2) paths.push(`/${locale}`);
+  }
+  const entries = paths.map((path) => {
+    const original =
+      articles.find((a) => (a.canonicalUrl ?? `/artigo/${a.slug}`) === path)?.slug ??
+      translated.find((a) => a.canonicalUrl === path)?.translationOf;
+    const alternates = original
+      ? articleAlternates(original, translations)
+          .map(
+            (link) =>
+              `<xhtml:link rel="alternate" hreflang="${link.hrefLang}" href="${escapeXml(link.href)}"/>`,
+          )
+          .join("")
+      : "";
+    return `  <url><loc>${escapeXml(resolveCanonical(path))}</loc>${alternates}</url>`;
+  });
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
     ...entries,
     "</urlset>",
     "",
   ].join("\n");
 }
 
-export function generateRss(articles: readonly Article[], publishable = true): string {
+export function generateRss(
+  articles: readonly Article[],
+  publishable = true,
+  language: "pt-BR" | TranslationLocale = "pt-BR",
+): string {
+  const channelPath = language === "pt-BR" ? "/" : `/${language}`;
+  const channelTitle =
+    language === "pt-BR"
+      ? siteConfig.name
+      : `${siteConfig.name} — ${language === "en" ? "English" : "Español"}`;
+  const channelDescription =
+    language === "pt-BR"
+      ? siteConfig.description
+      : language === "en"
+        ? "Editorial analysis on energy, sustainability, science, and public policy."
+        : "Análisis editorial sobre energía, sostenibilidad, ciencia y políticas públicas.";
   const items = (publishable ? articles : []).map((article) => {
     const url = resolveCanonical(article.canonicalUrl ?? `/artigo/${article.slug}`);
     const disclosure =
@@ -95,10 +134,10 @@ export function generateRss(articles: readonly Article[], publishable = true): s
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<rss version="2.0"><channel>',
-    `  <title>${escapeXml(publishable ? siteConfig.name : `${siteConfig.name} — ambiente não oficial`)}</title>`,
-    `  <link>${escapeXml(siteConfig.url)}</link>`,
-    `  <description>${escapeXml(siteConfig.description)}</description>`,
-    `  <language>${siteConfig.language}</language>`,
+    `  <title>${escapeXml(publishable ? channelTitle : `${channelTitle} — ambiente não oficial`)}</title>`,
+    `  <link>${escapeXml(language === "pt-BR" ? siteConfig.url : resolveCanonical(channelPath))}</link>`,
+    `  <description>${escapeXml(channelDescription)}</description>`,
+    `  <language>${language === "pt-BR" ? siteConfig.language : language}</language>`,
     ...items,
     "</channel></rss>",
     "",
@@ -117,6 +156,18 @@ export function createDistributionResponse(
     return new Response(generateSitemap(articles, siteConfig.indexingEnabled), {
       headers: XML_HEADERS,
     });
+  const languageFeed = pathname.match(/^\/(en|es)\/rss\.xml$/);
+  if (languageFeed) {
+    const locale = languageFeed[1] as TranslationLocale;
+    return new Response(
+      generateRss(
+        publishedTranslations().filter((a) => a.locale === locale),
+        siteConfig.indexingEnabled,
+        locale,
+      ),
+      { headers: { "content-type": "application/rss+xml; charset=utf-8" } },
+    );
+  }
   if (pathname === "/rss.xml")
     return new Response(generateRss(articles, siteConfig.indexingEnabled), {
       headers: { "content-type": "application/rss+xml; charset=utf-8" },

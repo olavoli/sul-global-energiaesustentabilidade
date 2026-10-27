@@ -1,3 +1,4 @@
+import { articleUi } from "./locale-context";
 import { describe, expect, test } from "bun:test";
 import { readFileSync, readdirSync } from "node:fs";
 import { compile, run } from "@mdx-js/mdx";
@@ -52,6 +53,16 @@ describe("consolidação dos blocos editoriais históricos", () => {
     expect(result.references).toContain("Livro sem URL inventada.");
   });
 
+  test("referências EN/ES usam o mesmo slot final, sem duplicação no corpo", async () => {
+    for (const title of ["References", "Referencias"]) {
+      const result = await renderSlots(`Body preserved.\n\n## ${title}\n\n[1] Source unchanged.`);
+      expect(result.body).toContain("Body preserved.");
+      expect(result.body).not.toContain("Source unchanged.");
+      expect(result.references).toContain("Source unchanged.");
+      expect(result.references).toContain(`<h2>${title}</h2>`);
+    }
+  });
+
   test("não inventa pontos-chave para artigos sem conteúdo explícito", async () => {
     const result = await renderSlots("Somente o texto fornecido.");
     expect(result.keyPoints.trim()).toBe("");
@@ -74,7 +85,10 @@ describe("consolidação dos blocos editoriais históricos", () => {
     const route = readFileSync("src/routes/artigo.$slug.tsx", "utf8");
     expect(route.indexOf('section="keyPoints"')).toBeLessThan(route.indexOf("<ArticleTtsPlayer"));
     expect(route.indexOf("<ShareBar")).toBeLessThan(route.indexOf('section="references"'));
-    expect(route.indexOf("Continue aprendendo")).toBeGreaterThan(route.indexOf("Sobre o autor"));
+    expect(articleUi["pt-BR"].related).toBe("Continue aprendendo");
+    expect(articleUi["pt-BR"].author).toBe("Sobre o autor");
+    expect(route.indexOf("{ui.author}")).toBeGreaterThanOrEqual(0);
+    expect(route.indexOf("{ui.related}")).toBeGreaterThan(route.indexOf("{ui.author}"));
     expect(route).not.toContain("Artigos relacionados");
     expect(editorialMdxComponents).not.toHaveProperty("ReadAlso");
   });

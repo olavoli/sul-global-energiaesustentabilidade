@@ -1,4 +1,5 @@
-import { Link } from "@tanstack/react-router";
+import { ArticlePermalink } from "./ArticlePermalink";
+import { useEditorialLocale, articleUi } from "@/content/locale-context";
 import type { Article } from "@/types/content";
 import { CategoryTag } from "./CategoryTag";
 import { formatDate, formatReadingTime } from "@/lib/format";
@@ -13,16 +14,17 @@ export function ArticleCard({
   size?: "sm" | "md" | "lg";
   eager?: boolean;
 }) {
+  const locale = useEditorialLocale();
+  const ui = articleUi[locale];
   const titleClass =
     size === "lg" ? "text-2xl md:text-3xl" : size === "sm" ? "text-lg" : "text-xl md:text-[1.4rem]";
 
   return (
     <article className="group flex flex-col gap-3">
-      <Link
-        to="/artigo/$slug"
-        params={{ slug: article.slug }}
+      <ArticlePermalink
+        article={article}
         className="block overflow-hidden bg-muted"
-        aria-label={article.title}
+        ariaLabel={article.title}
       >
         <EditorialImage
           image={article.cover}
@@ -35,13 +37,13 @@ export function ArticleCard({
           }
           className="transition-transform duration-500 group-hover:scale-[1.02]"
         />
-      </Link>
+      </ArticlePermalink>
       <div className="flex flex-col gap-2">
         <CategoryTag slug={article.category} />
         <h3 className={`font-serif font-semibold leading-tight text-foreground ${titleClass}`}>
-          <Link to="/artigo/$slug" params={{ slug: article.slug }} className="hover:underline">
+          <ArticlePermalink article={article} className="hover:underline">
             {article.title}
-          </Link>
+          </ArticlePermalink>
         </h3>
         {size !== "sm" && (
           <p className="text-sm text-muted-foreground line-clamp-3 md:text-base">
@@ -49,8 +51,10 @@ export function ArticleCard({
           </p>
         )}
         <p className="text-xs text-muted-foreground">
-          {article.author.displayName} · {formatDate(article.publishedAt)} ·{" "}
-          {formatReadingTime(article.readingTime)}
+          {article.author.displayName} · {formatDate(article.publishedAt, locale)} ·{" "}
+          {locale === "pt-BR"
+            ? formatReadingTime(article.readingTime)
+            : `${article.readingTime} ${ui.reading}`}
         </p>
       </div>
     </article>

@@ -1,3 +1,4 @@
+import { useEditorialLocale, articleUi } from "@/content/locale-context";
 import type { ArticleFrontmatter } from "@/content/schema";
 import { Fragment } from "react";
 
@@ -13,6 +14,7 @@ export function AiEditorialCredit({
   imageTools?: string[];
   disclosure?: string;
 }) {
+  const ui = articleUi[useEditorialLocale()];
   if (assistance === "none") return null;
   const publicationYear = publicationDate.slice(0, 4);
 
@@ -22,7 +24,7 @@ export function AiEditorialCredit({
       aria-labelledby="ai-transparency-title"
     >
       <h2 id="ai-transparency-title" className="font-semibold text-foreground">
-        Nota de Transparência
+        {ui.transparency}
       </h2>
       <p className="mt-2">
         {disclosure ? (

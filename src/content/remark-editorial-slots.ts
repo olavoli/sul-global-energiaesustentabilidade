@@ -34,6 +34,8 @@ export function remarkEditorialSlots() {
           sectionDepth = node.depth ?? 2;
         } else if (
           title === "referências" ||
+          title === "references" ||
+          title === "referencias" ||
           title === "fontes e referências" ||
           title === "bibliografia complementar"
         ) {

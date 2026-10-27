@@ -1,8 +1,11 @@
-import type { Article } from "@/types/content";
+import { useEditorialLocale, articleUi } from "@/content/locale-context";
+import type { ArticleDisplay } from "@/types/content";
 import { formatDate, formatReadingTime } from "@/lib/format";
 import { Link } from "@tanstack/react-router";
 
-export function Byline({ article, className }: { article: Article; className?: string }) {
+export function Byline({ article, className }: { article: ArticleDisplay; className?: string }) {
+  const locale = useEditorialLocale();
+  const ui = articleUi[locale];
   return (
     <div
       className={
@@ -11,7 +14,7 @@ export function Byline({ article, className }: { article: Article; className?: s
       }
     >
       <span>
-        Por{" "}
+        {ui.by}{" "}
         <Link
           to="/autor/$slug"
           params={{ slug: article.author.slug }}
@@ -21,9 +24,23 @@ export function Byline({ article, className }: { article: Article; className?: s
         </Link>
       </span>
       <span aria-hidden>·</span>
-      <time dateTime={article.publishedAt}>{formatDate(article.publishedAt)}</time>
+      {article.publishedAt ? (
+        <time dateTime={article.publishedAt}>{formatDate(article.publishedAt, locale)}</time>
+      ) : (
+        <span>
+          {locale === "en"
+            ? "Draft — unpublished"
+            : locale === "es"
+              ? "Borrador — sin publicar"
+              : "Rascunho — não publicado"}
+        </span>
+      )}
       <span aria-hidden>·</span>
-      <span>{formatReadingTime(article.readingTime)}</span>
+      <span>
+        {locale === "pt-BR"
+          ? formatReadingTime(article.readingTime)
+          : `${article.readingTime} ${ui.reading}`}
+      </span>
     </div>
   );
 }
