@@ -23,9 +23,14 @@ const root = process.cwd();
 const auth = { account: "a".repeat(32), token: "SYNTHETIC-TEST-ONLY-NOT-A-CREDENTIAL" };
 const output = join(root, "test-results/i18n-cloudflare-offline-e2e");
 const targets: Record<Locale, Record<string, string>> = { en: fixture.en, es: fixture.es };
-async function snapshot(directory: string): Promise<Record<string, string>> {
-  const result: Record<string, string> = {};
-  for (const item of await readdir(directory, { withFileTypes: true })) {
+async function snapshot(directory: string, allowMissing = false): Promise<Record<string, string>> {
+  const items = await readdir(directory, { withFileTypes: true }).catch((error: unknown) => {
+    if (allowMissing && (error as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw error;
+  });
+  if (items === null) return { __directory__: "absent" };
+  const result: Record<string, string> = { __directory__: "present" };
+  for (const item of items) {
     const path = join(directory, item.name);
     if (item.isDirectory())
       for (const [key, value] of Object.entries(await snapshot(path)))
@@ -94,7 +99,7 @@ async function compiled(raw: string) {
 
 test("six synthetic replies assemble and compile complete EN ES without public writes or historical mutations", async () => {
   const historyPath = join(root, "test-results/i18n-cloudflare-experiment");
-  const historyBefore = await snapshot(historyPath);
+  const historyBefore = await snapshot(historyPath, true);
   const contentBefore = await snapshot(join(root, "content"));
   const indicesBefore = await snapshot(join(root, "src/content"));
   const input = await loadInput(root);
@@ -226,7 +231,7 @@ test("six synthetic replies assemble and compile complete EN ES without public w
       );
     });
   } finally {
-    expect(await snapshot(historyPath)).toEqual(historyBefore);
+    expect(await snapshot(historyPath, true)).toEqual(historyBefore);
     expect(await snapshot(join(root, "content"))).toEqual(contentBefore);
     expect(await snapshot(join(root, "src/content"))).toEqual(indicesBefore);
   }
@@ -288,3 +293,17 @@ test("direct formula mutation still fails and Portuguese article O is translatab
   );
   expect(validateTranslation(input, { ...all, s10: "P = ∆E / ∆t" }, "en").mdx).toBeNull();
 });
+
+test("optional private history absence is preserved distinctly from an empty directory", async () =>
+  temporary(async (directory) => {
+    const absent = join(directory, "private-history");
+    const before = await snapshot(absent, true);
+    expect(before).toEqual({ __directory__: "absent" });
+    await expect(snapshot(absent)).rejects.toThrow();
+    await mkdir(absent);
+    expect(await snapshot(absent, true)).not.toEqual(before);
+    await writeFile(join(absent, "ledger.json"), "synthetic-record");
+    const existing = await snapshot(absent, true);
+    await writeFile(join(absent, "ledger.json"), "synthetic-changed-record");
+    expect(await snapshot(absent, true)).not.toEqual(existing);
+  }));
