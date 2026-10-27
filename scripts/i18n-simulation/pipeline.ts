@@ -42,7 +42,9 @@ export interface Prepared {
 /** The provider receives text leaves only; components, URLs, credits and references stay locked. */
 export function prepare(body: string): Prepared {
   validateSafeMdx(body, "simulation");
-  const bibliographyStart = body.search(/^##\s+(?:Referências|References|Referencias)\s*$/m);
+  const bibliographyStart = body.search(
+    /^##\s+(?:Referências(?: [Bb]ibliográficas)?|References|Referencias)\s*$/m,
+  );
   if (bibliographyStart < 0) throw new Error("Bibliography heading required");
   const tree = createProcessor().parse(body) as unknown as AstNode;
   const segments: Segment[] = [];

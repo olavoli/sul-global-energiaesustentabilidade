@@ -1,0 +1,227 @@
+{
+  "notice": "Observed historical validator findings, produced from re-parsed MDX. NOT raw provider ID/text pairs.",
+  "submittedIDs": [
+    "s0",
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s6",
+    "s7",
+    "s8",
+    "s9",
+    "s11",
+    "s13",
+    "s15",
+    "s17",
+    "s18",
+    "s19",
+    "s22",
+    "s23",
+    "s24",
+    "s25",
+    "s26",
+    "s27",
+    "s28",
+    "s30",
+    "s33",
+    "s34",
+    "s35",
+    "s36",
+    "s37",
+    "s38",
+    "s39",
+    "s41",
+    "s43",
+    "s44",
+    "s45",
+    "s46"
+  ],
+  "protectedIDs": [
+    "s5",
+    "s10",
+    "s12",
+    "s14",
+    "s16",
+    "s20",
+    "s21",
+    "s29",
+    "s31",
+    "s32",
+    "s40",
+    "s42",
+    "s51",
+    "s62"
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "code": "structure-links-images-credits"
+    },
+    {
+      "severity": "critical",
+      "code": "segment-count"
+    },
+    {
+      "severity": "critical",
+      "code": "units",
+      "segment": "s35",
+      "source": "O ",
+      "target": "The **kilowatt (kW)**is a unit of power. The **kilowatt-hour (kWh)**is a unit of energy."
+    },
+    {
+      "severity": "critical",
+      "code": "units",
+      "segment": "s36",
+      "source": "quilowatt (kW)",
+      "target": "E = P × t"
+    },
+    {
+      "severity": "critical",
+      "code": "percent-formula",
+      "segment": "s36",
+      "source": "quilowatt (kW)",
+      "target": "E = P × t"
+    },
+    {
+      "severity": "critical",
+      "code": "numbers-dates",
+      "segment": "s37",
+      "source": " é uma unidade de potência. O ",
+      "target": "Thus, maintaining a power of 1 kW for 1 hour corresponds to 1 kWh of energy. Since an hour has 3,600 seconds:"
+    },
+    {
+      "severity": "critical",
+      "code": "quantity-unit-pairs",
+      "segment": "s37",
+      "source": " é uma unidade de potência. O ",
+      "target": "Thus, maintaining a power of 1 kW for 1 hour corresponds to 1 kWh of energy. Since an hour has 3,600 seconds:"
+    },
+    {
+      "severity": "critical",
+      "code": "units",
+      "segment": "s37",
+      "source": " é uma unidade de potência. O ",
+      "target": "Thus, maintaining a power of 1 kW for 1 hour corresponds to 1 kWh of energy. Since an hour has 3,600 seconds:"
+    },
+    {
+      "severity": "critical",
+      "code": "numbers-dates",
+      "segment": "s38",
+      "source": "quilowatt-hora (kWh)",
+      "target": "1 kWh = 3,6 MJ"
+    },
+    {
+      "severity": "critical",
+      "code": "quantity-unit-pairs",
+      "segment": "s38",
+      "source": "quilowatt-hora (kWh)",
+      "target": "1 kWh = 3,6 MJ"
+    },
+    {
+      "severity": "critical",
+      "code": "percent-formula",
+      "segment": "s38",
+      "source": "quilowatt-hora (kWh)",
+      "target": "1 kWh = 3,6 MJ"
+    },
+    {
+      "severity": "critical",
+      "code": "units",
+      "segment": "s39",
+      "source": " é uma unidade de energia.",
+      "target": "That's why the electricity bill records consumption in kWh. It accounts for the energy associated with the power used over time, not just the nominal power of the devices."
+    },
+    {
+      "severity": "review",
+      "code": "negation-modality-mineral-caveat",
+      "segment": "s39",
+      "source": " é uma unidade de energia.",
+      "target": "That's why the electricity bill records consumption in kWh. It accounts for the energy associated with the power used over time, not just the nominal power of the devices."
+    },
+    {
+      "severity": "critical",
+      "code": "percent-formula",
+      "segment": "s40",
+      "source": "E = P × t",
+      "target": "A kettle operating with a power of one kilowatt for one hour results in one kilowatt-hour of energy; the relationship shows power as a rate and energy as the total accumulated over time"
+    },
+    {
+      "severity": "critical",
+      "code": "numbers-dates",
+      "segment": "s41",
+      "source": "Assim, manter uma potência de 1 kW durante 1 hora corresponde a 1 kWh de energia. Como uma hora possui 3.600 segundos:",
+      "target": "Figure 2. Power is a rate; energy is the result of this power maintained during a certain interval."
+    },
+    {
+      "severity": "critical",
+      "code": "quantity-unit-pairs",
+      "segment": "s41",
+      "source": "Assim, manter uma potência de 1 kW durante 1 hora corresponde a 1 kWh de energia. Como uma hora possui 3.600 segundos:",
+      "target": "Figure 2. Power is a rate; energy is the result of this power maintained during a certain interval."
+    },
+    {
+      "severity": "critical",
+      "code": "units",
+      "segment": "s41",
+      "source": "Assim, manter uma potência de 1 kW durante 1 hora corresponde a 1 kWh de energia. Como uma hora possui 3.600 segundos:",
+      "target": "Figure 2. Power is a rate; energy is the result of this power maintained during a certain interval."
+    },
+    {
+      "severity": "critical",
+      "code": "numbers-dates",
+      "segment": "s42",
+      "source": "1 kWh = 3,6 MJ",
+      "target": "Power is everywhere"
+    },
+    {
+      "severity": "critical",
+      "code": "quantity-unit-pairs",
+      "segment": "s42",
+      "source": "1 kWh = 3,6 MJ",
+      "target": "Power is everywhere"
+    },
+    {
+      "severity": "critical",
+      "code": "units",
+      "segment": "s42",
+      "source": "1 kWh = 3,6 MJ",
+      "target": "Power is everywhere"
+    },
+    {
+      "severity": "critical",
+      "code": "percent-formula",
+      "segment": "s42",
+      "source": "1 kWh = 3,6 MJ",
+      "target": "Power is everywhere"
+    },
+    {
+      "severity": "critical",
+      "code": "units",
+      "segment": "s43",
+      "source": "É por isso que a conta de eletricidade registra o consumo em kWh. Ela contabiliza a energia associada à potência utilizada ao longo do tempo, não apenas a potência nominal dos aparelhos.",
+      "target": "A potência permite comparar a rapidez com que sistemas muito diferentes transferem ou transformam energia."
+    },
+    {
+      "severity": "review",
+      "code": "negation-modality-mineral-caveat",
+      "segment": "s43",
+      "source": "É por isso que a conta de eletricidade registra o consumo em kWh. Ela contabiliza a energia associada à potência utilizada ao longo do tempo, não apenas a potência nominal dos aparelhos.",
+      "target": "A potência permite comparar a rapidez com que sistemas muito diferentes transferem ou transformam energia."
+    },
+    {
+      "severity": "critical",
+      "code": "numbers-dates",
+      "segment": "s45",
+      "source": "Figura 2. Potência é uma taxa; energia é o resultado dessa potência mantida durante determinado intervalo.",
+      "target": "A grandeza continua representando a mesma ideia: "
+    },
+    {
+      "severity": "critical",
+      "code": "symbolic-equation-verbatim",
+      "segment": "s40",
+      "source": "E = P × t",
+      "target": "A kettle operating with a power of one kilowatt for one hour results in one kilowatt-hour of energy; the relationship shows power as a rate and energy as the total accumulated over time"
+    }
+  ]
+}

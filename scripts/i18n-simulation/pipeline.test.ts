@@ -232,3 +232,22 @@ test("independent semantic adapter exceptions fail closed", async () => {
   expect(result.outcome).toBe("REVIEW_REQUIRED");
   expect(result.wouldPublish).toBe(false);
 });
+
+test("explicit Portuguese bibliography heading variants preserve the complete locked bibliography", () => {
+  for (const heading of [
+    "Referências",
+    "Referências Bibliográficas",
+    "Referências bibliográficas",
+  ]) {
+    const body = `Body text.\n\n## ${heading}\n\n[1] Source. https://example.org/\n`;
+    const source = prepare(body);
+    expect(source.bibliography).toContain("[1] Source.");
+    expect(source.segments.every((s) => s.start < body.indexOf("## "))).toBe(true);
+    expect(assemble(source, Object.fromEntries(source.segments.map((s) => [s.id, s.text])))).toBe(
+      body,
+    );
+  }
+  for (const heading of ["Referências Bibliográficas inventadas", "Outro título"]) {
+    expect(() => prepare(`Body.\n\n## ${heading}\n`)).toThrow("Bibliography heading required");
+  }
+});
