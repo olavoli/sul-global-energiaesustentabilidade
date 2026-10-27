@@ -156,7 +156,12 @@
     "test:visual": "playwright test --config playwright.config.ts",
     "report:visual": "playwright show-report playwright-report",
     "i18n:simulate": "bun run scripts/i18n-simulation/run.ts",
-    "i18n:pilot": "bun run scripts/i18n-real-pilot/run.ts"
+    "i18n:pilot": "bun run scripts/i18n-real-pilot/run.ts",
+    "i18n:cloudflare:experiment": "bun run scripts/i18n-cloudflare-experiment/run.ts",
+    "i18n:operations": "bun run scripts/i18n-operations/run.ts",
+    "i18n:operations:test": "bun test scripts/i18n-operations",
+    "i18n:batch": "bun run scripts/i18n-operations/batch.ts",
+    "i18n:auto": "bun run scripts/i18n-operations/automatic-cli.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

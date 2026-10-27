@@ -1,0 +1,23 @@
+{
+  "version": "continuous-v1",
+  "historyAnchor": "SET_VERIFIED_EXISTING_LEDGER_DIGEST",
+  "enabled": false,
+  "authorizedBy": "SET_REAL_RESPONSIBLE_PARTY",
+  "validUntil": "SET_AUTHORIZATION_EXPIRY_UTC",
+  "monthlyNanoUSD": 10000000000,
+  "regularNanoUSD": 8000000000,
+  "contingencyNanoUSD": 2000000000,
+  "articleNanoUSD": 150000000,
+  "externalMonthlyReserveNanoUSD": "SET_RESERVES_FOR_EXPERIMENTS_AND_OTHER_PROVIDER_WORK",
+  "maxAttempts": 2,
+  "unknownBilling": "retain-and-cover-worst-case",
+  "exclusiveProviderBudget": true,
+  "providerBudgetEvidence": "SET_PROVIDER_BUDGET_AND_EXCLUSIVE_USAGE_EVIDENCE",
+  "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "pricing": {
+    "input": 0.293,
+    "output": 2.253
+  },
+  "maxInputTokens": 24000,
+  "maxOutputTokens": 2500
+}

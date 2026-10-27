@@ -1,3 +1,4 @@
+import { translationReviewAccepted } from "../src/content/translation-schema";
 import { translationSchema, translationLocales } from "../src/content/translation-schema";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -147,11 +148,7 @@ export function publishCheck(
   const report = reviewArticle(article, authorDirectory, riskApproval);
   if ("locale" in article) {
     const translation = translationSchema.parse(article);
-    if (
-      translation.translationReview.status !== "approved" ||
-      !translation.translationReview.reviewer ||
-      !translation.translationReview.reviewedAt
-    )
+    if (!translationReviewAccepted(translation))
       report.blockers.push("Tradução aguarda revisão editorial humana identificada.");
   }
   if (!article.isDemo && !["approved", "scheduled", "published"].includes(article.status)) {

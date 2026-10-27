@@ -38,3 +38,12 @@ newsroom/audit/storage-events.jsonl
 # Local browser review outputs (not approved baselines)
 playwright-report/
 test-results/
+
+# Private operational translation ledger and editorial queue
+i18n/storage/
+
+# Private durable automation state checkout
+.i18n-private-state/
+
+# Recoverable private publication staging, never commit partial candidates
+content/translations/**/*.auto-pending

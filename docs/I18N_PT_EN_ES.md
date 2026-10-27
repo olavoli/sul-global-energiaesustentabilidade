@@ -1,3 +1,5 @@
+> Atualização de política: a automação contínua com atestação técnica distinta de revisão humana está documentada em [I18N_CONTINUOUS_AUTOMATION.md](I18N_CONTINUOUS_AUTOMATION.md). As restrições de fase abaixo permanecem como histórico; nenhuma operação externa foi ativada.
+
 # PT / EN / ES — international editorial editions
 
 ## Compatibility and publication boundary

@@ -1,3 +1,5 @@
+> Atualização de política: a automação contínua com atestação técnica distinta de revisão humana está documentada em [I18N_CONTINUOUS_AUTOMATION.md](I18N_CONTINUOUS_AUTOMATION.md). As restrições de fase abaixo permanecem como histórico; nenhuma operação externa foi ativada.
+
 # Tradução e decisão multilíngue: protótipo offline
 
 Data do estudo: 2026-10-25. Branch: `feat/i18n-pt-en-es`; base de implementação: `0ff176e76b63a358afdceb10aa1766ebbe85b7c5`. Estado: **somente simulação; publicação automática desativada**.

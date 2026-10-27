@@ -1,0 +1,74 @@
+name: I18N Continuous
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 */6 * * *"
+permissions:
+  contents: read
+concurrency:
+  group: sul-global-i18n-finance
+  cancel-in-progress: false
+jobs:
+  translate:
+    if: vars.I18N_AUTOMATION_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: i18n-automation
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.I18N_CONTENT_TOKEN }}
+          fetch-depth: 0
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - run: bun install --frozen-lockfile
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.I18N_STATE_REPOSITORY }}
+          ref: main
+          path: .i18n-private-state
+          token: ${{ secrets.I18N_STATE_TOKEN }}
+      - name: Protected continuous authorization
+        env:
+          AUTHORIZATION: ${{ secrets.I18N_CONTINUOUS_AUTHORIZATION }}
+        run: |
+          umask 077
+          printf '%s' "$AUTHORIZATION" > "$RUNNER_TEMP/i18n-authorization.json"
+      - name: Translate with durable checkpoints
+        env:
+          I18N_AUTOMATION_ENABLED: "true"
+          I18N_AUTO_ALLOW_PAID: "1"
+          I18N_AUTO_AUTHORIZATION_FILE: ${{ runner.temp }}/i18n-authorization.json
+          I18N_AUTO_STATE_REPOSITORY: ${{ vars.I18N_STATE_REPOSITORY }}
+          I18N_AUTO_STATE_CHECKOUT: ${{ github.workspace }}/.i18n-private-state
+          I18N_AUTO_STATE_TOKEN: ${{ secrets.I18N_STATE_TOKEN }}
+          I18N_OPERATIONS_CF_ACCOUNT_ID: ${{ secrets.I18N_CF_ACCOUNT_ID }}
+          I18N_OPERATIONS_CF_API_TOKEN: ${{ secrets.I18N_CF_API_TOKEN }}
+        run: bun run i18n:auto --apply
+      - run: bun run typecheck
+      - run: bun run lint --ignore-pattern '.i18n-private-state/**'
+      - run: bun test
+      - run: bun run build
+      - name: Propose technically validated editions; required CI controls merge
+        env:
+          GH_TOKEN: ${{ secrets.I18N_CONTENT_TOKEN }}
+        run: |
+          if [[ -z "$(git status --porcelain -- content/translations src/content/generated/translations.ts)" ]]; then exit 0; fi
+          while IFS= read -r path; do
+            case "$path" in
+              content/translations/en/*.mdx|content/translations/es/*.mdx|src/content/generated/translations.ts) ;;
+              *) echo 'Unexpected content diff; refusing publication.'; exit 1 ;;
+            esac
+          done < <(git diff --name-only; git ls-files --others --exclude-standard)
+          BRANCH="automation/i18n/${GITHUB_RUN_ID}"
+          git switch -c "$BRANCH"
+          git config user.name 'Sul Global Translation Automation'
+          git config user.email 'translation-automation@users.noreply.github.com'
+          git add -- content/translations/en content/translations/es src/content/generated/translations.ts
+          git diff --cached --check
+          git commit -m '[i18n-auto] update technically validated translations'
+          git push origin "HEAD:refs/heads/$BRANCH"
+          PR=$(gh pr create --base main --head "$BRANCH" --title '[i18n-auto] update translations' --body 'Automated translation with technical attestation; no human linguistic or scientific certification is claimed. Required CI must pass before merge.')
+          gh pr merge "$PR" --auto --merge

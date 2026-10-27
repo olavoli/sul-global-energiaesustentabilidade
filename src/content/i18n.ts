@@ -3,6 +3,7 @@ import { articleRecords } from "./generated/articles";
 import { translationRecords } from "./generated/translations";
 import {
   translatedArticlePath,
+  translationReviewAccepted,
   type ContentLocale,
   type TranslationLocale,
   type TranslationRecord,
@@ -31,9 +32,17 @@ export function publishedTranslations(
         !r.isDemo &&
         r.publishedAt &&
         r.publishedAt <= today &&
-        r.translationReview.status === "approved" &&
-        r.translationReview.reviewer &&
-        r.translationReview.reviewedAt &&
+        translationReviewAccepted(r) &&
+        (r.translationReview.status !== "automatic" ||
+          records.some(
+            (pair) =>
+              pair.locale !== r.locale &&
+              pair.translationOf === r.translationOf &&
+              pair.sourceRevision === r.sourceRevision &&
+              pair.status === "published" &&
+              pair.translationReview.status === "automatic" &&
+              pair.translationReview.automation?.runId === r.translationReview.automation?.runId,
+          )) &&
         originals.some((a) => a.slug === r.translationOf) &&
         authors[r.author]?.status === "verified",
     )
