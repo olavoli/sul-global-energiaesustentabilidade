@@ -1,3 +1,4 @@
+import { verifyPolicyRecord } from "./i18n-operations/editorial-policy-record";
 import { validateAutomaticRecord } from "./i18n-operations/automatic-attestation";
 import { createHash } from "node:crypto";
 import { readdir, readFile, mkdir, writeFile } from "node:fs/promises";
@@ -36,6 +37,7 @@ export async function generateTranslations(
       const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
       if (!match) throw new Error(`Frontmatter ausente: ${path}`);
       const record = validateAutomaticRecord(parse(match[1]), parsed.body);
+      await verifyPolicyRecord(root, source);
       if (record.locale !== locale || basename(name, ".mdx") !== record.slug)
         throw new Error(`Idioma/slug divergente: ${path}`);
       const original = originals.find((o) => o.frontmatter.slug === record.translationOf);

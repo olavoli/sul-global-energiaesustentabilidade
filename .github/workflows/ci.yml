@@ -47,6 +47,17 @@ jobs:
       - name: Real-cost pilot planning (offline, no credentials)
         run: bun run i18n:pilot
 
+      - name: Offline editorial translation policy demonstration
+        run: bun run i18n:editorial --articles o-que-e-potencia --demonstrate
+
+      - name: Upload editorial policy report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: i18n-editorial-policy-report
+          path: test-results/i18n-editorial-policy/**/report.json
+          retention-days: 14
+
       - name: Upload real-cost pilot plan
         if: always()
         uses: actions/upload-artifact@v4

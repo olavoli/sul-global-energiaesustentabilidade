@@ -162,7 +162,8 @@
     "i18n:operations": "bun run scripts/i18n-operations/run.ts",
     "i18n:operations:test": "bun test scripts/i18n-operations",
     "i18n:batch": "bun run scripts/i18n-operations/batch.ts",
-    "i18n:auto": "bun run scripts/i18n-operations/automatic-cli.ts"
+    "i18n:auto": "bun run scripts/i18n-operations/automatic-cli.ts",
+    "i18n:editorial": "bun run scripts/i18n-operations/editorial-policy-cli.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

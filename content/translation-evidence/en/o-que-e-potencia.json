@@ -1,0 +1,691 @@
+{
+  "version": "meaning-evidence-v1",
+  "locale": "en",
+  "sourceRevision": "5625ad973c09fd43954ade1c1b8775892c864a801393f76864db8553885247fa",
+  "targetBodyRevision": "998d50a9de731e7d7144da195375319648d6f4d86640e5ade28a971e9c17a318",
+  "method": "ai-assisted-grounded-comparison",
+  "humanReview": false,
+  "certification": false,
+  "findings": [
+    {
+      "id": "s0",
+      "sourceQuote": "Imagine dois elevadores idênticos levando a mesma carga do térreo ao décimo andar.",
+      "targetQuote": "Imagine two identical elevators carrying the same load from the ground floor to the tenth floor.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s1",
+      "sourceQuote": "Os dois partem da mesma altura e chegam ao mesmo destino. Desconsiderando diferenças de eficiência, a variação da energia potencial gravitacional da carga é a mesma nos dois casos.",
+      "targetQuote": "Both start from the same height and arrive at the same destination. Disregarding efficiency differences, the variation in gravitational potential energy of the load is the same in both cases.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: preservadas as distinções e condições sobre potência útil e eficiência; não é certificação científica.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s2",
+      "sourceQuote": "Mas existe uma diferença: um elevador realiza o percurso em 10 segundos, enquanto o outro leva 30 segundos.",
+      "targetQuote": "But there is a difference: one elevator makes the trip in 10 seconds, while the other takes 30 seconds.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: quantidades, unidades e condições do exemplo didático preservadas; não se apresentam medições experimentais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s3",
+      "sourceQuote": "O primeiro precisa transferir a mesma quantidade de energia em menos tempo. Por isso, desenvolve maior ",
+      "targetQuote": "The first one needs to transfer the same amount of energy in less time. Therefore, it develops greater ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s4",
+      "sourceQuote": "potência",
+      "targetQuote": "power",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s5",
+      "sourceQuote": ".",
+      "targetQuote": ".",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s6",
+      "sourceQuote": "A diferença essencial",
+      "targetQuote": "The essential difference",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s7",
+      "sourceQuote": "Energia está relacionada à quantidade transferida ou transformada. Potência indica quão rapidamente essa transferência ou transformação acontece.",
+      "targetQuote": "Energy is related to the quantity transferred or transformed. Power indicates how quickly this transfer or transformation occurs.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s8",
+      "sourceQuote": "O que é potência?",
+      "targetQuote": "What is power?",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s9",
+      "sourceQuote": "A potência média é a razão entre a quantidade de energia transferida ou transformada e o intervalo de tempo:",
+      "targetQuote": "Average power is the ratio between the amount of energy transferred or transformed and the time interval:",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s10",
+      "sourceQuote": "P = ΔE / Δt",
+      "targetQuote": "P = ΔE / Δt",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: equação e valores físicos mantidos; ponto/vírgula apenas localizam decimais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s11",
+      "sourceQuote": "Nessa relação, ",
+      "targetQuote": "In this relationship, ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s12",
+      "sourceQuote": "P",
+      "targetQuote": "P",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s13",
+      "sourceQuote": " representa a potência, ",
+      "targetQuote": " represents power, ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s14",
+      "sourceQuote": "ΔE",
+      "targetQuote": "ΔE",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s15",
+      "sourceQuote": " representa a variação de energia e ",
+      "targetQuote": " represents the energy variation and ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s16",
+      "sourceQuote": "Δt",
+      "targetQuote": "Δt",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s17",
+      "sourceQuote": " representa o intervalo de tempo.",
+      "targetQuote": " represents the time interval.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s18",
+      "sourceQuote": "No Sistema Internacional, a unidade de potência é o ",
+      "targetQuote": "In the International System, the unit of power is the ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s19",
+      "sourceQuote": "watt (W)",
+      "targetQuote": "watt (W)",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s20",
+      "sourceQuote": ":",
+      "targetQuote": ":",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s21",
+      "sourceQuote": "1 W = 1 J/s",
+      "targetQuote": "1 W = 1 J/s",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: equação e valores físicos mantidos; ponto/vírgula apenas localizam decimais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s22",
+      "sourceQuote": "Isso significa que um sistema operando a 1 watt transfere ou transforma energia à taxa de 1 joule por segundo.",
+      "targetQuote": "This means that a system operating at 1 watt transfers or transforms energy at a rate of 1 joule per second.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: quantidades, unidades e condições do exemplo didático preservadas; não se apresentam medições experimentais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s23",
+      "sourceQuote": "Um aparelho mais potente sempre utiliza mais energia?",
+      "targetQuote": "Does a more powerful device always use more energy?",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s24",
+      "sourceQuote": "Não necessariamente. O tempo de funcionamento também importa.",
+      "targetQuote": "Not necessarily. The operating time also matters.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s25",
+      "sourceQuote": "Considere dois aparelhos realizando a mesma tarefa:",
+      "targetQuote": "Consider two devices performing the same task:",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s26",
+      "sourceQuote": "aparelho A: 1 kW durante 1 hora;",
+      "targetQuote": "device A: 1 kW for 1 hour;",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: quantidades, unidades e condições do exemplo didático preservadas; não se apresentam medições experimentais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s27",
+      "sourceQuote": "aparelho B: 2 kW durante 30 minutos.",
+      "targetQuote": "device B: 2 kW for 30 minutes.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: quantidades, unidades e condições do exemplo didático preservadas; não se apresentam medições experimentais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s28",
+      "sourceQuote": "No primeiro caso, ",
+      "targetQuote": "In the first case, ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s29",
+      "sourceQuote": "E = 1 kW × 1 h = 1 kWh",
+      "targetQuote": "E = 1 kW × 1 h = 1 kWh",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: equação e valores físicos mantidos; ponto/vírgula apenas localizam decimais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s30",
+      "sourceQuote": ". No segundo, ",
+      "targetQuote": ". In the second case, ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s31",
+      "sourceQuote": "E = 2 kW × 0,5 h = 1 kWh",
+      "targetQuote": "E = 2 kW × 0.5 h = 1 kWh",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: equação e valores físicos mantidos; ponto/vírgula apenas localizam decimais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s32",
+      "sourceQuote": ".",
+      "targetQuote": ".",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s33",
+      "sourceQuote": "Os dois utilizam a mesma quantidade de energia, embora o segundo opere com o dobro da potência. Ele transfere essa energia em metade do tempo.",
+      "targetQuote": "Both use the same amount of energy, although the second operates with twice the power. It transfers this energy in half the time.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s34",
+      "sourceQuote": "Então o que é kWh?",
+      "targetQuote": "So what is kWh?",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s35",
+      "sourceQuote": "O ",
+      "targetQuote": "The ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s36",
+      "sourceQuote": "quilowatt (kW)",
+      "targetQuote": "kilowatt (kW)",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s37",
+      "sourceQuote": " é uma unidade de potência. O ",
+      "targetQuote": " is a unit of power. The ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s38",
+      "sourceQuote": "quilowatt-hora (kWh)",
+      "targetQuote": "kilowatt-hour (kWh)",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s39",
+      "sourceQuote": " é uma unidade de energia.",
+      "targetQuote": " is a unit of energy.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s40",
+      "sourceQuote": "E = P × t",
+      "targetQuote": "E = P × t",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: equação e valores físicos mantidos; ponto/vírgula apenas localizam decimais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s41",
+      "sourceQuote": "Assim, manter uma potência de 1 kW durante 1 hora corresponde a 1 kWh de energia. Como uma hora possui 3.600 segundos:",
+      "targetQuote": "Thus, maintaining a power of 1 kW for 1 hour corresponds to 1 kWh of energy. Since an hour has 3,600 seconds:",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: quantidades, unidades e condições do exemplo didático preservadas; não se apresentam medições experimentais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s42",
+      "sourceQuote": "1 kWh = 3,6 MJ",
+      "targetQuote": "1 kWh = 3.6 MJ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: equação e valores físicos mantidos; ponto/vírgula apenas localizam decimais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s43",
+      "sourceQuote": "É por isso que a conta de eletricidade registra o consumo em kWh. Ela contabiliza a energia associada à potência utilizada ao longo do tempo, não apenas a potência nominal dos aparelhos.",
+      "targetQuote": "That's why the electricity bill records consumption in kWh. It accounts for the energy associated with the power used over time, not just the nominal power of the devices.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s44",
+      "sourceQuote": "Chaleira opera com potência de um quilowatt durante uma hora, resultando em um quilowatt-hora de energia; a relação evidencia potência como taxa e energia como total acumulado no tempo",
+      "targetQuote": "A kettle operating with a power of one kilowatt for one hour results in one kilowatt-hour of energy; the relationship shows power as a rate and energy as the total accumulated over time",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s45",
+      "sourceQuote": "Figura 2. Potência é uma taxa; energia é o resultado dessa potência mantida durante determinado intervalo.",
+      "targetQuote": "Figure 2. Power is a rate; energy is the result of this power maintained during a certain interval.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: quantidades, unidades e condições do exemplo didático preservadas; não se apresentam medições experimentais.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s46",
+      "sourceQuote": "Potência está em toda parte",
+      "targetQuote": "Power is everywhere",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s47",
+      "sourceQuote": "A potência permite comparar a rapidez com que sistemas muito diferentes transferem ou transformam energia.",
+      "targetQuote": "Power allows comparing the speed at which very different systems transfer or transform energy.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s48",
+      "sourceQuote": "Um LED pode operar com poucos watts. Um eletrodoméstico pode exigir centenas ou milhares de watts. Um motor industrial pode trabalhar na escala de quilowatts ou megawatts, enquanto grandes unidades geradoras alcançam escalas ainda maiores.",
+      "targetQuote": "An LED can operate with a few watts. An appliance can require hundreds or thousands of watts. An industrial motor can work on the scale of kilowatts or megawatts, while large generating units reach even larger scales.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s49",
+      "sourceQuote": "A grandeza continua representando a mesma ideia: ",
+      "targetQuote": "The physical quantity still represents the same idea: ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s50",
+      "sourceQuote": "energia por unidade de tempo",
+      "targetQuote": "energy per unit of time",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s51",
+      "sourceQuote": ".",
+      "targetQuote": ".",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s52",
+      "sourceQuote": "Por isso, uma usina possui potência instalada expressa em MW, enquanto a energia gerada durante determinado período pode ser expressa em MWh ou GWh. A primeira medida indica a taxa de geração; a segunda, a quantidade gerada no intervalo considerado.",
+      "targetQuote": "Therefore, a plant has installed power expressed in MW, while the energy generated during a certain period can be expressed in MWh or GWh. The first measure indicates the generation rate; the second, the quantity generated in the considered interval.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s53",
+      "sourceQuote": "Potência também não é eficiência",
+      "targetQuote": "Power is not efficiency",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: preservadas as distinções e condições sobre potência útil e eficiência; não é certificação científica.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s54",
+      "sourceQuote": "Um equipamento mais potente não é necessariamente mais eficiente.",
+      "targetQuote": "A more powerful device is not necessarily more efficient.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: preservadas as distinções e condições sobre potência útil e eficiência; não é certificação científica.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s55",
+      "sourceQuote": "Potência",
+      "targetQuote": "Power",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s56",
+      "sourceQuote": " descreve uma taxa de transferência ou transformação de energia. ",
+      "targetQuote": " describes a rate of energy transfer or transformation. ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s57",
+      "sourceQuote": "Eficiência",
+      "targetQuote": "Efficiency",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: preservadas as distinções e condições sobre potência útil e eficiência; não é certificação científica.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s58",
+      "sourceQuote": " compara quanto da energia fornecida ao sistema resulta no efeito considerado útil.",
+      "targetQuote": " compares how much of the energy supplied to the system results in the considered useful effect.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s59",
+      "sourceQuote": "Dois motores podem fornecer a mesma potência mecânica de saída e apresentar eficiências diferentes. O menos eficiente precisará receber mais energia para oferecer o mesmo resultado útil.",
+      "targetQuote": "Two motors can provide the same mechanical output power and have different efficiencies. The less efficient one will need to receive more energy to offer the same useful result.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: preservadas as distinções e condições sobre potência útil e eficiência; não é certificação científica.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s60",
+      "sourceQuote": "Essa diferença está diretamente ligada ao conceito discutido em ",
+      "targetQuote": "This difference is directly related to the concept discussed in ",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s61",
+      "sourceQuote": "Por que nenhuma máquina é 100% eficiente?",
+      "targetQuote": "Why is no machine 100% efficient? (in Portuguese)",
+      "outcome": "equivalent",
+      "rationale": "Falso positivo documentado: nenhuma e no mantêm a negação da pergunta. O destino português permanece idêntico e seu idioma está identificado no rótulo.",
+      "resolvedSignals": ["negation-modality-mineral-caveat"]
+    },
+    {
+      "id": "s62",
+      "sourceQuote": ".",
+      "targetQuote": ".",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s63",
+      "sourceQuote": "Energia e potência contam histórias diferentes",
+      "targetQuote": "Energy and power tell different stories",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s64",
+      "sourceQuote": "Podemos resumir assim:",
+      "targetQuote": "We can summarize it like this:",
+      "outcome": "equivalent",
+      "rationale": "Falso positivo documentado: Podemos é um conector de síntese, traduzido como We can, sem introduzir hipótese técnica nem mudar a certeza da conclusão.",
+      "resolvedSignals": ["negation-modality-mineral-caveat"]
+    },
+    {
+      "id": "s65",
+      "sourceQuote": "Energia: quanto.",
+      "targetQuote": "Energy: how much.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s66",
+      "sourceQuote": "Potência: quão rápido.",
+      "targetQuote": "Power: how fast.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s67",
+      "sourceQuote": "Um reservatório pode armazenar uma grande quantidade de energia potencial e liberá-la lentamente. Outro sistema pode possuir menos energia disponível, mas transferi-la rapidamente e desenvolver grande potência durante um intervalo curto.",
+      "targetQuote": "A reservoir can store a large amount of potential energy and release it slowly. Another system can have less available energy, but transfer it quickly and develop great power during a short interval.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s68",
+      "sourceQuote": "Conhecer apenas a energia disponível não descreve completamente o comportamento de um sistema. Também precisamos saber em quanto tempo essa energia pode ser transferida ou transformada.",
+      "targetQuote": "Knowing only the available energy does not completely describe the behavior of a system. We also need to know over what time interval that energy can be transferred or transformed.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s69",
+      "sourceQuote": "Em resumo",
+      "targetQuote": "In summary",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s70",
+      "sourceQuote": "Potência mede a rapidez de uma transferência ou transformação de energia.",
+      "targetQuote": "Power measures the speed of an energy transfer or transformation.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s71",
+      "sourceQuote": "Um watt equivale a um joule por segundo.",
+      "targetQuote": "One watt is equal to one joule per second.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s72",
+      "sourceQuote": "Quilowatt é unidade de potência; quilowatt-hora é unidade de energia.",
+      "targetQuote": "Kilowatt is a unit of power; kilowatt-hour is a unit of energy.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s73",
+      "sourceQuote": "A energia utilizada depende tanto da potência quanto do tempo de funcionamento.",
+      "targetQuote": "The energy used depends on both power and operating time.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s74",
+      "sourceQuote": "Maior potência não significa, por si só, maior eficiência.",
+      "targetQuote": "Greater power does not mean, by itself, greater efficiency.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: preservadas as distinções e condições sobre potência útil e eficiência; não é certificação científica.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s75",
+      "sourceQuote": "Continue aprendendo",
+      "targetQuote": "Keep learning",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s76",
+      "sourceQuote": "O que é energia?",
+      "targetQuote": "What is energy? (in Portuguese)",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA do trecho no contexto integral: quantidade versus taxa, qualificações, atribuições e conclusão preservadas; sem revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "s77",
+      "sourceQuote": "Por que nenhuma máquina é 100% eficiente?",
+      "targetQuote": "Why is no machine 100% efficient? (in Portuguese)",
+      "outcome": "equivalent",
+      "rationale": "Falso positivo documentado: nenhuma e no mantêm a negação da pergunta. O destino português permanece idêntico e seu idioma está identificado no rótulo.",
+      "resolvedSignals": ["negation-modality-mineral-caveat"]
+    },
+    {
+      "id": "meta:title",
+      "sourceQuote": "O que é potência e por que ela não é a mesma coisa que energia?",
+      "targetQuote": "What is power and why is it not the same as energy?",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: metadado descreve o mesmo tema, relações físicas ou imagem, sem introduzir dados ou alegar revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "meta:subtitle",
+      "sourceQuote": "Energia indica quanto é transferido ou transformado; potência mostra a rapidez com que isso acontece.",
+      "targetQuote": "Energy indicates how much is transferred or transformed; power shows how fast it happens.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: metadado descreve o mesmo tema, relações físicas ou imagem, sem introduzir dados ou alegar revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "meta:excerpt",
+      "sourceQuote": "Entenda a diferença entre energia e potência, o significado de watt, quilowatt e quilowatt-hora e por que o tempo de funcionamento importa.",
+      "targetQuote": "Understand the difference between energy and power, the meaning of watt, kilowatt and kilowatt-hour, and why operating time matters.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: metadado descreve o mesmo tema, relações físicas ou imagem, sem introduzir dados ou alegar revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "meta:seoTitle",
+      "sourceQuote": "O que é potência? Diferença entre kW, kWh e energia",
+      "targetQuote": "What is power? Difference between kW, kWh and energy",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: metadado descreve o mesmo tema, relações físicas ou imagem, sem introduzir dados ou alegar revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "meta:seoDescription",
+      "sourceQuote": "Entenda potência, energia, watts, quilowatts e quilowatts-hora e descubra por que potência e consumo não são a mesma coisa.",
+      "targetQuote": "Understand power, energy, watts, kilowatts and kilowatt-hours and discover why power and consumption are not the same thing.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: metadado descreve o mesmo tema, relações físicas ou imagem, sem introduzir dados ou alegar revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "cover:alt",
+      "sourceQuote": "Dois elevadores levam cargas iguais à mesma altura, um em 10 segundos e outro em 30 segundos, demonstrando que a mesma transferência de energia pode ocorrer com potências diferentes",
+      "targetQuote": "Two elevators lift equal loads to the same height, one in 10 seconds and the other in 30 seconds, demonstrating that the same energy transfer can occur with different power levels",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: metadado descreve o mesmo tema, relações físicas ou imagem, sem introduzir dados ou alegar revisão humana.",
+      "resolvedSignals": []
+    },
+    {
+      "id": "cover:caption",
+      "sourceQuote": "Figura 1. Para a mesma carga e a mesma altura, realizar a tarefa em menos tempo exige maior potência.",
+      "targetQuote": "Figure 1. For the same load and the same height, performing the task in less time requires more power.",
+      "outcome": "equivalent",
+      "rationale": "Comparação assistida por IA: metadado descreve o mesmo tema, relações físicas ou imagem, sem introduzir dados ou alegar revisão humana.",
+      "resolvedSignals": []
+    }
+  ]
+}

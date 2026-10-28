@@ -80,8 +80,9 @@ export async function request(
   credentials: { account: string; token: string },
   transport: Transport = fetch,
   freeOnly = false,
+  assessmentPayload?: ReturnType<typeof payload>,
 ) {
-  const body = JSON.stringify(payload(chunk, locale));
+  const body = JSON.stringify(assessmentPayload ?? payload(chunk, locale));
   const response = await guard("request", "attempted-unconfirmed", () =>
     transport(
       `https://api.cloudflare.com/client/v4/accounts/${credentials.account}/ai/run/${models.cloudflare}`,

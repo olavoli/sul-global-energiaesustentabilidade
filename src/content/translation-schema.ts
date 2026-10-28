@@ -23,19 +23,34 @@ export const translationSchema = articleFrontmatterSchema
           policyId: z.string().regex(/^[a-f0-9]{64}$/),
           runId: z.string().regex(/^[a-f0-9]{64}$/),
           model: z.literal("@cf/meta/llama-3.3-70b-instruct-fp8-fast"),
-          validator: z.literal("operations-technical-v1"),
+          validator: z.enum(["operations-technical-v1", "operations-editorial-policy-v1"]),
+          meaningRevision: z
+            .string()
+            .regex(/^[a-f0-9]{64}$/)
+            .optional(),
           codeRevision: z.string().regex(/^[a-f0-9]{64}$/),
           sourceRevision: z.string().regex(/^[a-f0-9]{64}$/),
           targetRevision: z.string().regex(/^[a-f0-9]{64}$/),
           validatedAt: z.iso.datetime(),
           scope: z.literal("technical-only"),
-          checks: z.tuple([
-            z.literal("mdx"),
-            z.literal("numbers"),
-            z.literal("formulas"),
-            z.literal("links"),
-            z.literal("references"),
-            z.literal("metadata"),
+          checks: z.union([
+            z.tuple([
+              z.literal("mdx"),
+              z.literal("numbers"),
+              z.literal("formulas"),
+              z.literal("links"),
+              z.literal("references"),
+              z.literal("metadata"),
+            ]),
+            z.tuple([
+              z.literal("mdx"),
+              z.literal("numbers"),
+              z.literal("formulas"),
+              z.literal("links"),
+              z.literal("references"),
+              z.literal("metadata"),
+              z.literal("meaning"),
+            ]),
           ]),
         })
         .optional(),
@@ -50,6 +65,16 @@ export const translationSchema = articleFrontmatterSchema
         code: "custom",
         path: ["translationReview"],
         message: "Atestação automática não pode declarar revisor humano.",
+      });
+    if (
+      article.translationReview.automation?.validator === "operations-editorial-policy-v1" &&
+      (!article.translationReview.automation.meaningRevision ||
+        article.translationReview.automation.checks.at(-1) !== "meaning")
+    )
+      context.addIssue({
+        code: "custom",
+        path: ["translationReview"],
+        message: "Política automática exige evidência de significado vinculada.",
       });
     if (article.canonicalUrl !== translatedArticlePath(article.locale, article.slug)) {
       context.addIssue({

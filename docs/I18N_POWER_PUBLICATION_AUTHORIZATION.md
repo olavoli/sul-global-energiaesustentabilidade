@@ -40,3 +40,7 @@ Validações do registro e das notas: content:generate, 12 testes focados, typec
 O resultado anterior “briefing ausente” permanece como evidência histórica, mas não é mais pendência atual. Foi criado content/research/o-que-e-potencia.yml, retrospectivo e com quatro consultas documentais reais desta etapa. Validador e dry-runs draft → review EN/ES aprovados. Os dois registros foram preparados tecnicamente em draftStage review-ready, mantendo status draft, translationReview pending e ausência de reviewer/reviewedAt. Nenhuma transição foi aplicada.
 
 O bloqueio humano continua: o roteiro docs/I18N_POWER_HUMAN_REVIEW.md deve ser efetivamente conferido e preenchido pelo revisor real, com data, escopo e resultado por idioma. Autorização de publicação e aceitação dos riscos já estão registradas e não são solicitadas novamente.
+
+## Política posterior autorizada — modalidade automática separada
+
+A instrução posterior do responsável autoriza o caminho `automatic-ai-assisted`, documentado em `docs/I18N_AUTOMATIC_EDITORIAL_POLICY.md`. O roteiro humano acima continua válido para o caminho manual, mas não é uma exigência universal da nova modalidade. Não houve revisão humana nem preenchimento de reviewer/reviewedAt. A demonstração por política usa evidências assistidas por IA e arquivos isolados; os drafts atuais e o estado de produção não foram alterados.

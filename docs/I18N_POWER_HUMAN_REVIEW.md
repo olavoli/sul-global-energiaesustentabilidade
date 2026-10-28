@@ -54,3 +54,7 @@ O teste da etapa seguinte expôs um defeito de serialização da CLI: adicionar 
 ### Resultado final da preparação
 
 Validador oficial do briefing: exit 0. Dry-runs oficiais EN/ES draft → review: exit 0, sem --apply. Regressões relevantes (incluindo CLI JSON com/sem vírgula final e manutenção do bloqueio humano): 83 testes aprovados, zero falhas; typecheck, lint pertinente e git diff --check aprovados. A suíte oficial do CI é acompanhada no PR #15, sem reutilizar esses resultados como revisão humana.
+
+## Política posterior autorizada — modalidade automática separada
+
+A instrução posterior do responsável autoriza o caminho `automatic-ai-assisted`, documentado em `docs/I18N_AUTOMATIC_EDITORIAL_POLICY.md`. O roteiro humano acima continua válido para o caminho manual, mas não é uma exigência universal da nova modalidade. Não houve revisão humana nem preenchimento de reviewer/reviewedAt. A demonstração por política usa evidências assistidas por IA e arquivos isolados; os drafts atuais e o estado de produção não foram alterados.
