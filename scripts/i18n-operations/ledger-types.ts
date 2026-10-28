@@ -19,6 +19,7 @@ export const eventSchema = z
       "batch-cancel",
       "automatic-authorize",
       "automatic-reserve",
+      "free-quota-reserve",
     ]),
     run: z.string(),
     data: z.record(z.string(), z.unknown()),
@@ -40,6 +41,7 @@ export interface Run {
   usage: Set<string>;
   batch?: string;
   authorization?: string;
+  executionMode?: "free-only";
 }
 export interface Book {
   events: Event[];
