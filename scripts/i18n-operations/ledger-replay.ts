@@ -1,3 +1,4 @@
+import { validateFreeReservation, freePolicy } from "./free-policy";
 import { eventSchema, money, type Event, type Book, type Run } from "./ledger-types";
 import { batchPlanSchema, batchRunId } from "./batch-schema";
 import { fingerprint, type Pool } from "./policy";
@@ -112,6 +113,12 @@ export function replay(events: Event[]): Book {
       continue;
     }
 
+    if (e.kind === "free-quota-reserve") {
+      if (!r || r.executionMode !== "free-only" || !["reserved", "running"].includes(r.state))
+        throw Error("free-reservation-invalid");
+      validateFreeReservation(events, e);
+      continue;
+    }
     if (e.kind === "reserve") {
       if (
         r ||
@@ -147,6 +154,7 @@ export function replay(events: Event[]): Book {
         reserved,
       );
       runs.set(e.run, {
+        ...(d.executionMode === "free-only" ? { executionMode: "free-only" as const } : {}),
         id: e.run,
         article: d.article,
         month: String(d.month),
@@ -167,6 +175,22 @@ export function replay(events: Event[]): Book {
       r.state = "reserved";
     }
     if (e.kind === "dispatch") {
+      if (r.executionMode === "free-only") {
+        const quota = events
+          .slice(0, e.sequence - 1)
+          .reverse()
+          .find(
+            (x) => x.kind === "free-quota-reserve" && x.run === e.run && x.data.call === d.call,
+          );
+        if (
+          !quota ||
+          quota.data.day !== e.at.slice(0, 10) ||
+          new Date(e.at).getTime() -
+            new Date(String((quota.data.snapshot as { asOf: string }).asOf)).getTime() >
+            freePolicy.maximumAgeMs
+        )
+          throw Error("free-dispatch-unreserved");
+      }
       if (r.authorization) {
         const auth = events
           .slice(0, e.sequence - 1)

@@ -1,5 +1,6 @@
+import { copyStateChecked } from "./state-copy";
 import type { Transport } from "../i18n-real-pilot/adapters";
-import { readFile, mkdir, cp, readdir, lstat } from "node:fs/promises";
+import { readFile, mkdir, cp, lstat } from "node:fs/promises";
 import { join, resolve, basename } from "node:path";
 import { spawnSync } from "node:child_process";
 import { loadBook } from "./ledger";
@@ -21,14 +22,14 @@ export class PrivateGitState {
     }
     if (repo !== this.repository) throw Error("automatic-private-state-unverified");
   }
-  private git(args: string[]) {
+  private git(args: string[], raw = false) {
     const r = spawnSync("git", args, {
       cwd: this.checkout,
       encoding: "utf8",
       stdio: ["ignore", "pipe", "pipe"],
     });
     if (r.status !== 0) throw Error("state-persistence-failed");
-    return r.stdout.trim();
+    return raw ? r.stdout : r.stdout.trim();
   }
   async restore(root: string, anchor: string) {
     this.originMatches();
@@ -54,32 +55,32 @@ export class PrivateGitState {
   async persist(directory: string) {
     try {
       this.originMatches();
-      await loadBook(directory);
+      const expected = await loadBook(directory);
       const target = join(this.checkout, "operations");
       await mkdir(target, { recursive: true });
-      for (const name of await readdir(directory)) {
-        if (name === "lock" || name.endsWith(".pending")) continue;
-        await cp(join(directory, name), join(target, name), {
-          recursive: true,
-          filter: async (src) => {
-            if ((await lstat(src)).isSymbolicLink()) throw Error("state-persistence-failed");
-            return basename(src) !== "lock" && !basename(src).endsWith(".pending");
-          },
-        });
-      }
+      await copyStateChecked(directory, target);
+      if ((await loadBook(target)).digest !== expected.digest)
+        throw Error("state-persistence-failed");
       this.git(["add", "--", "operations"]);
       const changed = spawnSync("git", ["diff", "--cached", "--quiet"], { cwd: this.checkout });
-      if (changed.status === 0) return;
-      if (changed.status !== 1) throw Error("state-persistence-failed");
-      this.git([
-        "-c",
-        "user.name=Sul Global Translation Automation",
-        "-c",
-        "user.email=translation-automation@users.noreply.github.com",
-        "commit",
-        "-m",
-        "chore(i18n-state): persist checkpoint",
-      ]);
+      if (![0, 1].includes(changed.status ?? -1)) throw Error("state-persistence-failed");
+      if (changed.status === 1)
+        this.git([
+          "-c",
+          "user.name=Sul Global Translation Automation",
+          "-c",
+          "user.email=translation-automation@users.noreply.github.com",
+          "commit",
+          "-m",
+          "chore(i18n-state): persist checkpoint",
+        ]);
+      for (const name of ["ledger.json", "head"]) {
+        if (
+          this.git(["show", `HEAD:operations/${name}`], true) !==
+          (await readFile(join(directory, name), "utf8"))
+        )
+          throw Error("state-persistence-failed");
+      }
       this.git(["push", "origin", "HEAD:main"]);
       const head = this.git(["rev-parse", "HEAD"]),
         remote = this.git(["ls-remote", "origin", "refs/heads/main"]).split(/\s/)[0];
