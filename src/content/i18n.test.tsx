@@ -29,12 +29,14 @@ import { editorialMdxComponents } from "@/components/editorial/mdx-components";
 import { parseEditorialFile } from "../../scripts/generate-content";
 import { publishCheck } from "../../scripts/editorial-operations";
 
-const records: readonly TranslationRecord[] = translationRecords;
 const original = "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1";
+const records: readonly TranslationRecord[] = translationRecords.filter(
+  (record) => record.translationOf === original,
+);
 const ptSource = readFileSync(`content/articles/${original}.mdx`, "utf8").replace(/\r\n/g, "\n");
 const pt = parseEditorialFile(ptSource);
 // Approved records below are in-memory fixtures only, never persisted or exposed by routes.
-const approved: TranslationRecord[] = translationRecords.map((record) =>
+const approved: TranslationRecord[] = records.map((record) =>
   translationSchema.parse({
     ...record,
     status: "published",
@@ -51,7 +53,7 @@ const approved: TranslationRecord[] = translationRecords.map((record) =>
 test("PT mantém URL e conteúdo; EN/ES são drafts completos fora das rotas públicas", () => {
   expect(getPublishedArticles().some((a) => a.slug === original)).toBe(true);
   expect(pt.frontmatter.canonicalUrl).toBe(`/artigo/${original}`);
-  expect(translationRecords).toHaveLength(2);
+  expect(records).toHaveLength(2);
   for (const record of records) {
     expect(record.status).toBe("draft");
     expect(record.sourceRevision).toBe(createHash("sha256").update(ptSource).digest("hex"));
