@@ -1,3 +1,6 @@
+import { readFileSync } from "node:fs";
+import { parse } from "yaml";
+import { translationSchema } from "../../src/content/translation-schema";
 import { test, expect } from "@playwright/test";
 const paths = {
   "pt-BR": "/artigo/o-que-e-potencia",
@@ -77,14 +80,38 @@ for (const [locale, path] of Object.entries(paths)) {
     if (locale !== "pt-BR") {
       const note = page.locator("#ai-transparency-title").locator("..");
       await expect(note).toContainText("Cloudflare Workers AI (Meta Llama 3.3 70B)");
-      await expect(note).toContainText(
-        locale === "en"
-          ? "Human editorial review is pending"
-          : "La revisión editorial humana está pendiente",
-      );
-      await expect(note).toContainText(
-        locale === "en" ? "this draft remains unpublished" : "este borrador permanece sin publicar",
-      );
+      const raw = readFileSync(`content/translations/${locale}/o-que-e-potencia.mdx`, "utf8");
+      const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!match) throw Error("Missing translation metadata");
+      const record = translationSchema.parse(parse(match[1]));
+      if (record.translationReview.status === "automatic") {
+        expect(record.status).toBe("published");
+        expect(record.translationReview.reviewer).toBeUndefined();
+        expect(record.translationReview.reviewedAt).toBeUndefined();
+        expect(record.translationReview.automation?.validator).toBe(
+          "operations-editorial-policy-v1",
+        );
+        await expect(note).toContainText(
+          locale === "en"
+            ? "automatic translation editorial policy"
+            : "política editorial de traducción automática",
+        );
+        await expect(note).not.toContainText(
+          locale === "en" ? "review is pending" : "está pendiente",
+        );
+      } else {
+        expect(record.status).toBe("draft");
+        await expect(note).toContainText(
+          locale === "en"
+            ? "Human editorial review is pending"
+            : "La revisión editorial humana está pendiente",
+        );
+        await expect(note).toContainText(
+          locale === "en"
+            ? "this draft remains unpublished"
+            : "este borrador permanece sin publicar",
+        );
+      }
       await expect(note).toContainText(
         locale === "en" ? "Publication was authorized" : "autorizó su publicación",
       );

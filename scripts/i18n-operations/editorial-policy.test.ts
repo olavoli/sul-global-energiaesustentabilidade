@@ -1,3 +1,4 @@
+import { pendingTranslationFixture } from "./pending-fixture.test";
 import { test, expect } from "bun:test";
 import { cp, readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { join } from "node:path";
@@ -32,6 +33,10 @@ async function setup(fn: (dir: string) => Promise<void>) {
     ]) {
       await mkdir(join(dir, path, ".."), { recursive: true });
       await cp(join(root, path), join(dir, path), { recursive: true });
+    }
+    for (const locale of ["en", "es"]) {
+      const file = join(dir, "content/translations", locale, slug + ".mdx");
+      await writeFile(file, pendingTranslationFixture(await readFile(file, "utf8")));
     }
     await fn(dir);
   });

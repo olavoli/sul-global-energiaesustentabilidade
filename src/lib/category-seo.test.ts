@@ -1,3 +1,4 @@
+import { resolveCanonical } from "./seo";
 import { expect, test } from "bun:test";
 import { articleRecords } from "@/content/generated/articles";
 import { createContentRepository } from "@/content/repository";
@@ -42,7 +43,7 @@ test("sitemap acompanha a primeira publicação e a remoção da última em qual
   const article = articles[0];
   if (!article) throw new Error("É necessário um artigo publicado para a fixture de distribuição.");
   for (const target of categories) {
-    const path = `/categoria/${target.slug}</loc>`;
+    const path = `${resolveCanonical(`/categoria/${target.slug}`)}</loc>`;
     expect(generateSitemap([])).not.toContain(path);
     expect(generateSitemap([{ ...article, category: target.slug }])).toContain(path);
   }
@@ -51,7 +52,7 @@ test("sitemap acompanha a primeira publicação e a remoção da última em qual
 test("acervo real mantém somente categorias preenchidas no sitemap e preserva artigos", () => {
   const sitemap = generateSitemap(articles);
   for (const target of categories) {
-    const path = `/categoria/${target.slug}</loc>`;
+    const path = `${resolveCanonical(`/categoria/${target.slug}`)}</loc>`;
     expect(sitemap.includes(path)).toBe(
       articles.some((article) => article.category === target.slug),
     );

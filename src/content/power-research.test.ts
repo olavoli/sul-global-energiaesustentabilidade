@@ -1,3 +1,4 @@
+import { pendingTranslationFixture } from "../../scripts/i18n-operations/pending-fixture.test";
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import {
@@ -32,12 +33,13 @@ test("retrospective power research brief satisfies the existing schema with the 
   expect(brief.imageRequirements.height).toBe(original.frontmatter.cover.height);
 });
 
-test("real EN/ES drafts can simulate review without mutation, but human approval still blocks approved/publication", async () => {
+test("manual-mode EN/ES copies can simulate review without mutation, but human approval still blocks approved/publication", async () => {
   const research = evaluateResearch(await loadResearchBrief(slug));
   const context = { now: new Date(), officialProduction: true };
   for (const locale of ["en", "es"] as const) {
     const file = `content/translations/${locale}/${slug}.mdx`;
-    const source = readFileSync(file, "utf8");
+    const originalBytes = readFileSync(file, "utf8");
+    const source = pendingTranslationFixture(originalBytes);
     const current = translationSchema.parse(parseEditorialFile(source).frontmatter);
     expect(current.status).toBe("draft");
     expect(current.draftStage).toBe("review-ready");
@@ -56,6 +58,6 @@ test("real EN/ES drafts can simulate review without mutation, but human approval
     expect(publishCheck(current, context).blockers).toContain(
       "Tradução aguarda revisão editorial humana identificada.",
     );
-    expect(readFileSync(file, "utf8")).toBe(source);
+    expect(readFileSync(file, "utf8")).toBe(originalBytes);
   }
 });

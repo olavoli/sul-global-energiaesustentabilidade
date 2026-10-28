@@ -78,7 +78,7 @@ test("IDs, localized labels and slugs are unique and malformed/duplicate definit
 });
 test("published language-specific membership drives categories/tags; drafts never count", () => {
   for (const locale of ["en", "es"] as const) {
-    const empty = taxonomyTopics(locale).find((t) => t.term.sourceKey === "potência");
+    const empty = taxonomyTopics(locale, []).find((t) => t.term.sourceKey === "potência");
     expect(empty?.articles).toHaveLength(0);
     const topics = taxonomyTopics(locale, approved);
     const tag = topics.find((t) => t.term.sourceKey === "potência");
@@ -188,8 +188,8 @@ test("topic language switcher uses equivalent paths and labels a missing transla
 });
 test("unknown/empty tags return 404, empty categories stay valid, PT aliases preserve query in 301", () => {
   expect(() => loadTaxonomy("en", "tag", "invented")).toThrow();
-  expect(() => loadTaxonomy("en", "tag", "power")).toThrow();
-  expect(loadTaxonomy("en", "category", "development").articles).toHaveLength(0);
+  expect(() => loadTaxonomy("en", "tag", "power", "", [])).toThrow();
+  expect(loadTaxonomy("en", "category", "development", "", []).articles).toHaveLength(0);
   try {
     loadTaxonomy("en", "category", "energia", "?q=test", approved);
     throw Error("redirect missing");

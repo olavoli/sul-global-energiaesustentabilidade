@@ -1,3 +1,4 @@
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { describe, expect, test } from "bun:test";
 import { mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -143,7 +144,12 @@ describe("offline scientific translation safeguards", () => {
     expect(brief).toContain("pending");
     for (const locale of ["en", "es"]) {
       const names = await readdir(`content/translations/${locale}`);
-      const name = names.find((n) => n.endsWith(".mdx"));
+      let name: string | undefined;
+      for (const candidate of names.filter((n) => n.endsWith(".mdx"))) {
+        const raw = await readFile(`content/translations/${locale}/${candidate}`, "utf8");
+        const record = parseEditorialFile(raw).frontmatter;
+        if ("translationOf" in record && record.translationOf === slug) name = candidate;
+      }
       expect(name).toBeDefined();
       if (!name) throw new Error("Missing translation fixture");
       const translation = await readFile(`content/translations/${locale}/${name}`, "utf8");
