@@ -10,6 +10,25 @@ export type Stage =
   | "write"
   | "complete-record";
 export type Dispatch = "not-attempted" | "attempted-unconfirmed" | "response-received";
+const freeCodes = [
+  "free-plan-confirmation-required",
+  "free-analytics-auth-rejected",
+  "free-provider-rate-limited",
+  "free-model-requires-paid",
+  "translation-locales-invalid",
+  "free-quota-unverifiable",
+  "free-quota-stale",
+  "free-quota-exhausted",
+  "free-account-mismatch",
+  "free-reservation-invalid",
+  "free-quota-source-required",
+  "free-paid-mode-conflict",
+  "free-mode-mismatch",
+  "free-dispatch-unreserved",
+  "free-usage-unverifiable",
+  "free-analytics-unavailable",
+  "execution-mode-invalid",
+];
 const systemCodes = new Set([
   "EACCES",
   "EPERM",
@@ -135,6 +154,7 @@ export interface Diagnostic {
   dispatch: Dispatch;
   billingStatus: "unknown" | "unconfirmed";
   httpStatus?: number;
+  providerCode?: number;
   systemCode?: string;
   segment?: string;
   failureRecordCode?: string;
@@ -162,7 +182,7 @@ export function failure(
   let code =
     stage === "source" && Object.hasOwn(sourceAliases, message)
       ? sourceAliases[message]
-      : known.has(message)
+      : known.has(message) || freeCodes.includes(message)
         ? message
         : stage === "request"
           ? "provider-network-error"
@@ -203,12 +223,18 @@ export async function guard<T>(stage: Stage, dispatch: Dispatch, fn: () => Promi
     throw failure(e, stage, dispatch);
   }
 }
-export function providerError(code: string, dispatch: Dispatch, httpStatus?: number) {
+export function providerError(
+  code: string,
+  dispatch: Dispatch,
+  httpStatus?: number,
+  providerCode?: number,
+) {
   return new OperationError({
     code,
     stage: "request",
     dispatch,
     billingStatus: dispatch === "not-attempted" ? "unconfirmed" : "unknown",
     ...(httpStatus === undefined ? {} : { httpStatus }),
+    ...(providerCode === undefined ? {} : { providerCode }),
   });
 }

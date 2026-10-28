@@ -79,6 +79,7 @@ export async function request(
   locale: Locale,
   credentials: { account: string; token: string },
   transport: Transport = fetch,
+  freeOnly = false,
 ) {
   const body = JSON.stringify(payload(chunk, locale));
   const response = await guard("request", "attempted-unconfirmed", () =>
@@ -96,6 +97,34 @@ export async function request(
       },
     ),
   );
+  if (!response.ok && freeOnly) {
+    let providerCode: number | undefined;
+    try {
+      const text = await response.text();
+      if (text.length <= 65536) {
+        const parsed = z
+          .object({ errors: z.array(z.object({ code: z.number().int() })) })
+          .safeParse(JSON.parse(text));
+        if (parsed.success) providerCode = parsed.data.errors[0]?.code;
+      }
+    } catch {
+      /* Never expose error bodies. */
+    }
+    if (response.status === 429)
+      throw providerError(
+        providerCode === 3036 ? "free-quota-exhausted" : "free-provider-rate-limited",
+        "response-received",
+        429,
+        providerCode,
+      );
+    if (providerCode === 5035)
+      throw providerError(
+        "free-model-requires-paid",
+        "response-received",
+        response.status,
+        providerCode,
+      );
+  }
   if (!response.ok)
     throw providerError(
       response.status === 401 || response.status === 403

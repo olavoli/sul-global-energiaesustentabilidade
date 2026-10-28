@@ -4,12 +4,15 @@ import { parseArgs } from "node:util";
 import { summary, reconcile, confirmBilling } from "./operations-finance";
 import { loadBook } from "./ledger";
 import { plan, execute } from "./run";
+import { executionMode } from "./free-policy";
+import { cloudflareFreeQuota } from "./free-provider";
 import type { Pool } from "./policy";
 export async function main() {
   const { values: v } = parseArgs({
     options: {
       article: { type: "string" },
       execute: { type: "boolean" },
+      language: { type: "string" },
       "authorize-plan": { type: "string" },
       pool: { type: "string", default: "regular" },
       "authorize-contingency": { type: "string" },
@@ -62,13 +65,36 @@ export async function main() {
   if (!v.article || !["regular", "contingency"].includes(v.pool))
     throw new Error("article-and-valid-pool-required");
   const pool = v.pool as Pool;
+  const mode = executionMode(process.env.I18N_EXECUTION_MODE);
+  if (v.language && (mode !== "free-only" || !["en", "es"].includes(v.language)))
+    throw Error("translation-locales-invalid");
+  const locales = v.language ? [v.language as "en" | "es"] : undefined;
   if (!v.execute) {
-    console.log(JSON.stringify(await plan(root, v.article, pool), null, 2));
+    const financial = await plan(root, v.article, pool, new Date(), locales);
+    console.log(
+      JSON.stringify(
+        mode === "free-only"
+          ? {
+              ...financial,
+              executionMode: mode,
+              locales,
+              executionAllowed: false,
+              freeQuota: "requires-free-plan-confirmation-and-provider-hard-stop",
+            }
+          : financial,
+        null,
+        2,
+      ),
+    );
     return;
   }
   const account = process.env.I18N_OPERATIONS_CF_ACCOUNT_ID,
     token = process.env.I18N_OPERATIONS_CF_API_TOKEN;
   if (!account || !token) throw new Error("credentials-required");
+  const confirmation =
+    mode === "free-only" && process.env.I18N_FREE_PLAN_CONFIRMATION_FILE
+      ? JSON.parse(await readFile(process.env.I18N_FREE_PLAN_CONFIRMATION_FILE, "utf8"))
+      : undefined;
   console.log(
     JSON.stringify(
       await execute(root, v.article, {
@@ -77,6 +103,11 @@ export async function main() {
         paid: process.env.I18N_OPERATIONS_ALLOW_PAID,
         contingency: v["authorize-contingency"],
         credentials: { account, token },
+        executionMode: mode,
+        locales,
+        ...(mode === "free-only"
+          ? { freeQuota: cloudflareFreeQuota({ account, token }, undefined, confirmation) }
+          : {}),
       }),
     ),
   );
