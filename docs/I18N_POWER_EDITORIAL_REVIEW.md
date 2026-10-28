@@ -115,3 +115,13 @@ PR #14 permanece independente, aberto, pronto para revisão/integração e com s
 ## Atualização de integração
 
 O registro anterior de PR #14 aberto é histórico. Ele foi integrado por squash na main em ee65f131a71e3a957b2a681116b87dccd909a156, sem bypass de quality/visual. A branch do PR #15 recebeu essa main por merge normal, sem conflitos, sem alterar os drafts ou as sete ressalvas. A checklist para a decisão humana está em [I18N_POWER_EDITORIAL_APPROVAL_CHECKLIST.md](I18N_POWER_EDITORIAL_APPROVAL_CHECKLIST.md). Os resultados de 1.075 testes / 24 casos visuais dos commits anteriores continuam evidência histórica, não aprovação automática do código integrado.
+
+## Indicador da edição no rodapé — correção objetiva
+
+O texto estático “Publicado em português brasileiro” foi removido das edições EN/ES: agora mostram “English edition.” e “Edición en español.”. A forma evita alegar que um draft está publicado. PT conserva o texto original. O componente reutiliza EditorialLocaleContext, compatível com SSR e navegação, sem consultar window ou inferir idioma de forma independente. O conteúdo auxiliar PT do footer e os rótulos localizados têm atributos lang correspondentes. O feed /rss.xml continua PT; os rótulos EN/ES indicam explicitamente esse idioma, sem mudar o destino.
+
+Conferidos HTML lang, idioma do artigo, seletor, metadados/canonical, Open Graph e JSON-LD: não foi encontrado outro indicador que identifique incorretamente a edição do artigo. O shell auxiliar em português continua fora do escopo de tradução integral. Rascunhos, dados científicos, links PT identificados, imagens com alt/legendas localizados e sete avisos preservados. A checklist foi atualizada sem registrar aprovação humana.
+
+A suíte visual passa a conferir o novo texto inclusive após troca de idioma e anexa uma captura adicional do rodapé por caso; são 72 capturas individuais na nova execução, sem substituir as 60 capturas históricas ou aprovar baselines.
+
+Validação deste ajuste: 16 testes focados (incluindo SSR do rodapé), typecheck, lint pertinente, diff-check e 12 casos visuais PT/EN/ES aprovados. As capturas adicionais confirmam o idioma da edição e do feed, sem cortes no rodapé. CI obrigatório será conferido no HEAD atualizado do PR #15.

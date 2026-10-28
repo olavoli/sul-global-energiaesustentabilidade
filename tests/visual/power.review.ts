@@ -28,6 +28,23 @@ for (const [locale, path] of Object.entries(paths)) {
     expect(response?.headers()["cache-control"]).toBe("no-store");
     await expect(page.locator("article")).toHaveAttribute("lang", locale);
     await expect(page.locator("article h1")).toBeVisible();
+    await expect(page.locator("html")).toHaveAttribute("lang", locale);
+    await expect(page.locator("footer")).toHaveAttribute("lang", "pt-BR");
+    const edition = page.locator("footer p[lang]");
+    const editionLabel =
+      locale === "en"
+        ? "English edition."
+        : locale === "es"
+          ? "Edición en español."
+          : "Publicado em português brasileiro.";
+    await expect(edition).toHaveAttribute("lang", locale);
+    await expect(edition).toHaveText(editionLabel);
+    if (locale !== "pt-BR") {
+      await expect(page.locator("footer")).not.toContainText("Publicado em português brasileiro.");
+      await expect(page.locator('footer a[href="/rss.xml"]')).toHaveText(
+        locale === "en" ? "RSS (Portuguese)" : "RSS (portugués)",
+      );
+    }
     await expect(
       page.getByRole("heading", {
         name: locale === "en" ? "References" : locale === "es" ? "Referencias" : "Referências",
@@ -128,6 +145,8 @@ for (const [locale, path] of Object.entries(paths)) {
     await capture("equations");
     await page.locator("#ai-transparency-title").scrollIntoViewIfNeeded();
     await capture("transparency");
+    await edition.scrollIntoViewIfNeeded();
+    await capture("edition-language");
     await page.evaluate(() => window.scrollTo(0, 0));
     const summary = page.locator("header summary");
     await summary.focus();
@@ -151,6 +170,14 @@ for (const [locale, path] of Object.entries(paths)) {
       else await link.click();
       await expect(page).toHaveURL(new RegExp(destination + "$"));
       await expect(page.locator("article")).toHaveAttribute("lang", language);
+      await expect(edition).toHaveAttribute("lang", language);
+      await expect(edition).toHaveText(
+        language === "en"
+          ? "English edition."
+          : language === "es"
+            ? "Edición en español."
+            : "Publicado em português brasileiro.",
+      );
     }
     expect(await page.locator("iframe").count()).toBe(0);
     expect(errors).toEqual([]);
