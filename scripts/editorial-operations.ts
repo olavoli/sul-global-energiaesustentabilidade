@@ -205,9 +205,11 @@ function setYamlField(source: string, field: string, value: string): string {
   } else if (header.trimStart().startsWith("{")) {
     const end = header.lastIndexOf("}");
     const newline = header.includes("\r\n") ? "\r\n" : "\n";
+    const prefix = header.slice(0, end).trimEnd();
+    const separator = prefix.endsWith(",") ? "" : ",";
     updated =
-      header.slice(0, end).trimEnd() +
-      `,${newline}  ${JSON.stringify(field)}: ${JSON.stringify(value)}${newline}` +
+      prefix +
+      `${separator}${newline}  ${JSON.stringify(field)}: ${JSON.stringify(value)}${newline}` +
       header.slice(end);
   } else {
     const newline = header.includes("\r\n") ? "\r\n" : "\n";
