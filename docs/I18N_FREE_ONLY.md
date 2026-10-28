@@ -33,3 +33,9 @@ Respostas traduzidas e usage são guardados em i18n/storage/responses/<run>/ com
 Saída: draft, pending, REVIEW_REQUIRED e publishable false. Publicação, CI editorial de conteúdo, automação contínua e deploy são gates separados e não foram habilitados. O código novo deve ser integrado por PR/CI antes de qualquer operação agendada.
 
 Referências: https://developers.cloudflare.com/workers-ai/platform/pricing/ ; https://developers.cloudflare.com/workers-ai/platform/errors/ ; https://developers.cloudflare.com/workers-ai/models/llama-3.3-70b-instruct-fp8-fast/ .
+
+## Persistência verificada
+
+Na conferência após o ensaio controlado foi encontrada cópia incompleta de arquivos já existentes no checkout privado: novos artefatos estavam presentes, mas ledger/head permaneciam na versão anterior. O livro local completo foi preservado, nenhuma inferência adicional foi executada e o prefixo histórico foi conferido antes da recuperação.
+
+A cópia agora usa substituição explícita e comparação SHA-256 por arquivo. Antes de reconhecer o checkpoint, o destino é reinterpretado com loadBook, o ledger/head no commit são comparados byte a byte com a origem e o push continua exigindo ACK remoto. Um no-op silencioso, symlink ou divergência falha fechado. O ensaio foi recuperado por append ao Git privado, sem reexecutar chamadas nem reescrever registros históricos. A verificação independente confirmou igualdade do livro e dos relatórios remotos.
