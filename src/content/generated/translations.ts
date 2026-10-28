@@ -10,12 +10,14 @@ export const translationRecords = [
     excerpt:
       "Understand the difference between energy and power, the meaning of watt, kilowatt and kilowatt-hour, and why operating time matters.",
     contentType: "explainer",
-    status: "draft",
+    status: "published",
     draftStage: "review-ready",
     author: "olavo-oliveira",
     category: "energia",
     tags: ["potência", "energia", "eficiência energética"],
     createdAt: "2026-08-12",
+    publishedAt: "2026-10-28",
+    approvedAt: "2026-10-28",
     corrections: [],
     readingTime: 7,
     cover: {
@@ -87,7 +89,7 @@ export const translationRecords = [
     lastVerifiedAt: "2026-08-12",
     aiAssistance: "substantial",
     aiDisclosure:
-      "This language edition was translated using Cloudflare Workers AI (Meta Llama 3.3 70B) and underwent automated technical checks and AI-assisted editorial corrections. Publication was authorized by the person responsible for the portal, accepting the documented limitations. No full human linguistic review or scientific certification is claimed. Human editorial review is pending in the required workflow; this draft remains unpublished.",
+      "This language edition was translated using Cloudflare Workers AI (Meta Llama 3.3 70B) and underwent automated technical checks and AI-assisted editorial corrections. Publication was authorized by the person responsible for the portal, accepting the documented limitations. No full human linguistic review or scientific certification is claimed. This language edition was translated automatically using Cloudflare Workers AI (Meta Llama 3.3 70B) and passed automated technical checks under the portal’s automatic translation editorial policy. Meaning was compared with AI assistance; no full human linguistic review was performed. These checks do not certify scientific accuracy.",
     aiDisclosureMode: "detailed",
     seoTitle: "What is power? Difference between kW, kWh and energy",
     seoDescription:
@@ -97,7 +99,20 @@ export const translationRecords = [
     translationOf: "o-que-e-potencia",
     sourceRevision: "5625ad973c09fd43954ade1c1b8775892c864a801393f76864db8553885247fa",
     translationReview: {
-      status: "pending",
+      status: "automatic",
+      automation: {
+        policyId: "70bfe328b5ce8bcea91e9e555b8421040dff9f88079ff55291e97ebf5400805f",
+        runId: "169a9290fd1f08f0eaa8135724a367b019064ccba6fc20ce97bfcff14e05dffb",
+        model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+        validator: "operations-editorial-policy-v1",
+        meaningRevision: "03c46d85dc1d57491c7f4235e270372bf9aca1b1d423d74c5ff4979583b21a99",
+        codeRevision: "b316fa0b44db190a28145bc7171c3cc1ed8678e8dbae5a6977ddaf42273d6f6e",
+        sourceRevision: "5625ad973c09fd43954ade1c1b8775892c864a801393f76864db8553885247fa",
+        targetRevision: "aaf2c23d10969ee1d27fa82bd6ab1a1c4b145a27b273217adbc675c02b3b7db1",
+        validatedAt: "2026-10-28T23:23:12.449Z",
+        scope: "technical-only",
+        checks: ["mdx", "numbers", "formulas", "links", "references", "metadata", "meaning"],
+      },
     },
   },
   {
@@ -216,12 +231,14 @@ export const translationRecords = [
     excerpt:
       "Entienda la diferencia entre energía y potencia, el significado de vatio, kilovatio y kilovatio-hora y por qué el tiempo de funcionamiento es importante.",
     contentType: "explainer",
-    status: "draft",
+    status: "published",
     draftStage: "review-ready",
     author: "olavo-oliveira",
     category: "energia",
     tags: ["potência", "energia", "eficiência energética"],
     createdAt: "2026-08-12",
+    publishedAt: "2026-10-28",
+    approvedAt: "2026-10-28",
     corrections: [],
     readingTime: 7,
     cover: {
@@ -293,7 +310,7 @@ export const translationRecords = [
     lastVerifiedAt: "2026-08-12",
     aiAssistance: "substantial",
     aiDisclosure:
-      "Esta edición se tradujo mediante Cloudflare Workers AI (Meta Llama 3.3 70B) y pasó verificaciones técnicas automáticas y correcciones editoriales asistidas por IA. La persona responsable del portal autorizó su publicación, aceptando las limitaciones documentadas. No se declara una revisión lingüística humana integral ni una certificación científica. La revisión editorial humana está pendiente en el flujo obligatorio; este borrador permanece sin publicar.",
+      "Esta edición se tradujo mediante Cloudflare Workers AI (Meta Llama 3.3 70B) y pasó verificaciones técnicas automáticas y correcciones editoriales asistidas por IA. La persona responsable del portal autorizó su publicación, aceptando las limitaciones documentadas. No se declara una revisión lingüística humana integral ni una certificación científica. Esta edición se tradujo automáticamente mediante Cloudflare Workers AI (Meta Llama 3.3 70B) y superó verificaciones técnicas automáticas conforme a la política editorial de traducción automática del portal. El significado se comparó con ayuda de IA; no se realizó una revisión lingüística humana integral. Estas verificaciones no certifican precisión científica.",
     aiDisclosureMode: "detailed",
     seoTitle: "¿Qué es la potencia? Diferencia entre kW, kWh y energía",
     seoDescription:
@@ -303,7 +320,20 @@ export const translationRecords = [
     translationOf: "o-que-e-potencia",
     sourceRevision: "5625ad973c09fd43954ade1c1b8775892c864a801393f76864db8553885247fa",
     translationReview: {
-      status: "pending",
+      status: "automatic",
+      automation: {
+        policyId: "70bfe328b5ce8bcea91e9e555b8421040dff9f88079ff55291e97ebf5400805f",
+        runId: "169a9290fd1f08f0eaa8135724a367b019064ccba6fc20ce97bfcff14e05dffb",
+        model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+        validator: "operations-editorial-policy-v1",
+        meaningRevision: "debf7f94d2fe3deb503b96bb1b478153c0c730a31eb9da22398e7f5d472f656a",
+        codeRevision: "b316fa0b44db190a28145bc7171c3cc1ed8678e8dbae5a6977ddaf42273d6f6e",
+        sourceRevision: "5625ad973c09fd43954ade1c1b8775892c864a801393f76864db8553885247fa",
+        targetRevision: "c79adfb5faf858d97cc9f9db2eb750a4311a0890051eb5b858b2d4430a19c584",
+        validatedAt: "2026-10-28T23:23:12.449Z",
+        scope: "technical-only",
+        checks: ["mdx", "numbers", "formulas", "links", "references", "metadata", "meaning"],
+      },
     },
   },
   {
