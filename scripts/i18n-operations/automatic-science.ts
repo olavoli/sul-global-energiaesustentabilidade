@@ -69,8 +69,11 @@ function quantities(text: string) {
     .map((m) => m[1].replace(",", ".") + ":" + (wordUnits[m[2]] ?? m[2]))
     .sort();
 }
+const technicalMarks = (text: string) =>
+  [...text.matchAll(/[\p{Script=Greek}∆∑√∂∫∞≤≥≠×÷]/gu)].map((m) => m[0]).sort();
 export function scientificTokensMatch(source: string, target: string) {
   return (
+    JSON.stringify(technicalMarks(source)) === JSON.stringify(technicalMarks(target)) &&
     JSON.stringify(tokens(source)) === JSON.stringify(tokens(target)) &&
     JSON.stringify(quantities(source)) === JSON.stringify(quantities(target))
   );

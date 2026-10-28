@@ -1,6 +1,10 @@
+import { translationSchema } from "../../src/content/translation-schema";
+import { verifyPolicyRecord } from "./editorial-policy-record";
+import { validateAutomaticRecord } from "./automatic-attestation";
+import { translationFile } from "./translation-file";
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { hash, type Locale } from "../i18n-simulation/pipeline";
 import { editorialPolicySchema, policyHash } from "./editorial-policy";
 import { publicationCandidate } from "./automatic-publication";
@@ -24,24 +28,23 @@ export async function editorialPlan(root: string, articles: string[], now = new 
     slug: string;
     sourceRevision: string | null;
     error?: string;
-    editions: { locale: Locale; raw: string; evidence: unknown }[];
+    editions: { locale: Locale; path: string; raw: string; evidence: unknown }[];
   }[] = [];
   for (const slug of [...articles].sort()) {
     try {
       const source = await readFile(join(root, "content/articles", slug + ".mdx"), "utf8");
       const editions = [];
       for (const locale of ["en", "es"] as const) {
-        const raw = await readFile(
-          join(root, "content/translations", locale, slug + ".mdx"),
-          "utf8",
-        );
+        const edition = await translationFile(root, slug, locale);
+        if (!edition) throw Object.assign(Error("missing translation"), { code: "ENOENT" });
+        const raw = edition.raw;
         const evidence = JSON.parse(
           await readFile(
             join(root, "content/translation-evidence", locale, slug + ".json"),
             "utf8",
           ),
         );
-        editions.push({ locale, raw, evidence });
+        editions.push({ locale, path: edition.path, raw, evidence });
       }
       snapshot.push({ slug, sourceRevision: hash(source), editions });
     } catch (e) {
@@ -61,17 +64,42 @@ export async function editorialPlan(root: string, articles: string[], now = new 
   );
   const results: {
     slug: string;
-    state: "READY" | "REVIEW_REQUIRED" | "BLOCK";
+    state: "READY" | "REVIEW_REQUIRED" | "BLOCK" | "CURRENT";
     code?: string;
-    editions: { locale: Locale; before: string; candidate: string }[];
+    editions: { locale: Locale; path: string; before: string; candidate: string }[];
   }[] = [];
   for (const item of snapshot) {
     const editions = [];
     try {
       if (item.error) throw Error(item.error);
+      const records = item.editions.map((e) =>
+        translationSchema.parse(parseEditorialFile(e.raw).frontmatter),
+      );
+      if (records.some((f) => f.translationReview.status === "approved"))
+        throw Error("editorial-human-edition-protected");
+      if (
+        records.length === 2 &&
+        records[0].translationReview.automation?.runId ===
+          records[1].translationReview.automation?.runId &&
+        records.every(
+          (f) =>
+            f.status === "published" &&
+            f.translationReview.automation?.validator === "operations-editorial-policy-v1" &&
+            f.translationReview.automation?.policyId === policyId,
+        )
+      ) {
+        for (const e of item.editions) {
+          const parsed = parseEditorialFile(e.raw);
+          validateAutomaticRecord(parsed.frontmatter, parsed.body);
+          await verifyPolicyRecord(root, e.raw);
+        }
+        results.push({ slug: item.slug, state: "CURRENT", editions: [] });
+        continue;
+      }
       for (const e of item.editions)
         editions.push({
           locale: e.locale,
+          path: e.path,
           before: e.raw,
           candidate: await publicationCandidate(
             root,

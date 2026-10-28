@@ -124,13 +124,20 @@ export async function main() {
   const p = await editorialPlan(root, slugs),
     ready = p.results.filter((r) => r.state === "READY").length;
   const output = args.includes("--demonstrate") ? await demonstrate(root, p) : undefined;
-  const installed = args.includes("--install")
-    ? await installPolicyPlan(root, p, value("--confirm-plan"))
-    : false;
+  const installed =
+    args.includes("--install") && ready > 0
+      ? await installPolicyPlan(root, p, value("--confirm-plan"))
+      : false;
   console.log(
     JSON.stringify(
       {
-        status: ready === p.results.length ? "READY" : ready ? "PARTIAL_READY" : "REVIEW_REQUIRED",
+        status: p.results.every((r) => r.state === "CURRENT")
+          ? "CURRENT"
+          : ready === p.results.length
+            ? "READY"
+            : ready
+              ? "PARTIAL_READY"
+              : "REVIEW_REQUIRED",
         planHash: p.id,
         policyId: p.policyId,
         codeRevision: p.codeRevision,
@@ -144,7 +151,7 @@ export async function main() {
       2,
     ),
   );
-  if (!ready) process.exitCode = 2;
+  if (!ready && p.results.some((r) => r.state !== "CURRENT")) process.exitCode = 2;
 }
 if (import.meta.main)
   main().catch((e) => {

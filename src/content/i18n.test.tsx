@@ -80,7 +80,7 @@ test("PT mantém URL e conteúdo; EN/ES são drafts completos fora das rotas pú
       }).success,
     ).toBe(false);
   }
-  expect(publishedTranslations()).toHaveLength(0);
+  expect(publishedTranslations().filter((a) => a.translationOf === original)).toHaveLength(0);
 });
 
 test("canonical próprio, hreflang recíproco e x-default PT após aprovação explícita", () => {

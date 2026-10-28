@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { hash } from "../i18n-simulation/pipeline";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { translationSchema } from "../../src/content/translation-schema";
 import { evaluatePolicy, meaningMetadata } from "./editorial-policy";
 /** Build-time revalidation, rather than trusting a manually copied approval flag. */
@@ -20,7 +20,10 @@ export async function verifyPolicyRecord(root: string, raw: string) {
     await readFile(join(root, "content/translation-policies/automatic-v1.json"), "utf8"),
   );
   const evidence = JSON.parse(
-    await readFile(join(root, "content/translation-evidence", f.locale, f.slug + ".json"), "utf8"),
+    await readFile(
+      join(root, "content/translation-evidence", f.locale, f.translationOf + ".json"),
+      "utf8",
+    ),
   );
   const sourceRaw = await readFile(
     join(root, "content/articles", f.translationOf + ".mdx"),

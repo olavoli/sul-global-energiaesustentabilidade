@@ -10,7 +10,7 @@ import { temporary, policy, mock, deps, slug } from "./automatic-fixtures.test";
 import { runAutomaticCycle } from "./automatic-cycle";
 import { installCandidates } from "./automatic-publication";
 import { generateTranslations } from "../generate-translations";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { continuousBudget } from "./automation-policy";
 import { verifyModelAccess } from "./automatic-state";
 import { parse } from "yaml";
@@ -77,6 +77,8 @@ test("technical checks catch energy-unit and time-unit substitutions without tre
   expect(scientificTokensMatch("10 segundos", "10 seconds")).toBe(true);
   expect(scientificTokensMatch("10 segundos", "10 minutes")).toBe(false);
   expect(scientificTokensMatch("3 GWh", "3 TWh")).toBe(false);
+  expect(scientificTokensMatch("P = ΔE / Δt", "P = ∆E / ∆t")).toBe(false);
+  expect(scientificTokensMatch("P = ΔE / Δt", "P = ΔE / Δt")).toBe(true);
   expect(scientificTokensMatch("100 W e 200 J", "200 W and 100 J")).toBe(false);
 });
 

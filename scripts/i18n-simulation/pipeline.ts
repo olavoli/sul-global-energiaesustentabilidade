@@ -2,7 +2,7 @@
 import { createHash } from "node:crypto";
 import { createProcessor } from "@mdx-js/mdx";
 import { z } from "zod";
-import { parseEditorialFile, validateSafeMdx } from "../generate-content";
+import { parseEditorialFile, validateSafeMdx } from "../../src/content/editorial-parser";
 
 export type Locale = "en" | "es";
 export type Outcome = "PASS" | "REVIEW_REQUIRED" | "BLOCK";

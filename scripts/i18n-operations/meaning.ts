@@ -1,8 +1,9 @@
+import { translationFile } from "./translation-file";
 import type { payload as translationPayload } from "./translation";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { z } from "zod";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { hash, prepare, type Locale } from "../i18n-simulation/pipeline";
 import { translationSchema } from "../../src/content/translation-schema";
 import {
@@ -17,9 +18,9 @@ export async function meaningInput(root: string, slug: string, locale: Locale) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw Error("meaning-invalid-slug");
   const raw = await readFile(join(root, "content/articles", slug + ".mdx"), "utf8"),
     source = parseEditorialFile(raw);
-  const target = parseEditorialFile(
-    await readFile(join(root, "content/translations", locale, slug + ".mdx"), "utf8"),
-  );
+  const edition = await translationFile(root, slug, locale);
+  if (!edition) throw Error("meaning-translation-missing");
+  const target = parseEditorialFile(edition.raw);
   const f = translationSchema.parse(target.frontmatter);
   if (
     source.frontmatter.status !== "published" ||

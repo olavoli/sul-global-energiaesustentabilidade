@@ -1,3 +1,4 @@
+import { verifyPolicyRecord } from "../../scripts/i18n-operations/editorial-policy-record";
 import { expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -28,14 +29,30 @@ const paths = (body: string) =>
     (m) => m[1] ?? m[2],
   );
 
-test("power editions remain pending drafts, with original attribution, source hash and references", () => {
+test("power editions are pending drafts or valid policy-attested publications with original attribution", async () => {
   expect(records).toHaveLength(2);
   for (const record of records) {
     expect(translationSchema.safeParse(record).success).toBe(true);
-    expect(record.status).toBe("draft");
-    expect(record.translationReview).toEqual({ status: "pending" });
-    expect("approvedAt" in record).toBe(false);
-    expect("publishedAt" in record).toBe(false);
+    const automatic = record.translationReview.status === "automatic";
+    if (automatic) {
+      expect(record.status).toBe("published");
+      expect(record.translationReview.automation?.validator).toBe("operations-editorial-policy-v1");
+      expect(record.translationReview.reviewer).toBeUndefined();
+      expect(record.translationReview.reviewedAt).toBeUndefined();
+      expect(record.approvedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(record.publishedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(
+        await verifyPolicyRecord(
+          process.cwd(),
+          readFileSync(`content/translations/${record.locale}/${record.slug}.mdx`, "utf8"),
+        ),
+      ).toBeDefined();
+    } else {
+      expect(record.status).toBe("draft");
+      expect(record.translationReview).toEqual({ status: "pending" });
+      expect("approvedAt" in record).toBe(false);
+      expect("publishedAt" in record).toBe(false);
+    }
     expect(record.sourceRevision).toBe(
       createHash("sha256").update(source.replace(/\r\n/g, "\n")).digest("hex"),
     );
@@ -46,18 +63,27 @@ test("power editions remain pending drafts, with original attribution, source ha
     expect(record.cover.sources).toEqual(pt.frontmatter.cover.sources);
     expect(record.cover.license).toBe(pt.frontmatter.cover.license);
     expect(record.aiDisclosureMode).toBe("detailed");
-    expect(record.aiDisclosure).toContain(
-      record.locale === "en" ? "Publication was authorized" : "autorizó su publicación",
-    );
-    expect(record.aiDisclosure).toContain(
-      record.locale === "en"
-        ? "No full human linguistic review"
-        : "No se declara una revisión lingüística humana integral",
-    );
     expect(record.aiDisclosure).toContain("Cloudflare Workers AI (Meta Llama 3.3 70B)");
-    expect(record.aiDisclosure).toContain(
-      record.locale === "en" ? "review is pending" : "está pendiente",
+    expect(record.aiDisclosure).toMatch(
+      record.locale === "en"
+        ? /no full human linguistic review/i
+        : /(?:no se declara|no se realizó) una revisión lingüística humana integral/i,
     );
+    if (automatic) {
+      expect(record.aiDisclosure).toContain(
+        record.locale === "en" ? "editorial policy" : "política editorial",
+      );
+      expect(record.aiDisclosure).not.toContain(
+        record.locale === "en" ? "review is pending" : "está pendiente",
+      );
+    } else {
+      expect(record.aiDisclosure).toContain(
+        record.locale === "en" ? "Publication was authorized" : "autorizó su publicación",
+      );
+      expect(record.aiDisclosure).toContain(
+        record.locale === "en" ? "review is pending" : "está pendiente",
+      );
+    }
     for (const field of [
       record.title,
       record.subtitle,
@@ -68,11 +94,13 @@ test("power editions remain pending drafts, with original attribution, source ha
       record.cover.caption,
     ])
       expect(field?.length).toBeGreaterThan(10);
-    expect(findTranslation(record.locale, record.slug)).toBeUndefined();
-    expect(publishedTranslations().some((a) => a.translationOf === slug)).toBe(false);
-    expect(generateSitemap(getPublishedArticles())).not.toContain(record.canonicalUrl);
-    expect(generateRss(publishedTranslations(), true, record.locale)).not.toContain(
-      record.canonicalUrl,
+    expect(Boolean(findTranslation(record.locale, record.slug))).toBe(automatic);
+    expect(publishedTranslations().some((a) => a.translationOf === slug)).toBe(automatic);
+    const canonical = record.canonicalUrl;
+    if (!canonical) throw new Error("Power translation canonical is required");
+    expect(generateSitemap(getPublishedArticles()).includes(canonical)).toBe(automatic);
+    expect(generateRss(publishedTranslations(), true, record.locale).includes(canonical)).toBe(
+      automatic,
     );
   }
 });
@@ -80,7 +108,7 @@ test("power editions remain pending drafts, with original attribution, source ha
 test("power drafts preserve MDX, equations, numerical values, units, links and source assets", () => {
   for (const record of records) {
     const parsed = parseEditorialFile(
-      readFileSync(`content/translations/${record.locale}/${slug}.mdx`, "utf8"),
+      readFileSync(`content/translations/${record.locale}/${record.slug}.mdx`, "utf8"),
     );
     expect(
       editorialDeterministic(pt.body, parsed.body, record.locale).filter(
@@ -112,7 +140,7 @@ test("power drafts preserve MDX, equations, numerical values, units, links and s
 
 test("both complete drafts compile and render using the actual editorial components", async () => {
   for (const record of records) {
-    const raw = readFileSync(`content/translations/${record.locale}/${slug}.mdx`, "utf8");
+    const raw = readFileSync(`content/translations/${record.locale}/${record.slug}.mdx`, "utf8");
     const module = await run(
       String(
         await compile(raw, { outputFormat: "function-body", remarkPlugins: [remarkFrontmatter] }),

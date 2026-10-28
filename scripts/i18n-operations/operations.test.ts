@@ -1,5 +1,5 @@
 import { prepare as prepareAudit } from "../i18n-simulation/pipeline";
-import { parseEditorialFile as parseAudit } from "../generate-content";
+import { parseEditorialFile as parseAudit } from "../../src/content/editorial-parser";
 import { test, expect } from "bun:test";
 import { mkdtemp, readFile, writeFile, mkdir, cp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
@@ -190,6 +190,7 @@ async function cloneFixture(dir: string) {
     "scripts/i18n-cloudflare-experiment/experiment.ts",
     "scripts/generate-content.ts",
     "src/content/schema.ts",
+    "src/content/editorial-parser.ts",
     "src/content/translation-schema.ts",
     "src/content/remark-editorial-slots.ts",
     "bun.lock",

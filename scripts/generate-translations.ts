@@ -10,7 +10,7 @@ import {
   translationSchema,
   type TranslationRecord,
 } from "../src/content/translation-schema";
-import type { ParsedEditorialFile } from "./generate-content";
+import type { ParsedEditorialFile } from "../src/content/editorial-parser";
 
 /** Reuse the original MDX safety/schema checks; translations never enter the PT index. */
 export async function generateTranslations(

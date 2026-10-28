@@ -22,6 +22,7 @@ async function temporary(fn: (dir: string) => Promise<void>) {
       "scripts/i18n-cloudflare-experiment/experiment.ts",
       "scripts/generate-content.ts",
       "src/content/schema.ts",
+      "src/content/editorial-parser.ts",
       "src/content/translation-schema.ts",
       "src/content/remark-editorial-slots.ts",
       "bun.lock",

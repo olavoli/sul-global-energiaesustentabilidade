@@ -12,6 +12,24 @@ import {
 } from "./automatic-state";
 import { failure } from "./errors";
 async function main() {
+  if (process.argv.includes("--editorial-policy")) {
+    if (!process.argv.includes("--apply")) {
+      console.log(
+        JSON.stringify(
+          {
+            mode: "editorial-policy-free-only",
+            externalEnabled: false,
+            candidates: await discover(resolve(import.meta.dir, "../..")),
+          },
+          null,
+          2,
+        ),
+      );
+      return;
+    }
+    await (await import("./policy-cycle-cli")).policyCycleMain();
+    return;
+  }
   const root = resolve(import.meta.dir, "../.."),
     apply = process.argv.includes("--apply");
   if (!apply) {

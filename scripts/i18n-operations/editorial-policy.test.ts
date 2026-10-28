@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import { cp, readFile, writeFile, mkdir } from "node:fs/promises";
+import { cp, readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { join } from "node:path";
 import { temporary, root, slug } from "./automatic-fixtures.test";
 import { editorialPlan, demonstrate } from "./editorial-policy-plan";
@@ -12,7 +12,7 @@ import {
   policyHash,
 } from "./editorial-policy";
 import { verifyPolicyRecord } from "./editorial-policy-record";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { hash } from "../i18n-simulation/pipeline";
 import { translationSchema } from "../../src/content/translation-schema";
 import { generateTranslations } from "../generate-translations";
@@ -196,7 +196,7 @@ test("tampered rollback backup is rejected without modifying content", () =>
   setup(async (dir) => {
     const plan = await editorialPlan(dir, [slug], now);
     await installPolicyPlan(dir, plan, plan.id);
-    const file = join(dir, ".i18n-private-state/editorial", plan.id + ".json");
+    const file = join(dir, "i18n/storage/editorial", plan.id + ".json");
     const j = JSON.parse(await readFile(file, "utf8"));
     j.entries[0].before = "Tampered backup";
     await writeFile(file, JSON.stringify(j));
@@ -225,4 +225,37 @@ test("selected production policy rejects downgrade to the legacy technical attes
     await expect(
       verifyPolicyRecord(dir, `---\n${JSON.stringify(f)}\n---\n${parsed.body}`),
     ).rejects.toThrow("editorial-legacy-attestation-not-accepted");
+  }));
+
+test("source-based lookup and installation preserve existing translated slugs and canonicals", () =>
+  setup(async (dir) => {
+    const original = join(dir, "content/translations/en", slug + ".mdx"),
+      raw = await readFile(original, "utf8"),
+      parsed = parseEditorialFile(raw);
+    parsed.frontmatter.slug = "what-is-power";
+    parsed.frontmatter.canonicalUrl = "/en/article/what-is-power";
+    const alias = join(dir, "content/translations/en/what-is-power.mdx");
+    await rename(original, alias);
+    await writeFile(alias, `---\n${JSON.stringify(parsed.frontmatter)}\n---\n${parsed.body}`);
+    const plan = await editorialPlan(dir, [slug], now);
+    expect(plan.results[0].state).toBe("READY");
+    expect(plan.results[0].editions.find((e) => e.locale === "en")?.path).toBe(
+      "content/translations/en/what-is-power.mdx",
+    );
+    await installPolicyPlan(dir, plan, plan.id);
+    expect(await verifyPolicyRecord(dir, await readFile(alias, "utf8"))).toBeDefined();
+    expect(parseEditorialFile(await readFile(alias, "utf8")).frontmatter.canonicalUrl).toBe(
+      "/en/article/what-is-power",
+    );
+  }));
+
+test("cover attribution cannot be changed even when translated text and meaning evidence are identical", () =>
+  setup(async (dir) => {
+    const path = join(dir, "content/translations/en", slug + ".mdx"),
+      parsed = parseEditorialFile(await readFile(path, "utf8"));
+    parsed.frontmatter.cover.credit = "Altered attribution not present in the original";
+    await writeFile(path, `---\n${JSON.stringify(parsed.frontmatter)}\n---\n${parsed.body}`);
+    const p = await editorialPlan(dir, [slug], now);
+    expect(p.results[0].state).toBe("BLOCK");
+    expect(p.results[0].code).toBe("automatic-attribution-changed");
   }));

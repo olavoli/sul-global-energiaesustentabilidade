@@ -427,6 +427,7 @@ export async function codeRevision() {
     "scripts/generate-content.ts",
     "scripts/generate-translations.ts",
     "src/content/schema.ts",
+    "src/content/editorial-parser.ts",
     "src/content/translation-schema.ts",
     "src/data/authors.ts",
     "src/data/categories.ts",

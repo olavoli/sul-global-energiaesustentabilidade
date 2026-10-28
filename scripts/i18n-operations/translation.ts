@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { compile } from "@mdx-js/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import { z } from "zod";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import {
   prepare,
   assemble,

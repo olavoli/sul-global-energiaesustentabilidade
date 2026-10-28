@@ -11,7 +11,7 @@ import {
   type AutomaticPolicy,
 } from "./automation-policy";
 import { validateAutomaticRecord } from "./automatic-attestation";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { translationSchema, translationReviewAccepted } from "../../src/content/translation-schema";
 import fixture from "../i18n-cloudflare-experiment/complete-translations.fixture.json";
 import type { Transport } from "../i18n-real-pilot/adapters";
@@ -51,6 +51,7 @@ export async function temporary(fn: (dir: string) => Promise<void>) {
       "scripts/i18n-cloudflare-experiment/experiment.ts",
       "scripts/generate-content.ts",
       "src/content/schema.ts",
+      "src/content/editorial-parser.ts",
       "src/content/translation-schema.ts",
       "src/content/remark-editorial-slots.ts",
       "bun.lock",

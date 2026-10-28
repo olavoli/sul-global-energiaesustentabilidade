@@ -9,9 +9,9 @@ import remarkFrontmatter from "remark-frontmatter";
 import { remarkEditorialSlots } from "../../src/content/remark-editorial-slots";
 import { translationSchema } from "../../src/content/translation-schema";
 import { articleFrontmatterSchema } from "../../src/content/schema";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { hash, prepare, type Locale } from "../i18n-simulation/pipeline";
-import { editorialDeterministic, translationDisclosure } from "./editorial";
+import { editorialDeterministic, translationDisclosure, localizedCredit } from "./editorial";
 import { publishCheck } from "../editorial-operations";
 function acceptedWarning(f: { code: string; source?: string; target?: string }) {
   if (f.code !== "negation-modality-mineral-caveat") return false;
@@ -82,6 +82,11 @@ export async function publicationCandidate(
     frontmatter.category !== source.frontmatter.category ||
     frontmatter.cover.src !== source.frontmatter.cover.src ||
     frontmatter.cover.license !== source.frontmatter.cover.license ||
+    frontmatter.cover.credit !== localizedCredit(source.frontmatter.cover.credit, locale) ||
+    JSON.stringify(frontmatter.cover.aiProvenance) !==
+      JSON.stringify(source.frontmatter.cover.aiProvenance) ||
+    frontmatter.cover.decorative !== source.frontmatter.cover.decorative ||
+    frontmatter.referencesInBody !== source.frontmatter.referencesInBody ||
     JSON.stringify(frontmatter.tags) !== JSON.stringify(source.frontmatter.tags) ||
     frontmatter.contentType !== source.frontmatter.contentType ||
     frontmatter.sponsored !== source.frontmatter.sponsored ||
@@ -93,7 +98,11 @@ export async function publicationCandidate(
   )
     throw Error("automatic-attribution-changed");
   const day = now.toISOString().slice(0, 10);
-  if (decision) delete frontmatter.reviewedAt;
+  if (decision) {
+    delete frontmatter.reviewedAt;
+    frontmatter.aiDisclosureMode = "detailed";
+    frontmatter.aiAssistance = "substantial";
+  }
   frontmatter.status = "published";
   frontmatter.draftStage = "review-ready";
   frontmatter.approvedAt = day;

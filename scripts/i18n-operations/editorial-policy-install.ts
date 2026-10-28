@@ -15,7 +15,7 @@ const journalSchema = z.object({
   contentHash: z.string().regex(/^[a-f0-9]{64}$/),
 });
 async function transaction<T>(root: string, fn: () => Promise<T>) {
-  const directory = join(root, ".i18n-private-state/editorial");
+  const directory = join(root, "i18n/storage/editorial");
   await mkdir(directory, { recursive: true });
   const lock = join(directory, "lock");
   await mkdir(lock); // A competing process or unreconciled crash fails closed.
@@ -44,7 +44,7 @@ export async function installPolicyPlan(
   if (confirmation !== plan.id || !plan.results.some((r) => r.state === "READY"))
     throw Error("editorial-plan-not-authorized");
   return transaction(root, async () => {
-    const file = join(root, ".i18n-private-state/editorial", plan.id + ".json");
+    const file = join(root, "i18n/storage/editorial", plan.id + ".json");
     let previous: z.infer<typeof journalSchema> | undefined;
     try {
       previous = verifyJournal(journalSchema.parse(JSON.parse(await readFile(file, "utf8"))));
@@ -70,7 +70,7 @@ export async function installPolicyPlan(
       state: "prepared",
       entries: plan.results.flatMap((r) =>
         r.editions.map((e) => ({
-          path: `content/translations/${e.locale}/${r.slug}.mdx`,
+          path: e.path,
           before: e.before,
           after: e.candidate,
         })),
@@ -102,7 +102,7 @@ export async function installPolicyPlan(
 export async function rollbackPolicyPlan(root: string, id: string) {
   if (!/^[a-f0-9]{64}$/.test(id)) throw Error("editorial-invalid-plan-id");
   return transaction(root, async () => {
-    const file = join(root, ".i18n-private-state/editorial", id + ".json");
+    const file = join(root, "i18n/storage/editorial", id + ".json");
     const journal = verifyJournal(journalSchema.parse(JSON.parse(await readFile(file, "utf8"))));
     if (journal.id !== id || journal.state === "rolled-back")
       throw Error("editorial-rollback-invalid");
