@@ -73,3 +73,41 @@ A prévia reutiliza componentes MDX, cabeçalho e rodapé reais. Navegação ext
 - Limitação visual: o Chromium Linux não inicializa por ausência de libnspr4.so. Não foram instaladas dependências nem declarada aprovação visual. O laboratório está acessível no Chrome do Windows para a revisão humana, ainda pendente. Não há baseline visual aprovada por humano.
 
 O catálogo, menu, biografia e blocos de fontes compartilhados conservam partes em português conforme a arquitetura já adotada. A aceitação dessa experiência, dos textos raster e dos links para PT continua sendo decisão editorial. Não há promessa de interface inteira traduzida.
+
+## Conferência renderizada PT / EN / ES — 28/10/2026
+
+A limitação anterior do Chromium foi resolvida para esta sessão com download de pacotes oficiais Ubuntu (libnspr4, libnss3, libasound2t64 e fonts-liberation) e extração somente em /tmp. Nenhum pacote foi instalado no SO, nenhuma dependência/lockfile foi alterada. LD_LIBRARY_PATH e FONTCONFIG_FILE foram definidos apenas para o processo do navegador. O fontconfig temporário foi corrigido para selecionar Liberation Serif/Sans/Mono como fallbacks correspondentes: a primeira captura diagnóstica usava incorretamente a família Mono para todo o texto. Não houve mudança de fontes, cores ou estilos do portal. As capturas não alegam identidade pixel a pixel com fontes remotas de produção.
+
+### Observações efetivas
+
+- 12 casos Playwright aprovados: PT, EN e ES em 1440×900, 768×1024, 390×844 e 360×800. Teclado, toque e navegação entre as três edições verificados. Nenhuma requisição externa, iframe publicitário, erro de console ou pageerror.
+- Hero e figura de apoio decodificadas nas três versões, proporção original preservada sem recorte do raster, alt e legendas presentes. Equações e símbolos Δ, ×, kW/kWh/MJ legíveis e sem overflow indevido. O teste verifica a relação entre proporção natural e renderizada.
+- Títulos, parágrafos, listas, figuras e legendas dentro do viewport. No celular, o título PT ocupa mais linhas que EN/ES e desloca a Hero para baixo; diferença esperada do comprimento do texto, não sobreposição. A Nota de Transparência completa é exibida uma única vez; EN/ES identificam ferramenta, revisão pendente e ausência de aprovação.
+- O primeiro novo detector apontou como corte o breadcrumb PT móvel. O código existente usa explicitamente truncate e aria-current=page; o texto integral continua no DOM e é idêntico ao H1 visível. A exceção do teste limita-se a esse elemento com text-overflow: ellipsis, overflow-x: hidden, white-space: nowrap e igualdade integral ao título. Limites de viewport e todos os demais cortes continuam bloqueantes. O breadcrumb e o produto não foram modificados.
+- Links para os dois artigos portugueses mantêm seus destinos e o aviso de idioma. O laboratório só navega entre as três edições; não simula publicação nem conteúdo externo.
+- SEO: metadados/canonical próprios continuam validados pelo schema; a prévia usa noindex/nofollow/noarchive e no-store. Os testes editoriais mantêm ambos os drafts fora das rotas públicas, sitemap, feeds e alternates publicados. Não se adicionou canonical público ou hreflang para um rascunho na prévia.
+- As duas apresentações bibliográficas (lista MDX e fontes estruturadas com links/notas), a taxonomia, biografia, interface auxiliar e textos dos raster em PT já pertenciam ao desenho anterior. Não foram ocultados, removidos ou reescritos. Eventual reorganização/localização exige decisão editorial separada; fontes, dados e licenças permanecem intactos.
+
+Não foi encontrado novo defeito técnico de produção que exigisse alterar os artigos ou seus componentes. As mudanças desta rodada são a cobertura visual específica, os painéis comparativos e a integração de evidências ao CI. Não se inventou correção de conteúdo para justificar um commit.
+
+### Evidências e reprodução
+
+```sh
+bun run test:visual:power
+node node_modules/playwright/cli.js show-report playwright-report/power --host 127.0.0.1 --port 8095
+```
+
+O comando usa Playwright já instalado e as quatro resoluções da configuração existente. O CI instala as bibliotecas de navegador pelo passo já existente, executa primeiro a suíte ART-033 e depois os 12 casos de potência, sem misturá-los. O artefato `art033-visual-report` do job visual passa a incluir também:
+
+- `playwright-report/power/`: relatório dos 12 casos, geometria e capturas anexadas;
+- `test-results/visual/power/`: 60 capturas individuais — página completa, cabeçalho, equações, transparência e seletor — e quatro painéis em `comparisons/{desktop,tablet,mobile,narrow}-PT-EN-ES.png`.
+
+Capturas são candidatas de revisão, identificadas NOT-APPROVED, não baselines aprovadas. Os painéis são montagens das screenshots reais nas mesmas condições, sem editar os arquivos de imagem dos artigos. O HTML de comparação é um relatório isolado, não uma mudança de design do portal.
+
+### Gates e decisão humana
+
+12 testes visuais e 13 testes editoriais focados aprovados; typecheck, lint e diff-check aprovados. O CI completo será conferido no novo commit. Não se repetiu a suíte completa local, pois nenhum código de produção ou conteúdo mudou e a cópia local contém o estado privado cujo schema depende do PR #14; o CI usa checkout limpo.
+
+EN mantém cinco avisos (três falsos positivos documentados de negação/modalidade e dois links PT); ES mantém dois links PT. Os sete avisos e seus manifestos não foram apagados nem silenciados no tradutor. Ambos continuam draft/pending, sem revisor humano ou data de aprovação. Decisões ainda humanas: qualidade linguística final, aceitação dos raster e interfaces auxiliares em PT, links para PT e autorização eventual de publicação.
+
+PR #14 permanece independente, aberto, pronto para revisão/integração e com seus checks aprovados; nenhuma alteração foi enviada àquela branch. Sem merge, deploy, ativação contínua, inferência ou mudança da conta Cloudflare nesta rodada.

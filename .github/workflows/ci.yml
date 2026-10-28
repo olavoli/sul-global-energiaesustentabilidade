@@ -87,6 +87,8 @@ jobs:
         run: node node_modules/playwright/cli.js install --with-deps chromium --only-shell
       - name: Visual behavior and candidate captures
         run: bun run test:visual
+      - name: Power article PT EN ES review captures
+        run: bun run test:visual:power
       - name: Upload browser report and captures
         if: always()
         uses: actions/upload-artifact@v4
