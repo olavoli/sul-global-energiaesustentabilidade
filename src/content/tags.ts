@@ -1,3 +1,4 @@
+import { taxonomySlug as tagSlug } from "./taxonomy-catalog";
 import { getPublishedArticles } from "./repository";
 
 export const MIN_TAG_ARTICLES_FOR_INDEXING = 2;
@@ -17,16 +18,7 @@ export interface TagTopic<T extends TaggedArticle> {
   indexable: boolean;
 }
 
-export function tagSlug(tag: string): string {
-  const slug = tag
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLocaleLowerCase("pt-BR")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-  if (!slug) throw new Error(`Tag sem slug navegável: ${tag}`);
-  return slug;
-}
+export { taxonomySlug as tagSlug } from "./taxonomy-catalog";
 
 /** Exact tag membership, restricted to real articles already published. */
 export function buildTagTopics<T extends TaggedArticle>(

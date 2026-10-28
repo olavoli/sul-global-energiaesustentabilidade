@@ -3,6 +3,104 @@ import type { TranslationRecord } from "../translation-schema";
 import type { MdxModuleLoader } from "../types";
 export const translationRecords = [
   {
+    slug: "o-que-e-potencia",
+    title: "What is power and why is it not the same as energy?",
+    subtitle:
+      "Energy indicates how much is transferred or transformed; power shows how fast it happens.",
+    excerpt:
+      "Understand the difference between energy and power, the meaning of watt, kilowatt and kilowatt-hour, and why operating time matters.",
+    contentType: "explainer",
+    status: "draft",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "energia",
+    tags: ["potência", "energia", "eficiência energética"],
+    createdAt: "2026-08-12",
+    corrections: [],
+    readingTime: 7,
+    cover: {
+      src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial.png",
+      alt: "Two elevators lift equal loads to the same height, one in 10 seconds and the other in 30 seconds, demonstrating that the same energy transfer can occur with different power levels",
+      decorative: false,
+      width: 1536,
+      height: 1024,
+      caption:
+        "Figure 1. For the same load and the same height, performing the task in less time requires more power.",
+      credit: "Source: Original work (SGES, 2026).",
+      license: "Elaboração própria (SGES, 2026)",
+      sources: [
+        {
+          src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial-1536.webp",
+          width: 1536,
+        },
+      ],
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sources: [
+      {
+        title: "Watt (W)",
+        url: "https://www.nist.gov/glossary-term/34606",
+        organizationOrAuthor: "National Institute of Standards and Technology",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Definição do watt como unidade de potência equivalente a um joule por segundo.",
+        isDemo: false,
+      },
+      {
+        title: "Joule",
+        url: "https://www.nist.gov/glossary-term/26261",
+        organizationOrAuthor: "National Institute of Standards and Technology",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Referência institucional para o joule como unidade de energia e trabalho.",
+        isDemo: false,
+      },
+      {
+        title: "NIST Guide to the SI, Appendix B.8",
+        url: "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+        organizationOrAuthor: "National Institute of Standards and Technology",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Tabela institucional de fatores de conversão entre unidades.",
+        isDemo: false,
+      },
+      {
+        title: "Style Guide Full Text",
+        url: "https://www.energy.gov/cmei/communicationstandards/style-guide-full-text",
+        organizationOrAuthor: "U.S. Department of Energy",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Referência institucional para o uso de unidades de potência e energia.",
+        isDemo: false,
+      },
+    ],
+    lastVerifiedAt: "2026-08-12",
+    aiAssistance: "substantial",
+    aiDisclosure:
+      "This language edition was translated using Cloudflare Workers AI (Meta Llama 3.3 70B) and underwent automated technical checks and AI-assisted editorial corrections. Publication was authorized by the person responsible for the portal, accepting the documented limitations. No full human linguistic review or scientific certification is claimed. Human editorial review is pending in the required workflow; this draft remains unpublished.",
+    aiDisclosureMode: "detailed",
+    seoTitle: "What is power? Difference between kW, kWh and energy",
+    seoDescription:
+      "Understand power, energy, watts, kilowatts and kilowatt-hours and discover why power and consumption are not the same thing.",
+    canonicalUrl: "/en/article/o-que-e-potencia",
+    locale: "en",
+    translationOf: "o-que-e-potencia",
+    sourceRevision: "5625ad973c09fd43954ade1c1b8775892c864a801393f76864db8553885247fa",
+    translationReview: {
+      status: "pending",
+    },
+  },
+  {
     slug: "rare-earths-17-elements-technology-brazil-part-1",
     title:
       "Rare earths: The 17 elements powering technology and placing Brazil at the center of a global contest",
@@ -106,6 +204,104 @@ export const translationRecords = [
     locale: "en",
     translationOf: "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
     sourceRevision: "9964fa7aed61ed9d201d7af6ebdda7d462c0889878b1f0630996067ba77f00d0",
+    translationReview: {
+      status: "pending",
+    },
+  },
+  {
+    slug: "o-que-e-potencia",
+    title: "¿Qué es la potencia y por qué no es lo mismo que energía?",
+    subtitle:
+      "La energía indica cuánto se transfiere o transforma; la potencia muestra la rapidez con la que sucede.",
+    excerpt:
+      "Entienda la diferencia entre energía y potencia, el significado de vatio, kilovatio y kilovatio-hora y por qué el tiempo de funcionamiento es importante.",
+    contentType: "explainer",
+    status: "draft",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "energia",
+    tags: ["potência", "energia", "eficiência energética"],
+    createdAt: "2026-08-12",
+    corrections: [],
+    readingTime: 7,
+    cover: {
+      src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial.png",
+      alt: "Dos elevadores levantan cargas iguales a la misma altura, uno en 10 segundos y otro en 30 segundos, demostrando que la misma transferencia de energía puede ocurrir con potencias diferentes",
+      decorative: false,
+      width: 1536,
+      height: 1024,
+      caption:
+        "Figura 1. Para la misma carga y la misma altura, realizar la tarea en menos tiempo requiere mayor potencia.",
+      credit: "Fuente: Elaboración propia (SGES, 2026).",
+      license: "Elaboração própria (SGES, 2026)",
+      sources: [
+        {
+          src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/o-que-e-potencia/art-003-elevadores-potencia-editorial-1536.webp",
+          width: 1536,
+        },
+      ],
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sources: [
+      {
+        title: "Watt (W)",
+        url: "https://www.nist.gov/glossary-term/34606",
+        organizationOrAuthor: "National Institute of Standards and Technology",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Definição do watt como unidade de potência equivalente a um joule por segundo.",
+        isDemo: false,
+      },
+      {
+        title: "Joule",
+        url: "https://www.nist.gov/glossary-term/26261",
+        organizationOrAuthor: "National Institute of Standards and Technology",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Referência institucional para o joule como unidade de energia e trabalho.",
+        isDemo: false,
+      },
+      {
+        title: "NIST Guide to the SI, Appendix B.8",
+        url: "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+        organizationOrAuthor: "National Institute of Standards and Technology",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Tabela institucional de fatores de conversão entre unidades.",
+        isDemo: false,
+      },
+      {
+        title: "Style Guide Full Text",
+        url: "https://www.energy.gov/cmei/communicationstandards/style-guide-full-text",
+        organizationOrAuthor: "U.S. Department of Energy",
+        verifiedAt: "2026-08-12",
+        type: "official",
+        note: "Referência institucional para o uso de unidades de potência e energia.",
+        isDemo: false,
+      },
+    ],
+    lastVerifiedAt: "2026-08-12",
+    aiAssistance: "substantial",
+    aiDisclosure:
+      "Esta edición se tradujo mediante Cloudflare Workers AI (Meta Llama 3.3 70B) y pasó verificaciones técnicas automáticas y correcciones editoriales asistidas por IA. La persona responsable del portal autorizó su publicación, aceptando las limitaciones documentadas. No se declara una revisión lingüística humana integral ni una certificación científica. La revisión editorial humana está pendiente en el flujo obligatorio; este borrador permanece sin publicar.",
+    aiDisclosureMode: "detailed",
+    seoTitle: "¿Qué es la potencia? Diferencia entre kW, kWh y energía",
+    seoDescription:
+      "Entienda potencia, energía, vatios, kilovatios y kilovatios-hora y descubra por qué la potencia y el consumo no son lo mismo.",
+    canonicalUrl: "/es/articulo/o-que-e-potencia",
+    locale: "es",
+    translationOf: "o-que-e-potencia",
+    sourceRevision: "5625ad973c09fd43954ade1c1b8775892c864a801393f76864db8553885247fa",
     translationReview: {
       status: "pending",
     },
@@ -220,8 +416,10 @@ export const translationRecords = [
   },
 ] as const satisfies readonly TranslationRecord[];
 export const translationLoaders: Record<string, MdxModuleLoader> = {
+  "en:o-que-e-potencia": () => import("../../../content/translations/en/o-que-e-potencia.mdx"),
   "en:rare-earths-17-elements-technology-brazil-part-1": () =>
     import("../../../content/translations/en/rare-earths-17-elements-technology-brazil-part-1.mdx"),
+  "es:o-que-e-potencia": () => import("../../../content/translations/es/o-que-e-potencia.mdx"),
   "es:tierras-raras-17-elementos-tecnologia-brasil-parte-1": () =>
     import("../../../content/translations/es/tierras-raras-17-elementos-tecnologia-brasil-parte-1.mdx"),
 };

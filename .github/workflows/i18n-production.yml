@@ -25,7 +25,7 @@ jobs:
         run: |
           git diff --name-only HEAD^ HEAD | while IFS= read -r path; do
             case "$path" in
-              content/translations/en/*.mdx|content/translations/es/*.mdx|src/content/generated/translations.ts) ;;
+              content/translations/en/*.mdx|content/translations/es/*.mdx|content/translation-evidence/en/*.json|content/translation-evidence/es/*.json|src/content/generated/translations.ts) ;;
               *) echo 'Non-translation change; refusing automatic deploy.'; exit 1 ;;
             esac
           done

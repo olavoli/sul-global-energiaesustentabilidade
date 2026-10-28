@@ -1,3 +1,5 @@
+import { sourceTerm, taxonomyPath } from "@/content/taxonomy-catalog";
+import { articleUi, useEditorialLocale } from "@/content/locale-context";
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,8 +8,10 @@ import { categories } from "@/data/categories";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
+  const locale = useEditorialLocale();
+  const ui = articleUi[locale];
   return (
-    <footer className="mt-24 border-t border-border bg-muted/40">
+    <footer lang="pt-BR" className="mt-24 border-t border-border bg-muted/40">
       <Container className="grid gap-10 py-14 md:grid-cols-4">
         <div>
           <h2 className="font-serif text-xl font-bold text-foreground">
@@ -22,17 +26,23 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <nav aria-label="Categorias">
-          <h3 className="overline text-muted-foreground">Categorias</h3>
+        <nav
+          aria-label={
+            locale === "en" ? "Categories" : locale === "es" ? "Categorías" : "Categorias"
+          }
+          lang={locale}
+        >
+          <h3 className="overline text-muted-foreground">
+            {locale === "en" ? "Categories" : locale === "es" ? "Categorías" : "Categorias"}
+          </h3>
           <ul className="mt-4 space-y-2 text-sm">
             {categories.map((c) => (
               <li key={c.slug}>
                 <Link
-                  to="/categoria/$slug"
-                  params={{ slug: c.slug }}
+                  to={taxonomyPath(sourceTerm("category", c.slug), locale)}
                   className="text-foreground hover:underline"
                 >
-                  {c.name}
+                  {sourceTerm("category", c.slug).editions[locale].label}
                 </Link>
               </li>
             ))}
@@ -115,9 +125,10 @@ export function SiteFooter() {
             <li>
               <a
                 href="/rss.xml"
+                lang={locale}
                 className="rounded border border-border px-2 py-1 text-foreground hover:underline"
               >
-                RSS
+                {ui.originalRss}
               </a>
             </li>
           </ul>
@@ -126,7 +137,7 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <Container className="flex flex-col items-start justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>© {year} Sul Global Energia e Sustentabilidade. Todos os direitos reservados.</p>
-          <p>Publicado em português brasileiro.</p>
+          <p lang={locale}>{ui.editionLanguage}</p>
         </Container>
       </div>
     </footer>

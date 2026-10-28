@@ -16,6 +16,12 @@ const server = await createServer({
   configFile: false,
   root,
   resolve: { alias: { "@": resolve(root, "src") } },
+  define: {
+    "import.meta.env.VITE_I18N_REVIEW_ORIGINAL": JSON.stringify(
+      process.env.I18N_PREVIEW_ORIGINAL ??
+        "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
+    ),
+  },
   optimizeDeps: { entries: ["scripts/visual/review-entry.tsx"] },
   plugins: [
     react(),
@@ -72,6 +78,9 @@ const server = await createServer({
         "**/.wrangler/**",
         "**/.dev.vars*",
         "**/artifacts/**",
+        "**/i18n/storage/**",
+        "**/.i18n-private-state/**",
+        "**/test-results/**",
         "**/*.{crt,pem}",
       ],
     },

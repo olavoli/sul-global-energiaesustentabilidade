@@ -5,6 +5,8 @@ export const useEditorialLocale = () => useContext(EditorialLocaleContext);
 export const articleUi = {
   "pt-BR": {
     home: "Início",
+    editionLanguage: "Publicado em português brasileiro.",
+    originalRss: "RSS",
     points: "Pontos-chave",
     transparency: "Nota de Transparência",
     by: "Por",
@@ -15,6 +17,8 @@ export const articleUi = {
   },
   en: {
     home: "Home",
+    editionLanguage: "English edition.",
+    originalRss: "RSS (Portuguese)",
     points: "Key takeaways",
     transparency: "Transparency note",
     by: "By",
@@ -25,6 +29,8 @@ export const articleUi = {
   },
   es: {
     home: "Inicio",
+    editionLanguage: "Edición en español.",
+    originalRss: "RSS (portugués)",
     points: "Puntos clave",
     transparency: "Nota de transparencia",
     by: "Por",

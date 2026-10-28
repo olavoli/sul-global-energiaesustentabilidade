@@ -6,7 +6,7 @@ import { discover } from "./automatic-discovery";
 import { loadBook, append, replay } from "./ledger";
 import { financialExposure, continuousBudget, maximumCallReserve } from "./automation-policy";
 import { validateAutomaticRecord } from "./automatic-attestation";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { translationSchema, translationReviewAccepted } from "../../src/content/translation-schema";
 import { verifyCloudflare, verifyPrivateRepository } from "./automatic-state";
 import { temporary, policy, mock, deps, credentials, slug } from "./automatic-fixtures.test";

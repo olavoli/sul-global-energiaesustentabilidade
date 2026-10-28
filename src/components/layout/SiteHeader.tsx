@@ -1,5 +1,6 @@
+import { useEditorialLocale } from "@/content/locale-context";
+import { TaxonomyNavLink } from "@/components/navigation/TaxonomyNavLink";
 import { LanguageSelector } from "@/components/navigation/LanguageSelector";
-import { Link } from "@tanstack/react-router";
 import { useCallback, useReducer, useRef } from "react";
 import { Menu, Search } from "lucide-react";
 import { Container } from "./Container";
@@ -11,6 +12,7 @@ import { primaryNav } from "@/components/navigation/nav-items";
 import { ScienceMenu } from "@/components/navigation/ScienceMenu";
 
 export function SiteHeader() {
+  const locale = useEditorialLocale();
   const [menuOpen, dispatchMenu] = useReducer(mobileMenuReducer, false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const closeMenu = useCallback(() => dispatchMenu("close"), []);
@@ -55,32 +57,30 @@ export function SiteHeader() {
           aria-label="Navegação principal"
           className="hidden lg:flex lg:items-center lg:gap-3 xl:gap-6"
         >
-          {primaryNav.slice(0, 6).map((item) =>
-            item.params?.slug === "ciencia" ? (
-              <ScienceMenu key={item.label} />
-            ) : (
-              <Link
-                key={item.label}
-                to={item.to}
-                params={item.params}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                activeProps={{ className: "text-foreground" }}
-              >
-                {item.label}
-              </Link>
-            ),
-          )}
+          {primaryNav
+            .slice(0, 6)
+            .map((item) =>
+              item.params?.slug === "ciencia" ? (
+                <ScienceMenu key={item.label} />
+              ) : (
+                <TaxonomyNavLink
+                  key={item.label}
+                  item={item}
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                />
+              ),
+            )}
         </nav>
 
         <div className="flex items-center gap-2">
           <LanguageSelector />
-          <Link
-            to="/busca"
+          <a
+            href={locale === "pt-BR" ? "/busca" : `/${locale}`}
             aria-label="Buscar no portal"
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-foreground transition-colors hover:bg-muted"
           >
             <Search className="h-4 w-4" aria-hidden />
-          </Link>
+          </a>
           <ThemeToggle />
         </div>
       </Container>

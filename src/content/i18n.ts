@@ -1,3 +1,4 @@
+import { taxonomyCatalog, taxonomyPath, sourceTerm, type TaxonomyKind } from "./taxonomy-catalog";
 import { authors } from "@/data/authors";
 import { articleRecords } from "./generated/articles";
 import { translationRecords } from "./generated/translations";
@@ -85,6 +86,30 @@ export function languageOptions(
   path: string,
   records: readonly TranslationRecord[] = translationRecords,
 ) {
+  const topicMatch = path.match(/^\/(?:(en|es)\/)?(categoria|category|tag|tema)\/([^/]+)$/);
+  if (topicMatch) {
+    const from = (topicMatch[1] ?? "pt-BR") as ContentLocale;
+    const kind: TaxonomyKind = ["categoria", "category"].includes(topicMatch[2])
+      ? "category"
+      : "tag";
+    const term = taxonomyCatalog.find(
+      (t) => t.kind === kind && t.editions[from].slug === topicMatch[3],
+    );
+    if (term)
+      return (["pt-BR", "en", "es"] as const).map((locale) => {
+        const articles =
+          locale === "pt-BR"
+            ? createContentRepository(articleRecords, false).getPublishedArticles()
+            : publishedTranslations(records).filter((a) => a.locale === locale);
+        const available =
+          term.kind === "category" || articles.some((a) => a.tags.includes(term.sourceKey));
+        return {
+          locale,
+          href: available ? taxonomyPath(term, locale) : locale === "pt-BR" ? "/" : `/${locale}`,
+          fallback: !available,
+        };
+      });
+  }
   const translated = publishedTranslations(records).find(
     (r) => translatedArticlePath(r.locale, r.slug) === path,
   );
@@ -113,11 +138,31 @@ export function languageOptions(
     };
   });
 }
-export function searchTranslations(locale: TranslationLocale, query: string) {
+export function searchTranslations(
+  locale: TranslationLocale,
+  query: string,
+  filters: { category?: string; tag?: string } = {},
+  records: readonly TranslationRecord[] = translationRecords,
+) {
   const term = normalize(query.trim());
-  return publishedTranslations().filter(
-    (r) =>
-      r.locale === locale &&
-      (!term || normalize([r.title, r.subtitle, r.excerpt, ...r.tags].join(" ")).includes(term)),
-  );
+  return publishedTranslations(records).filter((r) => {
+    if (r.locale !== locale) return false;
+    const category = sourceTerm("category", r.category).editions[locale];
+    const tags = r.tags.map((tag) => sourceTerm("tag", tag).editions[locale]);
+    return (
+      (!filters.category || filters.category === category.slug) &&
+      (!filters.tag || tags.some((t) => t.slug === filters.tag)) &&
+      (!term ||
+        normalize(
+          [
+            r.title,
+            r.subtitle,
+            r.excerpt,
+            category.label,
+            ...tags.map((t) => t.label),
+            ...r.tags,
+          ].join(" "),
+        ).includes(term))
+    );
+  });
 }

@@ -20,45 +20,68 @@ jobs:
           ref: main
           token: ${{ secrets.I18N_CONTENT_TOKEN }}
           fetch-depth: 0
+      - name: Wait for an existing translation PR instead of duplicating publication
+        id: pending
+        env:
+          GH_TOKEN: ${{ secrets.I18N_CONTENT_TOKEN }}
+        run: |
+          PENDING=$(gh pr list --base main --state open --json headRefName,isCrossRepository --jq '.[] | select(.isCrossRepository == false) | select(.headRefName | startswith("automation/i18n/")) | .headRefName')
+          if [[ -n "$PENDING" ]]; then
+            echo 'A translation PR is already pending; preserving its CI and publication state.'
+            echo 'blocked=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'blocked=false' >> "$GITHUB_OUTPUT"
+          fi
       - uses: oven-sh/setup-bun@v2
+        if: steps.pending.outputs.blocked != 'true'
         with:
           bun-version: 1.3.14
       - run: bun install --frozen-lockfile
+        if: steps.pending.outputs.blocked != 'true'
       - uses: actions/checkout@v4
+        if: steps.pending.outputs.blocked != 'true'
         with:
           repository: ${{ vars.I18N_STATE_REPOSITORY }}
           ref: main
           path: .i18n-private-state
           token: ${{ secrets.I18N_STATE_TOKEN }}
-      - name: Protected continuous authorization
+      - name: Protected Free-plan evidence (not a paid authorization)
+        if: steps.pending.outputs.blocked != 'true'
         env:
-          AUTHORIZATION: ${{ secrets.I18N_CONTINUOUS_AUTHORIZATION }}
+          CONFIRMATION: ${{ secrets.I18N_FREE_PLAN_CONFIRMATION }}
         run: |
           umask 077
-          printf '%s' "$AUTHORIZATION" > "$RUNNER_TEMP/i18n-authorization.json"
+          printf '%s' "$CONFIRMATION" > "$RUNNER_TEMP/i18n-free-plan.json"
       - name: Translate with durable checkpoints
+        if: steps.pending.outputs.blocked != 'true'
         env:
           I18N_AUTOMATION_ENABLED: "true"
-          I18N_AUTO_ALLOW_PAID: "1"
-          I18N_AUTO_AUTHORIZATION_FILE: ${{ runner.temp }}/i18n-authorization.json
+          I18N_EXECUTION_MODE: "free-only"
+          I18N_FREE_PLAN_CONFIRMATION_FILE: ${{ runner.temp }}/i18n-free-plan.json
+          I18N_FREE_HISTORY_ANCHOR: ${{ secrets.I18N_FREE_HISTORY_ANCHOR }}
           I18N_AUTO_STATE_REPOSITORY: ${{ vars.I18N_STATE_REPOSITORY }}
           I18N_AUTO_STATE_CHECKOUT: ${{ github.workspace }}/.i18n-private-state
           I18N_AUTO_STATE_TOKEN: ${{ secrets.I18N_STATE_TOKEN }}
           I18N_OPERATIONS_CF_ACCOUNT_ID: ${{ secrets.I18N_CF_ACCOUNT_ID }}
           I18N_OPERATIONS_CF_API_TOKEN: ${{ secrets.I18N_CF_API_TOKEN }}
-        run: bun run i18n:auto --apply
+        run: bun run i18n:auto --apply --editorial-policy
       - run: bun run typecheck
+        if: steps.pending.outputs.blocked != 'true'
       - run: bun run lint --ignore-pattern '.i18n-private-state/**'
+        if: steps.pending.outputs.blocked != 'true'
       - run: bun test
+        if: steps.pending.outputs.blocked != 'true'
       - run: bun run build
+        if: steps.pending.outputs.blocked != 'true'
       - name: Propose technically validated editions; required CI controls merge
+        if: steps.pending.outputs.blocked != 'true'
         env:
           GH_TOKEN: ${{ secrets.I18N_CONTENT_TOKEN }}
         run: |
-          if [[ -z "$(git status --porcelain -- content/translations src/content/generated/translations.ts)" ]]; then exit 0; fi
+          if [[ -z "$(git status --porcelain -- content/translations content/translation-evidence src/content/generated/translations.ts)" ]]; then exit 0; fi
           while IFS= read -r path; do
             case "$path" in
-              content/translations/en/*.mdx|content/translations/es/*.mdx|src/content/generated/translations.ts) ;;
+              content/translations/en/*.mdx|content/translations/es/*.mdx|content/translation-evidence/en/*.json|content/translation-evidence/es/*.json|src/content/generated/translations.ts) ;;
               *) echo 'Unexpected content diff; refusing publication.'; exit 1 ;;
             esac
           done < <(git diff --name-only; git ls-files --others --exclude-standard)
@@ -66,7 +89,7 @@ jobs:
           git switch -c "$BRANCH"
           git config user.name 'Sul Global Translation Automation'
           git config user.email 'translation-automation@users.noreply.github.com'
-          git add -- content/translations/en content/translations/es src/content/generated/translations.ts
+          git add -- content/translations/en content/translations/es content/translation-evidence src/content/generated/translations.ts
           git diff --cached --check
           git commit -m '[i18n-auto] update technically validated translations'
           git push origin "HEAD:refs/heads/$BRANCH"

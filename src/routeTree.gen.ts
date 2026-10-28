@@ -25,7 +25,11 @@ import { Route as AutorSlugRouteImport } from './routes/autor.$slug'
 import { Route as ArtigoSlugRouteImport } from './routes/artigo.$slug'
 import { Route as AdminNewsroomRouteImport } from './routes/admin.newsroom'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as EsTemaSlugRouteImport } from './routes/es.tema.$slug'
+import { Route as EsCategoriaSlugRouteImport } from './routes/es.categoria.$slug'
 import { Route as EsArticuloSlugRouteImport } from './routes/es.articulo.$slug'
+import { Route as EnTagSlugRouteImport } from './routes/en.tag.$slug'
+import { Route as EnCategorySlugRouteImport } from './routes/en.category.$slug'
 import { Route as EnArticleSlugRouteImport } from './routes/en.article.$slug'
 import { Route as AdminResearchWorkspaceScientificWorkIdRouteImport } from './routes/admin.research-workspace.$scientificWorkId'
 import { Route as AdminNewsroomSectionRouteImport } from './routes/admin.newsroom_.$section'
@@ -111,9 +115,29 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
   path: '/admin/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EsTemaSlugRoute = EsTemaSlugRouteImport.update({
+  id: '/es/tema/$slug',
+  path: '/es/tema/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsCategoriaSlugRoute = EsCategoriaSlugRouteImport.update({
+  id: '/es/categoria/$slug',
+  path: '/es/categoria/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EsArticuloSlugRoute = EsArticuloSlugRouteImport.update({
   id: '/es/articulo/$slug',
   path: '/es/articulo/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnTagSlugRoute = EnTagSlugRouteImport.update({
+  id: '/en/tag/$slug',
+  path: '/en/tag/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnCategorySlugRoute = EnCategorySlugRouteImport.update({
+  id: '/en/category/$slug',
+  path: '/en/category/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EnArticleSlugRoute = EnArticleSlugRouteImport.update({
@@ -158,7 +182,11 @@ export interface FileRoutesByFullPath {
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/en/article/$slug': typeof EnArticleSlugRoute
+  '/en/category/$slug': typeof EnCategorySlugRoute
+  '/en/tag/$slug': typeof EnTagSlugRoute
   '/es/articulo/$slug': typeof EsArticuloSlugRoute
+  '/es/categoria/$slug': typeof EsCategoriaSlugRoute
+  '/es/tema/$slug': typeof EsTemaSlugRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRoutesByTo {
@@ -181,7 +209,11 @@ export interface FileRoutesByTo {
   '/admin/newsroom/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/en/article/$slug': typeof EnArticleSlugRoute
+  '/en/category/$slug': typeof EnCategorySlugRoute
+  '/en/tag/$slug': typeof EnTagSlugRoute
   '/es/articulo/$slug': typeof EsArticuloSlugRoute
+  '/es/categoria/$slug': typeof EsCategoriaSlugRoute
+  '/es/tema/$slug': typeof EsTemaSlugRoute
   '/admin/newsroom/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRoutesById {
@@ -205,7 +237,11 @@ export interface FileRoutesById {
   '/admin/newsroom_/$section': typeof AdminNewsroomSectionRouteWithChildren
   '/admin/research-workspace/$scientificWorkId': typeof AdminResearchWorkspaceScientificWorkIdRoute
   '/en/article/$slug': typeof EnArticleSlugRoute
+  '/en/category/$slug': typeof EnCategorySlugRoute
+  '/en/tag/$slug': typeof EnTagSlugRoute
   '/es/articulo/$slug': typeof EsArticuloSlugRoute
+  '/es/categoria/$slug': typeof EsCategoriaSlugRoute
+  '/es/tema/$slug': typeof EsTemaSlugRoute
   '/admin/newsroom_/$section/$id': typeof AdminNewsroomSectionIdRoute
 }
 export interface FileRouteTypes {
@@ -230,7 +266,11 @@ export interface FileRouteTypes {
     | '/admin/newsroom/$section'
     | '/admin/research-workspace/$scientificWorkId'
     | '/en/article/$slug'
+    | '/en/category/$slug'
+    | '/en/tag/$slug'
     | '/es/articulo/$slug'
+    | '/es/categoria/$slug'
+    | '/es/tema/$slug'
     | '/admin/newsroom/$section/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -253,7 +293,11 @@ export interface FileRouteTypes {
     | '/admin/newsroom/$section'
     | '/admin/research-workspace/$scientificWorkId'
     | '/en/article/$slug'
+    | '/en/category/$slug'
+    | '/en/tag/$slug'
     | '/es/articulo/$slug'
+    | '/es/categoria/$slug'
+    | '/es/tema/$slug'
     | '/admin/newsroom/$section/$id'
   id:
     | '__root__'
@@ -276,7 +320,11 @@ export interface FileRouteTypes {
     | '/admin/newsroom_/$section'
     | '/admin/research-workspace/$scientificWorkId'
     | '/en/article/$slug'
+    | '/en/category/$slug'
+    | '/en/tag/$slug'
     | '/es/articulo/$slug'
+    | '/es/categoria/$slug'
+    | '/es/tema/$slug'
     | '/admin/newsroom_/$section/$id'
   fileRoutesById: FileRoutesById
 }
@@ -300,7 +348,11 @@ export interface RootRouteChildren {
   AdminNewsroomSectionRoute: typeof AdminNewsroomSectionRouteWithChildren
   AdminResearchWorkspaceScientificWorkIdRoute: typeof AdminResearchWorkspaceScientificWorkIdRoute
   EnArticleSlugRoute: typeof EnArticleSlugRoute
+  EnCategorySlugRoute: typeof EnCategorySlugRoute
+  EnTagSlugRoute: typeof EnTagSlugRoute
   EsArticuloSlugRoute: typeof EsArticuloSlugRoute
+  EsCategoriaSlugRoute: typeof EsCategoriaSlugRoute
+  EsTemaSlugRoute: typeof EsTemaSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -417,11 +469,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/es/tema/$slug': {
+      id: '/es/tema/$slug'
+      path: '/es/tema/$slug'
+      fullPath: '/es/tema/$slug'
+      preLoaderRoute: typeof EsTemaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/categoria/$slug': {
+      id: '/es/categoria/$slug'
+      path: '/es/categoria/$slug'
+      fullPath: '/es/categoria/$slug'
+      preLoaderRoute: typeof EsCategoriaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/es/articulo/$slug': {
       id: '/es/articulo/$slug'
       path: '/es/articulo/$slug'
       fullPath: '/es/articulo/$slug'
       preLoaderRoute: typeof EsArticuloSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/tag/$slug': {
+      id: '/en/tag/$slug'
+      path: '/en/tag/$slug'
+      fullPath: '/en/tag/$slug'
+      preLoaderRoute: typeof EnTagSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en/category/$slug': {
+      id: '/en/category/$slug'
+      path: '/en/category/$slug'
+      fullPath: '/en/category/$slug'
+      preLoaderRoute: typeof EnCategorySlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/en/article/$slug': {
@@ -487,7 +567,11 @@ const rootRouteChildren: RootRouteChildren = {
   AdminResearchWorkspaceScientificWorkIdRoute:
     AdminResearchWorkspaceScientificWorkIdRoute,
   EnArticleSlugRoute: EnArticleSlugRoute,
+  EnCategorySlugRoute: EnCategorySlugRoute,
+  EnTagSlugRoute: EnTagSlugRoute,
   EsArticuloSlugRoute: EsArticuloSlugRoute,
+  EsCategoriaSlugRoute: EsCategoriaSlugRoute,
+  EsTemaSlugRoute: EsTemaSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

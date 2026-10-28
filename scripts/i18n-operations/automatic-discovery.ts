@@ -1,6 +1,6 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { hash } from "../i18n-simulation/pipeline";
 import { translationSchema } from "../../src/content/translation-schema";
 export async function discover(root: string) {

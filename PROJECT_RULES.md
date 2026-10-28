@@ -15,7 +15,7 @@ executivo — curto, direto, inegociável.
 - Tipo: **portal de mídia independente**, não um blog pessoal.
 - Temas: energia, sustentabilidade, ciência, tecnologia, desenvolvimento,
   transição energética.
-- Idioma original: **PT-BR**. Edições EN/ES seguem `docs/I18N_CONTINUOUS_AUTOMATION.md`; atestação técnica automática não é revisão humana nem certificação científica.
+- Idioma original: **PT-BR**. Edições EN/ES seguem `docs/I18N_CONTINUOUS_AUTOMATION.md` e a modalidade editorial específica em `docs/I18N_AUTOMATIC_EDITORIAL_POLICY.md`; atestação técnica automática não é revisão humana nem certificação científica.
 - Referência visual: **Bloomberg Green** (editorial denso, verde/preto,
   serifada forte, ar técnico).
 - Referências editoriais: Reuters, Bloomberg Green, MIT Technology Review.

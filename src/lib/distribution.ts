@@ -1,3 +1,4 @@
+import { taxonomyTopics } from "@/content/taxonomy-topics";
 import { translationRecords } from "@/content/generated/translations";
 import type { TranslationRecord } from "@/content/translation-schema";
 import { publishedTranslations, articleAlternates } from "@/content/i18n";
@@ -76,7 +77,14 @@ export function generateSitemap(
   for (const locale of ["en", "es"] as const) {
     if (translated.filter((a) => a.locale === locale).length >= 2) paths.push(`/${locale}`);
   }
-  const entries = paths.map((path) => {
+  if (publishable)
+    for (const locale of ["en", "es"] as const)
+      paths.push(
+        ...taxonomyTopics(locale, translations)
+          .filter((t) => t.indexable)
+          .map((t) => t.path),
+      );
+  const entries = [...new Set(paths)].map((path) => {
     const original =
       articles.find((a) => (a.canonicalUrl ?? `/artigo/${a.slug}`) === path)?.slug ??
       translated.find((a) => a.canonicalUrl === path)?.translationOf;

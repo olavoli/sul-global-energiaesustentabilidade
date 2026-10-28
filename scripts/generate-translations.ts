@@ -1,3 +1,5 @@
+import { validateTranslationTaxonomy } from "../src/content/taxonomy-catalog";
+import { verifyPolicyRecord } from "./i18n-operations/editorial-policy-record";
 import { validateAutomaticRecord } from "./i18n-operations/automatic-attestation";
 import { createHash } from "node:crypto";
 import { readdir, readFile, mkdir, writeFile } from "node:fs/promises";
@@ -9,7 +11,7 @@ import {
   translationSchema,
   type TranslationRecord,
 } from "../src/content/translation-schema";
-import type { ParsedEditorialFile } from "./generate-content";
+import type { ParsedEditorialFile } from "../src/content/editorial-parser";
 
 /** Reuse the original MDX safety/schema checks; translations never enter the PT index. */
 export async function generateTranslations(
@@ -36,11 +38,13 @@ export async function generateTranslations(
       const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
       if (!match) throw new Error(`Frontmatter ausente: ${path}`);
       const record = validateAutomaticRecord(parse(match[1]), parsed.body);
+      await verifyPolicyRecord(root, source);
       if (record.locale !== locale || basename(name, ".mdx") !== record.slug)
         throw new Error(`Idioma/slug divergente: ${path}`);
       const original = originals.find((o) => o.frontmatter.slug === record.translationOf);
       if (!original || original.frontmatter.isDemo || original.frontmatter.status !== "published")
         throw new Error(`Original publicado ausente: ${path}`);
+      validateTranslationTaxonomy(original.frontmatter, record);
       const originalBytes = (await readFile(original.path, "utf8")).replace(/\r\n/g, "\n");
       if (createHash("sha256").update(originalBytes).digest("hex") !== record.sourceRevision) {
         if (record.translationReview.status === "automatic") continue;

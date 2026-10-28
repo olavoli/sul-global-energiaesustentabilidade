@@ -1,18 +1,17 @@
-import { translationSchema } from "../src/content/translation-schema";
+import { parseEditorialFile, type ParsedEditorialFile } from "../src/content/editorial-parser";
+export {
+  parseEditorialFile,
+  validateSafeMdx,
+  type ParsedEditorialFile,
+} from "../src/content/editorial-parser";
 import { generateTranslations } from "./generate-translations";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { basename, dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { parse } from "yaml";
 import { format, resolveConfig } from "prettier";
 
-import {
-  articleFrontmatterSchema,
-  authorSchema,
-  sourceUrlDivergence,
-  type ArticleFrontmatter,
-} from "../src/content/schema";
+import { authorSchema, sourceUrlDivergence, type ArticleFrontmatter } from "../src/content/schema";
 import { authors } from "../src/data/authors";
 import { categories } from "../src/data/categories";
 
@@ -20,82 +19,6 @@ const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url));
 const ARTICLE_DIRECTORY = resolve(SCRIPT_DIRECTORY, "../content/articles");
 const TEMPLATE_DIRECTORY = resolve(SCRIPT_DIRECTORY, "../content/templates");
 const GENERATED_DIRECTORY = resolve(SCRIPT_DIRECTORY, "../src/content/generated");
-const ALLOWED_COMPONENTS = new Set([
-  "Callout",
-  "Quote",
-  "Figure",
-  "KeyPoints",
-  "EditorialTable",
-  "TableHead",
-  "TableBody",
-  "TableRow",
-  "TableHeader",
-  "TableCell",
-  "Emphasis",
-  "Strong",
-  "Superscript",
-  "Subscript",
-  "Underline",
-  "MathExpression",
-  "YouTubeEmbed",
-  "VideoCard",
-]);
-
-export interface ParsedEditorialFile {
-  frontmatter: ArticleFrontmatter;
-  body: string;
-  path: string;
-}
-
-/** Parse and validate one constrained MDX editorial file. */
-export function parseEditorialFile(source: string, path = "conteúdo.mdx"): ParsedEditorialFile {
-  const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
-  if (!match) throw new Error(`${path}: frontmatter delimitado por --- é obrigatório.`);
-
-  let rawFrontmatter: unknown;
-  try {
-    rawFrontmatter = parse(match[1]);
-  } catch (error) {
-    throw new Error(`${path}: YAML inválido: ${String(error)}`);
-  }
-
-  const isTranslation =
-    typeof rawFrontmatter === "object" && rawFrontmatter !== null && "locale" in rawFrontmatter;
-  const result = (isTranslation ? translationSchema : articleFrontmatterSchema).safeParse(
-    rawFrontmatter,
-  );
-  if (!result.success) {
-    throw new Error(
-      `${path}: frontmatter inválido:\n${result.error.issues
-        .map((issue) => {
-          const field = issue.path.join(".") || "frontmatter";
-          return `- ${field}: ${issue.message} Ação: corrija o campo ${field} no arquivo indicado.`;
-        })
-        .join("\n")}`,
-    );
-  }
-
-  validateSafeMdx(match[2], path);
-  return { frontmatter: result.data, body: match[2], path };
-}
-
-/** Reject executable MDX constructs and components outside the editorial whitelist. */
-export function validateSafeMdx(body: string, path: string): void {
-  if (/^\s*(?:import|export)\s/m.test(body)) {
-    throw new Error(`${path}: import/export não é permitido no conteúdo editorial.`);
-  }
-  if (/[{}]/.test(body)) {
-    throw new Error(`${path}: expressões JavaScript em MDX não são permitidas.`);
-  }
-
-  for (const match of body.matchAll(/<\/?([A-Za-z][\w.]*)\b/g)) {
-    const component = match[1];
-    if (!ALLOWED_COMPONENTS.has(component)) {
-      throw new Error(`${path}: componente MDX não autorizado: ${component}.`);
-    }
-  }
-}
-
 /** Validate cross-record invariants such as unique slugs and existing taxonomy. */
 export function validateArticleCollection(records: ArticleFrontmatter[]): void {
   const slugs = new Set<string>();

@@ -1,0 +1,18 @@
+{
+  "version": "translation-editorial-v1",
+  "mode": "automatic-ai-assisted",
+  "sourceLocale": "pt-BR",
+  "targetLocales": ["en", "es"],
+  "sourceStatus": "published",
+  "authorizedBy": "Responsável editorial do portal (declaração nesta conversa)",
+  "authorizationRecord": "Instrução explícita do responsável: reformulação da política editorial de traduções; autorização por política para artigos PT-BR publicados, sem simular revisão humana.",
+  "executionMode": "free-only",
+  "humanReview": "not-claimed",
+  "unresolvedMeaning": "review-required",
+  "continuousActivation": false,
+  "acceptedLimitations": [
+    "labelled-portuguese-links",
+    "original-image-text",
+    "partial-interface-localization"
+  ]
+}

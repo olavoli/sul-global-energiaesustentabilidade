@@ -1,3 +1,4 @@
+import { sourceTerm } from "@/content/taxonomy-catalog";
 import { notFound } from "@tanstack/react-router";
 import { translationRecords } from "@/content/generated/translations";
 import type { TranslationRecord, TranslationLocale } from "@/content/translation-schema";
@@ -30,6 +31,14 @@ export function translatedHead(
       { title: `${article.seoTitle ?? article.title} — Sul Global` },
       { name: "description", content: article.seoDescription ?? article.excerpt },
       { name: "author", content: article.author.displayName },
+      {
+        property: "article:section",
+        content: sourceTerm("category", article.category).editions[article.locale].label,
+      },
+      ...article.tags.map((tag) => ({
+        property: "article:tag",
+        content: sourceTerm("tag", tag).editions[article.locale].label,
+      })),
       { property: "article:published_time", content: article.publishedAt },
       ...socialMeta({
         title: article.seoTitle ?? article.title,

@@ -1,0 +1,40 @@
+/** Closed taxonomy entries: stable PT slug, PT label, EN label/slug, ES label/slug. */
+export default [
+  ["uso-da-terra", "uso da terra", "Land use", "land-use", "Uso de la tierra", "uso-de-la-tierra"],
+  [
+    "agua-e-energia",
+    "água e energia",
+    "Water and energy",
+    "water-and-energy",
+    "Agua y energía",
+    "agua-y-energia",
+  ],
+  ["asia", "ásia", "Asia", "asia", "Asia", "asia"],
+  ["africa", "áfrica", "Africa", "africa", "África", "africa"],
+  [
+    "mercado-de-carbono",
+    "mercado de carbono",
+    "Carbon market",
+    "carbon-market",
+    "Mercado de carbono",
+    "mercado-de-carbono",
+  ],
+  ["mme", "mme", "MME", "mme", "MME", "mme"],
+  ["ons", "ons", "ONS", "ons", "ONS", "ons"],
+  [
+    "america-latina",
+    "américa latina",
+    "Latin America",
+    "latin-america",
+    "América Latina",
+    "america-latina",
+  ],
+  [
+    "uniao-europeia",
+    "união europeia",
+    "European Union",
+    "european-union",
+    "Unión Europea",
+    "union-europea",
+  ],
+] as const;

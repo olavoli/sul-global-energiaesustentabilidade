@@ -1,3 +1,4 @@
+import { portugueseTaxonomyAlternates } from "@/content/taxonomy-topics";
 import { siteConfig } from "@/config/site";
 import { resolveCanonical, socialMeta } from "./seo";
 
@@ -36,6 +37,15 @@ export function tagPageHead(
       },
       ...socialMeta({ title, description, path }),
     ],
-    links: [{ rel: "canonical", href: resolveCanonical(path) }],
+    links: [
+      { rel: "canonical", href: resolveCanonical(path) },
+      ...(topic.indexable
+        ? portugueseTaxonomyAlternates("tag", topic.name).map((l) => ({
+            rel: "alternate",
+            hrefLang: l.locale,
+            href: resolveCanonical(l.path),
+          }))
+        : []),
+    ],
   };
 }

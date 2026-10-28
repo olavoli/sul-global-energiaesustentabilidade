@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { compile } from "@mdx-js/mdx";
 import remarkFrontmatter from "remark-frontmatter";
 import { z } from "zod";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import {
   prepare,
   assemble,
@@ -80,8 +80,9 @@ export async function request(
   credentials: { account: string; token: string },
   transport: Transport = fetch,
   freeOnly = false,
+  assessmentPayload?: ReturnType<typeof payload>,
 ) {
-  const body = JSON.stringify(payload(chunk, locale));
+  const body = JSON.stringify(assessmentPayload ?? payload(chunk, locale));
   const response = await guard("request", "attempted-unconfirmed", () =>
     transport(
       `https://api.cloudflare.com/client/v4/accounts/${credentials.account}/ai/run/${models.cloudflare}`,

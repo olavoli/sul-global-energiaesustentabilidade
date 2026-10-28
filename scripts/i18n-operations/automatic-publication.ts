@@ -1,3 +1,5 @@
+import { validateTranslationTaxonomy } from "../../src/content/taxonomy-catalog";
+import { evaluatePolicy, meaningMetadata } from "./editorial-policy";
 import { scientificTokensMatch } from "./automatic-science";
 import { revision } from "./run";
 import { targetRevision, validateAutomaticRecord } from "./automatic-attestation";
@@ -8,9 +10,9 @@ import remarkFrontmatter from "remark-frontmatter";
 import { remarkEditorialSlots } from "../../src/content/remark-editorial-slots";
 import { translationSchema } from "../../src/content/translation-schema";
 import { articleFrontmatterSchema } from "../../src/content/schema";
-import { parseEditorialFile } from "../generate-content";
+import { parseEditorialFile } from "../../src/content/editorial-parser";
 import { hash, prepare, type Locale } from "../i18n-simulation/pipeline";
-import { editorialDeterministic, translationDisclosure } from "./editorial";
+import { editorialDeterministic, translationDisclosure, localizedCredit } from "./editorial";
 import { publishCheck } from "../editorial-operations";
 function acceptedWarning(f: { code: string; source?: string; target?: string }) {
   if (f.code !== "negation-modality-mineral-caveat") return false;
@@ -30,11 +32,14 @@ export async function publicationCandidate(
   policyId: string,
   runId: string,
   now = new Date(),
+  editorial?: { policy: unknown; evidence: unknown },
 ) {
   const sourceRaw = await readFile(join(root, "content/articles", slug + ".mdx"), "utf8"),
     source = parseEditorialFile(sourceRaw),
     parsed = parseEditorialFile(raw);
   const frontmatter = translationSchema.parse(parsed.frontmatter);
+  if (editorial && (!source.frontmatter.approvedAt || source.frontmatter.isDemo))
+    throw Error("editorial-source-approval-missing");
   if (
     source.frontmatter.status !== "published" ||
     frontmatter.translationOf !== slug ||
@@ -42,6 +47,7 @@ export async function publicationCandidate(
     frontmatter.sourceRevision !== hash(sourceRaw)
   )
     throw Error("automatic-source-stale");
+  validateTranslationTaxonomy(source.frontmatter, frontmatter);
   const sourceSegments = prepare(source.body).segments,
     targetSegments = prepare(parsed.body).segments;
   if (
@@ -57,8 +63,20 @@ export async function publicationCandidate(
   for (const key of ["alt", "caption"] as const)
     if (!scientificTokensMatch(source.frontmatter.cover[key] ?? "", frontmatter.cover[key] ?? ""))
       throw Error("automatic-scientific-token-divergence");
+  const decision = editorial
+    ? evaluatePolicy(
+        source.body,
+        parsed.body,
+        locale,
+        hash(sourceRaw),
+        editorial.policy,
+        editorial.evidence,
+        { source: meaningMetadata(source.frontmatter), target: meaningMetadata(frontmatter) },
+      )
+    : undefined;
+  if (decision && decision.policyId !== policyId) throw Error("editorial-policy-id-mismatch");
   const findings = editorialDeterministic(source.body, parsed.body, locale);
-  if (findings.some((f) => f.severity === "critical" || !acceptedWarning(f)))
+  if (!decision && findings.some((f) => f.severity === "critical" || !acceptedWarning(f)))
     throw Error("automatic-content-quarantined");
   if (
     JSON.stringify(frontmatter.sources) !== JSON.stringify(source.frontmatter.sources) ||
@@ -66,20 +84,52 @@ export async function publicationCandidate(
     frontmatter.category !== source.frontmatter.category ||
     frontmatter.cover.src !== source.frontmatter.cover.src ||
     frontmatter.cover.license !== source.frontmatter.cover.license ||
+    frontmatter.cover.credit !== localizedCredit(source.frontmatter.cover.credit, locale) ||
+    JSON.stringify(frontmatter.cover.aiProvenance) !==
+      JSON.stringify(source.frontmatter.cover.aiProvenance) ||
+    frontmatter.cover.decorative !== source.frontmatter.cover.decorative ||
+    frontmatter.referencesInBody !== source.frontmatter.referencesInBody ||
+    JSON.stringify(frontmatter.tags) !== JSON.stringify(source.frontmatter.tags) ||
+    frontmatter.contentType !== source.frontmatter.contentType ||
+    frontmatter.sponsored !== source.frontmatter.sponsored ||
+    JSON.stringify(frontmatter.cover.sources) !==
+      JSON.stringify(source.frontmatter.cover.sources) ||
+    frontmatter.cover.width !== source.frontmatter.cover.width ||
+    frontmatter.cover.height !== source.frontmatter.cover.height ||
     prepare(parsed.body).bibliography !== prepare(source.body).bibliography
   )
     throw Error("automatic-attribution-changed");
   const day = now.toISOString().slice(0, 10);
+  if (decision) {
+    delete frontmatter.reviewedAt;
+    frontmatter.aiDisclosureMode = "detailed";
+    frontmatter.aiAssistance = "substantial";
+  }
   frontmatter.status = "published";
   frontmatter.draftStage = "review-ready";
   frontmatter.approvedAt = day;
   frontmatter.publishedAt = day;
-  const note =
+  const policyNote =
     locale === "en"
+      ? "This language edition was translated automatically using Cloudflare Workers AI (Meta Llama 3.3 70B) and passed automated technical checks under the portal’s automatic translation editorial policy. Meaning was compared with AI assistance; no full human linguistic review was performed. These checks do not certify scientific accuracy."
+      : "Esta edición se tradujo automáticamente mediante Cloudflare Workers AI (Meta Llama 3.3 70B) y superó verificaciones técnicas automáticas conforme a la política editorial de traducción automática del portal. El significado se comparó con ayuda de IA; no se realizó una revisión lingüística humana integral. Estas verificaciones no certifican precisión científica.";
+  const note = decision
+    ? policyNote
+    : locale === "en"
       ? "This language edition was translated automatically using Cloudflare Workers AI (Meta Llama 3.3 70B) and passed automated technical checks. These checks do not certify scientific accuracy or human linguistic review."
       : "Esta edición se tradujo automáticamente mediante Cloudflare Workers AI (Meta Llama 3.3 70B) y superó verificaciones técnicas automáticas. Estas verificaciones no certifican precisión científica ni revisión lingüística humana.";
   frontmatter.aiDisclosure = [
-    frontmatter.aiDisclosure?.replace(translationDisclosure(locale), "").trim(),
+    frontmatter.aiDisclosure
+      ?.replace(translationDisclosure(locale), "")
+      .replace(
+        "Human editorial review is pending in the required workflow; this draft remains unpublished.",
+        "",
+      )
+      .replace(
+        "La revisión editorial humana está pendiente en el flujo obligatorio; este borrador permanece sin publicar.",
+        "",
+      )
+      .trim(),
     note,
   ]
     .filter(Boolean)
@@ -90,13 +140,16 @@ export async function publicationCandidate(
       policyId,
       runId,
       model: "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
-      validator: "operations-technical-v1",
+      validator: decision ? "operations-editorial-policy-v1" : "operations-technical-v1",
+      ...(decision ? { meaningRevision: decision.meaningRevision } : {}),
       codeRevision: await revision(root),
       sourceRevision: hash(sourceRaw),
       targetRevision: targetRevision(frontmatter, parsed.body),
       validatedAt: now.toISOString(),
       scope: "technical-only",
-      checks: ["mdx", "numbers", "formulas", "links", "references", "metadata"],
+      checks: decision
+        ? ["mdx", "numbers", "formulas", "links", "references", "metadata", "meaning"]
+        : ["mdx", "numbers", "formulas", "links", "references", "metadata"],
     },
   };
   validateAutomaticRecord(frontmatter, parsed.body);

@@ -18,18 +18,23 @@ import { EditorialLocaleContext, LanguageNavigationContext } from "@/content/loc
 import { languageForPath } from "@/content/i18n";
 import "@/styles.css";
 
-const original = getArticleBySlug("terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1");
+const originalSlug =
+  import.meta.env.VITE_I18N_REVIEW_ORIGINAL ??
+  "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1";
+const original = getArticleBySlug(originalSlug);
 if (!original) throw new Error("Published PT original missing");
+const originalTitle = original.title;
+const translations = translationRecords.filter((record) => record.translationOf === originalSlug);
 const editions = [
   original,
-  ...translationRecords.map((record) => ({
+  ...translations.map((record) => ({
     ...record,
     id: `${record.locale}:${record.slug}`,
     author: authors[record.author],
   })),
 ];
 const options = editions.map((edition, index) => ({
-  locale: index === 0 ? ("pt-BR" as const) : translationRecords[index - 1].locale,
+  locale: index === 0 ? ("pt-BR" as const) : translations[index - 1].locale,
   href: edition.canonicalUrl ?? `/artigo/${edition.slug}`,
   fallback: false,
 }));
@@ -46,7 +51,8 @@ export function Review() {
       <EditorialLocaleContext.Provider value={locale}>
         <LanguageNavigationContext.Provider value={options}>
           <div className="border-b bg-muted px-4 py-2 text-sm" data-review-notice>
-            PR #13 — PRÉVIA LOCAL. EN/ES são rascunhos sem aprovação humana. Nada publicado.
+            PRÉVIA LOCAL — {originalTitle}. EN/ES são rascunhos sem aprovação humana. Nada
+            publicado.
           </div>
           <SiteHeader />
           <main id="conteudo">
@@ -62,7 +68,9 @@ export function Review() {
                 <ul>
                   {options.map((o) => (
                     <li key={o.locale}>
-                      <a href={o.href}>{o.locale} — ART-033</a>
+                      <a href={o.href}>
+                        {o.locale} — {originalTitle}
+                      </a>
                     </li>
                   ))}
                 </ul>
