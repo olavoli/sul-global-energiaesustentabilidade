@@ -111,3 +111,7 @@ Capturas são candidatas de revisão, identificadas NOT-APPROVED, não baselines
 EN mantém cinco avisos (três falsos positivos documentados de negação/modalidade e dois links PT); ES mantém dois links PT. Os sete avisos e seus manifestos não foram apagados nem silenciados no tradutor. Ambos continuam draft/pending, sem revisor humano ou data de aprovação. Decisões ainda humanas: qualidade linguística final, aceitação dos raster e interfaces auxiliares em PT, links para PT e autorização eventual de publicação.
 
 PR #14 permanece independente, aberto, pronto para revisão/integração e com seus checks aprovados; nenhuma alteração foi enviada àquela branch. Sem merge, deploy, ativação contínua, inferência ou mudança da conta Cloudflare nesta rodada.
+
+## Atualização de integração
+
+O registro anterior de PR #14 aberto é histórico. Ele foi integrado por squash na main em ee65f131a71e3a957b2a681116b87dccd909a156, sem bypass de quality/visual. A branch do PR #15 recebeu essa main por merge normal, sem conflitos, sem alterar os drafts ou as sete ressalvas. A checklist para a decisão humana está em [I18N_POWER_EDITORIAL_APPROVAL_CHECKLIST.md](I18N_POWER_EDITORIAL_APPROVAL_CHECKLIST.md). Os resultados de 1.075 testes / 24 casos visuais dos commits anteriores continuam evidência histórica, não aprovação automática do código integrado.
