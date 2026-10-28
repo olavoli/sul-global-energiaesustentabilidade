@@ -33,3 +33,9 @@ Links de artigos PT continuam explicitamente identificados; imagens, alt, legend
 O responsável autorizou a publicação e aceitou expressamente os três falsos positivos, quatro links PT identificados, raster em PT, interface parcial e limitações documentadas. Essa autorização está registrada em [I18N_POWER_PUBLICATION_AUTHORIZATION.md](I18N_POWER_PUBLICATION_AUTHORIZATION.md), sem convertê-la em revisão linguística integral ou inventar revisor/data. Os itens acima são mantidos como histórico da checklist; caixas não são evidência de revisão humana realizada.
 
 A Nota de Transparência foi atualizada para distinguir autorização, validação técnica/IA e revisão humana pendente. O fluxo manual atual ainda exige revisão editorial humana identificada; por isso a publicação está interrompida antes de transição, merge ou deploy. Não é necessário repetir a autorização editorial já concedida.
+
+## Briefing resolvido e conferência humana preparada
+
+O bloqueio de briefing foi resolvido pela reconstrução retrospectiva validada em content/research/o-que-e-potencia.yml. Quatro fontes foram consultadas para este registro, sem inventar planejamento histórico ou alterar as verificações antigas do artigo. Ambos os dry-runs oficiais draft → review passaram, com draftStage review-ready e sem --apply. O status permanece draft e os campos de revisor/data continuam ausentes.
+
+[Roteiro conciso de conferência humana EN/ES](I18N_POWER_HUMAN_REVIEW.md): contém os trechos exatos e critérios para potência/energia, eficiência, fórmulas, exemplos e conclusões. A pendência real restante é a revisão efetiva e seu registro de identidade, data, escopo e resultado; nenhuma nova autorização de publicação é solicitada.

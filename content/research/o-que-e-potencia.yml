@@ -1,0 +1,128 @@
+# Reconstrução retrospectiva assistida em 28/10/2026; não é planejamento histórico original.
+# verifiedAt abaixo é a consulta documental desta reconstrução, não revisão humana.
+# As datas 2026-08-12 das fontes no MDX publicado permanecem inalteradas.
+articleSlug: o-que-e-potencia
+researchQuestion: Como distinguir potência, energia e eficiência e interpretar corretamente W, kW e kWh?
+scope: >-
+  Briefing reconstruído retrospectivamente em 28/10/2026 a partir do artigo PT publicado,
+  das quatro fontes estruturadas já documentadas e das cópias EN/ES revisadas por IA.
+  Hipótese editorial reconstruída: separar quantidade de energia, taxa de transferência
+  e eficiência evita interpretar maior potência como maior consumo ou maior rendimento.
+  Preservar a sequência dos elevadores, potência média, aparelhos hipotéticos, kWh,
+  escalas, eficiência e síntese; cinco pontos-chave, Callout, duas imagens e quatro
+  referências. Não é nova versão do artigo nem prova de pesquisa/entrevista histórica.
+  Escopo de unidades e conceitos universais, sem estatísticas ou comparações entre países.
+  Conferência assistida documental e algébrica, não revisão linguística humana das traduções.
+audience: Leitores do Sul Global interessados em energia, sem pressupor formação em física ou engenharia; edições EN e ES mantêm o mesmo público e significado.
+keyQuestions:
+  - O que potência média expressa em relação à energia transferida e ao intervalo de tempo?
+  - Por que watt e quilowatt medem potência, enquanto joule e quilowatt-hora medem energia?
+  - Em quais condições é válido usar E = P × t nos exemplos do artigo?
+  - Por que 1 kW durante 1 hora e 2 kW durante 30 minutos produzem a mesma energia no exemplo?
+  - Por que potência útil e eficiência não são a mesma grandeza?
+  - As edições EN e ES preservam fórmulas, unidades, condições e conclusões sem alegar revisão humana integral?
+requiredData:
+  - Definições institucionais de watt e joule; W = J/s.
+  - kW = 1000 W; 1 h = 3600 s; 1 kWh = 3600000 J = 3,6 MJ.
+  - Cálculo didático de 1 kW × 1 h e 2 kW × 0,5 h, ambos iguais a 1 kWh; não são medições experimentais.
+  - Separação entre potência média ou constante no intervalo e potência instantânea variável.
+  - Mesmas fontes, autoria, licença declarada, imagens e significado nas versões PT, EN e ES.
+requiredSourceTypes:
+  - official
+  - Instituições de metrologia para definições e conversões do Sistema Internacional.
+  - Documentação governamental para uso de unidades e distinção kW/kWh.
+candidateSources: []
+confirmedSources:
+  # Escopo lido: verbete Definition; não foi consultada integralmente a NFPA citada pelo léxico.
+  - title: Watt (W)
+    url: https://www.nist.gov/glossary-term/34606
+    organization: National Institute of Standards and Technology
+    verifiedAt: "2026-10-28"
+  # Escopo lido: verbete Definition sobre energia/trabalho e relação watt/joule.
+  - title: Joule
+    url: https://www.nist.gov/glossary-term/26261
+    organization: National Institute of Standards and Technology
+    verifiedAt: "2026-10-28"
+  # Tabela B.8, entradas hour (h) e kilowatt hour (kW · h).
+  - title: NIST Guide to the SI, Appendix B.8
+    url: https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8
+    organization: National Institute of Standards and Technology
+    verifiedAt: "2026-10-28"
+  # Seções consultadas: watt; kilowatt, kW; kilowatt-hour, kWh; equations;
+  # technical measurement units; solar conversion efficiency. Não é ensaio de motores.
+  - title: Style Guide Full Text
+    url: https://www.energy.gov/cmei/communicationstandards/style-guide-full-text
+    organization: U.S. Department of Energy
+    verifiedAt: "2026-10-28"
+rejectedSources: []
+openQuestions: []
+factChecks:
+  - statement: >-
+      Os verbetes NIST distinguem watt como unidade de potência/taxa de trabalho e joule
+      como unidade de energia/trabalho; 1 W = 1 J/s. Confirmação limitada às definições
+      acessíveis, não a leitura integral da norma referenciada pelo léxico.
+    status: confirmed
+    sourceUrls:
+      - https://www.nist.gov/glossary-term/34606
+      - https://www.nist.gov/glossary-term/26261
+  - statement: >-
+      O guia DOE, nas entradas kilowatt e kilowatt-hour, define kW como 1000 W e kWh
+      como energia associada a 1 kW sustentado por 1 hora. Não são unidades intercambiáveis.
+    status: confirmed
+    sourceUrls:
+      - https://www.energy.gov/cmei/communicationstandards/style-guide-full-text
+  - statement: >-
+      A tabela NIST B.8 fornece 1 h = 3600 s e 1 kWh = 3600000 J = 3,6 MJ.
+      O ponto decimal EN em 0.5 e 3.6 preserva os valores de 0,5 e 3,6 em PT/ES.
+    status: confirmed
+    sourceUrls:
+      - https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8
+  - statement: >-
+      P média = ΔE/Δt representa a taxa média no intervalo, coerente com a definição
+      de watt. E = P × t é a reorganização para potência média do mesmo intervalo
+      ou potência constante; não se apresenta como regra sem condição para P instantânea variável.
+      Trata-se de derivação conceitual/dimensional, não fórmula transcrita literalmente do verbete.
+    status: confirmed
+    sourceUrls:
+      - https://www.nist.gov/glossary-term/34606
+      - https://www.nist.gov/glossary-term/26261
+  - statement: >-
+      Os casos 1 kW × 1 h = 1 kWh e 2 kW × (30/60) h = 1 kWh são cálculos didáticos
+      conferidos a partir da relação potência-tempo, não resultados de ensaio de aparelhos.
+      A comparação dos elevadores é uma situação hipotética com mesma carga/altura e
+      diferenças de eficiência desconsideradas; sua conclusão usa a mesma energia em menos tempo.
+    status: confirmed
+    sourceUrls:
+      - https://www.nist.gov/glossary-term/34606
+      - https://www.energy.gov/cmei/communicationstandards/style-guide-full-text
+  - statement: >-
+      Potência e eficiência não são sinônimos: o NIST define uma taxa de trabalho;
+      o DOE exemplifica eficiência de conversão como fração convertida. O contraste
+      entre motores do artigo é uma explicação condicional, não um desempenho medido
+      nem uma conclusão experimental atribuída ao guia de estilo.
+    status: confirmed
+    sourceUrls:
+      - https://www.nist.gov/glossary-term/34606
+      - https://www.energy.gov/cmei/communicationstandards/style-guide-full-text
+imageRequirements:
+  origin: Dois raster locais do artigo PT publicado, com crédito declarado Elaboração própria (SGES, 2026); este briefing não inventa ferramenta ou processo de geração.
+  license: "Declaração preservada do MDX: Elaboração própria (SGES, 2026); não é nova licença ou comprovação independente de exclusividade."
+  authorization: Reutilização dos mesmos arquivos autorizada pelo responsável pelo portal, com aceitação do texto raster em português; registro em docs/I18N_POWER_PUBLICATION_AUTHORIZATION.md, commit 46e3e0d.
+  credit: "Fonte: Elaboração própria (SGES, 2026). Créditos de apresentação EN/ES localizados sem alterar autoria ou licença."
+  alt: Dois elevadores levam cargas iguais à mesma altura, um em 10 segundos e outro em 30 segundos; as edições EN/ES mantêm alt e legendas localizados.
+  width: 1536
+  height: 1024
+  aspectRatio: "3:2"
+  socialVersion: Mesma Hero local usada pelos metadados Open Graph, com variantes responsivas 720, 1200 e 1536 pixels; nenhuma nova composição social criada.
+  usageRisk: Ilustrações educativas, não comprovação de ensaio; texto raster continua PT e pode exigir ampliação no celular. Condições declaradas e autorização transcritas, sem criar direitos ou excluir riscos por inferência.
+  isDemoConfirmed: true
+conflictsOfInterestEvaluated: true
+editorialRisks:
+  - "Reconstrução retrospectiva assistida em 28/10/2026, não planejamento original nem revisão humana. Datas de consulta deste arquivo não substituem as datas históricas do MDX."
+  - "Avaliação documental limitada: o original registra sponsored:false; isso não comprova ausência de vínculos comerciais. Não foi inventada declaração pessoal de ausência de conflito. Vínculos relevantes exigem divulgação."
+  - "confirmed significa sustentação documental delimitada ou cálculo didático conferido; não implica pesquisa empírica, leitura integral de todas as normas citadas indiretamente, certificação científica ou revisão humana das traduções."
+  - "O guia DOE é usado nas seções específicas identificadas, não como pesquisa experimental sobre elevadores ou eficiência de motores. Exemplos de escalas de aparelhos não são especificações de produtos ou estatísticas de mercado."
+  - "A revisão humana efetiva EN/ES permanece pendente e pertence ao gate editorial de tradução, não a perguntas físicas abertas deste briefing. Reviewer e reviewedAt continuam ausentes nos MDX."
+  - "Sete avisos e limites de interface/imagens em PT foram aceitos pelo responsável na autorização registrada em 46e3e0d; isso não é convertido em parecer linguístico integral."
+researchStatus: ready-for-writing
+concreteImpediments: []
