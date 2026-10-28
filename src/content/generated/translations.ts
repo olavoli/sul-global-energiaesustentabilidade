@@ -87,7 +87,7 @@ export const translationRecords = [
     lastVerifiedAt: "2026-08-12",
     aiAssistance: "substantial",
     aiDisclosure:
-      "This language edition was translated using Cloudflare Workers AI (Meta Llama 3.3 70B). Human editorial review is pending; this draft is not approved for publication.",
+      "This language edition was translated using Cloudflare Workers AI (Meta Llama 3.3 70B) and underwent automated technical checks and AI-assisted editorial corrections. Publication was authorized by the person responsible for the portal, accepting the documented limitations. No full human linguistic review or scientific certification is claimed. Human editorial review is pending in the required workflow; this draft remains unpublished.",
     aiDisclosureMode: "detailed",
     seoTitle: "What is power? Difference between kW, kWh and energy",
     seoDescription:
@@ -293,7 +293,7 @@ export const translationRecords = [
     lastVerifiedAt: "2026-08-12",
     aiAssistance: "substantial",
     aiDisclosure:
-      "Esta edición lingüística se tradujo mediante Cloudflare Workers AI (Meta Llama 3.3 70B). La revisión editorial humana está pendiente; este borrador no está aprobado para publicación.",
+      "Esta edición se tradujo mediante Cloudflare Workers AI (Meta Llama 3.3 70B) y pasó verificaciones técnicas automáticas y correcciones editoriales asistidas por IA. La persona responsable del portal autorizó su publicación, aceptando las limitaciones documentadas. No se declara una revisión lingüística humana integral ni una certificación científica. La revisión editorial humana está pendiente en el flujo obligatorio; este borrador permanece sin publicar.",
     aiDisclosureMode: "detailed",
     seoTitle: "¿Qué es la potencia? Diferencia entre kW, kWh y energía",
     seoDescription:

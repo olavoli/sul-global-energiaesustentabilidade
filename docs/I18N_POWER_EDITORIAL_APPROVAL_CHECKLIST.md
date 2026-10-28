@@ -27,3 +27,9 @@ Revalidação local após merge: 119 testes afetados aprovados, zero falhas; typ
 O rodapé usa o contexto de idioma já existente no SSR e no cliente. EN/ES identificam a edição sem afirmar publicação dos drafts. O bloco compartilhado restante recebe lang=pt-BR; os rótulos localizados da edição e do RSS recebem lang=en/es conforme a rota. Não se traduziu o restante da interface nem se alteraram URLs. HTML lang, lang do artigo, seletor, canonical, Open Graph e Article JSON-LD já seguem o idioma da edição; os testes existentes e a nova regressão cobrem a coerência. Não foi identificado outro indicador que atribua o artigo EN/ES ao português.
 
 Links de artigos PT continuam explicitamente identificados; imagens, alt, legendas, fontes e os sete avisos permanecem intactos. A decisão humana sobre linguagem, interface auxiliar em PT e imagens continua pendente; nenhum checkbox de aprovação foi marcado.
+
+## Autorização recebida e gate ainda pendente
+
+O responsável autorizou a publicação e aceitou expressamente os três falsos positivos, quatro links PT identificados, raster em PT, interface parcial e limitações documentadas. Essa autorização está registrada em [I18N_POWER_PUBLICATION_AUTHORIZATION.md](I18N_POWER_PUBLICATION_AUTHORIZATION.md), sem convertê-la em revisão linguística integral ou inventar revisor/data. Os itens acima são mantidos como histórico da checklist; caixas não são evidência de revisão humana realizada.
+
+A Nota de Transparência foi atualizada para distinguir autorização, validação técnica/IA e revisão humana pendente. O fluxo manual atual ainda exige revisão editorial humana identificada; por isso a publicação está interrompida antes de transição, merge ou deploy. Não é necessário repetir a autorização editorial já concedida.

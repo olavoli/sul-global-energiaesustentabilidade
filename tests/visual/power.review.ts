@@ -83,7 +83,15 @@ for (const [locale, path] of Object.entries(paths)) {
           : "La revisión editorial humana está pendiente",
       );
       await expect(note).toContainText(
-        locale === "en" ? "not approved for publication" : "no está aprobado para publicación",
+        locale === "en" ? "this draft remains unpublished" : "este borrador permanece sin publicar",
+      );
+      await expect(note).toContainText(
+        locale === "en" ? "Publication was authorized" : "autorizó su publicación",
+      );
+      await expect(note).toContainText(
+        locale === "en"
+          ? "No full human linguistic review"
+          : "No se declara una revisión lingüística humana integral",
       );
       for (const slug of ["o-que-e-energia", "por-que-nenhuma-maquina-e-100-eficiente"]) {
         const links = page.locator(`article a[href="/artigo/${slug}"]`);

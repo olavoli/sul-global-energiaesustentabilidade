@@ -46,6 +46,14 @@ test("power editions remain pending drafts, with original attribution, source ha
     expect(record.cover.sources).toEqual(pt.frontmatter.cover.sources);
     expect(record.cover.license).toBe(pt.frontmatter.cover.license);
     expect(record.aiDisclosureMode).toBe("detailed");
+    expect(record.aiDisclosure).toContain(
+      record.locale === "en" ? "Publication was authorized" : "autorizó su publicación",
+    );
+    expect(record.aiDisclosure).toContain(
+      record.locale === "en"
+        ? "No full human linguistic review"
+        : "No se declara una revisión lingüística humana integral",
+    );
     expect(record.aiDisclosure).toContain("Cloudflare Workers AI (Meta Llama 3.3 70B)");
     expect(record.aiDisclosure).toContain(
       record.locale === "en" ? "review is pending" : "está pendiente",
