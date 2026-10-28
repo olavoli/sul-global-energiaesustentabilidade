@@ -1,4 +1,5 @@
-import { mkdir, cp } from "node:fs/promises";
+import { pendingTranslationFixture } from "./pending-fixture.test";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { temporary, root, slug, credentials } from "./automatic-fixtures.test";
 import { fingerprint } from "./policy";
@@ -20,7 +21,10 @@ export async function setup(fn: (dir: string) => Promise<void>) {
     for (const locale of ["en", "es"]) {
       const path = `content/translations/${locale}/${slug}.mdx`;
       await mkdir(join(dir, path, ".."), { recursive: true });
-      await cp(join(root, path), join(dir, path));
+      await writeFile(
+        join(dir, path),
+        pendingTranslationFixture(await readFile(join(root, path), "utf8")),
+      );
     }
     await fn(dir);
   });
