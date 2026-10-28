@@ -1,3 +1,4 @@
+import { TaxonomyNavLink } from "@/components/navigation/TaxonomyNavLink";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, type RefObject } from "react";
 import { createPortal } from "react-dom";
@@ -93,14 +94,11 @@ export function MobileMenu({
                 {item.params?.slug === "ciencia" ? (
                   <ScienceMenu mobile onNavigate={onClose} />
                 ) : (
-                  <Link
-                    to={item.to}
-                    params={item.params}
+                  <TaxonomyNavLink
+                    item={item}
                     onClick={onClose}
                     className="block py-3 font-serif text-xl font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    {item.label}
-                  </Link>
+                  />
                 )}
               </li>
             ))}

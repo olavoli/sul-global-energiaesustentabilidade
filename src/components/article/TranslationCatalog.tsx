@@ -1,3 +1,4 @@
+import { taxonomyTopics } from "@/content/taxonomy-topics";
 import { ArticleCard } from "./ArticleCard";
 import { searchTranslations } from "@/content/i18n";
 import type { TranslationLocale } from "@/content/translation-schema";
@@ -5,11 +6,16 @@ import type { TranslationLocale } from "@/content/translation-schema";
 export function TranslationCatalog({
   locale,
   query,
+  category,
+  tag,
 }: {
   locale: TranslationLocale;
   query: string;
+  category?: string;
+  tag?: string;
 }) {
-  const articles = searchTranslations(locale, query);
+  const articles = searchTranslations(locale, query, { category, tag });
+  const topics = taxonomyTopics(locale).filter((t) => t.articles.length > 0);
   const en = locale === "en";
   return (
     <section className="mx-auto max-w-4xl px-4 py-12" lang={locale}>
@@ -40,6 +46,25 @@ export function TranslationCatalog({
           maxLength={120}
           className="min-w-0 rounded border border-border bg-background px-3 py-2"
         />
+        {(["category", "tag"] as const).map((kind) => (
+          <label key={kind} className="flex min-w-0 max-w-full flex-col gap-1 text-sm">
+            {kind === "category" ? (en ? "Category" : "Categoría") : en ? "Topic" : "Tema"}
+            <select
+              name={kind}
+              defaultValue={kind === "category" ? (category ?? "") : (tag ?? "")}
+              className="max-w-full rounded border border-border bg-background px-3 py-2"
+            >
+              <option value="">{en ? "All" : "Todos"}</option>
+              {topics
+                .filter((t) => t.term.kind === kind)
+                .map((t) => (
+                  <option key={t.term.id} value={t.slug}>
+                    {t.label}
+                  </option>
+                ))}
+            </select>
+          </label>
+        ))}
         <button className="rounded border border-border px-3 py-2">
           {en ? "Search" : "Buscar"}
         </button>

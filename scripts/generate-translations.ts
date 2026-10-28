@@ -1,3 +1,4 @@
+import { validateTranslationTaxonomy } from "../src/content/taxonomy-catalog";
 import { verifyPolicyRecord } from "./i18n-operations/editorial-policy-record";
 import { validateAutomaticRecord } from "./i18n-operations/automatic-attestation";
 import { createHash } from "node:crypto";
@@ -43,6 +44,7 @@ export async function generateTranslations(
       const original = originals.find((o) => o.frontmatter.slug === record.translationOf);
       if (!original || original.frontmatter.isDemo || original.frontmatter.status !== "published")
         throw new Error(`Original publicado ausente: ${path}`);
+      validateTranslationTaxonomy(original.frontmatter, record);
       const originalBytes = (await readFile(original.path, "utf8")).replace(/\r\n/g, "\n");
       if (createHash("sha256").update(originalBytes).digest("hex") !== record.sourceRevision) {
         if (record.translationReview.status === "automatic") continue;

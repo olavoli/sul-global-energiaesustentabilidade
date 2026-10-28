@@ -1,3 +1,4 @@
+import { sourceTerm, taxonomyPath } from "@/content/taxonomy-catalog";
 import { articleUi, useEditorialLocale } from "@/content/locale-context";
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin } from "lucide-react";
@@ -25,17 +26,23 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <nav aria-label="Categorias">
-          <h3 className="overline text-muted-foreground">Categorias</h3>
+        <nav
+          aria-label={
+            locale === "en" ? "Categories" : locale === "es" ? "Categorías" : "Categorias"
+          }
+          lang={locale}
+        >
+          <h3 className="overline text-muted-foreground">
+            {locale === "en" ? "Categories" : locale === "es" ? "Categorías" : "Categorias"}
+          </h3>
           <ul className="mt-4 space-y-2 text-sm">
             {categories.map((c) => (
               <li key={c.slug}>
                 <Link
-                  to="/categoria/$slug"
-                  params={{ slug: c.slug }}
+                  to={taxonomyPath(sourceTerm("category", c.slug), locale)}
                   className="text-foreground hover:underline"
                 >
-                  {c.name}
+                  {sourceTerm("category", c.slug).editions[locale].label}
                 </Link>
               </li>
             ))}

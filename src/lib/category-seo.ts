@@ -1,3 +1,4 @@
+import { portugueseTaxonomyAlternates } from "@/content/taxonomy-topics";
 import { siteConfig } from "@/config/site";
 import type { Category } from "@/types/content";
 import { categoryBreadcrumb, resolveCanonical, socialMeta } from "./seo";
@@ -26,7 +27,14 @@ export function categoryPageHead(
         path: `/categoria/${category.slug}`,
       }),
     ],
-    links: [{ rel: "canonical", href: resolveCanonical(`/categoria/${category.slug}`) }],
+    links: [
+      { rel: "canonical", href: resolveCanonical(`/categoria/${category.slug}`) },
+      ...portugueseTaxonomyAlternates("category", category.slug).map((l) => ({
+        rel: "alternate",
+        hrefLang: l.locale,
+        href: resolveCanonical(l.path),
+      })),
+    ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(categoryBreadcrumb(category)) },
     ],

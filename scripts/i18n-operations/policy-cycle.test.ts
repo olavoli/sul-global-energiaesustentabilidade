@@ -25,7 +25,13 @@ async function publicCheckout(dir: string) {
     { cwd: root, encoding: "utf8" },
   );
   if (files.status !== 0) throw Error("tracked-source-inventory-failed");
-  for (const path of files.stdout.split("\0").filter(Boolean)) {
+  for (const path of [
+    ...files.stdout.split("\0").filter(Boolean),
+    "src/content/taxonomy-topics.ts",
+    "src/lib/taxonomy-seo.ts",
+    "src/lib/taxonomy-route.ts",
+    "src/components/navigation/TaxonomyNavLink.tsx",
+  ]) {
     await mkdir(join(dir, path, ".."), { recursive: true });
     await cp(join(root, path), join(dir, path));
   }

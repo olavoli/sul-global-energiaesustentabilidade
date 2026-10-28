@@ -1,3 +1,4 @@
+import { validateTranslationTaxonomy } from "../../src/content/taxonomy-catalog";
 import { evaluatePolicy, meaningMetadata } from "./editorial-policy";
 import { scientificTokensMatch } from "./automatic-science";
 import { revision } from "./run";
@@ -46,6 +47,7 @@ export async function publicationCandidate(
     frontmatter.sourceRevision !== hash(sourceRaw)
   )
     throw Error("automatic-source-stale");
+  validateTranslationTaxonomy(source.frontmatter, frontmatter);
   const sourceSegments = prepare(source.body).segments,
     targetSegments = prepare(parsed.body).segments;
   if (

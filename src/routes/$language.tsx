@@ -4,15 +4,21 @@ import { TranslationCatalog } from "@/components/article/TranslationCatalog";
 import { searchTranslations, ogLocales } from "@/content/i18n";
 import { resolveCanonical, socialMeta } from "@/lib/seo";
 export const Route = createFileRoute("/$language")({
-  validateSearch: (search: Record<string, unknown>): { q?: string } =>
-    typeof search.q === "string" ? { q: search.q.slice(0, 120) } : {},
-  loader: ({ params }): { locale: TranslationLocale } => {
+  validateSearch: (
+    search: Record<string, unknown>,
+  ): { q?: string; category?: string; tag?: string } => ({
+    q: typeof search.q === "string" ? search.q.slice(0, 120) : undefined,
+    category: typeof search.category === "string" ? search.category.slice(0, 120) : undefined,
+    tag: typeof search.tag === "string" ? search.tag.slice(0, 120) : undefined,
+  }),
+  loaderDeps: ({ search }) => search,
+  loader: ({ params, deps }): { locale: TranslationLocale; filtered: boolean } => {
     if (params.language !== "en" && params.language !== "es") throw notFound();
-    return { locale: params.language };
+    return { locale: params.language, filtered: Boolean(deps.q || deps.category || deps.tag) };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ name: "robots", content: "noindex" }] };
-    const { locale } = loaderData;
+    const { locale, filtered } = loaderData;
     const path = `/${locale}`;
     const title = locale === "en" ? "Sul Global in English" : "Sul Global en español";
     const description =
@@ -23,7 +29,7 @@ export const Route = createFileRoute("/$language")({
       meta: [
         { title },
         { name: "description", content: description },
-        ...(searchTranslations(locale, "").length < 2
+        ...(filtered || searchTranslations(locale, "").length < 2
           ? [{ name: "robots", content: "noindex, follow" }]
           : []),
         ...socialMeta({ title, description, path, locale: ogLocales[locale] }),
@@ -35,6 +41,11 @@ export const Route = createFileRoute("/$language")({
 });
 function Page() {
   return (
-    <TranslationCatalog locale={Route.useLoaderData().locale} query={Route.useSearch().q ?? ""} />
+    <TranslationCatalog
+      locale={Route.useLoaderData().locale}
+      query={Route.useSearch().q ?? ""}
+      category={Route.useSearch().category}
+      tag={Route.useSearch().tag}
+    />
   );
 }
