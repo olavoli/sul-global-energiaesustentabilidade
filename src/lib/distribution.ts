@@ -1,4 +1,4 @@
-import { taxonomyTopics } from "@/content/taxonomy-topics";
+import { discoveryArticles, discoveryTopics } from "@/content/discovery";
 import { translationRecords } from "@/content/generated/translations";
 import type { TranslationRecord } from "@/content/translation-schema";
 import { publishedTranslations, articleAlternates } from "@/content/i18n";
@@ -75,12 +75,12 @@ export function generateSitemap(
   const translated = publishable ? publishedTranslations(translations) : [];
   paths.push(...translated.map((article) => translatedArticlePath(article.locale, article.slug)));
   for (const locale of ["en", "es"] as const) {
-    if (translated.filter((a) => a.locale === locale).length >= 2) paths.push(`/${locale}`);
+    if (publishable && discoveryArticles(locale).length >= 2) paths.push(`/${locale}`);
   }
   if (publishable)
     for (const locale of ["en", "es"] as const)
       paths.push(
-        ...taxonomyTopics(locale, translations)
+        ...discoveryTopics(locale, translations)
           .filter((t) => t.indexable)
           .map((t) => t.path),
       );

@@ -1,8 +1,7 @@
 import type { TranslationLocale } from "@/content/translation-schema";
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { TranslationCatalog } from "@/components/article/TranslationCatalog";
-import { searchTranslations, ogLocales } from "@/content/i18n";
-import { resolveCanonical, socialMeta } from "@/lib/seo";
+import { discoveryHead } from "@/lib/discovery-seo";
 export const Route = createFileRoute("/$language")({
   validateSearch: (
     search: Record<string, unknown>,
@@ -18,24 +17,7 @@ export const Route = createFileRoute("/$language")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ name: "robots", content: "noindex" }] };
-    const { locale, filtered } = loaderData;
-    const path = `/${locale}`;
-    const title = locale === "en" ? "Sul Global in English" : "Sul Global en español";
-    const description =
-      locale === "en"
-        ? "Reviewed articles about energy, sustainability, science, and public policy."
-        : "Artículos revisados sobre energía, sostenibilidad, ciencia y políticas públicas.";
-    return {
-      meta: [
-        { title },
-        { name: "description", content: description },
-        ...(filtered || searchTranslations(locale, "").length < 2
-          ? [{ name: "robots", content: "noindex, follow" }]
-          : []),
-        ...socialMeta({ title, description, path, locale: ogLocales[locale] }),
-      ],
-      links: [{ rel: "canonical", href: resolveCanonical(path) }],
-    };
+    return discoveryHead(loaderData.locale, loaderData.filtered);
   },
   component: Page,
 });

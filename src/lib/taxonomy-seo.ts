@@ -31,7 +31,7 @@ export function taxonomyHead(
     ],
     links: [
       { rel: "canonical", href: resolveCanonical(path) },
-      ...(indexable
+      ...(indexable && locale === "pt-BR"
         ? taxonomyAlternates(term, records).map((a) => ({
             rel: "alternate",
             hrefLang: a.locale,

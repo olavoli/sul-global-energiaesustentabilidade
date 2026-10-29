@@ -1,5 +1,7 @@
 import { Container } from "../layout/Container";
 import { ArticleCard } from "./ArticleCard";
+import { DiscoveryCard } from "./DiscoveryCard";
+import type { DiscoveryArticle } from "../../content/discovery";
 import { EditorialBreadcrumb } from "../navigation/EditorialBreadcrumb";
 import type { LocalizedTopic } from "../../content/taxonomy-topics";
 /** Shared language-specific category/tag view; drafts are excluded by its loader. */
@@ -26,6 +28,13 @@ export function TaxonomyPage({ topic }: { topic: LocalizedTopic }) {
           {topic.label}
         </h1>
         <p className="mt-3 max-w-2xl text-muted-foreground md:text-lg">{topic.description}</p>
+        {(en || es) && (
+          <p className="mt-3 text-sm text-muted-foreground">
+            {en
+              ? "Localized titles and summaries. Each card identifies the language of the full article."
+              : "Títulos y resúmenes localizados. Cada tarjeta indica el idioma del artículo completo."}
+          </p>
+        )}
         <p className="mt-3 text-sm text-muted-foreground">
           {topic.articles.length}{" "}
           {en ? "published articles" : es ? "artículos publicados" : "artigos publicados"}
@@ -33,9 +42,18 @@ export function TaxonomyPage({ topic }: { topic: LocalizedTopic }) {
       </header>
       {topic.articles.length ? (
         <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-          {topic.articles.map((a, i) => (
-            <ArticleCard key={a.id} article={a} eager={i < 3} />
-          ))}
+          {topic.articles.map((a, i) =>
+            "fullTextLocale" in a && (topic.locale === "en" || topic.locale === "es") ? (
+              <DiscoveryCard
+                key={a.id}
+                article={a as DiscoveryArticle}
+                locale={topic.locale}
+                eager={i < 3}
+              />
+            ) : (
+              <ArticleCard key={a.id} article={a} eager={i < 3} />
+            ),
+          )}
         </div>
       ) : (
         <p role="status">

@@ -14,6 +14,7 @@ import { articleRecords } from "./generated/articles";
 import { translationRecords } from "./generated/translations";
 import { translationSchema, type TranslationRecord } from "./translation-schema";
 import { searchTranslations, languageOptions } from "./i18n";
+import { discoveryTopics } from "./discovery";
 import { taxonomyTopics, taxonomyAlternates } from "./taxonomy-topics";
 import { generateSitemap } from "../lib/distribution";
 import { getPublishedArticles } from "./repository";
@@ -102,7 +103,7 @@ test("localized search and filters match canonical memberships without changing 
   expect(searchTranslations("en", "", { category: "invented" }, approved)).toHaveLength(0);
   expect(en[0].tags).toEqual(approved[0].tags);
 });
-test("localized SEO uses self canonical, local count robots and reciprocal eligible alternates", () => {
+test("localized collection SEO preserves self canonical and robots without claiming full-text equivalence", () => {
   const term = sourceTerm("category", approved[0].category);
   const links = taxonomyAlternates(term, approved);
   expect(links.map((l) => l.locale)).toEqual(["pt-BR", "en", "es", "x-default"]);
@@ -112,7 +113,7 @@ test("localized SEO uses self canonical, local count robots and reciprocal eligi
     expect(head.links?.find((l) => l.rel === "canonical")?.href).toContain(
       taxonomyPath(term, locale),
     );
-    expect(head.links?.filter((l) => l.rel === "alternate")).toHaveLength(4);
+    expect(head.links?.filter((l) => l.rel === "alternate")).toHaveLength(0);
     const one = taxonomyTopics(locale, approved).find((t) => t.term.sourceKey === "potência");
     expect(taxonomyHead(one, true, approved).meta).toContainEqual({
       name: "robots",
@@ -134,10 +135,16 @@ test("localized SEO uses self canonical, local count robots and reciprocal eligi
 test("sitemap excludes drafts/empty collections/one-article tags and keeps existing PT routes", () => {
   const articles = getPublishedArticles();
   const before = generateSitemap(articles, true, []);
-  expect(before).not.toContain("/en/category/");
+  expect(before).toContain("/en/category/");
+  expect(before).not.toContain("/en/article/o-que-e-potencia</loc>");
   const sitemap = generateSitemap(articles, true, approved);
   expect(sitemap).toContain(taxonomyPath(sourceTerm("category", approved[0].category), "en"));
-  expect(sitemap).not.toContain("/en/tag/power</loc>");
+  expect(sitemap).toContain("/en/tag/power</loc>");
+  const single = discoveryTopics("en", approved).find(
+    (t) => t.term.kind === "tag" && t.articles.length === 1,
+  );
+  if (!single) throw Error("Expected a single-article topic");
+  expect(sitemap).not.toContain(`${single.path}</loc>`);
   expect(sitemap).not.toContain("/es/categoria/desarrollo</loc>");
   expect(sitemap).toContain("/categoria/ciencia");
   expect(generateSitemap(articles, false, approved)).not.toContain("<url><loc>");
@@ -184,11 +191,14 @@ test("topic language switcher uses equivalent paths and labels a missing transla
   const options = languageOptions("/tag/potencia", approved);
   expect(options.find((o) => o.locale === "en")?.href).toBe("/en/tag/power");
   const missing = languageOptions("/tag/potencia", []).find((o) => o.locale === "es");
-  expect(missing).toEqual({ locale: "es", href: "/es", fallback: true });
+  expect(missing).toEqual({ locale: "es", href: "/es/tema/potencia", fallback: false });
 });
 test("unknown/empty tags return 404, empty categories stay valid, PT aliases preserve query in 301", () => {
   expect(() => loadTaxonomy("en", "tag", "invented")).toThrow();
-  expect(() => loadTaxonomy("en", "tag", "power", "", [])).toThrow();
+  const empty = discoveryTopics("en", []).find((t) => t.term.kind === "tag" && !t.articles.length);
+  if (!empty) throw Error("Expected an unused catalog tag");
+  expect(() => loadTaxonomy("en", "tag", empty.slug, "", [])).toThrow();
+  expect(loadTaxonomy("en", "tag", "power", "", []).articles).toHaveLength(2);
   expect(loadTaxonomy("en", "category", "development", "", []).articles).toHaveLength(0);
   try {
     loadTaxonomy("en", "category", "energia", "?q=test", approved);

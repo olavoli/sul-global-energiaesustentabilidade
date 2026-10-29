@@ -34,14 +34,42 @@ assert(
 for (const locale of ["en", "es"]) {
   const catalog = await get(`/${locale}`, 200);
   assert(catalog.includes(`<html lang="${locale}"`), "HTML lang mismatch");
-  assert(catalog.includes("noindex, follow"), "empty catalog must not be indexable");
+  assert(
+    catalog.includes(
+      indexable
+        ? 'name="robots" content="index, follow"'
+        : 'name="robots" content="noindex, nofollow"',
+    ),
+    "discovery indexing must follow the deployment environment",
+  );
+  assert(
+    (catalog.match(/<article[ >]/g) ?? []).length >= 2,
+    "discovery catalog must contain localized cards",
+  );
+  assert(
+    catalog.includes(
+      "/artigo/agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
+    ),
+    "direct Portuguese original link missing",
+  );
+  assert(
+    catalog.includes(
+      locale === "en"
+        ? "These are localized summaries, not full translations."
+        : "Estos son resúmenes localizados, no traducciones completas.",
+    ),
+    "summary disclosure missing",
+  );
+  assert(!/<link[^>]+href[Ll]ang=/.test(catalog), "summary catalog claims full-text equivalence");
   assert(
     catalog.includes(`rel="canonical" href="${origin}/${locale}"`),
     "catalog canonical mismatch",
   );
   const feed = await get(`/${locale}/rss.xml`, 200);
   assert(
-    feed.includes(`<language>${locale}</language>`) && !feed.includes("<item>"),
+    feed.includes(`<language>${locale}</language>`) &&
+      !feed.includes(locale === "en" ? en : es) &&
+      feed.includes("o-que-e-potencia") === indexable,
     "draft exposed in language RSS",
   );
 }
@@ -55,12 +83,22 @@ assert(
   "draft exposed or PT publication changed in sitemap",
 );
 assert(
-  !sitemap.includes("<loc>https://sulglobalenergia.com.br/en</loc>"),
-  "empty catalog in sitemap",
+  sitemap.includes(`<loc>${origin}/en</loc>`) === indexable &&
+    sitemap.includes(`<loc>${origin}/es</loc>`) === indexable,
+  "discovery sitemap does not match indexability",
 );
 const rss = await get("/rss.xml", 200);
 assert(
   rss.includes(pt) === indexable && !rss.includes(en) && !rss.includes(es),
   "Portuguese feed changed languages",
 );
-console.log("I18N SSR smoke: 11 local responses verified; no publication or external requests.");
+for (const path of ["/en/article/o-que-e-potencia", "/es/articulo/o-que-e-potencia"]) {
+  const full = await get(path, 200);
+  assert(
+    full.includes('hrefLang="pt-BR"') || full.includes('hreflang="pt-BR"'),
+    "published full edition lost its source alternate",
+  );
+}
+console.log(
+  "I18N SSR smoke: 13 local responses verified; discovery catalogs, full editions and draft exclusions preserved; no external requests.",
+);
