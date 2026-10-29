@@ -48,6 +48,28 @@ function canonicalHref(body: string): string | undefined {
   );
 }
 
+/** A bot-specific Disallow is not a public/global block. Keep the strict wildcard guard. */
+function globallyDisallowed(body: string): boolean {
+  let agents: string[] = [],
+    directivesSeen = false;
+  for (const line of body.split(/\r?\n/)) {
+    const clean = line.split("#", 1)[0].trim();
+    const separator = clean.indexOf(":");
+    if (separator < 0) continue;
+    const field = clean.slice(0, separator).trim().toLowerCase();
+    const value = clean.slice(separator + 1).trim();
+    if (field === "user-agent") {
+      if (directivesSeen) agents = [];
+      agents.push(value.toLowerCase());
+      directivesSeen = false;
+    } else {
+      directivesSeen = true;
+      if (field === "disallow" && value === "/" && agents.includes("*")) return true;
+    }
+  }
+  return false;
+}
+
 async function get(
   fetcher: SmokeFetcher,
   base: URL,
@@ -80,7 +102,7 @@ export async function runProductionSmoke(
     status: robots.response.status,
     ok:
       robots.response.status === 200 &&
-      !/^\s*Disallow:\s*\/\s*$/im.test(robots.body) &&
+      !globallyDisallowed(robots.body) &&
       robots.body.includes(`${OFFICIAL_PRODUCTION_ORIGIN}/sitemap.xml`),
   });
 

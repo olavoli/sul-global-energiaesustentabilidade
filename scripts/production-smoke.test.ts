@@ -4,7 +4,7 @@ import { runProductionSmoke, type SmokeFetcher } from "./production-smoke";
 const officialOrigin = "https://sulglobalenergia.com.br";
 const demoArticle = "/artigo/hidrogenio-verde-no-brasil-promessa-e-realidade";
 
-function fixtureFetch(requests: Request[]): SmokeFetcher {
+function fixtureFetch(requests: Request[], robotsBody?: string): SmokeFetcher {
   return async (input, init) => {
     const request = new Request(input, init);
     requests.push(request);
@@ -17,9 +17,12 @@ function fixtureFetch(requests: Request[]): SmokeFetcher {
       );
     }
     if (path === "/robots.txt") {
-      return new Response(`User-agent: *\nAllow: /\nSitemap: ${officialOrigin}/sitemap.xml`, {
-        status: 200,
-      });
+      return new Response(
+        robotsBody ?? `User-agent: *\nAllow: /\nSitemap: ${officialOrigin}/sitemap.xml`,
+        {
+          status: 200,
+        },
+      );
     }
     if (path === "/sitemap.xml") {
       return new Response(`<urlset><url><loc>${officialOrigin}/</loc></url></urlset>`, {
@@ -90,4 +93,58 @@ describe("smoke de produção", () => {
     ).toBeTrue();
     expect(requests.map(({ url }) => new URL(url).pathname)).not.toContain(demoArticle);
   });
+});
+
+for (const scenario of [
+  {
+    name: "Cloudflare managed bot restrictions do not block public crawling",
+    text: "User-agent: *\nContent-Signal: search=yes,ai-train=no\nAllow: /\nUser-agent: GPTBot\nDisallow: /",
+    ok: true,
+  },
+  {
+    name: "specific bots before the wildcard group remain scoped",
+    text: "User-agent: GPTBot\nDisallow: /\nUser-agent: *\nAllow: /",
+    ok: true,
+  },
+  {
+    name: "a wildcard Disallow still blocks",
+    text: "User-agent: *\nDisallow: /\nUser-agent: Googlebot\nAllow: /",
+    ok: false,
+  },
+  {
+    name: "multiple agents including wildcard still block",
+    text: "User-agent: Googlebot\nUser-agent: *\nDisallow: /",
+    ok: false,
+  },
+  {
+    name: "later wildcard blocking group is not hidden by an earlier Allow",
+    text: "User-agent: *\nAllow: /\nUser-agent: *\nDisallow: /",
+    ok: false,
+  },
+  {
+    name: "case, whitespace and comments cannot hide a global block",
+    text: " USER-AGENT : *\n Disallow : / # global",
+    ok: false,
+  },
+  {
+    name: "several named agents share a bot-specific rule",
+    text: "User-agent: *\nAllow: /\nUser-agent: GPTBot\nUser-agent: CCBot\nDisallow: /",
+    ok: true,
+  },
+])
+  test(scenario.name, async () => {
+    const checks = await runProductionSmoke({
+      baseUrl: officialOrigin,
+      confirmation: "PRODUCTION-READ-ONLY",
+      fetcher: fixtureFetch([], scenario.text + `\nSitemap: ${officialOrigin}/sitemap.xml`),
+    });
+    expect(checks.find((c) => c.name === "robots público")?.ok).toBe(scenario.ok);
+  });
+test("a missing sitemap declaration still fails despite public Allow", async () => {
+  const checks = await runProductionSmoke({
+    baseUrl: officialOrigin,
+    confirmation: "PRODUCTION-READ-ONLY",
+    fetcher: fixtureFetch([], "User-agent: *\nAllow: /"),
+  });
+  expect(checks.find((c) => c.name === "robots público")?.ok).toBe(false);
 });
