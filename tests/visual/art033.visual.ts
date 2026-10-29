@@ -1,3 +1,4 @@
+import { checkHeader } from "./header-checks";
 import { test, expect } from "@playwright/test";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -126,26 +127,7 @@ for (const [locale, path] of Object.entries(paths)) {
             y.y + y.h <= x.y + 1,
         ).toBe(true);
       }
-    // Native summary supports focus and keyboard activation; do not substitute a click-only mock.
-    await page.locator("header summary").focus();
-    await page.keyboard.press("Shift+Tab");
-    await page.keyboard.press("Tab");
-    await expect(page.locator("header summary")).toBeFocused();
-    await page.keyboard.press("Enter");
-    const menu = page.getByRole("navigation", { name: "Language / Idioma" });
-    await expect(menu).toBeVisible();
-    const rect = await menu.boundingBox();
-    expect(rect).not.toBeNull();
-    if (!rect) throw new Error("Language menu missing");
-    expect(rect.x).toBeGreaterThanOrEqual(0);
-    expect(rect.x + rect.width).toBeLessThanOrEqual((page.viewportSize()?.width ?? 0) + 1);
-    for (const [lang, href] of Object.entries(paths))
-      await expect(menu.locator(`a[hreflang="${lang}"]`)).toHaveAttribute("href", href);
-    await info.attach(`${locale}-language-menu`, {
-      body: await page.screenshot(),
-      contentType: "image/png",
-    });
-    await page.keyboard.press("Enter");
+    await checkHeader(page, locale);
     const shot = `${locale}.png`;
     const captured = await page.screenshot({ fullPage: true, animations: "disabled" });
     await info.attach(`${locale}-candidate-NOT-APPROVED`, {
@@ -172,16 +154,12 @@ for (const [locale, path] of Object.entries(paths)) {
           "Captures are candidates only; human approval absent; no visual regression approval claimed.",
       });
     }
+    // Editions remain addressable directly; no replacement language control is introduced.
     for (const [lang, target] of Object.entries(paths)) {
-      if (info.project.use.hasTouch) await page.locator("header summary").tap();
-      else await page.locator("header summary").click();
-      const destination = page
-        .getByRole("navigation", { name: "Language / Idioma" })
-        .locator(`a[hreflang="${lang}"]`);
-      if (info.project.use.hasTouch) await destination.tap();
-      else await destination.click();
-      await expect(page).toHaveURL(new RegExp(target + "$"));
+      const response = await page.goto(target);
+      expect(response?.status()).toBe(200);
       await expect(page.locator("article")).toHaveAttribute("lang", lang);
+      await expect(page.locator('header [aria-label="Language / Idioma"]')).toHaveCount(0);
     }
     expect(errors).toEqual([]);
     expect(external).toEqual([]);
