@@ -18,6 +18,23 @@ async function get(path: string, status: number) {
   );
   const html = await response.text();
   assert(response.status === status, `${path}: HTTP ${response.status}, expected ${status}`);
+  if (status === 200 && html.includes("<html")) {
+    const header = html.match(/<header\b[\s\S]*?<\/header>/)?.[0] ?? "";
+    assert(header && !header.includes("Language / Idioma"), `${path}: language selector remains`);
+    assert(
+      !/tradução indisponível|translation unavailable|traducción no disponible/.test(header),
+      `${path}: obsolete translation message remains`,
+    );
+    assert(
+      header.includes('aria-label="Buscar no portal"') &&
+        /aria-label="Ativar modo (claro|escuro)"/.test(header),
+      `${path}: search or theme control missing`,
+    );
+    assert(
+      header.includes("Sul Global Energia e Sustentabilidade — página inicial"),
+      `${path}: logo link missing`,
+    );
+  }
   console.log(`OK ${path}: HTTP ${status}`);
   return html;
 }
@@ -28,8 +45,8 @@ assert(canonical && new URL(canonical).pathname === pt, "PT canonical changed");
 const origin = new URL(canonical).origin;
 const indexable = !original.includes('name="robots" content="noindex');
 assert(
-  original.includes("<details") && original.includes("tradução indisponível"),
-  "language fallback missing from SSR",
+  !original.includes("Language / Idioma") && !original.includes("tradução indisponível"),
+  "removed header language selector remains in SSR",
 );
 for (const locale of ["en", "es"]) {
   const catalog = await get(`/${locale}`, 200);

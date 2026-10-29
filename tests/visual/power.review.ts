@@ -1,3 +1,4 @@
+import { checkHeader } from "./header-checks";
 import { readFileSync } from "node:fs";
 import { parse } from "yaml";
 import { translationSchema } from "../../src/content/translation-schema";
@@ -183,26 +184,11 @@ for (const [locale, path] of Object.entries(paths)) {
     await edition.scrollIntoViewIfNeeded();
     await capture("edition-language");
     await page.evaluate(() => window.scrollTo(0, 0));
-    const summary = page.locator("header summary");
-    await summary.focus();
-    await page.keyboard.press("Enter");
-    const menu = page.getByRole("navigation", { name: "Language / Idioma" });
-    await expect(menu).toBeVisible();
-    const box = await menu.boundingBox();
-    if (!box) throw new Error("Language menu not rendered");
-    expect(box.x).toBeGreaterThanOrEqual(0);
-    expect(box.x + box.width).toBeLessThanOrEqual((page.viewportSize()?.width ?? 0) + 1);
-    await capture("language-menu");
-    await page.keyboard.press("Enter");
+    await checkHeader(page, locale);
     for (const [language, destination] of Object.entries(paths)) {
-      if (info.project.use.hasTouch) await summary.tap();
-      else await summary.click();
-      const link = page
-        .getByRole("navigation", { name: "Language / Idioma" })
-        .locator(`a[hreflang="${language}"]`);
-      await expect(link).toHaveAttribute("href", destination);
-      if (info.project.use.hasTouch) await link.tap();
-      else await link.click();
+      const response = await page.goto(destination);
+      expect(response?.status()).toBe(200);
+      await expect(page.locator('header [aria-label="Language / Idioma"]')).toHaveCount(0);
       await expect(page).toHaveURL(new RegExp(destination + "$"));
       await expect(page.locator("article")).toHaveAttribute("lang", language);
       await expect(edition).toHaveAttribute("lang", language);

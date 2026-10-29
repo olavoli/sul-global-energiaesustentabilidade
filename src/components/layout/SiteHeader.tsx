@@ -1,6 +1,5 @@
 import { useEditorialLocale } from "@/content/locale-context";
 import { TaxonomyNavLink } from "@/components/navigation/TaxonomyNavLink";
-import { LanguageSelector } from "@/components/navigation/LanguageSelector";
 import { useCallback, useReducer, useRef } from "react";
 import { Menu, Search } from "lucide-react";
 import { Container } from "./Container";
@@ -73,7 +72,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <LanguageSelector />
           <a
             href={locale === "pt-BR" ? "/busca" : `/${locale}`}
             aria-label="Buscar no portal"
