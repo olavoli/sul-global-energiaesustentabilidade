@@ -43,9 +43,13 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.I18N_PRODUCTION_CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.I18N_PRODUCTION_CF_ACCOUNT_ID }}
+          PRODUCTION_D1_DATABASE_ID: ${{ secrets.I18N_PRODUCTION_D1_DATABASE_ID }}
         run: |
           bun run production:config
           bun run production:check
           bun run production:dry-run
           bun node_modules/wrangler/bin/wrangler.js deploy --config .wrangler/production.generated.json --keep-vars
       - run: bun run smoke:production
+        env:
+          PRODUCTION_BASE_URL: https://sulglobalenergia.com.br
+          PRODUCTION_TARGET_CONFIRMATION: PRODUCTION-READ-ONLY
