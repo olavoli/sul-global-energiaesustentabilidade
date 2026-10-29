@@ -110,6 +110,7 @@ requested for this local branch; required quality/visual checks must pass before
 
 - `docs/INTERNATIONAL_DISCOVERY.md`
 - `scripts/i18n-operations/policy-cycle.test.ts`
+- `scripts/i18n-smoke.ts`
 - `src/components/article/DiscoveryCard.tsx`
 - `src/components/article/TaxonomyPage.tsx`
 - `src/components/article/TranslationCatalog.tsx`
@@ -139,3 +140,12 @@ on Cloudflare’s actual runtime after deployment. Local visual/SSR tests and th
 full suite remain complementary evidence. Required quality/visual CI must pass
 before normal merge; deployment and smoke failures stop the release.
 Both continuous-translation flags remain false throughout. No inference is needed.
+
+The first release CI exposed a legacy smoke assertion that still treated the
+international catalogs as empty. The inventory therefore also includes
+`scripts/i18n-smoke.ts`: verify populated localized cards, clear summary disclosure,
+direct PT links, environment-specific indexability and sitemap eligibility; retain
+draft route/feed/sitemap exclusions and existing full EN/ES edition checks.
+The official `smoke:preview` and `smoke:i18n` execute the compiled Worker fetch
+entrypoint locally under Bun without remote bindings, providing an additional
+existing artifact/SSR gate despite the standalone workerd preview limitation.
