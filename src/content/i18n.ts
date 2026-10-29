@@ -1,4 +1,5 @@
 import { taxonomyCatalog, taxonomyPath, sourceTerm, type TaxonomyKind } from "./taxonomy-catalog";
+import { discoveryCopyFor } from "./discovery-catalog";
 import { authors } from "@/data/authors";
 import { articleRecords } from "./generated/articles";
 import { translationRecords } from "./generated/translations";
@@ -100,7 +101,9 @@ export function languageOptions(
         const articles =
           locale === "pt-BR"
             ? createContentRepository(articleRecords, false).getPublishedArticles()
-            : publishedTranslations(records).filter((a) => a.locale === locale);
+            : createContentRepository(articleRecords, false)
+                .getPublishedArticles()
+                .filter((a) => discoveryCopyFor(a, locale));
         const available =
           term.kind === "category" || articles.some((a) => a.tags.includes(term.sourceKey));
         return {

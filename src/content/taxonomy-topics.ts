@@ -52,9 +52,12 @@ export function taxonomyAlternates(
   ];
 }
 
-export function portugueseTaxonomyAlternates(kind: "category" | "tag", sourceKey: string) {
-  const term = taxonomyCatalog.find((t) => t.kind === kind && t.sourceKey === sourceKey);
-  if (!term) return [];
-  const links = taxonomyAlternates(term);
-  return links.some((l) => l.locale === "en" || l.locale === "es") ? links : [];
+export function portugueseTaxonomyAlternates(
+  kind: "category" | "tag",
+  sourceKey: string,
+): { locale: string; path: string }[] {
+  // International discovery summaries are not equivalent full-text editions of this collection.
+  void kind;
+  void sourceKey;
+  return [];
 }

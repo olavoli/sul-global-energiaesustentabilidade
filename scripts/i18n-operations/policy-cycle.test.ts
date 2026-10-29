@@ -31,6 +31,12 @@ async function publicCheckout(dir: string) {
     "src/lib/taxonomy-seo.ts",
     "src/lib/taxonomy-route.ts",
     "src/components/navigation/TaxonomyNavLink.tsx",
+    "src/content/discovery.ts",
+    "src/content/discovery-catalog.ts",
+    "src/components/article/DiscoveryCard.tsx",
+    "src/lib/discovery-seo.ts",
+    "src/data/discovery-1.ts",
+    "src/data/discovery-2.ts",
   ]) {
     await mkdir(join(dir, path, ".."), { recursive: true });
     await cp(join(root, path), join(dir, path));
