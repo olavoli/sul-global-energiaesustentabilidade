@@ -1,0 +1,791 @@
+{
+  "source": "Parte 2  - Terras raras Brasil.docx",
+  "sha256": "c63e52e37833e8d8ed14911d22785c58a276acc580be160da96636e2bda876f4",
+  "blocks": [
+    {
+      "index": 0,
+      "type": "p",
+      "style": "",
+      "text": "**Série Especial: Terras Raras | Parte 2 de 3**"
+    },
+    {
+      "index": 1,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 2,
+      "type": "p",
+      "style": "",
+      "text": " Terras raras: O Brasil tem os minerais, mas quem domina a tecnologia?"
+    },
+    {
+      "index": 3,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 4,
+      "type": "p",
+      "style": "",
+      "text": "*Da mina aos ímãs permanentes, a disputa pelo processamento revela por que reservas minerais não bastam para conquistar autonomia industrial.*"
+    },
+    {
+      "index": 5,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 6,
+      "type": "p",
+      "style": "",
+      "text": "PONTOS-CHAVE"
+    },
+    {
+      "index": 7,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 8,
+      "type": "p",
+      "style": "",
+      "text": " - Paradoxo Brasileiro:: O Brasil possui a 2ª maior reserva mundial de terras raras (~21 Mt), mas sua produção de concentrados é marginal (326 t em 2025), evidenciando um abismo entre potencial geológico e capacidade industrial."
+    },
+    {
+      "index": 9,
+      "type": "p",
+      "style": "",
+      "text": "-  Gargalo Tecnológico: O verdadeiro valor e o maior desafio não estão na extração, mas na separação química dos 17 elementos (refino) e na metalurgia dos ímãs, etapas dominadas pela China (91% do refino, 94% dos ímãs)."
+    },
+    {
+      "index": 10,
+      "type": "p",
+      "style": "",
+      "text": "-  Movimento Industrial: Projetos como Serra Verde (GO) e Viridis (MG), apoiados por financiamentos do BNDES/Finep e pela nova Política Nacional de Minerais Críticos (PNMCE), sinalizam o início de uma estratégia brasileira para agregar valor na cadeia."
+    },
+    {
+      "index": 11,
+      "type": "p",
+      "style": "",
+      "text": " - Custos Invisíveis: A mineração e o processamento geram impactos ambientais severos, incluindo rejeitos radioativos (tório/urânio) e conflitos hídricos com comunidades tradicionais, exigindo licenciamento rigoroso e combate ao greenwashing."
+    },
+    {
+      "index": 12,
+      "type": "p",
+      "style": "",
+      "text": " - Reciclagem Insuficiente:  A reciclagem de ímãs de terras raras é tecnicamente viável, mas economicamente desafiadora em escala industrial (apenas 1% na Europa); não substituirá a mineração primária nas próximas duas décadas."
+    },
+    {
+      "index": 13,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 14,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 15,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 16,
+      "type": "p",
+      "style": "",
+      "text": "BLOCO DE DESTAQUE: "
+    },
+    {
+      "index": 17,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 18,
+      "type": "p",
+      "style": "",
+      "text": "A ILUSÃO DO MINÉRIO BRUTO: Ter a rocha não é ter o ímã.  Enquanto o Brasil celebra a descoberta de novas ocorrências e o crescimento de 485,4% nas autorizações de pesquisa, a China consolida seu monopólio sobre as etapas que realmente geram riqueza e poder geopolítico. O concentrado de óxidos que sai de Minaçu ou Poços de Caldas vale uma fração do preço do ímã sinterizado que sai de uma fábrica em Xangai. Sem dominar a hidrometalurgia de separação e a metalurgia do pó, o Brasil continuará exportando \"terra\" e importando \"tecnologia\", perpetuando um ciclo de dependência que a nova Política Nacional de Minerais Críticos (PNMCE) precisa urgentemente quebrar. A soberania mineral do século XXI não se mede em toneladas de minério no subsolo, mas em patentes de processos industriais e em fábricas de componentes de alta tecnologia operando em solo nacional."
+    },
+    {
+      "index": 19,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 20,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 21,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 22,
+      "type": "p",
+      "style": "",
+      "text": "1. A Riqueza que ainda não virou indústria: O paradoxo brasileiro"
+    },
+    {
+      "index": 23,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 24,
+      "type": "p",
+      "style": "",
+      "text": "Imagine descobrir um cofre abarrotado de barras de ouro no quintal de casa, mas não ter as ferramentas, o conhecimento ou a licença para derretê-las e transformá-las em joias. É exatamente essa a sensação de frustração estratégica que atravessa o debate sobre as terras raras no Brasil. O país ostenta a segunda maior reserva estimada do planeta que são cerca de 21 milhões de toneladas de equivalentes de óxidos, segundo o Serviço Geológico dos Estados Unidos (USGS) [1], mas sua participação na cadeia global de valor permanece marginal, quase simbólica."
+    },
+    {
+      "index": 25,
+      "type": "p",
+      "style": "",
+      "text": "Os números revelam um contraste desconcertante. Em 2025, a Agência Nacional de Mineração (ANM) reportou uma produção nacional de apenas 326 toneladas de concentrado de óxidos de terras raras [2], uma fração ínfima frente às 390 mil toneladas produzidas mundialmente, das quais a China respondeu por cerca de 270 mil toneladas [1]. Simultaneamente, o interesse exploratório explodiu: as autorizações de pesquisa para esses elementos cresceram impressionantes 485,4% entre 2021 e 2025, totalizando 3.067 áreas em fase de investigação mineral [2]. Contudo, como qualquer geólogo econômico sabe, autorização para pesquisar não é sinônimo de mina operante, muito menos de indústria transformadora."
+    },
+    {
+      "index": 26,
+      "type": "p",
+      "style": "",
+      "text": "O paradoxo brasileiro reside nessa assimetria: temos o subsolo, mas carecemos das plantas industriais. Temos a matéria-prima, mas importamos o componente final. A pergunta que ecoa nos corredores do Ministério de Minas e Energia, do BNDES e dos centros de pesquisa não é mais \"se\" o Brasil tem terras raras, mas sim \"por que\" ainda não conseguimos transformá-las em tecnologia nacional. A resposta exige uma viagem detalhada pela cadeia produtiva, desde a rocha bruta até o ímã que faz girar o motor de um carro elétrico."
+    },
+    {
+      "index": 27,
+      "type": "p",
+      "style": "",
+      "text": "2. Da rocha ao ímã: a cadeia tecnológica e o gargalo da separação"
+    },
+    {
+      "index": 28,
+      "type": "p",
+      "style": "",
+      "text": "Para compreender o abismo entre reserva e indústria, é preciso desmistificar a cadeia produtiva das terras raras. Extrair o minério é, paradoxalmente, a parte mais simples. O grande desafio  e o verdadeiro valor  reside nas etapas subsequentes: beneficiamento, separação química, redução a metais, fabricação de ligas e, finalmente, a produção dos ímãs permanentes de neodímio-ferro-boro (NdFeB)."
+    },
+    {
+      "index": 29,
+      "type": "p",
+      "style": "",
+      "text": "O gargalo crítico é a separação dos 17 elementos. Eles possuem raios iônicos e comportamentos químicos extremamente semelhantes, o que os torna quase \"gêmeos\" do ponto de vista da reatividade. Separar o neodímio do praseodímio, ou isolar o disprósio em alta pureza, exige sequências exaustivas de extração por solventes em processos hidrometalúrgicos complexos que consomem grandes volumes de reagentes, água e energia [3]. O Centro de Tecnologia Mineral (CETEM), referência nacional no tema, desenvolve tecnologias próprias de separação, inclusive com patente depositada em 2022 para o processo de separação de lantânio, praseodímio e neodímio [4]. Contudo, escalar essas tecnologias de laboratório e de plantas-piloto para unidades industriais de grande porte é um salto que o Brasil ainda não completou de forma consistente."
+    },
+    {
+      "index": 30,
+      "type": "p",
+      "style": "",
+      "text": "A cadeia de valor pode ser visualizada em quatro estágios principais, cada um agregando valor exponencialmente:"
+    },
+    {
+      "index": 31,
+      "type": "table",
+      "rows": [
+        [
+          "Estágio",
+          "Produto",
+          "Valor Agregado",
+          "Complexidade Tecnológica"
+        ],
+        [
+          "1. Mineração",
+          "Minério bruto / Concentrado",
+          "Baixo",
+          "Média (geologia, beneficiamento físico)"
+        ],
+        [
+          "2. Refino",
+          "Óxidos Separados (alta pureza)",
+          "Médio-Alto",
+          "Muito Alta (hidrometalurgia, separação química)"
+        ],
+        [
+          "3. Metalurgia",
+          "Metais e Ligas (ex: NdFeB)",
+          "Alto",
+          "Alta (redução, sinterização, controle microestrutural)"
+        ],
+        [
+          "4. Manufatura",
+          "Ímãs Permanentes / Componentes",
+          "Muito Alto",
+          "Muito Alta (conformação, magnetização, engenharia)"
+        ]
+      ]
+    },
+    {
+      "index": 32,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 33,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 34,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 35,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 36,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 37,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 38,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 39,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 40,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 41,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 42,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 43,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 44,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 45,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 46,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 47,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 48,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 49,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 50,
+      "type": "p",
+      "style": "",
+      "text": "O Brasil atua predominantemente no Estágio 1. A China, por outro lado, domina esmagadoramente os Estágios 2, 3 e 4. Segundo a Agência Internacional de Energia (IEA), em 2024 a China respondeu por cerca de 60% da mineração global, mas controlou 91% do refino e 94% da fabricação de ímãs permanentes sinterizados [5]. Essa assimetria não é acidental: é o resultado de décadas de investimento estatal em pesquisa, infraestrutura industrial e políticas de proteção de mercado que consolidaram um monopólio tecnológico de fato."
+    },
+    {
+      "index": 51,
+      "type": "p",
+      "style": "",
+      "text": "3. O domínio da China: seis décadas de estratégia industrial"
+    },
+    {
+      "index": 52,
+      "type": "p",
+      "style": "",
+      "text": "Como a China construiu esse domínio quase absoluto? A resposta não está apenas na geologia,  embora o país possua depósitos excepcionais, como os de Bayan Obo, ricos em terras raras leves, e as argilas iônicas do sul, fontes de terras raras pesadas, mas sim em uma estratégia industrial de longo prazo iniciada na década de 1960 [6]."
+    },
+    {
+      "index": 53,
+      "type": "p",
+      "style": "",
+      "text": "A liderança chinesa combina escala industrial, domínio da tecnologia de separação, cadeia de fornecedores integrada e uma demanda doméstica massiva, impulsionada pela própria indústria de eletrônicos, veículos elétricos e turbinas eólicas [6]. Durante anos, a China subsidiou a produção e exportou óxidos e metais a preços baixíssimos, inviabilizando a concorrência de produtores ocidentais e forçando o fechamento de minas e plantas de processamento nos Estados Unidos e na Europa. O resultado foi a transferência do know-how e da capacidade produtiva para o leste asiático."
+    },
+    {
+      "index": 54,
+      "type": "p",
+      "style": "",
+      "text": "Recentemente, o país reforçou seu controle estratégico. Em 2025, adotou novos controles de exportação que lhe permitem reter o fornecimento de terras raras e de ímãs específicos, utilizando esses materiais como instrumento de pressão geopolítica em negociações comerciais com os Estados Unidos e a União Europeia [7]. Esse movimento expôs a vulnerabilidade das cadeias de suprimentos globais e acelerou a busca por diversificação, mas a inércia industrial chinesa é imensa. Reverter esse domínio exige não apenas novas minas, mas décadas de investimento em P&D, formação de engenheiros metalúrgicos e construção de plantas de refino, algo que o Ocidente está apenas começando a fazer."
+    },
+    {
+      "index": 55,
+      "type": "p",
+      "style": "",
+      "text": "4. O Brasil entra na disputa: projetos, investimentos e a nova política"
+    },
+    {
+      "index": 56,
+      "type": "p",
+      "style": "",
+      "text": "Diante desse cenário, o Brasil começa a se mover, ainda que de forma incipiente. A sanção da Lei nº 14.994/2026, que institui a Política Nacional de Minerais Críticos e Estratégicos (PNMCE), representa um marco regulatório importante, buscando estruturar a governança do setor e atrair investimentos para a agregação de valor [8]."
+    },
+    {
+      "index": 57,
+      "type": "p",
+      "style": "",
+      "text": "Dois projetos simbolizam essa nova fase. O primeiro é a Serra Verde, em Minaçu (Goiás), primeira operação fora da Ásia a produzir em escala comercial concentrado de terras raras a partir de depósitos de argila iônica [9]. Com capacidade instalada da ordem de 5 mil toneladas de equivalentes de óxidos, a empresa fechou um acordo estratégico com o governo dos Estados Unidos no valor de US$ 565 milhões [10]. Contudo, o projeto enfrenta questionamentos jurídicos e pressão sobre territórios quilombolas, evidenciando os conflitos socioambientais inerentes à expansão mineral [11]. O segundo é a Viridis Mining and Minerals, em Poços de Caldas (Minas Gerais), que obteve em setembro de 2026 um financiamento de R$ 77,5 milhões do BNDES para implantar um Centro de Pesquisa e Processamento de Terras Raras [12]. O projeto visa não apenas à extração, mas ao desenvolvimento de capacidades de separação e metalurgia no Brasil, embora enfrente resistência de moradores locais, preocupados com os impactos em uma região historicamente marcada pela mineração de urânio [13]."
+    },
+    {
+      "index": 58,
+      "type": "p",
+      "style": "",
+      "text": "O instrumento financeiro mais robusto até o momento é a chamada pública conjunta BNDES-Finep, lançada em 2025 com previsão inicial de R$ 5 bilhões para minerais estratégicos [14]. A chamada recebeu 124 propostas demandando R$ 85 bilhões, das quais 56 foram selecionadas, totalizando R$ 45,8 bilhões em projetos voltados a lítio, terras raras, grafite e cobre [14]. Esse volume de recursos sinaliza um compromisso do Estado brasileiro em financiar não apenas a mineração, mas a industrialização da cadeia."
+    },
+    {
+      "index": 59,
+      "type": "p",
+      "style": "",
+      "text": "Paralelamente, o Centro de Gestão e Estudos Estratégicos (CGEE) organizou o desenvolvimento do setor em três horizontes temporais, com metas para o período 2026–2040 [15]. O horizonte imediato (2026–2030) prioriza o estabelecimento das bases industriais e a qualificação da mão de obra; o médio prazo foca a consolidação das cadeias de ímãs e catalisadores; e o longo prazo visa à autonomia tecnológica e à inserção competitiva em mercados globais de alta tecnologia [15]."
+    },
+    {
+      "index": 60,
+      "type": "p",
+      "style": "",
+      "text": "5. Os custos invisíveis: impactos ambientais, comunidades e o mito da reciclagem"
+    },
+    {
+      "index": 61,
+      "type": "p",
+      "style": "",
+      "text": "A corrida pelas terras raras não é isenta de custos. Pelo contrário, ela carrega um passivo ambiental e social que frequentemente é externalizado para as comunidades onde a extração ocorre. A mineração e o processamento de terras raras, especialmente a partir de minerais como a monazita, geram rejeitos que podem conter tório e urânio, elementos radioativos naturais que, uma vez mobilizados pelo processamento industrial, exigem gestão rigorosa e monitoramento de longo prazo [16]."
+    },
+    {
+      "index": 62,
+      "type": "p",
+      "style": "",
+      "text": "Além da radioatividade, os impactos típicos da mineração em larga escala são: supressão de vegetação; alteração do lençol freático; consumo intensivo de água e geração de efluentes  são amplificados pela complexidade química do beneficiamento [16]. Em Minaçu (GO), reportagens baseadas em documentos oficiais revelaram conflitos pela água e pressões sobre territórios tradicionais, desmentindo narrativas de \"mineração verde\" que tentam maquiar os danos ambientais [11]. O greenwashing é um risco real: a transição energética não pode ser construída sobre a repetição dos erros do modelo extrativista predatório do passado."
+    },
+    {
+      "index": 63,
+      "type": "p",
+      "style": "",
+      "text": "A reciclagem surge frequentemente como a solução mágica para esses problemas. A ideia de recuperar terras raras de ímãs descartados em motores elétricos, discos rígidos e turbinas eólicas é sedutora. Contudo, a realidade industrial é mais complexa: a taxa de reciclagem de ímãs de terras raras na Europa é de apenas 1%, e a primeira linha piloto europeia de recuperação, instalada na França, opera em escala de poucas toneladas por ano [17]. Os desafios são enormes: a coleta e a desmontagem de equipamentos em fim de vida são logisticamente custosas; a separação dos ímãs de outros componentes é trabalhosa; e os processos hidrometalúrgicos de recuperação, embora eficientes em laboratório, ainda lutam para alcançar viabilidade econômica em escala industrial [18]. A reciclagem será crucial no longo prazo, mas nas próximas duas décadas a mineração responsável continuará sendo a fonte dominante de suprimento."
+    },
+    {
+      "index": 64,
+      "type": "p",
+      "style": "",
+      "text": "📊 TABELA COMPARATIVA: PROJETOS BRASILEIROS EM DESTAQUE"
+    },
+    {
+      "index": 65,
+      "type": "table",
+      "rows": [
+        [
+          "Característica",
+          "Serra Verde (Minaçu, GO)",
+          "Viridis Mining (Poços de Caldas, MG)"
+        ],
+        [
+          "Tipo de Depósito",
+          "Argilas de Adsorção Iônica (terras raras pesadas e leves)",
+          "Carbonatito / Complexo Alcalino"
+        ],
+        [
+          "Estágio Atual",
+          "Produção Comercial (Fase I iniciada)",
+          "Pesquisa Avançada / Implantação de Centro de Processamento"
+        ],
+        [
+          "Capacidade Prevista",
+          "~5.000 t/ano de concentrado (OTR)",
+          "Foco em processamento e separação (meta de escala industrial)"
+        ],
+        [
+          "Parcerias Estratégicas",
+          "Acordo com Governo dos EUA (US$ 565 mi)",
+          "Financiamento BNDES (R$ 77,5 mi) + Capital Australiano"
+        ],
+        [
+          "Desafios Principais",
+          "Conflitos com territórios quilombolas; questões hídricas",
+          "Resistência de moradores; passivo histórico da mineração de urânio na região"
+        ],
+        [
+          "Foco na Cadeia",
+          "Produção de concentrado misto (Etapa 1/2)",
+          "Desenvolvimento de capacidade de separação e metalurgia (Etapas 2/3)"
+        ]
+      ]
+    },
+    {
+      "index": 66,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 67,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 68,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 69,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 70,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 71,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 72,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 73,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 74,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 75,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 76,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 77,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 78,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 79,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 80,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 81,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 82,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 83,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 84,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 85,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 86,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 87,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 88,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 89,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 90,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 91,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 92,
+      "type": "p",
+      "style": "",
+      "text": "6. O futuro que queremos construir: Exportar concentrados ou produzir tecnologia?"
+    },
+    {
+      "index": 93,
+      "type": "p",
+      "style": "",
+      "text": "Encerrar esta segunda parte exige enfrentar, sem eufemismos, a tese central que conduziu toda a análise: possuir reservas é uma condição geológica; dominar tecnologia é uma decisão política, científica e industrial. Os dados examinados não autorizam interpretações confortáveis. O Brasil detém a segunda maior reserva estimada de terras raras do planeta, mas sua presença nos elos que concentram valor do refino, dominado em 91% pela China, e a fabricação de ímãs, controlada em 94%, mas  permanece praticamente nula. As 326 toneladas de concentrado reportadas pela ANM em 2025, confrontadas com 3.067 autorizações de pesquisa, retratam um país que explora com entusiasmo e transforma com timidez."
+    },
+    {
+      "index": 94,
+      "type": "p",
+      "style": "",
+      "text": "O movimento industrial recente é real, porém embrionário. A operação comercial da Serra Verde, em Goiás, o centro de processamento da Viridis, em Minas Gerais, apoiado pelo BNDES, e o arcabouço da Política Nacional de Minerais Críticos e Estratégicos (Lei nº 14.994/2026) constituem sinais alentadores de mudança de trajetória. Contudo, o rigor analítico impõe distinguir anúncio de capacidade instalada: projeto financiado não é fábrica operante; contrato assinado não é patente registrada. O roteiro do CGEE para 2026–2040 somente produzirá frutos se sobreviver aos ciclos eleitorais e se converter em política de Estado contínua, sustentada por formação de capital humano e P&D metalúrgico."
+    },
+    {
+      "index": 95,
+      "type": "p",
+      "style": "",
+      "text": "Igualmente crítica é a dimensão socioambiental. A riqueza das terras raras carrega custos invisíveis: rejeitos com tório e urânio, pressão sobre recursos hídricos e conflitos com territórios tradicionais, como documentado em Minaçu. Sustentabilidade que ignore essas variáveis não é critério técnico, é peça de marketing. E a reciclagem, embora estrategicamente indispensável, segue estatisticamente irrelevante no curto prazo com cerca de 1% na Europa, o que a impede de servir como álibi para postergar uma produção primária rigorosamente licenciada."
+    },
+    {
+      "index": 96,
+      "type": "p",
+      "style": "",
+      "text": "Logo, a resposta à pergunta que abriu esta parte não jaz no subsolo: reside na qualidade das instituições, das políticas industriais e da engenharia que o país conseguir sustentar por décadas. Entre exportar concentrado e fabricar tecnologia existe uma distância medida não em quilômetros, mas em competências acumuladas."
+    },
+    {
+      "index": 97,
+      "type": "p",
+      "style": "",
+      "text": "É exatamente essa disputa de quem fornece e quem comanda e que orientará a terceira e última parte da série. Se a China converteu as terras raras em arma geopolítica e as potências disputam fornecedores alternativos, que lugar o Brasil ocupará nesse tabuleiro? Seremos pedreira da transição energética ou protagonistas do próprio futuro industrial? A resposta começa a ser escrita agora — não na rocha, mas nas nossas escolhas."
+    },
+    {
+      "index": 98,
+      "type": "p",
+      "style": "",
+      "text": ""
+    },
+    {
+      "index": 99,
+      "type": "p",
+      "style": "",
+      "text": " Referências biográficas "
+    },
+    {
+      "index": 100,
+      "type": "p",
+      "style": "",
+      "text": "U.S. Geological Survey. Mineral Commodity Summaries 2026: Rare Earths. Reston: USGS; 2026. Disponível em: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 101,
+      "type": "p",
+      "style": "",
+      "text": "Agência Nacional de Mineração. Autorizações de Pesquisa para terras raras tiveram um aumento de 485,4% entre 2021 e 2025. Brasília: ANM; 2026. Disponível em: https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 102,
+      "type": "p",
+      "style": "",
+      "text": "Diao H, et al. Navigating the rare earth elements landscape: challenges, innovations, and sustainability. Miner Eng. 2024;215:108889. doi:10.1016/j.mineng.2024.108889."
+    },
+    {
+      "index": 103,
+      "type": "p",
+      "style": "",
+      "text": "Centro de Tecnologia Mineral. Geopolítica e desenvolvimento tecnológico para a cadeia produtiva de terras raras no Brasil. Rio de Janeiro: CETEM; 2026. Disponível em: https://www.gov.br/cetem/pt-br/assuntos/noticias/geopolitica-e-desenvolvimento-tecnologico-para-a-cadeia-produtiva-de-terras-raras-no-brasil. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 104,
+      "type": "p",
+      "style": "",
+      "text": "International Energy Agency. Rare Earth Elements: Pathways to Secure and Diversified Supply Chains. Paris: IEA; 2026. Disponível em: https://www.iea.org/reports/rare-earth-elements. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 105,
+      "type": "p",
+      "style": "",
+      "text": "Folha de S.Paulo. Como a China construiu domínio sobre terras raras ao longo de seis décadas. São Paulo: Mercado; 2026 jan 8. Disponível em: https://www1.folha.uol.com.br/mercado/2026/01/como-a-china-construiu-dominio-sobre-terras-raras-ao-longo-de-seis-decadas.shtml. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 106,
+      "type": "p",
+      "style": "",
+      "text": "G1. O que são terras raras e como a China as usa como arma estratégica. Rio de Janeiro: G1 Economia; 2025 jun 29. Disponível em: https://g1.globo.com/economia/noticia/2025/06/29/o-que-sao-terras-raras-e-como-a-china-as-usa-como-arma-estrategica.ghtml. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 107,
+      "type": "p",
+      "style": "",
+      "text": "Brasil. Lei nº 14.994, de 2026. Institui a Política Nacional de Minerais Críticos e Estratégicos (PNMCE). Brasília: Diário Oficial da União; 2026. Disponível em: https://www.planalto.gov.br. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 108,
+      "type": "p",
+      "style": "",
+      "text": "G1 Goiás. Terras raras: Serra Verde afirma que não exporta minério bruto de mina de Goiás. Goiânia: G1; 2026 abr 28. Disponível em: https://g1.globo.com/go/goias/noticia/2026/04/28/terras-raras-serra-verde-afirma-que-nao-exporta-minerio-bruto-de-mina-de-goias.ghtml. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 109,
+      "type": "p",
+      "style": "",
+      "text": "Agência Pública. Terras raras: mineradora em Goiás vira negócio bilionário. São Paulo: Agência Pública; 2026 abr 21. Disponível em: https://apublica.org/2026/04/terras-raras-mineradora-em-goias-vira-negocio-bilionario/. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 110,
+      "type": "p",
+      "style": "",
+      "text": "O Eco. Maquiada de verde, mineração de terras raras impacta territórios e amplia conflitos pela água em Goiás. São Paulo: Observatório da Mineração; 2026 jul 27. Disponível em: https://oeco.org.br/reportagens/maquiada-de-verde-mineracao-de-terras-raras-impacta-territorios-e-amplia-conflitos-pela-agua-em-goias/. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 111,
+      "type": "p",
+      "style": "",
+      "text": "Folha de S.Paulo. Terras raras: Viridis tem R$ 77,5 mi aprovados pelo BNDES. São Paulo: Painel S.A.; 2026 set 8. Disponível em: https://www1.folha.uol.com.br/colunas/painelsa/2026/09/virdis-tem-financiamento-de-r-775-milhoes-aprovado-pelo-bndes-para-terras-raras.shtml. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 112,
+      "type": "p",
+      "style": "",
+      "text": "Folha de S.Paulo. Australiana Viridis avança em projeto para extrair terras raras em MG, mas enfrenta resistência de moradores. São Paulo: C-Level; 2026 out 14. Disponível em: https://c-level.folha.uol.com.br/negocios/2026/10/australiana-viridis-avanca-em-projeto-extrair-terras-raras-em-mg-mas-enfrenta-resistencia-de-moradores.shtml. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 113,
+      "type": "p",
+      "style": "",
+      "text": "Banco Nacional de Desenvolvimento Econômico e Social. BNDES e Finep concluem avaliação de propostas de chamada pública de projetos com foco em minerais estratégicos. Rio de Janeiro: Agência BNDES de Notícias; 2025 jun 12. Disponível em: https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 114,
+      "type": "p",
+      "style": "",
+      "text": "Centro de Gestão e Estudos Estratégicos. Terras Raras no Brasil: estado da arte e perspectivas para 2040. Brasília: CGEE; 2026. Disponível em: https://www.cgee.org.br/w/presidente-do-cgee-defende-estrat%C3%A9gia-integrada-para-terras-raras. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 115,
+      "type": "p",
+      "style": "",
+      "text": "Han YH, et al. Environmental impacts of rare earth elements mining and strategies for sustainable management: a comprehensive review. J Hazard Mater. 2025;485:140400. doi:10.1016/j.jhazmat.2025.140400."
+    },
+    {
+      "index": 116,
+      "type": "p",
+      "style": "",
+      "text": "Xataka Brasil. França encontra maneira de enfrentar a China: a primeira linha piloto para reciclagem de ímãs de terras raras. São Paulo: Xataka; 2026 jan 10. Disponível em: https://www.xataka.com.br/diversos/franca-encontrou-maneira-enfrentar-china-a-primeira-linha-piloto-para-reciclagem-imas-terras-raras. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 117,
+      "type": "p",
+      "style": "",
+      "text": "Revista Pesquisa FAPESP. Mineração urbana pode reduzir impactos ambientais da produção das terras-raras. São Paulo: FAPESP; 2025 out 2. Disponível em: https://revistapesquisa.fapesp.br/mineracao-urbana-pode-reduzir-impactos-ambientais-da-producao-das-terras-raras/. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 118,
+      "type": "p",
+      "style": "",
+      "text": "International Energy Agency. Global Critical Minerals Outlook 2026. Paris: IEA; 2026. Disponível em: https://www.iea.org/reports/global-critical-minerals-outlook-2026. Acesso em: 30 out. 2026."
+    },
+    {
+      "index": 119,
+      "type": "p",
+      "style": "",
+      "text": ""
+    }
+  ]
+}

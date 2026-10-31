@@ -1,0 +1,71 @@
+[
+  {
+    "name": "hero",
+    "originalFile": "art-034-hero-original.jpg",
+    "originalSha256": "e9b010617bb579da5652019e7d823b621ff522c384538952b26ab88d190381ac",
+    "width": 2000,
+    "height": 1124,
+    "sizes": [
+      {
+        "src": "/images/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2/art-034-hero-720.webp",
+        "width": 720,
+        "height": 405,
+        "sha256": "38b4bcd1d3a22a43dbf50f87740a6ec00c0dd4d6db64741b9d337e5aa48a7a3f"
+      },
+      {
+        "src": "/images/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2/art-034-hero-1200.webp",
+        "width": 1200,
+        "height": 674,
+        "sha256": "18bbfa15613daab436f02be23d26bbeb4aa8d4d3aaea0faa5eb98e618cb845a8"
+      },
+      {
+        "src": "/images/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2/art-034-hero-2000.webp",
+        "width": 2000,
+        "height": 1124,
+        "sha256": "894ef280ad1d217a16fbcfbdd55feb735646245752794b88e1e03109ea62f35b"
+      }
+    ]
+  },
+  {
+    "name": "cadeia",
+    "originalFile": "art-034-cadeia-original.png",
+    "originalSha256": "89c7924e64b7210ddab2345fa6a3be99e683ae463c84c24e90da15eb9514a52f",
+    "width": 941,
+    "height": 1672,
+    "sizes": [
+      {
+        "src": "/images/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2/art-034-cadeia-720.webp",
+        "width": 720,
+        "height": 1279,
+        "sha256": "47ff9d9193be617660c79c8bc5a06e921b7dbf1499585097040e1fb7fd204d8d"
+      },
+      {
+        "src": "/images/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2/art-034-cadeia-941.webp",
+        "width": 941,
+        "height": 1672,
+        "sha256": "7807a9cd9251b5930ebb2b397f25a50cc1e6731d033c77d5f68240d03c159adc"
+      }
+    ]
+  },
+  {
+    "name": "paradoxo",
+    "originalFile": "art-034-paradoxo-original.png",
+    "originalSha256": "d98462e9aea4d7067cbcb06d9591d245e013f8e9257cf11c0b61c4e386c1169a",
+    "width": 941,
+    "height": 1672,
+    "sizes": [
+      {
+        "src": "/images/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2/art-034-paradoxo-720.webp",
+        "width": 720,
+        "height": 1279,
+        "sha256": "c0ee031e6c56f0b27735ab3dc9132566635a583a39f9c20e6c272f69d99e9443"
+      },
+      {
+        "src": "/images/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2/art-034-paradoxo-941.webp",
+        "width": 941,
+        "height": 1672,
+        "sha256": "b26d3b5e241a5aa00b62729749e45ee4d6c789df31022f27ab754bba4a6381d6"
+      }
+    ]
+  }
+]

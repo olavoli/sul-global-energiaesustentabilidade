@@ -1,0 +1,218 @@
+{
+  "articleSlug": "terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2",
+  "researchQuestion": "Por que reservas brasileiras de terras raras não se convertem automaticamente em domínio do processamento e da fabricação de ímãs?",
+  "scope": "Briefing retrospectivo preparado a partir do Word aprovado e da conferência documental de 31/10/2026. Preservar seis seções, duas tabelas, cinco pontos-chave, destaque, três imagens originais e voz investigativa. 21 Mt mantidos por decisão editorial; divergência explicitada fora da figura. Não gerar traduções.",
+  "audience": "Leitores interessados em energia, mineração, ciência, política industrial e impactos socioambientais.",
+  "keyQuestions":
+    [
+      "Quais etapas concentram valor e capacidade tecnológica?",
+      "Como distinguir reservas, massa de concentrado e conteúdo REO?",
+      "O que os projetos e financiamentos brasileiros efetivamente demonstram?",
+      "Quais impactos e limites da reciclagem estão documentados?",
+    ],
+  "requiredData":
+    [
+      "ANM/USGS: ano, unidade, produto e cobertura",
+      "IEA: universo magnético e ano de 2024",
+      "Norma oficial PNMCE e estados dos projetos",
+      "Metadados DOI e correspondência sequencial das citações",
+    ],
+  "requiredSourceTypes":
+    [
+      "Agências oficiais",
+      "Legislação federal",
+      "Artigos e metadados científicos",
+      "Reportagens identificadas e documentos empresariais atribuídos",
+    ],
+  "candidateSources": [],
+  "confirmedSources":
+    [
+      {
+        "title": "Revista Pesquisa FAPESP. Mineração urbana pode reduzir impactos ambientais da produção das terras-raras. São Paulo: FAPESP; 2025 out 2. Disponível em:",
+        "url": "https://revistapesquisa.fapesp.br/mineracao-urbana-pode-reduzir-impactos-ambientais-da-producao-das-terras-raras/",
+        "organization": "Frances Jones; Yuri Vasconcelos — Pesquisa FAPESP",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Agência Nacional de Mineração. Autorizações de Pesquisa para terras raras tiveram um aumento de 485,4% entre 2021 e 2025. Brasília: ANM; 2026. Disponível em:",
+        "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+        "organization": "Agência Nacional de Mineração",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "U.S. Geological Survey. Mineral Commodity Summaries 2026: Rare Earths. Reston: USGS; 2026. Disponível em:",
+        "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+        "organization": "U.S. Geological Survey",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "International Energy Agency. Rare Earth Elements: Pathways to Secure and Diversified Supply Chains. Paris: IEA; 2026. Disponível em:",
+        "url": "https://www.iea.org/reports/rare-earth-elements",
+        "organization": "International Energy Agency",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Diao H, et al. Navigating the rare earth elements landscape: challenges, innovations, and sustainability. Miner Eng. 2024;216:108889. doi:10.1016/j.mineng.2024.108889.",
+        "url": "https://doi.org/10.1016/j.mineng.2024.108889",
+        "organization": "Diao et al.",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Jones F; Vasconcelos Y. Brasil investe em pesquisa para dominar o ciclo produtivo das terras-raras e dos superímãs. Pesquisa FAPESP.",
+        "url": "https://revistapesquisa.fapesp.br/brasil-investe-em-pesquisa-para-dominar-o-ciclo-produtivo-das-terras-raras-e-dos-superimas/",
+        "organization": "Frances Jones; Yuri Vasconcelos — Pesquisa FAPESP",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Folha de S.Paulo. Como a China construiu domínio sobre terras raras ao longo de seis décadas. São Paulo: Mercado; 2026 jan 8. Disponível em:",
+        "url": "https://www1.folha.uol.com.br/mercado/2026/01/como-a-china-construiu-dominio-sobre-terras-raras-ao-longo-de-seis-decadas.shtml",
+        "organization": "Folha de S.Paulo",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Brasil. Lei nº 15.506, de 16 de setembro de 2026. Institui a Política Nacional de Minerais Críticos e Estratégicos. Registro legislativo oficial:",
+        "url": "https://legis.senado.leg.br/norma/43923839",
+        "organization": "Brasil — Senado Federal",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Seta I. Extração de terras raras em Goiás vira negócio bilionário com aquisição americana. Agência Pública; 21 abr. 2026.",
+        "url": "https://apublica.org/2026/04/terras-raras-mineradora-em-goias-vira-negocio-bilionario/",
+        "organization": "Isabel Seta — Agência Pública",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Serra Verde Group. Serra Verde Secures US$565 million Financing from US International Development Finance Corporation. 5 fev. 2026.",
+        "url": "https://www.serraverde.com/2026/02/serra-verde-secures-us565-million-financing-from-us-international-development-finance-corporation/",
+        "organization": "Serra Verde Group",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "O Eco. Maquiada de verde, mineração de terras raras impacta territórios e amplia conflitos pela água em Goiás. São Paulo: Observatório da Mineração; 2026 jul 27. Disponível em:",
+        "url": "https://oeco.org.br/reportagens/maquiada-de-verde-mineracao-de-terras-raras-impacta-territorios-e-amplia-conflitos-pela-agua-em-goias/",
+        "organization": "Marilia da Silva — ((o))eco",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Banco Nacional de Desenvolvimento Econômico e Social. BNDES aprova R$ 77,5 mi para Viridis processar terras raras em Poços de Caldas (MG). 8 set. 2026.",
+        "url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-aprova-R%24-775-mi-para-Viridis-processar-terras-raras-em-Pocos-de-Caldas-MG/",
+        "organization": "BNDES",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Folha de S.Paulo. Australiana Viridis avança em projeto para extrair terras raras em MG, mas enfrenta resistência de moradores. São Paulo: C-Level; 2026 out 14. Disponível em:",
+        "url": "https://c-level.folha.uol.com.br/negocios/2026/10/australiana-viridis-avanca-em-projeto-extrair-terras-raras-em-mg-mas-enfrenta-resistencia-de-moradores.shtml",
+        "organization": "Felipe Mendes — Folha de S.Paulo",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Banco Nacional de Desenvolvimento Econômico e Social. BNDES e Finep concluem avaliação de propostas de chamada pública de projetos com foco em minerais estratégicos. Rio de Janeiro: Agência BNDES de Notícias; 2025 jun 12. Disponível em:",
+        "url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos",
+        "organization": "BNDES; Finep",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Centro de Gestão e Estudos Estratégicos. Terras Raras no Brasil: estado da arte e perspectivas para 2040. Brasília: CGEE; 2026. Disponível em:",
+        "url": "https://www.cgee.org.br/w/presidente-do-cgee-defende-estrat%C3%A9gia-integrada-para-terras-raras",
+        "organization": "CGEE",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Han YH, et al. Environmental impacts of rare earth elements mining and strategies for sustainable management: a comprehensive review. J Hazard Mater. 2025;500:140400. doi:10.1016/j.jhazmat.2025.140400.",
+        "url": "https://doi.org/10.1016/j.jhazmat.2025.140400",
+        "organization": "Han et al.",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "European Raw Materials Alliance; EIT RawMaterials. Rare Earth Magnets and Motors: A European Call for Action. 2021.",
+        "url": "https://www.eit.europa.eu/sites/default/files/2021_09-24_ree_cluster_report2.pdf",
+        "organization": "ERMA; EIT RawMaterials",
+        "verifiedAt": "2026-10-31",
+      },
+      {
+        "title": "Orano; CEA. Orano and CEA launch a new pilot line — unique in Europe — for recycling and manufacturing rare earth-based permanent magnets. 19 set. 2025.",
+        "url": "https://www.orano.group/en/news/news-group/2025/september/orano-and-cea-launch-a-new-pilot-line-unique-in-europe-for-recycling-and-manufacturing-rare-earth-based-permanent-magnets",
+        "organization": "Orano; CEA",
+        "verifiedAt": "2026-10-31",
+      },
+    ],
+  "rejectedSources": [],
+  "openQuestions": [],
+  "factChecks":
+    [
+      {
+        "statement": "21 Mt mantidos por decisão editorial; capítulo atual USGS informa 11 Mt; divergência não resolvida.",
+        "status": "pending",
+        "sourceUrls":
+          [
+            "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+            "https://revistapesquisa.fapesp.br/mineracao-urbana-pode-reduzir-impactos-ambientais-da-producao-das-terras-raras/",
+          ],
+      },
+      {
+        "statement": "326 t ANM e 2.000 t USGS não convertidos automaticamente; bases apresentadas separadamente.",
+        "status": "confirmed",
+        "sourceUrls":
+          [
+            "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+            "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+          ],
+      },
+      {
+        "statement": "60/91/94: ano 2024 e universo magnético; correção textual fora da arte original.",
+        "status": "confirmed",
+        "sourceUrls": ["https://www.iea.org/reports/rare-earth-elements/executive-summary"],
+      },
+      {
+        "statement": "PNMCE corresponde à Lei 15.506 de 16/09/2026.",
+        "status": "confirmed",
+        "sourceUrls": ["https://legis.senado.leg.br/norma/43923839"],
+      },
+      {
+        "statement": "Financiamento aprovado não equivale a desembolso nem a fábrica comercial operante.",
+        "status": "confirmed",
+        "sourceUrls":
+          [
+            "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-aprova-R%24-775-mi-para-Viridis-processar-terras-raras-em-Pocos-de-Caldas-MG/",
+            "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos",
+          ],
+      },
+    ],
+  "imageRequirements":
+    {
+      "origin": "Hero ChatGPT + Pippit/Seedream 2.0; infográficos ChatGPT; logomarca inserida com PowerPoint, conforme declaração.",
+      "license": "Saída do ChatGPT (OpenAI), uso conforme Termos de Uso: https://openai.com/policies/row-terms-of-use/; edição no Pippit, uso editorial/comercial sujeito aos termos e à orientação oficial de uso de imagens: https://sf16-draftcdn-sg.ibytedtos.com/obj/ies-hotsoon-draft-sg/terms-policy/capcut_terms_of_service_en.html; https://www.pippit.ai/blog/ecommerce-post-image-installation-how-to. Sem atribuição de licença Creative Commons ou exclusividade.",
+      "authorization": "Responsável confirmou criação ChatGPT, adaptação Pippit/Seedream 2.0 e aplicação da logomarca com PowerPoint; publicação condicionada autorizada. Registro de procedência, não certificado de exclusividade.",
+      "credit": "ChatGPT (OpenAI); adaptação: Pippit / Seedream 2.0, conforme declaração do responsável. Logomarca inserida com PowerPoint.",
+      "alt": "Ilustração de rocha mineral, carro com capô transparente e motor, painéis tecnológicos, turbinas eólicas e aves; não representa instalação real.",
+      "width": 1200,
+      "height": 674,
+      "aspectRatio": "1200:674",
+      "socialVersion": "A mesma composição da Hero, sem recorte que altere o conteúdo.",
+      "usageRisk": "Não atribuir registro fotográfico, exclusividade, CC ou confirmação de todos os números.",
+      "isDemoConfirmed": true,
+    },
+  "conflictsOfInterestEvaluated": true,
+  "editorialRisks":
+    [
+      "Avaliação limitada ao material fornecido, sem inferir ausência de todos os vínculos.",
+      "21 Mt preservados por decisão editorial; não certificar pela versão atual USGS.",
+      "Arte original contém rótulos contextualizados no texto adjacente.",
+    ],
+  "researchStatus": "fact-checking",
+  "concreteImpediments": [],
+  "residualRiskApproval":
+    {
+      "articleSlug": "terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2",
+      "responsible": "olavo-oliveira",
+      "decidedAt": "2026-10-31",
+      "justification": "Decisão editorial expressa e reiterada de manter a arte original com 21 Mt e registrar divergências fora da imagem, sem substituir a figura nem declarar confirmação científica. A publicação permanece condicionada aos demais gates.",
+      "acceptedRisks":
+        [
+          {
+            "code": "fact-check-completion",
+            "justification": "Aceitação limitada à divergência de versões de reservas e à preservação do infográfico original com ressalva fora da arte; não supera erros críticos não tratados nem permite certificação falsa dos 21 Mt.",
+          },
+        ],
+    },
+}
