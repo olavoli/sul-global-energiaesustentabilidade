@@ -257,4 +257,20 @@ export default [
         "Qué es la energía, dónde está presente, cómo se transforma y por qué su conservación es fundamental en física e ingeniería.",
     },
   },
+  {
+    slug: "terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2",
+    sourceTitle: "Terras raras: O Brasil tem os minerais, mas quem domina a tecnologia?",
+    sourceExcerpt:
+      "Da mineração aos ímãs, os projetos brasileiros e o domínio do processamento revelam por que reservas minerais não bastam para conquistar autonomia tecnológica.",
+    en: {
+      title: "Rare earths: Brazil has the minerals, but who controls the technology?",
+      excerpt:
+        "From mining to magnets, Brazilian projects and the concentration of processing show why mineral reserves alone do not ensure technological autonomy.",
+    },
+    es: {
+      title: "Tierras raras: Brasil tiene los minerales, pero ¿quién domina la tecnología?",
+      excerpt:
+        "De la minería a los imanes, los proyectos brasileños y la concentración del procesamiento muestran por qué las reservas no garantizan autonomía tecnológica.",
+    },
+  },
 ];

@@ -1,0 +1,46 @@
+{
+  "consultedAt": "2026-10-31",
+  "usgs": {
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+    "sha256": "0116a192336fec41c38d8e11dad553bb7703308c1fbd1f97dc14b75c7e7d9900",
+    "location": "p.153, World Mine Production and Reserves",
+    "currentBrazilReservesREOt": 11000000,
+    "figurePreservedBrazilReservesREOt": 21000000,
+    "decision": "Arte original mantida por decisão expressa do responsável. Divergência registrada, não declarada cientificamente resolvida."
+  },
+  "crossrefVolumes": {
+    "10.1016/j.mineng.2024.108889": "216",
+    "10.1016/j.jhazmat.2025.140400": "500"
+  },
+  "brazilProduction": {
+    "anm": {
+      "year": 2025,
+      "value": 326,
+      "unit": "t de concentrado de óxidos",
+      "coverageAndGradeReconciled": false
+    },
+    "usgs": {
+      "year": 2025,
+      "value": 2000,
+      "unit": "t REO equivalente, estimativa"
+    },
+    "worldUSGS": {
+      "year": 2025,
+      "value": 390000,
+      "unit": "t REO equivalente, estimativa"
+    }
+  },
+  "chinaIEA": {
+    "referenceYear": 2024,
+    "mineSharePercent": 60,
+    "refinedOutputSharePercent": 91,
+    "sinteredMagnetsSharePercent": 94,
+    "mineAndRefiningScope": [
+      "Nd",
+      "Pr",
+      "Dy",
+      "Tb"
+    ],
+    "figureLabelsPreservedWithAdjacentCorrection": true
+  }
+}
