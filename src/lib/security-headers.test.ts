@@ -12,16 +12,22 @@ function directives(policy: string): Record<string, string[]> {
 }
 
 describe("CSP do Cloudflare Web Analytics com injeção automática", () => {
-  test("permite o beacon versionado e o envio same-origin sem abrir outros destinos", () => {
+  test("preserva o beacon e restringe o bootstrap AdSense às origens observadas", () => {
     const policy = directives(contentSecurityPolicy(true));
     expect(policy["script-src"]).toEqual([
       "'self'",
       "'unsafe-inline'",
       "https://challenges.cloudflare.com",
       "https://static.cloudflareinsights.com",
+      "https://pagead2.googlesyndication.com",
+      "https://ep2.adtrafficquality.google",
     ]);
     // Automatic injection reports to /cdn-cgi/rum on the page's own origin.
-    expect(policy["connect-src"]).toEqual(["'self'", "https://challenges.cloudflare.com"]);
+    expect(policy["connect-src"]).toEqual([
+      "'self'",
+      "https://challenges.cloudflare.com",
+      "https://ep1.adtrafficquality.google",
+    ]);
     expect(contentSecurityPolicy(true)).not.toContain("unsafe-eval");
     expect(contentSecurityPolicy(true)).not.toContain("*");
   });
@@ -36,10 +42,20 @@ describe("CSP do Cloudflare Web Analytics com injeção automática", () => {
       "object-src": ["'none'"],
       "frame-ancestors": ["'none'"],
       "form-action": ["'self'"],
-      "img-src": ["'self'", "data:", "https://images.unsplash.com"],
+      "img-src": [
+        "'self'",
+        "data:",
+        "https://images.unsplash.com",
+        "https://ep1.adtrafficquality.google",
+      ],
       "font-src": ["'self'", "https://fonts.gstatic.com"],
       "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      "frame-src": ["https://challenges.cloudflare.com"],
+      "frame-src": [
+        "https://challenges.cloudflare.com",
+        "https://googleads.g.doubleclick.net",
+        "https://ep2.adtrafficquality.google",
+        "https://www.google.com",
+      ],
       "manifest-src": ["'self'"],
       "media-src": ["'self'"],
       "worker-src": ["'self'", "blob:"],

@@ -1,3 +1,4 @@
+import { ADSENSE_PUBLISHER_ID, adsenseHeadScripts } from "@/lib/advertising/adsense";
 import { languageForPath } from "@/content/i18n";
 import { EditorialLocaleContext } from "@/content/locale-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -89,12 +90,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: siteConfig.description,
       },
       { name: "author", content: siteConfig.name },
-      { name: "google-adsense-account", content: "ca-pub-2626435516434249" },
+      { name: "google-adsense-account", content: ADSENSE_PUBLISHER_ID },
       { name: "theme-color", content: "#0f2a1f" },
       { property: "og:site_name", content: siteConfig.name },
       { property: "og:locale", content: siteConfig.locale },
       ...(!siteConfig.indexingEnabled ? [{ name: "robots", content: "noindex, nofollow" }] : []),
     ],
+    scripts: adsenseHeadScripts(),
     links: [
       {
         rel: "stylesheet",
