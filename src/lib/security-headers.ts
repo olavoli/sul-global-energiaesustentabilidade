@@ -32,7 +32,7 @@ export function contentSecurityPolicy(officialProduction = false, allowAdFrame =
     if (officialProduction && directive.startsWith("img-src "))
       return `${directive} ${ADSENSE_CONNECT_ORIGIN}`;
     if (officialProduction && directive.startsWith("connect-src "))
-      return `${directive} ${ADSENSE_CONNECT_ORIGIN}`;
+      return `${directive} ${ADSENSE_CONNECT_ORIGIN} ${ADSENSE_SCRIPT_ORIGIN}`;
     if (directive.startsWith("frame-src ")) {
       const frames = officialProduction
         ? `${directive} ${ADSENSE_FRAME_ORIGIN} ${ADSENSE_MEASUREMENT_SCRIPT_ORIGIN} ${ADSENSE_GOOGLE_FRAME_ORIGIN}`

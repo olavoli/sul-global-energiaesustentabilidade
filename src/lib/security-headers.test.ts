@@ -27,6 +27,7 @@ describe("CSP do Cloudflare Web Analytics com injeção automática", () => {
       "'self'",
       "https://challenges.cloudflare.com",
       "https://ep1.adtrafficquality.google",
+      "https://pagead2.googlesyndication.com",
     ]);
     expect(contentSecurityPolicy(true)).not.toContain("unsafe-eval");
     expect(contentSecurityPolicy(true)).not.toContain("*");
