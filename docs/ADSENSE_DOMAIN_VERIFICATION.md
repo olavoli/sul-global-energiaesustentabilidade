@@ -89,3 +89,13 @@ JavaScript page errors. Only the independently reproduced preexisting schemas
 eval CSP event remained. The SDK inserted hidden zero-sized instrumentation, not
 a visible creative. At 1440, 768, 390 and 360 pixels there was no horizontal overflow.
 This verifies technical identification loading, not AdSense approval.
+
+## Production follow-up
+
+Additional scoped permission: `connect-src https://pagead2.googlesyndication.com`.
+
+The first deployed browser observation confirmed SDK HTTP 200 and a unique head
+loader but exposed an additional connect-src block for the supplied loader origin
+at /pagead/ping. Permit only https://pagead2.googlesyndication.com in connect-src
+for that observed request. This does not add a new host, wildcard or ad format.
+The existing schemas eval event remains separately documented and blocked.
