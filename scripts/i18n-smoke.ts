@@ -1,3 +1,4 @@
+import { ADSENSE_SCRIPT_URL } from "../src/lib/advertising/adsense";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -19,6 +20,24 @@ async function get(path: string, status: number) {
   const html = await response.text();
   assert(response.status === status, `${path}: HTTP ${response.status}, expected ${status}`);
   if (status === 200 && html.includes("<html")) {
+    const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
+    const scriptTags = (text: string) =>
+      (text.match(/<script\b[^>]*>/gi) ?? []).filter((tag) => tag.includes(ADSENSE_SCRIPT_URL));
+    const enabled = !response.headers.get("x-robots-tag")?.includes("noindex");
+    assert(scriptTags(head).length === (enabled ? 1 : 0), `${path}: incorrect AdSense head count`);
+    assert(scriptTags(html).length === (enabled ? 1 : 0), `${path}: duplicated AdSense script`);
+    if (enabled) {
+      assert(
+        /\basync(?:[\s=>])/.test(scriptTags(head)[0]),
+        `${path}: AdSense must be asynchronous`,
+      );
+      assert(
+        /\bcrossorigin="anonymous"/i.test(scriptTags(head)[0]),
+        `${path}: AdSense CORS mismatch`,
+      );
+    }
+    assert(!/<ins\b[^>]*adsbygoogle/i.test(html), `${path}: ad unit unexpectedly added`);
+
     const header = html.match(/<header\b[\s\S]*?<\/header>/)?.[0] ?? "";
     assert(header && !header.includes("Language / Idioma"), `${path}: language selector remains`);
     assert(

@@ -1,3 +1,10 @@
+import {
+  ADSENSE_SCRIPT_ORIGIN,
+  ADSENSE_FRAME_ORIGIN,
+  ADSENSE_GOOGLE_FRAME_ORIGIN,
+  ADSENSE_CONNECT_ORIGIN,
+  ADSENSE_MEASUREMENT_SCRIPT_ORIGIN,
+} from "./advertising/adsense";
 import { environmentConfig } from "@/config/environment";
 import { ADSTERRA_FRAME_CSP, ADSTERRA_FRAME_PATH } from "./advertising/adsterra";
 
@@ -19,9 +26,21 @@ const CSP_DIRECTIVES = [
 ];
 
 export function contentSecurityPolicy(officialProduction = false, allowAdFrame = false): string {
-  const directives = CSP_DIRECTIVES.map((directive) =>
-    allowAdFrame && directive.startsWith("frame-src ") ? `${directive} 'self'` : directive,
-  );
+  const directives = CSP_DIRECTIVES.map((directive) => {
+    if (officialProduction && directive.startsWith("script-src "))
+      return `${directive} ${ADSENSE_SCRIPT_ORIGIN} ${ADSENSE_MEASUREMENT_SCRIPT_ORIGIN}`;
+    if (officialProduction && directive.startsWith("img-src "))
+      return `${directive} ${ADSENSE_CONNECT_ORIGIN}`;
+    if (officialProduction && directive.startsWith("connect-src "))
+      return `${directive} ${ADSENSE_CONNECT_ORIGIN}`;
+    if (directive.startsWith("frame-src ")) {
+      const frames = officialProduction
+        ? `${directive} ${ADSENSE_FRAME_ORIGIN} ${ADSENSE_MEASUREMENT_SCRIPT_ORIGIN} ${ADSENSE_GOOGLE_FRAME_ORIGIN}`
+        : directive;
+      return allowAdFrame ? `${frames} 'self'` : frames;
+    }
+    return directive;
+  });
   return [...directives, ...(officialProduction ? ["upgrade-insecure-requests"] : [])].join("; ");
 }
 
