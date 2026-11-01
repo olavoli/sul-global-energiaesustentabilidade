@@ -162,3 +162,24 @@ test("ART-034 public visibility follows the official editorial status", () => {
   expect(rss.includes(`/artigo/${slug}`)).toBe(published);
   if (!published) expect(parsed.frontmatter.publishedAt).toBeUndefined();
 });
+
+test("ART-034 references show full clickable URLs without changing the article", async () => {
+  const [body, references] = source.split("## Referências\n");
+  expect(createHash("sha256").update(body).digest("hex")).toBe(
+    "d61d3500e02fb537efb24725a3a7200debd7da8cdc00cc4e4ba61f26da1f9a1b",
+  );
+  const links = [...references.matchAll(/\[([^\]]+)\]\((https:\/\/[^)]+)\)/g)];
+  expect(links).toHaveLength(23);
+  for (const [, label, url] of links) expect(label).toBe(url);
+  expect(references).not.toContain("Acessar fonte");
+  expect(references).not.toContain("doi:10.");
+  expect(references).not.toContain("Disponível em:\n\nDisponível em:");
+  for (const doi of ["10.1016/j.mineng.2024.108889", "10.1016/j.jhazmat.2025.140400"])
+    expect(references).toContain(`[https://doi.org/${doi}](https://doi.org/${doi})`);
+  expect(references).toContain(
+    "https://www2.camara.leg.br/legin/fed/lei/2026/lei-15506-16-setembro-2026-799928-publicacaooriginal-181356-pl.html",
+  );
+  expect(await renderArticle()).toContain('href="https://doi.org/10.1016/j.mineng.2024.108889"');
+  const styles = readFileSync("src/styles.css", "utf8");
+  expect(styles).toMatch(/& a\s*\{[^}]*overflow-wrap: anywhere;/);
+});
