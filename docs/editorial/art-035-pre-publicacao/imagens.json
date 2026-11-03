@@ -1,0 +1,56 @@
+[
+  {
+    "name": "hero",
+    "sourceName": "Hero ´Parte 3  Terras Raras  pesquisadores.jpg",
+    "originalSha256": "5e0cc2c62464c96b324929937bfa0dd653c4509f79e43967d42962fee42d9c29",
+    "width": 1998,
+    "height": 1125,
+    "variants": [],
+    "originalFile": "public/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-hero-pesquisadores.jpg",
+    "delivery": "JPEG anexado servido diretamente, byte a byte; nenhuma recompressão, recorte ou recriação."
+  },
+  {
+    "name": "estrategia",
+    "sourceName": "Imagem 1 - Países estratégia.jpg",
+    "originalSha256": "acaa7f9022351ee6dc8c8833707fbd4af515f33dd6deb41fbc37e8d44abdce27",
+    "width": 634,
+    "height": 1140,
+    "variants": [
+      {
+        "file": "art-035-estrategia-480.webp",
+        "width": 480,
+        "height": 863,
+        "sha256": "88a5b49f2f6ca6a0864567b759677d8895236b4da78d2b0e99569c4f1b979663"
+      },
+      {
+        "file": "art-035-estrategia-634.webp",
+        "width": 634,
+        "height": 1140,
+        "sha256": "f0bda91473711900f4909fb60259565e1716bdc6b29c4a5ba1542fdcef7a2841"
+      }
+    ],
+    "originalFile": "public/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-estrategia-original.jpg"
+  },
+  {
+    "name": "caminho",
+    "sourceName": "Imagem 2  - Brasil rumo à independência tecnológica em 2040.png",
+    "originalSha256": "f972253ace901f3f262c0ec29809ea7a005728f9a31047b65703cd8ac6a95cbe",
+    "width": 941,
+    "height": 1672,
+    "variants": [
+      {
+        "file": "art-035-caminho-720.webp",
+        "width": 720,
+        "height": 1279,
+        "sha256": "d8287ff45917c26cb9595c1ad61d0485605539ca598084977613528078ba0799"
+      },
+      {
+        "file": "art-035-caminho-941.webp",
+        "width": 941,
+        "height": 1672,
+        "sha256": "1c750237084023ec5e031cba917d86013247b113c74f12865e20a7a70b490395"
+      }
+    ],
+    "originalFile": "public/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-caminho-original.png"
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "consultedAt": "2026-11-03",
+  "cgeeBook": {
+    "publicationUrl": "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040",
+    "pdfPages": 393,
+    "sha256": "2bf55a7bf390760e78eb4c44074a1919fa8b73b1fd02bee9e2bae39a27a8a51f",
+    "keyPdfPages": [
+      74,
+      75,
+      76,
+      77,
+      78,
+      85,
+      91,
+      93
+    ]
+  },
+  "citations": 16,
+  "appliedScientificCorrections": 0,
+  "revisionDate": "2026-11-03",
+  "appliedFormalAndBibliographicCorrections": 10,
+  "newBibliographicEntries": 0,
+  "magbrasPortalSnapshot": {
+    "consultedAt": "2026-11-03",
+    "source": "https://www.senai.portaldaindustria.com.br/para-sua-empresa/programas/mover/imas-terras-raras",
+    "stageDisclosure": "Estados declarados pelo portal, não auditoria independente de desempenho ou prova de escala comercial.",
+    "totalProjectBRL": "73336116.81",
+    "reportedSENAITransferBRL": "21934402.00",
+    "reportedSENAIAccountedBRL": "1998262.90",
+    "reportedStages": {
+      "WP1": "concluído",
+      "WP2": "em andamento",
+      "WP3": "em andamento",
+      "WP4": "em andamento",
+      "WP5": "não iniciado",
+      "WP6": "não iniciado",
+      "WP7": "em andamento",
+      "WP8": "não iniciado",
+      "WP9": "em andamento",
+      "WP10": "não iniciado",
+      "WP11": "em andamento"
+    },
+    "responsibilityScope": "Página SENAI descreve consórcio e apoio SENAI/Mover; CETEM identifica seu papel em extração, separação por solvente e refino, com financiamento SENAI/FUNDEP. Nenhuma execução integral foi atestada nesta revisão."
+  },
+  "legalGapCheck": {
+    "source": "https://legis.senado.gov.br/norma/43923839/publicacao/43929692",
+    "consultedAt": "2026-11-03",
+    "CIMCE": "instituído pela lei; implementação não comprovada nesta revisão",
+    "FGAM": "lei autoriza criação; não equivale a FSMC operacional",
+    "general36MonthRuleFound": false
+  }
+}

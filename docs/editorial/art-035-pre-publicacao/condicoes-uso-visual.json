@@ -1,0 +1,44 @@
+{
+  "consultedAt": "2026-11-03",
+  "status": "DOCUMENTADO_PARA_USO_DECLARADO",
+  "licenseValue": "Uso editorial e comercial das saídas ChatGPT conforme os Termos de Uso da OpenAI (vigência 01/01/2026): https://openai.com/policies/row-terms-of-use/ . Procedência e aplicação da logomarca declaradas pelo responsável editorial; sem licença Creative Commons, exclusividade ou registro de marca presumidos. Ver dossiê visual do ART-035.",
+  "images": [
+    {
+      "image": "hero",
+      "file": "public/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-hero-pesquisadores.jpg",
+      "sha256": "5e0cc2c62464c96b324929937bfa0dd653c4509f79e43967d42962fee42d9c29",
+      "provenanceDeclared": "ChatGPT (OpenAI); logomarca aplicada em PowerPoint; JPEG final.",
+      "illustrativeNotDocumentary": true
+    },
+    {
+      "image": "estrategia",
+      "file": "public/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-estrategia-original.jpg",
+      "sha256": "acaa7f9022351ee6dc8c8833707fbd4af515f33dd6deb41fbc37e8d44abdce27",
+      "provenanceDeclared": "ChatGPT (OpenAI); nenhuma edição adicional informada.",
+      "illustrativeNotDocumentary": true
+    },
+    {
+      "image": "caminho",
+      "file": "public/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-caminho-original.png",
+      "sha256": "f972253ace901f3f262c0ec29809ea7a005728f9a31047b65703cd8ac6a95cbe",
+      "provenanceDeclared": "ChatGPT (OpenAI); edição de texto em PowerPoint.",
+      "illustrativeNotDocumentary": true
+    }
+  ],
+  "terms": {
+    "url": "https://openai.com/policies/row-terms-of-use/",
+    "effectiveDate": "2026-01-01",
+    "basis": "Seções Using our Services, Content e Disclaimer of warranties; atribuição entre usuário e OpenAI, responsabilidade sobre insumos e ausência de garantia de exclusividade/não infração."
+  },
+  "logoEvidence": [
+    "docs/editorial/art-033-pre-publicacao/procedencia-logomarca-2026-10-24.md",
+    "docs/editorial/art-033-pre-publicacao/regularizacao-e-validacao-publicacao-2026-10-24.md"
+  ],
+  "limitations": [
+    "Não é certificado jurídico, licença CC ou registro de marca.",
+    "Não foi acessado o histórico privado da conta; não se certifica inexistência absoluta de insumos externos.",
+    "Uso de PowerPoint não é licença de biblioteca de imagens ou fontes; nenhum ativo separado desse tipo foi identificado como insumo fornecido."
+  ],
+  "additionalAuthorizationIdentified": false,
+  "publicationAuthorizedByThisRecord": false
+}

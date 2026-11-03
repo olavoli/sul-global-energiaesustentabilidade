@@ -1,0 +1,527 @@
+{
+  "articleSlug": "terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3",
+  "auditDate": "2026-11-03",
+  "wordIndexes": "Índices zero-based do arquivo word-original-extraido.json; linha MDX é indicação de localização.",
+  "rows": [
+    {
+      "id": "C01",
+      "wordBlock": 25,
+      "mdxLine": 226,
+      "severity": "confirmado",
+      "status": "RESOLVED",
+      "original": "O projeto MagBras, apresentado pelo Centro de Tecnologia Mineral (CETEM) e pelo SENAI, procura justamente conectar essas etapas. Concebido como demonstrador industrial do ciclo completo de ímãs permanentes de terras raras, reúne pesquisa mineral, beneficiamento, extração e refino, produção de materiais magnéticos, fabricação, aplicações e reciclagem. A documentação do CETEM informa valor global de aproximadamente R$ 73 milhões e prazo de 36 meses a partir de junho de 2025; o SENAI apresenta cronograma entre maio de 2025 e maio de 2028 e detalha os objetivos técnicos [6,7].",
+      "finding": "Orçamento e cronogramas atribuídos distinguem as duas fontes.",
+      "primaryEvidence": "CETEM: demonstrador, R$ 73 milhões globais e 36 meses desde junho/2025. SENAI: R$ 73.336.116,81 e 06/05/2025–06/05/2028. Cronograma/orçamento não comprovam entrega comercial ou desembolso integral.",
+      "proposedMinimumCorrection": "Manter redação e qualificações existentes.",
+      "sourceUrls": [
+        "https://www.gov.br/cetem/pt-br/acesso-a-informacao/acoes-e-programas/projetos-financiados-por-agencias-e-ou-recursos-publicos/em-curso/magbras-2013-demonstrador-industrial-do-ciclo-completo-de-producao-brasileira-de-imas-permanentes-de-terras-raras-1",
+        "https://www.senai.portaldaindustria.com.br/para-sua-empresa/programas/mover/imas-terras-raras"
+      ],
+      "applied": false,
+      "classification": "confirmado",
+      "originalSourcesUsed": [
+        {
+          "number": 6,
+          "url": "https://www.gov.br/cetem/pt-br/acesso-a-informacao/acoes-e-programas/projetos-financiados-por-agencias-e-ou-recursos-publicos/em-curso/magbras-2013-demonstrador-industrial-do-ciclo-completo-de-producao-brasileira-de-imas-permanentes-de-terras-raras-1"
+        },
+        {
+          "number": 7,
+          "url": "https://www.senai.portaldaindustria.com.br/para-sua-empresa/programas/mover/imas-terras-raras"
+        }
+      ],
+      "originalSourceNote": "Chamadas originais preservadas para rastreabilidade histórica.",
+      "evidenceFound": "CETEM: demonstrador, R$ 73 milhões globais e 36 meses desde junho/2025. SENAI: R$ 73.336.116,81 e 06/05/2025–06/05/2028. Cronograma/orçamento não comprovam entrega comercial ou desembolso integral.",
+      "currentPassage": "O projeto MagBras, apresentado pelo Centro de Tecnologia Mineral (CETEM) e pelo SENAI, procura justamente conectar essas etapas. Concebido como demonstrador industrial do ciclo completo de ímãs permanentes de terras raras, reúne pesquisa mineral, beneficiamento, extração e refino, produção de materiais magnéticos, fabricação, aplicações e reciclagem. A documentação do CETEM informa valor global de aproximadamente R$ 73 milhões e prazo de 36 meses a partir de junho de 2025; o SENAI apresenta cronograma entre maio de 2025 e maio de 2028 e detalha os objetivos técnicos [6,7].",
+      "proposedCorrection": "Manter redação e qualificações existentes.",
+      "appliedCorrectionIds": [],
+      "pendingEditorialDecision": false,
+      "resolution": "MANTIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Sem alteração."
+      }
+    },
+    {
+      "id": "D01",
+      "wordBlock": 20,
+      "mdxLine": 216,
+      "severity": "importante",
+      "status": "REVIEW_REQUIRED",
+      "original": "O Brasil dispõe de potencial importante, mas não parte do zero nem chega pronto à linha de largada. Segundo a Agência Nacional de Mineração (ANM), havia, em 2025, quatro áreas com lavra ativa de terras raras, enquanto milhares de áreas permaneciam em pesquisa. No mesmo ano, o órgão registrou 326 toneladas de concentrado de óxidos produzidas nacionalmente. O número exige cuidado: diferentes instituições utilizam produtos, unidades e metodologias distintas para descrever a produção. Não se deve comparar diretamente concentrados comerciais e equivalentes de óxidos sem explicar suas bases [4,5].",
+      "finding": "O ano de produção e a data do estoque de áreas não devem ser confundidos.",
+      "primaryEvidence": "A ANM atribui 326 t de concentrado a 2025 e descreve quatro áreas como situação atual da publicação. A fonte não permite datar automaticamente o estoque de áreas em 2025; REO e concentrado seguem bases diferentes.",
+      "proposedMinimumCorrection": "Segundo o levantamento divulgado pela Agência Nacional de Mineração (ANM), havia quatro áreas com lavra ativa de terras raras, enquanto milhares de áreas permaneciam em pesquisa. Em 2025, o órgão registrou 326 toneladas de concentrado de óxidos produzidas nacionalmente. Manter o restante do parágrafo e [4,5].",
+      "sourceUrls": [
+        "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+        "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf"
+      ],
+      "applied": true,
+      "classification": "parcialmente sustentado",
+      "originalSourcesUsed": [
+        {
+          "number": 4,
+          "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos"
+        },
+        {
+          "number": 5,
+          "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf"
+        }
+      ],
+      "originalSourceNote": "Chamadas originais preservadas para rastreabilidade histórica.",
+      "evidenceFound": "A ANM atribui 326 t de concentrado a 2025 e descreve quatro áreas como situação atual da publicação. A fonte não permite datar automaticamente o estoque de áreas em 2025; REO e concentrado seguem bases diferentes.",
+      "currentPassage": "O Brasil dispõe de potencial importante, mas não parte do zero nem chega pronto à linha de largada. Segundo o levantamento divulgado pela Agência Nacional de Mineração (ANM), havia quatro áreas com lavra ativa de terras raras no momento da divulgação, enquanto milhares de áreas permaneciam em pesquisa. Em 2025, o órgão registrou 326 toneladas de concentrado de óxidos produzidas nacionalmente. O número exige cuidado: diferentes instituições utilizam produtos, unidades e metodologias distintas para descrever a produção. Não se deve comparar diretamente concentrados comerciais e equivalentes de óxidos sem explicar suas bases [4,5].",
+      "proposedCorrection": "Segundo o levantamento divulgado pela Agência Nacional de Mineração (ANM), havia quatro áreas com lavra ativa de terras raras, enquanto milhares de áreas permaneciam em pesquisa. Em 2025, o órgão registrou 326 toneladas de concentrado de óxidos produzidas nacionalmente. Manter o restante do parágrafo e [4,5].",
+      "appliedCorrectionIds": [
+        "D01"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "QUALIFICADO_COM_AUTORIZACAO",
+      "impact": {
+        "references": "16 entradas preservadas; decreto complementar na [12].",
+        "conclusions": "Interpretação qualificada conforme autorização, sem prometer autonomia ou prazos.",
+        "infographics": "Arquivos preservados; cronogramas e cenários ilustrativos, não metas oficiais."
+      },
+      "resolutionEvidence": "Quatro áreas referidas ao momento da divulgação da ANM; 326 toneladas continuam atribuídas a 2025.",
+      "remainingLimitation": "A classificação descreve a afirmação original; a qualificação não confirma metas como realizações."
+    },
+    {
+      "id": "C02",
+      "wordBlock": 37,
+      "mdxLine": 250,
+      "severity": "confirmado",
+      "status": "RESOLVED",
+      "original": "É aqui que políticas industriais e contratos de longo prazo fazem diferença. Instituições financeiras podem reduzir parte do risco inicial, enquanto acordos de compra dão previsibilidade à demanda. Em 2025, BNDES e Finep selecionaram 56 planos de negócios relacionados à transformação de minerais estratégicos, com investimentos propostos que somavam R$ 45,8 bilhões. Esses valores representam propostas em etapa de estruturação, não dinheiro integralmente desembolsado, e abrangem diversos minerais, não apenas terras raras [11].",
+      "finding": "Seleção de projetos diferenciada de desembolso.",
+      "primaryEvidence": "A notícia BNDES de 12/06/2025 registra 56 planos selecionados para elaboração do PSC e R$ 45,8 bilhões estimados. Não é valor de contratos aprovados nem de desembolsos.",
+      "proposedMinimumCorrection": "Manter redação e qualificações existentes.",
+      "sourceUrls": [
+        "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos"
+      ],
+      "applied": false,
+      "classification": "confirmado",
+      "originalSourcesUsed": [
+        {
+          "number": 11,
+          "url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos"
+        }
+      ],
+      "originalSourceNote": "Chamadas originais preservadas para rastreabilidade histórica.",
+      "evidenceFound": "A notícia BNDES de 12/06/2025 registra 56 planos selecionados para elaboração do PSC e R$ 45,8 bilhões estimados. Não é valor de contratos aprovados nem de desembolsos.",
+      "currentPassage": "É aqui que políticas industriais e contratos de longo prazo fazem diferença. Instituições financeiras podem reduzir parte do risco inicial, enquanto acordos de compra dão previsibilidade à demanda. Em 2025, BNDES e Finep selecionaram 56 planos de negócios relacionados à transformação de minerais estratégicos, com investimentos propostos que somavam R$ 45,8 bilhões. Esses valores representam propostas em etapa de estruturação, não dinheiro integralmente desembolsado, e abrangem diversos minerais, não apenas terras raras [11].",
+      "proposedCorrection": "Manter redação e qualificações existentes.",
+      "appliedCorrectionIds": [],
+      "pendingEditorialDecision": false,
+      "resolution": "MANTIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Sem alteração."
+      }
+    },
+    {
+      "id": "C03",
+      "wordBlock": 66,
+      "mdxLine": 272,
+      "severity": "confirmado",
+      "status": "RESOLVED",
+      "original": "Os números internacionais ajudam a dimensionar o problema. Segundo a IEA, em 2024 a China respondeu por aproximadamente 60% da mineração mundial das terras raras usadas em ímãs, 91% do refino e 94% da produção de ímãs permanentes sinterizados. Esses percentuais se referem a segmentos específicos da cadeia, não a todos os minerais ou produtos classificados como terras raras. A concentração aumenta justamente nas operações mais complexas [2].",
+      "finding": "Percentuais delimitados ao universo magnético em 2024.",
+      "primaryEvidence": "IEA Rare Earth Elements, resumo: 60/91/94 em 2024, somente Nd, Pr, Dy e Tb; 91% é produção refinada, não capacidade instalada.",
+      "proposedMinimumCorrection": "Manter redação e qualificações existentes.",
+      "sourceUrls": [
+        "https://www.iea.org/reports/rare-earth-elements/executive-summary"
+      ],
+      "applied": false,
+      "classification": "confirmado",
+      "originalSourcesUsed": [
+        {
+          "number": 2,
+          "url": "https://www.iea.org/reports/rare-earth-elements"
+        }
+      ],
+      "originalSourceNote": "Chamadas originais preservadas para rastreabilidade histórica.",
+      "evidenceFound": "IEA Rare Earth Elements, resumo: 60/91/94 em 2024, somente Nd, Pr, Dy e Tb; 91% é produção refinada, não capacidade instalada.",
+      "currentPassage": "Os números internacionais ajudam a dimensionar o problema. Segundo a IEA, em 2024 a China respondeu por aproximadamente 60% da mineração mundial das terras raras usadas em ímãs, 91% do refino e 94% da produção de ímãs permanentes sinterizados. Esses percentuais se referem a segmentos específicos da cadeia, não a todos os minerais ou produtos classificados como terras raras. A concentração aumenta justamente nas operações mais complexas [2].",
+      "proposedCorrection": "Manter redação e qualificações existentes.",
+      "appliedCorrectionIds": [],
+      "pendingEditorialDecision": false,
+      "resolution": "MANTIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Sem alteração."
+      }
+    },
+    {
+      "id": "C04",
+      "wordBlock": 68,
+      "mdxLine": 276,
+      "severity": "confirmado",
+      "status": "RESOLVED",
+      "original": "A América Latina enfrenta versão própria dessa assimetria. A IEA estima que, em 2025, excluindo o lítio, a região refinou em média somente cerca de 20% dos principais minerais energéticos que extraiu. Trata-se de média regional para um conjunto de minerais, não de percentual específico das terras raras brasileiras. Ainda assim, o indicador revela uma oportunidade: ampliar a transformação local pode reter empregos, serviços técnicos e competências, desde que o investimento seja economicamente viável e ambientalmente controlado [14].",
+      "finding": "Indicador de 20% está contextualizado como regional, não brasileiro de terras raras.",
+      "primaryEvidence": "IEA, capítulo Latin America: média regional de 20% em 2025, minerais energéticos excluído lítio; não é dado específico de terras raras brasileiras.",
+      "proposedMinimumCorrection": "Manter redação e qualificações existentes.",
+      "sourceUrls": [
+        "https://www.iea.org/reports/global-critical-minerals-outlook-2026/latin-america"
+      ],
+      "applied": false,
+      "classification": "confirmado",
+      "originalSourcesUsed": [
+        {
+          "number": 14,
+          "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/latin-america"
+        }
+      ],
+      "originalSourceNote": "Chamadas originais preservadas para rastreabilidade histórica.",
+      "evidenceFound": "IEA, capítulo Latin America: média regional de 20% em 2025, minerais energéticos excluído lítio; não é dado específico de terras raras brasileiras.",
+      "currentPassage": "A América Latina enfrenta versão própria dessa assimetria. A IEA estima que, em 2025, excluindo o lítio, a região refinou em média somente cerca de 20% dos principais minerais energéticos que extraiu. Trata-se de média regional para um conjunto de minerais, não de percentual específico das terras raras brasileiras. Ainda assim, o indicador revela uma oportunidade: ampliar a transformação local pode reter empregos, serviços técnicos e competências, desde que o investimento seja economicamente viável e ambientalmente controlado [14].",
+      "proposedCorrection": "Manter redação e qualificações existentes.",
+      "appliedCorrectionIds": [],
+      "pendingEditorialDecision": false,
+      "resolution": "MANTIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Sem alteração."
+      }
+    },
+    {
+      "id": "D02",
+      "wordBlock": 112,
+      "mdxLine": 326,
+      "severity": "importante",
+      "status": "REVIEW_REQUIRED",
+      "original": "O horizonte estratégico do Brasil para o período 2026–2040 insere-se no cenário geopolítico global denominado \"Batalha pelos Elementos\", caracterizado pela fragmentação em blocos e pelo fechamento acelerado das cadeias industriais ocidentais. A visão de futuro do planejamento nacional estabelece que o país deve superar a condição de mero exportador de concentrado bruto  capturando atualmente menos de 5% do valor potencial dos seus depósitos  para se consolidar como um produtor soberano capaz de reter mais de 40% desse valor por meio do processamento doméstico até 2040. Para concretizar essa transformação industrial, o Brasil projeta implantar uma capacidade nacional de separação química de no mínimo 3.000 toneladas anuais de óxidos de terras-raras pesadas e leves (como disprósio, térbio, neodímio e praseodímio). Adicionalmente, busca-se alcançar a produção industrial de pelo menos 500 toneladas anuais de ímãs permanentes de NdFeB com no mínimo 30% de conteúdo nacional, atendendo aos setores de mobilidade elétrica, energia eólica e defesa.",
+      "finding": "Metas existem no CGEE, mas faltam chamada e qualificação como propostas de estudo. Não são resultados já medidos nem obrigação governamental demonstrada.",
+      "primaryEvidence": "CGEE, PDF pp.74–75/78/85: visão e objetivos propostos. Documenta os números do texto; não comprova execução ou compromisso governamental vinculante. Menos de 5% é diagnóstico adotado pelo estudo, sem validação independente nesta revisão.",
+      "proposedMinimumCorrection": "Qualificar “a visão de futuro do planejamento nacional estabelece” como “a visão de futuro proposta pelo CGEE pressupõe”; “o Brasil projeta” como “o roteiro propõe”; atribuir o diagnóstico de menos de 5% ao estudo. Manter os valores documentados e [1].",
+      "sourceUrls": [
+        "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040"
+      ],
+      "applied": true,
+      "classification": "parcialmente sustentado",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "CGEE, PDF pp.74–75/78/85: visão e objetivos propostos. Documenta os números do texto; não comprova execução ou compromisso governamental vinculante. Menos de 5% é diagnóstico adotado pelo estudo, sem validação independente nesta revisão.",
+      "currentPassage": "O horizonte estratégico de 2026–2040 apresentado pelo CGEE considera o cenário geopolítico denominado \"Batalha pelos Elementos\", marcado pela fragmentação em blocos e pelo fechamento das cadeias industriais ocidentais. Trata-se de uma proposta estratégica e de cenários condicionais, não de previsão nem de obrigação governamental. O estudo adota como diagnóstico a captura de menos de 5% do valor potencial dos depósitos e propõe superar a condição de exportador de concentrado bruto, buscando reter mais de 40% desse valor por meio do processamento doméstico até 2040. Entre os objetivos propostos estão uma capacidade nacional de separação química de no mínimo 3.000 toneladas anuais de óxidos de terras-raras pesadas e leves, como disprósio, térbio, neodímio e praseodímio, e a produção de pelo menos 500 toneladas anuais de ímãs permanentes de NdFeB com no mínimo 30% de conteúdo nacional. São referências para o desenvolvimento industrial, não capacidades já demonstradas ou resultados garantidos. Sua realização depende de viabilidade técnica e econômica, licenciamento e gestão ambiental, água, energia e infraestrutura, financiamento e contratos, transferência ou desenvolvimento de tecnologia e acesso efetivo aos mercados consumidores. [1]",
+      "proposedCorrection": "Qualificar “a visão de futuro do planejamento nacional estabelece” como “a visão de futuro proposta pelo CGEE pressupõe”; “o Brasil projeta” como “o roteiro propõe”; atribuir o diagnóstico de menos de 5% ao estudo. Manter os valores documentados e [1].",
+      "appliedCorrectionIds": [
+        "D02"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "QUALIFICADO_COM_AUTORIZACAO",
+      "impact": {
+        "references": "16 entradas preservadas; decreto complementar na [12].",
+        "conclusions": "Interpretação qualificada conforme autorização, sem prometer autonomia ou prazos.",
+        "infographics": "Arquivos preservados; cronogramas e cenários ilustrativos, não metas oficiais."
+      },
+      "resolutionEvidence": "Cenários e metas do CGEE qualificados como propostas condicionais, com dependências industriais e ambientais.",
+      "remainingLimitation": "A classificação descreve a afirmação original; a qualificação não confirma metas como realizações."
+    },
+    {
+      "id": "D03",
+      "wordBlock": 113,
+      "mdxLine": 328,
+      "severity": "crítico",
+      "status": "REVIEW_REQUIRED",
+      "original": "A viabilidade desse roteiro exige a consolidação urgente das fundações institucionais no curto prazo (2026–2030), considerado o período decisivo para a ativação da cadeia. Isso requer a operacionalização do Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e do Fundo Soberano de Minerais Críticos (FSMC), capitalizado por receitas da CFEM. Do ponto de vista regulatório, é indispensável aprovar um marco legal que estabeleça licenciamento ambiental integrado com prazo máximo de 36 meses, além de exigir metas progressivas de beneficiamento interno como condição para a concessão de lavra. Na vertente diplomática e financeira, a prioridade consiste em firmar acordos bilaterais com transferência obrigatória de tecnologia de separação química (no modelo Caremag) e contratos de offtake soberanos munidos de floor price (preço mínimo garantido), protegendo os investimentos nacionais contra flutuações e práticas de deflação competitiva.",
+      "finding": "CNMCE/FSMC do roteiro não equivalem automaticamente às instituições vigentes na lei posterior.",
+      "primaryEvidence": "CGEE propõe CNMCE/FSMC. Lei 15.506/2026, arts.1/41, institui CIMCE; arts.7/9 autorizam criação do FGAM. Previsão legal não comprova operacionalização; FGAM não é FSMC. Não é inequívoco que o autor tenha afirmado criação: a ambiguidade exige decisão, não troca automática de nomes.",
+      "proposedMinimumCorrection": "Apresentar CNMCE/FSMC como propostas do estudo e distinguir a lei posterior: CIMCE instituído e autorização de criação do FGAM. Não converter autorização legal em prova de funcionamento nem trocar FSMC por FGAM como se fossem o mesmo fundo.",
+      "sourceUrls": [
+        "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040",
+        "https://legis.senado.gov.br/norma/43923839/publicacao/43929692",
+        "https://www2.camara.leg.br/legin/fed/decret/2026/decreto-13118-16-setembro-2026-799929-publicacaooriginal-181357-pe.html"
+      ],
+      "applied": true,
+      "classification": "parcialmente sustentado",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "CGEE propõe CNMCE/FSMC. Lei 15.506/2026, arts.1/41, institui CIMCE; arts.7/9 autorizam criação do FGAM. Previsão legal não comprova operacionalização; FGAM não é FSMC. Não é inequívoco que o autor tenha afirmado criação: a ambiguidade exige decisão, não troca automática de nomes. Decreto nº 13.118/2026, arts. 1º–4º: CIMCE regulamentado, coordenação/planejamento/acompanhamento; não equivale às propostas CNMCE/FSMC.",
+      "currentPassage": "A viabilidade desse roteiro exige consolidar as fundações institucionais no período 2026–2030, proposto pelo CGEE como etapa inicial. O estudo recomenda um Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e um Fundo Soberano de Minerais Críticos (FSMC), com capitalização por receitas da CFEM: são estruturas propostas no documento, não equivalentes automaticamente às instituídas pela legislação. A Lei nº 15.506, de 16 de setembro de 2026, instituiu o Conselho Nacional para Industrialização de Minerais Críticos e Estratégicos (CIMCE), regulamentado pelo Decreto nº 13.118/2026, como órgão de coordenação, planejamento e acompanhamento da política nacional, com competências de formulação e análise de projetos, preservadas as atribuições da ANM. A lei também autorizou a criação do Fundo Garantidor da Atividade Mineral (FGAM), de natureza privada e destinado a garantias; essa autorização não comprova sua constituição, capitalização ou operação. Do ponto de vista regulatório, eficiência administrativa e previsibilidade devem caminhar com rigor ambiental. O prazo máximo de 36 meses para licenciamento integrado aparece como proposta do CGEE, não como regra geral vigente. Metas de beneficiamento interno, acordos de transferência tecnológica e contratos de offtake com floor price (preço mínimo garantido) também integram as recomendações do estudo; sua adoção depende dos instrumentos legais, da negociação e da viabilidade de cada projeto, e não deve ser confundida com contratos já executados. [1,12]",
+      "proposedCorrection": "Apresentar CNMCE/FSMC como propostas do estudo e distinguir a lei posterior: CIMCE instituído e autorização de criação do FGAM. Não converter autorização legal em prova de funcionamento nem trocar FSMC por FGAM como se fossem o mesmo fundo.",
+      "appliedCorrectionIds": [
+        "D03"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "QUALIFICADO_COM_AUTORIZACAO",
+      "impact": {
+        "references": "16 entradas preservadas; decreto complementar na [12].",
+        "conclusions": "Interpretação qualificada conforme autorização, sem prometer autonomia ou prazos.",
+        "infographics": "Arquivos preservados; cronogramas e cenários ilustrativos, não metas oficiais."
+      },
+      "resolutionEvidence": "CNMCE/FSMC propostos distintos de CIMCE instituído/regulamentado e FGAM autorizado, sem inferir operação.",
+      "remainingLimitation": "A classificação descreve a afirmação original; a qualificação não confirma metas como realizações."
+    },
+    {
+      "id": "D04",
+      "wordBlock": 113,
+      "mdxLine": 328,
+      "severity": "importante",
+      "status": "REVIEW_REQUIRED",
+      "original": "A viabilidade desse roteiro exige a consolidação urgente das fundações institucionais no curto prazo (2026–2030), considerado o período decisivo para a ativação da cadeia. Isso requer a operacionalização do Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e do Fundo Soberano de Minerais Críticos (FSMC), capitalizado por receitas da CFEM. Do ponto de vista regulatório, é indispensável aprovar um marco legal que estabeleça licenciamento ambiental integrado com prazo máximo de 36 meses, além de exigir metas progressivas de beneficiamento interno como condição para a concessão de lavra. Na vertente diplomática e financeira, a prioridade consiste em firmar acordos bilaterais com transferência obrigatória de tecnologia de separação química (no modelo Caremag) e contratos de offtake soberanos munidos de floor price (preço mínimo garantido), protegendo os investimentos nacionais contra flutuações e práticas de deflação competitiva.",
+      "finding": "36 meses e transferência tecnológica são recomendações do roteiro, não obrigações legais demonstradas.",
+      "primaryEvidence": "CGEE, PDF p.91 e objetivos OE5.3/5.4, recomenda prazo de licenciamento e instrumentos contratuais. A lei consultada não contém regra geral de 36 meses; o prazo não deve ser tratado como obrigação já vigente.",
+      "proposedMinimumCorrection": "“O estudo recomenda aprimoramentos regulatórios, incluindo prazo máximo de 36 meses para licenciamento e acordos com transferência de tecnologia e floor price [1]. Essas recomendações não comprovam que os prazos ou contratos já estejam implementados.”",
+      "sourceUrls": [
+        "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040",
+        "https://legis.senado.gov.br/norma/43923839/publicacao/43929692"
+      ],
+      "applied": true,
+      "classification": "parcialmente sustentado",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "CGEE, PDF p.91 e objetivos OE5.3/5.4, recomenda prazo de licenciamento e instrumentos contratuais. A lei consultada não contém regra geral de 36 meses; o prazo não deve ser tratado como obrigação já vigente.",
+      "currentPassage": "A viabilidade desse roteiro exige consolidar as fundações institucionais no período 2026–2030, proposto pelo CGEE como etapa inicial. O estudo recomenda um Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e um Fundo Soberano de Minerais Críticos (FSMC), com capitalização por receitas da CFEM: são estruturas propostas no documento, não equivalentes automaticamente às instituídas pela legislação. A Lei nº 15.506, de 16 de setembro de 2026, instituiu o Conselho Nacional para Industrialização de Minerais Críticos e Estratégicos (CIMCE), regulamentado pelo Decreto nº 13.118/2026, como órgão de coordenação, planejamento e acompanhamento da política nacional, com competências de formulação e análise de projetos, preservadas as atribuições da ANM. A lei também autorizou a criação do Fundo Garantidor da Atividade Mineral (FGAM), de natureza privada e destinado a garantias; essa autorização não comprova sua constituição, capitalização ou operação. Do ponto de vista regulatório, eficiência administrativa e previsibilidade devem caminhar com rigor ambiental. O prazo máximo de 36 meses para licenciamento integrado aparece como proposta do CGEE, não como regra geral vigente. Metas de beneficiamento interno, acordos de transferência tecnológica e contratos de offtake com floor price (preço mínimo garantido) também integram as recomendações do estudo; sua adoção depende dos instrumentos legais, da negociação e da viabilidade de cada projeto, e não deve ser confundida com contratos já executados. [1,12]",
+      "proposedCorrection": "“O estudo recomenda aprimoramentos regulatórios, incluindo prazo máximo de 36 meses para licenciamento e acordos com transferência de tecnologia e floor price [1]. Essas recomendações não comprovam que os prazos ou contratos já estejam implementados.”",
+      "appliedCorrectionIds": [
+        "D04"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "QUALIFICADO_COM_AUTORIZACAO",
+      "impact": {
+        "references": "16 entradas preservadas; decreto complementar na [12].",
+        "conclusions": "Interpretação qualificada conforme autorização, sem prometer autonomia ou prazos.",
+        "infographics": "Arquivos preservados; cronogramas e cenários ilustrativos, não metas oficiais."
+      },
+      "resolutionEvidence": "36 meses identificado como recomendação CGEE, sem regra geral de licenciamento inventada.",
+      "remainingLimitation": "A classificação descreve a afirmação original; a qualificação não confirma metas como realizações."
+    },
+    {
+      "id": "D05",
+      "wordBlock": 114,
+      "mdxLine": 330,
+      "severity": "importante",
+      "status": "REVIEW_REQUIRED",
+      "original": "Sob uma análise rigorosa e criteriosa, o sucesso futuro do país enfrenta gargalos técnicos e estruturais severos. O principal gargalo na ciência dos materiais e na engenharia química reside na escassez de recursos humanos especializados em separação hidrometalúrgica e refino de elementos pesados. O plano nacional prevê a formação emergencial de pelo menos 500 especialistas e 50 doutores em processos de terras-raras até 2032 para evitar a dependência operacional de equipes estrangeiras. Paralelamente, no campo geológico, o Brasil precisa elevar a cobertura cartográfica da Amazônia em escala 1:100.000 de 8% para 40% até 2034 por meio do PlanGeo, identificando novas províncias minerais em argilas de adsorção iônica para sustentação da cadeia após 2040.",
+      "finding": "Metas de capacitação e cartografia estão documentadas no roteiro, mas a expressão “o plano nacional prevê” exige qualificação.",
+      "primaryEvidence": "CGEE, PDF p.77, OE2.2/3.2: metas de formação e cartografia. São recomendações; a origem metodológica dos 8% não foi independentemente verificada.",
+      "proposedMinimumCorrection": "Substituir “O plano nacional prevê” por “O roteiro do CGEE propõe”; apresentar 8% como diagnóstico do estudo e 40% como objetivo, sem afirmar levantamento independente ou execução [1].",
+      "sourceUrls": [
+        "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040"
+      ],
+      "applied": true,
+      "classification": "parcialmente sustentado",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "CGEE, PDF p.77, OE2.2/3.2: metas de formação e cartografia. São recomendações; a origem metodológica dos 8% não foi independentemente verificada.",
+      "currentPassage": "Sob uma análise rigorosa e criteriosa, o sucesso futuro do país enfrenta gargalos técnicos e estruturais. O CGEE diagnostica carência de recursos humanos especializados em separação hidrometalúrgica e refino de elementos pesados e propõe formar pelo menos 500 especialistas e 50 doutores em processos de terras-raras até 2032. Esse objetivo de desenvolvimento não significa ausência de competências nacionais: os trabalhos do CETEM, do SENAI e de seus parceiros no MagBras evidenciam capacidades de pesquisa e demonstração, sem comprovar uma cadeia comercial completa. No campo geológico, o estudo toma como diagnóstico uma cobertura cartográfica da Amazônia de 8% em escala 1:100.000 e propõe ampliá-la para 40% até 2034 por meio do PlanGeo. Esses percentuais são a base e o objetivo apresentados pelo CGEE, não uma medição atual independente nem uma meta já cumprida. A identificação de novas províncias minerais, inclusive em argilas de adsorção iônica, exige pesquisa e avaliação antes de sustentar projetos industriais após 2040. [1,6,7]",
+      "proposedCorrection": "Substituir “O plano nacional prevê” por “O roteiro do CGEE propõe”; apresentar 8% como diagnóstico do estudo e 40% como objetivo, sem afirmar levantamento independente ou execução [1].",
+      "appliedCorrectionIds": [
+        "D05"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "QUALIFICADO_COM_AUTORIZACAO",
+      "impact": {
+        "references": "16 entradas preservadas; decreto complementar na [12].",
+        "conclusions": "Interpretação qualificada conforme autorização, sem prometer autonomia ou prazos.",
+        "infographics": "Arquivos preservados; cronogramas e cenários ilustrativos, não metas oficiais."
+      },
+      "resolutionEvidence": "Diagnósticos e metas de formação/cartografia separados das capacidades demonstradas.",
+      "remainingLimitation": "A classificação descreve a afirmação original; a qualificação não confirma metas como realizações."
+    },
+    {
+      "id": "D06",
+      "wordBlock": 115,
+      "mdxLine": 332,
+      "severity": "crítico",
+      "status": "REVIEW_REQUIRED",
+      "original": "Por fim, os riscos de execução e os passivos socioambientais impõem alertas críticos ao futuro do setor. A recente aquisição de ativos estratégicos por capital estrangeiro  com compromissos de offtake de longo prazo para o exterior  reduz a disponibilidade imediata de matéria-prima para refinarias domésticas, exigindo a diversificação urgente com fontes alternativas, como rejeitos de monazita de Araxá e Poços de Caldas. Ademais, a expansão da mineração primária exige rigor na gestão de rejeitos radioativos contendo tório e urânio e na mitigação de impactos socioambientais sobre recursos hídricos e terras indígenas na Amazônia. Sem uma governança ambiental transparente, com certificação ESG e rastreabilidade de ciclo de vida reconhecidas internacionalmente, o Brasil arrisca perder o acesso aos mercados ocidentais mais exigentes[9]. O país dispõe de uma janela operacional de apenas 24 a 36 meses para converter essas diretrizes em capacidade produtiva real, sob pena de perpetuar sua dependência tecnológica externa",
+      "finding": "A chamada [9] não é a fonte das metas do bloco; a janela de 24–36 meses carece de suporte específico.",
+      "primaryEvidence": "A frase de 24–36 meses não foi localizada como prazo industrial geral nas evidências disponíveis. O limite de 36 meses de licenciamento é outra coisa. [9] contém autoria pessoal, agora corrigida, mas não sustenta por si uma obrigação ESG universal, impactos específicos em terras indígenas ou todos os condicionantes do bloco final.",
+      "proposedMinimumCorrection": "Proposta mínima para a última frase: “A transformação dessas diretrizes em capacidade produtiva real dependerá de financiamento, validação de processos e continuidade da execução industrial.” Retira apenas o prazo universal e sua consequência determinística; NÃO aplicada. Separadamente, qualificar restrições de matéria-prima segundo contratos, riscos ambientais por depósito/processo e exigências de cada mercado; não equiparar certificação ESG genérica a obrigação legal universal.",
+      "sourceUrls": [
+        "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040",
+        "https://www.gov.br/cetem/pt-br/assuntos/noticias/geopolitica-e-desenvolvimento-tecnologico-para-a-cadeia-produtiva-de-terras-raras-no-brasil-silvia-cristina-alves-franca-e-ysrael-marrero-vera.pdf",
+        "https://legis.senado.gov.br/norma/43923839/publicacao/43929692"
+      ],
+      "applied": true,
+      "classification": "não verificável",
+      "originalSourcesUsed": [
+        {
+          "number": 9,
+          "url": "https://www.gov.br/cetem/pt-br/assuntos/noticias/geopolitica-e-desenvolvimento-tecnologico-para-a-cadeia-produtiva-de-terras-raras-no-brasil-silvia-cristina-alves-franca-e-ysrael-marrero-vera.pdf"
+        }
+      ],
+      "originalSourceNote": "Chamadas originais preservadas para rastreabilidade histórica.",
+      "evidenceFound": "A frase de 24–36 meses não foi localizada como prazo industrial geral nas evidências disponíveis. O limite de 36 meses de licenciamento é outra coisa. [9] contém autoria pessoal, agora corrigida, mas não sustenta por si uma obrigação ESG universal, impactos específicos em terras indígenas ou todos os condicionantes do bloco final.",
+      "currentPassage": "Por fim, os riscos de execução e os passivos socioambientais impõem alertas ao futuro do setor. Compromissos de offtake de longo prazo para o exterior podem limitar a matéria-prima disponível para refinarias domésticas, conforme os volumes e as condições dos contratos; a nacionalidade do capital, isoladamente, não determina esse resultado. Fontes alternativas, como materiais contendo monazita de Araxá e Poços de Caldas, precisam de avaliação técnica, econômica e ambiental antes de serem tratadas como suprimento viável. A presença e a concentração de tório e urânio variam entre depósitos e processos: a gestão de resíduos, o consumo de água e os impactos sobre comunidades e territórios devem ser avaliados em cada projeto, sem atribuir os mesmos riscos a toda mineração de terras raras. Reciclagem e recuperação de materiais podem complementar a oferta, mas também dependem de coleta, tecnologia e viabilidade. Governança transparente, rastreabilidade e atendimento às exigências efetivas dos mercados consumidores são condições de competitividade, não garantias automáticas de acesso [1,9,13,15]. Não há prazo universal comprovado para transformar essas diretrizes em produção: a implantação depende de licenciamento, financiamento, maturidade tecnológica, engenharia, construção, qualificação profissional e contratos de fornecimento. A autonomia tecnológica dependerá dessas condições e da execução coordenada, não decorrerá automaticamente da existência de reservas minerais.",
+      "proposedCorrection": "Proposta mínima para a última frase: “A transformação dessas diretrizes em capacidade produtiva real dependerá de financiamento, validação de processos e continuidade da execução industrial.” Retira apenas o prazo universal e sua consequência determinística; NÃO aplicada. Separadamente, qualificar restrições de matéria-prima segundo contratos, riscos ambientais por depósito/processo e exigências de cada mercado; não equiparar certificação ESG genérica a obrigação legal universal.",
+      "appliedCorrectionIds": [
+        "D06"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "QUALIFICADO_COM_AUTORIZACAO",
+      "impact": {
+        "references": "16 entradas preservadas; decreto complementar na [12].",
+        "conclusions": "Interpretação qualificada conforme autorização, sem prometer autonomia ou prazos.",
+        "infographics": "Arquivos preservados; cronogramas e cenários ilustrativos, não metas oficiais."
+      },
+      "resolutionEvidence": "Prazo 24–36 meses removido; implantação e riscos ambientais/contratuais qualificados por projeto.",
+      "remainingLimitation": "A classificação descreve a afirmação original; a qualificação não confirma metas como realizações."
+    },
+    {
+      "id": "D07",
+      "wordBlock": 33,
+      "mdxLine": 242,
+      "severity": "importante",
+      "status": "RESOLVED",
+      "original": "A experiência internacional também mostra que equipamentos especializados, patentes e mão de obra podem ser gargalos tão relevantes quanto o próprio minério. A IEA identifica tecnologias de fabricação de ímãs nas quais a oferta de máquinas e conhecimentos permanece concentrada. Consequentemente, um programa industrial brasileiro precisa investir simultaneamente em laboratório, formação de técnicos, engenharia de processo, infraestrutura de testes e integração com fabricantes [3,10].",
+      "finding": "Fonte mais direta para gargalos de máquinas é [2]; [3,10] são referências ao mesmo Global Critical Minerals Outlook.",
+      "primaryEvidence": "IEA Rare Earth Elements, resumo, itens sobre ecossistema, detalha fornecedores escassos, equipamentos e lacunas de conhecimento. A proposição é confirmada; a chamada foi ajustada para [2].",
+      "proposedMinimumCorrection": "Aplicada chamada [2], preservado o texto. Mantidos [3] e [10] no acervo bibliográfico porque são relatório e seção, sem renumeração automática.",
+      "sourceUrls": [
+        "https://www.iea.org/reports/rare-earth-elements/executive-summary",
+        "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
+        "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary"
+      ],
+      "applied": true,
+      "classification": "confirmado",
+      "originalSourcesUsed": [
+        {
+          "number": 3,
+          "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026"
+        },
+        {
+          "number": 10,
+          "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary"
+        }
+      ],
+      "originalSourceNote": "Chamadas originais preservadas para rastreabilidade histórica.",
+      "evidenceFound": "IEA Rare Earth Elements, resumo, itens sobre ecossistema, detalha fornecedores escassos, equipamentos e lacunas de conhecimento. A proposição é confirmada; a chamada foi ajustada para [2].",
+      "currentPassage": "A experiência internacional também mostra que equipamentos especializados, patentes e mão de obra podem ser gargalos tão relevantes quanto o próprio minério. A IEA identifica tecnologias de fabricação de ímãs nas quais a oferta de máquinas e conhecimentos permanece concentrada. Consequentemente, um programa industrial brasileiro precisa investir simultaneamente em laboratório, formação de técnicos, engenharia de processo, infraestrutura de testes e integração com fabricantes [2].",
+      "proposedCorrection": "Aplicada chamada [2], preservado o texto. Mantidos [3] e [10] no acervo bibliográfico porque são relatório e seção, sem renumeração automática.",
+      "appliedCorrectionIds": [
+        "D07"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "CORRIGIDO",
+      "impact": {
+        "references": "[3,10] → [2] somente neste trecho; demais usos e 16 números preservados.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Sem alteração."
+      }
+    },
+    {
+      "id": "E01",
+      "wordBlock": 80,
+      "mdxLine": 300,
+      "severity": "editorial",
+      "status": "RESOLVED",
+      "original": "Finalmente, entre 2036 e 2040, a consolidação dependeria de demonstrar competitividade: produzir com regularidade, cumprir requisitos técnicos, conquistar mercados, investir continuamente em pesquisa e ampliar reaproveitamento de materiais. Essa terceira fase só fará sentido se as anteriores produzirem aprendizado e viabilidade. Uma fábrica que depende permanentemente de subsídios sem conseguir entregar qualidade e produtividade não representa necessariamente segurança tecnológica.A principal vantagem de um roteiro assim é permitir perguntas verificáveis em cada etapa. Quantos processos foram validados? Que parcela das necessidades industriais pode ser atendida? Qual é a origem dos equipamentos e reagentes críticos? Quanto valor fica no país? Quais impactos foram medidos? Respostas claras valem mais que datas colocadas em um cartaz.",
+      "finding": "Há junção de frases sem espaço: “tecnológica.A principal”.",
+      "primaryEvidence": "Comparação com o Word confirma duas frases unidas sem espaço. Corrigida apenas a pontuação.",
+      "proposedMinimumCorrection": "Aplicado espaço em “tecnológica. A principal”.",
+      "sourceUrls": [],
+      "applied": true,
+      "classification": "incorreto",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "Comparação com o Word confirma duas frases unidas sem espaço. Corrigida apenas a pontuação.",
+      "currentPassage": "Finalmente, entre 2036 e 2040, a consolidação dependeria de demonstrar competitividade: produzir com regularidade, cumprir requisitos técnicos, conquistar mercados, investir continuamente em pesquisa e ampliar reaproveitamento de materiais. Essa terceira fase só fará sentido se as anteriores produzirem aprendizado e viabilidade. Uma fábrica que depende permanentemente de subsídios sem conseguir entregar qualidade e produtividade não representa necessariamente segurança tecnológica. A principal vantagem de um roteiro assim é permitir perguntas verificáveis em cada etapa. Quantos processos foram validados? Que parcela das necessidades industriais pode ser atendida? Qual é a origem dos equipamentos e reagentes críticos? Quanto valor fica no país? Quais impactos foram medidos? Respostas claras valem mais que datas colocadas em um cartaz.",
+      "proposedCorrection": "Aplicado espaço em “tecnológica. A principal”.",
+      "appliedCorrectionIds": [
+        "E01"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "CORRIGIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Sem alteração."
+      }
+    },
+    {
+      "id": "E02",
+      "wordBlock": 59,
+      "mdxLine": 264,
+      "severity": "editorial",
+      "status": "RESOLVED",
+      "original": "Imagem 1 · A disputa Estratégica das terras rarss",
+      "finding": "Legenda original contém “terras rarss”.",
+      "primaryEvidence": "A legenda do Word tem erro “rarss”; corrigido para “raras”, sem editar o raster.",
+      "proposedMinimumCorrection": "Aplicado “terras raras” na legenda.",
+      "sourceUrls": [],
+      "applied": true,
+      "classification": "incorreto",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "A legenda do Word tem erro “rarss”; corrigido para “raras”, sem editar o raster.",
+      "currentPassage": "Imagem 1 · A disputa Estratégica das terras raras",
+      "proposedCorrection": "Aplicado “terras raras” na legenda.",
+      "appliedCorrectionIds": [
+        "E02"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "CORRIGIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Arquivos preservados; apenas legenda ortográfica ajustada."
+      }
+    },
+    {
+      "id": "E03",
+      "wordBlock": 117,
+      "mdxLine": 334,
+      "severity": "editorial",
+      "status": "RESOLVED",
+      "original": "Referências Biográficas",
+      "finding": "Cabeçalho original “Referências Biográficas”.",
+      "primaryEvidence": "“Biográficas” não descreve a bibliografia; título corrigido para “Referências”, padrão já reconhecido pelo layout. Não houve renumeração.",
+      "proposedMinimumCorrection": "Aplicado título “Referências”.",
+      "sourceUrls": [],
+      "applied": true,
+      "classification": "incorreto",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "“Biográficas” não descreve a bibliografia; título corrigido para “Referências”, padrão já reconhecido pelo layout. Não houve renumeração.",
+      "currentPassage": "Referências",
+      "proposedCorrection": "Aplicado título “Referências”.",
+      "appliedCorrectionIds": [
+        "E03"
+      ],
+      "pendingEditorialDecision": false,
+      "resolution": "CORRIGIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Sem alteração."
+      }
+    },
+    {
+      "id": "V01",
+      "wordBlock": 100,
+      "mdxLine": 304,
+      "severity": "editorial",
+      "status": "RESOLVED",
+      "original": "Imagem 2 · Caminho ilustrativo até 2040. Não representa etapas já concluídas.",
+      "finding": "Infográfico combina roteiro ilustrativo e dados MagBras; é essencial preservar a ressalva de que não são etapas concluídas.",
+      "primaryEvidence": "Os períodos e três cenários do infográfico são uma síntese ilustrativa, não probabilidade estatística nem garantia. Dados MagBras têm sustentação em CETEM/SENAI; legenda já informa que etapas não estão concluídas.",
+      "proposedMinimumCorrection": "Manter redação e qualificações existentes.",
+      "sourceUrls": [
+        "https://www.gov.br/cetem/pt-br/acesso-a-informacao/acoes-e-programas/projetos-financiados-por-agencias-e-ou-recursos-publicos/em-curso/magbras-2013-demonstrador-industrial-do-ciclo-completo-de-producao-brasileira-de-imas-permanentes-de-terras-raras-1",
+        "https://www.senai.portaldaindustria.com.br/para-sua-empresa/programas/mover/imas-terras-raras"
+      ],
+      "applied": false,
+      "classification": "confirmado",
+      "originalSourcesUsed": [],
+      "originalSourceNote": "Sem chamada bibliográfica local no original; origem do conteúdo rastreada no dossiê.",
+      "evidenceFound": "Os períodos e três cenários do infográfico são uma síntese ilustrativa, não probabilidade estatística nem garantia. Dados MagBras têm sustentação em CETEM/SENAI; legenda já informa que etapas não estão concluídas.",
+      "currentPassage": "Imagem 2 · Caminho ilustrativo até 2040. Não representa etapas já concluídas.",
+      "proposedCorrection": "Manter redação e qualificações existentes.",
+      "appliedCorrectionIds": [],
+      "pendingEditorialDecision": false,
+      "resolution": "MANTIDO",
+      "impact": {
+        "references": "Nenhuma renumeração ou alteração de URL.",
+        "conclusions": "Nenhuma mudança de conclusão.",
+        "infographics": "Nenhuma arte alterada. Os períodos da imagem 2 permanecem cenários ilustrativos, não metas oficiais garantidas."
+      }
+    }
+  ],
+  "reviewDate": "2026-11-03",
+  "classificationPolicy": "Classificação da afirmação, separada de gravidade e de aplicação. Confirmado não é aprovação de publicação. Propostas documentadas não equivalem a políticas implementadas."
+}

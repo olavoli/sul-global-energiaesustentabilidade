@@ -81,6 +81,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/supercondutores-a-temperatura-ambiente-uma-decada-depois.mdx"),
   "temos-energia-por-que-nao-conseguimos-conecta-la-a-rede": () =>
     import("../../../content/articles/temos-energia-por-que-nao-conseguimos-conecta-la-a-rede.mdx"),
+  "terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3": () =>
+    import("../../../content/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3.mdx"),
   "terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2": () =>
     import("../../../content/articles/terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2.mdx"),
   "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1": () =>

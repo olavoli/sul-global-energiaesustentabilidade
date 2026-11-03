@@ -1,0 +1,50 @@
+{
+  "replacedAt": "2026-11-03",
+  "reason": "Substituição autorizada pelo responsável editorial. Arquivo anterior preservado, não utilizado como Hero atual.",
+  "previous": {
+    "name": "hero",
+    "sourceName": "pesquisador_microscopio_computador_04.jpg",
+    "originalSha256": "bb18f1bdab95a5770c97c06609ef50dfc6ddf7b3e914eee419ad97d04e690752",
+    "width": 2848,
+    "height": 1600,
+    "variants": [
+      {
+        "file": "art-035-hero-720.webp",
+        "width": 720,
+        "height": 404,
+        "sha256": "59620675023f0972913f39c380c350b48e8a58f182d5a16c3325efeb4814ac56"
+      },
+      {
+        "file": "art-035-hero-1200.webp",
+        "width": 1200,
+        "height": 674,
+        "sha256": "ead5d7d058aa3d4a7b902b58cc73cafa01fae056a7fdbbd24fcaef4436ad460a"
+      },
+      {
+        "file": "art-035-hero-2000.webp",
+        "width": 2000,
+        "height": 1124,
+        "sha256": "cfd1e2279f60ce4e676fbd3cdbde42516e8a036c3d0d7860a3dce8f7865f40ad"
+      }
+    ],
+    "originalFile": "public/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-hero-original.jpg"
+  },
+  "previousProvenance": {
+    "status": "verified",
+    "contributions": [
+      {
+        "role": "generation",
+        "tool": "ChatGPT (OpenAI)"
+      },
+      {
+        "role": "editing",
+        "tool": "Pippit / Seedream 4.0 (declarado)"
+      },
+      {
+        "role": "editing",
+        "tool": "Microsoft PowerPoint (PPTX)"
+      }
+    ],
+    "year": 2026
+  }
+}
