@@ -4727,6 +4727,228 @@ export const articleRecords = [
     canonicalUrl: "/artigo/temos-energia-por-que-nao-conseguimos-conecta-la-a-rede",
   },
   {
+    slug: "terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3",
+    title: "Terras raras: o Brasil pode construir sua independência tecnológica até 2040?",
+    subtitle:
+      "Entre laboratórios, fábricas e decisões estratégicas, o caminho para transformar riqueza mineral em ciência, indústria e desenvolvimento sustentável.",
+    excerpt:
+      "Ciência dos materiais, MagBras, financiamento e cooperação estratégica: condições e cenários para ampliar a autonomia tecnológica brasileira em terras raras até 2040.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: ["terras raras", "minerais críticos", "mineração", "reciclagem", "brasil"],
+    createdAt: "2026-11-03",
+    publishedAt: "2026-11-03",
+    approvedAt: "2026-11-03",
+    corrections: [],
+    readingTime: 21,
+    cover: {
+      src: "/images/articles/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3/art-035-hero-pesquisadores.jpg",
+      alt: "Ilustração de três pesquisadores analisando um tablet em laboratório, com rocha mineral, motor elétrico e microscópio; logomarca Sul Global no canto inferior direito. Cena não documental.",
+      decorative: false,
+      width: 1998,
+      height: 1125,
+      caption:
+        "Hero · Ilustração conceitual gerada por inteligência artificial, não é registro documental de instalação real.",
+      credit:
+        "Hero: ChatGPT (OpenAI); logotipo inserido em PowerPoint (PPTX) e exportação final JPEG, conforme declaração editorial.",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "ChatGPT (OpenAI)",
+          },
+          {
+            role: "editing",
+            tool: "Microsoft PowerPoint (PPTX)",
+          },
+        ],
+        year: 2026,
+      },
+      license:
+        "Uso editorial e comercial das saídas ChatGPT conforme os Termos de Uso da OpenAI (vigência 01/01/2026): https://openai.com/policies/row-terms-of-use/ . Procedência e aplicação da logomarca declaradas pelo responsável editorial; sem licença Creative Commons, exclusividade ou registro de marca presumidos. Ver dossiê visual do ART-035.",
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sources: [
+      {
+        title:
+          "Centro de Gestão e Estudos Estratégicos. Terras raras no Brasil: estado da arte, cenários e um mapa do caminho estratégico para 2026–2040. Brasília: CGEE; 2026.",
+        url: "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040",
+        organizationOrAuthor: "CGEE",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[1] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "International Energy Agency. Rare Earth Elements: Pathways to Secure and Diversified Supply Chains. Paris: IEA; 2026.",
+        url: "https://www.iea.org/reports/rare-earth-elements",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[2] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "International Energy Agency. Global Critical Minerals Outlook 2026. Paris: IEA; 2026.",
+        url: "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[3] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "Agência Nacional de Mineração. Autorizações de pesquisa para terras raras tiveram um aumento de 485,4% entre 2021 e 2025. Brasília: ANM; 2026.",
+        url: "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+        organizationOrAuthor: "Agência Nacional de Mineração",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[4] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "U.S. Geological Survey. Mineral Commodity Summaries 2026: Rare Earths. Reston: USGS; 2026.",
+        url: "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+        organizationOrAuthor: "U.S. Geological Survey",
+        verifiedAt: "2026-10-31",
+        type: "official",
+        note: "[5] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. PDF consultado no ART-034 em 31/10/2026; nova consulta em 03/11 encontrou restrição de acesso.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Centro de Tecnologia Mineral. MagBras: demonstrador industrial do ciclo completo de produção brasileira de ímãs permanentes de terras raras. Rio de Janeiro: CETEM; 2025.",
+        url: "https://www.gov.br/cetem/pt-br/acesso-a-informacao/acoes-e-programas/projetos-financiados-por-agencias-e-ou-recursos-publicos/em-curso/magbras-2013-demonstrador-industrial-do-ciclo-completo-de-producao-brasileira-de-imas-permanentes-de-terras-raras-1",
+        organizationOrAuthor: "CETEM",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[6] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "Serviço Nacional de Aprendizagem Industrial. Demonstrador industrial: ímãs de terras raras. Brasília: SENAI; [s.d.].",
+        url: "https://www.senai.portaldaindustria.com.br/para-sua-empresa/programas/mover/imas-terras-raras",
+        organizationOrAuthor: "SENAI",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[7] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "Centro de Tecnologia Mineral. CETEM marca presença no lançamento do projeto MagBras, que visa fortalecer a cadeia nacional de ímãs de terras raras. Rio de Janeiro: CETEM; 2025.",
+        url: "https://www.gov.br/cetem/pt-br/assuntos/noticias/cetem-marca-presenca-no-lancamento-do-projeto-magbras-que-visa-fortalecer-a-cadeia-nacional-de-imas-de-terras-raras",
+        organizationOrAuthor: "CETEM",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[8] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "França SCA, Marrero Vera Y. Geopolítica e desenvolvimento tecnológico para a cadeia produtiva de terras raras no Brasil. Rio de Janeiro: CETEM; 2026.",
+        url: "https://www.gov.br/cetem/pt-br/assuntos/noticias/geopolitica-e-desenvolvimento-tecnologico-para-a-cadeia-produtiva-de-terras-raras-no-brasil-silvia-cristina-alves-franca-e-ysrael-marrero-vera.pdf",
+        organizationOrAuthor: "Silvia Cristina Alves França; Ysrael Marrero Vera — CETEM",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[9] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "International Energy Agency. Executive summary: Global Critical Minerals Outlook 2026. Paris: IEA; 2026.",
+        url: "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[10] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "Banco Nacional de Desenvolvimento Econômico e Social. BNDES e Finep concluem avaliação de propostas de chamada pública de projetos com foco em minerais estratégicos. Rio de Janeiro: BNDES; 2025.",
+        url: "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos",
+        organizationOrAuthor: "BNDES; Finep",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[11] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "Brasil. Lei nº 15.506, de 16 de setembro de 2026. Institui a Política Nacional de Minerais Críticos e Estratégicos. Brasília: Diário Oficial da União; 2026.",
+        url: "https://legis.senado.gov.br/norma/43923839/publicacao/43929692",
+        organizationOrAuthor: "Brasil — Senado Federal",
+        verifiedAt: "2026-11-03",
+        type: "regulatory",
+        note: "[12] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "European Commission. Critical Raw Materials Act. Brussels: European Commission; [s.d.].",
+        url: "https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials/critical-raw-materials-act_en",
+        organizationOrAuthor: "European Commission",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[13] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "International Energy Agency. Latin America. In: Global Critical Minerals Outlook 2026. Paris: IEA; 2026.",
+        url: "https://www.iea.org/reports/global-critical-minerals-outlook-2026/latin-america",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[14] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "Jones F, Vasconcelos Y. Mineração urbana pode reduzir impactos ambientais da produção das terras-raras. Pesquisa FAPESP. 2025;(356).",
+        url: "https://revistapesquisa.fapesp.br/mineracao-urbana-pode-reduzir-impactos-ambientais-da-producao-das-terras-raras/",
+        organizationOrAuthor: "Frances Jones; Yuri Vasconcelos — Pesquisa FAPESP",
+        verifiedAt: "2026-11-03",
+        type: "news",
+        note: "[15] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+      {
+        title:
+          "Centro de Gestão e Estudos Estratégicos. Está disponível policy brief CGEE sobre terras raras no Brasil. Brasília: CGEE; 2026.",
+        url: "https://www.cgee.org.br/web/cgee/w/est%C3%A1-dispon%C3%ADvel-policy-brief-cgee-sobre-terras-raras-no-brasil",
+        organizationOrAuthor: "CGEE",
+        verifiedAt: "2026-11-03",
+        type: "official",
+        note: "[16] Referência original preservada. Conferência de identidade/escopo e limitações no dossiê; não equivale à confirmação de todas as afirmações. ",
+        isDemo: false,
+      },
+    ],
+    referencesInBody: true,
+    aiAssistance: "limited",
+    aiDisclosure:
+      "As imagens deste artigo têm finalidade ilustrativa e educativa, não constituindo registros fotográficos documentais de pessoas, laboratórios ou instalações reais. Conforme declaração do responsável editorial, a Hero atual foi gerada com ChatGPT (OpenAI), recebeu o logotipo por meio de PowerPoint (PPTX) e foi exportada em JPEG. A imagem 1 foi produzida com ChatGPT, sem edição adicional informada. A imagem 2 foi produzida com ChatGPT e recebeu uma frase por meio de PowerPoint. A integração e a conferência documental foram assistidas por IA. O texto permanece em rascunho e a revisão científica, bibliográfica e das condições de uso ainda não está concluída. A responsabilidade editorial permanece com o Sul Global Energia e Sustentabilidade.",
+    aiDisclosureMode: "detailed",
+    aiImageTools: ["ChatGPT (OpenAI)", "Microsoft PowerPoint (PPTX)"],
+    seoTitle: "Terras raras: o Brasil pode construir sua independência tecnológica até 2040?",
+    seoDescription:
+      "MagBras, ciência dos materiais e cenários até 2040: o que o Brasil precisa para transformar terras raras em tecnologia e capacidade industrial.",
+    canonicalUrl:
+      "/artigo/terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3",
+  },
+  {
     slug: "terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2",
     title: "Terras raras: O Brasil tem os minerais, mas quem domina a tecnologia?",
     subtitle:

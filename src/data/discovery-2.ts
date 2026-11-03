@@ -273,4 +273,20 @@ export default [
         "De la minería a los imanes, los proyectos brasileños y la concentración del procesamiento muestran por qué las reservas no garantizan autonomía tecnológica.",
     },
   },
+  {
+    slug: "terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3",
+    sourceTitle: "Terras raras: o Brasil pode construir sua independência tecnológica até 2040?",
+    sourceExcerpt:
+      "Ciência dos materiais, MagBras, financiamento e cooperação estratégica: condições e cenários para ampliar a autonomia tecnológica brasileira em terras raras até 2040.",
+    en: {
+      title: "Rare earths: can Brazil build technological independence by 2040?",
+      excerpt:
+        "Materials science, MagBras, finance and strategic cooperation: conditions and scenarios for greater Brazilian technological autonomy in rare earths by 2040.",
+    },
+    es: {
+      title: "Tierras raras: ¿puede Brasil construir su independencia tecnológica para 2040?",
+      excerpt:
+        "Ciencia de los materiales, MagBras, financiación y cooperación estratégica: condiciones y escenarios para ampliar la autonomía tecnológica brasileña en tierras raras hacia 2040.",
+    },
+  },
 ];

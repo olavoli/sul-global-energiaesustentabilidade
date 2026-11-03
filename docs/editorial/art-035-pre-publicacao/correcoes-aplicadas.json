@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-03",
+  "changes": [
+    {
+      "id": "E01",
+      "wordBlock": 80,
+      "before": "segurança tecnológica.A principal",
+      "after": "segurança tecnológica. A principal",
+      "reason": "Separação de frases; não muda conteúdo científico.",
+      "applied": true,
+      "authorization": "Correções comprovadas de ortografia, pontuação e referências autorizadas na revisão pré-publicação.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "E02",
+      "wordBlock": 59,
+      "before": "caption=\"Imagem 1 · A disputa Estratégica das terras rarss\"",
+      "after": "caption=\"Imagem 1 · A disputa Estratégica das terras raras\"",
+      "reason": "Erro de digitação na legenda; arquivo raster permanece intacto.",
+      "applied": true,
+      "authorization": "Correções comprovadas de ortografia, pontuação e referências autorizadas na revisão pré-publicação.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "E03",
+      "wordBlock": 117,
+      "before": "## Referências Biográficas",
+      "after": "## Referências",
+      "reason": "Correção do título para o padrão bibliográfico do portal, reconhecido pelo layout existente.",
+      "applied": true,
+      "authorization": "Correções comprovadas de ortografia, pontuação e referências autorizadas na revisão pré-publicação.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D07",
+      "wordBlock": 33,
+      "before": "A experiência internacional também mostra que equipamentos especializados, patentes e mão de obra podem ser gargalos tão relevantes quanto o próprio minério. A IEA identifica tecnologias de fabricação de ímãs nas quais a oferta de máquinas e conhecimentos permanece concentrada. Consequentemente, um programa industrial brasileiro precisa investir simultaneamente em laboratório, formação de técnicos, engenharia de processo, infraestrutura de testes e integração com fabricantes [3,10].",
+      "after": "A experiência internacional também mostra que equipamentos especializados, patentes e mão de obra podem ser gargalos tão relevantes quanto o próprio minério. A IEA identifica tecnologias de fabricação de ímãs nas quais a oferta de máquinas e conhecimentos permanece concentrada. Consequentemente, um programa industrial brasileiro precisa investir simultaneamente em laboratório, formação de técnicos, engenharia de processo, infraestrutura de testes e integração com fabricantes [2].",
+      "reason": "A fonte [2] descreve diretamente gargalos de equipamentos e conhecimento; nenhum argumento alterado.",
+      "applied": true,
+      "authorization": "Correções comprovadas de ortografia, pontuação e referências autorizadas na revisão pré-publicação.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D06-BIB",
+      "wordBlock": 127,
+      "before": "[9] Centro de Tecnologia Mineral. Geopolítica e desenvolvimento tecnológico",
+      "after": "[9] França SCA, Marrero Vera Y. Geopolítica e desenvolvimento tecnológico",
+      "reason": "Autoria pessoal identificada expressamente no PDF original; CETEM permanece como instituição/editora.",
+      "applied": true,
+      "authorization": "Correções comprovadas de ortografia, pontuação e referências autorizadas na revisão pré-publicação.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D06-PONT",
+      "wordBlock": 115,
+      "before": "mais exigentes[9].",
+      "after": "mais exigentes [9].",
+      "reason": "Espaço antes da chamada Vancouver.",
+      "applied": true,
+      "authorization": "Correções comprovadas de ortografia, pontuação e referências autorizadas na revisão pré-publicação.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D06-PONTO",
+      "wordBlock": 115,
+      "before": "sob pena de perpetuar sua dependência tecnológica externa\n\n## Referências",
+      "after": "sob pena de perpetuar sua dependência tecnológica externa.\n\n## Referências",
+      "reason": "Ponto final ausente; prazo não foi removido nem qualificado nesta etapa.",
+      "applied": true,
+      "authorization": "Correções comprovadas de ortografia, pontuação e referências autorizadas na revisão pré-publicação.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D02-CITE",
+      "wordBlock": 112,
+      "before": "O horizonte estratégico do Brasil para o período 2026–2040 insere-se no cenário geopolítico global denominado \"Batalha pelos Elementos\", caracterizado pela fragmentação em blocos e pelo fechamento acelerado das cadeias industriais ocidentais. A visão de futuro do planejamento nacional estabelece que o país deve superar a condição de mero exportador de concentrado bruto  capturando atualmente menos de 5% do valor potencial dos seus depósitos  para se consolidar como um produtor soberano capaz de reter mais de 40% desse valor por meio do processamento doméstico até 2040. Para concretizar essa transformação industrial, o Brasil projeta implantar uma capacidade nacional de separação química de no mínimo 3.000 toneladas anuais de óxidos de terras-raras pesadas e leves (como disprósio, térbio, neodímio e praseodímio). Adicionalmente, busca-se alcançar a produção industrial de pelo menos 500 toneladas anuais de ímãs permanentes de NdFeB com no mínimo 30% de conteúdo nacional, atendendo aos setores de mobilidade elétrica, energia eólica e defesa.",
+      "after": "O horizonte estratégico do Brasil para o período 2026–2040 insere-se no cenário geopolítico global denominado \"Batalha pelos Elementos\", caracterizado pela fragmentação em blocos e pelo fechamento acelerado das cadeias industriais ocidentais. A visão de futuro do planejamento nacional estabelece que o país deve superar a condição de mero exportador de concentrado bruto  capturando atualmente menos de 5% do valor potencial dos seus depósitos  para se consolidar como um produtor soberano capaz de reter mais de 40% desse valor por meio do processamento doméstico até 2040. Para concretizar essa transformação industrial, o Brasil projeta implantar uma capacidade nacional de separação química de no mínimo 3.000 toneladas anuais de óxidos de terras-raras pesadas e leves (como disprósio, térbio, neodímio e praseodímio). Adicionalmente, busca-se alcançar a produção industrial de pelo menos 500 toneladas anuais de ímãs permanentes de NdFeB com no mínimo 30% de conteúdo nacional, atendendo aos setores de mobilidade elétrica, energia eólica e defesa. [1]",
+      "reason": "Atribuição bibliográfica à fonte CGEE efetivamente consultada. A natureza de proposta permanece pendente de qualificação editorial.",
+      "applied": true,
+      "authorization": "Correção comprovada de referência autorizada; nenhuma alteração de número, prazo ou interpretação aplicada.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D04-CITE",
+      "wordBlock": 113,
+      "before": "A viabilidade desse roteiro exige a consolidação urgente das fundações institucionais no curto prazo (2026–2030), considerado o período decisivo para a ativação da cadeia. Isso requer a operacionalização do Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e do Fundo Soberano de Minerais Críticos (FSMC), capitalizado por receitas da CFEM. Do ponto de vista regulatório, é indispensável aprovar um marco legal que estabeleça licenciamento ambiental integrado com prazo máximo de 36 meses, além de exigir metas progressivas de beneficiamento interno como condição para a concessão de lavra. Na vertente diplomática e financeira, a prioridade consiste em firmar acordos bilaterais com transferência obrigatória de tecnologia de separação química (no modelo Caremag) e contratos de offtake soberanos munidos de floor price (preço mínimo garantido), protegendo os investimentos nacionais contra flutuações e práticas de deflação competitiva.",
+      "after": "A viabilidade desse roteiro exige a consolidação urgente das fundações institucionais no curto prazo (2026–2030), considerado o período decisivo para a ativação da cadeia. Isso requer a operacionalização do Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e do Fundo Soberano de Minerais Críticos (FSMC), capitalizado por receitas da CFEM. Do ponto de vista regulatório, é indispensável aprovar um marco legal que estabeleça licenciamento ambiental integrado com prazo máximo de 36 meses, além de exigir metas progressivas de beneficiamento interno como condição para a concessão de lavra. Na vertente diplomática e financeira, a prioridade consiste em firmar acordos bilaterais com transferência obrigatória de tecnologia de separação química (no modelo Caremag) e contratos de offtake soberanos munidos de floor price (preço mínimo garantido), protegendo os investimentos nacionais contra flutuações e práticas de deflação competitiva. [1]",
+      "reason": "Atribuição bibliográfica à fonte CGEE efetivamente consultada. A natureza de proposta permanece pendente de qualificação editorial.",
+      "applied": true,
+      "authorization": "Correção comprovada de referência autorizada; nenhuma alteração de número, prazo ou interpretação aplicada.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D05-CITE",
+      "wordBlock": 114,
+      "before": "Sob uma análise rigorosa e criteriosa, o sucesso futuro do país enfrenta gargalos técnicos e estruturais severos. O principal gargalo na ciência dos materiais e na engenharia química reside na escassez de recursos humanos especializados em separação hidrometalúrgica e refino de elementos pesados. O plano nacional prevê a formação emergencial de pelo menos 500 especialistas e 50 doutores em processos de terras-raras até 2032 para evitar a dependência operacional de equipes estrangeiras. Paralelamente, no campo geológico, o Brasil precisa elevar a cobertura cartográfica da Amazônia em escala 1:100.000 de 8% para 40% até 2034 por meio do PlanGeo, identificando novas províncias minerais em argilas de adsorção iônica para sustentação da cadeia após 2040.",
+      "after": "Sob uma análise rigorosa e criteriosa, o sucesso futuro do país enfrenta gargalos técnicos e estruturais severos. O principal gargalo na ciência dos materiais e na engenharia química reside na escassez de recursos humanos especializados em separação hidrometalúrgica e refino de elementos pesados. O plano nacional prevê a formação emergencial de pelo menos 500 especialistas e 50 doutores em processos de terras-raras até 2032 para evitar a dependência operacional de equipes estrangeiras. Paralelamente, no campo geológico, o Brasil precisa elevar a cobertura cartográfica da Amazônia em escala 1:100.000 de 8% para 40% até 2034 por meio do PlanGeo, identificando novas províncias minerais em argilas de adsorção iônica para sustentação da cadeia após 2040. [1]",
+      "reason": "Atribuição bibliográfica à fonte CGEE efetivamente consultada. A natureza de proposta permanece pendente de qualificação editorial.",
+      "applied": true,
+      "authorization": "Correção comprovada de referência autorizada; nenhuma alteração de número, prazo ou interpretação aplicada.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D01",
+      "wordBlock": 20,
+      "after": "O Brasil dispõe de potencial importante, mas não parte do zero nem chega pronto à linha de largada. Segundo o levantamento divulgado pela Agência Nacional de Mineração (ANM), havia quatro áreas com lavra ativa de terras raras no momento da divulgação, enquanto milhares de áreas permaneciam em pesquisa. Em 2025, o órgão registrou 326 toneladas de concentrado de óxidos produzidas nacionalmente. O número exige cuidado: diferentes instituições utilizam produtos, unidades e metodologias distintas para descrever a produção. Não se deve comparar diretamente concentrados comerciais e equivalentes de óxidos sem explicar suas bases [4,5].",
+      "reason": "Quatro áreas referidas ao momento da divulgação da ANM; 326 toneladas continuam atribuídas a 2025.",
+      "applied": true,
+      "authorization": "Qualificações D01–D06 expressamente autorizadas pelo responsável editorial; manter draft/writing.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D02",
+      "wordBlock": 112,
+      "after": "O horizonte estratégico de 2026–2040 apresentado pelo CGEE considera o cenário geopolítico denominado \"Batalha pelos Elementos\", marcado pela fragmentação em blocos e pelo fechamento das cadeias industriais ocidentais. Trata-se de uma proposta estratégica e de cenários condicionais, não de previsão nem de obrigação governamental. O estudo adota como diagnóstico a captura de menos de 5% do valor potencial dos depósitos e propõe superar a condição de exportador de concentrado bruto, buscando reter mais de 40% desse valor por meio do processamento doméstico até 2040. Entre os objetivos propostos estão uma capacidade nacional de separação química de no mínimo 3.000 toneladas anuais de óxidos de terras-raras pesadas e leves, como disprósio, térbio, neodímio e praseodímio, e a produção de pelo menos 500 toneladas anuais de ímãs permanentes de NdFeB com no mínimo 30% de conteúdo nacional. São referências para o desenvolvimento industrial, não capacidades já demonstradas ou resultados garantidos. Sua realização depende de viabilidade técnica e econômica, licenciamento e gestão ambiental, água, energia e infraestrutura, financiamento e contratos, transferência ou desenvolvimento de tecnologia e acesso efetivo aos mercados consumidores. [1]",
+      "reason": "Cenários e metas do CGEE qualificados como propostas condicionais, com dependências industriais e ambientais.",
+      "applied": true,
+      "authorization": "Qualificações D01–D06 expressamente autorizadas pelo responsável editorial; manter draft/writing.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D03",
+      "wordBlock": 113,
+      "after": "A viabilidade desse roteiro exige consolidar as fundações institucionais no período 2026–2030, proposto pelo CGEE como etapa inicial. O estudo recomenda um Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e um Fundo Soberano de Minerais Críticos (FSMC), com capitalização por receitas da CFEM: são estruturas propostas no documento, não equivalentes automaticamente às instituídas pela legislação. A Lei nº 15.506, de 16 de setembro de 2026, instituiu o Conselho Nacional para Industrialização de Minerais Críticos e Estratégicos (CIMCE), regulamentado pelo Decreto nº 13.118/2026, como órgão de coordenação, planejamento e acompanhamento da política nacional, com competências de formulação e análise de projetos, preservadas as atribuições da ANM. A lei também autorizou a criação do Fundo Garantidor da Atividade Mineral (FGAM), de natureza privada e destinado a garantias; essa autorização não comprova sua constituição, capitalização ou operação. Do ponto de vista regulatório, eficiência administrativa e previsibilidade devem caminhar com rigor ambiental. O prazo máximo de 36 meses para licenciamento integrado aparece como proposta do CGEE, não como regra geral vigente. Metas de beneficiamento interno, acordos de transferência tecnológica e contratos de offtake com floor price (preço mínimo garantido) também integram as recomendações do estudo; sua adoção depende dos instrumentos legais, da negociação e da viabilidade de cada projeto, e não deve ser confundida com contratos já executados. [1,12]",
+      "reason": "CNMCE/FSMC propostos distintos de CIMCE instituído/regulamentado e FGAM autorizado, sem inferir operação.",
+      "applied": true,
+      "authorization": "Qualificações D01–D06 expressamente autorizadas pelo responsável editorial; manter draft/writing.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D04",
+      "wordBlock": 113,
+      "after": "A viabilidade desse roteiro exige consolidar as fundações institucionais no período 2026–2030, proposto pelo CGEE como etapa inicial. O estudo recomenda um Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e um Fundo Soberano de Minerais Críticos (FSMC), com capitalização por receitas da CFEM: são estruturas propostas no documento, não equivalentes automaticamente às instituídas pela legislação. A Lei nº 15.506, de 16 de setembro de 2026, instituiu o Conselho Nacional para Industrialização de Minerais Críticos e Estratégicos (CIMCE), regulamentado pelo Decreto nº 13.118/2026, como órgão de coordenação, planejamento e acompanhamento da política nacional, com competências de formulação e análise de projetos, preservadas as atribuições da ANM. A lei também autorizou a criação do Fundo Garantidor da Atividade Mineral (FGAM), de natureza privada e destinado a garantias; essa autorização não comprova sua constituição, capitalização ou operação. Do ponto de vista regulatório, eficiência administrativa e previsibilidade devem caminhar com rigor ambiental. O prazo máximo de 36 meses para licenciamento integrado aparece como proposta do CGEE, não como regra geral vigente. Metas de beneficiamento interno, acordos de transferência tecnológica e contratos de offtake com floor price (preço mínimo garantido) também integram as recomendações do estudo; sua adoção depende dos instrumentos legais, da negociação e da viabilidade de cada projeto, e não deve ser confundida com contratos já executados. [1,12]",
+      "reason": "36 meses identificado como recomendação CGEE, sem regra geral de licenciamento inventada.",
+      "applied": true,
+      "authorization": "Qualificações D01–D06 expressamente autorizadas pelo responsável editorial; manter draft/writing.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D05",
+      "wordBlock": 114,
+      "after": "Sob uma análise rigorosa e criteriosa, o sucesso futuro do país enfrenta gargalos técnicos e estruturais. O CGEE diagnostica carência de recursos humanos especializados em separação hidrometalúrgica e refino de elementos pesados e propõe formar pelo menos 500 especialistas e 50 doutores em processos de terras-raras até 2032. Esse objetivo de desenvolvimento não significa ausência de competências nacionais: os trabalhos do CETEM, do SENAI e de seus parceiros no MagBras evidenciam capacidades de pesquisa e demonstração, sem comprovar uma cadeia comercial completa. No campo geológico, o estudo toma como diagnóstico uma cobertura cartográfica da Amazônia de 8% em escala 1:100.000 e propõe ampliá-la para 40% até 2034 por meio do PlanGeo. Esses percentuais são a base e o objetivo apresentados pelo CGEE, não uma medição atual independente nem uma meta já cumprida. A identificação de novas províncias minerais, inclusive em argilas de adsorção iônica, exige pesquisa e avaliação antes de sustentar projetos industriais após 2040. [1,6,7]",
+      "reason": "Diagnósticos e metas de formação/cartografia separados das capacidades demonstradas.",
+      "applied": true,
+      "authorization": "Qualificações D01–D06 expressamente autorizadas pelo responsável editorial; manter draft/writing.",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "D06",
+      "wordBlock": 115,
+      "after": "Por fim, os riscos de execução e os passivos socioambientais impõem alertas ao futuro do setor. Compromissos de offtake de longo prazo para o exterior podem limitar a matéria-prima disponível para refinarias domésticas, conforme os volumes e as condições dos contratos; a nacionalidade do capital, isoladamente, não determina esse resultado. Fontes alternativas, como materiais contendo monazita de Araxá e Poços de Caldas, precisam de avaliação técnica, econômica e ambiental antes de serem tratadas como suprimento viável. A presença e a concentração de tório e urânio variam entre depósitos e processos: a gestão de resíduos, o consumo de água e os impactos sobre comunidades e territórios devem ser avaliados em cada projeto, sem atribuir os mesmos riscos a toda mineração de terras raras. Reciclagem e recuperação de materiais podem complementar a oferta, mas também dependem de coleta, tecnologia e viabilidade. Governança transparente, rastreabilidade e atendimento às exigências efetivas dos mercados consumidores são condições de competitividade, não garantias automáticas de acesso [1,9,13,15]. Não há prazo universal comprovado para transformar essas diretrizes em produção: a implantação depende de licenciamento, financiamento, maturidade tecnológica, engenharia, construção, qualificação profissional e contratos de fornecimento. A autonomia tecnológica dependerá dessas condições e da execução coordenada, não decorrerá automaticamente da existência de reservas minerais.",
+      "reason": "Prazo 24–36 meses removido; implantação e riscos ambientais/contratuais qualificados por projeto.",
+      "applied": true,
+      "authorization": "Qualificações D01–D06 expressamente autorizadas pelo responsável editorial; manter draft/writing.",
+      "date": "2026-11-03"
+    }
+  ],
+  "substantiveChangesApplied": true,
+  "wordReplacements": [
+    {
+      "block": 80,
+      "before": "Finalmente, entre 2036 e 2040, a consolidação dependeria de demonstrar competitividade: produzir com regularidade, cumprir requisitos técnicos, conquistar mercados, investir continuamente em pesquisa e ampliar reaproveitamento de materiais. Essa terceira fase só fará sentido se as anteriores produzirem aprendizado e viabilidade. Uma fábrica que depende permanentemente de subsídios sem conseguir entregar qualidade e produtividade não representa necessariamente segurança tecnológica.A principal vantagem de um roteiro assim é permitir perguntas verificáveis em cada etapa. Quantos processos foram validados? Que parcela das necessidades industriais pode ser atendida? Qual é a origem dos equipamentos e reagentes críticos? Quanto valor fica no país? Quais impactos foram medidos? Respostas claras valem mais que datas colocadas em um cartaz.",
+      "after": "Finalmente, entre 2036 e 2040, a consolidação dependeria de demonstrar competitividade: produzir com regularidade, cumprir requisitos técnicos, conquistar mercados, investir continuamente em pesquisa e ampliar reaproveitamento de materiais. Essa terceira fase só fará sentido se as anteriores produzirem aprendizado e viabilidade. Uma fábrica que depende permanentemente de subsídios sem conseguir entregar qualidade e produtividade não representa necessariamente segurança tecnológica. A principal vantagem de um roteiro assim é permitir perguntas verificáveis em cada etapa. Quantos processos foram validados? Que parcela das necessidades industriais pode ser atendida? Qual é a origem dos equipamentos e reagentes críticos? Quanto valor fica no país? Quais impactos foram medidos? Respostas claras valem mais que datas colocadas em um cartaz."
+    },
+    {
+      "block": 59,
+      "before": "Imagem 1 · A disputa Estratégica das terras rarss",
+      "after": "Imagem 1 · A disputa Estratégica das terras raras"
+    },
+    {
+      "block": 117,
+      "before": "Referências Biográficas",
+      "after": "Referências"
+    },
+    {
+      "block": 33,
+      "before": "A experiência internacional também mostra que equipamentos especializados, patentes e mão de obra podem ser gargalos tão relevantes quanto o próprio minério. A IEA identifica tecnologias de fabricação de ímãs nas quais a oferta de máquinas e conhecimentos permanece concentrada. Consequentemente, um programa industrial brasileiro precisa investir simultaneamente em laboratório, formação de técnicos, engenharia de processo, infraestrutura de testes e integração com fabricantes [3,10].",
+      "after": "A experiência internacional também mostra que equipamentos especializados, patentes e mão de obra podem ser gargalos tão relevantes quanto o próprio minério. A IEA identifica tecnologias de fabricação de ímãs nas quais a oferta de máquinas e conhecimentos permanece concentrada. Consequentemente, um programa industrial brasileiro precisa investir simultaneamente em laboratório, formação de técnicos, engenharia de processo, infraestrutura de testes e integração com fabricantes [2]."
+    },
+    {
+      "block": 127,
+      "before": "[9] Centro de Tecnologia Mineral. Geopolítica e desenvolvimento tecnológico para a cadeia produtiva de terras raras no Brasil. Rio de Janeiro: CETEM; 2026. Disponível em: https://www.gov.br/cetem/pt-br/assuntos/noticias/geopolitica-e-desenvolvimento-tecnologico-para-a-cadeia-produtiva-de-terras-raras-no-brasil-silvia-cristina-alves-franca-e-ysrael-marrero-vera.pdf. Acesso em: 31 out. 2026.",
+      "after": "[9] França SCA, Marrero Vera Y. Geopolítica e desenvolvimento tecnológico para a cadeia produtiva de terras raras no Brasil. Rio de Janeiro: CETEM; 2026. Disponível em: https://www.gov.br/cetem/pt-br/assuntos/noticias/geopolitica-e-desenvolvimento-tecnologico-para-a-cadeia-produtiva-de-terras-raras-no-brasil-silvia-cristina-alves-franca-e-ysrael-marrero-vera.pdf. Acesso em: 31 out. 2026."
+    },
+    {
+      "block": 115,
+      "before": "Por fim, os riscos de execução e os passivos socioambientais impõem alertas críticos ao futuro do setor. A recente aquisição de ativos estratégicos por capital estrangeiro  com compromissos de offtake de longo prazo para o exterior  reduz a disponibilidade imediata de matéria-prima para refinarias domésticas, exigindo a diversificação urgente com fontes alternativas, como rejeitos de monazita de Araxá e Poços de Caldas. Ademais, a expansão da mineração primária exige rigor na gestão de rejeitos radioativos contendo tório e urânio e na mitigação de impactos socioambientais sobre recursos hídricos e terras indígenas na Amazônia. Sem uma governança ambiental transparente, com certificação ESG e rastreabilidade de ciclo de vida reconhecidas internacionalmente, o Brasil arrisca perder o acesso aos mercados ocidentais mais exigentes[9]. O país dispõe de uma janela operacional de apenas 24 a 36 meses para converter essas diretrizes em capacidade produtiva real, sob pena de perpetuar sua dependência tecnológica externa",
+      "after": "Por fim, os riscos de execução e os passivos socioambientais impõem alertas ao futuro do setor. Compromissos de offtake de longo prazo para o exterior podem limitar a matéria-prima disponível para refinarias domésticas, conforme os volumes e as condições dos contratos; a nacionalidade do capital, isoladamente, não determina esse resultado. Fontes alternativas, como materiais contendo monazita de Araxá e Poços de Caldas, precisam de avaliação técnica, econômica e ambiental antes de serem tratadas como suprimento viável. A presença e a concentração de tório e urânio variam entre depósitos e processos: a gestão de resíduos, o consumo de água e os impactos sobre comunidades e territórios devem ser avaliados em cada projeto, sem atribuir os mesmos riscos a toda mineração de terras raras. Reciclagem e recuperação de materiais podem complementar a oferta, mas também dependem de coleta, tecnologia e viabilidade. Governança transparente, rastreabilidade e atendimento às exigências efetivas dos mercados consumidores são condições de competitividade, não garantias automáticas de acesso [1,9,13,15]. Não há prazo universal comprovado para transformar essas diretrizes em produção: a implantação depende de licenciamento, financiamento, maturidade tecnológica, engenharia, construção, qualificação profissional e contratos de fornecimento. A autonomia tecnológica dependerá dessas condições e da execução coordenada, não decorrerá automaticamente da existência de reservas minerais."
+    },
+    {
+      "block": 112,
+      "before": "O horizonte estratégico do Brasil para o período 2026–2040 insere-se no cenário geopolítico global denominado \"Batalha pelos Elementos\", caracterizado pela fragmentação em blocos e pelo fechamento acelerado das cadeias industriais ocidentais. A visão de futuro do planejamento nacional estabelece que o país deve superar a condição de mero exportador de concentrado bruto  capturando atualmente menos de 5% do valor potencial dos seus depósitos  para se consolidar como um produtor soberano capaz de reter mais de 40% desse valor por meio do processamento doméstico até 2040. Para concretizar essa transformação industrial, o Brasil projeta implantar uma capacidade nacional de separação química de no mínimo 3.000 toneladas anuais de óxidos de terras-raras pesadas e leves (como disprósio, térbio, neodímio e praseodímio). Adicionalmente, busca-se alcançar a produção industrial de pelo menos 500 toneladas anuais de ímãs permanentes de NdFeB com no mínimo 30% de conteúdo nacional, atendendo aos setores de mobilidade elétrica, energia eólica e defesa.",
+      "after": "O horizonte estratégico de 2026–2040 apresentado pelo CGEE considera o cenário geopolítico denominado \"Batalha pelos Elementos\", marcado pela fragmentação em blocos e pelo fechamento das cadeias industriais ocidentais. Trata-se de uma proposta estratégica e de cenários condicionais, não de previsão nem de obrigação governamental. O estudo adota como diagnóstico a captura de menos de 5% do valor potencial dos depósitos e propõe superar a condição de exportador de concentrado bruto, buscando reter mais de 40% desse valor por meio do processamento doméstico até 2040. Entre os objetivos propostos estão uma capacidade nacional de separação química de no mínimo 3.000 toneladas anuais de óxidos de terras-raras pesadas e leves, como disprósio, térbio, neodímio e praseodímio, e a produção de pelo menos 500 toneladas anuais de ímãs permanentes de NdFeB com no mínimo 30% de conteúdo nacional. São referências para o desenvolvimento industrial, não capacidades já demonstradas ou resultados garantidos. Sua realização depende de viabilidade técnica e econômica, licenciamento e gestão ambiental, água, energia e infraestrutura, financiamento e contratos, transferência ou desenvolvimento de tecnologia e acesso efetivo aos mercados consumidores. [1]"
+    },
+    {
+      "block": 113,
+      "before": "A viabilidade desse roteiro exige a consolidação urgente das fundações institucionais no curto prazo (2026–2030), considerado o período decisivo para a ativação da cadeia. Isso requer a operacionalização do Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e do Fundo Soberano de Minerais Críticos (FSMC), capitalizado por receitas da CFEM. Do ponto de vista regulatório, é indispensável aprovar um marco legal que estabeleça licenciamento ambiental integrado com prazo máximo de 36 meses, além de exigir metas progressivas de beneficiamento interno como condição para a concessão de lavra. Na vertente diplomática e financeira, a prioridade consiste em firmar acordos bilaterais com transferência obrigatória de tecnologia de separação química (no modelo Caremag) e contratos de offtake soberanos munidos de floor price (preço mínimo garantido), protegendo os investimentos nacionais contra flutuações e práticas de deflação competitiva.",
+      "after": "A viabilidade desse roteiro exige consolidar as fundações institucionais no período 2026–2030, proposto pelo CGEE como etapa inicial. O estudo recomenda um Conselho Nacional de Minerais Críticos e Estratégicos (CNMCE) e um Fundo Soberano de Minerais Críticos (FSMC), com capitalização por receitas da CFEM: são estruturas propostas no documento, não equivalentes automaticamente às instituídas pela legislação. A Lei nº 15.506, de 16 de setembro de 2026, instituiu o Conselho Nacional para Industrialização de Minerais Críticos e Estratégicos (CIMCE), regulamentado pelo Decreto nº 13.118/2026, como órgão de coordenação, planejamento e acompanhamento da política nacional, com competências de formulação e análise de projetos, preservadas as atribuições da ANM. A lei também autorizou a criação do Fundo Garantidor da Atividade Mineral (FGAM), de natureza privada e destinado a garantias; essa autorização não comprova sua constituição, capitalização ou operação. Do ponto de vista regulatório, eficiência administrativa e previsibilidade devem caminhar com rigor ambiental. O prazo máximo de 36 meses para licenciamento integrado aparece como proposta do CGEE, não como regra geral vigente. Metas de beneficiamento interno, acordos de transferência tecnológica e contratos de offtake com floor price (preço mínimo garantido) também integram as recomendações do estudo; sua adoção depende dos instrumentos legais, da negociação e da viabilidade de cada projeto, e não deve ser confundida com contratos já executados. [1,12]"
+    },
+    {
+      "block": 114,
+      "before": "Sob uma análise rigorosa e criteriosa, o sucesso futuro do país enfrenta gargalos técnicos e estruturais severos. O principal gargalo na ciência dos materiais e na engenharia química reside na escassez de recursos humanos especializados em separação hidrometalúrgica e refino de elementos pesados. O plano nacional prevê a formação emergencial de pelo menos 500 especialistas e 50 doutores em processos de terras-raras até 2032 para evitar a dependência operacional de equipes estrangeiras. Paralelamente, no campo geológico, o Brasil precisa elevar a cobertura cartográfica da Amazônia em escala 1:100.000 de 8% para 40% até 2034 por meio do PlanGeo, identificando novas províncias minerais em argilas de adsorção iônica para sustentação da cadeia após 2040.",
+      "after": "Sob uma análise rigorosa e criteriosa, o sucesso futuro do país enfrenta gargalos técnicos e estruturais. O CGEE diagnostica carência de recursos humanos especializados em separação hidrometalúrgica e refino de elementos pesados e propõe formar pelo menos 500 especialistas e 50 doutores em processos de terras-raras até 2032. Esse objetivo de desenvolvimento não significa ausência de competências nacionais: os trabalhos do CETEM, do SENAI e de seus parceiros no MagBras evidenciam capacidades de pesquisa e demonstração, sem comprovar uma cadeia comercial completa. No campo geológico, o estudo toma como diagnóstico uma cobertura cartográfica da Amazônia de 8% em escala 1:100.000 e propõe ampliá-la para 40% até 2034 por meio do PlanGeo. Esses percentuais são a base e o objetivo apresentados pelo CGEE, não uma medição atual independente nem uma meta já cumprida. A identificação de novas províncias minerais, inclusive em argilas de adsorção iônica, exige pesquisa e avaliação antes de sustentar projetos industriais após 2040. [1,6,7]"
+    },
+    {
+      "block": 20,
+      "before": "O Brasil dispõe de potencial importante, mas não parte do zero nem chega pronto à linha de largada. Segundo a Agência Nacional de Mineração (ANM), havia, em 2025, quatro áreas com lavra ativa de terras raras, enquanto milhares de áreas permaneciam em pesquisa. No mesmo ano, o órgão registrou 326 toneladas de concentrado de óxidos produzidas nacionalmente. O número exige cuidado: diferentes instituições utilizam produtos, unidades e metodologias distintas para descrever a produção. Não se deve comparar diretamente concentrados comerciais e equivalentes de óxidos sem explicar suas bases [4,5].",
+      "after": "O Brasil dispõe de potencial importante, mas não parte do zero nem chega pronto à linha de largada. Segundo o levantamento divulgado pela Agência Nacional de Mineração (ANM), havia quatro áreas com lavra ativa de terras raras no momento da divulgação, enquanto milhares de áreas permaneciam em pesquisa. Em 2025, o órgão registrou 326 toneladas de concentrado de óxidos produzidas nacionalmente. O número exige cuidado: diferentes instituições utilizam produtos, unidades e metodologias distintas para descrever a produção. Não se deve comparar diretamente concentrados comerciais e equivalentes de óxidos sem explicar suas bases [4,5]."
+    }
+  ],
+  "metadataChanges": [
+    {
+      "field": "sources[8].title",
+      "before": "Centro de Tecnologia Mineral. Geopolítica e desenvolvimento tecnológico para a cadeia produtiva de terras raras no Brasil. Rio de Janeiro: CETEM; 2026.",
+      "after": "França SCA, Marrero Vera Y. Geopolítica e desenvolvimento tecnológico para a cadeia produtiva de terras raras no Brasil. Rio de Janeiro: CETEM; 2026.",
+      "reason": "Sincronização da autoria da referência [9], sem mudar URL, data ou status de verificação."
+    }
+  ],
+  "referenceSupplement": {
+    "number": 12,
+    "url": "https://www2.camara.leg.br/legin/fed/decret/2026/decreto-13118-16-setembro-2026-799929-publicacaooriginal-181357-pe.html",
+    "accessedAt": "2026-11-03",
+    "reason": "Regulamentação oficial verificada nesta rodada; sem nova entrada numerada."
+  }
+}

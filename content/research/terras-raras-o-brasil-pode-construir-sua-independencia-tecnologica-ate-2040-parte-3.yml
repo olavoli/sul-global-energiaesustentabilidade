@@ -1,0 +1,184 @@
+{
+  "articleSlug": "terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3",
+  "researchQuestion": "Em quais condições o Brasil pode transformar seu potencial em terras raras em competências tecnológicas e industriais até 2040?",
+  "scope": "Briefing retrospectivo da integração de 03/11/2026, baseado no Word recebido. Preservar integralmente dez seções, bloco adicional final, cinco pontos-chave, destaque, 16 referências e três imagens. Qualificações D01–D06 autorizadas e aplicadas em 03/11/2026; sem autorização de publicação.",
+  "audience": "Leitores de energia, ciência, indústria, desenvolvimento e sustentabilidade.",
+  "keyQuestions": [
+    "Quais são o escopo e os limites do demonstrador MagBras?",
+    "Como distinguir cenários, propostas de roteiro, obrigações legais e realizações?",
+    "Que dados e condições técnicas sustentam as afirmações até 2040?"
+  ],
+  "requiredData": [
+    "Escopo e orçamento MagBras, CETEM e SENAI",
+    "Indicadores IEA e ANM com ano e produto",
+    "PNMCE, CIMCE e distinção frente a propostas CNMCE/FSMC",
+    "Metas quantitativas e páginas do CGEE; correspondência com [1] e [9]"
+  ],
+  "requiredSourceTypes": [
+    "Fontes oficiais",
+    "Estudo CGEE",
+    "Fontes técnicas e legislação"
+  ],
+  "candidateSources": [
+    {
+      "title": "U.S. Geological Survey. Mineral Commodity Summaries 2026: Rare Earths. Reston: USGS; 2026.",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+      "note": "Consulta atual ao PDF restrita; evidência anterior identificada separadamente."
+    }
+  ],
+  "confirmedSources": [
+    {
+      "title": "Centro de Gestão e Estudos Estratégicos. Terras raras no Brasil: estado da arte, cenários e um mapa do caminho estratégico para 2026–2040. Brasília: CGEE; 2026.",
+      "url": "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040",
+      "organization": "CGEE",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "International Energy Agency. Rare Earth Elements: Pathways to Secure and Diversified Supply Chains. Paris: IEA; 2026.",
+      "url": "https://www.iea.org/reports/rare-earth-elements",
+      "organization": "International Energy Agency",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "International Energy Agency. Global Critical Minerals Outlook 2026. Paris: IEA; 2026.",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026",
+      "organization": "International Energy Agency",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Agência Nacional de Mineração. Autorizações de pesquisa para terras raras tiveram um aumento de 485,4% entre 2021 e 2025. Brasília: ANM; 2026.",
+      "url": "https://www.gov.br/anm/pt-br/assuntos/noticias/autorizacoes-de-pesquisa-para-terras-raras-tiveram-um-aumento-de-485-4-entre-2021-e-2025-veja-dados-no-portal-de-minerais-criticos-e-estrategicos",
+      "organization": "Agência Nacional de Mineração",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Centro de Tecnologia Mineral. MagBras: demonstrador industrial do ciclo completo de produção brasileira de ímãs permanentes de terras raras. Rio de Janeiro: CETEM; 2025.",
+      "url": "https://www.gov.br/cetem/pt-br/acesso-a-informacao/acoes-e-programas/projetos-financiados-por-agencias-e-ou-recursos-publicos/em-curso/magbras-2013-demonstrador-industrial-do-ciclo-completo-de-producao-brasileira-de-imas-permanentes-de-terras-raras-1",
+      "organization": "CETEM",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Serviço Nacional de Aprendizagem Industrial. Demonstrador industrial: ímãs de terras raras. Brasília: SENAI; [s.d.].",
+      "url": "https://www.senai.portaldaindustria.com.br/para-sua-empresa/programas/mover/imas-terras-raras",
+      "organization": "SENAI",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Centro de Tecnologia Mineral. CETEM marca presença no lançamento do projeto MagBras, que visa fortalecer a cadeia nacional de ímãs de terras raras. Rio de Janeiro: CETEM; 2025.",
+      "url": "https://www.gov.br/cetem/pt-br/assuntos/noticias/cetem-marca-presenca-no-lancamento-do-projeto-magbras-que-visa-fortalecer-a-cadeia-nacional-de-imas-de-terras-raras",
+      "organization": "CETEM",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "França SCA, Marrero Vera Y. Geopolítica e desenvolvimento tecnológico para a cadeia produtiva de terras raras no Brasil. Rio de Janeiro: CETEM; 2026.",
+      "url": "https://www.gov.br/cetem/pt-br/assuntos/noticias/geopolitica-e-desenvolvimento-tecnologico-para-a-cadeia-produtiva-de-terras-raras-no-brasil-silvia-cristina-alves-franca-e-ysrael-marrero-vera.pdf",
+      "organization": "Silvia Cristina Alves França; Ysrael Marrero Vera — CETEM",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "International Energy Agency. Executive summary: Global Critical Minerals Outlook 2026. Paris: IEA; 2026.",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
+      "organization": "International Energy Agency",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Banco Nacional de Desenvolvimento Econômico e Social. BNDES e Finep concluem avaliação de propostas de chamada pública de projetos com foco em minerais estratégicos. Rio de Janeiro: BNDES; 2025.",
+      "url": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos",
+      "organization": "BNDES; Finep",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Brasil. Lei nº 15.506, de 16 de setembro de 2026. Institui a Política Nacional de Minerais Críticos e Estratégicos. Brasília: Diário Oficial da União; 2026.",
+      "url": "https://legis.senado.gov.br/norma/43923839/publicacao/43929692",
+      "organization": "Brasil — Senado Federal",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "European Commission. Critical Raw Materials Act. Brussels: European Commission; [s.d.].",
+      "url": "https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials/critical-raw-materials-act_en",
+      "organization": "European Commission",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "International Energy Agency. Latin America. In: Global Critical Minerals Outlook 2026. Paris: IEA; 2026.",
+      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/latin-america",
+      "organization": "International Energy Agency",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Jones F, Vasconcelos Y. Mineração urbana pode reduzir impactos ambientais da produção das terras-raras. Pesquisa FAPESP. 2025;(356).",
+      "url": "https://revistapesquisa.fapesp.br/mineracao-urbana-pode-reduzir-impactos-ambientais-da-producao-das-terras-raras/",
+      "organization": "Frances Jones; Yuri Vasconcelos — Pesquisa FAPESP",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Centro de Gestão e Estudos Estratégicos. Está disponível policy brief CGEE sobre terras raras no Brasil. Brasília: CGEE; 2026.",
+      "url": "https://www.cgee.org.br/web/cgee/w/est%C3%A1-dispon%C3%ADvel-policy-brief-cgee-sobre-terras-raras-no-brasil",
+      "organization": "CGEE",
+      "verifiedAt": "2026-11-03"
+    },
+    {
+      "title": "Brasil. Decreto nº 13.118, de 16 de setembro de 2026. Regulamenta o CIMCE. Documento complementar da referência [12].",
+      "url": "https://www2.camara.leg.br/legin/fed/decret/2026/decreto-13118-16-setembro-2026-799929-publicacaooriginal-181357-pe.html",
+      "organization": "Câmara dos Deputados — legislação federal",
+      "verifiedAt": "2026-11-03"
+    }
+  ],
+  "rejectedSources": [],
+  "openQuestions": [],
+  "factChecks": [
+    {
+      "statement": "MagBras: cerca de R$ 73 milhões, período 2025–2028, demonstrador tecnológico; não cadeia comercial comprovada.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://www.gov.br/cetem/pt-br/acesso-a-informacao/acoes-e-programas/projetos-financiados-por-agencias-e-ou-recursos-publicos/em-curso/magbras-2013-demonstrador-industrial-do-ciclo-completo-de-producao-brasileira-de-imas-permanentes-de-terras-raras-1",
+        "https://www.senai.portaldaindustria.com.br/para-sua-empresa/programas/mover/imas-terras-raras"
+      ]
+    },
+    {
+      "statement": "IEA: 60%, 91%, 94% em 2024 no universo das terras raras para ímãs.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://www.iea.org/reports/rare-earth-elements/executive-summary"
+      ]
+    },
+    {
+      "statement": "BNDES/Finep: 56 planos e R$ 45,8 bilhões propostos, não desembolso.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-e-Finep-concluem-avaliacao-de-propostas-de-chamada-publica-de-projetos-com-foco-em-minerais-estrategicos"
+      ]
+    },
+    {
+      "statement": "Bloco final qualificado como propostas CGEE; CIMCE instituído e regulamentado, FGAM autorizado; janela 24–36 meses retirada. Condicionantes não equivalem a resultados alcançados.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://www.cgee.org.br/w/terras-raras-no-brasil-estado-da-arte-cen%C3%A1rios-e-um-mapa-do-caminho-estrat%C3%A9gico-para-2026-2040",
+        "https://www2.camara.leg.br/legin/fed/decret/2026/decreto-13118-16-setembro-2026-799929-publicacaooriginal-181357-pe.html",
+        "https://legis.senado.gov.br/norma/43923839/publicacao/43929692"
+      ]
+    }
+  ],
+  "imageRequirements": {
+    "origin": "Declaração editorial atual: Hero ChatGPT, logotipo em PowerPoint (PPTX), exportação JPEG; imagem 1 ChatGPT; imagem 2 ChatGPT e frase por PPTX. Hero anterior ChatGPT/Pippit arquivada, não utilizada.",
+    "license": "Uso editorial e comercial das saídas ChatGPT conforme os Termos de Uso da OpenAI (vigência 01/01/2026): https://openai.com/policies/row-terms-of-use/ . Procedência e aplicação da logomarca declaradas pelo responsável editorial; sem licença Creative Commons, exclusividade ou registro de marca presumidos. Ver dossiê visual do ART-035.",
+    "authorization": "Publicação expressamente autorizada pelo responsável editorial na solicitação final do ART-035 em 03/11/2026, condicionada aos gates; não equivale a certificado jurídico.",
+    "credit": "Hero: ChatGPT (OpenAI); logotipo inserido em PowerPoint (PPTX) e exportação final JPEG, conforme declaração editorial.",
+    "alt": "Ilustração de três pesquisadores analisando um tablet em laboratório, com rocha mineral, motor elétrico e microscópio; logomarca Sul Global no canto inferior direito. Cena não documental.",
+    "width": 1998,
+    "height": 1125,
+    "aspectRatio": "1998:1125",
+    "socialVersion": "Não produzida nesta etapa.",
+    "usageRisk": "Base contratual de uso das saídas ChatGPT e procedência editorial documentadas; sem garantia de exclusividade, registro ou não infração. Nenhum ativo externo específico com autorização adicional necessária identificado no material fornecido. Eventual insumo externo posteriormente identificado exige conferência própria.",
+    "isDemoConfirmed": true
+  },
+  "conflictsOfInterestEvaluated": true,
+  "editorialRisks": [
+    "Confundir propostas CGEE com metas governamentais vinculantes.",
+    "Atribuir a [9] metas presentes em [1].",
+    "Instituições propostas CNMCE/FSMC não se confundem com CIMCE e instrumentos legais atuais.",
+    "Avaliação de conflitos usa a declaração geral já existente no cadastro Olavo Oliveira; não constitui verificação independente de vínculos nem declaração nova específica do ART-035."
+  ],
+  "researchStatus": "ready-for-writing",
+  "concreteImpediments": []
+}
