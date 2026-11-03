@@ -4939,7 +4939,7 @@ export const articleRecords = [
     referencesInBody: true,
     aiAssistance: "limited",
     aiDisclosure:
-      "As imagens deste artigo têm finalidade ilustrativa e educativa, não constituindo registros fotográficos documentais de pessoas, laboratórios ou instalações reais. Conforme declaração do responsável editorial, a Hero atual foi gerada com ChatGPT (OpenAI), recebeu o logotipo por meio de PowerPoint (PPTX) e foi exportada em JPEG. A imagem 1 foi produzida com ChatGPT, sem edição adicional informada. A imagem 2 foi produzida com ChatGPT e recebeu uma frase por meio de PowerPoint. A integração e a conferência documental foram assistidas por IA. O texto permanece em rascunho e a revisão científica, bibliográfica e das condições de uso ainda não está concluída. A responsabilidade editorial permanece com o Sul Global Energia e Sustentabilidade.",
+      "Criação visual: As imagens foram produzidas com ChatGPT (OpenAI), com ajustes editoriais no PowerPoint. São ilustrações conceituais, não registros fotográficos reais.\n\nPesquisa e revisão: O conteúdo científico e bibliográfico contou com apoio de inteligência artificial, sob responsabilidade editorial do Sul Global Energia e Sustentabilidade.",
     aiDisclosureMode: "detailed",
     aiImageTools: ["ChatGPT (OpenAI)", "Microsoft PowerPoint (PPTX)"],
     seoTitle: "Terras raras: o Brasil pode construir sua independência tecnológica até 2040?",

@@ -4,6 +4,22 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { AiEditorialCredit } from "./AiEditorialCredit";
 
 describe("crédito editorial de IA", () => {
+  test("separa os blocos aprovados sem interpretar HTML ou alterar outras notas", () => {
+    const html = renderToStaticMarkup(
+      <AiEditorialCredit
+        assistance="substantial"
+        publicationDate="2026-11-03"
+        disclosure={"Criação visual: Ilustração IA.\n\nPesquisa e revisão: Apoio de IA <script>."}
+      />,
+    );
+    expect(html.match(/<p /g)).toHaveLength(2);
+    expect(html).toContain("<strong>Criação visual:</strong>");
+    expect(html).toContain("<strong>Pesquisa e revisão:</strong>");
+    expect(html).toContain("&lt;script&gt;");
+    expect(html).not.toContain("<script>");
+    expect(html.match(/Nota de Transparência/g)).toHaveLength(1);
+  });
+
   test("disclosure explícito distingue origem e edição sem concatenar o resumo", () => {
     const disclosure =
       "Origem: Reve (app.reve.com). Edição: ferramenta de imagens do Codex (OpenAI).";

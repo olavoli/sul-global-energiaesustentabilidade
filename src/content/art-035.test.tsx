@@ -126,8 +126,8 @@ test("ART-035 preserves image originals and responsive variants byte for byte", 
   expect(parsed.frontmatter.cover.height).toBe(1125);
   expect(parsed.frontmatter.cover.sources).toBeUndefined();
   expect(parsed.frontmatter.aiDisclosure).not.toContain("Pippit");
-  expect(parsed.frontmatter.aiDisclosure).toContain(
-    "não constituindo registros fotográficos documentais",
+  expect(parsed.frontmatter.aiDisclosure).toBe(
+    "Criação visual: As imagens foram produzidas com ChatGPT (OpenAI), com ajustes editoriais no PowerPoint. São ilustrações conceituais, não registros fotográficos reais.\n\nPesquisa e revisão: O conteúdo científico e bibliográfico contou com apoio de inteligência artificial, sob responsabilidade editorial do Sul Global Energia e Sustentabilidade.",
   );
 });
 test("ART-035 publication has persisted editorial dates and appears in public distribution", () => {
