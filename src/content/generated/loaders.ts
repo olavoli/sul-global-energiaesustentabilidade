@@ -94,6 +94,9 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
   "transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2":
     () =>
       import("../../../content/articles/transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2.mdx"),
+  "transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3":
+    () =>
+      import("../../../content/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3.mdx"),
   "uma-bateria-precisa-mesmo-ser-pequena": () =>
     import("../../../content/articles/uma-bateria-precisa-mesmo-ser-pequena.mdx"),
 };

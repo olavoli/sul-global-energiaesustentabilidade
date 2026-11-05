@@ -5755,6 +5755,248 @@ export const articleRecords = [
       "/artigo/transicao-energetica-justa-em-santa-catarina-quem-paga-a-conta-e-quem-decide-o-futuro-da-regiao-carbonifera-parte-2",
   },
   {
+    slug: "transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3",
+    title:
+      "Transição Energética Justa em Santa Catarina: quem recupera o território e constrói o futuro depois do carvão?",
+    subtitle:
+      "Entre rios marcados pela mineração, áreas que precisam de recuperação e oportunidades para uma economia diversificada, o Sul Catarinense enfrenta uma pergunta decisiva: como reconhecer o passado sem condenar o futuro a repeti-lo?",
+    excerpt:
+      "Recuperação ambiental, qualidade da água, trabalho e governança: os desafios para reparar o território e construir o futuro da região carbonífera catarinense.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: [
+      "carvão",
+      "santa catarina",
+      "transição justa",
+      "emprego",
+      "sustentabilidade",
+      "participação social",
+      "ufsc",
+      "ppges",
+    ],
+    createdAt: "2026-11-04",
+    publishedAt: "2026-11-05",
+    approvedAt: "2026-11-05",
+    corrections: [],
+    readingTime: 22,
+    cover: {
+      src: "/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-hero-original.jpg",
+      alt: "Ilustração de duas pessoas coletando e analisando água de um rio na região carbonífera, com área minerada, vegetação, painéis solares e logomarca Sul Global; cena conceitual produzida com IA.",
+      decorative: false,
+      width: 1998,
+      height: 1125,
+      caption:
+        "Imagem Hero: ilustração conceitual produzida por IA; não representa local ou pessoas identificáveis.",
+      credit:
+        "ChatGPT (OpenAI); logotipo inserido em Microsoft PowerPoint, conforme declaração do responsável editorial.",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "ChatGPT (OpenAI)",
+          },
+          {
+            role: "editing",
+            tool: "Microsoft PowerPoint (PPTX)",
+          },
+        ],
+        year: 2026,
+      },
+      license:
+        "Uso editorial de saída ChatGPT conforme os Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/ (vigência 01/01/2026). Procedência declarada pelo responsável editorial; sem licença Creative Commons, exclusividade ou registro da logomarca presumidos.",
+      sources: [
+        {
+          src: "/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-hero-original.jpg",
+          width: 1998,
+        },
+      ],
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sources: [
+      {
+        title:
+          "International Labour Organization. Guidelines for a just transition towards environmentally sustainable economies and societies for all. Geneva: ILO; 2015 [publicação digital 2016].",
+        url: "https://www.ilo.org/publications/guidelines-just-transition-towards-environmentally-sustainable-economies",
+        organizationOrAuthor: "International Labour Organization",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[1] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "World Bank. Managing Coal Mine Closure: Achieving a Just Transition for All. Washington (DC): World Bank; 2018.",
+        url: "https://www.worldbank.org/en/topic/extractiveindustries/publication/managing-coal-mine-closure",
+        organizationOrAuthor: "World Bank",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[2] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Serviço Geológico do Brasil. Tipos de impactos: recuperação de áreas degradadas por carvão na Bacia Carbonífera de Santa Catarina. Brasília: SGB; [s.d.].",
+        url: "https://www.sgb.gov.br/tipos-de-impactos",
+        organizationOrAuthor: "Serviço Geológico do Brasil",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[3] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Serviço Geológico do Brasil. Recuperação de áreas degradadas por carvão na Bacia Carbonífera de Santa Catarina. Brasília: SGB; [s.d.].",
+        url: "https://www.sgb.gov.br/recuperacao-de-areas-degradadas-por-carvao",
+        organizationOrAuthor: "Serviço Geológico do Brasil",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[4] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Tribunal Regional Federal da 4ª Região. TRF4 mantém medidas de recuperação ambiental em caso envolvendo mina de carvão abandonada. Porto Alegre: TRF4; 20 mar. 2026.",
+        url: "https://www.trf4.jus.br/trf4/controlador.php?acao=noticia_visualizar&id_noticia=29984",
+        organizationOrAuthor: "Tribunal Regional Federal da 4ª Região",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[5] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title: "Serviço Geológico do Brasil. Relato integrado de gestão 2024. Brasília: SGB; 2025.",
+        url: "https://www.sgb.gov.br/documents/d/guest/relato_integrado_cprm_2024_final_gov280525-pdf",
+        organizationOrAuthor: "Serviço Geológico do Brasil",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[6] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Freitas MA, Troian GC. Diagnóstico ambiental das bacias hidrográficas impactadas pela mineração de carvão no sul de Santa Catarina: 3º relatório de atividades executadas: período março a outubro de 2025. Criciúma: Serviço Geológico do Brasil; 2026.",
+        url: "https://rigeo.sgb.gov.br/handle/doc/25370.2",
+        organizationOrAuthor: "Freitas MA, Troian GC",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[7] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Cardoso AT, Troian GC. Análise temporal da qualidade da água subterrânea em áreas de mineração de carvão recuperada: um estudo de caso em Santa Catarina. In: 23º Congresso Brasileiro de Águas Subterrâneas; 2024; São Paulo. São Paulo: ABAS; 2024.",
+        url: "https://rigeo.sgb.gov.br/handle/doc/25139",
+        organizationOrAuthor: "Cardoso AT, Troian GC",
+        verifiedAt: "2026-11-04",
+        type: "academic",
+        note: "[8] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "International Energy Agency. Accelerating Just Transitions for the Coal Sector: Strategies for Rapid, Secure and People-Centred Change. Paris: IEA; 2024.",
+        url: "https://www.iea.org/reports/accelerating-just-transitions-for-the-coal-sector",
+        organizationOrAuthor: "International Energy Agency",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[9] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "European Commission. The Just Transition Mechanism. Brussels: European Commission; [s.d.].",
+        url: "https://commission.europa.eu/topics/regional-and-urban-policy/just-transition-mechanism_en",
+        organizationOrAuthor: "European Commission",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[10] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Brasil. Lei nº 14.299, de 5 de janeiro de 2022. Cria o Programa de Transição Energética Justa. Brasília: Diário Oficial da União; 2022.",
+        url: "https://www2.camara.leg.br/legin/fed/lei/2022/lei-14299-5-janeiro-2022-792216-publicacaooriginal-164327-pl.html",
+        organizationOrAuthor: "Brasil",
+        verifiedAt: "2026-11-04",
+        type: "regulatory",
+        note: "[11] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Santa Catarina. Lei nº 18.330, de 5 de janeiro de 2022. Institui a Política Estadual de Transição Energética Justa e o Polo de Transição Energética Justa do Sul do Estado de Santa Catarina. Florianópolis: ALESC; 2022, com alterações da Lei nº 19.364/2025 e anotação da ADI 7332 no texto consolidado.",
+        url: "https://leis.alesc.sc.gov.br/ato-normativo/21328",
+        organizationOrAuthor: "Santa Catarina",
+        verifiedAt: "2026-11-04",
+        type: "regulatory",
+        note: "[12] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Secretaria de Estado do Meio Ambiente e da Economia Verde. Santa Catarina lidera debate sobre transição energética justa e amplia participação social na elaboração do plano. Florianópolis: SEMAE; 20 maio 2026.",
+        url: "https://www.semae.sc.gov.br/santa-catarina-lidera-debate-sobre-transicao-energetica-justa-e-amplia-participacao-social-na-elaboracao-do-plano/",
+        organizationOrAuthor: "Secretaria de Estado do Meio Ambiente e da Economia Verde",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[13] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Ministério Público Federal. COP30: MPF combate danos ambientais gerados pela mineração de carvão no sul de Santa Catarina. Brasília: MPF; 28 out. 2025.",
+        url: "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/cop30-mpf-combate-danos-ambientais-gerados-pela-mineracao-de-carvao-no-sul-de-santa-catarina",
+        organizationOrAuthor: "Ministério Público Federal",
+        verifiedAt: "2026-11-04",
+        type: "official",
+        note: "[14] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Teixeira LL. Análise e contribuições para uma Transição Energética Justa na Região Carbonífera do Estado de Santa Catarina [dissertação]. Araranguá: Universidade Federal de Santa Catarina; 2023.",
+        url: "https://repositorio.ufsc.br/handle/123456789/251116",
+        organizationOrAuthor: "Teixeira LL",
+        verifiedAt: "2026-11-04",
+        type: "academic",
+        note: "[15] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+      {
+        title:
+          "Grassi ER. Transição Energética Justa: estudo das políticas públicas e da percepção dos atores, com foco na região carbonífera catarinense [dissertação]. Araranguá: Universidade Federal de Santa Catarina; 2026.",
+        url: "https://repositorio.ufsc.br/handle/123456789/272934",
+        organizationOrAuthor: "Grassi ER",
+        verifiedAt: "2026-11-04",
+        type: "academic",
+        note: "[16] Conferência de identidade/escopo registrada no dossiê de integração; não representa aprovação de todas as afirmações ou revisão humana concluída.",
+        isDemo: false,
+      },
+    ],
+    referencesInBody: true,
+    aiAssistance: "limited",
+    aiDisclosure:
+      "Criação visual: As três imagens foram produzidas com ChatGPT (OpenAI). O logotipo da Hero foi inserido posteriormente no PowerPoint. São ilustrações conceituais, não registros fotográficos documentais.\n\nPesquisa e revisão: A integração e a conferência preliminar de fontes foram assistidas por inteligência artificial. A publicação foi autorizada pelo responsável editorial do Sul Global Energia e Sustentabilidade em 5 de novembro de 2026, após as revisões científica, editorial e de acessibilidade registradas no dossiê do artigo.",
+    aiDisclosureMode: "detailed",
+    seoTitle: "Transição justa em SC: recuperar o território após o carvão",
+    seoDescription:
+      "Rios, áreas mineradas, trabalho e governança: o que é necessário para recuperar o território e construir o futuro da região carbonífera de Santa Catarina.",
+  },
+  {
     slug: "uma-bateria-precisa-mesmo-ser-pequena",
     title: "Uma bateria precisa mesmo ser pequena?",
     subtitle:

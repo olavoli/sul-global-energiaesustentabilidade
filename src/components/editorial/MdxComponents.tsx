@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { EditorialImage } from "@/components/media/EditorialImage";
 import { imageAiProvenanceSchema } from "@/content/schema";
 import { ImageAiCredit } from "./ImageAiCredit";
+import { InfographicAccessibility } from "./InfographicAccessibility";
 
 /** Highlight an editorial context or caveat inside an article. */
 export function Callout({ title, children }: { title?: string; children: ReactNode }) {
@@ -42,7 +43,9 @@ export function Figure({
   aiEditingTool,
   aiCreditYear,
   creditPlacement = "caption",
+  accessibleDescription,
 }: {
+  accessibleDescription?: string;
   src: string;
   alt: string;
   width?: number | string;
@@ -125,6 +128,14 @@ export function Figure({
             </>
           )}
         </figcaption>
+      )}
+      {accessibleDescription && (
+        <InfographicAccessibility
+          src={sourceFull ?? src}
+          alt={alt}
+          width={normalizedWidth}
+          description={accessibleDescription}
+        />
       )}
     </figure>
   );

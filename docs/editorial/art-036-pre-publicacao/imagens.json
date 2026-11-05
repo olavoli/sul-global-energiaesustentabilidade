@@ -1,0 +1,45 @@
+[
+  {
+    "name": "hero",
+    "sourceName": "hero - TEJ 3  - Análise de água.jpg",
+    "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-hero-original.jpg",
+    "originalSha256": "31987de4f011dfd9be2686c832828e932d5b9b750314ce6b17163b585305ebe3",
+    "width": 1998,
+    "height": 1125,
+    "provenanceDeclared": "ChatGPT (OpenAI); logotipo aplicado posteriormente no Microsoft PowerPoint; exportação JPEG.",
+    "variants": [
+      {
+        "file": "art-036-hero-720.webp",
+        "width": 720,
+        "height": 405,
+        "sha256": "bfa22ba9d392986dd9c5ba2bc63eb26f02011ea40dac32ec208715a16423e3b0"
+      },
+      {
+        "file": "art-036-hero-1200.webp",
+        "width": 1200,
+        "height": 676,
+        "sha256": "b6e278e375294975fc7f5bdd978c6a82fb6735fcde985132105522f95a37cc50"
+      }
+    ]
+  },
+  {
+    "name": "recuperacao",
+    "sourceName": "imagem  1 -   etapas para TEJ.jpg",
+    "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-recuperacao-original.jpg",
+    "originalSha256": "6feb072aa8d10d5d03f4d193ac67e4328978ce5dd01ec62d1579de4f9a0b51f0",
+    "width": 480,
+    "height": 558,
+    "provenanceDeclared": "ChatGPT (OpenAI); nenhuma edição adicional informada.",
+    "variants": []
+  },
+  {
+    "name": "pilares",
+    "sourceName": "Imagem 2 - TEJ   4 pilares da sustentabilidade.jpg",
+    "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-pilares-original.jpg",
+    "originalSha256": "8bb1184c4aaae72dd0bcb871d99cd5ef6118597bacaf6ac2644bf371a47fe89d",
+    "width": 480,
+    "height": 681,
+    "provenanceDeclared": "ChatGPT (OpenAI); nenhuma edição adicional informada.",
+    "variants": []
+  }
+]
