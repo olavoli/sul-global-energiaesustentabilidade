@@ -24,22 +24,46 @@
   },
   {
     "name": "recuperacao",
-    "sourceName": "imagem  1 -   etapas para TEJ.jpg",
-    "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-recuperacao-original.jpg",
-    "originalSha256": "6feb072aa8d10d5d03f4d193ac67e4328978ce5dd01ec62d1579de4f9a0b51f0",
-    "width": 480,
-    "height": 558,
+    "sourceName": "Imagem1 TEJ 3.3.png",
+    "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-recuperacao-original.png",
+    "originalSha256": "979b7bd9c0524ef562ae29bba21b611ad1a0ae634802e8d75c46e1a65fb7e425",
+    "width": 1024,
+    "height": 1192,
     "provenanceDeclared": "ChatGPT (OpenAI); nenhuma edição adicional informada.",
-    "variants": []
+    "variants": [],
+    "previousVersions": [
+      {
+        "name": "recuperacao",
+        "sourceName": "imagem  1 -   etapas para TEJ.jpg",
+        "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-recuperacao-original.jpg",
+        "originalSha256": "6feb072aa8d10d5d03f4d193ac67e4328978ce5dd01ec62d1579de4f9a0b51f0",
+        "width": 480,
+        "height": 558,
+        "provenanceDeclared": "ChatGPT (OpenAI); nenhuma edição adicional informada.",
+        "variants": []
+      }
+    ]
   },
   {
     "name": "pilares",
-    "sourceName": "Imagem 2 - TEJ   4 pilares da sustentabilidade.jpg",
-    "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-pilares-original.jpg",
-    "originalSha256": "8bb1184c4aaae72dd0bcb871d99cd5ef6118597bacaf6ac2644bf371a47fe89d",
-    "width": 480,
-    "height": 681,
+    "sourceName": "Imagem2   TEJ 3.3.png",
+    "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-pilares-original.png",
+    "originalSha256": "6e6bb87791fc1b81d3c75f695c588b0f4f189ed8f22cc1ffcd21a55fb1d7161b",
+    "width": 1024,
+    "height": 1457,
     "provenanceDeclared": "ChatGPT (OpenAI); nenhuma edição adicional informada.",
-    "variants": []
+    "variants": [],
+    "previousVersions": [
+      {
+        "name": "pilares",
+        "sourceName": "Imagem 2 - TEJ   4 pilares da sustentabilidade.jpg",
+        "originalFile": "public/images/articles/transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3/art-036-pilares-original.jpg",
+        "originalSha256": "8bb1184c4aaae72dd0bcb871d99cd5ef6118597bacaf6ac2644bf371a47fe89d",
+        "width": 480,
+        "height": 681,
+        "provenanceDeclared": "ChatGPT (OpenAI); nenhuma edição adicional informada.",
+        "variants": []
+      }
+    ]
   }
 ]
