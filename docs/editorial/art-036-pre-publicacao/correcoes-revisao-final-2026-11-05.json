@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-05",
+  "changes": [
+    {
+      "wordBlock": 112,
+      "before": "A legislação oferece um ponto de partida, mas também exige leitura cuidadosa. A Lei federal nº 14.299/2022 instituiu o Programa de Transição Energética Justa para a região carbonífera catarinense e mencionou a preparação para o provável encerramento, até 2040, da geração termelétrica a carvão nacional *sem abatimento de CO₂*, no contexto descrito pela norma [11]. Não se trata de uma afirmação de que todas as minas e usinas estarão necessariamente encerradas nessa data.",
+      "after": "A legislação oferece um ponto de partida, mas também exige leitura cuidadosa. O art. 4º, § 1º, da Lei federal nº 14.299/2022 orienta a preparação para o provável encerramento, até 2040, da geração termelétrica a carvão mineral nacional sem abatimento de CO₂ e da exploração regional desse minério destinada a essa finalidade [11]. Esse recorte não estabelece o encerramento obrigatório de toda a mineração de carvão nem de todas as atividades industriais da região. A mesma lei, no art. 4º, § 5º, VI, considera capacidades tecnológicas para outros usos do carvão ou para geração com emissões líquidas de carbono iguais a zero a partir de 2050; isso não equivale a uma garantia de viabilidade ou continuidade [11]."
+    },
+    {
+      "wordBlock": 113,
+      "before": "No âmbito estadual, a Lei nº 18.330/2022 estabeleceu a política de transição, instrumentos de governança, eixos de recuperação ambiental, qualificação e desenvolvimento econômico, tendo sido alterada posteriormente pela Lei nº 19.364/2025 [12]. Já em maio de 2026, a Secretaria de Estado do Meio Ambiente e da Economia Verde informou que o Plano de Transição Energética Justa de Santa Catarina estava em elaboração no âmbito do programa Santa Catarina 2050, com horizonte de transformação regional até 2050 [13]. São documentos de natureza e abrangência diferentes: uma referência temporal legal específica, uma política estadual e um planejamento em elaboração. Não convém fundi-los em uma promessa única.",
+      "after": "No âmbito estadual, a Lei nº 18.330/2022 estabeleceu a política de transição. A Lei nº 19.364/2025 atualizou a composição do Conselho Gestor, a presidência do comitê de acompanhamento e a vinculação e gestão do FETEJ-SC pela SEMAE, nos arts. 17, 29 e 38. O texto consolidado também registra a inconstitucionalidade do § 5º do art. 34, referente à destinação obrigatória de parte dos recursos de pesquisa e desenvolvimento ao carvão, na ADI 7332 [12]. Essas disposições de governança e financiamento não comprovam, por si, recursos desembolsados ou recuperação concluída.\n\nEm 20 de maio de 2026, a SEMAE informou que o Plano Estadual de Transição Energética Justa, denominado Plano de Transição Energética Justa de Santa Catarina (PTEJSC), estava em elaboração no âmbito do Programa Santa Catarina 2050. O horizonte até 2050 orientava o planejamento de alternativas para a substituição gradativa da geração termelétrica a carvão [13]. Essa informação é datada: não comprova que o plano tenha sido concluído ou que seus objetivos tenham sido alcançados. A legislação vigente, o planejamento estadual e os cenários editoriais de acompanhamento apresentados a seguir têm naturezas diferentes e não devem ser fundidos em uma promessa única."
+    },
+    {
+      "wordBlock": 57,
+      "before": "Também é indispensável distinguir *remediação* de *reabilitação*. Remediar significa reduzir ou controlar uma fonte de contaminação; reabilitar envolve recuperar funções ecológicas e estabelecer um uso seguro e compatível com o espaço. Uma antiga área industrial pode receber novos equipamentos, mas isso não elimina automaticamente riscos ambientais ocultos. De modo inverso, determinada área pode ser reabilitada para conservação, sem se tornar adequada à ocupação humana intensa.",
+      "after": "Neste artigo, *remediação* e *reabilitação* são empregadas como distinção operacional, sem pretender substituir definições técnicas ou normativas específicas. A primeira se refere às intervenções para reduzir ou controlar a contaminação; a segunda, à recuperação de funções ambientais e ao estabelecimento de um uso seguro e compatível com a área. Uma antiga área industrial pode receber novos equipamentos, mas isso não elimina automaticamente riscos ambientais ocultos. De modo inverso, determinada área pode ser reabilitada para conservação, sem se tornar adequada à ocupação humana intensa."
+    },
+    {
+      "wordBlock": 56,
+      "before": "A recuperação começa com caracterização geológica, química e hidrológica. Antes de escolher um tratamento, é preciso compreender a origem da acidez, a concentração e a variabilidade dos contaminantes, os caminhos percorridos pela água e os usos atuais do território. Em determinados casos, técnicas de neutralização e tratamento ativo de efluentes podem ser necessárias. Em outros, estratégias de cobertura, drenagem, contenção ou tratamento passivo podem integrar a solução. Nenhuma dessas alternativas é universal; sua eficácia e seu custo dependem das condições locais [3,7].",
+      "after": "A recuperação começa com caracterização geológica, química e hidrológica [7]. Antes de escolher um tratamento, é preciso compreender a origem da acidez, a concentração e a variabilidade dos contaminantes, os caminhos percorridos pela água e os usos atuais do território. Em determinados casos, técnicas de neutralização e tratamento ativo de efluentes podem ser necessárias. Em outros, estratégias de cobertura, drenagem, contenção ou tratamento passivo podem integrar a solução. Nenhuma dessas alternativas é universal; sua eficácia e seu custo dependem das condições locais [3,4]."
+    },
+    {
+      "wordBlock": 135,
+      "before": "Ao final desta trilogia, duas pesquisas desenvolvidas no Programa de Pós-Graduação em Energia e Sustentabilidade (PPGES) realizado no Campus  Araranguá (SC) da Universidade Federal de Santa Catarina (UFSC) permitem confrontar intenção política e capacidade de execução. Embora realizadas em momentos distintos e com enfoques próprios, as dissertações de Laércio Luiz Teixeira, defendida em 2023, e Elaine Ribeiro Grassi, concluída em 2026, convergem em um ponto decisivo: a transição energética justa no Sul Catarinense não pode ser reduzida à mudança de combustível. Ela exige uma transformação coordenada das relações entre economia, trabalho, ambiente e poder público [15,16].",
+      "after": "Ao final desta trilogia, duas pesquisas desenvolvidas no Programa de Pós-Graduação em Energia e Sustentabilidade (PPGES), no Campus Araranguá (SC) da Universidade Federal de Santa Catarina (UFSC) permitem confrontar intenção política e capacidade de execução. Embora realizadas em momentos distintos e com enfoques próprios, as dissertações de Laércio Luiz Teixeira, defendida em 2023, e Elaine Ribeiro Grassi, concluída em 2026, convergem em um ponto decisivo: a transição energética justa no Sul Catarinense não pode ser reduzida à mudança de combustível. Ela exige uma transformação coordenada das relações entre economia, trabalho, ambiente e poder público [15,16]."
+    },
+    {
+      "wordBlock": 136,
+      "before": "Teixeira examinou experiências internacionais, políticas e possibilidades regionais, destacando a necessidade de diálogo entre governo, empresas, sindicatos, centros de pesquisa e comunidades. Sua pesquisa identifica oportunidades relacionadas à diversificação energética, à eficiência, à inovação e à capacitação profissional, ao mesmo tempo que reconhece a complexidade de uma economia historicamente associada ao carvão. O mérito dessa contribuição está em demonstrar que a transição precisa ser planejada como projeto regional. Sua limitação, para fins de previsão, é igualmente importante: alternativas apontadas como promissoras não equivalem a empreendimento economicamente validados, financiados e capazes de absorver imediatamente trabalhadores deslocados [15].",
+      "after": "Teixeira examinou experiências internacionais, políticas e possibilidades regionais, destacando a necessidade de diálogo entre governo, empresas, sindicatos, centros de pesquisa e comunidades. Sua pesquisa identifica oportunidades relacionadas à diversificação energética, à eficiência, à inovação e à capacitação profissional, ao mesmo tempo que reconhece a complexidade de uma economia historicamente associada ao carvão. O mérito dessa contribuição está em demonstrar que a transição precisa ser planejada como projeto regional. Sua limitação, para fins de previsão, é igualmente importante: alternativas apontadas como promissoras não equivalem a empreendimentos economicamente validados, financiados e capazes de absorver imediatamente trabalhadores deslocados [15]."
+    },
+    {
+      "wordBlock": 139,
+      "before": "Lidas em conjunto, as duas dissertações oferecem mais uma advertência do que uma receita pronta. Teixeira demonstra porque uma transição integrada é necessária; Grassi evidencia porque aprovar leis não garante que ela aconteça. Entre essas duas constatações existe um trabalho ainda incompleto: identificar responsabilidades, financiar intervenções, formar pessoas, testar alternativas produtivas e comprovar a recuperação ambiental. Essa interpretação é uma síntese editorial das pesquisas, não uma conclusão textual atribuída aos autores.",
+      "after": "Lidas em conjunto, as duas dissertações oferecem mais uma advertência do que uma receita pronta. Teixeira demonstra por que uma transição integrada é necessária; Grassi evidencia por que aprovar leis não garante que ela aconteça. Entre essas duas constatações existe um trabalho ainda incompleto: identificar responsabilidades, financiar intervenções, formar pessoas, testar alternativas produtivas e comprovar a recuperação ambiental. Essa interpretação é uma síntese editorial das pesquisas, não uma conclusão textual atribuída aos autores."
+    },
+    {
+      "wordBlock": 149,
+      "before": "Diagnóstico ambiental das bacias hidrográficas impactadas pela mineração de carvão no sul de Santa Catarina: 3º relatório, março a outubro de 2025.",
+      "after": "Diagnóstico ambiental das bacias hidrográficas impactadas pela mineração de carvão no sul de Santa Catarina: 3º relatório de atividades executadas: período março a outubro de 2025."
+    },
+    {
+      "wordBlock": 154,
+      "before": "Florianópolis: ALESC; 2022, com alterações posteriores.",
+      "after": "Florianópolis: ALESC; 2022, com alterações da Lei nº 19.364/2025 e anotação da ADI 7332 no texto consolidado."
+    }
+  ],
+  "captionChange": {
+    "before": "Infográfico 2. Eixos de acompanhamento propostos para 2026–2050.",
+    "after": "Infográfico 2. Eixos ilustrativos de acompanhamento para 2026–2050. Os resultados esperados na arte são objetivos desejados, não metas oficiais nem resultados comprovados."
+  },
+  "originalWordUntouched": true,
+  "imagesUntouched": true
+}

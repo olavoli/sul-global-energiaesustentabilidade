@@ -289,4 +289,23 @@ export default [
         "Ciencia de los materiales, MagBras, financiación y cooperación estratégica: condiciones y escenarios para ampliar la autonomía tecnológica brasileña en tierras raras hacia 2040.",
     },
   },
+  {
+    slug: "transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3",
+    sourceTitle:
+      "Transição Energética Justa em Santa Catarina: quem recupera o território e constrói o futuro depois do carvão?",
+    sourceExcerpt:
+      "Recuperação ambiental, qualidade da água, trabalho e governança: os desafios para reparar o território e construir o futuro da região carbonífera catarinense.",
+    en: {
+      title:
+        "Just Energy Transition in Santa Catarina: who restores the territory and builds the future after coal?",
+      excerpt:
+        "Environmental restoration, water quality, work and governance: the challenges of repairing the territory and building the future of Santa Catarina’s coal region.",
+    },
+    es: {
+      title:
+        "Transición Energética Justa en Santa Catarina: ¿quién recupera el territorio y construye el futuro después del carbón?",
+      excerpt:
+        "Recuperación ambiental, calidad del agua, trabajo y gobernanza: los desafíos para reparar el territorio y construir el futuro de la región carbonífera de Santa Catarina.",
+    },
+  },
 ];

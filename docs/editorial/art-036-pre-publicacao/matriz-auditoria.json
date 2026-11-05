@@ -1,0 +1,244 @@
+{
+  "date": "2026-11-04",
+  "articleSlug": "transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3",
+  "scope": "Conferência preliminar, não aprovação de publicação. Índices Word zero-based; páginas PDF one-based.",
+  "rows": [
+    {
+      "id": "C01",
+      "wordBlock": 58,
+      "originalPassage": "Há esforços concretos em andamento. O relatório integrado de gestão do SGB relativo a 2024 menciona 1.768,06 hectares no conjunto de passivos sob atuação descrita e aproximadamente 191,78 hectares recuperados até aquele ano [6]. Esses números exigem leitura precisa: correspondem ao recorte institucional informado, não à totalidade das áreas degradadas pela mineração no Sul Catarinense. Utilizá-los como balanço geral da região seria um erro metodológico.",
+      "classification": "confirmado",
+      "severity": "informativo",
+      "issue": "Recorte dos hectares e ano.",
+      "evidence": "Relato SGB 2024, p.19: universo institucional de passivos e recuperação acumulada, não total regional.",
+      "proposedCorrection": "Manter os números e a ressalva de recorte já presentes.",
+      "sourceUrls": [
+        "https://www.sgb.gov.br/documents/d/guest/relato_integrado_cprm_2024_final_gov280525-pdf"
+      ],
+      "applied": false
+    },
+    {
+      "id": "C02",
+      "wordBlock": 26,
+      "originalPassage": "O problema está longe de ser apenas histórico. Em março de 2026, o Tribunal Regional Federal da 4ª Região manteve medidas de recuperação relacionadas à Mina Verdinho, entre Criciúma e Forquilhinha. O episódio demonstra que as obrigações de reparar danos podem sobreviver à atividade econômica que os produziu [5]. Ao mesmo tempo, os relatórios do SGB mostram que monitorar e compreender a evolução das áreas recuperadas constitui parte indispensável da solução [4,6].",
+      "classification": "confirmado",
+      "severity": "informativo",
+      "issue": "Mina Verdinho: obrigação judicial não é resultado ambiental entregue.",
+      "evidence": "Notícia TRF4 de 20/03/2026 relata julgamento de 17/03 e manutenção das medidas; o texto não afirma recuperação concluída.",
+      "proposedCorrection": "Manter a atribuição ao tribunal, sem converter ordem judicial em obra executada.",
+      "sourceUrls": [
+        "https://www.trf4.jus.br/trf4/controlador.php?acao=noticia_visualizar&id_noticia=29984"
+      ],
+      "applied": false
+    },
+    {
+      "id": "C03",
+      "wordBlock": 136,
+      "originalPassage": "Teixeira examinou experiências internacionais, políticas e possibilidades regionais, destacando a necessidade de diálogo entre governo, empresas, sindicatos, centros de pesquisa e comunidades. Sua pesquisa identifica oportunidades relacionadas à diversificação energética, à eficiência, à inovação e à capacitação profissional, ao mesmo tempo que reconhece a complexidade de uma economia historicamente associada ao carvão. O mérito dessa contribuição está em demonstrar que a transição precisa ser planejada como projeto regional. Sua limitação, para fins de previsão, é igualmente importante: alternativas apontadas como promissoras não equivalem a empreendimento economicamente validados, financiados e capazes de absorver imediatamente trabalhadores deslocados [15].",
+      "classification": "confirmado com limites",
+      "severity": "informativo",
+      "issue": "Contribuições e natureza da pesquisa de Teixeira.",
+      "evidence": "PDF UFSC: aprovação em 30/06/2023, p.4; análise bibliográfica/crítica, conclusões pp.73–75 e recomendações pp.76–78. As alternativas não constituem projetos implantados.",
+      "proposedCorrection": "Preservar o argumento e os limites expressos no artigo; tratar síntese conjunta como interpretação editorial.",
+      "sourceUrls": [
+        "https://repositorio.ufsc.br/handle/123456789/251116"
+      ],
+      "applied": false
+    },
+    {
+      "id": "C04",
+      "wordBlock": 138,
+      "originalPassage": "É necessário, contudo, interpretar esse levantamento dentro de seu desenho metodológico. A percepção dos atores participantes não representa automaticamente a opinião de todos os trabalhadores, moradores e municípios da região. A própria dissertação recomenda ampliar a investigação, ouvindo com maior profundidade a base produtiva e as comunidades diretamente expostas aos impactos. Também sugere estudos de viabilidade e monitoramento ambiental e epidemiológico, necessários para transformar hipóteses em decisões sustentadas por resultados [16].",
+      "classification": "confirmado com limites",
+      "severity": "informativo",
+      "issue": "Representatividade e recomendações de Grassi.",
+      "evidence": "PDF: aprovação em 20/02/2026, p.4; questionário com dez atores institucionais, p.28; conclusões pp.107–109 incluem ampliação da base e estudos econômicos, ambientais e epidemiológicos.",
+      "proposedCorrection": "Manter a ressalva; não apresentar a amostra como opinião de toda a população.",
+      "sourceUrls": [
+        "https://repositorio.ufsc.br/handle/123456789/272934"
+      ],
+      "applied": false
+    },
+    {
+      "id": "C05",
+      "wordBlock": 63,
+      "originalPassage": "Uma política de recuperação deveria publicar séries históricas comparáveis, apresentando pontos de coleta, vazões, pH, condutividade, parâmetros químicos relevantes e frequência das amostragens. Apenas divulgar uma fotografia de água aparentemente limpa não revela se houve redução sustentável do risco. Tampouco é suficiente comparar uma única coleta antes e depois, sem considerar chuva, estiagem, sazonalidade e diferenças entre locais. O estudo de Cardoso e Troian, sobre a evolução da água subterrânea em área recuperada, reforça a importância de análises temporais em vez de conclusões instantâneas [8].",
+      "classification": "confirmado com limites",
+      "severity": "informativo",
+      "issue": "Estudo temporal de água não prova melhoria uniforme.",
+      "evidence": "Cardoso/Troian, duas páginas: caso Belluno, séries 2018–2023 e resultados heterogêneos entre parâmetros e poços. A utilização no artigo respeita o caráter temporal.",
+      "proposedCorrection": "Manter o escopo de caso, sem inferir recuperação generalizada.",
+      "sourceUrls": [
+        "https://rigeo.sgb.gov.br/handle/doc/25139"
+      ],
+      "applied": false
+    },
+    {
+      "id": "D01",
+      "wordBlock": 112,
+      "originalPassage": "A legislação oferece um ponto de partida, mas também exige leitura cuidadosa. A Lei federal nº 14.299/2022 instituiu o Programa de Transição Energética Justa para a região carbonífera catarinense e mencionou a preparação para o provável encerramento, até 2040, da geração termelétrica a carvão nacional *sem abatimento de CO₂*, no contexto descrito pela norma [11]. Não se trata de uma afirmação de que todas as minas e usinas estarão necessariamente encerradas nessa data.",
+      "classification": "parcialmente sustentado",
+      "severity": "importante",
+      "issue": "Explicação dos horizontes federais e estaduais e atualidade legal.",
+      "evidence": "Lei 14.299/2022, publicação original, art.4 §1: provável encerramento até 2040; §5 VI também menciona emissões líquidas zero a partir de 2050. Planalto bloqueou a consulta consolidada e a página de detalhes da Câmara respondeu 429.",
+      "proposedCorrection": "Proposta: acrescentar que a menção federal a 2050 tem objeto específico e não é o mesmo plano estadual; conferir versão consolidada antes da publicação. Não aplicada nesta integração.",
+      "sourceUrls": [
+        "https://www2.camara.leg.br/legin/fed/lei/2022/lei-14299-5-janeiro-2022-792216-publicacaooriginal-164327-pl.html",
+        "https://www.semae.sc.gov.br/santa-catarina-lidera-debate-sobre-transicao-energetica-justa-e-amplia-participacao-social-na-elaboracao-do-plano/"
+      ],
+      "applied": true,
+      "finalReview": {
+        "date": "2026-11-05",
+        "status": "resolved",
+        "resolution": "Escopos federais 2040/2050 explicitados sem encerramento geral obrigatório."
+      }
+    },
+    {
+      "id": "D02",
+      "wordBlock": 113,
+      "originalPassage": "No âmbito estadual, a Lei nº 18.330/2022 estabeleceu a política de transição, instrumentos de governança, eixos de recuperação ambiental, qualificação e desenvolvimento econômico, tendo sido alterada posteriormente pela Lei nº 19.364/2025 [12]. Já em maio de 2026, a Secretaria de Estado do Meio Ambiente e da Economia Verde informou que o Plano de Transição Energética Justa de Santa Catarina estava em elaboração no âmbito do programa Santa Catarina 2050, com horizonte de transformação regional até 2050 [13]. São documentos de natureza e abrangência diferentes: uma referência temporal legal específica, uma política estadual e um planejamento em elaboração. Não convém fundi-los em uma promessa única.",
+      "classification": "confirmado com limite temporal",
+      "severity": "editorial",
+      "issue": "Situação do plano e lei estadual alteradora.",
+      "evidence": "SEMAE de 20/05/2026 descreve plano em elaboração, não resultados cumpridos. ALESC registra Lei 19.364/2025 alterando arts.17,29,38 da Lei 18.330.",
+      "proposedCorrection": "A redação é historicamente datada e pode ser mantida; considerar link complementar à lei alteradora dentro da referência [12], sem renumerar.",
+      "sourceUrls": [
+        "https://leis.alesc.sc.gov.br/ato-normativo/21328",
+        "https://leis.alesc.sc.gov.br/ato-normativo/52878",
+        "https://www.semae.sc.gov.br/santa-catarina-lidera-debate-sobre-transicao-energetica-justa-e-amplia-participacao-social-na-elaboracao-do-plano/"
+      ],
+      "applied": true,
+      "finalReview": {
+        "date": "2026-11-05",
+        "status": "resolved",
+        "resolution": "Lei estadual consolidada e alterações de 2025 registradas; notícia de planejamento permanece datada."
+      }
+    },
+    {
+      "id": "D03",
+      "wordBlock": 57,
+      "originalPassage": "Também é indispensável distinguir *remediação* de *reabilitação*. Remediar significa reduzir ou controlar uma fonte de contaminação; reabilitar envolve recuperar funções ecológicas e estabelecer um uso seguro e compatível com o espaço. Uma antiga área industrial pode receber novos equipamentos, mas isso não elimina automaticamente riscos ambientais ocultos. De modo inverso, determinada área pode ser reabilitada para conservação, sem se tornar adequada à ocupação humana intensa.",
+      "classification": "não verificado integralmente",
+      "severity": "editorial",
+      "issue": "Distinção terminológica remediação/reabilitação.",
+      "evidence": "Fontes ambientais consultadas sustentam controle de contaminação e uso seguro; não foi localizada nesta rodada uma definição normativa que corresponda integralmente às duas formulações do parágrafo.",
+      "proposedCorrection": "Proposta: fundamentar em referência técnica específica ou qualificar como distinção operacional empregada no artigo. Não alterada.",
+      "sourceUrls": [
+        "https://www.sgb.gov.br/tipos-de-impactos",
+        "https://www.sgb.gov.br/recuperacao-de-areas-degradadas-por-carvao"
+      ],
+      "applied": true,
+      "finalReview": {
+        "date": "2026-11-05",
+        "status": "resolved",
+        "resolution": "Distinção remediação/reabilitação identificada como operacional editorial."
+      }
+    },
+    {
+      "id": "B01",
+      "wordBlock": 149,
+      "originalPassage": "7. Freitas MA, Troian GC. Diagnóstico ambiental das bacias hidrográficas impactadas pela mineração de carvão no sul de Santa Catarina: 3º relatório, março a outubro de 2025. Criciúma: Serviço Geológico do Brasil; 2026. Disponível em: https://rigeo.sgb.gov.br/handle/doc/25370.2. Acesso em: 3 nov. 2026.",
+      "classification": "divergência bibliográfica formal",
+      "severity": "editorial",
+      "issue": "Título da referência [7] difere do registro oficial.",
+      "evidence": "RIGeo versão 2 registra Diagnóstico ambiental nas bacias...: 3º relatório de atividades executadas: período março a outubro de 2025, Freitas/Troian, 2026. Ano, autores e período conferem.",
+      "proposedCorrection": "Proposta: ajustar o título ao catálogo. Preservada a forma do Word nesta etapa; URL handle mantida.",
+      "sourceUrls": [
+        "https://rigeo.sgb.gov.br/handle/doc/25370.2",
+        "https://rigeo.sgb.gov.br/items/version/763"
+      ],
+      "applied": true,
+      "finalReview": {
+        "date": "2026-11-05",
+        "status": "resolved",
+        "resolution": "Título completado conforme folha de rosto e CIP; das preservado apesar de nas no campo Citação do catálogo."
+      }
+    },
+    {
+      "id": "E01",
+      "wordBlock": 13,
+      "originalPassage": "O fim da produção de carvão não significa o fim de sua responsabilidade ambiental e social.** Uma mina pode deixar de operar enquanto suas águas continuam exigindo tratamento, seus trabalhadores procuram novos caminhos e os municípios enfrentam mudanças na arrecadação. A verdadeira transição começa antes do encerramento e continua depois dele. Seu êxito não será medido somente pela eletricidade de baixo carbono que entrar na rede, mas pela melhora comprovada dos rios, pelo trabalho digno e pelo direito das comunidades de participar das decisões que transformarão seu território.",
+      "classification": "corrigido tecnicamente",
+      "severity": "formal",
+      "issue": "Delimitador de negrito sem abertura no destaque.",
+      "evidence": "O Word contém ** após a primeira frase; a integração adiciona apenas a abertura correspondente.",
+      "proposedCorrection": "Aplicado: balanceamento Markdown, sem retirar ou trocar palavras.",
+      "sourceUrls": [],
+      "applied": true
+    },
+    {
+      "id": "E02",
+      "wordBlock": 135,
+      "originalPassage": "Ao final desta trilogia, duas pesquisas desenvolvidas no Programa de Pós-Graduação em Energia e Sustentabilidade (PPGES) realizado no Campus  Araranguá (SC) da Universidade Federal de Santa Catarina (UFSC) permitem confrontar intenção política e capacidade de execução. Embora realizadas em momentos distintos e com enfoques próprios, as dissertações de Laércio Luiz Teixeira, defendida em 2023, e Elaine Ribeiro Grassi, concluída em 2026, convergem em um ponto decisivo: a transição energética justa no Sul Catarinense não pode ser reduzida à mudança de combustível. Ela exige uma transformação coordenada das relações entre economia, trabalho, ambiente e poder público [15,1 6].",
+      "classification": "corrigido tecnicamente",
+      "severity": "formal",
+      "issue": "Chamada [15,1 6] contém espaço dentro do identificador 16.",
+      "evidence": "A bibliografia possui entradas 15 e 16 e as chamadas seguintes já utilizam esses números.",
+      "proposedCorrection": "Aplicado: [15,16], sem renumeração.",
+      "sourceUrls": [
+        "https://repositorio.ufsc.br/handle/123456789/251116",
+        "https://repositorio.ufsc.br/handle/123456789/272934"
+      ],
+      "applied": true
+    },
+    {
+      "id": "E03",
+      "wordBlock": 136,
+      "originalPassage": "Teixeira examinou experiências internacionais, políticas e possibilidades regionais, destacando a necessidade de diálogo entre governo, empresas, sindicatos, centros de pesquisa e comunidades. Sua pesquisa identifica oportunidades relacionadas à diversificação energética, à eficiência, à inovação e à capacitação profissional, ao mesmo tempo que reconhece a complexidade de uma economia historicamente associada ao carvão. O mérito dessa contribuição está em demonstrar que a transição precisa ser planejada como projeto regional. Sua limitação, para fins de previsão, é igualmente importante: alternativas apontadas como promissoras não equivalem a empreendimento economicamente validados, financiados e capazes de absorver imediatamente trabalhadores deslocados [15].",
+      "classification": "pendente de revisão editorial",
+      "severity": "formal",
+      "issue": "Concordância e redação em trechos do original.",
+      "evidence": "Há empreendimento economicamente validados no bloco136; porque/por que no bloco139 e espaços duplicados no135 merecem revisão textual.",
+      "proposedCorrection": "Propostas: empreendimentos economicamente validados; por que quando interrogativo indireto; normalizar espaços. Não aplicadas.",
+      "sourceUrls": [],
+      "applied": true,
+      "finalReview": {
+        "date": "2026-11-05",
+        "status": "resolved",
+        "resolution": "Concordância, por que e construção sintática do PPGES corrigidos."
+      }
+    },
+    {
+      "id": "V01",
+      "wordBlock": 53,
+      "originalPassage": "Infográfico 1. Etapas recomendadas para recuperação e monitoramento.",
+      "classification": "limitação técnica confirmada",
+      "severity": "importante",
+      "issue": "Resolução reduzida dos infográficos.",
+      "evidence": "Originais: 480×558 e 480×681; não foram ampliados em arquivo. Texto pequeno demanda avaliação real em celular.",
+      "proposedCorrection": "Solicitar artes originais de maior resolução ou aprovar solução acessível complementar antes da publicação; não recriar nem substituir automaticamente.",
+      "sourceUrls": [],
+      "applied": true,
+      "finalReview": {
+        "date": "2026-11-05",
+        "status": "resolved",
+        "resolution": "Critério de acesso à informação atendido por descrições textuais equivalentes e visualizador com zoom, pinça e teclado; JPEGs originais preservados. Ver relatório de acessibilidade."
+      },
+      "previousFinalReview": {
+        "date": "2026-11-05",
+        "status": "open",
+        "resolution": "Inspecionadas artes originais e prévia em 1440/390 px; textos auxiliares insuficientes no celular. Sem recriação."
+      }
+    },
+    {
+      "id": "V02",
+      "wordBlock": 111,
+      "originalPassage": "Infográfico 2. Eixos de acompanhamento propostos para 2026–2050.",
+      "classification": "qualificação editorial necessária",
+      "severity": "editorial",
+      "issue": "Quatro pilares e resultados esperados até 2050 no infográfico são síntese ilustrativa.",
+      "evidence": "O artigo descreve cenários e propostas; os quatro pilares da arte não equivalem aos sete eixos legais tratados na Parte 2.",
+      "proposedCorrection": "Proposta de legenda: explicitar que são eixos ilustrativos e resultados desejados, sem calendário oficial ou garantia de cumprimento. Arte e legenda original preservadas.",
+      "sourceUrls": [
+        "https://leis.alesc.sc.gov.br/ato-normativo/21328",
+        "https://www.semae.sc.gov.br/santa-catarina-lidera-debate-sobre-transicao-energetica-justa-e-amplia-participacao-social-na-elaboracao-do-plano/"
+      ],
+      "applied": true,
+      "finalReview": {
+        "date": "2026-11-05",
+        "status": "resolved",
+        "resolution": "Legenda qualifica objetivos ilustrativos, sem metas oficiais ou resultados comprovados."
+      }
+    }
+  ]
+}

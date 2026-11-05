@@ -40,6 +40,7 @@ test("bibliografia manual do ART-031 conserva os 22 números e não desativa out
     "terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3",
     "terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2",
     "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",
+    "transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3",
   ]);
   expect(readFileSync("src/routes/artigo.$slug.tsx", "utf8")).toMatch(
     /!article\.referencesInBody\s*&&\s*\(?\s*<SourceList/,

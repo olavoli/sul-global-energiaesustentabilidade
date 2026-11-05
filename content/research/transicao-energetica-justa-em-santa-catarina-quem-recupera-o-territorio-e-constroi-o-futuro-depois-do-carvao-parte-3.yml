@@ -1,0 +1,188 @@
+{
+  "articleSlug": "transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3",
+  "researchQuestion": "Como reparar os passivos ambientais e construir alternativas econômicas e sociais na região carbonífera catarinense, distinguindo evidências, propostas e resultados?",
+  "scope": "Briefing retrospectivo da integração de 04/11/2026 do Word recebido. Preservar dez seções, conclusão crítica, cinco pontos-chave, destaque e 16 referências. Integração somente como draft/writing, com divergências separadas; não representa aprovação científica integral. Revisão científica/editorial autorizada em 05/11/2026 aplicada com registro antes/depois; pendência visual preservada.\n\nRegistro administrativo de 05/11/2026: aprovação editorial de publicação do ART-036 concedida expressamente pelo responsável editorial nesta conversa Sul Global 1126 (chat 01a1ac09-844a-7bd3-99d1-09b18bd78856), na mensagem ART-036 | AUTORIZAÇÃO EDITORIAL DE PUBLICAÇÃO, e reafirmada na autorização para atualizar o briefing editorial. A revisão científica/editorial e a solução de acessibilidade foram concluídas nas etapas anteriores. Estado anterior: fact-checking; pergunta aberta: Aprovação editorial final para publicação permanece necessária; impedimento anterior: Publicação depende de autorização editorial posterior. Ambos encerrados por essa autorização. O schema não possui estado research-complete nem campo próprio de aprovação editorial no briefing; ready-for-writing é o estado final elegível definido pelo contrato. Não foram atribuídos novos revisores ou novas datas de revisão.",
+  "audience": "Leitores do Sul Global interessados em energia, ambiente, trabalho, desenvolvimento regional e políticas públicas.",
+  "keyQuestions": [
+    "O que as dissertações de Teixeira (2023) e Grassi (2026) efetivamente concluem e com quais limites metodológicos?",
+    "O que as áreas e os indicadores SGB medem e quais resultados não podem ser generalizados?",
+    "Como distinguir os marcos legais e as propostas de 2040/2050 de realizações?"
+  ],
+  "requiredData": [
+    "Recorte e ano dos hectares SGB",
+    "Metodologia e conclusões das dissertações UFSC",
+    "Legislação federal/estadual e alterações",
+    "Monitoramento de águas subterrâneas e limites de generalização"
+  ],
+  "requiredSourceTypes": [
+    "Fontes acadêmicas primárias",
+    "Legislação oficial",
+    "Relatórios técnicos e institucionais"
+  ],
+  "candidateSources": [
+    {
+      "title": "Lei nº 14.299/2022 — versão consolidada",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14299.htm",
+      "note": "Consulta ao Planalto bloqueada; publicação original da Câmara consultada. Conferir atualização consolidada antes da publicação."
+    }
+  ],
+  "confirmedSources": [
+    {
+      "title": "International Labour Organization. Guidelines for a just transition towards environmentally sustainable economies and societies for all. Geneva: ILO; 2015 [publicação digital 2016].",
+      "url": "https://www.ilo.org/publications/guidelines-just-transition-towards-environmentally-sustainable-economies",
+      "organization": "International Labour Organization",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "World Bank. Managing Coal Mine Closure: Achieving a Just Transition for All. Washington (DC): World Bank; 2018.",
+      "url": "https://www.worldbank.org/en/topic/extractiveindustries/publication/managing-coal-mine-closure",
+      "organization": "World Bank",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Serviço Geológico do Brasil. Tipos de impactos: recuperação de áreas degradadas por carvão na Bacia Carbonífera de Santa Catarina. Brasília: SGB; [s.d.].",
+      "url": "https://www.sgb.gov.br/tipos-de-impactos",
+      "organization": "Serviço Geológico do Brasil",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Serviço Geológico do Brasil. Recuperação de áreas degradadas por carvão na Bacia Carbonífera de Santa Catarina. Brasília: SGB; [s.d.].",
+      "url": "https://www.sgb.gov.br/recuperacao-de-areas-degradadas-por-carvao",
+      "organization": "Serviço Geológico do Brasil",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Tribunal Regional Federal da 4ª Região. TRF4 mantém medidas de recuperação ambiental em caso envolvendo mina de carvão abandonada. Porto Alegre: TRF4; 20 mar. 2026.",
+      "url": "https://www.trf4.jus.br/trf4/controlador.php?acao=noticia_visualizar&id_noticia=29984",
+      "organization": "Tribunal Regional Federal da 4ª Região",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Serviço Geológico do Brasil. Relato integrado de gestão 2024. Brasília: SGB; 2025.",
+      "url": "https://www.sgb.gov.br/documents/d/guest/relato_integrado_cprm_2024_final_gov280525-pdf",
+      "organization": "Serviço Geológico do Brasil",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Freitas MA, Troian GC. Diagnóstico ambiental das bacias hidrográficas impactadas pela mineração de carvão no sul de Santa Catarina: 3º relatório de atividades executadas: período março a outubro de 2025. Criciúma: Serviço Geológico do Brasil; 2026.",
+      "url": "https://rigeo.sgb.gov.br/handle/doc/25370.2",
+      "organization": "Freitas MA, Troian GC",
+      "verifiedAt": "2026-11-05"
+    },
+    {
+      "title": "Cardoso AT, Troian GC. Análise temporal da qualidade da água subterrânea em áreas de mineração de carvão recuperada: um estudo de caso em Santa Catarina. In: 23º Congresso Brasileiro de Águas Subterrâneas; 2024; São Paulo. São Paulo: ABAS; 2024.",
+      "url": "https://rigeo.sgb.gov.br/handle/doc/25139",
+      "organization": "Cardoso AT, Troian GC",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "International Energy Agency. Accelerating Just Transitions for the Coal Sector: Strategies for Rapid, Secure and People-Centred Change. Paris: IEA; 2024.",
+      "url": "https://www.iea.org/reports/accelerating-just-transitions-for-the-coal-sector",
+      "organization": "International Energy Agency",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "European Commission. The Just Transition Mechanism. Brussels: European Commission; [s.d.].",
+      "url": "https://commission.europa.eu/topics/regional-and-urban-policy/just-transition-mechanism_en",
+      "organization": "European Commission",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Brasil. Lei nº 14.299, de 5 de janeiro de 2022. Cria o Programa de Transição Energética Justa. Brasília: Diário Oficial da União; 2022.",
+      "url": "https://www2.camara.leg.br/legin/fed/lei/2022/lei-14299-5-janeiro-2022-792216-publicacaooriginal-164327-pl.html",
+      "organization": "Brasil",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Santa Catarina. Lei nº 18.330, de 5 de janeiro de 2022. Institui a Política Estadual de Transição Energética Justa e o Polo de Transição Energética Justa do Sul do Estado de Santa Catarina. Florianópolis: ALESC; 2022, com alterações posteriores.",
+      "url": "https://leis.alesc.sc.gov.br/ato-normativo/21328",
+      "organization": "Santa Catarina",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Secretaria de Estado do Meio Ambiente e da Economia Verde. Santa Catarina lidera debate sobre transição energética justa e amplia participação social na elaboração do plano. Florianópolis: SEMAE; 20 maio 2026.",
+      "url": "https://www.semae.sc.gov.br/santa-catarina-lidera-debate-sobre-transicao-energetica-justa-e-amplia-participacao-social-na-elaboracao-do-plano/",
+      "organization": "Secretaria de Estado do Meio Ambiente e da Economia Verde",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Ministério Público Federal. COP30: MPF combate danos ambientais gerados pela mineração de carvão no sul de Santa Catarina. Brasília: MPF; 28 out. 2025.",
+      "url": "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/cop30-mpf-combate-danos-ambientais-gerados-pela-mineracao-de-carvao-no-sul-de-santa-catarina",
+      "organization": "Ministério Público Federal",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Teixeira LL. Análise e contribuições para uma Transição Energética Justa na Região Carbonífera do Estado de Santa Catarina [dissertação]. Araranguá: Universidade Federal de Santa Catarina; 2023.",
+      "url": "https://repositorio.ufsc.br/handle/123456789/251116",
+      "organization": "Teixeira LL",
+      "verifiedAt": "2026-11-04"
+    },
+    {
+      "title": "Grassi ER. Transição Energética Justa: estudo das políticas públicas e da percepção dos atores, com foco na região carbonífera catarinense [dissertação]. Araranguá: Universidade Federal de Santa Catarina; 2026.",
+      "url": "https://repositorio.ufsc.br/handle/123456789/272934",
+      "organization": "Grassi ER",
+      "verifiedAt": "2026-11-04"
+    }
+  ],
+  "rejectedSources": [],
+  "openQuestions": [],
+  "factChecks": [
+    {
+      "statement": "SGB: 1.768,06 ha no recorte institucional e aproximadamente 191,78 ha recuperados até 2024; não total regional.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://www.sgb.gov.br/documents/d/guest/relato_integrado_cprm_2024_final_gov280525-pdf"
+      ]
+    },
+    {
+      "statement": "Teixeira: dissertação aprovada em 30/06/2023, com análise bibliográfica/crítica e recomendações, não comprovação de empreendimentos prontos.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://repositorio.ufsc.br/handle/123456789/251116"
+      ]
+    },
+    {
+      "statement": "Grassi: dissertação aprovada em 20/02/2026; questionário com dez atores institucionais, limites de representatividade e sugestões de estudos complementares.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://repositorio.ufsc.br/handle/123456789/272934"
+      ]
+    },
+    {
+      "statement": "Cardoso/Troian: estudo de caso não demonstra melhoria generalizada de toda a bacia; uso no artigo restrito à necessidade de acompanhamento temporal.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://rigeo.sgb.gov.br/handle/doc/25139"
+      ]
+    },
+    {
+      "statement": "Escopo federal de 2040, distinção entre os horizontes de 2050, alterações estaduais e distinção operacional remediação/reabilitação conferidos e qualificados na revisão de 05/11/2026.",
+      "status": "confirmed",
+      "sourceUrls": [
+        "https://www2.camara.leg.br/legin/fed/lei/2022/lei-14299-5-janeiro-2022-792216-publicacaooriginal-164327-pl.html",
+        "https://leis.alesc.sc.gov.br/ato-normativo/21328"
+      ]
+    }
+  ],
+  "imageRequirements": {
+    "origin": "Declaração editorial: Hero ChatGPT com logotipo aplicado no PowerPoint; infográficos 1/2 ChatGPT. Nenhuma ferramenta adicional presumida.",
+    "license": "Uso editorial de saída ChatGPT conforme os Termos de Uso da OpenAI: https://openai.com/policies/row-terms-of-use/ (vigência 01/01/2026). Procedência declarada pelo responsável editorial; sem licença Creative Commons, exclusividade ou registro da logomarca presumidos.",
+    "authorization": "Integração local como rascunho autorizada em 04/11/2026; publicação depende de autorização posterior. Atualização administrativa de 05/11/2026: publicação das imagens do ART-036 autorizada expressamente pelo responsável editorial nesta conversa, preservando os originais e a procedência.",
+    "credit": "ChatGPT (OpenAI); logotipo inserido em Microsoft PowerPoint, conforme declaração do responsável editorial.",
+    "alt": "Ilustração de duas pessoas coletando e analisando água de um rio na região carbonífera, com área minerada, vegetação, painéis solares e logomarca Sul Global; cena conceitual produzida com IA.",
+    "width": 1998,
+    "height": 1125,
+    "aspectRatio": "1998:1125",
+    "socialVersion": "Não produzida nesta etapa; capa original preservada.",
+    "usageRisk": "Ilustrações IA, não fotografias documentais. Origem declarada e termos contratuais não comprovam exclusividade ou registro marcário. Infográficos de 480 px têm limitação de legibilidade.",
+    "isDemoConfirmed": true
+  },
+  "conflictsOfInterestEvaluated": true,
+  "editorialRisks": [
+    "A declaração geral de conflitos do cadastro de Olavo Oliveira foi consultada como referência já existente; não se inventa nova declaração específica ou auditoria independente.",
+    "Autoria vinculada ao cadastro existente de Olavo Oliveira por continuidade da trilogia, a confirmar na aprovação editorial final se houver autoria diferente.",
+    "Preservação da redação não significa validação automática de todas as conclusões."
+  ],
+  "researchStatus": "ready-for-writing",
+  "concreteImpediments": []
+}

@@ -37,4 +37,6 @@ export default [
     "Unión Europea",
     "union-europea",
   ],
+  ["ufsc", "ufsc", "UFSC", "ufsc", "UFSC", "ufsc"],
+  ["ppges", "ppges", "PPGES", "ppges", "PPGES", "ppges"],
 ] as const;
