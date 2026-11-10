@@ -10,6 +10,9 @@ test("privacidade declara publicidade e limitações reais, sem prometer ausênc
   }
   const html = renderToStaticMarkup(createElement(component));
   expect(html).toContain("Adsterra de 160 × 600");
+  expect(html).toContain("Google AdSense");
+  expect(html).toContain('href="https://myadcenter.google.com/"');
+  expect(html).toContain('href="https://optout.aboutads.info/"');
   expect(html).toContain("1440 pixels");
   expect(html).toContain("bicea.org");
   expect(html).toContain('href="https://adsterra.com/privacy-policy-managed/"');

@@ -24,8 +24,7 @@ function MethodologyPage() {
           <p>
             Priorizamos questões relevantes para energia, sustentabilidade, ciência, tecnologia,
             desenvolvimento e o Sul Global. Atualidade, impacto público, valor educativo e
-            possibilidade real de verificação orientam a decisão; disponibilidade de material demo
-            não transforma uma pauta em conteúdo publicável.
+            possibilidade real de verificação orientam a decisão.
           </p>
           <h2>Tipos de conteúdo</h2>
           <p>
@@ -37,10 +36,9 @@ function MethodologyPage() {
           <h2>Fontes e revisão</h2>
           <p>
             Fontes são registradas com título, origem, URL, tipo e data de verificação. Domínio ou
-            reputação não substituem conferência do conteúdo. A operação atual pode ser individual;
-            por isso não prometemos revisão jurídica, científica ou por uma equipe que ainda não
-            existe. Toda publicação exige uma decisão humana explícita e os guardrails do
-            repositório.
+            reputação não substituem conferência do conteúdo. A revisão compara afirmações com as
+            fontes citadas e distingue resultados publicados, projeções e interpretação editorial. A
+            decisão de publicar cabe à pessoa responsável pela revisão editorial.
           </p>
           <h2>Atualizações e correções</h2>
           <p>
@@ -56,9 +54,11 @@ function MethodologyPage() {
           </p>
           <h2>Uso responsável de IA</h2>
           <p>
-            IA pode apoiar organização, resumo, revisão, perguntas, comparação e tradução assistida.
-            Não pode inventar fontes, falas ou verificação, substituir revisão humana ou publicar
-            automaticamente. Participação substancial exige disclosure editorial.
+            A IA pode apoiar organização, resumo, revisão, comparação e tradução. A revisão humana
+            deve confirmar fontes, citações e dados antes da publicação. Em imagens assistidas por
+            IA, a revisão deve conferir rótulos, unidades e dados em relação às fontes e identificar
+            ilustrações conceituais. Quando a assistência for substancial, a nota de transparência
+            deve explicar sua função.
           </p>
         </div>
       </article>

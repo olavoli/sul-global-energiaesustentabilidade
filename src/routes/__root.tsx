@@ -1,9 +1,19 @@
-import { ADSENSE_PUBLISHER_ID, adsenseHeadScripts } from "@/lib/advertising/adsense";
+import {
+  ADSENSE_PUBLISHER_ID,
+  ADSENSE_SCRIPT_URL,
+  adsenseEnabled,
+  adsenseHeadScripts,
+  canLoadAdsense,
+  isAdsenseEditorialPage,
+} from "@/lib/advertising/adsense";
+import { searchDiscovery } from "@/content/discovery";
+import { getPublishedArticles, searchArticles } from "@/content/repository";
 import { languageForPath } from "@/content/i18n";
 import { EditorialLocaleContext } from "@/content/locale-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
+  redirect,
   Link,
   createRootRouteWithContext,
   useRouter,
@@ -79,7 +89,25 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+// Auto ads can keep running after their script element is removed from the head.
+const initialDocumentHref =
+  typeof window === "undefined" ? undefined : window.location.pathname + window.location.search;
+const documentLoadedAdsense =
+  typeof document !== "undefined" &&
+  Boolean(document.querySelector(`script[src="${ADSENSE_SCRIPT_URL}"]`));
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  beforeLoad: ({ location, preload }) => {
+    if (
+      adsenseEnabled &&
+      !preload &&
+      initialDocumentHref !== undefined &&
+      location.pathname + location.searchStr !== initialDocumentHref &&
+      (canLoadAdsense(location.pathname) || documentLoadedAdsense)
+    ) {
+      throw redirect({ href: location.href, reloadDocument: true });
+    }
+  },
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -96,7 +124,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: siteConfig.locale },
       ...(!siteConfig.indexingEnabled ? [{ name: "robots", content: "noindex, nofollow" }] : []),
     ],
-    scripts: adsenseHeadScripts(),
     links: [
       {
         rel: "stylesheet",
@@ -125,11 +152,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const { location, matches, statusCode } = useRouterState();
+  const { pathname, search } = location;
+  const query = typeof search.q === "string" ? search.q : "";
+  const locale = languageForPath(pathname);
+  const listingHasArticles =
+    adsenseEnabled &&
+    (pathname === "/"
+      ? getPublishedArticles().length > 0
+      : pathname === "/busca"
+        ? searchArticles(query).length > 0
+        : locale !== "pt-BR" && (pathname === "/en" || pathname === "/es")
+          ? searchDiscovery(locale, query, {
+              category: typeof search.category === "string" ? search.category : undefined,
+              tag: typeof search.tag === "string" ? search.tag : undefined,
+            }).length > 0
+          : false);
+  const scripts = adsenseHeadScripts(
+    adsenseEnabled,
+    initialDocumentHref === undefined
+      ? isAdsenseEditorialPage(statusCode, matches, listingHasArticles)
+      : documentLoadedAdsense,
+  );
   return (
     <html lang={languageForPath(pathname)}>
       <head>
         <HeadContent />
+        {scripts.map((script) => (
+          <script key={script.src} {...script} />
+        ))}
       </head>
       <body>
         {children}

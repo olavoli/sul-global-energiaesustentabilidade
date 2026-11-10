@@ -9,7 +9,7 @@ const items = [
   { label: "Hidrogênio", to: "/busca", search: { q: "hidrogênio" } },
   { label: "Energia solar", to: "/busca", search: { q: "solar" } },
   { label: "Política energética", to: "/categoria/$slug", params: { slug: "energia" as const } },
-  { label: "Sul Global", to: "/busca", search: { q: "sul global" } },
+  { label: "Sul Global", to: "/sobre" },
 ];
 
 export function InPauta() {
@@ -34,7 +34,7 @@ export function InPauta() {
             return (
               <Link
                 key={item.label}
-                to="/busca"
+                to={item.to}
                 search={item.search}
                 className="rounded-full border border-border px-3 py-1 text-sm text-foreground transition-colors hover:border-primary hover:text-primary"
               >
