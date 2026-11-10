@@ -4,12 +4,17 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "./Container";
+import { getArticlesByCategory } from "@/content/repository";
 import { categories } from "@/data/categories";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
   const locale = useEditorialLocale();
   const ui = articleUi[locale];
+  const hasDevelopmentArticles = getArticlesByCategory("desenvolvimento").length > 0;
+  const footerCategories = categories.filter(
+    (category) => category.slug !== "desenvolvimento" || hasDevelopmentArticles,
+  );
   return (
     <footer lang="pt-BR" className="mt-24 border-t border-border bg-muted/40">
       <Container className="grid gap-10 py-14 md:grid-cols-4">
@@ -36,7 +41,7 @@ export function SiteFooter() {
             {locale === "en" ? "Categories" : locale === "es" ? "Categorías" : "Categorias"}
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {categories.map((c) => (
+            {footerCategories.map((c) => (
               <li key={c.slug}>
                 <Link
                   to={taxonomyPath(sourceTerm("category", c.slug), locale)}

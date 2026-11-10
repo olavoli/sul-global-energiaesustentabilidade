@@ -23,7 +23,7 @@ function PrivacyPage() {
     <LegalPage
       eyebrow="Privacidade"
       title="Política de privacidade"
-      updatedAt="22 de outubro de 2026"
+      updatedAt="9 de novembro de 2026"
     >
       <h2>Estado atual</h2>
       <p>
@@ -55,6 +55,20 @@ function PrivacyPage() {
         publicidade. Os consentimentos da newsletter e dos comentários não autorizam esse
         carregamento. A avaliação dos controles de privacidade aplicáveis à publicidade permanece
         pendente.
+      </p>
+      <p>
+        O portal também utiliza tecnologia do Google AdSense. Terceiros, incluindo o Google, podem
+        usar cookies para veicular anúncios com base em visitas anteriores ao Sul Global ou a outros
+        sites. O Google e seus parceiros publicitários podem usar esses cookies para personalizar
+        anúncios.
+      </p>
+      <p>
+        Consulte as{" "}
+        <a href="https://myadcenter.google.com/">configurações de publicidade do Google</a>, as{" "}
+        <a href="https://policies.google.com/technologies/ads?hl=pt-BR">
+          tecnologias publicitárias do Google
+        </a>{" "}
+        e as <a href="https://optout.aboutads.info/">opções de personalização de terceiros</a>.
       </p>
       <h2>Newsletter</h2>
       <p>

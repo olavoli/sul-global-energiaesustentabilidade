@@ -11,7 +11,7 @@ const es = "/es/articulo/tierras-raras-17-elementos-tecnologia-brasil-parte-1";
 function assert(value: unknown, message: string): asserts value {
   if (!value) throw new Error(message);
 }
-async function get(path: string, status: number) {
+async function get(path: string, status: number, adsEligible = status === 200) {
   const response = await worker.fetch(
     new Request(`https://sulglobalenergia.com.br${path}`),
     {},
@@ -23,7 +23,7 @@ async function get(path: string, status: number) {
     const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
     const scriptTags = (text: string) =>
       (text.match(/<script\b[^>]*>/gi) ?? []).filter((tag) => tag.includes(ADSENSE_SCRIPT_URL));
-    const enabled = !response.headers.get("x-robots-tag")?.includes("noindex");
+    const enabled = adsEligible && !response.headers.get("x-robots-tag")?.includes("noindex");
     assert(scriptTags(head).length === (enabled ? 1 : 0), `${path}: incorrect AdSense head count`);
     assert(scriptTags(html).length === (enabled ? 1 : 0), `${path}: duplicated AdSense script`);
     if (enabled) {
@@ -54,9 +54,23 @@ async function get(path: string, status: number) {
       `${path}: logo link missing`,
     );
   }
+  if (!adsEligible)
+    assert(!html.includes(ADSENSE_SCRIPT_URL), path + ": inesperado script AdSense");
   console.log(`OK ${path}: HTTP ${status}`);
   return html;
 }
+for (const path of [
+  "/busca",
+  "/busca?q=zzzauditoria",
+  "/categoria/desenvolvimento",
+  "/en?q=zzzauditoria",
+  "/es?q=zzzauditoria",
+  "/privacidade",
+]) {
+  const html = await get(path, 200, false);
+  assert(html.includes('name="google-adsense-account"'), path + ": verificação AdSense ausente");
+}
+await get("/404-auditoria-adsense", 404);
 const original = await get(pt, 200);
 assert(original.includes(`<html lang="pt-BR"`), "PT lang changed");
 const canonical = original.match(/rel="canonical" href="([^"]+)"/)?.[1];
@@ -136,5 +150,5 @@ for (const path of ["/en/article/o-que-e-potencia", "/es/articulo/o-que-e-potenc
   );
 }
 console.log(
-  "I18N SSR smoke: 13 local responses verified; discovery catalogs, full editions and draft exclusions preserved; no external requests.",
+  "I18N SSR smoke: 20 local responses verified; discovery catalogs, full editions and draft exclusions preserved; no external requests.",
 );

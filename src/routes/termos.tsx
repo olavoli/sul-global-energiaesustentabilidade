@@ -20,7 +20,7 @@ export const Route = createFileRoute("/termos")({
 
 function TermsPage() {
   return (
-    <LegalPage eyebrow="Termos" title="Termos de uso" updatedAt="9 de outubro de 2026">
+    <LegalPage eyebrow="Termos" title="Termos de uso" updatedAt="9 de novembro de 2026">
       <h2>Finalidade</h2>
       <p>
         O Sul Global publica conteúdo informativo e educativo. O material não substitui orientação
@@ -37,6 +37,10 @@ function TermsPage() {
         Links externos são oferecidos como referência e podem mudar ou possuir regras próprias. O
         portal pode corrigir, atualizar, suspender ou remover conteúdo para preservar precisão,
         segurança e integridade editorial.
+      </p>
+      <p>
+        A <a href="/metodologia">Metodologia editorial</a> descreve como o portal trata fontes,
+        atualizações e correções.
       </p>
       <h2>Comentários e moderação</h2>
       <p>
