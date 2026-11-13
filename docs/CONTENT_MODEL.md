@@ -115,7 +115,7 @@ ArticleFrontmatter = {
   coverAlt: string (não vazio)
   author: string (slug em content/autores/)
   category: enum das 6 categorias
-  tags: string[] (1..8 itens, kebab-case ou palavras)
+  tags: string[] (1..10 itens, kebab-case ou palavras)
   publishedAt: ISO date (YYYY-MM-DD)
   updatedAt: ISO date >= publishedAt
   readingTime: int (1..60, calculado ou manual)

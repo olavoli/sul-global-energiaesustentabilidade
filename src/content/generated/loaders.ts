@@ -47,6 +47,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/fusao-nuclear-o-que-mudou-em-2026.mdx"),
   "geotermia-de-nova-geracao": () =>
     import("../../../content/articles/geotermia-de-nova-geracao.mdx"),
+  "hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria": () =>
+    import("../../../content/articles/hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria.mdx"),
   "hidrogenio-verde-no-brasil-promessa-e-realidade": () =>
     import("../../../content/articles/hidrogenio-verde-no-brasil-promessa-e-realidade.mdx"),
   "leilao-a-6-analise-resultado-preliminar": () =>
