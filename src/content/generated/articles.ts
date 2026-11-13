@@ -2978,7 +2978,7 @@ export const articleRecords = [
     excerpt:
       "Uma análise sobre a pesquisa, os projetos demonstrativos, a legislação e as condições para o uso industrial do hidrogênio verde em Santa Catarina.",
     contentType: "analysis",
-    status: "approved",
+    status: "published",
     draftStage: "review-ready",
     author: "olavo-oliveira",
     category: "transicao-energetica",
@@ -2995,6 +2995,7 @@ export const articleRecords = [
       "transição energética",
     ],
     createdAt: "2026-11-13",
+    publishedAt: "2026-11-13",
     approvedAt: "2026-11-13",
     corrections: [],
     readingTime: 10,
