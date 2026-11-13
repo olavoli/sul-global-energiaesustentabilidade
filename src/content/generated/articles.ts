@@ -3055,7 +3055,10 @@ export const articleRecords = [
       },
     ],
     referencesInBody: true,
-    aiAssistance: "none",
+    aiAssistance: "limited",
+    aiDisclosure:
+      "Criação visual: As três imagens foram produzidas com ChatGPT (OpenAI). O logotipo da Hero foi inserido posteriormente no Microsoft Paint, enquanto os dois infográficos receberam edições no Microsoft PowerPoint. São ilustrações conceituais, não registros fotográficos documentais.\n\nPesquisa e revisão: A integração e a conferência das fontes foram assistidas por inteligência artificial. A publicação foi autorizada pelo responsável editorial do Sul Global Energia e Sustentabilidade em 13 de novembro de 2026, após as verificações técnicas, científicas e editoriais registradas no dossiê do artigo. A operação integral da microrrede da Celesc não foi confirmada até a conclusão da revisão, e essa limitação está indicada no texto.",
+    aiDisclosureMode: "detailed",
     canonicalUrl: "/artigo/hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria",
   },
   {
