@@ -39,4 +39,15 @@ export default [
   ],
   ["ufsc", "ufsc", "UFSC", "ufsc", "UFSC", "ufsc"],
   ["ppges", "ppges", "PPGES", "ppges", "PPGES", "ppges"],
+  ["celesc", "celesc", "CELESC", "celesc", "CELESC", "celesc"],
+  ["fapesc", "fapesc", "FAPESC", "fapesc", "FAPESC", "fapesc"],
+  ["weg", "weg", "WEG", "weg", "WEG", "weg"],
+  [
+    "transicao-energetica",
+    "transição energética",
+    "Energy transition",
+    "energy-transition",
+    "Transición energética",
+    "transicion-energetica",
+  ],
 ] as const;

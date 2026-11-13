@@ -308,4 +308,23 @@ export default [
         "Recuperación ambiental, calidad del agua, trabajo y gobernanza: los desafíos para reparar el territorio y construir el futuro de la región carbonífera de Santa Catarina.",
     },
   },
+  {
+    slug: "hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria",
+    sourceTitle:
+      "Hidrogênio verde em Santa Catarina: da pesquisa à indústria, o que já é realidade?",
+    sourceExcerpt:
+      "Uma análise sobre a pesquisa, os projetos demonstrativos, a legislação e as condições para o uso industrial do hidrogênio verde em Santa Catarina.",
+    en: {
+      title:
+        "Green hydrogen in Santa Catarina: what is already happening in research and industry?",
+      excerpt:
+        "An analysis of research, demonstration projects, legislation and the conditions for industrial use of green hydrogen in Santa Catarina.",
+    },
+    es: {
+      title:
+        "Hidrógeno verde en Santa Catarina: ¿qué es ya una realidad en la investigación y la industria?",
+      excerpt:
+        "Un análisis de la investigación, los proyectos de demostración, la legislación y las condiciones para el uso industrial del hidrógeno verde en Santa Catarina.",
+    },
+  },
 ];

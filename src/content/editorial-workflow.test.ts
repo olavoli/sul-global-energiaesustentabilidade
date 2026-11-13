@@ -9,6 +9,7 @@ import { createDraft } from "../../scripts/new-content";
 import { parseEditorialFile, validateArticleCollection } from "../../scripts/generate-content";
 import { createContentRepository } from "./repository";
 import { articleFrontmatterSchema, type ArticleFrontmatter } from "./schema";
+import { buildTagTopics } from "./tags";
 import { articleRecords } from "./generated/articles";
 import { generateSitemap } from "@/lib/distribution";
 import { methodologyHead } from "@/lib/methodology";
@@ -144,6 +145,29 @@ describe("guardrails editoriais de publicação", () => {
 
   test("tag equivalente não canônica é rejeitada com sugestão", () => {
     expect(() => parsed({ tags: ["solar"] })).toThrow("energia solar");
+  });
+
+  test("aceita dez tags, associa todas aos tópicos e rejeita a décima primeira", () => {
+    const tags = [
+      "hidrogênio",
+      "hidrogênio verde",
+      "santa catarina",
+      "ufsc",
+      "celesc",
+      "eletrólise",
+      "armazenamento",
+      "transição energética",
+      "fapesc",
+      "weg",
+    ];
+    expect(parsed({ tags: tags.slice(0, 8) }).tags).toHaveLength(8);
+    const article = parsed({ tags });
+    expect(article.tags).toEqual(tags);
+    const topics = buildTagTopics([article], "2026-07-13");
+    expect(topics.map(({ name }) => name).sort()).toEqual([...tags].sort());
+    expect(topics.every(({ articles }) => articles[0] === article)).toBe(true);
+    expect(() => parsed({ tags: [...tags, "indústria"] })).toThrow();
+    expect(() => parsed({ tags: [...tags.slice(1), "weg"] })).toThrow();
   });
 
   test("demo não aparece em produção", () => {

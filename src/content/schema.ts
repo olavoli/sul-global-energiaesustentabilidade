@@ -174,7 +174,7 @@ export const articleFrontmatterSchema = z
     draftStage: z.enum(["scaffold", "writing", "review-ready"]).default("scaffold"),
     author: slugSchema,
     category: z.enum(categorySlugs),
-    tags: z.array(z.string().min(1)).min(1).max(8),
+    tags: z.array(z.string().min(1)).min(1).max(10),
     createdAt: isoDateSchema.optional(),
     publishedAt: isoDateSchema.optional(),
     updatedAt: isoDateSchema.optional(),
