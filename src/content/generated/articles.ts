@@ -3003,8 +3003,8 @@ export const articleRecords = [
       src: "/images/articles/hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria/art-037-hero.png",
       alt: "Ilustração conceitual de equipamentos de hidrogênio verde e painéis solares, com uma profissional e o litoral ao fundo.",
       decorative: false,
-      width: 1721,
-      height: 939,
+      width: 1246,
+      height: 689,
       caption: "Ilustração conceitual editorial. Logotipo acrescentado no Microsoft Paint.",
       aiProvenance: {
         status: "verified",
