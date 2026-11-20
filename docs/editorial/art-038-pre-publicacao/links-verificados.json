@@ -1,0 +1,102 @@
+[
+  {
+    "url": "https://www.iea.org/reports/global-hydrogen-review-2026",
+    "status": 403,
+    "finalUrl": "https://www.iea.org/reports/global-hydrogen-review-2026"
+  },
+  {
+    "url": "https://www.ipea.gov.br",
+    "status": 200,
+    "finalUrl": "https://www.ipea.gov.br/"
+  },
+  {
+    "url": "https://fiesc.com.br",
+    "status": 200,
+    "finalUrl": "https://fiesc.com.br/"
+  },
+  {
+    "url": "https://www.weg.net/institutional/BR/pt/news/geral/weg-avanca-em-projetos-de-hidrogenio-de-baixo-carbono",
+    "status": 200,
+    "finalUrl": "https://www.weg.net/institutional/BR/pt/news/geral/weg-avanca-em-projetos-de-hidrogenio-de-baixo-carbono"
+  },
+  {
+    "url": "https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/fertilizantes",
+    "status": 404,
+    "finalUrl": "https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/fertilizantes"
+  },
+  {
+    "url": "https://www.weg.net/institutional/BR/pt/news/resultados-e-investimentos/weg-anuncia-investimentos-de-r-1-1-bilhao-para-expansao-fabril-em-santa-catarina",
+    "status": 200,
+    "finalUrl": "https://www.weg.net/institutional/BR/pt/news/resultados-e-investimentos/weg-anuncia-investimentos-de-r-1-1-bilhao-para-expansao-fabril-em-santa-catarina"
+  },
+  {
+    "url": "https://www.gov.br/portos-e-aeroportos",
+    "status": 200,
+    "finalUrl": "https://www.gov.br/portos-e-aeroportos/pt-br"
+  },
+  {
+    "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/resolucao-prioriza-desembarque-de-fertilizantes-minerais-nos-portos-brasileiros",
+    "status": 200,
+    "finalUrl": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/resolucao-prioriza-desembarque-de-fertilizantes-minerais-nos-portos-brasileiros"
+  },
+  {
+    "url": "https://www.marinha.mil.br/com4dn/base-naval-de-val-de-caes-apoia-operacao-do-navio-jaq-h1-em-projeto-de-transicao-energetica",
+    "status": 403,
+    "finalUrl": "https://www.marinha.mil.br/com4dn/base-naval-de-val-de-caes-apoia-operacao-do-navio-jaq-h1-em-projeto-de-transicao-energetica"
+  },
+  {
+    "url": "https://www.gov.br/antaq",
+    "status": 200,
+    "finalUrl": "https://www.gov.br/antaq/pt-br"
+  },
+  {
+    "url": "https://www.ahsenergia.com.br/blog/abastecimento-hidrogenio-jaq-h1-marina-itajai",
+    "status": 200,
+    "finalUrl": "https://www.ahsenergia.com.br/blog/abastecimento-hidrogenio-jaq-h1-marina-itajai"
+  },
+  {
+    "url": "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-net-zero-shipping-talks-to-resume-in-2026.aspx",
+    "status": 200,
+    "finalUrl": "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-net-zero-shipping-talks-to-resume-in-2026.aspx"
+  },
+  {
+    "url": "https://www.gov.br/ana",
+    "status": 200,
+    "finalUrl": "https://www.gov.br/ana/pt-br"
+  },
+  {
+    "url": "https://www.energy.gov/cmei/fuels/technical-targets-liquid-alkaline-electrolysis",
+    "status": 200,
+    "finalUrl": "https://www.energy.gov/cmei/fuels/technical-targets-liquid-alkaline-electrolysis"
+  },
+  {
+    "url": "https://www.irena.org/Publications/2023/Dec/Water-for-hydrogen-production",
+    "status": 403,
+    "finalUrl": "https://www.irena.org/Publications/2023/Dec/Water-for-hydrogen-production"
+  },
+  {
+    "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-o-relatorio-sintese-do-balanco-energetico-nacional-2026",
+    "status": 200,
+    "finalUrl": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-o-relatorio-sintese-do-balanco-energetico-nacional-2026"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14990.htm",
+    "status": "unavailable",
+    "category": "TypeError"
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14948.htm",
+    "status": "unavailable",
+    "category": "TypeError"
+  },
+  {
+    "url": "https://leis.alesc.sc.gov.br/ato-normativo/22556",
+    "status": 200,
+    "finalUrl": "https://leis.alesc.sc.gov.br/ato-normativo/22556"
+  },
+  {
+    "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-antecipa-regulamentacao-da-certificacao-de-hidrogenio-de-baixa-emissao-de-carbono",
+    "status": 200,
+    "finalUrl": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-antecipa-regulamentacao-da-certificacao-de-hidrogenio-de-baixa-emissao-de-carbono"
+  }
+]

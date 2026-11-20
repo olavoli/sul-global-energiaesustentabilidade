@@ -38,6 +38,7 @@ test("bibliografia manual do ART-031 conserva os 22 números e não desativa out
     "a-pandemia-salvou-o-sus",
     "agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
     "hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria",
+    "hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir",
     "terras-raras-o-brasil-pode-construir-sua-independencia-tecnologica-ate-2040-parte-3",
     "terras-raras-o-brasil-tem-os-minerais-mas-quem-domina-a-tecnologia-parte-2",
     "terras-raras-os-17-elementos-que-movem-a-tecnologia-parte-1",

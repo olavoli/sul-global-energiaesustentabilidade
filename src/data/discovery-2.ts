@@ -327,4 +327,20 @@ export default [
         "Un análisis de la investigación, los proyectos de demostración, la legislación y las condiciones para el uso industrial del hidrógeno verde en Santa Catarina.",
     },
   },
+  {
+    slug: "hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir",
+    sourceTitle: "Hidrogênio verde: onde Santa Catarina pode produzir, armazenar e consumir?",
+    sourceExcerpt:
+      "Indústria, fertilizantes, portos, energia, água e logística: condições para analisar a produção, o armazenamento e o consumo de hidrogênio em Santa Catarina.",
+    en: {
+      title: "Green hydrogen: where can Santa Catarina produce, store and consume it?",
+      excerpt:
+        "An analysis of industrial demand, electricity, water and logistics for potential hydrogen markets in Santa Catarina; scenarios do not confirm commercial plants.",
+    },
+    es: {
+      title: "Hidrógeno verde: ¿dónde puede Santa Catarina producirlo, almacenarlo y consumirlo?",
+      excerpt:
+        "Un análisis de demanda industrial, electricidad, agua y logística para mercados potenciales de hidrógeno en Santa Catarina; los escenarios no confirman plantas comerciales.",
+    },
+  },
 ];

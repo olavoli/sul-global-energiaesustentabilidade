@@ -1,0 +1,57 @@
+[
+  {
+    "original": "hero_hidrogenio_luva_epi_engenheira com logo.png",
+    "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero.png",
+    "width": 2000,
+    "height": 1125,
+    "sha256": "d539b9c414faa53f097eb658e138716dc97186b360e889bb7a40d6b91a1d8053",
+    "sources": [
+      {
+        "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero-720.webp",
+        "width": 720
+      },
+      {
+        "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero-1200.webp",
+        "width": 1200
+      },
+      {
+        "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero-2000.webp",
+        "width": 2000
+      }
+    ]
+  },
+  {
+    "original": "Imagem 1 - Mercados de Hidrogênio em Santa Catarina.png",
+    "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-imagem-1.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "21b81b7bede1c6b8261414a31b4a67c51c87a87fc8876f8083ed29352c21cd95",
+    "sources": [
+      {
+        "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-imagem-1-720.webp",
+        "width": 720
+      },
+      {
+        "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-imagem-1-941.webp",
+        "width": 941
+      }
+    ]
+  },
+  {
+    "original": "Imagem 2 - Hidrogênio Verde_ Três Caminhos ao Mercado.png",
+    "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-imagem-2.png",
+    "width": 941,
+    "height": 1672,
+    "sha256": "3e77cffac52f45099ffd41ac0a1e10b8972c7daba64ebb414f5c761c9440fe2a",
+    "sources": [
+      {
+        "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-imagem-2-720.webp",
+        "width": 720
+      },
+      {
+        "src": "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-imagem-2-941.webp",
+        "width": 941
+      }
+    ]
+  }
+]
