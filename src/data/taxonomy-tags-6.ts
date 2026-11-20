@@ -1,5 +1,15 @@
 /** Closed taxonomy entries: stable PT slug, PT label, EN label/slug, ES label/slug. */
 export default [
+  ["industria", "indústria", "Industry", "industry", "Industria", "industria"],
+  ["portos", "portos", "Ports", "ports", "Puertos", "puertos"],
+  [
+    "amonia-verde",
+    "amônia verde",
+    "Green ammonia",
+    "green-ammonia",
+    "Amoníaco verde",
+    "amoniaco-verde",
+  ],
   ["uso-da-terra", "uso da terra", "Land use", "land-use", "Uso de la tierra", "uso-de-la-tierra"],
   [
     "agua-e-energia",

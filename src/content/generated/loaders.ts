@@ -51,6 +51,8 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
     import("../../../content/articles/hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria.mdx"),
   "hidrogenio-verde-no-brasil-promessa-e-realidade": () =>
     import("../../../content/articles/hidrogenio-verde-no-brasil-promessa-e-realidade.mdx"),
+  "hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir": () =>
+    import("../../../content/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir.mdx"),
   "leilao-a-6-analise-resultado-preliminar": () =>
     import("../../../content/articles/leilao-a-6-analise-resultado-preliminar.mdx"),
   "materiais-criticos-e-a-nova-geopolitica-mineral": () =>

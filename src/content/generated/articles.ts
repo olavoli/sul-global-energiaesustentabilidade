@@ -3091,6 +3091,101 @@ export const articleRecords = [
     aiAssistance: "none",
   },
   {
+    slug: "hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir",
+    title: "Hidrogênio verde: onde Santa Catarina pode produzir, armazenar e consumir?",
+    subtitle: "Série especial: Hidrogênio verde em Santa Catarina | Parte 2 de 3)",
+    excerpt:
+      "Indústria, fertilizantes, portos, energia, água e logística: condições para analisar a produção, o armazenamento e o consumo de hidrogênio em Santa Catarina.",
+    contentType: "analysis",
+    status: "published",
+    draftStage: "review-ready",
+    author: "olavo-oliveira",
+    category: "transicao-energetica",
+    tags: [
+      "hidrogênio verde",
+      "santa catarina",
+      "transição energética",
+      "armazenamento de energia",
+      "indústria",
+      "portos",
+      "amônia verde",
+      "descarbonização",
+      "weg",
+    ],
+    createdAt: "2026-11-20",
+    publishedAt: "2026-11-20",
+    approvedAt: "2026-11-20",
+    corrections: [],
+    readingTime: 18,
+    cover: {
+      src: "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero.png",
+      alt: "Ilustração conceitual de engenheira com equipamentos de proteção em instalação de hidrogênio, com porto, navio e linhas elétricas ao fundo.",
+      decorative: false,
+      width: 2000,
+      height: 1125,
+      caption: "Ilustração conceitual editorial.",
+      credit: "SGES, (2026).",
+      aiProvenance: {
+        status: "verified",
+        contributions: [
+          {
+            role: "generation",
+            tool: "Pippit (pippit.ai) / Seedream 4.0",
+          },
+          {
+            role: "editing",
+            tool: "Microsoft PowerPoint",
+          },
+        ],
+        year: 2026,
+      },
+      license:
+        "Uso editorial autorizado pelo responsável que forneceu a imagem; geração no Pippit com Seedream 4.0 e logotipo inserido no Microsoft PowerPoint. Sujeito aos Termos de Serviço do Pippit e às condições dos materiais e direitos de terceiros aplicáveis; não se presume exclusividade autoral. Condições consultadas em 20 de novembro de 2026: https://www.pippit.ai/clause/terms-of-service e https://www.pippit.ai/blog/ai-image/what-is-ai-image-licensing",
+      sources: [
+        {
+          src: "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero-720.webp",
+          width: 720,
+        },
+        {
+          src: "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero-1200.webp",
+          width: 1200,
+        },
+        {
+          src: "/images/articles/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir/art-038-hero-2000.webp",
+          width: 2000,
+        },
+      ],
+    },
+    featured: false,
+    isDemo: false,
+    sponsored: false,
+    sources: [
+      {
+        title: "Technical Targets for Liquid Alkaline Electrolysis",
+        url: "https://www.energy.gov/cmei/fuels/technical-targets-liquid-alkaline-electrolysis",
+        organizationOrAuthor: "U.S. Department of Energy",
+        verifiedAt: "2026-11-20",
+        type: "official",
+        isDemo: false,
+      },
+      {
+        title: "Global Hydrogen Review 2026",
+        url: "https://www.iea.org/reports/global-hydrogen-review-2026",
+        organizationOrAuthor: "International Energy Agency",
+        publishedAt: "2026-06-18",
+        verifiedAt: "2026-11-20",
+        type: "official",
+        isDemo: false,
+      },
+    ],
+    referencesInBody: true,
+    aiAssistance: "limited",
+    aiDisclosure:
+      "Criação visual: A imagem Hero foi produzida com a plataforma Pippit (pippit.ai), utilizando o modelo Seedream 4.0, e o logotipo foi inserido posteriormente no Microsoft PowerPoint. Os dois infográficos foram produzidos com ChatGPT (OpenAI). São ilustrações conceituais, não registros fotográficos documentais.\n\nPesquisa e revisão: A elaboração, a integração e a conferência das fontes foram assistidas por inteligência artificial. Os cenários industriais, modelos de negócio e mercados potenciais apresentados possuem caráter analítico e prospectivo, não constituindo confirmação de empreendimentos comerciais em operação. A publicação está condicionada às verificações técnicas, científicas e editoriais do Sul Global Energia e Sustentabilidade.",
+    aiDisclosureMode: "detailed",
+    canonicalUrl: "/artigo/hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir",
+  },
+  {
     slug: "leilao-a-6-analise-resultado-preliminar",
     title: "Leilão A-6: análise do resultado preliminar",
     subtitle:

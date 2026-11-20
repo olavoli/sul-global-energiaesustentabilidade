@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-11-20T21:04:51.230Z",
+  "method": "HTTP GET; falhas de automação não invalidam por si a fonte; revisão oficial documental registrada separadamente",
+  "references": [
+    {
+      "number": 1,
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026",
+      "http": 403
+    },
+    {
+      "number": 2,
+      "url": "https://repositorio.ipea.gov.br/bitstreams/0b64926d-a7ae-46dc-abd5-5886824728da/download",
+      "http": 200
+    },
+    {
+      "number": 3,
+      "url": "https://observatorio.fiesc.com.br/sites/default/files/2025-05/Atlas-da-Competitividade-2024.pdf",
+      "http": 200
+    },
+    {
+      "number": 4,
+      "url": "https://www.weg.net/institutional/BR/pt/news/geral/weg-avanca-em-projetos-de-hidrogenio-de-baixo-carbono",
+      "http": 200
+    },
+    {
+      "number": 5,
+      "url": "https://www.weg.net/institutional/BR/pt/news/resultados-e-investimentos/weg-anuncia-investimentos-de-r-1-1-bilhao-para-expansao-fabril-em-santa-catarina",
+      "http": 200
+    },
+    {
+      "number": 6,
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/resolucao-prioriza-desembarque-de-fertilizantes-minerais-nos-portos-brasileiros",
+      "http": 200
+    },
+    {
+      "number": 7,
+      "url": "https://www.gov.br/mdic/pt-br/assuntos/sdic/confert/pnf",
+      "http": 200
+    },
+    {
+      "number": 8,
+      "url": "https://www.gov.br/portos-e-aeroportos/pt-br/assuntos/noticias/2025/09/com-investimentos-de-r-436-mi-portos-de-santa-catarina-terao-operacoes-ampliadas",
+      "http": 200
+    },
+    {
+      "number": 9,
+      "url": "https://www.portoitapoa.com/sustentabilidade/porto-itapoa-publica-relatorio-de-sustentabilidade-referente-ao-ano-de-2025/",
+      "http": 200
+    },
+    {
+      "number": 10,
+      "url": "https://www.gov.br/antaq/pt-br/central-de-conteudos/estudos-e-pesquisas-da-antaq-1/copy5_of_GIZAL23A_240429_P6_RelatorioFinal_V6.0.pdf/@@display-file/file",
+      "http": 200
+    },
+    {
+      "number": 11,
+      "url": "https://www.marinha.mil.br/com4dn/base-naval-de-val-de-caes-apoia-operacao-do-navio-jaq-h1-em-projeto-de-transicao-energetica",
+      "http": 403
+    },
+    {
+      "number": 12,
+      "url": "https://www.ahsenergia.com.br/blog/abastecimento-hidrogenio-jaq-h1-marina-itajai",
+      "http": 200
+    },
+    {
+      "number": 13,
+      "url": "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-net-zero-shipping-talks-to-resume-in-2026.aspx",
+      "http": 200
+    },
+    {
+      "number": 14,
+      "url": "https://www.epe.gov.br/pt/imprensa/noticias/epe-publica-o-relatorio-sintese-do-balanco-energetico-nacional-2026",
+      "http": 200
+    },
+    {
+      "number": 15,
+      "url": "https://www.energy.gov/cmei/fuels/technical-targets-liquid-alkaline-electrolysis",
+      "http": 200
+    },
+    {
+      "number": 16,
+      "url": "https://www.irena.org/Publications/2023/Dec/Water-for-hydrogen-production",
+      "http": 403
+    },
+    {
+      "number": 17,
+      "url": "https://www.gov.br/ana/pt-br/acesso-a-informacao/perguntas-frequentes",
+      "http": 200
+    },
+    {
+      "number": 18,
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/trade-and-infrastructure",
+      "http": 403
+    },
+    {
+      "number": 19,
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14948.htm",
+      "http": null,
+      "limitation": "TypeError"
+    },
+    {
+      "number": 20,
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14990.htm",
+      "http": null,
+      "limitation": "TypeError"
+    },
+    {
+      "number": 21,
+      "url": "https://leis.alesc.sc.gov.br/ato-normativo/22556",
+      "http": 200
+    },
+    {
+      "number": 22,
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-antecipa-regulamentacao-da-certificacao-de-hidrogenio-de-baixa-emissao-de-carbono",
+      "http": 200
+    }
+  ]
+}
