@@ -1,0 +1,36 @@
+{
+  "words": 3475,
+  "nonemptyParagraphs": 65,
+  "substantiveParagraphsPreserved": 63,
+  "missing": [],
+  "references": 19,
+  "firstCitationOrder": [1, 2, 3, 4, 5, 6, 8, 7, 9, 10, 11, 12, 13, 14, 15, 16, 18, 17, 19],
+  "italics": [
+    "Entre a euforia dos anúncios bilionários e a frieza das planilhas de custo, o futuro energético do estado esbarra em uma barreira invisível: a disposição humana e corporativa de pagar pela descarbonização.",
+    "Global Hydrogen Review 2026",
+    "offtake agreements"
+  ],
+  "wordDirectItalicRuns": 0,
+  "italicHandling": "Marcações literais com asteriscos do Word interpretadas como ênfase Markdown; nenhuma ocorrência excluída.",
+  "imagePositions": {
+    "hero": 1,
+    "figure1": 26,
+    "figure2": 49,
+    "figure3": 85
+  },
+  "transparencyExact": true,
+  "originalImagesByteIdentical": true,
+  "status": "draft",
+  "tags": [
+    "hidrogênio verde",
+    "santa catarina",
+    "transição energética",
+    "indústria",
+    "amônia verde",
+    "descarbonização",
+    "weg",
+    "ufsc",
+    "celesc",
+    "portos"
+  ]
+}

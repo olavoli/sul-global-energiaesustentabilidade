@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-22",
+  "branch": "codex/art-039-integracao",
+  "state": "draft/writing",
+  "editorialGeneration": {
+    "articles": 52,
+    "demos": 12,
+    "errors": 0,
+    "warnings": 27,
+    "art039Warnings": 0
+  },
+  "mdx": "passed",
+  "wordContent": "63 parágrafos de conteúdo representados; 19 referências; itálicos; cinco pontos-chave; destaque",
+  "transparency": "exact",
+  "pngHashes": "4/4 identical",
+  "responsiveDerivatives": 9,
+  "typescript": "passed",
+  "lint": {
+    "result": "passed",
+    "command": "node node_modules/eslint/bin/eslint.js . --ignore-pattern '.wrangler/**'",
+    "scope": "Código-fonte completo, sem artefatos locais gerados de dry-run; regras não alteradas."
+  },
+  "tests": {
+    "passed": 353,
+    "failed": 0,
+    "files": 55,
+    "assertions": 6188,
+    "scope": [
+      "src/content",
+      "src/components/editorial",
+      "src/components/article",
+      "src/components/navigation/science-menu.test.ts",
+      "scripts/staging/staging-readiness.test.ts"
+    ]
+  },
+  "productionBuild": "passed, not deployed",
+  "viewports": [1440, 768, 390],
+  "horizontalOverflow": false,
+  "zoomKeyboardFocus": "passed",
+  "researchGate": "blocked by documented scientific/bibliographic sanitation; schema valid",
+  "notExecuted": [
+    "commit",
+    "push",
+    "PR",
+    "remote CI",
+    "deploy",
+    "OAuth",
+    "social posts",
+    "paid inference"
+  ],
+  "otherArticlesChanged": false
+}

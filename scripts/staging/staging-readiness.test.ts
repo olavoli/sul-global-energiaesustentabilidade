@@ -158,6 +158,7 @@ describe("Sprint 19 — staging e ensaio seguro", () => {
     expect(manifest).toContain('"VITE_ALLOW_DEMO_CONTENT": "true"');
     expect(manifest).toContain('"NEWSROOM_SCHEDULE_ENABLED": "false"');
     expect(getPublishedArticles().map(({ slug }) => slug)).toEqual([
+      "a-termodinamica-do-dinheiro-o-que-falta-para-o-hidrogenio-verde-decolar-em-santa-catarina-ate-2030",
       "hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir",
       "hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria",
       "transicao-energetica-justa-em-santa-catarina-quem-recupera-o-territorio-e-constroi-o-futuro-depois-do-carvao-parte-3",

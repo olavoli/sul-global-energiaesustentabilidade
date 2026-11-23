@@ -1,0 +1,188 @@
+{
+  "verifiedAt": "2026-11-22",
+  "references": [
+    {
+      "reference": 1,
+      "status": "confirmed",
+      "claim": "Demanda acima de 100 Mt e baixa emissão próxima de 1 Mt em 2025.",
+      "evidence": "IEA Demand consultada.",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/demand",
+      "originalNumber": 1
+    },
+    {
+      "reference": 2,
+      "status": "confirmed",
+      "claim": "Diferença entre pipeline e produção comprometida por FID.",
+      "evidence": "IEA Production: 27 Mt anunciados versus 4,3 Mt comprometidos para 2030.",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/production",
+      "originalNumber": 2
+    },
+    {
+      "reference": 3,
+      "status": "confirmed",
+      "claim": "Custos dependem de rota, eletricidade e premissas.",
+      "evidence": "Nota EPE/DEA/SEE/014/2025 identificada; exercício 52 kWh/kg é hipótese.",
+      "url": "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/roadmap-tecnologico-de-hidrogenio",
+      "originalNumber": 3
+    },
+    {
+      "reference": 4,
+      "status": "confirmed-with-access-limit",
+      "claim": "Energia, eletrolisadores e escala afetam custos.",
+      "evidence": "Conteúdo oficial consultado; GET direto 403.",
+      "url": "https://www.irena.org/Energy-Transition/Technology/Hydrogen/Electrolyser-costs",
+      "originalNumber": 4
+    },
+    {
+      "reference": 5,
+      "status": "confirmed",
+      "claim": "1,7 Mt de novos acordos e cerca de 20% dos volumes firmes.",
+      "evidence": "Citação IEA conservada no dado de contratos; investimento WEG agora tem fonte corporativa própria.",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/executive-summary",
+      "originalNumber": 5
+    },
+    {
+      "reference": 6,
+      "status": "confirmed",
+      "claim": "WEG forneceu BESS para projeto Furnas/Itumbiara.",
+      "evidence": "Comunicado de 10/12/2021, 300 kW/600 kWh, MG/GO. URL regional NI respondeu 200.",
+      "url": "https://www.weg.net/institutional/NI/pt/news/produtos-e-solucoes/weg-fornece-sistema-de-armazenamento-de-energia-para-planta-de-geracao-de-hidrogenio-verde-de-furnas",
+      "originalNumber": 6
+    },
+    {
+      "reference": 7,
+      "originalNumber": null,
+      "status": "confirmed",
+      "url": "https://www.weg.net/institutional/BR/pt/news/resultados-e-investimentos/weg-anuncia-investimentos-de-r-1-1-bilhao-para-expansao-fabril-em-santa-catarina",
+      "evidence": "Fonte primária adicional necessária ao saneamento; consulta direta/documental registrada."
+    },
+    {
+      "reference": 8,
+      "status": "confirmed",
+      "claim": "Agropecuária catarinense relativa a 2025.",
+      "evidence": "Ano bibliográfico corrigido para 2026; período dos dados 2025 preservado; citação vinculada à agropecuária.",
+      "url": "https://docweb.epagri.sc.gov.br/website_cepa/publicacoes/Desempenho_do_Agronegocio_2025.pdf",
+      "originalNumber": 7
+    },
+    {
+      "reference": 9,
+      "originalNumber": null,
+      "status": "confirmed",
+      "url": "https://www.scottish-enterprise.com/media/21op3k0y/hydrogen-factsheet-ammonia.pdf",
+      "evidence": "Fonte primária adicional necessária ao saneamento; consulta direta/documental registrada."
+    },
+    {
+      "reference": 10,
+      "status": "confirmed",
+      "claim": "Importações de 45,5 Mt de fertilizantes em 2025.",
+      "evidence": "MAPA de 27/10/2026. Não equivale a demanda contratada local de H₂.",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/resolucao-prioriza-desembarque-de-fertilizantes-minerais-nos-portos-brasileiros",
+      "originalNumber": 8
+    },
+    {
+      "reference": 11,
+      "status": "confirmed",
+      "claim": "Relatório Portonave 2025 com asseguração independente.",
+      "evidence": "Notícia de 29/05/2026; não comprova abastecimento de amônia.",
+      "url": "https://www.portonave.com.br/pt/todas-as-noticias/portonave-divulga-relatorio-de-sustentabilidade-2025-com-asseguracao-independente",
+      "originalNumber": 9
+    },
+    {
+      "reference": 12,
+      "status": "confirmed",
+      "claim": "Infraestrutura e combustíveis alternativos com baixa implantação.",
+      "evidence": "IEA Trade and Infrastructure consultada; referência à IMO não é norma emitida pela IMO.",
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/trade-and-infrastructure",
+      "originalNumber": 10
+    },
+    {
+      "reference": 13,
+      "status": "confirmed",
+      "claim": "Inauguração UFSC/Sapiens Parque em 2023.",
+      "evidence": "Recuperada página institucional equivalente da inauguração de 25/08/2023, consultada diretamente.",
+      "url": "https://noticias.ufsc.br/2023/08/ufsc-inaugura-primeira-usina-de-hidrogenio-verde-de-sc/",
+      "originalNumber": 11
+    },
+    {
+      "reference": 14,
+      "status": "corroborated-access-limited",
+      "claim": "MultiLab inaugurado em 14/07/2025.",
+      "evidence": "Original preservada; consulta direta não concluída. Fato corroborado pela notícia acessível da Fapesc, citada no corpo.",
+      "url": "https://reitoria.ufsc.br/2025/07/14/parceria-ufsc-e-governo-do-estado-inaugura-laboratorio-de-ponta-em-hidrogenio-verde/",
+      "originalNumber": 12
+    },
+    {
+      "reference": 15,
+      "originalNumber": null,
+      "status": "confirmed",
+      "url": "https://fapesc.sc.gov.br/fapesc-impulsiona-transicao-energetica-com-inauguracao-de-laboratorio-na-ufsc/",
+      "evidence": "Fonte primária adicional necessária ao saneamento; consulta direta/documental registrada."
+    },
+    {
+      "reference": 16,
+      "status": "confirmed-historical",
+      "claim": "Microrrede em Faxinal dos Guedes em desenvolvimento.",
+      "evidence": "GET 200 e divulgação histórica parcial. Operação integral atual não confirmada.",
+      "url": "https://www.celesc.com.br/listagem-noticias/transicao-energetica-projeto-de-hidrogenio-verde-da-celesc-esta-40-concluido",
+      "originalNumber": 13
+    },
+    {
+      "reference": 17,
+      "status": "confirmed-with-access-limit",
+      "claim": "Marco legal do hidrogênio de baixa emissão.",
+      "evidence": "Acesso Planalto sofreu desafio; vínculo e conteúdo confirmados no Decreto oficial do Senado.",
+      "url": "https://planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L14948.htm",
+      "originalNumber": 14
+    },
+    {
+      "reference": 18,
+      "status": "confirmed",
+      "claim": "Lei 14.990 de 27/09/2024 e PHBC.",
+      "evidence": "Texto consolidado consultado: créditos 2030–2034 após Lei 15.269/2025. Artigo não afirma concessão anterior.",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14990.htm",
+      "originalNumber": 15
+    },
+    {
+      "reference": 19,
+      "status": "confirmed",
+      "claim": "Decreto 13.096 de 12/08/2026 regulamenta leis e certificação.",
+      "evidence": "Ementa ajustada para regulamentação; regime instituído pela lei.",
+      "url": "https://legis.senado.gov.br/norma/43676765/publicacao/43679240",
+      "originalNumber": 16
+    },
+    {
+      "reference": 20,
+      "status": "confirmed-link-repaired",
+      "claim": "Lei 19.062 de 01/10/2024, DOE 02/10/2024.",
+      "evidence": "Somente hiperlink OOXML malformado corrigido para URL legível original.",
+      "url": "https://leis.alesc.sc.gov.br/ato-normativo/22556",
+      "originalNumber": 18
+    },
+    {
+      "reference": 21,
+      "status": "confirmed",
+      "claim": "Antecipação da agenda de certificação pela ANP.",
+      "evidence": "Notícia outubro/2026: início previsto novembro/2026, conclusão outubro/2027. Não é certificação já operacional.",
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-antecipa-regulamentacao-da-certificacao-de-hidrogenio-de-baixa-emissao-de-carbono/",
+      "originalNumber": 17
+    },
+    {
+      "reference": 22,
+      "originalNumber": null,
+      "status": "confirmed",
+      "url": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2023/Dec/IRENA_Bluerisk_Water_for_hydrogen_production_2023.pdf",
+      "evidence": "Fonte primária adicional necessária ao saneamento; consulta direta/documental registrada."
+    },
+    {
+      "reference": 23,
+      "status": "confirmed",
+      "claim": "Outorga e competências por domínio hídrico.",
+      "evidence": "ANA mantida apenas para outorga. Dado hídrico agora vinculado à IRENA/Bluerisk.",
+      "url": "https://www.gov.br/ana/pt-br/canais_atendimento/perguntas-frequentes/perguntas-frequentes-1",
+      "originalNumber": 19
+    }
+  ],
+  "originalReferencesPreserved": 19,
+  "finalReferences": 23,
+  "correctionsAuthorized": true
+}

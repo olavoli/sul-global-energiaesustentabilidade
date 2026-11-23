@@ -343,4 +343,23 @@ export default [
         "Un análisis de demanda industrial, electricidad, agua y logística para mercados potenciales de hidrógeno en Santa Catarina; los escenarios no confirman plantas comerciales.",
     },
   },
+  {
+    slug: "a-termodinamica-do-dinheiro-o-que-falta-para-o-hidrogenio-verde-decolar-em-santa-catarina-ate-2030",
+    sourceTitle:
+      "A Termodinâmica do Dinheiro: O que falta para o hidrogênio verde decolar em Santa Catarina até 2030?",
+    sourceExcerpt:
+      "Custos, contratos, financiamento, amônia e cenários qualitativos até 2030: as condições para o hidrogênio verde avançar em Santa Catarina.",
+    en: {
+      title:
+        "The thermodynamics of money: what must change for green hydrogen to take off in Santa Catarina by 2030?",
+      excerpt:
+        "Costs, contracts, finance, ammonia and illustrative scenarios to 2030: conditions for green hydrogen to advance in Santa Catarina.",
+    },
+    es: {
+      title:
+        "La termodinámica del dinero: ¿qué falta para que el hidrógeno verde despegue en Santa Catarina hacia 2030?",
+      excerpt:
+        "Costos, contratos, financiación, amoníaco y escenarios ilustrativos hasta 2030: condiciones para avanzar con el hidrógeno verde en Santa Catarina.",
+    },
+  },
 ];

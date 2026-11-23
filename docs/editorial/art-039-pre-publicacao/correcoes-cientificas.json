@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-22",
+  "authorization": "Saneamento científico final autorizado nesta conversa; publicação condicionada aos gates.",
+  "changes": [
+    {
+      "before": "Um estudo lançado em 2025 pela Empresa de Pesquisa Energética (EPE) em parceria com o Itaipu Parquetec destrincha essas rotas no contexto brasileiro, provando que a busca por um preço único nacional é uma quimera [3]. Diferentes eficiências de conversão e origens da eletricidade desenham cenários diametralmente opostos. Para tangibilizar essa abstração, suponhamos um sistema operando com uma eficiência plausível de 52 kWh por quilograma de gás produzido. Se a energia for contratada a US$ 40/MWh, o pedágio elétrico embutido será de US$ 2,08/kg. Caso o megawatt-hora salte para US$ 80/MWh, a parcela elétrica isolada já alcança US$ 4,16/kg.",
+      "after": "Um estudo lançado em 2025 pela Empresa de Pesquisa Energética (EPE) em parceria com o Itaipu Parquetec destrincha essas rotas no contexto brasileiro, provando que a busca por um preço único nacional é uma quimera [3]. Diferentes eficiências de conversão e origens da eletricidade desenham cenários diametralmente opostos. Para tangibilizar essa abstração, suponhamos um sistema operando com um consumo elétrico específico ilustrativo de 52 kWh por quilograma de gás produzido. Se a energia for contratada a US$ 40/MWh, o pedágio elétrico embutido será de US$ 2,08/kg. Caso o megawatt-hora salte para US$ 80/MWh, a parcela elétrica isolada já alcança US$ 4,16/kg.",
+      "reason": "Precisão dimensional: consumo específico, não eficiência adimensional; cálculo ilustrativo preservado."
+    },
+    {
+      "before": "O dinamismo econômico do estado atrai olhares, mas convém separar o potencial latente da liquidez imediata. No eixo Norte, a vocação para máquinas e automação é inegável. A WEG ilustra magistralmente essa inserção ao fornecer sistemas críticos para a usina experimental de Furnas em Goiás, validando sua engenharia na fronteira da transição energética [6]. Todavia, excelência em fabricar o hardware da transição não significa que a companhia pretenda atuar como produtora e vendedora de gás em seu estado natal. O investimento bilionário anunciado recentemente pela empresa visa ampliar sua capacidade de construir motores gigantes e compensadores síncronos, reforçando sua posição como fornecedora global de infraestrutura [5].",
+      "after": "O dinamismo econômico do estado atrai olhares, mas convém separar o potencial latente da liquidez imediata. No eixo Norte, a vocação para máquinas e automação é inegável. A WEG ilustra essa inserção ao fornecer um sistema de armazenamento de energia em baterias para a planta experimental de hidrogênio de Furnas, na Usina Hidrelétrica de Itumbiara, entre Minas Gerais e Goiás [6]. Esse fornecimento tecnológico não equivale a atuar como produtora e vendedora do gás em Santa Catarina. Separadamente, em setembro de 2025, a companhia anunciou investimento próprio de aproximadamente R$ 1,1 bilhão até 2028 para ampliar sua unidade de Energia, incluindo equipamentos de grande porte, motores e compensadores síncronos [20]. Trata-se de expansão fabril de equipamentos; não deve ser apresentada como anúncio de uma fábrica catarinense de hidrogênio.",
+      "reason": "Separar fornecimento BESS em Furnas e capex próprio em equipamentos; corrigir citação indevida à IEA."
+    },
+    {
+      "before": "Rumo ao Oeste, a pujança do agronegócio levanta a bandeira dos fertilizantes. Sintetizar amônia verde para nutrir as lavouras parece um casamento perfeito. Mas a química industrial não aceita atalhos românticos. Transformar hidrogênio em amônia demanda plantas de **Haber-Bosch** operando sob pressões colossais, unidades de separação de ar criogênicas e uma coreografia logística exaustiva. O Brasil importou impressionantes 45,5 milhões de toneladas de fertilizantes em 2025, revelando uma vulnerabilidade estratégica crônica alertada pelo Ministério da Agricultura [8]. Esse dado acende luzes vermelhas em Brasília, mas não serve como garantia de rentabilidade para uma fábrica isolada no interior catarinense. Competir com petroquímicas globais estabelecidas há décadas exige analisar friamente o custo do frete marítimo versus a produção doméstica [7].",
+      "after": "Rumo ao Oeste, a pujança do agronegócio levanta a bandeira dos fertilizantes [7]. Sintetizar amônia verde para nutrir as lavouras parece um casamento perfeito. Mas a química industrial não aceita atalhos românticos. Transformar hidrogênio em amônia demanda plantas de Haber-Bosch operando sob altas pressões, fornecimento de nitrogênio com pureza adequada e uma coreografia logística exaustiva. A separação de nitrogênio do ar pode utilizar destilação criogênica, adsorção por variação de pressão (PSA/VPSA) ou membranas, conforme escala e requisitos de pureza [21]. Separar o ar não é o mesmo que liquefazer hidrogênio para transporte nem que refrigerar ou pressurizar a amônia para armazenamento. A amônia pode ser mantida líquida por refrigeração, em torno de −33 °C à pressão atmosférica, ou por pressão a temperaturas mais elevadas; cada opção exige projeto e energia próprios, não incluídos na parcela elétrica ilustrativa da eletrólise [21]. O Brasil importou impressionantes 45,5 milhões de toneladas de fertilizantes em 2025, revelando uma vulnerabilidade estratégica crônica alertada pelo Ministério da Agricultura [8]. Esse dado acende luzes vermelhas em Brasília, mas não serve como garantia de rentabilidade para uma fábrica isolada no interior catarinense. Competir com petroquímicas globais estabelecidas há décadas exige analisar friamente o custo do frete marítimo versus a produção doméstica.",
+      "reason": "Distinguir separação, criogenia, liquefação e armazenamento; realocar citação Epagri para o contexto agrícola."
+    },
+    {
+      "before": "Santa Catarina consolidou um patrimônio científico que merece aplausos, desde que o interpretemos corretamente. A inauguração da usina experimental no Sapiens Parque pela UFSC em 2023 [11] e a recente abertura do Laboratório Multiusuário em 2025 [12] representam faróis de conhecimento. Ali testam-se a degradação de catalisadores e a integração de softwares de controle. É fundamental não exigir dessas instalações o que elas não foram desenhadas para ser. Uma universidade não visa ao lucro corporativo; sua moeda é o dado empírico. O mesmo raciocínio aplica-se à microrrede pioneira da Celesc em Faxinal dos Guedes [13]. O verdadeiro triunfo residirá na extração de lições sobre gestão de redes, e não na ilusão de que ali nascerá um polo exportador imediato.",
+      "after": "Santa Catarina consolidou um patrimônio científico que merece aplausos, desde que o interpretemos corretamente. A inauguração da usina experimental no Sapiens Parque pela UFSC em 2023 [11] e a recente abertura do Laboratório Multiusuário em 2025, também documentada pela Fapesc [12,23] representam faróis de conhecimento. Ali se desenvolvem pesquisas sobre produção, armazenamento, uso e controle de sistemas com hidrogênio. É fundamental não exigir dessas instalações o que elas não foram desenhadas para ser. Uma universidade não visa ao lucro corporativo; sua moeda é o dado empírico. O mesmo raciocínio aplica-se à microrrede pioneira da Celesc em Faxinal dos Guedes [13]. O verdadeiro triunfo residirá na extração de lições sobre gestão de redes, e não na ilusão de que ali nascerá um polo exportador imediato.",
+      "reason": "Corroborar inauguração com fonte primária acessível sem alegar leitura direta da página indisponível da Reitoria. Escopo de pesquisa limitado ao que as fontes institucionais documentam."
+    },
+    {
+      "before": "E há a água. A equação estequiométrica é enganadoramente modesta ao exigir nove litros de água pura para cada quilograma de hidrogênio. Na prática brutal da engenharia, os números inflacionam devido aos sistemas de osmose reversa e torres de resfriamento. Levantamentos indicam que o consumo real pode saltar para 17 a 22 litros por quilo de gás. Em um estado abençoado por chuvas, a sede industrial parece um problema menor. Ledo engano. A Agência Nacional de Águas (ANA) alerta constantemente que outorgas hídricas esbarram em usos múltiplos e conflitos regionais [19]. Instalar uma sede hídrica gigante no meio-oeste durante uma estiagem agrícola geraria tensões sociais explosivas. Recorrer à dessalinização no litoral resolve o conflito de uso, mas transfere o problema para a conta de luz e devolve ao oceano uma pluma de salmoura densa que exige modelagem ambiental cuidadosa.",
+      "after": "E há a água. A relação estequiométrica exige aproximadamente nove litros de água reagida por quilograma de hidrogênio, mas esse mínimo químico não é o consumo operacional total de uma instalação. Tratamento e purificação, perdas, purgas e sistemas de resfriamento acrescentam demandas que dependem da tecnologia, da qualidade da água e da fronteira considerada. A IRENA e a Bluerisk reportam médias de consumo de cerca de 17,5 L/kg para eletrólise PEM e 22,3 L/kg para eletrólise alcalina, distinguindo consumo de captação de água; não são valores universais de projeto [22]. Em um estado abençoado por chuvas, a sede industrial parece um problema menor. Ledo engano. A Agência Nacional de Águas (ANA) alerta constantemente que outorgas hídricas esbarram em usos múltiplos e conflitos regionais [19]. Instalar uma sede hídrica gigante no meio-oeste durante uma estiagem agrícola geraria tensões sociais explosivas. Recorrer à dessalinização no litoral pode reduzir a demanda por água doce, mas exige energia e gestão da salmoura, cuja descarga demanda avaliação ambiental cuidadosa.",
+      "reason": "Separar água estequiométrica de consumo e captação operacionais; fonte IRENA lida e figura S1 inspecionada; qualificar dessalinização."
+    }
+  ],
+  "referenceCount": 23,
+  "originalReferenceCount": 19,
+  "addedSources": [
+    "https://www.weg.net/institutional/BR/pt/news/resultados-e-investimentos/weg-anuncia-investimentos-de-r-1-1-bilhao-para-expansao-fabril-em-santa-catarina",
+    "https://www.scottish-enterprise.com/media/21op3k0y/hydrogen-factsheet-ammonia.pdf",
+    "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2023/Dec/IRENA_Bluerisk_Water_for_hydrogen_production_2023.pdf",
+    "https://fapesc.sc.gov.br/fapesc-impulsiona-transicao-energetica-com-inauguracao-de-laboratorio-na-ufsc/"
+  ],
+  "mapping": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 8,
+    "8": 10,
+    "9": 11,
+    "10": 12,
+    "11": 13,
+    "12": 14,
+    "13": 16,
+    "14": 17,
+    "15": 18,
+    "16": 19,
+    "17": 21,
+    "18": 20,
+    "19": 23,
+    "20": 7,
+    "21": 9,
+    "22": 22,
+    "23": 15
+  },
+  "limitations": [
+    {
+      "source": "UNIVERSIDADE FEDERAL DE SANTA CATARINA (UFSC). Parceria UFSC e Governo do Estado inaugura laboratório de ponta em hidrogênio verde. Florianópolis: UFSC; 2025. Disponível em: [https://reitoria.ufsc.br/2025/07/14/parceria-ufsc-e-governo-do-estado-inaugura-laboratorio-de-ponta-em-hidrogenio-verde/](https://reitoria.ufsc.br/2025/07/14/parceria-ufsc-e-governo-do-estado-inaugura-laboratorio-de-ponta-em-hidrogenio-verde/)",
+      "status": "Acesso direto não concluído; texto institucional indexado e confirmação direta Fapesc. Não se alega leitura direta da página da Reitoria."
+    }
+  ],
+  "ufscOriginalRecovered": {
+    "original": 11,
+    "replacement": "https://noticias.ufsc.br/2023/08/ufsc-inaugura-primeira-usina-de-hidrogenio-verde-de-sc/",
+    "reason": "Página institucional específica da mesma inauguração, acessível e com data confirmada."
+  }
+}
