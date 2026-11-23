@@ -36,6 +36,7 @@ test("bibliografia manual do ART-031 conserva os 22 números e não desativa out
       .sort(),
   ).toEqual([
     "a-pandemia-salvou-o-sus",
+    "a-termodinamica-do-dinheiro-o-que-falta-para-o-hidrogenio-verde-decolar-em-santa-catarina-ate-2030",
     "agrivoltaica-e-possivel-colher-alimentos-e-eletricidade-na-mesma-terra",
     "hidrogenio-verde-em-santa-catarina-da-pesquisa-a-industria",
     "hidrogenio-verde-onde-santa-catarina-pode-produzir-armazenar-e-consumir",

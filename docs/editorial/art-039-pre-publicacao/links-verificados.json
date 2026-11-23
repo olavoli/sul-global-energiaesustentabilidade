@@ -1,0 +1,120 @@
+{
+  "checkedAt": "2026-11-22",
+  "method": "GET público; 403 ou falha TLS não provam inexistência; nenhuma URL válida foi substituída por hipótese",
+  "references": [
+    {
+      "number": 1,
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/demand",
+      "status": 403,
+      "finalUrl": "https://www.iea.org/reports/global-hydrogen-review-2026/demand"
+    },
+    {
+      "number": 2,
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/production",
+      "status": 403,
+      "finalUrl": "https://www.iea.org/reports/global-hydrogen-review-2026/production"
+    },
+    {
+      "number": 3,
+      "url": "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/roadmap-tecnologico-de-hidrogenio",
+      "status": 200,
+      "finalUrl": "https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/roadmap-tecnologico-de-hidrogenio"
+    },
+    {
+      "number": 4,
+      "url": "https://www.irena.org/Energy-Transition/Technology/Hydrogen/Electrolyser-costs",
+      "status": 403,
+      "finalUrl": "https://www.irena.org/Energy-Transition/Technology/Hydrogen/Electrolyser-costs"
+    },
+    {
+      "number": 5,
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/executive-summary",
+      "status": 403,
+      "finalUrl": "https://www.iea.org/reports/global-hydrogen-review-2026/executive-summary"
+    },
+    {
+      "number": 6,
+      "url": "https://www.weg.net/institutional/NI/pt/news/produtos-e-solucoes/weg-fornece-sistema-de-armazenamento-de-energia-para-planta-de-geracao-de-hidrogenio-verde-de-furnas",
+      "status": 200,
+      "finalUrl": "https://www.weg.net/institutional/NI/pt/news/produtos-e-solucoes/weg-fornece-sistema-de-armazenamento-de-energia-para-planta-de-geracao-de-hidrogenio-verde-de-furnas"
+    },
+    {
+      "number": 7,
+      "url": "https://docweb.epagri.sc.gov.br/website_cepa/publicacoes/Desempenho_do_Agronegocio_2025.pdf",
+      "status": 200,
+      "finalUrl": "https://docweb.epagri.sc.gov.br/website_cepa/publicacoes/Desempenho_do_Agronegocio_2025.pdf"
+    },
+    {
+      "number": 8,
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/resolucao-prioriza-desembarque-de-fertilizantes-minerais-nos-portos-brasileiros",
+      "status": 200,
+      "finalUrl": "https://www.gov.br/agricultura/pt-br/assuntos/noticias/2026/resolucao-prioriza-desembarque-de-fertilizantes-minerais-nos-portos-brasileiros"
+    },
+    {
+      "number": 9,
+      "url": "https://www.portonave.com.br/pt/todas-as-noticias/portonave-divulga-relatorio-de-sustentabilidade-2025-com-asseguracao-independente",
+      "status": 200,
+      "finalUrl": "https://www.portonave.com.br/pt/todas-as-noticias/portonave-divulga-relatorio-de-sustentabilidade-2025-com-asseguracao-independente"
+    },
+    {
+      "number": 10,
+      "url": "https://www.iea.org/reports/global-hydrogen-review-2026/trade-and-infrastructure",
+      "status": 403,
+      "finalUrl": "https://www.iea.org/reports/global-hydrogen-review-2026/trade-and-infrastructure"
+    },
+    {
+      "number": 11,
+      "url": "https://noticias.ufsc.br/2023/08/ufsc-mme-e-cooperacao-brasil-alemanha-inauguram-usina-de-hidrogenio-verde-em-sc/",
+      "status": 502,
+      "finalUrl": "https://noticias.ufsc.br/2023/08/ufsc-mme-e-cooperacao-brasil-alemanha-inauguram-usina-de-hidrogenio-verde-em-sc/"
+    },
+    {
+      "number": 12,
+      "url": "https://reitoria.ufsc.br/2025/07/14/parceria-ufsc-e-governo-do-estado-inaugura-laboratorio-de-ponta-em-hidrogenio-verde/",
+      "status": null,
+      "limitation": "TimeoutError"
+    },
+    {
+      "number": 13,
+      "url": "https://www.celesc.com.br/listagem-noticias/transicao-energetica-projeto-de-hidrogenio-verde-da-celesc-esta-40-concluido",
+      "status": 200,
+      "finalUrl": "https://www.celesc.com.br/listagem-noticias/transicao-energetica-projeto-de-hidrogenio-verde-da-celesc-esta-40-concluido"
+    },
+    {
+      "number": 14,
+      "url": "https://planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/L14948.htm",
+      "status": null,
+      "limitation": "TypeError"
+    },
+    {
+      "number": 15,
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14990.htm",
+      "status": null,
+      "limitation": "TypeError"
+    },
+    {
+      "number": 16,
+      "url": "https://legis.senado.gov.br/norma/43676765/publicacao/43679240",
+      "status": 200,
+      "finalUrl": "https://legis.senado.gov.br/norma/43676765/publicacao/43679240"
+    },
+    {
+      "number": 17,
+      "url": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-antecipa-regulamentacao-da-certificacao-de-hidrogenio-de-baixa-emissao-de-carbono/",
+      "status": 200,
+      "finalUrl": "https://www.gov.br/anp/pt-br/canais_atendimento/imprensa/noticias-comunicados/anp-antecipa-regulamentacao-da-certificacao-de-hidrogenio-de-baixa-emissao-de-carbono/"
+    },
+    {
+      "number": 18,
+      "url": "https://leis.alesc.sc.gov.br/ato-normativo/22556",
+      "status": 200,
+      "finalUrl": "https://leis.alesc.sc.gov.br/ato-normativo/22556"
+    },
+    {
+      "number": 19,
+      "url": "https://www.gov.br/ana/pt-br/canais_atendimento/perguntas-frequentes/perguntas-frequentes-1",
+      "status": 200,
+      "finalUrl": "https://www.gov.br/ana/pt-br/canais_atendimento/perguntas-frequentes/perguntas-frequentes-1"
+    }
+  ]
+}

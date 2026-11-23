@@ -1,0 +1,19 @@
+{
+  "originalWords": 3475,
+  "authorizedChangedParagraphs": 5,
+  "allOtherBodyParagraphsPreserved": true,
+  "originalReferences": 19,
+  "finalReferences": 23,
+  "vancouverOrder": [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+  ],
+  "keyPointsExact": true,
+  "calloutExact": true,
+  "italicsExact": [
+    "Entre a euforia dos anúncios bilionários e a frieza das planilhas de custo, o futuro energético do estado esbarra em uma barreira invisível: a disposição humana e corporativa de pagar pela descarbonização.",
+    "Global Hydrogen Review 2026",
+    "offtake agreements"
+  ],
+  "transparencyExact": true,
+  "originalPNGsByteIdentical": 4
+}

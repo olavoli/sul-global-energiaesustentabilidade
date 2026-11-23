@@ -17,6 +17,9 @@ export const articleLoaders: Record<string, MdxModuleLoader> = {
   "a-pandemia-salvou-o-sus": () => import("../../../content/articles/a-pandemia-salvou-o-sus.mdx"),
   "a-rede-eletrica-esta-preparada-para-a-transicao-energetica": () =>
     import("../../../content/articles/a-rede-eletrica-esta-preparada-para-a-transicao-energetica.mdx"),
+  "a-termodinamica-do-dinheiro-o-que-falta-para-o-hidrogenio-verde-decolar-em-santa-catarina-ate-2030":
+    () =>
+      import("../../../content/articles/a-termodinamica-do-dinheiro-o-que-falta-para-o-hidrogenio-verde-decolar-em-santa-catarina-ate-2030.mdx"),
   "a-transicao-energetica-vai-aumentar-o-consumo-de-agua": () =>
     import("../../../content/articles/a-transicao-energetica-vai-aumentar-o-consumo-de-agua.mdx"),
   "a-transicao-energetica-vai-ficar-sem-cobre": () =>
