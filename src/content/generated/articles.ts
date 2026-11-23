@@ -1557,7 +1557,7 @@ export const articleRecords = [
     referencesInBody: true,
     aiAssistance: "limited",
     aiDisclosure:
-      "Criação visual: A imagem Hero e os três infográficos foram produzidos com auxílio do ChatGPT (OpenAI). O logotipo da imagem Hero foi inserido posteriormente utilizando o Microsoft PowerPoint. As imagens são ilustrações conceituais editoriais, não registros fotográficos documentais de instalações industriais existentes.\n\nPesquisa e revisão: A elaboração, organização e conferência das fontes foram assistidas por inteligência artificial. Os dados científicos, exemplos econômicos e cenários prospectivos devem ser confrontados com as referências indicadas. Os três cenários para 2030 possuem caráter qualitativo e ilustrativo, não constituindo projeções oficiais para Santa Catarina.",
+      "Criação visual: A imagem Hero foi produzida com ChatGPT (OpenAI), e o logotipo foi inserido posteriormente no Microsoft PowerPoint. Os dois infográficos foram produzidos com ChatGPT (OpenAI). São ilustrações conceituais, não registros fotográficos documentais.\n\nPesquisa e revisão: A elaboração, a integração e a conferência das fontes foram assistidas por inteligência artificial. Os cenários industriais, modelos de negócio e mercados potenciais apresentados possuem caráter analítico e prospectivo, não constituindo confirmação de empreendimentos comerciais em operação. A publicação está condicionada às verificações técnicas, científicas e editoriais do Sul Global Energia e Sustentabilidade.",
     aiDisclosureMode: "detailed",
     canonicalUrl:
       "/artigo/a-termodinamica-do-dinheiro-o-que-falta-para-o-hidrogenio-verde-decolar-em-santa-catarina-ate-2030",
